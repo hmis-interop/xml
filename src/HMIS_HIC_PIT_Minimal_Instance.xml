@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hmis:Sources xmlns:airs="http://www.hmis.info/schema/3_0/AIRS_3_0_mod.xsd" xmlns:hmis="http://www.hmis.info/schema/3_0/HUD_HMIS.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" hmis:version="3.0">
+    <hmis:Source>
+        <hmis:SourceID>
+            <hmis:IDNum>936994023</hmis:IDNum>
+        </hmis:SourceID>
+        <hmis:SoftwareVendor>Some Vendor</hmis:SoftwareVendor>
+        <hmis:SoftwareVersion>2.437</hmis:SoftwareVersion>
+        <hmis:SourceContactEmail>somebody@someplace.com</hmis:SourceContactEmail>
+        <hmis:SourceContactExtension>7555</hmis:SourceContactExtension>
+        <hmis:SourceContactFirst>John</hmis:SourceContactFirst>
+        <hmis:SourceContactLast>Doe</hmis:SourceContactLast>
+        <hmis:SourceContactPhone>7802679812</hmis:SourceContactPhone>
+        <hmis:SourceName>Community Agency A</hmis:SourceName>
+        
+        <hmis:Export>
+            <hmis:ExportID>
+                <hmis:IDStr>U8bAJX18nBZhoPfyzBSP40yjddYE2tzC</hmis:IDStr>
+            </hmis:ExportID>
+            <hmis:ExportDate>2009-03-01T15:46:31</hmis:ExportDate>
+            <hmis:ExportPeriod>
+                <hmis:StartDate>2009-01-01T15:46:31</hmis:StartDate>
+                <hmis:EndDate>2009-02-28T15:46:31</hmis:EndDate>
+            </hmis:ExportPeriod>
+
+            <hmis:Agency>
+                <airs:Key>1453503650</airs:Key>
+                <airs:Name>Community Agency A</airs:Name>
+            </hmis:Agency>
+
+            <hmis:Service>
+                <airs:Key>1007372603</airs:Key>
+                <airs:AgencyKey>1195637652</airs:AgencyKey>
+                <airs:Name>Anytown Transitional Housing Program</airs:Name>
+                <hmis:COCCode>J500</hmis:COCCode>
+                <hmis:FundingSources>
+                    <hmis:FundingSource>
+                        <hmis:FundingSourceID>
+                            <hmis:IDStr>ipYMBwlamM6i0</hmis:IDStr>
+                        </hmis:FundingSourceID>
+                        <hmis:ReceivesMcKinneyFunding>0</hmis:ReceivesMcKinneyFunding>                        
+                    </hmis:FundingSource>
+                </hmis:FundingSources>
+                <hmis:IndividualFamilyCode>3</hmis:IndividualFamilyCode>
+                <hmis:ServiceType>3</hmis:ServiceType>
+                <hmis:ServiceEffectivePeriod>
+                    <hmis:StartDate>2007-01-12T15:46:31</hmis:StartDate>
+                </hmis:ServiceEffectivePeriod>
+                <hmis:ServiceRecordedDate>2008-01-01T15:46:31</hmis:ServiceRecordedDate>
+                <hmis:TargetPopulationA>8</hmis:TargetPopulationA>
+                <hmis:TargetPopulationB>1</hmis:TargetPopulationB>
+            </hmis:Service>
+
+            <hmis:Site>
+                <airs:Key>1140297079</airs:Key>
+                <airs:Name>4th Street Service Center</airs:Name>
+                <hmis:AgencyKey>1453503650</hmis:AgencyKey>
+            </hmis:Site>
+
+            <hmis:SiteService>
+                <airs:Name>iJhWSpJU5f</airs:Name>
+                <airs:Key>523520566</airs:Key>
+                <hmis:ServiceID>1007372603</hmis:ServiceID>
+                <hmis:SiteID>1140297079</hmis:SiteID>
+                <hmis:GeographicCode hmis:dateCollected="2010-11-13T15:46:31" hmis:dateEffective="2007-01-12T15:46:31">447325</hmis:GeographicCode>
+
+                <hmis:Inventory>
+                    <hmis:HMISParticipationPeriod>
+                        <hmis:StartDate>2007-01-12T15:46:31</hmis:StartDate>
+                    </hmis:HMISParticipationPeriod>
+                    <hmis:InventoryID>
+                        <hmis:IDNum>387728108</hmis:IDNum>
+                    </hmis:InventoryID>
+                    <hmis:BedInventory hmis:bedAvailability="2" hmis:bedType="3" hmis:bedIndividualFamilyType="0" hmis:chronicHomelessBed="0" hmis:domesticViolenceShelterBed="0" hmis:householdType="2">18</hmis:BedInventory>
+                    <hmis:HMISParticipatingBeds>16</hmis:HMISParticipatingBeds>
+                    <hmis:InventoryEffectivePeriod>
+                        <hmis:StartDate>2007-01-12T15:46:31</hmis:StartDate>
+                        <hmis:EndDate>2009-12-15T15:46:31</hmis:EndDate>
+                    </hmis:InventoryEffectivePeriod>
+                    <hmis:InventoryRecordedDate>2009-12-15T15:46:31</hmis:InventoryRecordedDate>
+                    <hmis:UnitInventory>7</hmis:UnitInventory>
+                </hmis:Inventory>
+
+                <hmis:Principal>0</hmis:Principal>
+
+                <hmis:PITCountSet>
+                    <hmis:PITCountSetID>
+                        <hmis:IDNum>6768</hmis:IDNum>
+                    </hmis:PITCountSetID>
+                    <hmis:HUDWaiverDate>2009-09-09</hmis:HUDWaiverDate>
+                    <hmis:HUDWaiverEffectivePeriod>
+                        <hmis:StartDate>2009-10-09T15:46:31</hmis:StartDate>
+                        <hmis:EndDate>2010-10-09T15:46:31</hmis:EndDate>
+                    </hmis:HUDWaiverEffectivePeriod>
+                    <hmis:LastPITShelteredCountDate>2009-09-09</hmis:LastPITShelteredCountDate>
+                    <hmis:LastPITUnshelteredCountDate>2009-09-09</hmis:LastPITUnshelteredCountDate>
+                    <hmis:PITCounts>
+                        <hmis:PITCount hmis:pITHouseholdType="1">
+                            <hmis:PITCountValue>876</hmis:PITCountValue>
+                            <hmis:PITCountEffectivePeriod>
+                                <hmis:StartDate>2009-09-09T15:46:31</hmis:StartDate>
+                                <hmis:EndDate>2009-09-09T15:46:31</hmis:EndDate>
+                            </hmis:PITCountEffectivePeriod>
+                            <hmis:PITCountRecordedDate>2009-09-09</hmis:PITCountRecordedDate>
+                        </hmis:PITCount>
+                    </hmis:PITCounts>
+                </hmis:PITCountSet>
+                
+                <hmis:SiteServiceEffectivePeriod>
+                    <hmis:StartDate>2007-01-12T15:46:31</hmis:StartDate>
+                </hmis:SiteServiceEffectivePeriod>
+                <hmis:SiteServiceRecordedDate>2010-03-21T15:46:31</hmis:SiteServiceRecordedDate>
+            </hmis:SiteService>
+            
+        </hmis:Export>        
+    </hmis:Source>    
+</hmis:Sources>

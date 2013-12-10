@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a minimal HUD HMIS XML 3.0 instance, which just conveys client Universal and AHAR data elements
+        This should be suitable for many simple HMIS data integration scenarios.  -->
+<hmis:Sources 
+    xmlns:airs="http://www.hmis.info/schema/3_0/AIRS_3_0_mod.xsd" 
+    xmlns:hmis="http://www.hmis.info/schema/3_0/HUD_HMIS.xsd" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.hmis.info/schema/3_0/HUD_HMIS.xsd http://www.hmis.info/schema/3_0/HUD_HMIS.xsd" 
+    hmis:version="3.0">
+    <hmis:Source>
+    <!-- Source elements are needed for enabling data integration, not for AHAR specific purposes. -->
+        <hmis:SourceID >
+                <hmis:IDStr>3</hmis:IDStr>
+        </hmis:SourceID>
+        <hmis:SoftwareVendor>Vendor Name</hmis:SoftwareVendor>
+        <hmis:SoftwareVersion>3.169</hmis:SoftwareVersion>
+        <hmis:SourceName>mobile_device_12</hmis:SourceName>
+        <hmis:Export>
+            <!-- Export elements are needed for enabling data integration, not for AHAR specific purposes. -->
+            <hmis:ExportID >
+                    <hmis:IDNum>1016029942</hmis:IDNum>
+            </hmis:ExportID>
+            <hmis:ExportDate>2011-01-01T18:51:58</hmis:ExportDate>
+            <hmis:ExportPeriod>
+                <hmis:StartDate>2010-06-01T00:00:00</hmis:StartDate>
+                <hmis:EndDate>2010-06-30T24:00:00</hmis:EndDate>
+            </hmis:ExportPeriod>
+            <hmis:Household>
+            <!-- Household elements are needed by the AHAR to establish household groupings/size for ES-FAM, TH-FAM, and the Summary -->
+                <hmis:HouseholdID >
+                        <hmis:IDNum>371270429</hmis:IDNum>
+                </hmis:HouseholdID>
+                <hmis:Members>
+                    <hmis:Member>
+                        <hmis:PersonID hmis:dateCollected="2009-11-20T19:01:28">
+                                <hmis:IDNum>601015413</hmis:IDNum>
+                        </hmis:PersonID>
+                    </hmis:Member>
+                </hmis:Members>
+            </hmis:Household> 
+            <hmis:Person>
+                <!-- Personal identifiers are needed for unduplicating client counts for the AHAR -->
+                <hmis:PersonID>
+                    <hmis:IDNum>2090888539</hmis:IDNum>
+                </hmis:PersonID>
+                <hmis:DateOfBirth>
+                    <!--Date of birth is also used for determining the various AHAR age categories-->
+                        <hmis:Unhashed hmis:dateCollected="2011-05-27T18:51:58">2010-04-21</hmis:Unhashed>
+                    <hmis:DateOfBirthType hmis:dateCollected="2010-11-05T18:51:58">8</hmis:DateOfBirthType>
+                </hmis:DateOfBirth>
+                <hmis:Ethnicity>
+                    <!-- Ethnicity is a reporting dimension in the AHAR. -->
+                    <hmis:Unhashed hmis:dateCollected="2011-06-25T18:51:58">8</hmis:Unhashed>
+                </hmis:Ethnicity>
+                <hmis:Gender>
+                    <!--Gender is also used for determining the various AHAR gender categories-->
+                    <hmis:Unhashed hmis:dateCollected="2010-06-05T18:51:58">2</hmis:Unhashed>
+                </hmis:Gender>
+                <hmis:LegalFirstName>
+                    <!-- Reported legal first name is a reporting dimension in the AHAR. -->
+                    <hmis:Hashed hmis:dateCollected="2011-01-27T18:51:58" >Harold</hmis:Hashed>
+                </hmis:LegalFirstName>
+                <hmis:LegalLastName>
+                    <!-- Reported legal last name is a reporting dimension in the AHAR. -->
+                    <hmis:Unhashed hmis:dateCollected="2011-03-05T18:51:58" >Smith</hmis:Unhashed>
+                </hmis:LegalLastName>
+                <hmis:LegalMiddleName>
+                    <hmis:Unhashed hmis:dateCollected="2011-10-03T18:51:58">Brian</hmis:Unhashed>
+                </hmis:LegalMiddleName>
+                <hmis:LegalSuffix>
+                    <hmis:Unhashed hmis:dateCollected="2011-10-03T18:51:58">S</hmis:Unhashed>                    
+                </hmis:LegalSuffix>
+                <hmis:Race>
+                    <!-- Race is a reporting dimension in the AHAR. -->
+                    <hmis:Unhashed hmis:dateCollected="2009-11-30T18:51:58">2</hmis:Unhashed>
+                </hmis:Race>           
+                <hmis:SiteServiceParticipation>
+                    <!--Client service events occurring within an HMIS Program Participation (aka SiteServicePArticipation) are important to the AHAR--> 
+                    <hmis:SiteServiceParticipationID >
+                            <hmis:IDNum>131071114</hmis:IDNum>
+                    </hmis:SiteServiceParticipationID>
+                    <hmis:SiteServiceID>1354039809</hmis:SiteServiceID>
+                    <hmis:HouseholdID>
+                            <hmis:IDStr>3445</hmis:IDStr>
+                    </hmis:HouseholdID>
+                    <hmis:ParticipationDates>
+                        <!-- AHAR length of stay at emergency shelter or transitional housing is based upon these participation dates-->
+                        <hmis:StartDate>2010-02-01T01:21:00</hmis:StartDate>
+                        <hmis:EndDate>2010-02-20T18:51:58</hmis:EndDate>
+                    </hmis:ParticipationDates>
+                    <hmis:PersonHistorical>
+                        <hmis:PersonHistoricalID>
+                            <hmis:IDStr>oPmJ</hmis:IDStr>
+                        </hmis:PersonHistoricalID>
+                        <!-- Disabling condition is a reporting dimension in the AHAR. -->
+                        <hmis:DisablingCondition hmis:dateCollected="2011-06-02T18:51:58" hmis:dateEffective="2010-09-06T18:51:58">9</hmis:DisablingCondition>
+                        <!-- Housing status present because it is a March 2010 Universal Data Element -->
+                        <hmis:HousingStatus hmis:dateCollected="2011-06-02T18:51:58" hmis:dateEffective="2010-09-06T18:51:58">1</hmis:HousingStatus>                        
+                        <!-- Length of stay at prior residence is a reporting dimension in the AHAR. -->
+                        <hmis:LengthOfStayAtPriorResidence hmis:dateCollected="2011-06-02T18:51:58">2</hmis:LengthOfStayAtPriorResidence>
+                        <hmis:PersonAddress hmis:dateCollected="2011-06-02T18:51:58">
+                            <hmis:AddressPeriod>
+                                <hmis:StartDate>2010-01-02T18:51:58</hmis:StartDate>
+                                <hmis:EndDate>2010-06-02T18:51:58</hmis:EndDate>
+                            </hmis:AddressPeriod>
+                            <hmis:Line1 hmis:dateCollected="2011-06-02T18:51:58">111 Elm St.</hmis:Line1>
+                            <hmis:City hmis:dateCollected="2011-06-02T18:51:58">Drain</hmis:City>
+                            <hmis:State hmis:dateCollected="2011-06-02T18:51:58">OR</hmis:State>
+                            <!-- Last permanent ZIP is a reporting dimension in the AHAR. -->
+                            <hmis:ZIPCode hmis:dateCollected="2011-06-02T18:51:58">11111</hmis:ZIPCode>
+                            <!-- Last permanent ZIP is a reporting dimension in the AHAR. -->
+                            <hmis:IsLastPermanentZIP hmis:dateCollected="2011-06-02T18:51:58">0</hmis:IsLastPermanentZIP>
+                        </hmis:PersonAddress>
+                        <hmis:PriorResidence>
+                            <!-- The prior living situation the night before program entry is a reporting dimension in the AHAR. -->
+                            <hmis:PriorResidenceID>
+                                <hmis:IDNum>232</hmis:IDNum>
+                            </hmis:PriorResidenceID>
+                            <hmis:PriorResidenceCode hmis:dateCollected="2011-06-02T18:51:58">1</hmis:PriorResidenceCode>
+                        </hmis:PriorResidence>
+                        <hmis:Veteran>
+                            <!-- Veteran status is a reporting dimension in the AHAR. -->
+                            <hmis:VeteranStatus hmis:dateCollected="2010-01-12T18:51:58">1</hmis:VeteranStatus>
+                        </hmis:Veteran>
+                    </hmis:PersonHistorical>
+                </hmis:SiteServiceParticipation>
+                <hmis:SocialSecurityNumber>
+                <!-- Reported SSN is a reporting dimension in the AHAR. -->
+                        <hmis:Unhashed hmis:dateCollected="2011-09-15T18:51:58">111111111</hmis:Unhashed>
+                    <hmis:SocialSecNumberQualityCode hmis:dateCollected="2011-04-29T18:51:58">2</hmis:SocialSecNumberQualityCode>
+                </hmis:SocialSecurityNumber>
+            </hmis:Person>
+        </hmis:Export>
+    </hmis:Source>
+</hmis:Sources>

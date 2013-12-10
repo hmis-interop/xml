@@ -1,0 +1,2023 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hmis:Sources xmlns:airs="http://www.hmis.info/schema/3_0/AIRS_3_0_mod.xsd" xmlns:hmis="http://www.hmis.info/schema/3_0/HUD_HMIS.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" hmis:version="3.0">
+    <hmis:Source>
+        <hmis:SourceID hmis:delete="1" hmis:deleteOccurredDate="2011-10-03T18:51:58" hmis:deleteEffective="2011-05-08T18:51:58">
+                <hmis:IDStr>iH9HiPbW40JbS5m_</hmis:IDStr>
+        </hmis:SourceID>
+        <hmis:SoftwareVendor>Vendor Name</hmis:SoftwareVendor>
+        <hmis:SoftwareVersion>3.169</hmis:SoftwareVersion>
+        <hmis:SourceContactEmail>somebody@domain.com</hmis:SourceContactEmail>
+        <hmis:SourceContactExtension>501</hmis:SourceContactExtension>
+        <hmis:SourceContactFirst>Barney</hmis:SourceContactFirst>
+        <hmis:SourceContactLast>Fife</hmis:SourceContactLast>
+        <hmis:SourceContactPhone>2402649122</hmis:SourceContactPhone>
+        <hmis:SourceName>mobile_device_12</hmis:SourceName>
+        <hmis:Export>
+            <hmis:ExportID hmis:delete="1" hmis:deleteOccurredDate="2011-01-24T18:51:58" hmis:deleteEffective="2010-02-21T18:51:58">
+                    <hmis:IDNum>1016029942</hmis:IDNum>
+            </hmis:ExportID>
+            <hmis:ExportDate>2011-01-01T18:51:58</hmis:ExportDate>
+            <hmis:ExportPeriod>
+                <hmis:StartDate>2009-10-08T18:51:58</hmis:StartDate>
+                <hmis:EndDate>2009-11-20T19:01:28</hmis:EndDate>
+            </hmis:ExportPeriod>
+            <hmis:Agency RecordOwner="Z8NH5866" FEIN="AYGL2dAleJab9KnsJ3YZzxqmgt" YearInc="1996" AnnualBudgetTotal="1055097667" LegalStatus="zBX.cHGO" ExcludeFromWebsite="false" ExcludeFromDirectory="1">
+                <airs:Key>1134654728</airs:Key>
+                <airs:Name>SomeAgency</airs:Name>
+                <airs:AgencyDescription>Agency's mission is to...</airs:AgencyDescription>
+                <airs:AKA>
+                    <airs:Name>BMyq9R</airs:Name>
+                    <airs:Confidential>0</airs:Confidential>
+                    <airs:Description>sYW1v</airs:Description>
+                </airs:AKA>         
+                <airs:AgencyLocation PublicAccessToTransportation="1" YearInc="1994" AnnualBudgetTotal="1337414445" LegalStatus="u4WGH4B8DGdh9xXN9Dh8n.t" ExcludeFromWebsite="0" ExcludeFromDirectory="0">
+                    <airs:Key>1696753578</airs:Key>
+                    <airs:Name>Grand Street Location</airs:Name>
+                    <airs:SiteDescription>This location is...</airs:SiteDescription>
+                    <airs:AKA>
+                        <airs:Name>oRh822bI</airs:Name>
+                        <airs:Confidential>true</airs:Confidential>
+                    </airs:AKA>
+                    <airs:MailingAddress Confidential="0" Description="awD5z">
+                            <airs:ReasonWithheld>Np75476i1I-RV9d89NeFGE1-</airs:ReasonWithheld>
+                    </airs:MailingAddress>
+                    <airs:OtherAddress Confidential="false" Description="fqCy_M">
+                            <airs:Line1>LxqTjOoDfiKItsC1hJOyEG3EuZAP</airs:Line1>
+                            <airs:City>f8wBC4NTGRamWfWpWFwSVy2k</airs:City>
+                            <airs:State>f</airs:State>
+                            <airs:ZipCode>KJoMYfhEXl</airs:ZipCode>
+                            <airs:Country>b15DdHCFep45-m.C</airs:Country>
+                    </airs:OtherAddress>
+                    <airs:CrossStreet>PL__fpIl</airs:CrossStreet>
+                    <airs:Phone TollFree="true" Confidential="false">
+                                <airs:PhoneNumber>wgBCba</airs:PhoneNumber>
+                    </airs:Phone>
+                    <airs:URL>
+                        <airs:Address>Mey571Zs8.Bvn1Kp-at_jzo</airs:Address>
+                    </airs:URL>
+                    <airs:Email>
+                        <airs:Address>Y+4_I---g@7éúdøÑóQna14èÚùÁÆEúrqU72Wïø7ÞNe4FrÃHàÀÃþ3ýPúô5Ï5.VcrBWv</airs:Address>
+                    </airs:Email>
+                    <airs:Contact Type="YwIRjI5EKfcpl7B7YY.2AO6SNbkL">
+                        <airs:Name>eGw4</airs:Name>
+                    </airs:Contact>
+                    <airs:TimeOpen>
+                    </airs:TimeOpen>
+                    <airs:Languages>
+                        <airs:Name>dSN7aXLFd94.b2JuyX-BYb2H</airs:Name>
+                        <airs:Name>z08pclBiPtnu7lf.e</airs:Name>
+                    </airs:Languages>
+                    <airs:DisabilitiesAccess>hdZ00Np</airs:DisabilitiesAccess>
+                    <airs:PhysicalLocationDescription>h5ZOMPuk2j.3GnTr</airs:PhysicalLocationDescription>
+                    <airs:BusServiceAccess>vYVcV6ONN</airs:BusServiceAccess> 
+                    <airs:SiteService AreaFlexibility="1" ServiceNotAlwaysAvailable="0" ServiceGroupKey="201153831">
+                        <airs:Key>5454</airs:Key>
+                        <airs:Taxonomy>
+                            <airs:Code>JdkAhOl1iPD4OQUN0GD5ugs.</airs:Code>
+                            <airs:Code>A5X</airs:Code>
+                        </airs:Taxonomy>
+                        <airs:Taxonomy>
+                            <airs:Code>Xq</airs:Code>
+                            <airs:Code>Icxd.orIURCrf</airs:Code>
+                        </airs:Taxonomy>
+                    </airs:SiteService>
+                    <airs:SpatialLocation>
+                        <airs:Datum>MfEUUpAq6QlWJ15KWO3_</airs:Datum>
+                        <airs:Latitude>-1399281865.061</airs:Latitude>
+                        <airs:Longitude>491825668.125</airs:Longitude>
+                    </airs:SpatialLocation>
+                </airs:AgencyLocation>
+                <airs:Phone TollFree="true" Confidential="1">
+                            <airs:ReasonWithheld>V</airs:ReasonWithheld>
+                    <airs:Extension>Y9ePWdgseXNDG9</airs:Extension>
+                    <airs:Description>YFr.4c9UKGYjjSe_LyJNFsJ</airs:Description>
+                    <airs:Type>T3daj0yVhZXkf0nSZzyiieBFz</airs:Type>
+                    <airs:Function>Ev</airs:Function>
+                </airs:Phone>
+                <airs:URL>
+                    <airs:Address>L9yAf.qadfWnD</airs:Address>
+                    <airs:Note>fGZ6</airs:Note>
+                </airs:URL>
+                <airs:Email>
+                    <airs:Address>X7C@üVw.kNmNTU</airs:Address>
+                    <airs:Note>AWbSt</airs:Note>
+                </airs:Email>
+                <airs:Contact Type="lfP1Av1E">
+                    <airs:Title>LNTkvxwfb</airs:Title>
+                    <airs:Name>_m7</airs:Name>
+                    <airs:Email>
+                        <airs:Address>3@ß3I-JO-f---eÍzãöÿU1.QDXA</airs:Address>
+                    </airs:Email>
+                    <airs:Phone TollFree="1" Confidential="1">
+                                <airs:PhoneNumber>l979icXy1kazRXhl</airs:PhoneNumber>
+                    </airs:Phone>
+                </airs:Contact> 
+                <airs:LicenseAccreditation>
+                    <airs:License>iC1S.6ilLmY4</airs:License>
+                    <airs:LicensedBy>C</airs:LicensedBy>
+                </airs:LicenseAccreditation>
+                <airs:LicenseAccreditation>
+                    <airs:License>Y9d</airs:License>
+                    <airs:LicensedBy>YtBSS9J</airs:LicensedBy>
+                </airs:LicenseAccreditation>
+                <airs:IRSStatus>yMQg1AnQxA_VZl</airs:IRSStatus>
+                <airs:SourceOfFunds>lxKBWWJGoD2odq02gN</airs:SourceOfFunds>
+                <airs:ServiceGroup>
+                    <airs:Key>1330251155</airs:Key>
+                    <airs:Name>vX-ESl0L</airs:Name>
+                    <airs:ProgramName>Wy6uSWxk_beATZuAykvog</airs:ProgramName>
+                </airs:ServiceGroup>
+                <airs:Site PublicAccessToTransportation="true" YearInc="2005" AnnualBudgetTotal="738529216" LegalStatus="QkxCNBRT3r1PHYjHbKEW" ExcludeFromWebsite="true" ExcludeFromDirectory="1">
+                    <airs:Key>2073453385</airs:Key>
+                    <airs:Name>H-daabS</airs:Name>
+                    <airs:SiteDescription>n</airs:SiteDescription>
+                    <airs:AKA>
+                        <airs:Name>yBKdyF1vnPeQCivy8odIPSKbWU</airs:Name>
+                        <airs:Confidential>true</airs:Confidential>
+                    </airs:AKA>
+                            <airs:MailingAddress Confidential="false" Description="rjZ">
+                                    <airs:ReasonWithheld>IzXvCTCk98zmCc3_sBIP6c4d</airs:ReasonWithheld>
+                            </airs:MailingAddress>
+                    <airs:OtherAddress Confidential="0" Description="xm4jdcPhAqnN_EjNxVGbLu2jCKGfje">
+                            <airs:Line1>GeBcdwN</airs:Line1>
+                            <airs:City>TsmWUmyMaQKKijMdPGIj</airs:City>
+                            <airs:State>MW_ZwRaRyD</airs:State>
+                            <airs:ZipCode>BS6nj_1erw</airs:ZipCode>
+                            <airs:Country>WTkvifCE5PZ2oqz</airs:Country>
+                    </airs:OtherAddress>
+                    <airs:CrossStreet>XOKkbIHS0szO3XUHLS3uZTL5RRg</airs:CrossStreet>
+                    <airs:Phone TollFree="0" Confidential="1">
+                                <airs:PhoneNumber>l</airs:PhoneNumber>
+                    </airs:Phone>
+                    <airs:URL>
+                        <airs:Address>IKJL.d_UY</airs:Address>
+                    </airs:URL>
+                    <airs:Email>
+                        <airs:Address>S@8ùð.931-ò31G724Xpf6üÅëM5VûÁpdæ6N2ÁáþtVX3Wï2ýPX.yOVhe</airs:Address>
+                    </airs:Email>
+                    <airs:Contact Type="oSiDW6WARFeVyoK">
+                        <airs:Name>YIxZkfZIVQllAW19Xn7</airs:Name>
+                    </airs:Contact>
+                    <airs:TimeOpen>
+                    </airs:TimeOpen>
+                    <airs:Languages>
+                        <airs:Name>I_</airs:Name>
+                        <airs:Name>UHFxSgpI4eW6gEFq0avu1</airs:Name>
+                    </airs:Languages>
+                    <airs:DisabilitiesAccess>Ydfi891-zQHqMA3HmVi7RFTCzEpao</airs:DisabilitiesAccess>
+                    <airs:PhysicalLocationDescription>ppY8JQy</airs:PhysicalLocationDescription>
+                    <airs:BusServiceAccess>PQ.mqmhgw-BcLJWq_IC2YA-6cVc5</airs:BusServiceAccess>
+                    <airs:SpatialLocation>
+                        <airs:Datum>eFAXN1-8SHan92RaWiyyk1-15.g</airs:Datum>
+                        <airs:Latitude>-409369693.231</airs:Latitude>
+                        <airs:Longitude>-280841522.052</airs:Longitude>
+                    </airs:SpatialLocation>
+                </airs:Site>
+                <airs:ResourceInfo AvailableForDirectory="false" AvailableForReferral="1" AvailableForResearch="0" DateAdded="2010-08-18" DateLastVerified="2010-10-12" DateOfLastAction="2010-08-05" LastActionType="u3HxkF8Y9Gs3N8C">
+                    <airs:Contact Type="mgDShcQd5uxP8bla.LeRhsD1p">
+                        <airs:Name>F9IMD</airs:Name>
+                    </airs:Contact>
+                    <airs:Contact Type="Rb7OdnmlVntEKQ2">
+                        <airs:Name>Q92uZcKr</airs:Name>
+                    </airs:Contact>
+                    <airs:ResourceSpecialist>qyv3iy9Ah6Y</airs:ResourceSpecialist>
+                </airs:ResourceInfo>
+            </hmis:Agency>
+            <hmis:Household>
+                <hmis:HouseholdID hmis:delete="1" hmis:deleteOccurredDate="2010-10-04T18:51:58" hmis:deleteEffective="2011-11-03T18:51:58">
+                        <hmis:IDNum>371270429</hmis:IDNum>
+                </hmis:HouseholdID>
+                <hmis:HeadOfHouseholdID hmis:dateCollected="2011-09-15T18:51:58" hmis:dateEffective="2011-08-16T18:51:58" hmis:dataCollectionStage="2" hmis:delete="1" hmis:deleteOccurredDate="2011-06-23T18:51:58" hmis:deleteEffective="2010-02-07T18:51:58">
+                        <hmis:IDNum>912909367</hmis:IDNum>
+                </hmis:HeadOfHouseholdID>
+                <hmis:Members>
+                    <hmis:Member>
+                        <hmis:PersonID hmis:dateCollected="2010-12-26T18:51:58" hmis:dateEffective="2010-06-22T18:51:58" hmis:dataCollectionStage="3" hmis:delete="1" hmis:deleteOccurredDate="2011-03-17T18:51:58" hmis:deleteEffective="2010-07-30T18:51:58">
+                                <hmis:IDNum>601015413</hmis:IDNum>
+                        </hmis:PersonID>
+                    </hmis:Member>
+                    <hmis:Member>
+                        <hmis:PersonID hmis:dateCollected="2011-05-07T18:51:58" hmis:dateEffective="2011-11-02T18:51:58" hmis:dataCollectionStage="2" hmis:delete="1" hmis:deleteOccurredDate="2010-02-14T18:51:58" hmis:deleteEffective="2011-05-14T18:51:58">
+                                <hmis:IDNum>1343543880</hmis:IDNum>
+                        </hmis:PersonID>
+                    </hmis:Member>
+                </hmis:Members>
+            </hmis:Household>
+            <hmis:Household>
+                <hmis:HouseholdID hmis:delete="1" hmis:deleteOccurredDate="2011-02-21T18:51:58" hmis:deleteEffective="2010-11-26T18:51:58">
+                        <hmis:IDNum>1624189590</hmis:IDNum>
+                </hmis:HouseholdID>
+                <hmis:HeadOfHouseholdID hmis:dateCollected="2011-06-07T18:51:58" hmis:dateEffective="2010-08-31T18:51:58" hmis:dataCollectionStage="3" hmis:delete="1" hmis:deleteOccurredDate="2011-05-18T18:51:58" hmis:deleteEffective="2010-10-01T18:51:58">
+                        <hmis:IDNum>244861919</hmis:IDNum>
+                </hmis:HeadOfHouseholdID>
+                <hmis:Members>
+                    <hmis:Member>
+                        <hmis:PersonID hmis:dateCollected="2010-10-29T18:51:58" hmis:dateEffective="2010-11-24T18:51:58" hmis:dataCollectionStage="3" hmis:delete="1" hmis:deleteOccurredDate="2010-02-19T18:51:58" hmis:deleteEffective="2011-07-09T18:51:58">
+                                <hmis:IDNum>1855724506</hmis:IDNum>
+                        </hmis:PersonID>
+                    </hmis:Member>
+                    <hmis:Member>
+                        <hmis:PersonID hmis:dateCollected="2010-07-18T18:51:58" hmis:dateEffective="2010-03-04T18:51:58" hmis:dataCollectionStage="3" hmis:delete="1" hmis:deleteOccurredDate="2011-10-17T18:51:58" hmis:deleteEffective="2011-08-17T18:51:58">
+                                <hmis:IDStr>n.ubQ6.8</hmis:IDStr>
+                        </hmis:PersonID>
+                    </hmis:Member>
+                </hmis:Members>
+            </hmis:Household>
+            <hmis:Person>
+                <hmis:PersonID hmis:delete="1" hmis:deleteOccurredDate="2010-04-12T18:51:58" hmis:deleteEffective="2010-08-16T18:51:58">
+                        <hmis:IDNum>2090888539</hmis:IDNum>
+                </hmis:PersonID>
+                <hmis:DateOfBirth>
+                        <hmis:Unhashed hmis:dateCollected="2011-05-27T18:51:58" hmis:dataCollectionStage="2">2010-04-21</hmis:Unhashed>
+                    <hmis:DateOfBirthType hmis:dateCollected="2010-11-05T18:51:58" hmis:dateEffective="2010-06-27T18:51:58" hmis:dataCollectionStage="1">8</hmis:DateOfBirthType>
+                </hmis:DateOfBirth>
+                <hmis:Ethnicity>
+                    <hmis:Unhashed hmis:dateCollected="2011-06-25T18:51:58" hmis:dataCollectionStage="2">8</hmis:Unhashed>
+                </hmis:Ethnicity>
+                <hmis:Gender>
+                    <hmis:Unhashed hmis:dateCollected="2010-06-05T18:51:58" hmis:dateEffective="2011-05-27T18:51:58" hmis:dataCollectionStage="1">2</hmis:Unhashed>
+                </hmis:Gender>
+                <hmis:LegalFirstName>
+                    <hmis:Hashed hmis:dateCollected="2011-01-27T18:51:58" hmis:dateEffective="2010-10-06T18:51:58" hmis:dataCollectionStage="3">h</hmis:Hashed>
+                </hmis:LegalFirstName>
+                <hmis:LegalLastName>
+                    <hmis:Unhashed hmis:dateCollected="2011-03-05T18:51:58" hmis:dateEffective="2010-09-23T18:51:58" hmis:dataCollectionStage="2">CsO6ya0pHmnGXuxvdR7x3sIhHGKRNEeSQTcIWaAQfa</hmis:Unhashed>
+                </hmis:LegalLastName>
+                <hmis:LegalMiddleName>
+                    <hmis:Unhashed hmis:dateCollected="2011-10-03T18:51:58" hmis:dateEffective="2010-12-24T18:51:58" hmis:dataCollectionStage="3">JVW2VgnsolceolUMJKs0W9i5SuDZVFnoV-J0NN0OffiH</hmis:Unhashed>
+                </hmis:LegalMiddleName>
+                <hmis:LegalSuffix>
+                    <hmis:Unhashed hmis:dateCollected="2010-06-11T18:51:58" hmis:dateEffective="2010-03-01T18:51:58" hmis:dataCollectionStage="2">vu_n8Ri</hmis:Unhashed>
+                </hmis:LegalSuffix>
+                <hmis:Need>
+                    <hmis:NeedID hmis:delete="1" hmis:deleteOccurredDate="2011-05-05T18:51:58" hmis:deleteEffective="2010-03-08T18:51:58">
+                            <hmis:IDStr>BQtJaZ8Cm9NfeK5z</hmis:IDStr>
+                    </hmis:NeedID>
+                    <hmis:SiteServiceID>565103989</hmis:SiteServiceID>
+                    <hmis:ServiceEventID>
+                            <hmis:IDStr>brZuGeBH7XUHz</hmis:IDStr>
+                    </hmis:ServiceEventID>
+                    <hmis:ServiceEventID>
+                            <hmis:IDStr>mQ4uZehAZ5l1S-wAUdQ4YexKBqjNyBp</hmis:IDStr>
+                    </hmis:ServiceEventID>
+                    <hmis:NeedEffectivePeriod>
+                    </hmis:NeedEffectivePeriod>
+                    <hmis:NeedRecordedDate>2010-10-04T18:51:58</hmis:NeedRecordedDate>
+                    <hmis:NeedStatus>3</hmis:NeedStatus>
+                    <hmis:Taxonomy>
+                        <airs:Code>crYMnoXthg9e</airs:Code>
+                        <airs:Code>C5xCkd8</airs:Code>
+                    </hmis:Taxonomy>
+                </hmis:Need>
+                <hmis:Need>
+                    <hmis:NeedID hmis:delete="1" hmis:deleteOccurredDate="2010-02-08T18:51:58" hmis:deleteEffective="2011-03-31T18:51:58">
+                            <hmis:IDStr>wb26PBGtPL1YqP8aQux</hmis:IDStr>
+                    </hmis:NeedID>
+                    <hmis:SiteServiceID>1580289915</hmis:SiteServiceID>
+                    <hmis:ServiceEventID>
+                            <hmis:IDStr>HiPJ6MK</hmis:IDStr>
+                    </hmis:ServiceEventID>
+                    <hmis:ServiceEventID>
+                            <hmis:IDStr>s35u</hmis:IDStr>
+                    </hmis:ServiceEventID>
+                    <hmis:NeedEffectivePeriod>
+                    </hmis:NeedEffectivePeriod>
+                    <hmis:NeedRecordedDate>2011-11-15T18:51:58</hmis:NeedRecordedDate>
+                    <hmis:NeedStatus>3</hmis:NeedStatus>
+                    <hmis:Taxonomy>
+                        <airs:Code>STxGJVNWVizwis_vXQU5</airs:Code>
+                        <airs:Code>EvOPojx95oaT</airs:Code>
+                    </hmis:Taxonomy>
+                </hmis:Need>
+                <hmis:OtherNames>
+                    <hmis:OtherFirstName>
+                        <hmis:Unhashed hmis:dateCollected="2010-01-11T18:51:58" hmis:dateEffective="2010-08-31T18:51:58" hmis:dataCollectionStage="2">ZLl7s8IBoDClpwbl_lEx6</hmis:Unhashed>
+                    </hmis:OtherFirstName>
+                    <hmis:OtherMiddleName>
+                        <hmis:Unhashed hmis:dateCollected="2011-03-15T18:51:58" hmis:dateEffective="2010-09-11T18:51:58" hmis:dataCollectionStage="1">jGk4GtnwD.oHJbsXFDYfq9g2cfd5pMZ4bstr</hmis:Unhashed>
+                    </hmis:OtherMiddleName>
+                    <hmis:OtherLastName>
+                        <hmis:Hashed hmis:dateCollected="2009-11-18T18:51:58" hmis:dateEffective="2010-03-12T18:51:58" hmis:dataCollectionStage="4">YksItGoTeb</hmis:Hashed>
+                    </hmis:OtherLastName>
+                    <hmis:OtherSuffix>
+                        <hmis:Unhashed hmis:dateCollected="2010-11-10T18:51:58" hmis:dateEffective="2011-01-04T18:51:58" hmis:dataCollectionStage="4">clhFA94Yvn4.7dfySrJlw9v2mVsA5lwGcX2odHW</hmis:Unhashed>
+                    </hmis:OtherSuffix>
+                </hmis:OtherNames>
+                <hmis:OtherNames>
+                    <hmis:OtherFirstName>
+                        <hmis:Hashed hmis:dateCollected="2011-09-15T18:51:58" hmis:dateEffective="2011-08-24T18:51:58" hmis:dataCollectionStage="2">kIvrdVi</hmis:Hashed>
+                    </hmis:OtherFirstName>
+                    <hmis:OtherMiddleName>
+                        <hmis:Unhashed hmis:dateCollected="2011-02-21T18:51:58" hmis:dateEffective="2010-09-29T18:51:58" hmis:dataCollectionStage="1">BsNyCfg</hmis:Unhashed>
+                    </hmis:OtherMiddleName>
+                    <hmis:OtherLastName>
+                        <hmis:Unhashed hmis:dateCollected="2010-01-22T18:51:58" hmis:dateEffective="2010-11-12T18:51:58" hmis:dataCollectionStage="3">syV327xrL_.oVtiFobOV-wM7nyYDGf0tT2JTq9vmr6XVuQKrPW</hmis:Unhashed>
+                    </hmis:OtherLastName>
+                    <hmis:OtherSuffix>
+                        <hmis:Hashed hmis:dateCollected="2011-04-23T18:51:58" hmis:dateEffective="2010-09-30T18:51:58" hmis:dataCollectionStage="1">BTJOI8QYF0oHygIOTOM94nKoj</hmis:Hashed>
+                    </hmis:OtherSuffix>
+                </hmis:OtherNames>
+                <hmis:PersonHistorical>
+                    <hmis:PersonHistoricalID hmis:delete="1" hmis:deleteOccurredDate="2009-11-19T18:51:58" hmis:deleteEffective="2010-01-01T18:51:58">
+                            <hmis:IDStr>oPmJ</hmis:IDStr>
+                    </hmis:PersonHistoricalID>
+                    <hmis:SiteServiceID>541432478</hmis:SiteServiceID>
+                    <hmis:ChildEnrollmentStatus>
+                        <hmis:ChildEnrollmentStatusID hmis:delete="1" hmis:deleteOccurredDate="2011-11-13T18:51:58" hmis:deleteEffective="2010-12-12T18:51:58">
+                                <hmis:IDNum>304877090</hmis:IDNum>
+                        </hmis:ChildEnrollmentStatusID>
+                    </hmis:ChildEnrollmentStatus>
+                    <hmis:ChildEnrollmentStatus>
+                        <hmis:ChildEnrollmentStatusID hmis:delete="1" hmis:deleteOccurredDate="2011-11-12T18:51:58" hmis:deleteEffective="2011-07-25T18:51:58">
+                                <hmis:IDNum>829692366</hmis:IDNum>
+                        </hmis:ChildEnrollmentStatusID>
+                    </hmis:ChildEnrollmentStatus>
+                    <hmis:ChronicHealthCondition>
+                        <hmis:HasChronicHealthCondition hmis:dateCollected="2010-05-12T18:51:58" hmis:dateEffective="2010-08-06T18:51:58" hmis:dataCollectionStage="4">8</hmis:HasChronicHealthCondition>
+                    </hmis:ChronicHealthCondition>
+                    <hmis:ChronicHealthCondition>
+                        <hmis:HasChronicHealthCondition hmis:dateCollected="2010-04-18T18:51:58" hmis:dateEffective="2010-08-24T18:51:58" hmis:dataCollectionStage="3">1</hmis:HasChronicHealthCondition>
+                    </hmis:ChronicHealthCondition>
+                    <hmis:CurrentlyInSchool hmis:dateCollected="2010-09-15T18:51:58" hmis:dateEffective="2011-03-19T18:51:58" hmis:dataCollectionStage="3">8</hmis:CurrentlyInSchool>
+                    <hmis:CurrentlyInSchool hmis:dateCollected="2010-05-14T18:51:58" hmis:dateEffective="2011-01-12T18:51:58" hmis:dataCollectionStage="2">8</hmis:CurrentlyInSchool>
+                    <hmis:Degree>
+                        <hmis:DegreeID hmis:delete="1" hmis:deleteOccurredDate="2011-03-04T18:51:58" hmis:deleteEffective="2010-01-21T18:51:58">
+                                <hmis:IDNum>379285009</hmis:IDNum>
+                        </hmis:DegreeID>
+                    </hmis:Degree>
+                    <hmis:Degree>
+                        <hmis:DegreeID hmis:delete="1" hmis:deleteOccurredDate="2011-09-01T18:51:58" hmis:deleteEffective="2010-08-04T18:51:58">
+                                <hmis:IDNum>1368130805</hmis:IDNum>
+                        </hmis:DegreeID>
+                    </hmis:Degree>
+                    <hmis:Destinations>
+                        <hmis:Destination>
+                            <hmis:DestinationID hmis:delete="1" hmis:deleteOccurredDate="2010-05-03T18:51:58" hmis:deleteEffective="2011-05-17T18:51:58">
+                                    <hmis:IDStr>KMFKNtwT</hmis:IDStr>
+                            </hmis:DestinationID>
+                        </hmis:Destination>
+                    </hmis:Destinations>
+                    <hmis:DisablingCondition hmis:dateCollected="2010-09-04T18:51:58" hmis:dateEffective="2010-01-18T18:51:58" hmis:dataCollectionStage="1">1</hmis:DisablingCondition>
+                    <hmis:DisablingCondition hmis:dateCollected="2011-06-02T18:51:58" hmis:dateEffective="2010-09-06T18:51:58" hmis:dataCollectionStage="4">9</hmis:DisablingCondition>
+                    <hmis:DevelopmentalDisability>
+                        <hmis:HasDevelopmentalDisability hmis:dateCollected="2010-10-17T18:51:58" hmis:dateEffective="2011-06-01T18:51:58" hmis:dataCollectionStage="4">8</hmis:HasDevelopmentalDisability>
+                    </hmis:DevelopmentalDisability>
+                    <hmis:DevelopmentalDisability>
+                        <hmis:HasDevelopmentalDisability hmis:dateCollected="2011-02-24T18:51:58" hmis:dateEffective="2010-06-19T18:51:58" hmis:dataCollectionStage="1">0</hmis:HasDevelopmentalDisability>
+                    </hmis:DevelopmentalDisability>
+                    <hmis:DomesticViolence>
+                        <hmis:DomesticViolenceSurvivor hmis:dateCollected="2011-06-27T18:51:58" hmis:dateEffective="2010-05-11T18:51:58" hmis:dataCollectionStage="2">0</hmis:DomesticViolenceSurvivor>
+                    </hmis:DomesticViolence>
+                    <hmis:DomesticViolence>
+                        <hmis:DomesticViolenceSurvivor hmis:dateCollected="2010-06-17T18:51:58" hmis:dateEffective="2011-04-25T18:51:58" hmis:dataCollectionStage="2">9</hmis:DomesticViolenceSurvivor>
+                    </hmis:DomesticViolence>
+                    <hmis:Employment>
+                        <hmis:EmploymentID hmis:delete="1" hmis:deleteOccurredDate="2010-02-20T18:51:58" hmis:deleteEffective="2010-09-05T18:51:58">
+                                <hmis:IDNum>156107133</hmis:IDNum>
+                        </hmis:EmploymentID>
+                    </hmis:Employment>
+                    <hmis:Employment>
+                        <hmis:EmploymentID hmis:delete="1" hmis:deleteOccurredDate="2011-09-16T18:51:58" hmis:deleteEffective="2009-11-30T18:51:58">
+                                <hmis:IDStr>NGoO8g2UpRUsLu5</hmis:IDStr>
+                        </hmis:EmploymentID>
+                    </hmis:Employment>
+                    <hmis:EngagedDate hmis:dateCollected="2010-05-18T18:51:58" hmis:dataCollectionStage="2">2010-09-07</hmis:EngagedDate>
+                    <hmis:EngagedDate hmis:dateCollected="2010-12-22T18:51:58" hmis:dataCollectionStage="4">2010-01-10</hmis:EngagedDate>
+                    <hmis:HealthStatus hmis:dateCollected="2010-06-05T18:51:58" hmis:dateEffective="2011-08-26T18:51:58" hmis:dataCollectionStage="1">5</hmis:HealthStatus>
+                    <hmis:HealthStatus hmis:dateCollected="2010-01-24T18:51:58" hmis:dateEffective="2010-12-15T18:51:58" hmis:dataCollectionStage="2">2</hmis:HealthStatus>
+                    <hmis:HighestSchoolLevel hmis:dateCollected="2010-07-03T18:51:58" hmis:dateEffective="2011-08-31T18:51:58" hmis:dataCollectionStage="3">9</hmis:HighestSchoolLevel>
+                    <hmis:HighestSchoolLevel hmis:dateCollected="2009-12-06T18:51:58" hmis:dateEffective="2011-11-12T18:51:58" hmis:dataCollectionStage="2">5</hmis:HighestSchoolLevel>
+                    <hmis:HIVAIDSStatus>
+                        <hmis:HasHIVAIDS hmis:dateCollected="2010-06-27T18:51:58" hmis:dateEffective="2011-04-18T18:51:58" hmis:dataCollectionStage="2">9</hmis:HasHIVAIDS>
+                    </hmis:HIVAIDSStatus>
+                    <hmis:HIVAIDSStatus>
+                        <hmis:HasHIVAIDS hmis:dateCollected="2010-11-30T18:51:58" hmis:dateEffective="2010-09-02T18:51:58" hmis:dataCollectionStage="2">8</hmis:HasHIVAIDS>
+                    </hmis:HIVAIDSStatus>
+                    <hmis:HousingStatus hmis:dateCollected="2011-07-19T18:51:58" hmis:dateEffective="2010-02-19T18:51:58" hmis:dataCollectionStage="1">8</hmis:HousingStatus>
+                    <hmis:HousingStatus hmis:dateCollected="2011-10-15T18:51:58" hmis:dateEffective="2011-07-16T18:51:58" hmis:dataCollectionStage="2">8</hmis:HousingStatus>
+                    <hmis:HUDChronicHomeless hmis:dateCollected="2011-06-19T18:51:58" hmis:dateEffective="2010-04-23T18:51:58" hmis:dataCollectionStage="2">0</hmis:HUDChronicHomeless>
+                    <hmis:HUDChronicHomeless hmis:dateCollected="2010-06-30T18:51:58" hmis:dateEffective="2010-07-13T18:51:58" hmis:dataCollectionStage="1">1</hmis:HUDChronicHomeless>
+                    <hmis:HUDHomelessEpisodes>
+                    </hmis:HUDHomelessEpisodes>
+                    <hmis:HUDHomelessEpisodes>
+                    </hmis:HUDHomelessEpisodes>
+                    <hmis:IncomeLast30Days hmis:dateCollected="2011-08-19T18:51:58" hmis:dateEffective="2009-12-11T18:51:58" hmis:dataCollectionStage="2">9</hmis:IncomeLast30Days>
+                    <hmis:IncomeLast30Days hmis:dateCollected="2011-09-04T18:51:58" hmis:dateEffective="2011-09-18T18:51:58" hmis:dataCollectionStage="3">8</hmis:IncomeLast30Days>
+                    <hmis:IncomeAndSources>
+                        <hmis:IncomeAndSource>
+                            <hmis:IncomeAndSourceID hmis:delete="1" hmis:deleteOccurredDate="2010-09-27T18:51:58" hmis:deleteEffective="2011-07-18T18:51:58">
+                                <hmis:IDNum>1289416279</hmis:IDNum>
+                            </hmis:IncomeAndSourceID>
+                            <hmis:IncomeSourceCode hmis:dateCollected="2011-09-06T18:51:58" hmis:dateEffective="2011-03-03T18:51:58" hmis:dataCollectionStage="2">11</hmis:IncomeSourceCode>
+                            <hmis:IncomeSourceCode hmis:dateCollected="2011-09-11T18:51:58" hmis:dateEffective="2011-01-07T18:51:58" hmis:dataCollectionStage="2">16</hmis:IncomeSourceCode>
+                        </hmis:IncomeAndSource>
+                    </hmis:IncomeAndSources>
+                    <hmis:IncomeTotalMonthly hmis:dateCollected="2011-02-21T18:51:58" hmis:dateEffective="2011-06-02T18:51:58" hmis:dataCollectionStage="3">1872517053</hmis:IncomeTotalMonthly>
+                    <hmis:IncomeTotalMonthly hmis:dateCollected="2011-05-31T18:51:58" hmis:dateEffective="2011-07-23T18:51:58" hmis:dataCollectionStage="1">1986212879</hmis:IncomeTotalMonthly>
+                    <hmis:LengthOfStayAtPriorResidence hmis:dateCollected="2010-01-25T18:51:58" hmis:dateEffective="2011-04-22T18:51:58" hmis:dataCollectionStage="4">8</hmis:LengthOfStayAtPriorResidence>
+                    <hmis:LengthOfStayAtPriorResidence hmis:dateCollected="2010-10-30T18:51:58" hmis:dateEffective="2011-06-19T18:51:58" hmis:dataCollectionStage="4">3</hmis:LengthOfStayAtPriorResidence>
+                    <hmis:MentalHealthProblem>
+                        <hmis:HasMentalHealthProblem hmis:dateCollected="2011-04-17T18:51:58" hmis:dateEffective="2011-07-05T18:51:58" hmis:dataCollectionStage="3">1</hmis:HasMentalHealthProblem>
+                    </hmis:MentalHealthProblem>
+                    <hmis:MentalHealthProblem>
+                        <hmis:HasMentalHealthProblem hmis:dateCollected="2011-10-09T18:51:58" hmis:dateEffective="2011-01-08T18:51:58" hmis:dataCollectionStage="3">0</hmis:HasMentalHealthProblem>
+                    </hmis:MentalHealthProblem>
+                    <hmis:NonCashBenefitsLast30Days hmis:dateCollected="2011-03-13T18:51:58" hmis:dateEffective="2010-05-25T18:51:58" hmis:dataCollectionStage="2">0</hmis:NonCashBenefitsLast30Days>
+                    <hmis:NonCashBenefitsLast30Days hmis:dateCollected="2010-07-04T18:51:58" hmis:dateEffective="2011-05-19T18:51:58" hmis:dataCollectionStage="3">0</hmis:NonCashBenefitsLast30Days>
+                    <hmis:NonCashBenefits>
+                        <hmis:NonCashBenefit>
+                            <hmis:NonCashBenefitID>
+                                <hmis:IDNum>1234</hmis:IDNum>
+                            </hmis:NonCashBenefitID>
+                            <hmis:NonCashSourceCode hmis:dateCollected="2010-07-04T18:51:58">5</hmis:NonCashSourceCode>
+                            <hmis:ReceivingNonCashSource hmis:dateCollected="2010-07-04T18:51:58">1</hmis:ReceivingNonCashSource>
+                        </hmis:NonCashBenefit>   
+                    </hmis:NonCashBenefits>
+                    <hmis:PersonAddress hmis:dateCollected="2010-12-01T18:51:58" hmis:dateEffective="2011-08-08T18:51:58" hmis:dataCollectionStage="2">
+                            <hmis:AddressPeriod>
+                            </hmis:AddressPeriod>
+                            <hmis:Line1 hmis:dateCollected="2010-08-27T18:51:58" hmis:dateEffective="2010-04-24T18:51:58" hmis:dataCollectionStage="3">UoF34sMCefmG1t0-jJ28-gPqo</hmis:Line1>
+                            <hmis:City hmis:dateCollected="2011-01-15T18:51:58" hmis:dateEffective="2011-09-19T18:51:58" hmis:dataCollectionStage="4">PPcNRT17HJp6KV6P</hmis:City>
+                            <hmis:State hmis:dateCollected="2010-05-20T18:51:58" hmis:dateEffective="2011-10-03T18:51:58" hmis:dataCollectionStage="2">CA</hmis:State>
+                    </hmis:PersonAddress>
+                    <hmis:PersonAddress hmis:dateCollected="2010-07-22T18:51:58" hmis:dateEffective="2009-11-25T18:51:58" hmis:dataCollectionStage="2">
+                            <hmis:AddressPeriod>
+                            </hmis:AddressPeriod>
+                            <hmis:Line1 hmis:dateCollected="2010-02-20T18:51:58" hmis:dateEffective="2010-02-25T18:51:58" hmis:dataCollectionStage="4">chQODG73JRciqSDi0D8cw8Wb053uB4IEOgpHUqHDG09zWngw6M</hmis:Line1>
+                            <hmis:City hmis:dateCollected="2010-05-07T18:51:58" hmis:dateEffective="2011-01-11T18:51:58" hmis:dataCollectionStage="2">CWEXPFEE1.0QjVlj3i4VkxWFehDYsOD0vob9iOfqp</hmis:City>
+                            <hmis:State hmis:dateCollected="2011-05-21T18:51:58" hmis:dateEffective="2010-09-14T18:51:58" hmis:dataCollectionStage="3">MA</hmis:State>
+                    </hmis:PersonAddress>
+                    <hmis:PersonEmail hmis:dateCollected="2011-05-01T18:51:58" hmis:dateEffective="2011-09-25T18:51:58" hmis:dataCollectionStage="2">hm7@O.ýú-Ì59Å2é5ôRvee2B56kÚÂYNùMÏ4ÁgpÏÈT.ahUFt</hmis:PersonEmail>
+                    <hmis:PersonEmail hmis:dateCollected="2010-02-25T18:51:58" hmis:dateEffective="2010-07-26T18:51:58" hmis:dataCollectionStage="2">y--dR7R+q@õJ3üWeÁ7u9ÖæI9øTØÃßÐhêPàóÔûÆfþûÙ8.HRX</hmis:PersonEmail>
+                    <hmis:PersonPhoneNumber hmis:dateCollected="2010-09-20T18:51:58" hmis:dateEffective="2010-04-05T18:51:58" hmis:dataCollectionStage="2">7046245051</hmis:PersonPhoneNumber>
+                    <hmis:PersonPhoneNumber hmis:dateCollected="2011-07-02T18:51:58" hmis:dateEffective="2010-06-19T18:51:58" hmis:dataCollectionStage="3">3308102142</hmis:PersonPhoneNumber>
+                    <hmis:PhysicalDisability>
+                        <hmis:HasPhysicalDisability hmis:dateCollected="2010-01-12T18:51:58" hmis:dateEffective="2011-11-03T18:51:58" hmis:dataCollectionStage="1">9</hmis:HasPhysicalDisability>
+                    </hmis:PhysicalDisability>
+                    <hmis:PhysicalDisability>
+                        <hmis:HasPhysicalDisability hmis:dateCollected="2010-03-25T18:51:58" hmis:dateEffective="2011-06-26T18:51:58" hmis:dataCollectionStage="4">0</hmis:HasPhysicalDisability>
+                    </hmis:PhysicalDisability>
+                    <hmis:Pregnancy>
+                        <hmis:PregnancyID hmis:delete="1" hmis:deleteOccurredDate="2010-10-03T18:51:58" hmis:deleteEffective="2010-04-08T18:51:58">
+                                <hmis:IDStr>iH</hmis:IDStr>
+                        </hmis:PregnancyID>
+                        <hmis:PregnancyStatus hmis:dateCollected="2011-03-22T18:51:58" hmis:dateEffective="2010-10-23T18:51:58" hmis:dataCollectionStage="3">1</hmis:PregnancyStatus>
+                    </hmis:Pregnancy>
+                    <hmis:Pregnancy>
+                        <hmis:PregnancyID hmis:delete="1" hmis:deleteOccurredDate="2010-09-18T18:51:58" hmis:deleteEffective="2010-08-14T18:51:58">
+                                <hmis:IDNum>711890417</hmis:IDNum>
+                        </hmis:PregnancyID>
+                        <hmis:PregnancyStatus hmis:dateCollected="2011-05-28T18:51:58" hmis:dateEffective="2011-06-15T18:51:58" hmis:dataCollectionStage="2">0</hmis:PregnancyStatus>
+                    </hmis:Pregnancy>
+                    <hmis:PriorResidence>
+                        <hmis:PriorResidenceID hmis:delete="1" hmis:deleteOccurredDate="2010-01-20T18:51:58" hmis:deleteEffective="2009-12-28T18:51:58">
+                                <hmis:IDNum>731394532</hmis:IDNum>
+                        </hmis:PriorResidenceID>
+                    </hmis:PriorResidence>
+                    <hmis:PriorResidence>
+                        <hmis:PriorResidenceID hmis:delete="1" hmis:deleteOccurredDate="2010-01-29T18:51:58" hmis:deleteEffective="2011-04-03T18:51:58">
+                                <hmis:IDStr>Mt</hmis:IDStr>
+                        </hmis:PriorResidenceID>
+                    </hmis:PriorResidence>
+                    <hmis:SubstanceAbuseProblem>
+                        <hmis:HasSubstanceAbuseProblem hmis:dateCollected="2011-04-29T18:51:58" hmis:dateEffective="2010-01-27T18:51:58" hmis:dataCollectionStage="2">9</hmis:HasSubstanceAbuseProblem>
+                    </hmis:SubstanceAbuseProblem>
+                    <hmis:SubstanceAbuseProblem>
+                        <hmis:HasSubstanceAbuseProblem hmis:dateCollected="2011-06-26T18:51:58" hmis:dateEffective="2010-03-11T18:51:58" hmis:dataCollectionStage="4">8</hmis:HasSubstanceAbuseProblem>
+                    </hmis:SubstanceAbuseProblem>
+                    <hmis:Veteran>
+                    </hmis:Veteran>
+                    <hmis:Veteran>
+                    </hmis:Veteran>
+                    <hmis:VocationalTraining hmis:dateCollected="2011-03-08T18:51:58" hmis:dateEffective="2011-10-08T18:51:58" hmis:dataCollectionStage="3">9</hmis:VocationalTraining>
+                    <hmis:VocationalTraining hmis:dateCollected="2011-03-15T18:51:58" hmis:dateEffective="2010-10-06T18:51:58" hmis:dataCollectionStage="2">9</hmis:VocationalTraining>
+                </hmis:PersonHistorical>
+                <hmis:PersonHistorical>
+                    <hmis:PersonHistoricalID hmis:delete="1" hmis:deleteOccurredDate="2011-07-13T18:51:58" hmis:deleteEffective="2011-10-25T18:51:58">
+                            <hmis:IDStr>r5aTj8eV0LPhCDQyZaoDpE-.</hmis:IDStr>
+                    </hmis:PersonHistoricalID>
+                    <hmis:SiteServiceID>103297054</hmis:SiteServiceID>
+                    <hmis:ChildEnrollmentStatus>
+                        <hmis:ChildEnrollmentStatusID hmis:delete="1" hmis:deleteOccurredDate="2011-01-19T18:51:58" hmis:deleteEffective="2011-03-21T18:51:58">
+                                <hmis:IDStr>jRVO</hmis:IDStr>
+                        </hmis:ChildEnrollmentStatusID>
+                    </hmis:ChildEnrollmentStatus>
+                    <hmis:ChildEnrollmentStatus>
+                        <hmis:ChildEnrollmentStatusID hmis:delete="1" hmis:deleteOccurredDate="2011-01-25T18:51:58" hmis:deleteEffective="2010-12-16T18:51:58">
+                                <hmis:IDStr>kG-isEUA</hmis:IDStr>
+                        </hmis:ChildEnrollmentStatusID>
+                    </hmis:ChildEnrollmentStatus>
+                    <hmis:ChronicHealthCondition>
+                        <hmis:HasChronicHealthCondition hmis:dateCollected="2011-10-21T18:51:58" hmis:dateEffective="2010-12-28T18:51:58" hmis:dataCollectionStage="4">8</hmis:HasChronicHealthCondition>
+                    </hmis:ChronicHealthCondition>
+                    <hmis:ChronicHealthCondition>
+                        <hmis:HasChronicHealthCondition hmis:dateCollected="2011-08-15T18:51:58" hmis:dateEffective="2011-10-09T18:51:58" hmis:dataCollectionStage="3">0</hmis:HasChronicHealthCondition>
+                    </hmis:ChronicHealthCondition>
+                    <hmis:CurrentlyInSchool hmis:dateCollected="2011-06-15T18:51:58" hmis:dateEffective="2010-06-25T18:51:58" hmis:dataCollectionStage="3">1</hmis:CurrentlyInSchool>
+                    <hmis:CurrentlyInSchool hmis:dateCollected="2010-11-24T18:51:58" hmis:dateEffective="2010-08-11T18:51:58" hmis:dataCollectionStage="4">8</hmis:CurrentlyInSchool>
+                    <hmis:Degree>
+                        <hmis:DegreeID hmis:delete="1" hmis:deleteOccurredDate="2010-09-01T18:51:58" hmis:deleteEffective="2010-07-03T18:51:58">
+                                <hmis:IDNum>814941526</hmis:IDNum>
+                        </hmis:DegreeID>
+                    </hmis:Degree>
+                    <hmis:DisablingCondition hmis:dateCollected="2010-08-04T18:51:58" hmis:dateEffective="2011-07-05T18:51:58" hmis:dataCollectionStage="1">9</hmis:DisablingCondition>
+                    <hmis:DisablingCondition hmis:dateCollected="2010-06-07T18:51:58" hmis:dateEffective="2010-06-04T18:51:58" hmis:dataCollectionStage="1">0</hmis:DisablingCondition>
+                    <hmis:DevelopmentalDisability>
+                        <hmis:HasDevelopmentalDisability hmis:dateCollected="2010-09-28T18:51:58" hmis:dateEffective="2011-03-02T18:51:58" hmis:dataCollectionStage="3">8</hmis:HasDevelopmentalDisability>
+                    </hmis:DevelopmentalDisability>
+                    <hmis:DevelopmentalDisability>
+                        <hmis:HasDevelopmentalDisability hmis:dateCollected="2010-06-16T18:51:58" hmis:dateEffective="2010-12-18T18:51:58" hmis:dataCollectionStage="4">9</hmis:HasDevelopmentalDisability>
+                    </hmis:DevelopmentalDisability>
+                    <hmis:DomesticViolence>
+                        <hmis:DomesticViolenceSurvivor hmis:dateCollected="2011-06-15T18:51:58" hmis:dateEffective="2010-10-01T18:51:58" hmis:dataCollectionStage="3">8</hmis:DomesticViolenceSurvivor>
+                    </hmis:DomesticViolence>
+                    <hmis:DomesticViolence>
+                        <hmis:DomesticViolenceSurvivor hmis:dateCollected="2010-10-29T18:51:58" hmis:dateEffective="2010-12-22T18:51:58" hmis:dataCollectionStage="4">1</hmis:DomesticViolenceSurvivor>
+                    </hmis:DomesticViolence>
+                    <hmis:Employment>
+                        <hmis:EmploymentID hmis:delete="1" hmis:deleteOccurredDate="2010-02-23T18:51:58" hmis:deleteEffective="2011-07-17T18:51:58">
+                                <hmis:IDNum>133470342</hmis:IDNum>
+                        </hmis:EmploymentID>
+                    </hmis:Employment>
+                    <hmis:Employment>
+                        <hmis:EmploymentID hmis:delete="1" hmis:deleteOccurredDate="2011-08-26T18:51:58" hmis:deleteEffective="2010-12-03T18:51:58">
+                                <hmis:IDNum>1350775456</hmis:IDNum>
+                        </hmis:EmploymentID>
+                    </hmis:Employment>
+                    <hmis:EngagedDate hmis:dateCollected="2009-12-07T18:51:58" hmis:dataCollectionStage="1">2010-11-23</hmis:EngagedDate>
+                    <hmis:EngagedDate hmis:dateCollected="2009-11-22T18:51:58" hmis:dataCollectionStage="2">2010-01-19</hmis:EngagedDate>
+                    <hmis:HealthStatus hmis:dateCollected="2011-03-28T18:51:58" hmis:dateEffective="2011-11-04T18:51:58" hmis:dataCollectionStage="4">8</hmis:HealthStatus>
+                    <hmis:HealthStatus hmis:dateCollected="2011-04-20T18:51:58" hmis:dateEffective="2010-12-20T18:51:58" hmis:dataCollectionStage="1">3</hmis:HealthStatus>
+                    <hmis:HighestSchoolLevel hmis:dateCollected="2011-01-12T18:51:58" hmis:dateEffective="2011-10-30T18:51:58" hmis:dataCollectionStage="3">2</hmis:HighestSchoolLevel>
+                    <hmis:HighestSchoolLevel hmis:dateCollected="2010-07-14T18:51:58" hmis:dateEffective="2011-04-14T18:51:58" hmis:dataCollectionStage="2">0</hmis:HighestSchoolLevel>
+                    <hmis:HIVAIDSStatus>
+                        <hmis:HasHIVAIDS hmis:dateCollected="2011-08-14T18:51:58" hmis:dateEffective="2011-07-25T18:51:58" hmis:dataCollectionStage="2">1</hmis:HasHIVAIDS>
+                    </hmis:HIVAIDSStatus>
+                    <hmis:HIVAIDSStatus>
+                        <hmis:HasHIVAIDS hmis:dateCollected="2010-02-26T18:51:58" hmis:dateEffective="2009-12-05T18:51:58" hmis:dataCollectionStage="3">1</hmis:HasHIVAIDS>
+                    </hmis:HIVAIDSStatus>
+                    <hmis:HousingStatus hmis:dateCollected="2010-05-26T18:51:58" hmis:dateEffective="2011-10-12T18:51:58" hmis:dataCollectionStage="4">8</hmis:HousingStatus>
+                    <hmis:HousingStatus hmis:dateCollected="2010-04-12T18:51:58" hmis:dateEffective="2010-11-24T18:51:58" hmis:dataCollectionStage="3">3</hmis:HousingStatus>
+                    <hmis:HUDChronicHomeless hmis:dateCollected="2011-08-01T18:51:58" hmis:dateEffective="2011-01-19T18:51:58" hmis:dataCollectionStage="3">1</hmis:HUDChronicHomeless>
+                    <hmis:HUDChronicHomeless hmis:dateCollected="2011-04-14T18:51:58" hmis:dateEffective="2011-06-07T18:51:58" hmis:dataCollectionStage="2">1</hmis:HUDChronicHomeless>
+                    <hmis:HUDHomelessEpisodes>
+                    </hmis:HUDHomelessEpisodes>
+                    <hmis:HUDHomelessEpisodes>
+                    </hmis:HUDHomelessEpisodes>
+                    <hmis:IncomeLast30Days hmis:dateCollected="2011-11-10T18:51:58" hmis:dateEffective="2010-04-02T18:51:58" hmis:dataCollectionStage="2">8</hmis:IncomeLast30Days>
+                    <hmis:IncomeLast30Days hmis:dateCollected="2011-04-13T18:51:58" hmis:dateEffective="2010-03-07T18:51:58" hmis:dataCollectionStage="1">9</hmis:IncomeLast30Days>
+                    <hmis:IncomeTotalMonthly hmis:dateCollected="2010-12-27T18:51:58" hmis:dateEffective="2011-06-25T18:51:58" hmis:dataCollectionStage="1">31672704</hmis:IncomeTotalMonthly>
+                    <hmis:IncomeTotalMonthly hmis:dateCollected="2011-07-19T18:51:58" hmis:dateEffective="2011-08-13T18:51:58" hmis:dataCollectionStage="3">1270136495</hmis:IncomeTotalMonthly>
+                    <hmis:LengthOfStayAtPriorResidence hmis:dateCollected="2010-09-08T18:51:58" hmis:dateEffective="2011-05-11T18:51:58" hmis:dataCollectionStage="4">2</hmis:LengthOfStayAtPriorResidence>
+                    <hmis:LengthOfStayAtPriorResidence hmis:dateCollected="2010-11-01T18:51:58" hmis:dateEffective="2010-09-15T18:51:58" hmis:dataCollectionStage="2">9</hmis:LengthOfStayAtPriorResidence>
+                    <hmis:MentalHealthProblem>
+                        <hmis:HasMentalHealthProblem hmis:dateCollected="2010-04-23T18:51:58" hmis:dateEffective="2011-04-05T18:51:58" hmis:dataCollectionStage="3">9</hmis:HasMentalHealthProblem>
+                    </hmis:MentalHealthProblem>
+                    <hmis:MentalHealthProblem>
+                        <hmis:HasMentalHealthProblem hmis:dateCollected="2010-06-27T18:51:58" hmis:dateEffective="2010-12-26T18:51:58" hmis:dataCollectionStage="2">0</hmis:HasMentalHealthProblem>
+                    </hmis:MentalHealthProblem>
+                    <hmis:NonCashBenefitsLast30Days hmis:dateCollected="2011-01-07T18:51:58" hmis:dateEffective="2011-09-01T18:51:58" hmis:dataCollectionStage="2">1</hmis:NonCashBenefitsLast30Days>
+                    <hmis:NonCashBenefitsLast30Days hmis:dateCollected="2010-01-23T18:51:58" hmis:dateEffective="2010-12-17T18:51:58" hmis:dataCollectionStage="2">1</hmis:NonCashBenefitsLast30Days>
+                    <hmis:PersonAddress hmis:dateCollected="2009-12-31T18:51:58" hmis:dateEffective="2009-12-03T18:51:58" hmis:dataCollectionStage="2">
+                            <hmis:AddressPeriod>
+                            </hmis:AddressPeriod>
+                            <hmis:Line1 hmis:dateCollected="2011-03-29T18:51:58" hmis:dateEffective="2010-08-27T18:51:58" hmis:dataCollectionStage="2">eI1jDI8Juoa</hmis:Line1>
+                            <hmis:City hmis:dateCollected="2011-09-20T18:51:58" hmis:dateEffective="2010-08-16T18:51:58" hmis:dataCollectionStage="2">Fmk0MmBGO5pb</hmis:City>
+                            <hmis:State hmis:dateCollected="2010-11-25T18:51:58" hmis:dateEffective="2011-10-18T18:51:58" hmis:dataCollectionStage="2">TN</hmis:State>
+                    </hmis:PersonAddress><hmis:PersonEmail hmis:dateCollected="2010-10-12T18:51:58" hmis:dateEffective="2011-09-18T18:51:58" hmis:dataCollectionStage="3">WR@ùýûi85.oH</hmis:PersonEmail>
+                    <hmis:PersonPhoneNumber hmis:dateCollected="2011-09-12T18:51:58" hmis:dateEffective="2011-03-06T18:51:58" hmis:dataCollectionStage="4">7947156582</hmis:PersonPhoneNumber>
+                    <hmis:PhysicalDisability>
+                        <hmis:HasPhysicalDisability hmis:dateCollected="2009-12-18T18:51:58" hmis:dateEffective="2011-07-26T18:51:58" hmis:dataCollectionStage="3">1</hmis:HasPhysicalDisability>
+                    </hmis:PhysicalDisability>
+                    <hmis:Pregnancy>
+                        <hmis:PregnancyID hmis:delete="1" hmis:deleteOccurredDate="2011-01-20T18:51:58" hmis:deleteEffective="2010-05-14T18:51:58">
+                                <hmis:IDNum>1220444252</hmis:IDNum>
+                        </hmis:PregnancyID>
+                        <hmis:PregnancyStatus hmis:dateCollected="2010-07-09T18:51:58" hmis:dateEffective="2010-04-08T18:51:58" hmis:dataCollectionStage="1">0</hmis:PregnancyStatus>
+                    </hmis:Pregnancy>
+                    <hmis:PriorResidence>
+                        <hmis:PriorResidenceID hmis:delete="1" hmis:deleteOccurredDate="2010-02-05T18:51:58" hmis:deleteEffective="2009-12-04T18:51:58">
+                                <hmis:IDStr>z6Oux1W0yK0NmkLoyf.pbGC_VOQC1</hmis:IDStr>
+                        </hmis:PriorResidenceID>
+                    </hmis:PriorResidence><hmis:SubstanceAbuseProblem>
+                        <hmis:HasSubstanceAbuseProblem hmis:dateCollected="2011-10-03T18:51:58" hmis:dateEffective="2011-04-27T18:51:58" hmis:dataCollectionStage="3">1</hmis:HasSubstanceAbuseProblem>
+                    </hmis:SubstanceAbuseProblem>
+                    <hmis:Veteran>
+                    </hmis:Veteran>
+                    <hmis:VocationalTraining hmis:dateCollected="2010-06-22T18:51:58" hmis:dateEffective="2010-06-15T18:51:58" hmis:dataCollectionStage="1">8</hmis:VocationalTraining>
+                </hmis:PersonHistorical>
+                <hmis:Race>
+                    <hmis:Unhashed hmis:dateCollected="2009-11-30T18:51:58" hmis:dataCollectionStage="3">2</hmis:Unhashed>
+                </hmis:Race>
+                <hmis:Race>
+                    <hmis:Hashed>D</hmis:Hashed>
+                </hmis:Race>
+                <hmis:ReleaseOfInformation>
+                    <hmis:ReleaseOfInformationID hmis:delete="1" hmis:deleteOccurredDate="2011-07-01T18:51:58" hmis:deleteEffective="2011-09-02T18:51:58">
+                            <hmis:IDStr>QEq</hmis:IDStr>
+                    </hmis:ReleaseOfInformationID>
+                    <hmis:SiteServiceID>1650883402</hmis:SiteServiceID>
+                    <hmis:Documentation hmis:dateCollected="2010-07-31T18:51:58" hmis:dateEffective="2010-04-15T18:51:58" hmis:dataCollectionStage="3">3</hmis:Documentation>
+                    <hmis:EffectivePeriod>
+                    </hmis:EffectivePeriod>
+                    <hmis:ReleaseGranted hmis:dateCollected="2011-10-20T18:51:58" hmis:dateEffective="2011-01-21T18:51:58" hmis:dataCollectionStage="1">1</hmis:ReleaseGranted>
+                </hmis:ReleaseOfInformation>
+                <hmis:ReleaseOfInformation>
+                    <hmis:ReleaseOfInformationID hmis:delete="1" hmis:deleteOccurredDate="2010-07-06T18:51:58" hmis:deleteEffective="2011-02-15T18:51:58">
+                            <hmis:IDStr>IurWE1</hmis:IDStr>
+                    </hmis:ReleaseOfInformationID>
+                    <hmis:SiteServiceID>130218990</hmis:SiteServiceID>
+                    <hmis:Documentation hmis:dateCollected="2011-03-21T18:51:58" hmis:dateEffective="2011-04-20T18:51:58" hmis:dataCollectionStage="2">3</hmis:Documentation>
+                    <hmis:EffectivePeriod>
+                    </hmis:EffectivePeriod>
+                    <hmis:ReleaseGranted hmis:dateCollected="2011-02-04T18:51:58" hmis:dateEffective="2010-04-02T18:51:58" hmis:dataCollectionStage="4">1</hmis:ReleaseGranted>
+                </hmis:ReleaseOfInformation>
+                <hmis:ServiceEvent>
+                    <hmis:ServiceEventID hmis:delete="1" hmis:deleteOccurredDate="2010-12-22T18:51:58" hmis:deleteEffective="2011-05-07T18:51:58">
+                            <hmis:IDStr>XRJ8.UJhNo5zkZo9w</hmis:IDStr>
+                    </hmis:ServiceEventID>
+                    <hmis:SiteServiceID>176695716</hmis:SiteServiceID>
+                    <hmis:HouseholdID>
+                            <hmis:IDStr>CQfpoPhrWrWFLNgc.eS82bOIJooW</hmis:IDStr>
+                    </hmis:HouseholdID>
+                    <hmis:FundingSources>
+                        <hmis:FundingSource>
+                            <hmis:FundingSourceID>
+                                <hmis:IDStr>e772626287</hmis:IDStr>
+                            </hmis:FundingSourceID>
+                            <hmis:AdvanceOrArrears>0</hmis:AdvanceOrArrears>
+                            <hmis:FinancialAssistanceAmount>4990.12</hmis:FinancialAssistanceAmount>
+                        </hmis:FundingSource>
+                        <hmis:FundingSource>
+                            <hmis:FundingSourceID>
+                                <hmis:IDNum>772626287</hmis:IDNum>
+                            </hmis:FundingSourceID>
+                            <hmis:AdvanceOrArrears>1</hmis:AdvanceOrArrears>
+                            <hmis:FinancialAssistanceAmount>1</hmis:FinancialAssistanceAmount>
+                        </hmis:FundingSource>
+                    </hmis:FundingSources>                   
+                    <hmis:IsReferral>1</hmis:IsReferral>
+                    <hmis:QuantityOfServiceEvent>1824618358</hmis:QuantityOfServiceEvent>
+                    <hmis:QuantityOfServiceEventUnit>month</hmis:QuantityOfServiceEventUnit>
+                    <hmis:ServiceEventAIRSCode>eKT</hmis:ServiceEventAIRSCode>
+                    <hmis:ServiceEventEffectivePeriod>
+                    </hmis:ServiceEventEffectivePeriod>
+                    <hmis:ServiceEventProvisionDate>2011-04-23</hmis:ServiceEventProvisionDate>
+                    <hmis:ServiceEventRecordedDate>2010-02-07T18:51:58</hmis:ServiceEventRecordedDate>
+                    <hmis:ServiceEventNotes>
+                        <hmis:note>
+                            <hmis:NoteID hmis:delete="1" hmis:deleteOccurredDate="2010-11-21T18:51:58" hmis:deleteEffective="2010-08-04T18:51:58">
+                                    <hmis:IDStr>izCMtOW0x0kp7</hmis:IDStr>
+                            </hmis:NoteID>
+                            <hmis:NoteText hmis:dateCollected="2011-02-23T18:51:58" hmis:dateEffective="2011-08-01T18:51:58" hmis:dataCollectionStage="1">tWR-M1iA2qsYdi_5zNFtBeIN8.uOJRSJw2iOT9on-eXIxglv.HV4pdS</hmis:NoteText>
+                        </hmis:note>
+                        <hmis:note>
+                            <hmis:NoteID hmis:delete="1" hmis:deleteOccurredDate="2011-10-18T18:51:58" hmis:deleteEffective="2010-04-01T18:51:58">
+                                    <hmis:IDNum>1796869826</hmis:IDNum>
+                            </hmis:NoteID>
+                            <hmis:NoteText hmis:dateCollected="2011-08-24T18:51:58" hmis:dateEffective="2011-06-27T18:51:58" hmis:dataCollectionStage="3">gTRu.I7IhuTXGiyY</hmis:NoteText>
+                        </hmis:note>
+                    </hmis:ServiceEventNotes>
+                    <hmis:ServiceEventIndFam>1</hmis:ServiceEventIndFam>
+                        <hmis:HMISServiceEventCode>
+                            <hmis:TypeOfService>6</hmis:TypeOfService>
+                        </hmis:HMISServiceEventCode>
+                </hmis:ServiceEvent>
+                <hmis:ServiceEvent>
+                    <hmis:ServiceEventID hmis:delete="1" hmis:deleteOccurredDate="2011-11-11T18:51:58" hmis:deleteEffective="2011-09-19T18:51:58">
+                            <hmis:IDNum>1878372314</hmis:IDNum>
+                    </hmis:ServiceEventID>
+                    <hmis:SiteServiceID>1022962724</hmis:SiteServiceID>
+                    <hmis:HouseholdID>
+                            <hmis:IDNum>1334406399</hmis:IDNum>
+                    </hmis:HouseholdID>                    
+                    <hmis:IsReferral>0</hmis:IsReferral>
+                    <hmis:QuantityOfServiceEvent>542168406</hmis:QuantityOfServiceEvent>
+                    <hmis:QuantityOfServiceEventUnit>day</hmis:QuantityOfServiceEventUnit>
+                    <hmis:ServiceEventAIRSCode>dFKs</hmis:ServiceEventAIRSCode>
+                    <hmis:ServiceEventEffectivePeriod>
+                    </hmis:ServiceEventEffectivePeriod>
+                    <hmis:ServiceEventProvisionDate>2011-04-05</hmis:ServiceEventProvisionDate>
+                    <hmis:ServiceEventRecordedDate>2010-05-17T18:51:58</hmis:ServiceEventRecordedDate>
+                    <hmis:ServiceEventNotes>
+                        <hmis:note>
+                            <hmis:NoteID hmis:delete="1" hmis:deleteOccurredDate="2010-11-01T18:51:58" hmis:deleteEffective="2009-11-28T18:51:58">
+                                    <hmis:IDStr>D8bo9IJ7</hmis:IDStr>
+                            </hmis:NoteID>
+                            <hmis:NoteText hmis:dateCollected="2011-01-15T18:51:58" hmis:dateEffective="2011-10-19T18:51:58" hmis:dataCollectionStage="2">AZ</hmis:NoteText>
+                        </hmis:note>
+                        <hmis:note>
+                            <hmis:NoteID hmis:delete="1" hmis:deleteOccurredDate="2010-08-31T18:51:58" hmis:deleteEffective="2010-04-06T18:51:58">
+                                    <hmis:IDNum>439970238</hmis:IDNum>
+                            </hmis:NoteID>
+                            <hmis:NoteText hmis:dateCollected="2011-04-10T18:51:58" hmis:dateEffective="2010-03-26T18:51:58" hmis:dataCollectionStage="3">K7YJC8QVs</hmis:NoteText>
+                        </hmis:note>
+                    </hmis:ServiceEventNotes>
+                    <hmis:ServiceEventIndFam>0</hmis:ServiceEventIndFam>
+                        <hmis:HPRPFinancialAssistanceServiceEventCode>4</hmis:HPRPFinancialAssistanceServiceEventCode>
+                </hmis:ServiceEvent>
+                <hmis:SiteServiceParticipation>
+                    <hmis:SiteServiceParticipationID hmis:delete="1" hmis:deleteOccurredDate="2010-11-07T18:51:58" hmis:deleteEffective="2010-05-10T18:51:58">
+                            <hmis:IDNum>131071114</hmis:IDNum>
+                    </hmis:SiteServiceParticipationID>
+                    <hmis:SiteServiceID>1354039809</hmis:SiteServiceID>
+                    <hmis:HouseholdID>
+                            <hmis:IDStr>rd1hZzwNq64idHyL5AYzTxx5XlVIP</hmis:IDStr>
+                    </hmis:HouseholdID>
+                    <hmis:Need>
+                        <hmis:NeedID hmis:delete="1" hmis:deleteOccurredDate="2010-05-25T18:51:58" hmis:deleteEffective="2010-10-02T18:51:58">
+                                <hmis:IDNum>985896439</hmis:IDNum>
+                        </hmis:NeedID>
+                        <hmis:SiteServiceID>920425050</hmis:SiteServiceID>
+                        <hmis:NeedStatus>2</hmis:NeedStatus>
+                    </hmis:Need>
+                    <hmis:Need>
+                        <hmis:NeedID hmis:delete="1" hmis:deleteOccurredDate="2011-07-13T18:51:58" hmis:deleteEffective="2009-12-14T18:51:58">
+                                <hmis:IDNum>323098059</hmis:IDNum>
+                        </hmis:NeedID>
+                        <hmis:SiteServiceID>721818591</hmis:SiteServiceID>
+                        <hmis:NeedStatus>1</hmis:NeedStatus>
+                    </hmis:Need>
+                    <hmis:ParticipationDates>
+                    </hmis:ParticipationDates>
+                    <hmis:PersonHistorical>
+                        <hmis:PersonHistoricalID hmis:delete="1" hmis:deleteOccurredDate="2011-01-31T18:51:58" hmis:deleteEffective="2010-10-13T18:51:58">
+                                <hmis:IDStr>rsI9-XT</hmis:IDStr>
+                        </hmis:PersonHistoricalID>
+                    </hmis:PersonHistorical>
+                    <hmis:PersonHistorical>
+                        <hmis:PersonHistoricalID hmis:delete="1" hmis:deleteOccurredDate="2010-01-18T18:51:58" hmis:deleteEffective="2011-04-20T18:51:58">
+                                <hmis:IDStr>vxxQQOZtZjaMUI1hVDro</hmis:IDStr>
+                        </hmis:PersonHistoricalID>
+                    </hmis:PersonHistorical>
+                    <hmis:ReasonsForLeaving>
+                        <hmis:ReasonForLeavingID hmis:delete="1" hmis:deleteOccurredDate="2011-05-12T18:51:58" hmis:deleteEffective="2010-01-24T18:51:58">
+                                <hmis:IDStr>xD6ICG1FwRub8LP</hmis:IDStr>
+                        </hmis:ReasonForLeavingID>
+                    </hmis:ReasonsForLeaving>
+                    <hmis:ReasonsForLeaving>
+                        <hmis:ReasonForLeavingID hmis:delete="1" hmis:deleteOccurredDate="2009-11-30T18:51:58" hmis:deleteEffective="2010-09-24T18:51:58">
+                                <hmis:IDNum>1222097592</hmis:IDNum>
+                        </hmis:ReasonForLeavingID>
+                    </hmis:ReasonsForLeaving>
+                </hmis:SiteServiceParticipation>
+                <hmis:SiteServiceParticipation>
+                    <hmis:SiteServiceParticipationID hmis:delete="1" hmis:deleteOccurredDate="2010-06-03T18:51:58" hmis:deleteEffective="2010-12-10T18:51:58">
+                            <hmis:IDNum>328278350</hmis:IDNum>
+                    </hmis:SiteServiceParticipationID>
+                    <hmis:SiteServiceID>82589768</hmis:SiteServiceID>
+                    <hmis:HouseholdID>
+                            <hmis:IDNum>545735545</hmis:IDNum>
+                    </hmis:HouseholdID>
+                    <hmis:Need>
+                        <hmis:NeedID hmis:delete="1" hmis:deleteOccurredDate="2010-03-14T18:51:58" hmis:deleteEffective="2010-10-29T18:51:58">
+                                <hmis:IDStr>TAZ1XrnxcdB4q6LcFU0fS1Pv</hmis:IDStr>
+                        </hmis:NeedID>
+                        <hmis:SiteServiceID>1790962493</hmis:SiteServiceID>
+                        <hmis:NeedStatus>1</hmis:NeedStatus>
+                    </hmis:Need>
+                    <hmis:Need>
+                        <hmis:NeedID hmis:delete="1" hmis:deleteOccurredDate="2010-06-21T18:51:58" hmis:deleteEffective="2011-08-03T18:51:58">
+                                <hmis:IDNum>1007115449</hmis:IDNum>
+                        </hmis:NeedID>
+                        <hmis:SiteServiceID>730469511</hmis:SiteServiceID>
+                        <hmis:NeedStatus>3</hmis:NeedStatus>
+                    </hmis:Need>
+                    <hmis:ParticipationDates>
+                    </hmis:ParticipationDates>
+                    <hmis:PersonHistorical>
+                        <hmis:PersonHistoricalID hmis:delete="1" hmis:deleteOccurredDate="2010-06-24T18:51:58" hmis:deleteEffective="2010-09-30T18:51:58">
+                                <hmis:IDStr>X3GXB</hmis:IDStr>
+                        </hmis:PersonHistoricalID>
+                    </hmis:PersonHistorical>
+                    <hmis:PersonHistorical>
+                        <hmis:PersonHistoricalID hmis:delete="1" hmis:deleteOccurredDate="2010-08-13T18:51:58" hmis:deleteEffective="2009-11-21T18:51:58">
+                                <hmis:IDStr>MrJ-3572dNOSW9k6</hmis:IDStr>
+                        </hmis:PersonHistoricalID>
+                    </hmis:PersonHistorical>
+                    <hmis:ReasonsForLeaving>
+                        <hmis:ReasonForLeavingID hmis:delete="1" hmis:deleteOccurredDate="2011-07-17T18:51:58" hmis:deleteEffective="2009-12-11T18:51:58">
+                                <hmis:IDNum>689341544</hmis:IDNum>
+                        </hmis:ReasonForLeavingID>
+                    </hmis:ReasonsForLeaving>
+                    <hmis:ReasonsForLeaving>
+                        <hmis:ReasonForLeavingID hmis:delete="1" hmis:deleteOccurredDate="2011-02-13T18:51:58" hmis:deleteEffective="2010-09-07T18:51:58">
+                                <hmis:IDNum>177733273</hmis:IDNum>
+                        </hmis:ReasonForLeavingID>
+                    </hmis:ReasonsForLeaving>
+                </hmis:SiteServiceParticipation>
+                <hmis:SocialSecurityNumber>
+                        <hmis:Hashed hmis:dateCollected="2011-09-15T18:51:58" hmis:dateEffective="2010-07-31T18:51:58" hmis:dataCollectionStage="4">H39p3D7axyFUjKOM_C</hmis:Hashed>
+                    <hmis:SocialSecNumberQualityCode hmis:dateCollected="2011-04-29T18:51:58" hmis:dateEffective="2010-05-06T18:51:58" hmis:dataCollectionStage="3">2</hmis:SocialSecNumberQualityCode>
+                </hmis:SocialSecurityNumber>
+            </hmis:Person>
+            <hmis:Service hmis:delete="1" hmis:deleteOccurredDate="2011-04-16T18:51:58" hmis:deleteEffective="2010-03-26T18:51:58">
+                    <airs:Key>622680858</airs:Key>
+                    <airs:Name>qJ</airs:Name>
+                    <hmis:COCCode>TN</hmis:COCCode>
+                    <hmis:Configuration>1</hmis:Configuration>
+                    <hmis:DirectServiceCode>1</hmis:DirectServiceCode>
+                    <hmis:FundingSources>
+                        <hmis:FundingSource>
+                            <hmis:FundingSourceID>
+                                <hmis:IDStr>hhbbyy6677</hmis:IDStr>
+                            </hmis:FundingSourceID>
+                            <hmis:FederalCFDA>14.124</hmis:FederalCFDA>
+                            <hmis:ReceivesMcKinneyFunding>0</hmis:ReceivesMcKinneyFunding>
+                        </hmis:FundingSource>
+                    </hmis:FundingSources>
+                    <hmis:GranteeIdentifier>L-1PQB</hmis:GranteeIdentifier>
+                    <hmis:IndividualFamilyCode>2</hmis:IndividualFamilyCode>
+                    <hmis:Inventory>
+                        <hmis:HMISParticipationPeriod>
+                            <hmis:StartDate>2010-11-21T18:51:58</hmis:StartDate>
+                            <hmis:EndDate>2010-12-21T18:51:58</hmis:EndDate>
+                        </hmis:HMISParticipationPeriod>
+                        <hmis:InventoryID>
+                            <hmis:IDStr>jhghg</hmis:IDStr>
+                        </hmis:InventoryID>
+                        <hmis:BedInventory hmis:bedAvailability="1" hmis:bedIndividualFamilyType="0" hmis:chronicHomelessBed="0" hmis:bedType="1" hmis:domesticViolenceShelterBed="0" hmis:bedStatus="1" hmis:householdType="1">1951714370</hmis:BedInventory>
+                        <hmis:HMISParticipatingBeds>683447524</hmis:HMISParticipatingBeds> 
+                        <hmis:InventoryEffectivePeriod>
+                            <hmis:StartDate>2010-11-21T18:51:58</hmis:StartDate>
+                            <hmis:EndDate>2010-11-21T18:51:58</hmis:EndDate>
+                        </hmis:InventoryEffectivePeriod>  
+                        <hmis:InventoryRecordedDate>2010-11-21T18:51:58</hmis:InventoryRecordedDate>
+                        <hmis:UnitInventory>99</hmis:UnitInventory>
+                    </hmis:Inventory>
+                    <hmis:ResidentialTrackingMethod>2</hmis:ResidentialTrackingMethod>
+                    <hmis:ServiceType>4</hmis:ServiceType>
+                    <hmis:ServiceEffectivePeriod>
+                        <hmis:StartDate>2011-10-30T18:51:58</hmis:StartDate>
+                        <hmis:EndDate>2010-08-16T18:51:58</hmis:EndDate>
+                    </hmis:ServiceEffectivePeriod>
+                    <hmis:ServiceRecordedDate>2011-05-13T18:51:58</hmis:ServiceRecordedDate>
+                    <hmis:TargetPopulationA>10</hmis:TargetPopulationA>
+                    <hmis:TargetPopulationB>4</hmis:TargetPopulationB>
+            </hmis:Service>
+            <hmis:SiteService hmis:delete="1" hmis:deleteOccurredDate="2011-07-28T18:51:58" hmis:deleteEffective="2010-03-28T18:51:58" AreaFlexibility="false" ServiceNotAlwaysAvailable="false" ServiceGroupKey="1849596151">
+                    <airs:Name>IcrcDAHJu.we0fJ8</airs:Name>
+                    <airs:Key>951527403</airs:Key>
+                    <airs:Description>gzvXC-KND0B8LwLMa5hIV</airs:Description>
+                    <airs:Phone TollFree="false" Confidential="0">
+                                <airs:ReasonWithheld>AG1Im-HGZuO</airs:ReasonWithheld>
+                        <airs:Extension>Jw81VMdPirTWVb</airs:Extension>
+                        <airs:Description>booyFu-etG09ScxrMuGmnIk.Urx</airs:Description>
+                        <airs:Type>nGjhE195s9TBBPNpy3lu</airs:Type>
+                        <airs:Function>Q2T78Lb-x45Q</airs:Function>
+                    </airs:Phone>
+                    <airs:Phone TollFree="false" Confidential="1">
+                                <airs:ReasonWithheld>j.aEfFti3SnD</airs:ReasonWithheld>
+                        <airs:Extension>Kf6M7eiWbH9eGbUPEyNGhRuNN.</airs:Extension>
+                        <airs:Description>UC51c6BTcOlJLr8kh47LOCB_</airs:Description>
+                        <airs:Type>F2qWf</airs:Type>
+                        <airs:Function>U5SZhqU</airs:Function>
+                    </airs:Phone>
+                    <airs:TimeOpen>
+                        <airs:Sunday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Sunday>
+                        <airs:Sunday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Sunday>
+                        <airs:Monday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Monday>
+                        <airs:Monday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Monday>
+                        <airs:Tuesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Tuesday>
+                        <airs:Tuesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Tuesday>
+                        <airs:Wednesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Wednesday>
+                        <airs:Wednesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Wednesday>
+                        <airs:Thursday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Thursday>
+                        <airs:Thursday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Thursday>
+                        <airs:Friday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Friday>
+                        <airs:Friday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Friday>
+                        <airs:Saturday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Saturday>
+                        <airs:Saturday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Saturday>
+                        <airs:Notes>HKGb</airs:Notes>
+                    </airs:TimeOpen>
+                    <airs:Seasonal>
+                        <airs:Description>v</airs:Description>
+                        <airs:StartDate>oKzV2.ejfrA</airs:StartDate>
+                        <airs:EndDate>cA5bQLpMXF_baMudYVohaXu</airs:EndDate>
+                    </airs:Seasonal>
+                    <airs:Taxonomy>
+                        <airs:Code>fMu</airs:Code>
+                        <airs:Code>sf080Ic</airs:Code>
+                    </airs:Taxonomy>
+                    <airs:Languages>
+                        <airs:Name>u95JE23wwZUh5cSqOQ</airs:Name>
+                        <airs:TimeOpen>
+                        </airs:TimeOpen>
+                        <airs:Notes>jx.OpptDi</airs:Notes>
+                        <airs:Name>yUt3sA5N2IuZZ1oxLNU1</airs:Name>
+                        <airs:TimeOpen>
+                        </airs:TimeOpen>
+                        <airs:Notes>heZLhuhPy26FR4Go94jyQ</airs:Notes>
+                    </airs:Languages>
+                    <airs:GeographicAreaServed>
+                            <airs:State>ec6</airs:State>
+                        <airs:ZipCode>xqQK6Hr4b6SBG9I1I1Ncszrh</airs:ZipCode>
+                        <airs:ZipCode>P96khhzQ5tuV4.uy-k6hefWhP-tBCO</airs:ZipCode>
+                        <airs:CensusTrack>qBcuQcgHm8AvhtrT6qSvmS4.</airs:CensusTrack>
+                        <airs:CensusTrack>pVT8iRk-L-MiaO3D1</airs:CensusTrack>
+                        <airs:City>H_zM67T04j29g8A</airs:City>
+                        <airs:City>J</airs:City>
+                        <airs:County>sBwoRZ8</airs:County>
+                        <airs:County>Xbvmq4oYrid9YVBUB</airs:County>
+                        <airs:State>FbddLXdWfvuGs_W.lKUq17t</airs:State>
+                        <airs:State>gs8jiDqIJif6pU5KU891oqe8C</airs:State>
+                        <airs:Country>IbSbC6j6TVRo</airs:Country>
+                        <airs:Country>UwzU</airs:Country>
+                        <airs:Description>vVOk</airs:Description>
+                    </airs:GeographicAreaServed>
+                    <airs:ResourceInfo AvailableForDirectory="1" AvailableForReferral="true" AvailableForResearch="false" DateAdded="2010-04-10" DateLastVerified="2010-05-27" DateOfLastAction="2009-12-16" LastActionType="mlcdKyJQW0fVi6">
+                        <airs:Contact Type="FNOCcTJGcQt">
+                            <airs:Name>Y1ou</airs:Name>
+                        </airs:Contact>
+                        <airs:Contact Type="y6Fo">
+                            <airs:Name>gS</airs:Name>
+                        </airs:Contact>
+                        <airs:ResourceSpecialist>VkCowWbm9yYJXt44se</airs:ResourceSpecialist>
+                    </airs:ResourceInfo>
+                    <airs:DocumentsRequired>
+                        <airs:DocumentsRequired>YKKcVtN_6IcJYmmZyyQH</airs:DocumentsRequired>
+                        <airs:Description>KY6yG0</airs:Description>
+                    </airs:DocumentsRequired>
+                    <airs:ApplicationProcess>
+                        <airs:Step>YwRC</airs:Step>
+                        <airs:Description>JCAodV92sFRTKDmOXgqtOir</airs:Description>
+                    </airs:ApplicationProcess>
+                    <airs:FeeStructure>nJuNKj8tI1Nddox</airs:FeeStructure><airs:OtherRequirements>aP-clyfgIkSa2</airs:OtherRequirements>
+                    <airs:AidRequirements>QTUckS5tcVm</airs:AidRequirements>
+                    <airs:AgeRequirements Gender="Male" MinimumAge="1754203663" MaximumAge="1938263313">ev4bDlsGXbFThnbcWGKdYBg6H</airs:AgeRequirements>
+                    <airs:GenderRequirements>N7k2ysOfk4n3dWoH</airs:GenderRequirements>
+                    <airs:FamilyRequirements>N7bYFuVSIKqNM</airs:FamilyRequirements>
+                    <airs:IncomeRequirements>jpArcMoMoXmAHe</airs:IncomeRequirements>
+                    <airs:ResidencyRequirements>o5fN-DKkJEIetmg2</airs:ResidencyRequirements>
+                    <hmis:ServiceID>1176671654</hmis:ServiceID>
+                    <hmis:SiteID>1936285194</hmis:SiteID>
+                    <hmis:GeographicCode hmis:dateCollected="2010-08-01T18:51:58" hmis:dateEffective="2011-11-09T18:51:58" hmis:dataCollectionStage="4">509870</hmis:GeographicCode>
+                    <hmis:HMISAsset>
+                            <hmis:AssetID hmis:delete="1" hmis:deleteOccurredDate="2010-05-14T18:51:58" hmis:deleteEffective="2011-04-14T18:51:58">
+                                    <hmis:IDNum>940431120</hmis:IDNum>
+                            </hmis:AssetID>
+                            <hmis:AssetCount>22334</hmis:AssetCount>
+                            <hmis:AssetType>0</hmis:AssetType>
+                            <hmis:AssetEffectivePeriod>
+                                <hmis:StartDate>2011-01-20T18:51:58</hmis:StartDate>
+                                <hmis:EndDate>2011-01-20T18:51:58</hmis:EndDate>
+                            </hmis:AssetEffectivePeriod>
+                            <hmis:AssetRecordedDate>2011-01-20T18:51:58</hmis:AssetRecordedDate>
+                            <hmis:Assignment>
+                                <hmis:AssignmentID hmis:delete="1" hmis:deleteOccurredDate="2010-04-20T18:51:58" hmis:deleteEffective="2011-03-26T18:51:58">
+                                        <hmis:IDStr>LZD8ZwKbfrkFx</hmis:IDStr>
+                                </hmis:AssignmentID>
+                                <hmis:PersonID>
+                                        <hmis:IDNum>2066258255</hmis:IDNum>
+                                </hmis:PersonID>
+                            </hmis:Assignment>
+                                <hmis:HMISParticipationPeriod>
+                                    <hmis:StartDate>2011-01-20T18:51:58</hmis:StartDate>
+                                    <hmis:EndDate>2011-01-20T18:51:58</hmis:EndDate>
+                                </hmis:HMISParticipationPeriod>
+                    </hmis:HMISAsset>
+                    <hmis:HousingType hmis:dateCollected="2010-04-05T18:51:58" hmis:dateEffective="2011-06-30T18:51:58" hmis:dataCollectionStage="3">2</hmis:HousingType>
+                    <hmis:Principal>0</hmis:Principal>
+                    <hmis:SiteServiceEffectivePeriod>
+                        <hmis:StartDate>2011-10-22T18:51:58</hmis:StartDate>
+                        <hmis:EndDate>2010-12-03T18:51:58</hmis:EndDate>
+                    </hmis:SiteServiceEffectivePeriod>
+                    <hmis:SiteServiceRecordedDate>2011-10-17T18:51:58</hmis:SiteServiceRecordedDate>
+                    <hmis:SiteServiceType>1</hmis:SiteServiceType>
+            </hmis:SiteService>
+        </hmis:Export>
+    </hmis:Source>
+    <hmis:Source>
+        <hmis:SourceID hmis:delete="1" hmis:deleteOccurredDate="2011-08-04T18:51:58" hmis:deleteEffective="2011-05-16T18:51:58">
+                <hmis:IDNum>334380997</hmis:IDNum>
+        </hmis:SourceID>
+        <hmis:SoftwareVendor>yripZVHU8c</hmis:SoftwareVendor>
+        <hmis:SoftwareVersion>91.781</hmis:SoftwareVersion>
+        <hmis:SourceContactEmail>j@OÃ.AQüü66Ú2BNMûáøuý0gÙÆR1õùHýËñØvÓüòüj3WùGÓüQñ35ZüVë.Itg</hmis:SourceContactEmail>
+        <hmis:SourceContactExtension>320</hmis:SourceContactExtension>
+        <hmis:SourceContactFirst>L-hUAZ</hmis:SourceContactFirst>
+        <hmis:SourceContactLast>IxSTW1N82kdSt</hmis:SourceContactLast>
+        <hmis:SourceContactPhone>9582899258</hmis:SourceContactPhone>
+        <hmis:SourceName>MzjDeAM2N8LunNrxxlTurAJ2sk</hmis:SourceName>
+        <hmis:Export>
+            <hmis:ExportID hmis:delete="1" hmis:deleteOccurredDate="2010-09-21T18:51:58" hmis:deleteEffective="2010-08-03T18:51:58">
+                    <hmis:IDStr>I2ZENR</hmis:IDStr>
+            </hmis:ExportID>
+            <hmis:ExportDate>2010-06-06T18:51:58</hmis:ExportDate>
+            <hmis:ExportPeriod>
+                <hmis:StartDate>2010-11-22T18:51:58</hmis:StartDate>
+                <hmis:EndDate>2010-06-12T18:51:58</hmis:EndDate>
+            </hmis:ExportPeriod>            
+            <hmis:Household>
+                <hmis:HouseholdID hmis:delete="1" hmis:deleteOccurredDate="2009-11-17T18:51:58" hmis:deleteEffective="2010-05-19T18:51:58">
+                        <hmis:IDNum>2032532041</hmis:IDNum>
+                </hmis:HouseholdID>
+                <hmis:HeadOfHouseholdID hmis:dateCollected="2010-12-27T18:51:58" hmis:dateEffective="2011-06-23T18:51:58" hmis:dataCollectionStage="3" hmis:delete="1" hmis:deleteOccurredDate="2011-04-06T18:51:58" hmis:deleteEffective="2010-10-03T18:51:58">
+                        <hmis:IDStr>R6QDbqZB.LUMyXWId2blTvRWVF</hmis:IDStr>
+                </hmis:HeadOfHouseholdID>
+                <hmis:Members>
+                    <hmis:Member>
+                        <hmis:PersonID hmis:dateCollected="2010-04-13T18:51:58" hmis:dateEffective="2011-04-24T18:51:58" hmis:dataCollectionStage="3" hmis:delete="1" hmis:deleteOccurredDate="2010-03-28T18:51:58" hmis:deleteEffective="2011-02-12T18:51:58">
+                                <hmis:IDNum>272509340</hmis:IDNum>
+                        </hmis:PersonID>
+                    </hmis:Member>
+                    <hmis:Member>
+                        <hmis:PersonID hmis:dateCollected="2010-03-02T18:51:58" hmis:dateEffective="2011-08-20T18:51:58" hmis:dataCollectionStage="2" hmis:delete="1" hmis:deleteOccurredDate="2010-07-22T18:51:58" hmis:deleteEffective="2010-06-21T18:51:58">
+                                <hmis:IDNum>42869654</hmis:IDNum>
+                        </hmis:PersonID>
+                    </hmis:Member>
+                </hmis:Members>
+            </hmis:Household>
+            
+            <hmis:Person>
+                <hmis:PersonID hmis:delete="1" hmis:deleteOccurredDate="2011-11-10T18:51:58" hmis:deleteEffective="2010-01-31T18:51:58">
+                        <hmis:IDNum>999104675</hmis:IDNum>
+                </hmis:PersonID>
+                <hmis:DateOfBirth>
+                        <hmis:Hashed>zHQuXIhCafz.6ZMUsWBWs3w_VchX</hmis:Hashed>
+                    <hmis:DateOfBirthType hmis:dateCollected="2011-11-03T18:51:58" hmis:dateEffective="2010-06-13T18:51:58" hmis:dataCollectionStage="1">9</hmis:DateOfBirthType>
+                </hmis:DateOfBirth>
+                <hmis:Ethnicity>
+                    <hmis:Unhashed hmis:dateCollected="2011-09-09T18:51:58" hmis:dataCollectionStage="1">9</hmis:Unhashed>
+                </hmis:Ethnicity>
+                <hmis:Gender>
+                    <hmis:Unhashed hmis:dateCollected="2010-09-15T18:51:58" hmis:dateEffective="2010-03-28T18:51:58" hmis:dataCollectionStage="3">2</hmis:Unhashed>
+                </hmis:Gender>
+                <hmis:LegalFirstName>
+                    <hmis:Hashed hmis:dateCollected="2010-02-19T18:51:58" hmis:dateEffective="2010-05-09T18:51:58" hmis:dataCollectionStage="3">jO5nfZpo</hmis:Hashed>
+                </hmis:LegalFirstName>
+                <hmis:LegalLastName>
+                    <hmis:Hashed hmis:dateCollected="2010-04-03T18:51:58" hmis:dateEffective="2010-09-23T18:51:58" hmis:dataCollectionStage="3">F8t4um6ZExf.DT7</hmis:Hashed>
+                </hmis:LegalLastName>
+                <hmis:LegalMiddleName>
+                    <hmis:Hashed hmis:dateCollected="2011-02-16T18:51:58" hmis:dateEffective="2011-10-06T18:51:58" hmis:dataCollectionStage="2">xJywnanp0r</hmis:Hashed>
+                </hmis:LegalMiddleName>
+                <hmis:LegalSuffix>
+                    <hmis:Hashed hmis:dateCollected="2011-07-20T18:51:58" hmis:dateEffective="2010-03-05T18:51:58" hmis:dataCollectionStage="1">HH.YJNB</hmis:Hashed>
+                </hmis:LegalSuffix>
+                <hmis:Need>
+                    <hmis:NeedID hmis:delete="1" hmis:deleteOccurredDate="2010-07-16T18:51:58" hmis:deleteEffective="2010-03-22T18:51:58">
+                            <hmis:IDStr>ts-pD3BE3pQesaaU59AFQA-Z</hmis:IDStr>
+                    </hmis:NeedID>
+                    <hmis:SiteServiceID>1453974619</hmis:SiteServiceID>
+                    <hmis:ServiceEventID>
+                            <hmis:IDStr>StohNXvayI8Xr</hmis:IDStr>
+                    </hmis:ServiceEventID>
+                    <hmis:ServiceEventID>
+                            <hmis:IDStr>UbnlZW6Nhk0k.26ob264oEmVC</hmis:IDStr>
+                    </hmis:ServiceEventID>
+                    <hmis:NeedEffectivePeriod>
+                    </hmis:NeedEffectivePeriod>
+                    <hmis:NeedRecordedDate>2010-06-24T18:51:58</hmis:NeedRecordedDate>
+                    <hmis:NeedStatus>3</hmis:NeedStatus>
+                    <hmis:Taxonomy>
+                        <airs:Code>VyQGSJLU.5KN9OVvjAhLICPd6</airs:Code>
+                        <airs:Code>RjLiXKj</airs:Code>
+                    </hmis:Taxonomy>
+                </hmis:Need>
+                <hmis:Need>
+                    <hmis:NeedID hmis:delete="1" hmis:deleteOccurredDate="2009-12-01T18:51:58" hmis:deleteEffective="2011-07-18T18:51:58">
+                            <hmis:IDStr>X1zr3oXOYH1GRpZwc0H</hmis:IDStr>
+                    </hmis:NeedID>
+                    <hmis:SiteServiceID>226443277</hmis:SiteServiceID>
+                    <hmis:ServiceEventID>
+                            <hmis:IDStr>V.DmvRsixxkq8ZxAoAo</hmis:IDStr>
+                    </hmis:ServiceEventID>
+                    <hmis:ServiceEventID>
+                            <hmis:IDStr>bDUSAynIl78lO2</hmis:IDStr>
+                    </hmis:ServiceEventID>
+                    <hmis:NeedEffectivePeriod>
+                    </hmis:NeedEffectivePeriod>
+                    <hmis:NeedRecordedDate>2010-01-02T18:51:58</hmis:NeedRecordedDate>
+                    <hmis:NeedStatus>2</hmis:NeedStatus>
+                    <hmis:Taxonomy>
+                        <airs:Code>T6GiRhdJEXj.xMtY0TTqYVe7</airs:Code>
+                        <airs:Code>thgHGC8dp</airs:Code>
+                    </hmis:Taxonomy>
+                </hmis:Need>
+                <hmis:OtherNames>
+                    <hmis:OtherFirstName>
+                        <hmis:Hashed hmis:dateCollected="2010-10-10T18:51:58" hmis:dateEffective="2010-03-07T18:51:58" hmis:dataCollectionStage="3">mkg2ts5xGYmgupHfLMxsdURy</hmis:Hashed>
+                    </hmis:OtherFirstName>
+                    <hmis:OtherMiddleName>
+                        <hmis:Hashed hmis:dateCollected="2011-03-16T18:51:58" hmis:dateEffective="2009-12-24T18:51:58" hmis:dataCollectionStage="3">cb-6CxhwkMh9I26894jbA206iyL7Ntjh</hmis:Hashed>
+                    </hmis:OtherMiddleName>
+                    <hmis:OtherLastName>
+                        <hmis:Hashed hmis:dateCollected="2011-04-02T18:51:58" hmis:dateEffective="2011-10-25T18:51:58" hmis:dataCollectionStage="1">KR5AimQkyJKxMZ</hmis:Hashed>
+                    </hmis:OtherLastName>
+                    <hmis:OtherSuffix>
+                        <hmis:Hashed hmis:dateCollected="2011-10-07T18:51:58" hmis:dateEffective="2010-09-11T18:51:58" hmis:dataCollectionStage="1">Gi-JJbIgnx_uz_XcYvD</hmis:Hashed>
+                    </hmis:OtherSuffix>
+                </hmis:OtherNames>
+                <hmis:OtherNames>
+                    <hmis:OtherFirstName>
+                        <hmis:Hashed hmis:dateCollected="2011-07-04T18:51:58" hmis:dateEffective="2011-03-16T18:51:58" hmis:dataCollectionStage="4">dABLPZHc-Fc5IJa3tjCZPqdSIaaXH5mbOoNKvGOY</hmis:Hashed>
+                    </hmis:OtherFirstName>
+                    <hmis:OtherMiddleName>
+                        <hmis:Hashed hmis:dateCollected="2009-12-16T18:51:58" hmis:dateEffective="2011-10-30T18:51:58" hmis:dataCollectionStage="3">_tq3YLDSW</hmis:Hashed>
+                    </hmis:OtherMiddleName>
+                    <hmis:OtherLastName>
+                        <hmis:Hashed hmis:dateCollected="2009-12-30T18:51:58" hmis:dateEffective="2011-04-26T18:51:58" hmis:dataCollectionStage="1">xSr9pjR.ygX-R1k_UuuqDRTo2</hmis:Hashed>
+                    </hmis:OtherLastName>
+                    <hmis:OtherSuffix>
+                        <hmis:Unhashed hmis:dateCollected="2010-02-17T18:51:58" hmis:dateEffective="2010-10-22T18:51:58" hmis:dataCollectionStage="2">mj</hmis:Unhashed>
+                    </hmis:OtherSuffix>
+                </hmis:OtherNames>
+                <hmis:Race>
+                    <hmis:Hashed>QxeP87xmec-S</hmis:Hashed>
+                </hmis:Race>
+                <hmis:Race>
+                    <hmis:Unhashed hmis:dateCollected="2011-07-05T18:51:58" hmis:dataCollectionStage="1">8</hmis:Unhashed>
+                </hmis:Race>
+                <hmis:ReleaseOfInformation>
+                    <hmis:ReleaseOfInformationID hmis:delete="1" hmis:deleteOccurredDate="2010-04-01T18:51:58" hmis:deleteEffective="2011-04-07T18:51:58">
+                            <hmis:IDNum>1482112010</hmis:IDNum>
+                    </hmis:ReleaseOfInformationID>
+                    <hmis:SiteServiceID>159780406</hmis:SiteServiceID>
+                    <hmis:Documentation hmis:dateCollected="2011-08-06T18:51:58" hmis:dateEffective="2011-03-15T18:51:58" hmis:dataCollectionStage="4">2</hmis:Documentation>
+                    <hmis:EffectivePeriod>
+                    </hmis:EffectivePeriod>
+                    <hmis:ReleaseGranted hmis:dateCollected="2010-09-14T18:51:58" hmis:dateEffective="2010-07-09T18:51:58" hmis:dataCollectionStage="4">0</hmis:ReleaseGranted>
+                </hmis:ReleaseOfInformation>
+                <hmis:ReleaseOfInformation>
+                    <hmis:ReleaseOfInformationID hmis:delete="1" hmis:deleteOccurredDate="2010-07-16T18:51:58" hmis:deleteEffective="2010-10-05T18:51:58">
+                            <hmis:IDNum>865905686</hmis:IDNum>
+                    </hmis:ReleaseOfInformationID>
+                    <hmis:SiteServiceID>2118817537</hmis:SiteServiceID>
+                    <hmis:Documentation hmis:dateCollected="2011-07-17T18:51:58" hmis:dateEffective="2009-11-25T18:51:58" hmis:dataCollectionStage="4">1</hmis:Documentation>
+                    <hmis:EffectivePeriod>
+                    </hmis:EffectivePeriod>
+                    <hmis:ReleaseGranted hmis:dateCollected="2010-02-23T18:51:58" hmis:dateEffective="2011-05-11T18:51:58" hmis:dataCollectionStage="3">0</hmis:ReleaseGranted>
+                </hmis:ReleaseOfInformation>
+            </hmis:Person>
+            
+            <hmis:Site hmis:delete="1" hmis:deleteOccurredDate="2010-11-02T18:51:58" hmis:deleteEffective="2010-08-03T18:51:58" PublicAccessToTransportation="true" YearInc="1998" AnnualBudgetTotal="170709772" LegalStatus="p2gRfcY9Reidbl.LzyXUSBT" ExcludeFromWebsite="true" ExcludeFromDirectory="1">
+                    <airs:Key>970495039</airs:Key>
+                    <airs:Name>pmIrJfSIhHW.H3NyVwaUx_-vv24</airs:Name>
+                    <airs:SiteDescription>TVIl</airs:SiteDescription>
+                    <airs:AKA>
+                        <airs:Name>ikg66</airs:Name>
+                        <airs:Confidential>true</airs:Confidential>
+                        <airs:Description>BptNSGC5Y</airs:Description>
+                    </airs:AKA>
+                    <airs:AKA>
+                        <airs:Name>NeEj8jl1.IXVD4nWPqFu1</airs:Name>
+                        <airs:Confidential>false</airs:Confidential>
+                        <airs:Description>RHIiReg.7izUfKaNV</airs:Description>
+                    </airs:AKA>
+                            <airs:NoPhysicalAddress>
+                                <airs:Description>cYF1e82xj0ol.oKQnp5r6c.bOvO</airs:Description>
+                                <airs:Explanation>Nxyn4oromfPZT</airs:Explanation>
+                            </airs:NoPhysicalAddress>
+                    <airs:OtherAddress Confidential="0" Description="JZ3LRokc9">
+                            <airs:ReasonWithheld>xJM3d21BWSmVG8Th7k</airs:ReasonWithheld>
+                    </airs:OtherAddress>
+                    <airs:OtherAddress Confidential="false" Description="YFYap7EQY5A5L1ZWIaSiPzm.K6">
+                            <airs:PreAddressLine>YhzV4Dkj-44hPAq2bpgpYTcqKr</airs:PreAddressLine>
+                            <airs:Line1>eSmA9yWOZa2-H5mb7FxfT.HdVXoVf</airs:Line1>
+                            <airs:Line2>vaa29P.JmsSfP</airs:Line2>
+                            <airs:City>jHFAhCQElK</airs:City>
+                            <airs:County>UGLLtwHEHRq</airs:County>
+                            <airs:State>ZlUWIkLzfMl5rgJiTu-D2</airs:State>
+                            <airs:ZipCode>DhoDr</airs:ZipCode>
+                            <airs:Country>N7nf8l2aEU-</airs:Country>
+                    </airs:OtherAddress>
+                    <airs:CrossStreet>_djtYD0._Hqi1Yt3egt6X5qEQT</airs:CrossStreet>
+                    <airs:CrossStreet>oBUXl-EosCyr5UwqKC8BMM0</airs:CrossStreet>
+                    <airs:Phone TollFree="0" Confidential="1">
+                                <airs:PhoneNumber>_shx</airs:PhoneNumber>
+                        <airs:Extension>OY9u4L3</airs:Extension>
+                        <airs:Description>N95IaC0iewEtXYaKcMkL</airs:Description>
+                        <airs:Type>wsMpy</airs:Type>
+                        <airs:Function>rAjrWZcPHFgz5WcOg6dRGSC</airs:Function>
+                    </airs:Phone>
+                    <airs:Phone TollFree="0" Confidential="1">
+                                <airs:PhoneNumber>lh_Tcnb</airs:PhoneNumber>
+                        <airs:Extension>LXTuLK8OJSiJp7vWTb44.sEgJX</airs:Extension>
+                        <airs:Description>W</airs:Description>
+                        <airs:Type>Mowe3ucgXrmr8-G</airs:Type>
+                        <airs:Function>T3sMk7Oz3yFH-vPraF8Y</airs:Function>
+                    </airs:Phone>
+                    <airs:URL>
+                        <airs:Address>Lqs5Psu.jnk1..</airs:Address>
+                        <airs:Note>Po4d.agkA-txM</airs:Note>
+                    </airs:URL>
+                    <airs:URL>
+                        <airs:Address>qgR9muxVpe6NPoXCiW_u</airs:Address>
+                        <airs:Note>zXJQyNmx9a86A</airs:Note>
+                    </airs:URL>
+                    <airs:Email>
+                        <airs:Address>U9MH@aÀËÓÞÇj3GtÌ6EõÿrøjÅepìú4GDÏÀF76.SJV</airs:Address>
+                        <airs:Note>Pb-uwVd</airs:Note>
+                    </airs:Email>
+                    <airs:Email>
+                        <airs:Address>e@ýúyývgEvùgÔV3ZYÃWMw6PÑÎIëælúIqc1i5ÿÛhìväýÁ5WVu0ÿúJÑÈênÿGSv.nop</airs:Address>
+                        <airs:Note>Y</airs:Note>
+                    </airs:Email>
+                    <airs:Contact Type="OB7Yh986j2RcYHd33x66x6-JjSlv1E">
+                        <airs:Title>HC2hBOe</airs:Title>
+                        <airs:Name>H</airs:Name>
+                        <airs:Email>
+                            <airs:Address>o@Y.4.ý--ütÙÖVþý6QúoëoøHÐ4ùü1Uÿÿýt9FÓõahóèùùÍf2Ùþaú.ic</airs:Address>
+                        </airs:Email>
+                        <airs:Email>
+                            <airs:Address>r+Ds-u5U7@ø----Ù.E.C1ßmÿ27ÕýùÒ45M6ùÍÍ2Í.VoJ</airs:Address>
+                        </airs:Email>
+                        <airs:Phone TollFree="true" Confidential="0">
+                                    <airs:PhoneNumber>xx9eWqEEfR-Y5vlkXOVlRit</airs:PhoneNumber>
+                        </airs:Phone>
+                        <airs:Phone TollFree="true" Confidential="0">
+                                    <airs:PhoneNumber>MngF_P</airs:PhoneNumber>
+                        </airs:Phone>
+                    </airs:Contact>
+                    <airs:Contact Type="q">
+                        <airs:Title>UdkgYmMB3LmFaV2C9o1p</airs:Title>
+                        <airs:Name>UHUue_Y-E</airs:Name>
+                        <airs:Email>
+                            <airs:Address>Q@xÆ3.HMØÜýmõv8FÇqw4ø3ÐJúÜcÑÌÊTbCý4xùÐfûÒñÕê5ôòaXÊÌQúýÊìrDøF.jY</airs:Address>
+                        </airs:Email>
+                        <airs:Email>
+                            <airs:Address>u@ú.ûÆ.4ÖþF-1V7swÅéÏýwd5húþhÃL07rihÝÞÆ.bWfu</airs:Address>
+                        </airs:Email>
+                        <airs:Phone TollFree="false" Confidential="1">
+                                    <airs:ReasonWithheld>Bx</airs:ReasonWithheld>
+                        </airs:Phone>
+                        <airs:Phone TollFree="false" Confidential="0">
+                                    <airs:ReasonWithheld>kxRwe2k7eLP</airs:ReasonWithheld>
+                        </airs:Phone>
+                    </airs:Contact>
+                    <airs:TimeOpen>
+                        <airs:Sunday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Sunday>
+                        <airs:Sunday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Sunday>
+                        <airs:Monday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Monday>
+                        <airs:Monday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Monday>
+                        <airs:Tuesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Tuesday>
+                        <airs:Tuesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Tuesday>
+                        <airs:Wednesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Wednesday>
+                        <airs:Wednesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Wednesday>
+                        <airs:Thursday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Thursday>
+                        <airs:Thursday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Thursday>
+                        <airs:Friday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Friday>
+                        <airs:Friday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Friday>
+                        <airs:Saturday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Saturday>
+                        <airs:Saturday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Saturday>
+                        <airs:Notes>zoScHmn</airs:Notes>
+                    </airs:TimeOpen>
+                    <airs:TimeOpen>
+                        <airs:Sunday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Sunday>
+                        <airs:Sunday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Sunday>
+                        <airs:Monday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Monday>
+                        <airs:Monday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Monday>
+                        <airs:Tuesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Tuesday>
+                        <airs:Tuesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Tuesday>
+                        <airs:Wednesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Wednesday>
+                        <airs:Wednesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Wednesday>
+                        <airs:Thursday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Thursday>
+                        <airs:Thursday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Thursday>
+                        <airs:Friday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Friday>
+                        <airs:Friday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Friday>
+                        <airs:Saturday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Saturday>
+                        <airs:Saturday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Saturday>
+                        <airs:Notes>uzPYDW</airs:Notes>
+                    </airs:TimeOpen>
+                    <airs:Languages>
+                        <airs:Name>zmWdl-DnSMSMHI</airs:Name>
+                        <airs:TimeOpen>
+                        </airs:TimeOpen>
+                        <airs:Notes>p</airs:Notes>
+                        <airs:Name>UrjFkBEuK2T5b4oXuGPm</airs:Name>
+                        <airs:TimeOpen>
+                        </airs:TimeOpen>
+                        <airs:Notes>avTcoG-1CnzTrie5WzqGSxTDD</airs:Notes>
+                    </airs:Languages>
+                    <airs:Languages>
+                        <airs:Name>jxwg_j-</airs:Name>
+                        <airs:TimeOpen>
+                        </airs:TimeOpen>
+                        <airs:Notes>JFztI59-SUWpX3w1</airs:Notes>
+                        <airs:Name>eZ</airs:Name>
+                        <airs:TimeOpen>
+                        </airs:TimeOpen>
+                        <airs:Notes>_sajxp</airs:Notes>
+                    </airs:Languages>
+                    <airs:DisabilitiesAccess>g</airs:DisabilitiesAccess>
+                    <airs:PhysicalLocationDescription>bvjygwQhtyAse06</airs:PhysicalLocationDescription>
+                    <airs:BusServiceAccess>v_Co-</airs:BusServiceAccess>
+                    <airs:SiteService AreaFlexibility="0" ServiceNotAlwaysAvailable="false" ServiceGroupKey="291970139">
+                        <airs:Name>UubLrxwHhAis8pVLI_iQKiNPgP</airs:Name>
+                        <airs:Key>2013515246</airs:Key>
+                        <airs:Description>ocCF9-gc</airs:Description>
+                        <airs:Phone TollFree="0" Confidential="true">
+                                    <airs:PhoneNumber>XWkT-WHrGZAflqQ0N</airs:PhoneNumber>
+                        </airs:Phone>
+                        <airs:Phone TollFree="1" Confidential="0">
+                                    <airs:PhoneNumber>aYdS</airs:PhoneNumber>
+                        </airs:Phone>
+                        <airs:TimeOpen>
+                        </airs:TimeOpen>
+                        <airs:TimeOpen>
+                        </airs:TimeOpen>
+                        <airs:Seasonal>
+                            <airs:StartDate>u2ahzTYNnK4oHTMXHpX0H</airs:StartDate>
+                            <airs:EndDate>khplC3X-Y4bxknX</airs:EndDate>
+                        </airs:Seasonal>
+                        <airs:Seasonal>
+                            <airs:StartDate>dY1sB04vDrS3gMB1heyHCSOz</airs:StartDate>
+                            <airs:EndDate>K</airs:EndDate>
+                        </airs:Seasonal>
+                        <airs:Taxonomy>
+                            <airs:Code>VWPHgemrM6</airs:Code>
+                            <airs:Code>kN3LQeexTbpC</airs:Code>
+                        </airs:Taxonomy>
+                        <airs:Taxonomy>
+                            <airs:Code>WOW2eu.Gzoyw1u</airs:Code>
+                            <airs:Code>juac</airs:Code>
+                        </airs:Taxonomy>
+                        <airs:Languages>
+                            <airs:Name>EClgy4-0jvViWXOpIAN</airs:Name>
+                            <airs:Name>xOD0mFOQZYET9</airs:Name>
+                        </airs:Languages>
+                        <airs:Languages>
+                            <airs:Name>t4ndvOegrLUx</airs:Name>
+                            <airs:Name>MV</airs:Name>
+                        </airs:Languages>
+                        <airs:GeographicAreaServed>
+                                <airs:City>xIiwybxwaKNhb_57UIEtEjK</airs:City>
+                        </airs:GeographicAreaServed>
+                        <airs:GeographicAreaServed>
+                                <airs:Country>D.</airs:Country>
+                        </airs:GeographicAreaServed>
+                        <airs:ResourceInfo AvailableForDirectory="1" AvailableForReferral="0" AvailableForResearch="0" DateAdded="2010-09-19" DateLastVerified="2011-05-29" DateOfLastAction="2010-04-22" LastActionType="Sne87">
+                        </airs:ResourceInfo>
+                        <airs:DocumentsRequired>
+                            <airs:DocumentsRequired>bpA</airs:DocumentsRequired>
+                        </airs:DocumentsRequired>
+                        <airs:DocumentsRequired>
+                            <airs:DocumentsRequired>F3QO_KSzcX0DMjaAAioLQfMg</airs:DocumentsRequired>
+                        </airs:DocumentsRequired>
+                        <airs:ApplicationProcess>
+                            <airs:Step>aqb0ubdVFen7YbNS-</airs:Step>
+                        </airs:ApplicationProcess>
+                        <airs:ApplicationProcess>
+                            <airs:Step>XxN119fPZX6</airs:Step>
+                        </airs:ApplicationProcess>
+                        <airs:FeeStructure>vSWH5NPO9AZsawS</airs:FeeStructure>
+                        <airs:OtherRequirements>tMoKrLL1</airs:OtherRequirements>
+                        <airs:OtherRequirements>W2Q3hSxJsuMZrL94.aENSbD</airs:OtherRequirements>
+                        <airs:AidRequirements>KpQTmQzmGR7X</airs:AidRequirements>
+                        <airs:AidRequirements>jpds_fwd</airs:AidRequirements>
+                        <airs:AgeRequirements Gender="Male" MinimumAge="1984707141" MaximumAge="1043660332">J2kkO0XRVAl</airs:AgeRequirements>
+                        <airs:AgeRequirements Gender="Male" MinimumAge="418455278" MaximumAge="1313905690">DrZb</airs:AgeRequirements>
+                        <airs:GenderRequirements>m-cJEthTDR97oQ9Qgau</airs:GenderRequirements>
+                        <airs:FamilyRequirements>N</airs:FamilyRequirements>
+                        <airs:FamilyRequirements>V</airs:FamilyRequirements>
+                        <airs:IncomeRequirements>V059</airs:IncomeRequirements>
+                        <airs:IncomeRequirements>eRy</airs:IncomeRequirements>
+                        <airs:ResidencyRequirements>SbdB.ukWn</airs:ResidencyRequirements>
+                        <airs:ResidencyRequirements>fPIxfZum0jE</airs:ResidencyRequirements>
+                    </airs:SiteService>
+                    <airs:SiteService AreaFlexibility="true" ServiceNotAlwaysAvailable="1" ServiceGroupKey="1597418296">
+                        <airs:Name>EMpFnB7u0S.17_p</airs:Name>
+                        <airs:Key>119658236</airs:Key>
+                        <airs:Description>vgGXq-7EZZrtuZefsh</airs:Description>
+                        <airs:Phone TollFree="false" Confidential="1">
+                                    <airs:ReasonWithheld>IZPjmfe1EhUI5J</airs:ReasonWithheld>
+                        </airs:Phone>
+                        <airs:Phone TollFree="true" Confidential="false">
+                                    <airs:ReasonWithheld>jEMfAvCfh-jcV.pP5SnHRwt</airs:ReasonWithheld>
+                        </airs:Phone>
+                        <airs:TimeOpen>
+                        </airs:TimeOpen>
+                        <airs:TimeOpen>
+                        </airs:TimeOpen>
+                        <airs:Seasonal>
+                            <airs:StartDate>z4mS4Q6ZHSGivw_x4</airs:StartDate>
+                            <airs:EndDate>yQocv1jDs6t_IwW</airs:EndDate>
+                        </airs:Seasonal>
+                        <airs:Seasonal>
+                            <airs:StartDate>sEyvexJc3aosCNMv</airs:StartDate>
+                            <airs:EndDate>X5ZV93RWBQyL</airs:EndDate>
+                        </airs:Seasonal>
+                        <airs:Taxonomy>
+                            <airs:Code>z</airs:Code>
+                            <airs:Code>nlM4z_PPb</airs:Code>
+                        </airs:Taxonomy>
+                        <airs:Taxonomy>
+                            <airs:Code>VlHfpigl5mMfVprcl_VtmsVuM5</airs:Code>
+                            <airs:Code>xRAJYaW-sS5Aa</airs:Code>
+                        </airs:Taxonomy>
+                        <airs:Languages>
+                            <airs:Name>mOOlZx0Rvysp08yIbQ2HbAX7r</airs:Name>
+                            <airs:Name>OIcCL5z5uDjDRFKi</airs:Name>
+                        </airs:Languages>
+                        <airs:Languages>
+                            <airs:Name>OCupiPbv</airs:Name>
+                            <airs:Name>B3UKCtGthg7YMw0lydpFFNsY3d</airs:Name>
+                        </airs:Languages>
+                        <airs:GeographicAreaServed>
+                                <airs:County>NXOWQu9mrn0m07Jn2vUv7pgi3p</airs:County>
+                        </airs:GeographicAreaServed>
+                        <airs:GeographicAreaServed>
+                                <airs:Country>Id8f2</airs:Country>
+                        </airs:GeographicAreaServed>
+                        <airs:ResourceInfo AvailableForDirectory="true" AvailableForReferral="true" AvailableForResearch="true" DateAdded="2010-05-02" DateLastVerified="2010-12-29" DateOfLastAction="2011-11-04" LastActionType="pnrwKbEy6ejN1mD2H5">
+                        </airs:ResourceInfo>
+                        <airs:DocumentsRequired>
+                            <airs:DocumentsRequired>z480xp_c-T</airs:DocumentsRequired>
+                        </airs:DocumentsRequired>
+                        <airs:DocumentsRequired>
+                            <airs:DocumentsRequired>MGcClznBqby6_N2_</airs:DocumentsRequired>
+                        </airs:DocumentsRequired>
+                        <airs:ApplicationProcess>
+                            <airs:Step>EEqxhq</airs:Step>
+                        </airs:ApplicationProcess>
+                        <airs:ApplicationProcess>
+                            <airs:Step>yDGbrKWtCUTw</airs:Step>
+                        </airs:ApplicationProcess>
+                        <airs:FeeStructure>xMhaOb5N7Tl</airs:FeeStructure>
+                        <airs:OtherRequirements>h2ABtB8pLI95Ku</airs:OtherRequirements>
+                        <airs:OtherRequirements>c</airs:OtherRequirements>
+                        <airs:AidRequirements>GNKTRxGGTBMIqvL4WkF</airs:AidRequirements>
+                        <airs:AidRequirements>MHB</airs:AidRequirements>
+                        <airs:AgeRequirements Gender="Male" MinimumAge="1029951967" MaximumAge="2030705053">m7sjN</airs:AgeRequirements>
+                        <airs:AgeRequirements Gender="Female" MinimumAge="1097984864" MaximumAge="777000802">yIeX7m.Kaemg5wo8qv8</airs:AgeRequirements>
+                        <airs:GenderRequirements>vVenk87siJWicOLS</airs:GenderRequirements>
+                        <airs:FamilyRequirements>tdy2vlGU56</airs:FamilyRequirements>
+                        <airs:FamilyRequirements>eLHkrpSvj485Z0CxH-4CdVJpo9</airs:FamilyRequirements>
+                        <airs:IncomeRequirements>vg99</airs:IncomeRequirements>
+                        <airs:IncomeRequirements>FGSXc0lk4Cpb68XBsOMsD5P9Q</airs:IncomeRequirements>
+                        <airs:ResidencyRequirements>nZCYLu</airs:ResidencyRequirements>
+                        <airs:ResidencyRequirements>X40R</airs:ResidencyRequirements>
+                    </airs:SiteService>
+                    <airs:SpatialLocation>
+                        <airs:Description>jA3dUARK1GscTXtP</airs:Description>
+                        <airs:Datum>qgr</airs:Datum>
+                        <airs:Latitude>1461819207.923</airs:Latitude>
+                        <airs:Longitude>2137276244.466</airs:Longitude>
+                    </airs:SpatialLocation>
+                    <airs:SpatialLocation>
+                        <airs:Description>qiMGqmRFll2</airs:Description>
+                        <airs:Datum>LsBsdp-QXZT2L0rK8peYJ8pF.78V2</airs:Datum>
+                        <airs:Latitude>-912491011.035</airs:Latitude>
+                        <airs:Longitude>-686274903.44</airs:Longitude>
+                    </airs:SpatialLocation>
+                    <hmis:AgencyKey>1298270897</hmis:AgencyKey>
+            </hmis:Site>
+            
+            <hmis:SiteService hmis:delete="1" hmis:deleteOccurredDate="2010-08-16T18:51:58" hmis:deleteEffective="2010-08-31T18:51:58" AreaFlexibility="1" ServiceNotAlwaysAvailable="false" ServiceGroupKey="896091911">
+                    <airs:Name>fur8FV4apPPX9XwG_D-6GbyRWO21zS</airs:Name>
+                    <airs:Key>1248730750</airs:Key>
+                    <airs:Description>v1iyfH1Va5psxU</airs:Description>
+                    <airs:Phone TollFree="0" Confidential="0">
+                                <airs:PhoneNumber>hTpp6D3Ch5C.DfXk7</airs:PhoneNumber>
+                        <airs:Extension>JykK_Cs7mQZrg.5</airs:Extension>
+                        <airs:Description>fYpR5hXPFRTQTETI1vc_559UzQNb</airs:Description>
+                        <airs:Type>T</airs:Type>
+                        <airs:Function>GReHt</airs:Function>
+                    </airs:Phone>
+                    <airs:Phone TollFree="1" Confidential="1">
+                                <airs:PhoneNumber>X4</airs:PhoneNumber>
+                        <airs:Extension>XUOKv6yDu.NNpFpEoNv_a7764N.Z</airs:Extension>
+                        <airs:Description>QC_L_gO3WSrRvlP_OP.</airs:Description>
+                        <airs:Type>wYRljA</airs:Type>
+                        <airs:Function>RJu5y9OzkyNJ</airs:Function>
+                    </airs:Phone>
+                    <airs:TimeOpen>
+                        <airs:Sunday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Sunday>
+                        <airs:Sunday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Sunday>
+                        <airs:Monday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Monday>
+                        <airs:Monday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Monday>
+                        <airs:Tuesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Tuesday>
+                        <airs:Tuesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Tuesday>
+                        <airs:Wednesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Wednesday>
+                        <airs:Wednesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Wednesday>
+                        <airs:Thursday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Thursday>
+                        <airs:Thursday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Thursday>
+                        <airs:Friday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Friday>
+                        <airs:Friday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Friday>
+                        <airs:Saturday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Saturday>
+                        <airs:Saturday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Saturday>
+                        <airs:Notes>iqeP6BjEiTa7PTJUNhT.1ps</airs:Notes>
+                    </airs:TimeOpen>
+                    <airs:TimeOpen>
+                        <airs:Sunday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Sunday>
+                        <airs:Sunday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Sunday>
+                        <airs:Monday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Monday>
+                        <airs:Monday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Monday>
+                        <airs:Tuesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Tuesday>
+                        <airs:Tuesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Tuesday>
+                        <airs:Wednesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Wednesday>
+                        <airs:Wednesday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Wednesday>
+                        <airs:Thursday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Thursday>
+                        <airs:Thursday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Thursday>
+                        <airs:Friday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Friday>
+                        <airs:Friday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Friday>
+                        <airs:Saturday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Saturday>
+                        <airs:Saturday>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                            <airs:From>18:51:58.087</airs:From>
+                            <airs:To>18:51:58.087</airs:To>
+                        </airs:Saturday>
+                        <airs:Notes>_aX</airs:Notes>
+                    </airs:TimeOpen>
+                    <airs:Seasonal>
+                        <airs:Description>FerdtXM1Ab</airs:Description>
+                        <airs:StartDate>r2K6UvcsMCcfHW</airs:StartDate>
+                        <airs:EndDate>McnDSNef0EkiaFQ8d</airs:EndDate>
+                    </airs:Seasonal>
+                    <airs:Seasonal>
+                        <airs:Description>dEVLaduG5kNQd._h-ktEfBd4GV</airs:Description>
+                        <airs:StartDate>p.1Wqwg2cX</airs:StartDate>
+                        <airs:EndDate>Joz_Z</airs:EndDate>
+                    </airs:Seasonal>
+                    <airs:Taxonomy>
+                        <airs:Code>ZUKZ4</airs:Code>
+                        <airs:Code>k3tTCpD</airs:Code>
+                    </airs:Taxonomy>
+                    <airs:Taxonomy>
+                        <airs:Code>DV-xggnr11W</airs:Code>
+                        <airs:Code>bwKAJ</airs:Code>
+                    </airs:Taxonomy>
+                    <airs:Languages>
+                        <airs:Name>FvduHUrzZnEh4LVajtsd</airs:Name>
+                        <airs:TimeOpen>
+                        </airs:TimeOpen>
+                        <airs:Notes>zLLkw09dYA_jj1N5cdizAYKSeDfUE</airs:Notes>
+                        <airs:Name>EdB84A0.wycbSyN</airs:Name>
+                        <airs:TimeOpen>
+                        </airs:TimeOpen>
+                        <airs:Notes>mQNKyycOC</airs:Notes>
+                    </airs:Languages>
+                    <airs:Languages>
+                        <airs:Name>TYmPuvMxK.c9aM1uwYunDBHKca</airs:Name>
+                        <airs:TimeOpen>
+                        </airs:TimeOpen>
+                        <airs:Notes>on-y_k0QbzphJNxGU4_XA</airs:Notes>
+                        <airs:Name>ughNchK7xnIU.NIDufld7FM32y</airs:Name>
+                        <airs:TimeOpen>
+                        </airs:TimeOpen>
+                        <airs:Notes>A0FOI</airs:Notes>
+                    </airs:Languages>
+                    <airs:GeographicAreaServed>
+                            <airs:City>u55nS5o7gVejk4A2f</airs:City>
+                        <airs:ZipCode>j</airs:ZipCode>
+                        <airs:ZipCode>zAEvZEja26XJ</airs:ZipCode>
+                        <airs:CensusTrack>MotEC.n</airs:CensusTrack>
+                        <airs:CensusTrack>Xv60uR_KpiKrFeIt2</airs:CensusTrack>
+                        <airs:City>ftPNi72W_zQu1oYnGQRXGvfS5</airs:City>
+                        <airs:City>LqHtBW6gFGk2gd9RbKKbj2tXGO</airs:City>
+                        <airs:County>mCuyaE8nmcW</airs:County>
+                        <airs:County>ISZ9i</airs:County>
+                        <airs:State>Jo</airs:State>
+                        <airs:State>HWqOu25CAwSP</airs:State>
+                        <airs:Country>ZYeDunp0Bg_hhHel3</airs:Country>
+                        <airs:Country>NoAiq4ib6YdVgA</airs:Country>
+                        <airs:Description>dtpyQsHMCbxxhvsX2ph-</airs:Description>
+                    </airs:GeographicAreaServed>
+                    <airs:GeographicAreaServed>
+                            <airs:ZipCode>y.BjQHlH4j3sY9Un6.C5Xc</airs:ZipCode>
+                        <airs:ZipCode>iRTxDeiygmS-4c60rpPVjHMas97nF</airs:ZipCode>
+                        <airs:ZipCode>u5H_Pg</airs:ZipCode>
+                        <airs:CensusTrack>NgBYwaZYdiD8WDdZBsPA1q4ZyQDv</airs:CensusTrack>
+                        <airs:CensusTrack>BWImLXp</airs:CensusTrack>
+                        <airs:City>uMNFpPkJkx</airs:City>
+                        <airs:City>rGI3-RJEfH4drHw.mB86-flRiec5W6</airs:City>
+                        <airs:County>oIpncyeqH91TRobchyCC</airs:County>
+                        <airs:County>ErORWOM9F4olopIugTVXDlaDUji63</airs:County>
+                        <airs:State>K68a1bTJ</airs:State>
+                        <airs:State>o7p_.</airs:State>
+                        <airs:Country>F_a7nHifpyG</airs:Country>
+                        <airs:Country>q4JvCXAbEwYZfs</airs:Country>
+                        <airs:Description>XBS_F4cXT2E9ovSN1hm</airs:Description>
+                    </airs:GeographicAreaServed>
+                    <airs:ResourceInfo AvailableForDirectory="true" AvailableForReferral="1" AvailableForResearch="false" DateAdded="2009-11-27" DateLastVerified="2011-10-06" DateOfLastAction="2011-06-10" LastActionType="gkk2FYrOgGWxiphLiCn">
+                        <airs:Contact Type="o">
+                            <airs:Name>jWZchEcvgXzl8CoEOA</airs:Name>
+                        </airs:Contact>
+                        <airs:Contact Type="WkZA6n">
+                            <airs:Name>v</airs:Name>
+                        </airs:Contact>
+                        <airs:ResourceSpecialist>E0hG2xezj</airs:ResourceSpecialist>
+                    </airs:ResourceInfo>
+                    <airs:DocumentsRequired>
+                        <airs:DocumentsRequired>NYnruxa5iSDXL1kICB_gDwV9ZVm</airs:DocumentsRequired>
+                        <airs:Description>QXD.cS.wSEGOmq</airs:Description>
+                    </airs:DocumentsRequired>
+                    <airs:DocumentsRequired>
+                        <airs:DocumentsRequired>ZEG70P</airs:DocumentsRequired>
+                        <airs:Description>XJiSvyJMS_anJF</airs:Description>
+                    </airs:DocumentsRequired>
+                    <airs:ApplicationProcess>
+                        <airs:Step>ErJ-YG</airs:Step>
+                        <airs:Description>PQbG5.qp1TQve</airs:Description>
+                    </airs:ApplicationProcess>
+                    <airs:ApplicationProcess>
+                        <airs:Step>fltRxPS7e4UXM07n-KmwHc</airs:Step>
+                        <airs:Description>yR</airs:Description>
+                    </airs:ApplicationProcess>
+                    <airs:FeeStructure>LtIYpDlQeuJbmB3aK9EKetEly1</airs:FeeStructure>
+                    <airs:OtherRequirements>dj_sgUOpdEozXIp7wPnOFvGl0Rv.</airs:OtherRequirements>
+                    <airs:OtherRequirements>ybA47e_lClJ0NvIhXEc5Gw9qV1d_sR</airs:OtherRequirements>
+                    <airs:AidRequirements>Lhob</airs:AidRequirements>
+                    <airs:AidRequirements>h</airs:AidRequirements>
+                    <airs:AgeRequirements Gender="Female" MinimumAge="1776827455" MaximumAge="2077328813">kcQudmaoHnr29x99</airs:AgeRequirements>
+                    <airs:AgeRequirements Gender="Female" MinimumAge="1433753657" MaximumAge="357937027">_7-kYcflTd9cKod3</airs:AgeRequirements>
+                    <airs:GenderRequirements>TBXo0SISvYgpiOwV7T9Gcett</airs:GenderRequirements>
+                    <airs:FamilyRequirements>ri.Sz9Q4JnsIMz7BdYjpYT3</airs:FamilyRequirements>
+                    <airs:FamilyRequirements>yWMIYYDulfo</airs:FamilyRequirements>
+                    <airs:IncomeRequirements>hr_N926WLD20ycYex</airs:IncomeRequirements>
+                    <airs:IncomeRequirements>DdWwYAcc7Oi4KO6SS6</airs:IncomeRequirements>
+                    <airs:ResidencyRequirements>GDDbdv0_CaY-kQdpiLZHa73o</airs:ResidencyRequirements>
+                    <airs:ResidencyRequirements>EWXGatbr202H0LiWFd-rYS-v</airs:ResidencyRequirements>
+                    <hmis:ServiceID>1473573193</hmis:ServiceID>
+                    <hmis:SiteID>913292274</hmis:SiteID>
+                    <hmis:GeographicCode hmis:dateCollected="2011-04-20T18:51:58" hmis:dateEffective="2010-01-19T18:51:58" hmis:dataCollectionStage="1">885509</hmis:GeographicCode>
+                    <hmis:HMISAsset>
+                            <hmis:AssetID hmis:delete="1" hmis:deleteOccurredDate="2011-07-31T18:51:58" hmis:deleteEffective="2009-12-26T18:51:58">
+                                    <hmis:IDNum>1923343532</hmis:IDNum>
+                            </hmis:AssetID>
+                            <hmis:AssetCount>0</hmis:AssetCount>
+                            <hmis:AssetType>0</hmis:AssetType>
+                            <hmis:AssetEffectivePeriod>
+                                <hmis:StartDate>2011-05-08T18:51:58</hmis:StartDate>
+                                <hmis:EndDate>2011-05-08T18:51:58</hmis:EndDate>
+                            </hmis:AssetEffectivePeriod>
+                            <hmis:AssetRecordedDate>2011-05-08T18:51:58</hmis:AssetRecordedDate>
+                            <hmis:Assignment>
+                                <hmis:AssignmentID hmis:delete="1" hmis:deleteOccurredDate="2010-09-06T18:51:58" hmis:deleteEffective="2011-06-10T18:51:58">
+                                        <hmis:IDStr>MDALxG</hmis:IDStr>
+                                </hmis:AssignmentID>
+                                <hmis:PersonID>
+                                        <hmis:IDNum>1927869587</hmis:IDNum>
+                                </hmis:PersonID>
+                            </hmis:Assignment>
+                            <hmis:Assignment>
+                                <hmis:AssignmentID hmis:delete="1" hmis:deleteOccurredDate="2010-05-19T18:51:58" hmis:deleteEffective="2011-05-03T18:51:58">
+                                        <hmis:IDStr>njctf0mQIxkTv0AhaZcd2Muc4cQ</hmis:IDStr>
+                                </hmis:AssignmentID>
+                                <hmis:PersonID>
+                                        <hmis:IDNum>158645033</hmis:IDNum>
+                                </hmis:PersonID>
+                            </hmis:Assignment>
+                            <hmis:HMISParticipationPeriod>
+                                <hmis:StartDate>2011-05-08T18:51:58</hmis:StartDate>
+                                <hmis:EndDate>2011-05-08T18:51:58</hmis:EndDate>
+                            </hmis:HMISParticipationPeriod>
+                    </hmis:HMISAsset>
+                    <hmis:HousingType hmis:dateCollected="2011-04-04T18:51:58" hmis:dateEffective="2011-08-08T18:51:58" hmis:dataCollectionStage="3">3</hmis:HousingType>
+                    <hmis:Principal>1</hmis:Principal>
+                    <hmis:SiteServiceEffectivePeriod>
+                        <hmis:StartDate>2011-02-19T18:51:58</hmis:StartDate>
+                        <hmis:EndDate>2010-03-20T18:51:58</hmis:EndDate>
+                    </hmis:SiteServiceEffectivePeriod>
+                    <hmis:SiteServiceRecordedDate>2010-06-04T18:51:58</hmis:SiteServiceRecordedDate>
+            </hmis:SiteService>
+        </hmis:Export>
+    </hmis:Source>
+</hmis:Sources>

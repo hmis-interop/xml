@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns="http://www.hmis.info/schema/3_0/Example_Extend_HUD_HMIS.xsd"          
+xmlns:hmis="http://www.hmis.info/schema/3_0/HUD_HMIS.xsd"
+targetNamespace="http://www.hmis.info/schema/3_0/Example_Extend_HUD_HMIS.xsd"
+elementFormDefault="qualified"
+xmlns:ext="http://www.hmis.info/schema/3_0/Example_Extend_HUD_HMIS.xsd">
+    <xsd:import namespace="http://www.hmis.info/schema/3_0/HUD_HMIS.xsd" schemaLocation="http://www.hmis.info/schema/3_0/HUD_HMIS.xsd"/>
+    <xsd:element name="Person" type="ExtendedPersonType"/>
+    <!--Import just an HMIS client record and extend it with the state where the client was born -->
+    <xsd:complexType name="ExtendedPersonType">
+	    <xsd:complexContent>
+	        <xsd:extension base="hmis:person">
+	            <xsd:sequence>
+	                <xsd:element name="StateOfBirth" type="xsd:string"/>
+	            </xsd:sequence>
+	        </xsd:extension>
+	    </xsd:complexContent>
+    </xsd:complexType>    
+</xsd:schema>

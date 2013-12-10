@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ext:Person xmlns:airs="http://www.hmis.info/schema/3_0/AIRS_3_0_mod.xsd"
+    xmlns:ext="http://www.hmis.info/schema/3_0/Example_Extend_HUD_HMIS.xsd"
+    xmlns:hmis="http://www.hmis.info/schema/3_0/HUD_HMIS.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <hmis:PersonID hmis:delete="1" hmis:deleteOccurredDate="2010-04-12T18:51:58"
+        hmis:deleteEffective="2010-08-16T18:51:58">
+        <hmis:IDNum>2090888539</hmis:IDNum>
+    </hmis:PersonID>
+    <hmis:DateOfBirth>
+        <hmis:Unhashed hmis:dateCollected="2011-06-08T16:22:15" hmis:dataCollectionStage="1">2010-12-09</hmis:Unhashed>
+        <hmis:DateOfBirthType hmis:dateCollected="2011-02-18T16:22:15" hmis:dateEffective="2011-05-19T16:22:15" hmis:dataCollectionStage="2">8</hmis:DateOfBirthType>
+    </hmis:DateOfBirth>
+    <ext:StateOfBirth>Wisconsin</ext:StateOfBirth>
+</ext:Person>
