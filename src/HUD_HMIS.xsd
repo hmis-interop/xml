@@ -864,7 +864,7 @@
 	
 	<xsd:complexType name="member">
 		<xsd:sequence>
-			<xsd:element name="PersonID" type="hmis:iDIndexStamped"/>	
+			<xsd:element name="PersonID" type="hmis:iDIndex"/>	
 			<xsd:element name="RelationshipToHeadOfHousehold" type="hmis:fourVal" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, Section 3: IV.7.</xsd:documentation>
