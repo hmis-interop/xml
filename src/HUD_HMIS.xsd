@@ -23,13 +23,13 @@
 	
 	<xsd:complexType name="addressBase">
 		<xsd:sequence>
-			<xsd:element name="AddressPeriod" type="hmis:dateRangeOpen"/>
+			<xsd:element name="AddressPeriod" type="hmis:dateRangeOpen" minOccurs="0"/>
 			<xsd:element name="PreAddressLine" type="hmis:string100" minOccurs="0"/>
-			<xsd:element name="Line1" type="hmis:string100"/>
+			<xsd:element name="Line1" type="hmis:string100" minOccurs="0"/>
 			<xsd:element name="Line2" type="hmis:string100" minOccurs="0"/>
-			<xsd:element name="City" type="hmis:string50"/>
+			<xsd:element name="City" type="hmis:string50" minOccurs="0"/>
 			<xsd:element name="County" type="hmis:string50" minOccurs="0"/>
-			<xsd:element name="State" type="hmis:state"/>
+			<xsd:element name="State" type="hmis:state" minOccurs="0"/>
 			<xsd:element name="ZIPCode" type="hmis:zIPCode" minOccurs="0"/>
 			<xsd:element name="Country" type="hmis:string50" minOccurs="0"/>
 		</xsd:sequence>
@@ -1943,7 +1943,7 @@
 					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, IV.A.2.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="SoftwareVersion" type="hmis:version">
+			<xsd:element name="SoftwareVersion" type="xsd:string">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, IV.A.2.</xsd:documentation>
 				</xsd:annotation>
