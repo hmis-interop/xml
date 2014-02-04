@@ -1223,11 +1223,6 @@
 					<xsd:documentation xml:lang="en">...the client’s total monthly income (rounded to the nearest U.S. dollar).  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.1.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="LengthOfStayAtPriorResidence" type="hmis:sevenValDKRefused2" minOccurs="0" maxOccurs="unbounded">
-				<xsd:annotation>
-					<xsd:documentation xml:lang="en">To identify the type of residence and length of stay at that residence just prior to (i.e., the night before) program admission.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.9.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
 			<xsd:element name="MentalHealthProblem" type="hmis:mentalHealthProblem" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">To count the number of persons with mental health problems served and to assess the need for treatment.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.7.</xsd:documentation>
@@ -1267,11 +1262,6 @@
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">To determine eligibility for benefits and need for services, and to determine the number of women entering CoC programs while pregnant.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15D.</xsd:documentation>
 				</xsd:annotation>	
-			</xsd:element>
-			<xsd:element name="PriorResidence" type="hmis:priorResidence" minOccurs="0" maxOccurs="unbounded">
-				<xsd:annotation>
-					<xsd:documentation xml:lang="en">Groups PriorResidence Codes with PriorResidenceOther responses.</xsd:documentation>
-				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="SubstanceAbuseProblem" type="hmis:substanceAbuseProblem" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
@@ -1839,16 +1829,16 @@
 					<xsd:documentation xml:lang="en">Disability condition is needed to help identify clients that meet HUD’s definition of chronically homeless and, depending on the source of program funds, may be required to establish client eligibility to be served by the program.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.8.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="HousingStatusAtEntry" type="hmis:sixValDKRefused2" minOccurs="0">
+			<xsd:element name="HousingStatus" type="hmis:sixValDKRefused2" minOccurs="0" maxOccurs="2">
 				<xsd:annotation>
-					<xsd:documentation xml:lang="en">A new data element, Housing Status has been added in order to distinguish persons who are literally homeless from those who are at imminent risk of losing housing, or in a stable housing situation.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.11.</xsd:documentation>
+					<xsd:documentation xml:lang="en">A new data element, Housing Status has been added in order to distinguish persons who are literally homeless from those who are at imminent risk of losing housing, or in a stable housing situation.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.11.  maxOccurs = "2", since it is collected once at entry and once at exit.  Use the data collection stage attribute provided to indicate which is being reported.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="HousingStatusAtExit" type="hmis:sixValDKRefused2" minOccurs="0">
+			<xsd:element name="LengthOfStayAtPriorResidence" type="hmis:sevenValDKRefused2" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation xml:lang="en">A new data element, Housing Status has been added in order to distinguish persons who are literally homeless from those who are at imminent risk of losing housing, or in a stable housing situation.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.11.</xsd:documentation>
+					<xsd:documentation xml:lang="en">To identify the type of residence and length of stay at that residence just prior to (i.e., the night before) program admission.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.9.</xsd:documentation>
 				</xsd:annotation>
-			</xsd:element>		
+			</xsd:element>
 			<xsd:element name="Need" type="hmis:need" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, IV.B.3.e.i..</xsd:documentation>
@@ -1862,6 +1852,11 @@
 			<xsd:element name="PersonHistorical" type="hmis:personHistorical" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, IV.B.3.b..</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PriorResidence" type="hmis:priorResidence" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Groups PriorResidence Codes with PriorResidenceOther responses.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ReasonsForLeaving" type="hmis:reasonForLeaving" minOccurs="0" maxOccurs="unbounded">
