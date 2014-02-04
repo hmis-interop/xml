@@ -1202,11 +1202,6 @@
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">Groups destination elements into a sequence with ID.</xsd:documentation>
 				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="DisablingCondition" type="hmis:fourValDKRefused" minOccurs="0" maxOccurs="unbounded">
-				<xsd:annotation>
-					<xsd:documentation xml:lang="en">Disability condition is needed to help identify clients that meet HUD’s definition of chronically homeless and, depending on the source of program funds, may be required to establish client eligibility to be served by the program.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.8.</xsd:documentation>
-				</xsd:annotation>
 			</xsd:element>  
 			<xsd:element name="DevelopmentalDisability" type="hmis:developmentalDisability" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
@@ -1243,11 +1238,6 @@
 					<xsd:documentation xml:lang="en">To count the number persons served who have been diagnosed with AIDS or have tested positive for HIV and assess their need for services.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.6.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>	
-			<xsd:element name="HousingStatus" type="hmis:sixValDKRefused2" minOccurs="0" maxOccurs="unbounded">
-				<xsd:annotation>
-					<xsd:documentation xml:lang="en">A new data element, Housing Status has been added in order to distinguish persons who are literally homeless from those who are at imminent risk of losing housing, or in a stable housing situation.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.11.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
 			<xsd:element name="HUDChronicHomeless" type="hmis:twoVal" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, IV.B.3.B.</xsd:documentation>
@@ -1878,7 +1868,22 @@
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, IV.B.3.e..</xsd:documentation>
 				</xsd:annotation>
-			</xsd:element>			
+			</xsd:element>
+			<xsd:element name="DisablingCondition" type="hmis:fourValDKRefused" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Disability condition is needed to help identify clients that meet HUD’s definition of chronically homeless and, depending on the source of program funds, may be required to establish client eligibility to be served by the program.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.8.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HousingStatusAtEntry" type="hmis:sixValDKRefused2" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">A new data element, Housing Status has been added in order to distinguish persons who are literally homeless from those who are at imminent risk of losing housing, or in a stable housing situation.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.11.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HousingStatusAtExit" type="hmis:sixValDKRefused2" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">A new data element, Housing Status has been added in order to distinguish persons who are literally homeless from those who are at imminent risk of losing housing, or in a stable housing situation.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.11.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>		
 			<xsd:element name="Need" type="hmis:need" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, IV.B.3.e.i..</xsd:documentation>
@@ -1902,6 +1907,11 @@
 			<xsd:element name="ServiceEvent" type="hmis:serviceEvent" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, IV.B.3.d..</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="VeteranStatus" type="hmis:fourValDKRefused" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">To determine the number of homeless veterans.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.7.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -2103,11 +2113,6 @@
 			<xsd:element name="ServiceEra" type="hmis:serviceEra" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">...determine: 1) which military service era did the client serve...  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15E.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="VeteranStatus" type="hmis:fourValDKRefused" minOccurs="0" maxOccurs="unbounded">
-				<xsd:annotation>
-					<xsd:documentation xml:lang="en">To determine the number of homeless veterans.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.7.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="WarZonesServed" type="hmis:warZoneServed" minOccurs="0" maxOccurs="unbounded">
