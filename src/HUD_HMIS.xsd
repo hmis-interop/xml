@@ -89,12 +89,12 @@
 					<xsd:documentation xml:lang="en">Assigns a unique identifier to the assignment of the asset to the person.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="PersonID" type="hmis:id">
+			<xsd:element name="PersonID" type="hmis:string32Base">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">ID of the Person linked to this asset assignment.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="HouseholdID" type="hmis:id" minOccurs="0" maxOccurs="1">
+			<xsd:element name="HouseholdID" type="hmis:string32Base" minOccurs="0" maxOccurs="1">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">Optional unique identifier of a household associated with this asset assignment.  The Assignment.PersonID should identify a member of this household.</xsd:documentation>
 				</xsd:annotation>
@@ -724,51 +724,27 @@
 		</xsd:sequence>
 	</xsd:complexType>	
 	
-	<xsd:complexType name="id">
-		<xsd:sequence>
-			<xsd:choice minOccurs="1" maxOccurs="1">
-				<xsd:element name="IDNum" type="xsd:nonNegativeInteger">
-					<xsd:annotation>
-						<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, Appendix 1.10.</xsd:documentation>
-					</xsd:annotation>
-				</xsd:element>
-				<xsd:element name="IDStr" type="hmis:string32Base">
-					<xsd:annotation>
-						<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, Appendix 1.10.</xsd:documentation>
-					</xsd:annotation>
-				</xsd:element>
-			</xsd:choice>
-		</xsd:sequence>
-	</xsd:complexType>
-	
 	<xsd:complexType name="iDIndex">
-		<xsd:sequence>
-			<xsd:choice minOccurs="1" maxOccurs="1">
-				<xsd:element name="IDNum" type="xsd:nonNegativeInteger">
+		<xsd:simpleContent>
+			<xsd:extension base="hmis:string32Base">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, Appendix 1.10.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:attributeGroup ref="hmis:deleteStampGroup">
 					<xsd:annotation>
-						<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, Appendix 1.10.</xsd:documentation>
+						<xsd:documentation xml:lang="en">Allows for optional deletion of record with this ID.  No other elements should be associated with a deleteStampGroup.</xsd:documentation>
 					</xsd:annotation>
-				</xsd:element>
-				<xsd:element name="IDStr" type="hmis:string32Base">
-					<xsd:annotation>
-						<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, Appendix 1.10.</xsd:documentation>
-					</xsd:annotation>
-				</xsd:element>
-			</xsd:choice>
-		</xsd:sequence>
-		<xsd:attributeGroup ref="hmis:deleteStampGroup">
-			<xsd:annotation>
-				<xsd:documentation xml:lang="en">Allows for optional deletion of record with this ID.  No other elements should be associated with a deleteStampGroup.</xsd:documentation>
-			</xsd:annotation>
-		</xsd:attributeGroup>
+				</xsd:attributeGroup>
+			</xsd:extension>
+		</xsd:simpleContent>		
 	</xsd:complexType>
 	
 	<xsd:complexType name="iDIndexStamped">
-		<xsd:complexContent>
+		<xsd:simpleContent>			
 			<xsd:extension base="hmis:iDIndex">
 				<xsd:attributeGroup ref="dateStampGroup"/>
 			</xsd:extension>
-		</xsd:complexContent>
+		</xsd:simpleContent>	
 	</xsd:complexType>
 	
 	<xsd:complexType name="incomeAndSources">
@@ -933,7 +909,7 @@
 					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, IV.B.3.f..</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="ServiceEventID" type="hmis:id" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="ServiceEventID" type="hmis:string32Base" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, IV.B.3.f..</xsd:documentation>
 				</xsd:annotation>
@@ -1493,7 +1469,7 @@
 	
 	<xsd:complexType name="region">
 		<xsd:sequence>
-			<xsd:element name="RegionID" type="hmis:id"/>
+			<xsd:element name="RegionID" type="hmis:string32Base"/>
 			<xsd:element name="SiteServiceID" type="xsd:nonNegativeInteger"/>
 			<xsd:element name="RegionType" type="hmis:twoVal" minOccurs="0"/>
 			<xsd:element name="RegionDescription" type="hmis:string30" minOccurs="0"></xsd:element>
@@ -1643,7 +1619,7 @@
 					<xsd:documentation xml:lang="en">Links the ServiceEvent to a particular SiteService</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="HouseholdID" type="hmis:id" minOccurs="0">
+			<xsd:element name="HouseholdID" type="hmis:string32Base" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">If the person's entire household is also receiving the service, insert the ID of the household receiving this same ServiceEvent.</xsd:documentation>
 				</xsd:annotation>
@@ -1864,7 +1840,7 @@
 					<xsd:documentation xml:lang="en">Links to airs:tSiteService.Key</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="HouseholdID" type="hmis:id" minOccurs="0">
+			<xsd:element name="HouseholdID" type="hmis:string32Base" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, IV.B.3.e..</xsd:documentation>
 				</xsd:annotation>
