@@ -1423,12 +1423,7 @@
 	
 	<xsd:complexType name="reasonForLeaving">
 		<xsd:sequence>
-			<xsd:element name="ReasonForLeavingID" type="hmis:iDIndex">
-				<xsd:annotation>
-					<xsd:documentation xml:lang="en">Establishes a unique ID for the ReasonForLeaving element sequence.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="ReasonForLeaving" type="hmis:elevenVal" minOccurs="0">
+			<xsd:element name="ReasonForLeaving" type="hmis:elevenVal">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">Identify the reason why the client left the program. If a client left for multiple reasons, record only the primary reason.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15G.</xsd:documentation>
 				</xsd:annotation>
@@ -1859,9 +1854,9 @@
 					<xsd:documentation xml:lang="en">Groups PriorResidence Codes with PriorResidenceOther responses.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="ReasonsForLeaving" type="hmis:reasonForLeaving" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="ReasonForLeaving" type="hmis:reasonForLeaving" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation xml:lang="en">Groups ReasonForLeavingCode with ReasonForLeavingOther responses.</xsd:documentation>
+					<xsd:documentation xml:lang="en">Identify the reason why the client left the program. If a client left for multiple reasons, record only the primary reason.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15G.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ServiceEvent" type="hmis:serviceEvent" minOccurs="0" maxOccurs="unbounded">
