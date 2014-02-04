@@ -116,12 +116,12 @@
 			</xsd:element>
 			<xsd:element name="BarrierCode" type="hmis:barrierCode" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15F" xml:lang="en">"If not enrolled, identify problems in enrolling child"</xsd:documentation>
+					<xsd:documentation xml:lang="en">If not enrolled, identify problems in enrolling child.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15F.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="BarrierOther" type="hmis:string50" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.15F" xml:lang="en"></xsd:documentation>
+					<xsd:documentation xml:lang="en">Source: 2010 HUD HMIS Data and Technical Standards, Section 2.15F</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -143,7 +143,7 @@
 		<xsd:sequence>
 			<xsd:element name="HMISParticipationPeriod" type="hmis:dateRangeOpen" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.9J" xml:lang="en">"This is the date when the HMIS participating bed information first applies (i.e., the date when a change in the number of HMIS participating beds occurs for a program’s Bed and Unit Inventory Record)."</xsd:documentation>
+					<xsd:documentation xml:lang="en">This is the date when the HMIS participating bed information first applies (i.e., the date when a change in the number of HMIS participating beds occurs for a program’s Bed and Unit Inventory Record).  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.9J.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -161,12 +161,12 @@
 		<xsd:sequence>
 			<xsd:element name="ChildEnrollmentBarrier" type="hmis:barrier" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15F" xml:lang="en">"If not enrolled, identify problems in enrolling child"</xsd:documentation>
+					<xsd:documentation xml:lang="en">If not enrolled, identify problems in enrolling child.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15F.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ChildSchoolLastEnrolledDate" type="hmis:date" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15F" xml:lang="en">"If not enrolled, last date of enrollment"</xsd:documentation>
+					<xsd:documentation xml:lang="en">If not enrolled, last date of enrollment.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15F.</xsd:documentation>
 					<xsd:documentation xml:lang="en">If day not known, use "01" for day.</xsd:documentation>					
 				</xsd:annotation>
 			</xsd:element>
@@ -177,17 +177,17 @@
 		<xsd:sequence>
 			<xsd:element name="ChildSchoolName" type="hmis:string50" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15F" xml:lang="en">If yes [to ChildCurrentlyEnrolledInSchool], name of child’s school.</xsd:documentation>
+					<xsd:documentation xml:lang="en">If yes [to ChildCurrentlyEnrolledInSchool], name of child’s school.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15F.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ChildMcKinneyVentoLiaison" type="hmis:fourValDKRefused" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15F" xml:lang="en">"If yes [to ChildCurrentlyEnrolledInSchool], was/is the child connected to the McKinney-Vento Homeless Assistance Act school liaison?"</xsd:documentation>
+					<xsd:documentation xml:lang="en">If yes [to ChildCurrentlyEnrolledInSchool], was/is the child connected to the McKinney-Vento Homeless Assistance Act school liaison?  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15F.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ChildSchoolType" type="hmis:fourValDKRefused2" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15F" xml:lang="en">"If yes [to ChildCurrentlyEnrolledInSchool], type of school."</xsd:documentation>
+					<xsd:documentation xml:lang="en">If yes [to ChildCurrentlyEnrolledInSchool], type of school.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15F.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -202,7 +202,7 @@
 			</xsd:element>
 			<xsd:element name="ChildCurrentlyEnrolledInSchool" type="hmis:fourValDKRefused" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15F" xml:lang="en">"Current enrollment status"</xsd:documentation>
+					<xsd:documentation xml:lang="en">Current enrollment status.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15F.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:choice>
@@ -224,12 +224,12 @@
 		<xsd:sequence>
 			<xsd:element name="HasChronicHealthCondition" type="hmis:fourValDKRefused">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.5" xml:lang="en">"For the purposes of this Notice, a chronic health condition means a diagnosed condition that is more than three months in duration and is either not curable or has residual effects that limit daily living and require adaptation in function or special assistance."</xsd:documentation>
+					<xsd:documentation xml:lang="en">For the purposes of this Notice, a chronic health condition means a diagnosed condition that is more than three months in duration and is either not curable or has residual effects that limit daily living and require adaptation in function or special assistance.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.5.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ReceiveChronicHealthServices" type="hmis:fourValDKRefused" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.5" xml:lang="en">"(If yes[to HasChronicHealthCondition]) Currently receiving services or treatment for this condition or received services/treatment prior to exiting the program?</xsd:documentation>
+					<xsd:documentation xml:lang="en">If yes[to HasChronicHealthCondition]: Currently receiving services or treatment for this condition or received services/treatment prior to exiting the program?  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.5.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -239,17 +239,17 @@
 		<xsd:sequence>
 			<xsd:element name="ContactID" type="hmis:iDIndex">
 				<xsd:annotation>
-					<xsd:documentation source="Establishes a unique id for the contact" xml:lang="en"></xsd:documentation>
+					<xsd:documentation xml:lang="en">Establishes a unique id for the contact.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ContactDate" type="hmis:contactDate">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.11" xml:lang="en">Because a client may be contacted multiple times on the same day, the response category must include a time stamp (i.e., hour and minute) indicating when the contact occurred in order to uniquely identify each contact. Note that to record a contact in HMIS requires that a client record be established with at least minimal client descriptors included in the Universal Data Elements (e.g., name, gender, race).</xsd:documentation>
+					<xsd:documentation xml:lang="en">Because a client may be contacted multiple times on the same day, the response category must include a time stamp (i.e., hour and minute) indicating when the contact occurred in order to uniquely identify each contact. Note that to record a contact in HMIS requires that a client record be established with at least minimal client descriptors included in the Universal Data Elements (e.g., name, gender, race).  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.11.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ContactLocation" type="hmis:contactLocation">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.11" xml:lang="en">For the purpose of the APR,  street outreach programs must report the total number of contacts during the operating year by location of contact."</xsd:documentation>
+					<xsd:documentation xml:lang="en">For the purpose of the APR,  street outreach programs must report the total number of contacts during the operating year by location of contact.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.11.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -336,12 +336,12 @@
 			</xsd:element>
 			<xsd:element name="DegreeCode" type="hmis:degreeCode" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">"If client has received a high school diploma, GED or enrolled in post-secondary education, what degree(s) has the client earned"</xsd:documentation>
+					<xsd:documentation xml:lang="en">If client has received a high school diploma, GED or enrolled in post-secondary education, what degree(s) has the client earned.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="DegreeOther" type="hmis:string50" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B.  See also Section 5.1.3 for treatment of 'other' elements." xml:lang="en"/>
+					<xsd:documentation xml:lang="en">Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.  See also Section 5.1.3 for treatment of 'other' elements.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -357,7 +357,7 @@
 
 	<xsd:complexType name="destinationCode">
 		<xsd:annotation>
-			<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.10"/>
+			<xsd:documentation>Source: 2010 HUD HMIS Data and Technical Standards, Section 4.10.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:simpleContent>
 			<xsd:extension base="hmis:destinationBase">
@@ -375,7 +375,7 @@
 			</xsd:element>
 			<xsd:element name="DestinationCode" type="hmis:destinationCode" minOccurs="0">   
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.10" xml:lang="en">Determine the response value that best describes where the client will be staying after they leave the program.</xsd:documentation>
+					<xsd:documentation xml:lang="en">Determine the response value that best describes where the client will be staying after they leave the program.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.10.</xsd:documentation>
 				</xsd:annotation>   
 			</xsd:element>  
 			<xsd:element name="DestinationOther" type="hmis:string50" minOccurs="0">
@@ -396,12 +396,12 @@
 		<xsd:sequence>
 			<xsd:element name="HasDevelopmentalDisability" type="hmis:fourValDKRefused">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.4" xml:lang="en">"For the purposes of this Notice, a developmental disability means a severe, chronic disability that is attributed to a mental or physical impairment (or combination of physical and mental impairments) that occurs before 22 years of age and limits the capacity for independent living and economic self-sufficiency."</xsd:documentation>
+					<xsd:documentation xml:lang="en">For the purposes of this Notice, a developmental disability means a severe, chronic disability that is attributed to a mental or physical impairment (or combination of physical and mental impairments) that occurs before 22 years of age and limits the capacity for independent living and economic self-sufficiency.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.4.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ReceiveDevelopmentalDisabilityServicesTreatment" type="hmis:fourValDKRefused" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.4" xml:lang="en">"(If yes[to HasDevelopmentalDisability]) Currently receiving services or treatment for this condition or received services/treatment prior to exiting the program?</xsd:documentation>
+					<xsd:documentation xml:lang="en">If yes[to HasDevelopmentalDisability]: Currently receiving services or treatment for this condition or received services/treatment prior to exiting the program?  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.4.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -423,7 +423,7 @@
 			</xsd:choice>
 			<xsd:element name="DateOfBirthType" type="hmis:fourValDKRefused2">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.3" xml:lang="en">"In another field, record the appropriate date of birth type (data quality code)."</xsd:documentation>
+					<xsd:documentation xml:lang="en">In another field, record the appropriate date of birth type (data quality code).  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.3.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -433,12 +433,12 @@
 		<xsd:sequence>
 			<xsd:element name="DomesticViolenceSurvivor" type="hmis:fourValDKRefused">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.9" xml:lang="en">"...determine (a) if the client has ever been a victim of domestic violence..."</xsd:documentation>
+					<xsd:documentation xml:lang="en">...determine (a) if the client has ever been a victim of domestic violence...  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.9.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="DVOccurred" type="hmis:sixValDKRefused2" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.9" xml:lang="en">"...and (b), if so [if 'yes' to DomesticViolenceSurvivor], how long ago did the client have the most recent experience."</xsd:documentation>
+					<xsd:documentation xml:lang="en">...and (b), if so [if 'yes' to DomesticViolenceSurvivor], how long ago did the client have the most recent experience.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.9.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -469,22 +469,22 @@
 			</xsd:element>
 			<xsd:element name="CurrentlyEmployed" type="hmis:fourValDKRefused" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15A" xml:lang="en">"...determine: (1) if the client is currently employed..."</xsd:documentation>
+					<xsd:documentation xml:lang="en">...determine: (1) if the client is currently employed...  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15A.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="HoursWorkedLastWeek" type="hmis:nonNegativeInteger" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15A" xml:lang="en">"...determine: ... (2) if currently employed, how many hours did the client work in the last week..."</xsd:documentation>
+					<xsd:documentation xml:lang="en">...determine: ... (2) if currently employed, how many hours did the client work in the last week...  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15A.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="EmploymentTenure" type="hmis:fiveValDKRefused" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15A" xml:lang="en">"...if currently employed, is the work permanent, temporary, or seasonal..."</xsd:documentation>
+					<xsd:documentation xml:lang="en">...if currently employed, is the work permanent, temporary, or seasonal...  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15A.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="LookingForWork" type="hmis:fourValDKRefused" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15A" xml:lang="en">[If unemployed] Is the client looking for work? [If employed] Is the client looking for additional employment or increased hours at their current job?</xsd:documentation>
+					<xsd:documentation xml:lang="en">[If unemployed] Is the client looking for work? [If employed] Is the client looking for additional employment or increased hours at their current job?  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15A.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -509,9 +509,9 @@
 			</xsd:element>
 			<xsd:element name="Agency" type="hmis:agency" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.1" xml:lang="en">To uniquely identify an organization that operates a CoC Program within the CoC.</xsd:documentation>
+					<xsd:documentation xml:lang="en">To uniquely identify an organization that operates a CoC Program within the CoC.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.1.</xsd:documentation>
 					<xsd:documentation xml:lang="en">Organization Identifier is mapped to airs:tAgency.Key</xsd:documentation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.2" xml:lang="en">To identify the name of each organization that operates a CoC Program within the CoC.</xsd:documentation>
+					<xsd:documentation xml:lang="en">To identify the name of each organization that operates a CoC Program within the CoC.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.2.</xsd:documentation>
 					<xsd:documentation xml:lang="en">Organization Name is mapped to airs:tAgency.Name</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
@@ -527,7 +527,7 @@
 			</xsd:element>
 			<xsd:element name="Service" type="hmis:service" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 1.2" xml:lang="en">The 2009 Notice proposes the addition of a set of program descriptor data standards – that is, data to be collected about all homeless assistance and HPRP homelessness prevention programs in the CoC.</xsd:documentation>
+					<xsd:documentation xml:lang="en">The 2009 Notice proposes the addition of a set of program descriptor data standards – that is, data to be collected about all homeless assistance and HPRP homelessness prevention programs in the CoC.  Source: 2010 HUD HMIS Data and Technical Standards, Section 1.2.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Site" type="hmis:site" minOccurs="0" maxOccurs="unbounded">
@@ -597,7 +597,7 @@
 			<xsd:element name="FederalCFDA" type="hmis:cFDANumber" minOccurs="0"/>
 			<xsd:element name="ReceivesMcKinneyFunding" type="hmis:twoValBase" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="NA">Indicates whether this program receives HUD McKinney-Vento Funding.</xsd:documentation>
+					<xsd:documentation>Indicates whether this program receives HUD McKinney-Vento Funding.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<!-- extend with custom StateFundingSource element-->
@@ -616,7 +616,7 @@
 					</xsd:element>
 					<xsd:element name="FinancialAssistanceAmount" type="hmis:currency" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.13">Programs must record the amount of HPRP financial assistance provided for each instance of one-time or ongoing financial assistance, as described above. Programs may also choose to record information on financial assistance provided through other sources. However, this should be recorded as a separate transaction in order to distinctly record and track HPRP financial assistance payments.</xsd:documentation>
+							<xsd:documentation>Programs must record the amount of HPRP financial assistance provided for each instance of one-time or ongoing financial assistance, as described above. Programs may also choose to record information on financial assistance provided through other sources. However, this should be recorded as a separate transaction in order to distinctly record and track HPRP financial assistance payments.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.13.</xsd:documentation>
 							<xsd:documentation xml:lang="en">Also used for HPRP Financial Assistance</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
@@ -672,12 +672,12 @@
 		<xsd:sequence>
 			<xsd:element name="HasHIVAIDS" type="hmis:fourValDKRefused">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.6" xml:lang="en">"...determine if the client (a) has been diagnosed with AIDS or has tested positive for HIV..."</xsd:documentation>
+					<xsd:documentation xml:lang="en">...determine if the client (a) has been diagnosed with AIDS or has tested positive for HIV... Source: 2010 HUD HMIS Data and Technical Standards, Section 4.6.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ReceiveHIVAIDSServices" type="hmis:fourValDKRefused" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.6" xml:lang="en">"(If yes[to HasHIVAIDS]) Currently receiving services or treatment for this condition or received services/treatment prior to exiting the program?</xsd:documentation>
+					<xsd:documentation xml:lang="en">If yes[to HasHIVAIDS] Currently receiving services or treatment for this condition or received services/treatment prior to exiting the program?  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.6.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -697,7 +697,7 @@
 		<xsd:sequence>
 			<xsd:element name="TypeOfService" type="hmis:typeOfService" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15H" xml:lang="en">"To determine the services provided to clients during program participation."</xsd:documentation>
+					<xsd:documentation xml:lang="en">To determine the services provided to clients during program participation.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15H.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="TypeOfServiceOther" type="hmis:string50Base" minOccurs="0"/>	
@@ -708,7 +708,7 @@
 		<xsd:sequence>
 			<xsd:element name="HouseholdID" type="hmis:iDIndex" minOccurs="1">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.15" xml:lang="en">To count the number of households served in a program.</xsd:documentation>
+					<xsd:documentation xml:lang="en">To count the number of households served in a program.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.15.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="HeadOfHouseholdID" type="hmis:iDIndexStamped" minOccurs="0">
@@ -798,12 +798,12 @@
     			<xsd:choice>
     				<xsd:element name="ReceivingIncomeSource" type="hmis:twoVal">
     					<xsd:annotation>
-    						<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.1" xml:lang="en">"When a client has income, but does not know the amount, a “Yes” response should be recorded for both the overall income question and the specific source, and the income amount should be left blank. ... To reduce data collection and reporting burden, if a client reports receiving no income from any source in the past 30 days, no additional data collection is required. If a client reports receiving income, an HMIS may be designed such that programs only need to directly enter “yes” for the benefits the clients received. The HMIS software may automatically generate a “No” response for the other income sources. The HMIS may also be designed to automatically generate a “Yes” response where income amounts are recorded. However, since clients often know the source of income, but not the precise amount, users should have the ability to enter “Yes” without recording an exact amount."</xsd:documentation>
+    						<xsd:documentation xml:lang="en">When a client has income, but does not know the amount, a “Yes” response should be recorded for both the overall income question and the specific source, and the income amount should be left blank. ... To reduce data collection and reporting burden, if a client reports receiving no income from any source in the past 30 days, no additional data collection is required. If a client reports receiving income, an HMIS may be designed such that programs only need to directly enter “yes” for the benefits the clients received. The HMIS software may automatically generate a “No” response for the other income sources. The HMIS may also be designed to automatically generate a “Yes” response where income amounts are recorded. However, since clients often know the source of income, but not the precise amount, users should have the ability to enter “Yes” without recording an exact amount.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.1.</xsd:documentation>
     					</xsd:annotation>
     				</xsd:element>
     				<xsd:element name="IncomeSourceAmount" type="hmis:nonNegativeInteger" minOccurs="0">
     					<xsd:annotation>
-    						<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.1" xml:lang="en">"Capturing the receipt of cash income from various sources will help to: ensure all income sources are counted in the calculation of total income; enable program staff to take into account the composition of income in determining needs; determine if people are receiving the mainstream program benefits to which they may be entitled; help clients apply for benefits assistance; and allow analysis of changes in the composition of income between entry and exit from the program and annual changes prior to program exit."</xsd:documentation>
+    						<xsd:documentation xml:lang="en">Capturing the receipt of cash income from various sources will help to: ensure all income sources are counted in the calculation of total income; enable program staff to take into account the composition of income in determining needs; determine if people are receiving the mainstream program benefits to which they may be entitled; help clients apply for benefits assistance; and allow analysis of changes in the composition of income between entry and exit from the program and annual changes prior to program exit.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.1.</xsd:documentation>
     						<xsd:documentation xml:lang="en">This is the amount received in the last 30 days.</xsd:documentation>
     					</xsd:annotation>
     				</xsd:element>
@@ -834,17 +834,17 @@
 					</xsd:element>
 					<xsd:element name="BedInventory" type="hmis:bedCountBase" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.9D" xml:lang="en">"The bed inventory data element is an integer that tracks the total number of beds available for occupancy as of the inventory start date..."</xsd:documentation>
+							<xsd:documentation xml:lang="en">The bed inventory data element is an integer that tracks the total number of beds available for occupancy as of the inventory start date...  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.9D.</xsd:documentation>
 						</xsd:annotation>	
 					</xsd:element>
 					<xsd:element name="HMISParticipatingBeds" type="xsd:nonNegativeInteger" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.9I" xml:lang="en">"This data element is an integer that tracks the total number of beds participating in HMIS as of the HMIS participation start date recorded in 2.9J."</xsd:documentation>
+							<xsd:documentation xml:lang="en">This data element is an integer that tracks the total number of beds participating in HMIS as of the HMIS participation start date recorded in 2.9J.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.9I.</xsd:documentation>
 						</xsd:annotation>   
 					</xsd:element>
 					<xsd:element name="InventoryEffectivePeriod" type="hmis:dateRangeOpen" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.9G" xml:lang="en">"The inventory effective period constrains when the bed and unit inventory information applies."</xsd:documentation>
+							<xsd:documentation xml:lang="en">The inventory effective period constrains when the bed and unit inventory information applies.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.9G.</xsd:documentation>
 						</xsd:annotation>   
 					</xsd:element>
 					<xsd:element name="InventoryRecordedDate" type="xsd:dateTime">
@@ -854,7 +854,7 @@
 					</xsd:element>
 					<xsd:element name="UnitInventory" type="xsd:nonNegativeInteger" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.9F" xml:lang="en">"The unit inventory data element is an integer that tracks the total number of units available for occupancy as of the inventory start date recorded in 2.1.9G."</xsd:documentation>
+							<xsd:documentation xml:lang="en">The unit inventory data element is an integer that tracks the total number of units available for occupancy as of the inventory start date recorded in 2.1.9G.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.9F.</xsd:documentation>
 						</xsd:annotation>   
 					</xsd:element>
 				</xsd:sequence>
@@ -883,17 +883,17 @@
 		<xsd:sequence>
 			<xsd:element name="HasMentalHealthProblem" type="hmis:fourValDKRefused">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.7" xml:lang="en">"A mental health problem may include serious depression, serious anxiety, hallucinations, violent behavior or thoughts of suicide."</xsd:documentation>
+					<xsd:documentation xml:lang="en">A mental health problem may include serious depression, serious anxiety, hallucinations, violent behavior or thoughts of suicide.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.7.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MentalHealthIndefinite" type="hmis:fourValDKRefused" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.7" xml:lang="en">"(If yes[to HasMentalHealthProblem]) Expected to be of long-continued and indefinite duration and substantially impairs ability to live independently"</xsd:documentation>
+					<xsd:documentation xml:lang="en">If yes[to HasMentalHealthProblem]: Expected to be of long-continued and indefinite duration and substantially impairs ability to live independently.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.7.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ReceiveMentalHealthServices" type="hmis:fourValDKRefused" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.7" xml:lang="en">"(If yes[to HasMentalHealthProblem]) Currently receiving services or treatment for this condition or received services/treatment prior to exiting the program?</xsd:documentation>
+					<xsd:documentation xml:lang="en">If yes[to HasMentalHealthProblem]: Currently receiving services or treatment for this condition or received services/treatment prior to exiting the program?  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.7.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -908,24 +908,16 @@
 			</xsd:element>
 			<xsd:element name="DischargeStatus" type="hmis:dischargeStatus" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15E" xml:lang="en">Discharge status</xsd:documentation>
+					<xsd:documentation xml:lang="en">Discharge status.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15E.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="DischargeStatusOther" type="hmis:string50" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation xml:lang="en"></xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
+			<xsd:element name="DischargeStatusOther" type="hmis:string50" minOccurs="0"/>
 			<xsd:element name="MilitaryBranch" type="hmis:sevenValDKRefused2" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15E" xml:lang="en">"Branch of the military"</xsd:documentation>
+					<xsd:documentation xml:lang="en">Branch of the military.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15E.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="MilitaryBranchOther" type="hmis:string50" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation xml:lang="en"></xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
+			<xsd:element name="MilitaryBranchOther" type="hmis:string50" minOccurs="0"/>
 		</xsd:sequence> 
 	</xsd:complexType>
 	
@@ -979,7 +971,7 @@
 			<xsd:sequence maxOccurs="unbounded">
 				<xsd:element name="NonCashSourceCode" type="hmis:nonCashSourceCode">
     				<xsd:annotation>
-    					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.2" xml:lang="en">"For each source listed below, determine if the client received any non-cash benefits in the past 30 days. Clients may identify multiple sources of non-cash benefits."</xsd:documentation>
+    					<xsd:documentation xml:lang="en">For each source listed below, determine if the client received any non-cash benefits in the past 30 days. Clients may identify multiple sources of non-cash benefits.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.2.</xsd:documentation>
     				</xsd:annotation>
 				</xsd:element>
 				<xsd:element name="NonCashSourceOther" type="hmis:string50" minOccurs="0">
@@ -989,7 +981,7 @@
 				</xsd:element>
 				<xsd:element name="ReceivingNonCashSource" type="hmis:twoVal">
 					<xsd:annotation>
-						<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.2" xml:lang="en">"If a client reports receiving non-cash benefits, an HMIS may be designed such that programs only need to directly enter “Yes” for the benefits the clients received. The HMIS software may automatically generate a “No” response for the other non-cash benefit sources."</xsd:documentation>
+						<xsd:documentation xml:lang="en">If a client reports receiving non-cash benefits, an HMIS may be designed such that programs only need to directly enter “Yes” for the benefits the clients received. The HMIS software may automatically generate a “No” response for the other non-cash benefit sources.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.2.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 			</xsd:sequence>		
@@ -1061,42 +1053,42 @@
 		<xsd:sequence>
 			<xsd:element name="PersonID" type="hmis:iDIndex">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.14" xml:lang="en">"Every client receiving services from a contributory CoC program within a CoC is assigned a Personal Identification Number (PIN), which is a permanent and unique number generated by the HMIS application.  The PIN is used to obtain an unduplicated count of persons served within a CoC."</xsd:documentation>
+					<xsd:documentation xml:lang="en">Every client receiving services from a contributory CoC program within a CoC is assigned a Personal Identification Number (PIN), which is a permanent and unique number generated by the HMIS application.  The PIN is used to obtain an unduplicated count of persons served within a CoC.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.14.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="DateOfBirth" type="hmis:dOBHashingChoice" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.3" xml:lang="en">The date of birth can be used to calculate the age of persons served at time of program entry or at any point in receiving services.</xsd:documentation>
+					<xsd:documentation xml:lang="en">The date of birth can be used to calculate the age of persons served at time of program entry or at any point in receiving services.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.3.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Ethnicity" type="hmis:fourValDKRefusedHashingChoice" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.5" xml:lang="en">"Ethnicity is used to count the number of homeless persons who identify themselves as Hispanic or Latino."</xsd:documentation>
+					<xsd:documentation xml:lang="en">Ethnicity is used to count the number of homeless persons who identify themselves as Hispanic or Latino.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.5.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Gender" type="hmis:sevenValDKRefusedHashingChoice" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.6" xml:lang="en">"To create separate counts of homeless men, women and transgendered clients served."</xsd:documentation>
+					<xsd:documentation xml:lang="en">To create separate counts of homeless men, women and transgendered clients served.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.6.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="LegalFirstName" type="hmis:hashingChoiceStamped" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.1" xml:lang="en">"The first, middle, last names, and suffix should be collected to support the unique identification of each person served."</xsd:documentation>
+					<xsd:documentation xml:lang="en">The first, middle, last names, and suffix should be collected to support the unique identification of each person served.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.1.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="LegalLastName" type="hmis:hashingChoiceStamped" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.1" xml:lang="en">"The first, middle, last names, and suffix should be collected to support the unique identification of each person served."</xsd:documentation>
+					<xsd:documentation xml:lang="en">The first, middle, last names, and suffix should be collected to support the unique identification of each person served.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.1.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="LegalMiddleName" type="hmis:hashingChoiceStamped" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.1" xml:lang="en">"The first, middle, last names, and suffix should be collected to support the unique identification of each person served."</xsd:documentation>
+					<xsd:documentation xml:lang="en">The first, middle, last names, and suffix should be collected to support the unique identification of each person served.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.1.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="LegalSuffix" type="hmis:hashingChoiceStamped" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.1" xml:lang="en">"The first, middle, last names, and suffix should be collected to support the unique identification of each person served."</xsd:documentation>
+					<xsd:documentation xml:lang="en">The first, middle, last names, and suffix should be collected to support the unique identification of each person served.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.1.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Need" type="hmis:need" minOccurs="0" maxOccurs="unbounded">
@@ -1116,7 +1108,7 @@
 			</xsd:element>
 			<xsd:element name="Race" type="hmis:sevenValDKRefused2HashingChoiceStatic" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.4" xml:lang="en">Race is used to count the number of homeless persons who identify themselves within five different racial categories.</xsd:documentation>
+					<xsd:documentation xml:lang="en">Race is used to count the number of homeless persons who identify themselves within five different racial categories.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.4.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ReleaseOfInformation" type="hmis:releaseOfInformation" minOccurs="0" maxOccurs="unbounded">
@@ -1136,7 +1128,7 @@
 			</xsd:element>
 			<xsd:element name="SocialSecurityNumber" type="hmis:sSNHashingChoice" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.2" xml:lang="en">"Where data are shared across programs, the SSN greatly improves the process of identifying clients who have been served and allows programs to de-duplicate upon program entry.  Second, an important Congressional goal is to increase the use of mainstream programs by homeless persons. To achieve this goal, homeless service providers need the SSN along with the other personal identifiers in order to access mainstream services for theirclients."</xsd:documentation>
+					<xsd:documentation xml:lang="en">Where data are shared across programs, the SSN greatly improves the process of identifying clients who have been served and allows programs to de-duplicate upon program entry.  Second, an important Congressional goal is to increase the use of mainstream programs by homeless persons. To achieve this goal, homeless service providers need the SSN along with the other personal identifiers in order to access mainstream services for their clients.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.2.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -1156,12 +1148,12 @@
 				<xsd:sequence>
 					<xsd:element name="IsLastPermanentZIP" type="hmis:twoVal" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.10" xml:lang="en">To identify the former geographic location of persons experiencing homelessness or current geographic location of persons who are at risk of homelessness.</xsd:documentation>
+							<xsd:documentation xml:lang="en">To identify the former geographic location of persons experiencing homelessness or current geographic location of persons who are at risk of homelessness.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.10.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element name="ZIPQualityCode" type="hmis:zIPQualityCode" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.10" xml:lang="en">"...record the appropriate zip code type (data quality code)."</xsd:documentation>
+							<xsd:documentation xml:lang="en">...record the appropriate zip code type (data quality code).  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.10.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
@@ -1188,22 +1180,22 @@
 			</xsd:element>
 			<xsd:element name="ChronicHealthCondition" type="hmis:chronicHealthCondition" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.5" xml:lang="en">To count the number of persons served with severe health conditions and assess their need for healthcare and other medical services.</xsd:documentation>
+					<xsd:documentation xml:lang="en">To count the number of persons served with severe health conditions and assess their need for healthcare and other medical services.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.5.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="CurrentlyInSchool" type="hmis:fourValDKRefused" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">"Currently in school or working on any degree or certificate"</xsd:documentation>
+					<xsd:documentation xml:lang="en">Currently in school or working on any degree or certificate.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ContactsMade" type="hmis:contactsMade" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.11" xml:lang="en">To record and count the number of contacts with homeless persons by street outreach programs.</xsd:documentation>
+					<xsd:documentation xml:lang="en">To record and count the number of contacts with homeless persons by street outreach programs.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.11.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>	
 			<xsd:element name="Degree" type="hmis:degree" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">If client has received a high school diploma, GED or enrolled in post-secondary education, what degree(s) has the client earned</xsd:documentation>
+					<xsd:documentation xml:lang="en">If client has received a high school diploma, GED or enrolled in post-secondary education, what degree(s) has the client earned.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Destinations" type="hmis:destinations" minOccurs="0">
@@ -1213,17 +1205,17 @@
 			</xsd:element>
 			<xsd:element name="DisablingCondition" type="hmis:fourValDKRefused" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.8" xml:lang="en">Disability condition is needed to help identify clients that meet HUD’s definition of chronically homeless and, depending on the source of program funds, may be required to establish client eligibility to be served by the program.</xsd:documentation>
+					<xsd:documentation xml:lang="en">Disability condition is needed to help identify clients that meet HUD’s definition of chronically homeless and, depending on the source of program funds, may be required to establish client eligibility to be served by the program.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.8.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>  
 			<xsd:element name="DevelopmentalDisability" type="hmis:developmentalDisability" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.4" xml:lang="en">To count the number of developmentally disabled persons served, determine eligibility for disability benefits, and assess their need for services.</xsd:documentation>
+					<xsd:documentation xml:lang="en">To count the number of developmentally disabled persons served, determine eligibility for disability benefits, and assess their need for services.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.4.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="DomesticViolence" type="hmis:domesticViolence" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.9" xml:lang="en">Ascertaining whether a person is a victim of domestic violence is necessary to provide the person with the appropriate services to prevent further abuse and to treat the physical and psychological injuries from prior abuse. Also, ascertaining that a person may be experiencing domestic violence may be important for the safety of program staff and other clients. At the aggregate level, knowing the size of the homeless population that has experienced domestic violence is critical for determining the resources needed to address the problem in this population.</xsd:documentation>
+					<xsd:documentation xml:lang="en">Ascertaining whether a person is a victim of domestic violence is necessary to provide the person with the appropriate services to prevent further abuse and to treat the physical and psychological injuries from prior abuse. Also, ascertaining that a person may be experiencing domestic violence may be important for the safety of program staff and other clients. At the aggregate level, knowing the size of the homeless population that has experienced domestic violence is critical for determining the resources needed to address the problem in this population.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.9.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Employment" type="hmis:employment" minOccurs="0" maxOccurs="unbounded">
@@ -1233,27 +1225,27 @@
 			</xsd:element>
 			<xsd:element name="EngagedDate" type="hmis:date" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.12" xml:lang="en">The definition of a client engagement may vary among programs and communities. As a matter of general principle, an engagement is defined as an interactive client relationship that results in a deliberate client assessment.</xsd:documentation>
+					<xsd:documentation xml:lang="en">The definition of a client engagement may vary among programs and communities. As a matter of general principle, an engagement is defined as an interactive client relationship that results in a deliberate client assessment.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.12.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="HealthStatus" type="hmis:healthStatus" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15C" xml:lang="en">Determine how the client assesses his/her health (and the health of minors with the household, if applicable) in comparison to other people their age.</xsd:documentation>
+					<xsd:documentation xml:lang="en">Determine how the client assesses his/her health (and the health of minors with the household, if applicable) in comparison to other people their age.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15C.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>	
 			<xsd:element name="HighestSchoolLevel" type="hmis:highestSchoolLevel" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">"Highest level of school completed"</xsd:documentation>
+					<xsd:documentation xml:lang="en">Highest level of school completed.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="HIVAIDSStatus" type="hmis:hIVAIDSStatus" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.6" xml:lang="en">"To count the number persons served who have been diagnosed with AIDS or have tested positive for HIV and assess their need for services."</xsd:documentation>
+					<xsd:documentation xml:lang="en">To count the number persons served who have been diagnosed with AIDS or have tested positive for HIV and assess their need for services.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.6.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>	
 			<xsd:element name="HousingStatus" type="hmis:sixValDKRefused2" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.11" xml:lang="en">"A new data element, Housing Status has been added in order to distinguish persons who are literally homeless from those who are at imminent risk of losing housing, or in a stable housing situation.".</xsd:documentation>
+					<xsd:documentation xml:lang="en">A new data element, Housing Status has been added in order to distinguish persons who are literally homeless from those who are at imminent risk of losing housing, or in a stable housing situation.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.11.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="HUDChronicHomeless" type="hmis:twoVal" minOccurs="0" maxOccurs="unbounded">
@@ -1268,37 +1260,37 @@
 			</xsd:element>
 			<xsd:element name="IncomeLast30Days" type="hmis:fourValDKRefused" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.1" xml:lang="en">"Income received from any source in past 30 days?"</xsd:documentation>
+					<xsd:documentation xml:lang="en">Income received from any source in past 30 days?  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.1.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="IncomeAndSources" type="hmis:incomeAndSources" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.1" xml:lang="en">Income and sources of income are important for determining service needs of people at the time of program entry, determining whether they are accessing all income sources for which they are eligible, and describing the characteristics of the homeless population.</xsd:documentation>
+					<xsd:documentation xml:lang="en">Income and sources of income are important for determining service needs of people at the time of program entry, determining whether they are accessing all income sources for which they are eligible, and describing the characteristics of the homeless population.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.1.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="IncomeTotalMonthly" type="hmis:nonNegativeInteger" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.1" xml:lang="en">"the client’s total monthly income (rounded to the nearest U.S. dollar)."</xsd:documentation>
+					<xsd:documentation xml:lang="en">...the client’s total monthly income (rounded to the nearest U.S. dollar).  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.1.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="LengthOfStayAtPriorResidence" type="hmis:sevenValDKRefused2" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.9" xml:lang="en">To identify the type of residence and length of stay at that residence just prior to (i.e., the night before) program admission.</xsd:documentation>
+					<xsd:documentation xml:lang="en">To identify the type of residence and length of stay at that residence just prior to (i.e., the night before) program admission.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.9.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MentalHealthProblem" type="hmis:mentalHealthProblem" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.7" xml:lang="en">"To count the number of persons with mental health problems served and to assess the need for treatment."</xsd:documentation>
+					<xsd:documentation xml:lang="en">To count the number of persons with mental health problems served and to assess the need for treatment.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.7.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="NonCashBenefitsLast30Days" type="hmis:fourValDKRefused" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.2" xml:lang="en">Non-cash benefit received from any source in past 30 days?</xsd:documentation>
+					<xsd:documentation xml:lang="en">Non-cash benefit received from any source in past 30 days?  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.2.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="NonCashBenefits" type="hmis:nonCashBenefits" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.2" xml:lang="en">Non-cash benefits are important to determine whether clients are accessing all mainstream program benefits for which they may be eligible and to ascertain a more complete picture of their economic circumstances.</xsd:documentation>
+					<xsd:documentation xml:lang="en">Non-cash benefits are important to determine whether clients are accessing all mainstream program benefits for which they may be eligible and to ascertain a more complete picture of their economic circumstances.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.2.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="PersonAddress" type="hmis:personAddress" minOccurs="0" maxOccurs="unbounded">
@@ -1318,12 +1310,12 @@
 			</xsd:element>		
 			<xsd:element name="PhysicalDisability" type="hmis:physicalDisability" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.3" xml:lang="en">To count the number of physically disabled persons served, determine eligibility for disability benefits, and assess the need for services.</xsd:documentation>
+					<xsd:documentation xml:lang="en">To count the number of physically disabled persons served, determine eligibility for disability benefits, and assess the need for services.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.3.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Pregnancy" type="hmis:pregnancy" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15D" xml:lang="en">To determine eligibility for benefits and need for services, and to determine the number of women entering CoC programs while pregnant.</xsd:documentation>
+					<xsd:documentation xml:lang="en">To determine eligibility for benefits and need for services, and to determine the number of women entering CoC programs while pregnant.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15D.</xsd:documentation>
 				</xsd:annotation>	
 			</xsd:element>
 			<xsd:element name="PriorResidence" type="hmis:priorResidence" minOccurs="0" maxOccurs="unbounded">
@@ -1333,17 +1325,17 @@
 			</xsd:element>
 			<xsd:element name="SubstanceAbuseProblem" type="hmis:substanceAbuseProblem" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.8" xml:lang="en">"To count the number of persons served with substance abuse problems and to assess the need for treatment."</xsd:documentation>
+					<xsd:documentation xml:lang="en">To count the number of persons served with substance abuse problems and to assess the need for treatment.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.8.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Veteran" type="hmis:veteran" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15E" xml:lang="en">To collect a more detailed profile of the homeless veteran’s experience and to determine eligibility for Department of Veterans Affairs (VA) programs and benefits.</xsd:documentation>
+					<xsd:documentation xml:lang="en">To collect a more detailed profile of the homeless veteran’s experience and to determine eligibility for Department of Veterans Affairs (VA) programs and benefits.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15E.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="VocationalTraining" type="hmis:fourValDKRefused" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">"Received vocational training or apprenticeship certificates"</xsd:documentation>
+					<xsd:documentation xml:lang="en">Received vocational training or apprenticeship certificates.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -1361,12 +1353,12 @@
 		<xsd:sequence>
 			<xsd:element name="HasPhysicalDisability" type="hmis:fourValDKRefused">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.3" xml:lang="en">"For the purposes of this Notice, a physical disability means a physical impairment which is (a) expected to be of long, continued and indefinite duration, (b) substantially impedes an individual’s ability to live independently, and (c) of such a nature that such ability could be improved by more suitable housing conditions."</xsd:documentation>
+					<xsd:documentation xml:lang="en">For the purposes of this Notice, a physical disability means a physical impairment which is (a) expected to be of long, continued and indefinite duration, (b) substantially impedes an individual’s ability to live independently, and (c) of such a nature that such ability could be improved by more suitable housing conditions.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.3.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ReceivePhysicalDisabilityServices" type="hmis:fourValDKRefused" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.3" xml:lang="en">"(If yes [to HasPhysicalDisability]) Currently receiving services or treatment for this condition or received services/treatment prior to exiting the program?"</xsd:documentation>
+					<xsd:documentation xml:lang="en">If yes [to HasPhysicalDisability]: Currently receiving services or treatment for this condition or received services/treatment prior to exiting the program?  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.3.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -1388,13 +1380,13 @@
 		</xsd:sequence>
 		<xsd:attribute name="pITHouseholdType" type="threeValBase" use="required">
 			<xsd:annotation>
-				<xsd:documentation source="'2010 Housing Inventory and 2010 Point-in-Time Homeless Persons Counts Data Collection Guidance', 1/15/2010" xml:lang="en">Within each sheltered and unsheltered category, PIT homeless person counts will be recorded in the following household types:
+				<xsd:documentation xml:lang="en">Within each sheltered and unsheltered category, PIT homeless person counts will be recorded in the following household types:
 					a. Number of persons in households without children;
 					b. Number of persons in households with at least one adult and one child; and
 					c. Number of persons in households with only children. This includes only persons
 					age 17 or under, including unaccompanied youth, adolescent parents and their
 					children, adolescent siblings, or other household configurations composed only
-					of children.
+					of children.  Source: 2010 Housing Inventory and 2010 Point-in-Time Homeless Persons Counts Data Collection Guidance, 1/15/2010.
 				</xsd:documentation>
 			</xsd:annotation>
 		</xsd:attribute>
@@ -1462,12 +1454,12 @@
 			</xsd:element>
 			<xsd:element name="PregnancyStatus" type="hmis:fourValDKRefused">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15D" xml:lang="en">"In separate fields, determine (a) if a client is pregnant..."</xsd:documentation>
+					<xsd:documentation xml:lang="en">In separate fields, determine (a) if a client is pregnant...  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15D.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="DueDate" type="hmis:date" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15D" xml:lang="en">"If yes, due date."</xsd:documentation>
+					<xsd:documentation xml:lang="en">If yes, due date.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15D.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -1482,7 +1474,7 @@
 			</xsd:element>
 			<xsd:element name="PriorResidenceCode" type="hmis:residence" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.9" xml:lang="en">To identify the type of residence and length of stay at that residence just prior to (i.e., the night before) program admission.</xsd:documentation>
+					<xsd:documentation xml:lang="en">To identify the type of residence and length of stay at that residence just prior to (i.e., the night before) program admission.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.9.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="PriorResidenceOther" type="hmis:string50" minOccurs="0"/>
@@ -1498,7 +1490,7 @@
 			</xsd:element>
 			<xsd:element name="ReasonForLeaving" type="hmis:elevenVal" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15G" xml:lang="en">Identify the reason why the client left the program. If a client left for multiple reasons, record only the primary reason.</xsd:documentation>
+					<xsd:documentation xml:lang="en">Identify the reason why the client left the program. If a client left for multiple reasons, record only the primary reason.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15G.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ReasonForLeavingOther" type="hmis:string50" minOccurs="0">
@@ -1563,24 +1555,24 @@
 			<xsd:extension base="airs:tService">
 				<xsd:sequence>
 					<xsd:annotation>
-						<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.3" xml:lang="en">To uniquely identify each CoC Program within the CoC.</xsd:documentation>
+						<xsd:documentation xml:lang="en">To uniquely identify each CoC Program within the CoC.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.3.</xsd:documentation>
 						<xsd:documentation xml:lang="en">Program Identifier is mapped to airs:tService.Key</xsd:documentation>
-						<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.4" xml:lang="en">To identify the name of each CoC Program within the CoC.</xsd:documentation>
+						<xsd:documentation xml:lang="en">To identify the name of each CoC Program within the CoC.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.4.</xsd:documentation>
 						<xsd:documentation xml:lang="en">Program Name is mapped to airs:tService.Name</xsd:documentation>
 					</xsd:annotation>
 					<xsd:element name="COCCode" type="hmis:string5Base" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.7" xml:lang="en">To associate each CoC Program with a CoC for HUD reporting purposes.</xsd:documentation>
+							<xsd:documentation xml:lang="en">To associate each CoC Program with a CoC for HUD reporting purposes.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.7.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element name="Configuration" minOccurs="0" type="hmis:threeValBase">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.6A" xml:lang="en">"...record the site configuration type as follows: 1. Single site, single building. Housing units (or service encounters) are at one site, in a single structure. 2. Single site, multiple buildings. Housing units (or service encounters) are at one site, in multiple structures (e.g., single apartment complex with multiple buildings and program units in two or more buildings). 3. Multiple sites. Housing units (or service encounters) are at multiple sites (e.g., scattered-site housing, outreach)."</xsd:documentation>
+							<xsd:documentation xml:lang="en">...record the site configuration type as follows: 1. Single site, single building. Housing units (or service encounters) are at one site, in a single structure. 2. Single site, multiple buildings. Housing units (or service encounters) are at one site, in multiple structures (e.g., single apartment complex with multiple buildings and program units in two or more buildings). 3. Multiple sites. Housing units (or service encounters) are at multiple sites (e.g., scattered-site housing, outreach).  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.6A.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element name="DirectServiceCode" type="hmis:twoValBase" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.5" xml:lang="en">To differentiate CoC Programs in the HMIS that provide direct services from organizations that do not provide direct services (such as HMIS Lead Agencies, organizations that oversee or support CoC Programs, or software solution providers).</xsd:documentation>
+							<xsd:documentation xml:lang="en">To differentiate CoC Programs in the HMIS that provide direct services from organizations that do not provide direct services (such as HMIS Lead Agencies, organizations that oversee or support CoC Programs, or software solution providers).  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.5.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element name="FundingSources" type="hmis:fundingSourcesService" minOccurs="0">
@@ -1590,7 +1582,7 @@
 					</xsd:element>
 					<xsd:element name="GranteeIdentifier" type="hmis:string10Base" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.13" xml:lang="en">"All subgrantees of a federal HPRP grantee must identify their projects with the original state or local grantee identifier as assigned by HUD."</xsd:documentation>
+							<xsd:documentation xml:lang="en">All subgrantees of a federal HPRP grantee must identify their projects with the original state or local grantee identifier as assigned by HUD.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.13.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element name="IndividualFamilyCode" type="hmis:fourValBase" minOccurs="0">
@@ -1600,19 +1592,19 @@
 					</xsd:element>
 					<xsd:element name="Inventory" type="hmis:inventory" minOccurs="0" maxOccurs="unbounded">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.9" xml:lang="en">To record inventory information for each residential CoC Program in order to produce Housing Inventory data for the CoC application and the AHAR.</xsd:documentation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.9" xml:lang="en">The revised data standards also state: "These data may also be collected separately for distinct sites within a program, as long as they can be aggregated to the program level.".  So, inventory is also included as a subelement of SiteService, so that site-based inventories can be conveyed, though site-based inventory tracking is not required.</xsd:documentation>
+							<xsd:documentation xml:lang="en">To record inventory information for each residential CoC Program in order to produce Housing Inventory data for the CoC application and the AHAR.  </xsd:documentation>
+							<xsd:documentation xml:lang="en">These data may also be collected separately for distinct sites within a program, as long as they can be aggregated to the program level.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.9.  So, inventory is also included as a subelement of SiteService, so that site-based inventories can be conveyed, though site-based inventory tracking is not required.</xsd:documentation>
 							<xsd:documentation xml:lang="en">Alternatively, each bed can be individually reported using an asset.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element name="ResidentialTrackingMethod" type="hmis:threeValBase" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.12">Record the method used to track the actual nights that a client stays in a program.</xsd:documentation>
+							<xsd:documentation>Record the method used to track the actual nights that a client stays in a program.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.12.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element name="ServiceType" type="hmis:serviceType" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.8" xml:lang="en">To associate each CoC Program with the specific type of service offered.</xsd:documentation>
+							<xsd:documentation xml:lang="en">To associate each CoC Program with the specific type of service offered.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.8.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element name="ServiceEffectivePeriod" type="hmis:dateRangeOpen" minOccurs="0">
@@ -1627,12 +1619,12 @@
 					</xsd:element>
 					<xsd:element name="TargetPopulationA" type="hmis:elevenValBase" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.10" xml:lang="en">"This information may be used to track bed utilization and service gaps."</xsd:documentation>
+							<xsd:documentation xml:lang="en">This information may be used to track bed utilization and service gaps.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.10.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element name="TargetPopulationB" type="hmis:fourValBase" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.11" xml:lang="en">"To allow HMIS to produce the Housing Inventory data for the for the annual CoC application to HUD."</xsd:documentation>
+							<xsd:documentation xml:lang="en">To allow HMIS to produce the Housing Inventory data for the for the annual CoC application to HUD.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.11.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
@@ -1693,13 +1685,13 @@
 			</xsd:element>
 			<xsd:element name="ServiceEventEffectivePeriod" type="hmis:dateRangeOpen" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15H" xml:lang="en">"Record “date of service” as the two-digit month, two-digit day and four-digit year."</xsd:documentation>
+					<xsd:documentation xml:lang="en">Record “date of service” as the two-digit month, two-digit day and four-digit year.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15H.</xsd:documentation>
 					<xsd:documentation xml:lang="en">This data element allows a period of time for the service, instead of just a single date, which is also valid.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ServiceEventProvisionDate" type="xsd:date" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="" xml:lang="en">"Record “date of service” as the two-digit month, two-digit day and four-digit year."</xsd:documentation>
+					<xsd:documentation xml:lang="en">Record “date of service” as the two-digit month, two-digit day and four-digit year.</xsd:documentation>
 					<xsd:documentation xml:lang="en">This data element tracks the date the service was given out.  This can be used for tracking date arrearage payments made.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
@@ -1726,13 +1718,13 @@
 				</xsd:element>
 				<xsd:element name="HPRPFinancialAssistanceServiceEventCode" type="hmis:sixValBase" minOccurs="0">
 					<xsd:annotation>
-						<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.13" xml:lang="en">To determine the type of financial assistance (including rental assistance,security deposits, utility deposits, utility payments, moving cost assistance, and motel and hotel vouchers) and amount provided during program participation.</xsd:documentation>
-						<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.13" xml:lang="en">Response categories for the types of financial assistance are consistent with the requirements of the HPRP Notice (FR-5307-N-01).</xsd:documentation>
+						<xsd:documentation xml:lang="en">To determine the type of financial assistance (including rental assistance,security deposits, utility deposits, utility payments, moving cost assistance, and motel and hotel vouchers) and amount provided during program participation.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.13.</xsd:documentation>
+						<xsd:documentation xml:lang="en">Response categories for the types of financial assistance are consistent with the requirements of the HPRP Notice (FR-5307-N-01).  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.13.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>  
 				<xsd:element name="HPRPRelocationStabilizationServiceEventCode" type="hmis:fiveValBase">
 					<xsd:annotation>
-						<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.14" xml:lang="en">To determine the housing relocation and stabilization services provided during program participation. This data element is required for HPRP-funded programs in order to complete the QPR and APR.</xsd:documentation>
+						<xsd:documentation xml:lang="en">To determine the housing relocation and stabilization services provided during program participation. This data element is required for HPRP-funded programs in order to complete the QPR and APR.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.14.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>			
 			</xsd:choice>
@@ -1816,7 +1808,7 @@
 					</xsd:element>
 					<xsd:element name="GeographicCode" type="hmis:geographicCode" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.6C" xml:lang="en">For the principal program service site, record the geocode associated with the geographic location of the site.</xsd:documentation>         
+							<xsd:documentation xml:lang="en">For the principal program service site, record the geocode associated with the geographic location of the site.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.6C.</xsd:documentation>         
 						</xsd:annotation>   
 					</xsd:element>
 					<xsd:element name="HMISAsset" type="hmis:hMISAsset" minOccurs="0" maxOccurs="unbounded">
@@ -1826,21 +1818,21 @@
 					</xsd:element>
 					<xsd:element name="HousingType" type="hmis:sevenVal" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.6E" xml:lang="en">For the principal program service site, record the appropriate housing type.</xsd:documentation>
+							<xsd:documentation xml:lang="en">For the principal program service site, record the appropriate housing type.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.6E.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element name="Inventory" type="hmis:inventory" minOccurs="0" maxOccurs="unbounded">
 						<xsd:annotation>
-							<xsd:documentation xml:lang="en" source="2010 HUD HMIS Data and Technical Standards, Section 2.9">Inventory counts aggregate bed and unit info for HUD HMIS reporting.  SiteService.Inventory is used for Housing Inventory Chart (HIC) reporting.  Alternatively, each bed can be individually reported using an asset.</xsd:documentation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.9" xml:lang="en">The revised data stnadards also state: "These data may also be collected separately for distinct sites within a program, as long as they can be aggregated to the program level.".  The placement of Inventory, here within SiteService, accomodates conveying site-based inventories.  However, this is not required, and Inventory is also included as a subelement of Service, so that non-site-based inventories can be conveyed.</xsd:documentation>
+							<xsd:documentation xml:lang="en" >Inventory counts aggregate bed and unit info for HUD HMIS reporting.  SiteService.Inventory is used for Housing Inventory Chart (HIC) reporting.  Alternatively, each bed can be individually reported using an asset.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.9.</xsd:documentation>
+							<xsd:documentation xml:lang="en">These data may also be collected separately for distinct sites within a program, as long as they can be aggregated to the program level.".  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.9.  The placement of Inventory, here within SiteService, accomodates conveying site-based inventories.  However, this is not required, and Inventory is also included as a subelement of Service, so that non-site-based inventories can be conveyed.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element name="Principal" type="hmis:twoValBase" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.6B" xml:lang="en">This yes/no element designates whether this SiteService is the "principal program service site".</xsd:documentation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.6B" xml:lang="en">The data standards also track the address of this principal site service.  That is located by completing information for the parent Site (referenced by SiteService.SiteID) of the principal Site Service at airs:tSite.PhysicalAddress.</xsd:documentation>                         
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.6B" xml:lang="en">In the data standards, it mentions that "Programs without a principal program service site (e.g., mobile programs such as street outreach and scattered-site housing programs) should record the address of their administrative office."  The administrative office location is located at airs:tAgency.AgencyLocation.tSite.PhysicalAddress.</xsd:documentation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.6" xml:lang="en">In the data standards, it mentions that "Programs may choose to record the Site Information data element for each site or facility operated by the program.", so even if a Site Service is not the principal SiteService, information in section 2.6 can still be tracked.</xsd:documentation>
+							<xsd:documentation xml:lang="en">This yes/no element designates whether this SiteService is the "principal program service site".  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.6B.</xsd:documentation>
+							<xsd:documentation xml:lang="en">The data standards also track the address of this principal site service.  That is located by completing information for the parent Site (referenced by SiteService.SiteID) of the principal Site Service at airs:tSite.PhysicalAddress.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.6B.</xsd:documentation>                         
+							<xsd:documentation xml:lang="en">In the data standards, it mentions that "Programs without a principal program service site (e.g., mobile programs such as street outreach and scattered-site housing programs) should record the address of their administrative office."  The administrative office location is located at airs:tAgency.AgencyLocation.tSite.PhysicalAddress.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.6B.</xsd:documentation>
+							<xsd:documentation xml:lang="en">In the data standards, it mentions that "Programs may choose to record the Site Information data element for each site or facility operated by the program.", so even if a Site Service is not the principal SiteService, information in section 2.6 can still be tracked.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.6.</xsd:documentation>
 						</xsd:annotation>   
 					</xsd:element>
 					<xsd:element name="PITCountSet" type="hmis:pITCountSet" minOccurs="0" maxOccurs="unbounded">
@@ -1860,7 +1852,7 @@
 					</xsd:element>
 					<xsd:element name="SiteServiceType" type="hmis:threeValBase" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.6D" xml:lang="en">For the principal program service site, record the site type as follows: 1. Non-residential: services only. The program only provides supportive services and does not provide overnight accommodations. 2. Residential: special needs and non-special needs. Residential housing (i.e., site that provides overnight accommodation) is located within a building or complex that houses both persons with special needs—e.g., homeless or formerly homeless persons, persons with substance abuseproblems, persons with mental illness, or persons with HIV/AIDS—andpersons without any special needs. 3. Residential: special needs only. Residential housing is located within a building or complex that houses only persons with special needs—e.g., homeless or formerly homeless persons, persons with substance abuse problems, persons with mental illness, persons with HIV/AIDS, persons with a physical disability, and/or elderly persons.</xsd:documentation>
+							<xsd:documentation xml:lang="en">For the principal program service site, record the site type as follows: 1. Non-residential: services only. The program only provides supportive services and does not provide overnight accommodations. 2. Residential: special needs and non-special needs. Residential housing (i.e., site that provides overnight accommodation) is located within a building or complex that houses both persons with special needs—e.g., homeless or formerly homeless persons, persons with substance abuseproblems, persons with mental illness, or persons with HIV/AIDS—andpersons without any special needs. 3. Residential: special needs only. Residential housing is located within a building or complex that houses only persons with special needs—e.g., homeless or formerly homeless persons, persons with substance abuse problems, persons with mental illness, persons with HIV/AIDS, persons with a physical disability, and/or elderly persons.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.6D.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
@@ -1894,7 +1886,7 @@
 			</xsd:element>
 			<xsd:element name="ParticipationDates" type="hmis:dateRangeOpen">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.12 and 3.13" xml:lang="en">This data element is needed for reporting purposes for all programs and to measure lengths of stay for residential programs.</xsd:documentation>
+					<xsd:documentation xml:lang="en">This data element is needed for reporting purposes for all programs and to measure lengths of stay for residential programs.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.12 and 3.13.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>			
 			<xsd:element name="PersonHistorical" type="hmis:personHistorical" minOccurs="0" maxOccurs="unbounded">
@@ -2009,7 +2001,7 @@
 			</xsd:choice>
 			<xsd:element name="SocialSecNumberQualityCode" type="hmis:fourValDKRefused2">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.2" xml:lang="en">"In another field, record the appropriate SSN type (data quality code)."</xsd:documentation>
+					<xsd:documentation xml:lang="en">In another field, record the appropriate SSN type (data quality code).  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.2.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -2067,17 +2059,17 @@
 		<xsd:sequence>
 			<xsd:element name="HasSubstanceAbuseProblem" type="hmis:sixValDKRefused">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.8" xml:lang="en">"...determine (a) if the client has an alcohol or drug abuse problem or both,..."</xsd:documentation>
+					<xsd:documentation xml:lang="en">...determine (a) if the client has an alcohol or drug abuse problem or both... Source: 2010 HUD HMIS Data and Technical Standards, Section 4.8.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="SubstanceAbuseIndefinite" type="hmis:fourValDKRefused" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.8" xml:lang="en">"(If client has a substance abuse problem) Expected to be of long-continued and indefinite duration and substantially impairs ability to live independently"</xsd:documentation>
+					<xsd:documentation xml:lang="en">[If client has a substance abuse problem:] Expected to be of long-continued and indefinite duration and substantially impairs ability to live independently.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.8.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ReceiveSubstanceAbuseServices" type="hmis:fourValDKRefused" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.8" xml:lang="en">"(If client has a substance abuse problem) Currently receiving services or treatment for this condition or received services/treatment prior to exiting the program?</xsd:documentation>
+					<xsd:documentation xml:lang="en">"[If client has a substance abuse problem:] Currently receiving services or treatment for this condition or received services/treatment prior to exiting the program?  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.8.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -2100,22 +2092,22 @@
 			</xsd:element>
 			<xsd:element name="MilitaryServiceDuration" type="hmis:nonNegativeInteger" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15E" xml:lang="en">"Duration of active duty"</xsd:documentation>
+					<xsd:documentation xml:lang="en">Duration of active duty.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15E.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ServedInWarZone" type="hmis:fourValDKRefused" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15E" xml:lang="en">"Served in a war zone"</xsd:documentation>
+					<xsd:documentation xml:lang="en">Served in a war zone.  2010 HUD HMIS Data and Technical Standards, Section 4.15E.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ServiceEra" type="hmis:serviceEra" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15E" xml:lang="en">"...determine: 1) which military service era did the client serve..."</xsd:documentation>
+					<xsd:documentation xml:lang="en">...determine: 1) which military service era did the client serve...  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15E.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="VeteranStatus" type="hmis:fourValDKRefused" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 3.7" xml:lang="en">To determine the number of homeless veterans.</xsd:documentation>
+					<xsd:documentation xml:lang="en">To determine the number of homeless veterans.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.7.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="WarZonesServed" type="hmis:warZoneServed" minOccurs="0" maxOccurs="unbounded">
@@ -2143,17 +2135,17 @@
 			</xsd:element>
 			<xsd:element name="MonthsInWarZone" type="hmis:nonNegativeInteger" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15E" xml:lang="en">"If yes [to ServedInWarZone], number of months in war zone"</xsd:documentation>
+					<xsd:documentation xml:lang="en">"If yes [to ServedInWarZone], number of months in war zone".  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15E.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ReceivedFire" type="hmis:fourValDKRefused" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15E" xml:lang="en">If yes, [to ServedInWarZone] received hostile or friendly fire"</xsd:documentation>
+					<xsd:documentation xml:lang="en">If yes, [to ServedInWarZone] received hostile or friendly fire.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15E.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="WarZone" type="hmis:warZone" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15E" xml:lang="en">"If yes[to ServedInWarZone], name of war zone"</xsd:documentation>
+					<xsd:documentation xml:lang="en">"If yes[to ServedInWarZone], name of war zone".  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15E.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="WarZoneOther" type="hmis:string50" minOccurs="0">
@@ -2185,7 +2177,7 @@
 	<xsd:attributeGroup name="bedAndUnitInfo">
 		<xsd:attribute name="bedAvailability" type="hmis:threeValBase">
 			<xsd:annotation>
-				<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.9C" xml:lang="en">"Describes the availability of beds based on whether beds are available on a planned basis year-round or seasonally (during a defined period of high demand), or on an ad hoc or temporary basis as demand indicates."</xsd:documentation>
+				<xsd:documentation xml:lang="en">Describes the availability of beds based on whether beds are available on a planned basis year-round or seasonally (during a defined period of high demand), or on an ad hoc or temporary basis as demand indicates.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.9C.</xsd:documentation>
 			</xsd:annotation>
 		</xsd:attribute>
 		<xsd:attribute name="bedStatus" type="hmis:threeValBase">
@@ -2195,7 +2187,7 @@
 		</xsd:attribute>
 		<xsd:attribute name="bedType" type="hmis:threeValBase">
 			<xsd:annotation>
-				<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.9B" xml:lang="en">"describes the type of program beds based on whether beds are: located in a residential homeless assistance program facility (including cots or mats); provided through a voucher with a hotel or motel; other types of beds"</xsd:documentation>
+				<xsd:documentation xml:lang="en">Describes the type of program beds based on whether beds are: located in a residential homeless assistance program facility (including cots or mats); provided through a voucher with a hotel or motel; other types of beds.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.9B.</xsd:documentation>
 			</xsd:annotation>
 		</xsd:attribute>
 		<xsd:attribute name="bedIndividualFamilyType" type ="hmis:twoValBase">
@@ -2205,7 +2197,7 @@
 		</xsd:attribute>
 		<xsd:attribute name="chronicHomelessBed" type="hmis:twoValBase">
 			<xsd:annotation>
-				<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.9E" xml:lang="en">"(Permanent Supportive Housing Programs Only). The chronic homeless bed status data element is an yes/no flag that tracks whether the beds are available for occupancy for chronically homeless persons as of the inventory start date recorded in 2.1.9G."</xsd:documentation>
+				<xsd:documentation xml:lang="en">(Permanent Supportive Housing Programs Only). The chronic homeless bed status data element is an yes/no flag that tracks whether the beds are available for occupancy for chronically homeless persons as of the inventory start date recorded in 2.1.9G.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.9E.</xsd:documentation>
 				<xsd:documentation xml:lang="en">To arrive at chronic homelessness inventory from the alternate asset tracking method, one would have to look at the asset assignment's person id, then look for any chronic homeless episodes in their person historical data that overlap the bed stay.</xsd:documentation>
 			</xsd:annotation>   
 		</xsd:attribute>
@@ -2216,7 +2208,7 @@
 		</xsd:attribute>
 		<xsd:attribute name="householdType" type="hmis:twoVal2Base">
 			<xsd:annotation>
-				<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 2.9A" xml:lang="en">"describes the household type served by beds and units counted in the Bed and Unit Inventory Information data elements"</xsd:documentation>
+				<xsd:documentation xml:lang="en">Describes the household type served by beds and units counted in the Bed and Unit Inventory Information data elements.  Source: 2010 HUD HMIS Data and Technical Standards, Section 2.9A.</xsd:documentation>
 			</xsd:annotation>
 		</xsd:attribute>
 	</xsd:attributeGroup>
@@ -2364,17 +2356,17 @@
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="householdNoChildren">
 				<xsd:annotation>
-					<xsd:documentation source="'2010 Housing Inventory and 2010 Point-in-Time Homeless Persons Counts Data Collection Guidance', 1/15/2010 " xml:lang="en">Number of persons in households without children</xsd:documentation>
+					<xsd:documentation xml:lang="en">Number of persons in households without children.  Source: 2010 Housing Inventory and 2010 Point-in-Time Homeless Persons Counts Data Collection Guidance, 1/15/2010.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="householdOneAdultOneChild">
 				<xsd:annotation>
-					<xsd:documentation source="'2010 Housing Inventory and 2010 Point-in-Time Homeless Persons Counts Data Collection Guidance', 1/15/2010 " xml:lang="en">Number of persons in households with at least one adult and one child</xsd:documentation>
+					<xsd:documentation xml:lang="en">Number of persons in households with at least one adult and one child.  Source: 2010 Housing Inventory and 2010 Point-in-Time Homeless Persons Counts Data Collection Guidance, 1/15/2010.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="householdOnlyChildren">
 				<xsd:annotation>
-					<xsd:documentation source="'2010 Housing Inventory and 2010 Point-in-Time Homeless Persons Counts Data Collection Guidance', 1/15/2010 " xml:lang="en">Number of persons in households with only children. This includes only persons age 17 or under, including unaccompanied youth, adolescent parents and their children, adolescent siblings, or other household configurations composed only of children.</xsd:documentation>
+					<xsd:documentation xml:lang="en">Number of persons in households with only children. This includes only persons age 17 or under, including unaccompanied youth, adolescent parents and their children, adolescent siblings, or other household configurations composed only of children.  Source: 2010 Housing Inventory and 2010 Point-in-Time Homeless Persons Counts Data Collection Guidance, 1/15/2010.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>          
 		</xsd:restriction>
@@ -2912,67 +2904,67 @@
 		<xsd:restriction base="xsd:unsignedInt">
 			<xsd:enumeration value="0">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">No schooling completed</xsd:documentation>
+					<xsd:documentation xml:lang="en">No schooling completed.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="1">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">Nursery school to 4th grade</xsd:documentation>
+					<xsd:documentation xml:lang="en">Nursery school to 4th grade.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="2">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">5th grade or 6th grade</xsd:documentation>
+					<xsd:documentation xml:lang="en">5th grade or 6th grade.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="3">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">7th grade or 8th grade</xsd:documentation>
+					<xsd:documentation xml:lang="en">7th grade or 8th grade.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="4">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">9th grade</xsd:documentation>
+					<xsd:documentation xml:lang="en">9th grade.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="5">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">10th grade</xsd:documentation>
+					<xsd:documentation xml:lang="en">10th grade.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="6">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">11th grade</xsd:documentation>
+					<xsd:documentation xml:lang="en">11th grade.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="7">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">12th grade, No diploma</xsd:documentation>
+					<xsd:documentation xml:lang="en">12th grade, No diploma.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="8">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">Don’t Know</xsd:documentation>
+					<xsd:documentation xml:lang="en">Don’t Know.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="9">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">Refused</xsd:documentation>
+					<xsd:documentation xml:lang="en">Refused.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="10">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">High school diploma</xsd:documentation>
+					<xsd:documentation xml:lang="en">High school diploma.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="11">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">GED</xsd:documentation>
+					<xsd:documentation xml:lang="en">GED.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="12">
 				<xsd:annotation>
-					<xsd:documentation source="2010 HUD HMIS Data and Technical Standards, Section 4.15B" xml:lang="en">Post-secondary school</xsd:documentation>
+					<xsd:documentation xml:lang="en">Post-secondary school.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.15B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>
