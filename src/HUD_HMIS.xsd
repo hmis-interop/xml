@@ -368,7 +368,7 @@
 	
 	<xsd:complexType name="destination">
 		<xsd:sequence>
-			<xsd:element name="DestinationCode" type="hmis:destinationCode" minOccurs="0">   
+			<xsd:element name="DestinationCode" type="hmis:destinationCode">   
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">Determine the response value that best describes where the client will be staying after they leave the program.  Source: 2010 HUD HMIS Data and Technical Standards, Section 4.10.</xsd:documentation>
 				</xsd:annotation>   
@@ -1205,7 +1205,7 @@
 			</xsd:element>	
 			<xsd:element name="HUDHomelessEpisodes" type="hmis:dateRangeOpen" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, IV.B.3.B.</xsd:documentation>
+					<xsd:documentation xml:lang="en">SeDeste HMIS XML Version 3.0 Cumulative Package Overview, IV.B.3.B.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="IncomeLast30Days" type="hmis:fourValDKRefused" minOccurs="0" maxOccurs="unbounded">
@@ -1407,12 +1407,7 @@
 	
 	<xsd:complexType name="priorResidence">
 		<xsd:sequence>
-			<xsd:element name="PriorResidenceID" type="hmis:iDIndex">
-				<xsd:annotation>
-					<xsd:documentation xml:lang="en">Establishes a unique ID for the Prior Residence element sequence.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="PriorResidenceCode" type="hmis:residence" minOccurs="0">
+			<xsd:element name="PriorResidenceCode" type="hmis:residence">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">To identify the type of residence and length of stay at that residence just prior to (i.e., the night before) program admission.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.9.</xsd:documentation>
 				</xsd:annotation>
@@ -1851,7 +1846,7 @@
 			</xsd:element>
 			<xsd:element name="PriorResidence" type="hmis:priorResidence" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation xml:lang="en">Groups PriorResidence Codes with PriorResidenceOther responses.</xsd:documentation>
+					<xsd:documentation xml:lang="en">Groups a PriorResidence code with a PriorResidenceOther response.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ReasonForLeaving" type="hmis:reasonForLeaving" minOccurs="0">
