@@ -263,7 +263,15 @@ The 'Sources' element holds a sequence of Source subelements.  Each Source subel
 2.  Export
 Parent Element: Source
 
-Over time, each data source will produce multiple exports.  This element records information about the beginning and end of the period for which data were extracted and the actual date of the export.   In an XML instance file, a Source element can have many exports.  All the following payload elements are part of an export.
+Over time, each data source will produce multiple exports.  This element records information about the beginning and end of the period for which data were extracted and the actual date of the export.   The ExportPeriodType element defines the selection criteria for records bounded by the export period.  The type can be one of: 
+-updated: only data that was added or changed during the export period is included in the export
+-effective: the export only contains data that is effective during the export period (e.g. the date the data is applicable, regardless of when the data was actually entered/changed)
+-reporting period: the export period bounds a reporting period.  Relevant data outside that period may be included, such as program entries before the export period start date, and program exits outside the export period start date.
+-other: the export period represents none of the above types, so the parties exchanging the data must negotiate the record selection criteria.
+
+ExportDirective
+
+ In an XML instance file, a Source element can have many exports.  All the following payload elements are part of an export.
 
 B.  Payload Elements
 1.  Agency

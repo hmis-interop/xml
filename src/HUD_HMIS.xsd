@@ -483,17 +483,27 @@
 		<xsd:sequence>
 			<xsd:element name="ExportID" type="hmis:iDIndex">
 				<xsd:annotation>
-					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, Section IV: A.3.</xsd:documentation>
+					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, Section IV: A.2.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>			
 			<xsd:element name="ExportDate" type="xsd:dateTime">
 				<xsd:annotation>
-					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, Section IV: A.3.</xsd:documentation>
+					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, Section IV: A.2.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ExportPeriod" type="hmis:dateRangeCapped" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, Section IV: A.3.</xsd:documentation>
+					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, Section IV: A.2.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ExportPeriodType" type="hmis:exportPeriodType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, Section IV: A.2.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ExportDirective" type="hmis:exportDirective" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, Section IV: A.2.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="Agency" type="hmis:agency" minOccurs="0" maxOccurs="unbounded">
@@ -532,7 +542,9 @@
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
+	
 		
+
 	<xsd:complexType name="fiveValDKRefused">
 		<xsd:simpleContent>
 			<xsd:extension base="hmis:fiveValDKRefusedBase">
@@ -2656,6 +2668,46 @@
 	<xsd:simpleType name="emailBase">
 		<xsd:restriction base="xsd:string">
 			<xsd:pattern value="(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="exportPeriodType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="updated">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The export period bounds all dateCollected attribute values (e.g. when the data was actually entered/changed by a case worker)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="effective">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The export period bounds all dateEffective attribute values (e.g. the date the data is applicable, regardless of when the data was actually entered/changed)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="reportingPeriod">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The export period bounds a reporting period.  Relevant data outside that period may be included such as entries before the export period start date, and exits outside the export period start date.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="other">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The export period bounds the data in some other manner previously agreed upon by the sender and recipient.</xsd:documentation>
+				</xsd:annotation>       
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+		
+	<xsd:simpleType name="exportDirective">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="deltaRefresh">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The data contained in this file is meant to be synchronized with an existing data set.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fullRefresh">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The data contained in this file is meant to replace an existing data set for the export period.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 		</xsd:restriction>
 	</xsd:simpleType>
 	
