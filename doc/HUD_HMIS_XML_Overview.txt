@@ -293,7 +293,7 @@ All of the identifying elements directly under Person may occur only once, excep
 
 The PersonID is populated from the data source and uniquely identifies a person in the system.  The SourceID concatenated with the PersonID should avoid PersonID collisions when merging multiple databases.  The merged database should implement algorithms to unduplicate across databases using the personal information within the Person element.
 
-To make the schema more flexible for purposes of implementing local policies for de-identification and unduplication, the acceptable formats for the Social Security Number and the child elements of Person allow for a choice of either plain text or hashed values.
+To make the schema more flexible for purposes of implementing local policies for de-identification and unduplication, the acceptable formats for the Social Security Number and the child elements of Person allow for a choice of either plain text or hashed values.  Also, the Social Security Number format allows for missing digits to be represented with an "x" (lower-case x).  Simply insert an "x" in the position of the Social Security Number, prior to hashing or directly in the unhashed character string, where the actual digit is unknown or undisclosed.  There must still be 9 total alphanumeric characters, including the missing digit characters. 
 
 
 <xsd:element name="LegalFirstName" type="hmis:hashingChoice" minOccurs="0"</xsd:element>

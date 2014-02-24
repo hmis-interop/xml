@@ -1116,6 +1116,7 @@
 			<xsd:element name="SocialSecurityNumber" type="hmis:sSNHashingChoice" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">Where data are shared across programs, the SSN greatly improves the process of identifying clients who have been served and allows programs to de-duplicate upon program entry.  Second, an important Congressional goal is to increase the use of mainstream programs by homeless persons. To achieve this goal, homeless service providers need the SSN along with the other personal identifiers in order to access mainstream services for their clients.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.2.</xsd:documentation>
+					<xsd:documentation xml:lang="en">Permissible values are numeric characters (0-9) or lower case "x" when the numeric character in that position is not known.  See HMIS XML Version 3.0 Cumulative Package Overview, Section IV: B.3</xsd:documentation>					
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -3569,7 +3570,7 @@
 	
 	<xsd:simpleType name="sSNumberBase">
 		<xsd:restriction base="xsd:string">
-			<xsd:pattern value="[0-9 ]{9}"/>
+			<xsd:pattern value="[0-9x]{9}"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	
