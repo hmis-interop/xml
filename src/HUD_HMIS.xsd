@@ -315,6 +315,16 @@
 			<xsd:element name="EndDate" type="xsd:dateTime" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
+		
+	<xsd:complexType name="dateRangeOpenStartRequired">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">A date range, but end date is optional.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence minOccurs="0"> 
+			<xsd:element name="StartDate" type="xsd:dateTime"/>
+			<xsd:element name="EndDate" type="xsd:dateTime" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
 	
 	<xsd:complexType name="dateStatic">
 		<xsd:annotation>
@@ -1846,7 +1856,7 @@
 					<xsd:documentation xml:lang="en">See HMIS XML Version 3.0 Cumulative Package Overview, IV.B.3.e.i..</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="ParticipationDates" type="hmis:dateRangeOpen">
+			<xsd:element name="ParticipationDates" type="hmis:dateRangeOpenStartRequired">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">This data element is needed for reporting purposes for all programs and to measure lengths of stay for residential programs.  Source: 2010 HUD HMIS Data and Technical Standards, Section 3.12 and 3.13.</xsd:documentation>
 				</xsd:annotation>
