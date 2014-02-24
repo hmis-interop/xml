@@ -410,7 +410,7 @@ Service is equivalent to a “Program” in the HMIS Revised Draft Notice.  Its 
 5.  Site
 Parent Element: Export
 
-Site is simply the AIRS XSD version 3.0 tSite type extended with a deleteStampGroup attribute group for data integration purposes (see deleteStampGroup in section).  It is included with the HMIS Schema so that AIRS agency/site/service information can be transmitted in a single HMIS XML file along with HMIS client information.
+Site is simply the AIRS XSD version 3.0 tSite type extended with a deleteStampGroup attribute group for data integration purposes (see deleteStampGroup in section IV C.).  It is included with the HMIS Schema so that AIRS agency/site/service information can be transmitted in a single HMIS XML file along with HMIS client information.
 
 6.  SiteService
 Parent Element: Export
@@ -426,7 +426,7 @@ Two attribute groups are used throughout the schema: dateStampGroup and deleteSt
 
 dateStampGroup encapsulates dateCollected (when data collected), dateEffective (when data is effective, so back-dating possible), and dataCollectionStage (1 = Entry, 2 = During Program Enrollment,	3 = Exit, 4 = Followup).
 
-deleteStampGroup encapsulates delete, deleteOccurred, and deleteEffective and exists to provide instructions for removing stored data by referring to its index and requesting a deletion.  delete =”1” overrides the default add/update “0”  for an index, which need not be specified.   deleteOccurred conveys when the deletion was executed, and deleteEffective allows backdating of the deletion effective date.
+deleteStampGroup encapsulates the delete, deleteOccurred, and deleteEffective attributes, and exists to provide instructions for removing previously stored data in the target system.  The ID in the enclosing element should refer to the index of the record to be deleted in the target system.  delete =”1” overrides the default add/update “0”  for an index, which need not be specified.   deleteOccurred conveys when the deletion was executed, and deleteEffective allows backdating of the deletion effective date.  The deleteStampGroup directives mentioned here must be honored by the target (receiving system) importing the HMIS XML.  It is not considered a successful import if this directive is ignored and the records are instead either imported as additions, or just ignored entirely.  The IDs of the deleted records should be located in the target system, and flagged as inactive, if the sending system has authorization to delete those specified records. 
 
 D.  Types
 Since the release of HMIS XSD version 2.8, top level types, both simple and complex, exist for every element declared in the schema.  This allows any type, including the root element, SourceDatabase, to be imported and referenced or extended within another schema.  This enables flexible, validated customization of the HUD HMIS 3.0 Schema, unlike the “Custom” tags present in version 2.7 of the Schema.  An example schema demonstrating the syntax for extending the HUD HMIS 3.0 is included in the data integration package.  An example XML instance document which validates against this extended schema is also included in the package.
