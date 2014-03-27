@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xsd:schema 
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/3_0/HUD_HMIS.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/3_0/HUD_HMIS.xsd"	
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/3_0/HUD_HMIS.xsd"
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/3_1/HUD_HMIS.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/3_1/HUD_HMIS.xsd"	
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/3_1/HUD_HMIS.xsd"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:airs="http://www.hudhdx.info/Resources/Vendors/3_0/AIRS_3_0_mod.xsd"	
+	xmlns:airs="http://www.hudhdx.info/Resources/Vendors/3_1/AIRS_3_0_mod.xsd"	
 	elementFormDefault="qualified"
 	attributeFormDefault="qualified"
-	version="3.0">
-	<xsd:import namespace="http://www.hudhdx.info/Resources/Vendors/3_0/AIRS_3_0_mod.xsd" schemaLocation="http://www.hudhdx.info/Resources/Vendors/3_0/AIRS_3_0_mod.xsd"/>
+	version="3.1">
+	<xsd:import namespace="http://www.hudhdx.info/Resources/Vendors/3_1/AIRS_3_0_mod.xsd" schemaLocation="http://www.hudhdx.info/Resources/Vendors/3_0/AIRS_3_0_mod.xsd"/>
 		
 	<!-- MAIN -->
 	
