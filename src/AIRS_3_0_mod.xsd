@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="http://www.hudhdx.info/Resources/Vendors/3_1/AIRS_3_0_mod.xsd" xmlns="http://www.hmis.info/schema/3_0/AIRS_3_0_mod.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.0">
+<xs:schema targetNamespace="http://www.hudhdx.info/Resources/Vendors/3_1/AIRS_3_0_mod.xsd" xmlns="http://www.hudhdx.info/Resources/Vendors/3_1/AIRS_3_0_mod.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.0">
 	<xs:annotation>
 		<xs:documentation>This is a modified schema.  xs:any tags have been removed/commented out so that this schema can be imported.  tService was reintroduced, and a target and default namespace were added.</xs:documentation>
 		<xs:documentation>AIRS XML Data Transfer Record Format Version 3.0 (Final)</xs:documentation>
