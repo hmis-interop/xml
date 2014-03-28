@@ -263,6 +263,7 @@ The 'Sources' element holds a sequence of Source subelements.  Each Source subel
 2.  Export
 Parent Element: Source
 
+ExportPeriodType
 Over time, each data source will produce multiple exports.  This element records information about the beginning and end of the period for which data were extracted and the actual date of the export.   The ExportPeriodType element defines the selection criteria for records bounded by the export period.  The type can be one of: 
 -updated: only data that was added or changed during the export period is included in the export
 -effective: the export only contains data that is effective during the export period (e.g. the date the data is applicable, regardless of when the data was actually entered/changed)
@@ -270,6 +271,7 @@ Over time, each data source will produce multiple exports.  This element records
 -other: the export period represents none of the above types, so the parties exchanging the data must negotiate the record selection criteria.
 
 ExportDirective
+The ExportDirective element allows one to specify whether the export is a "deltaRefresh", where the data contained in this file is meant to be synchronized with an existing data set or a "fullRefresh", where the data contained in this file is meant to replace an existing data set for the export period.
 
  In an XML instance file, a Source element can have many exports.  All the following payload elements are part of an export.
 
