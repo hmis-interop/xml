@@ -276,7 +276,156 @@
 			<xs:element name="EndDate" type="xs:dateTime"/>
 		</xs:sequence>
 	</xs:complexType>
-		
+
+	<xs:complexType name="disabilities">
+		<xs:sequence>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DisabilityType" type="hmis:disabilityType">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">The permissible values correspond to the decimal values of the corresponding disabilty types.  4.5 Physical Disability is "5" and 4.10 Substance Abuse is "10". </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DisabilityResponse" type="xs:nonNegativeInteger">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.5-4.10, Response #2.  Permissable values vary depending on which disability type is declared.  The values are contined with "Field and Response(s) 2" within 4.5 through 4.10.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Section 4.5-4.10."</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IndefiniteAndImpairsIndependence" type="hmis:fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.5-4.10, Response #2A.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Section 4.5-4.10."</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DocumentationOnFile" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.5-4.10, Response #2B.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Section 4.5-4.10."</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ReceivingServices" type="hmis:fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.5-4.10, Response #2C.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Section 4.5-4.10."</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PATHHowConfirmed" type="hmis:pathHowConfirmed" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.9-4.10, Response #2D.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Section 4.9-4.10."</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PATHSMIInformation" type="hmis:pathSMIInformation" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.9, Response #2E.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Section 4.9."</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute ref="dataCollectionStage"/>
+		<xs:attribute name="informationDate"/>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+	
+	<xs:complexType name="domesticViolence">
+		<xs:sequence>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="domesticViolenceVictim" type="hmis:fiveValDKRefused" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.11, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.11 Domestic Violence Victim/Survivor"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="whenOccured" type="hmis:whenOccurred" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.11, #2A.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.11 Domestic Violence Victim/Survivor"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute ref="dataCollectionStage"/>
+		<xs:attribute name="informationDate"/>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+
+	<xs:complexType name="education">
+		<xs:sequence>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastGradeCompleted" type="hmis:lastGradeCompleted" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.24, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.24 Last Grade Completed"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SchoolStatus" type="hmis:schoolStatus" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.25, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.25 School Status"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute ref="dataCollectionStage"/>
+		<xs:attribute name="informationDate"/>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+	
+	<xs:complexType name="employment">
+		<xs:sequence>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Employed" type="hmis:fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.26, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.26 Employment Status, Employed"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EmploymentType" type="hmis:employmentType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.26, #2A.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.26 Employment Type"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NotEmployedReason" type="hmis:notEmployedReason" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.26, #2B.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.26 Employment Status"</xs:documentation>
+				</xs:annotation>
+			</xs:element>	
+		</xs:sequence>
+		<xs:attribute ref="dataCollectionStage"/>
+		<xs:attribute name="informationDate"/>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+	
 	<xs:complexType name="enrollment">
 		<xs:sequence>
 			<xs:element name="ProjectEntryID" type="hmis:string32">
@@ -384,7 +533,28 @@
 		</xs:sequence>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
-		
+
+
+	<xs:complexType name="enrollmentCoC">
+		<xs:sequence>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ClientCoC" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the CoC's ID which is related to this project enrollment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="InformationDate" type="xs:date">
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="baseMetaData"/>
+		<xs:attribute ref="dataCollectionStage"/>
+	</xs:complexType>
+
 	<xs:complexType name="export">
 		<xs:sequence>
 			<xs:element name="ExportID" type="hmis:string32">
@@ -443,6 +613,33 @@
 					<xs:field xpath="CoCCode"/>
 				</xs:key>
 			</xs:element>
+			<xs:element name="Disabilities" type="hmis:disabilities" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">***Put a complete description of Disabilities here.  See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+				</xs:annotation>
+				<xs:keyref name="enrollmentDisabilitiesKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="Disabilities"/>
+					<xs:field xpath="ProjectEntryID"/>
+				</xs:keyref>
+			</xs:element>
+			<xs:element name="DomesticViolence" type="hmis:domesticViolence" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">***Put a complete description of DomesticViolence here.  See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+				</xs:annotation>
+				<xs:keyref name="enrollmentDomesticViolenceKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="DomesticViolence"/>
+					<xs:field xpath="ProjectEntryID"/>
+				</xs:keyref>
+			</xs:element>
+			<xs:element name="Education" type="hmis:education" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">***Put a complete description of Education here.  See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+				</xs:annotation>
+				<xs:keyref name="enrollmentEducationKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="Education"/>
+					<xs:field xpath="ProjectEntryID"/>
+				</xs:keyref>
+			</xs:element>
 			<xs:element name="Enrollment" type="hmis:enrollment" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">***Put a complete description of Enrollment here.  An enrollment is an client entry into a Project.  Source: May 2014 "HMIS Data Standards Manual", Section XX. https://www.onecpd.info/resources/documents/HMIS-Data-Standards-Manual.pdf</xs:documentation>
@@ -460,23 +657,29 @@
 					<xs:field xpath="ProjectID"/>
 				</xs:keyref>
 			</xs:element>
-			<xs:element name="Funder" type="hmis:funder" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="EnrollmentCoC" type="hmis:enrollmentCoC" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">***Put a complete description of Funder here.  Source: May 2014 "HMIS Data Standards Manual", Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements), p. 14. https://www.onecpd.info/resources/documents/HMIS-Data-Standards-Manual.pdf</xs:documentation>
+					<xs:documentation xml:lang="en">***Put a complete description of Enrollment CoC here.  Source: May 2014 "HMIS Data Standards Manual", Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements), p. 14. https://www.onecpd.info/resources/documents/HMIS-Data-Standards-Manual.pdf</xs:documentation>
 				</xs:annotation>
-				<xs:keyref name="projectFunderKeyRef" refer="projectKey">
-					<xs:selector xpath="Funder"/>
-					<xs:field xpath="ProjectID"/>
+				<xs:keyref name="enrollmentEnrollmentCoCKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="EnrollmentCoC"/>
+					<xs:field xpath="ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="cocEnrollmentCoCKeyRef" refer="cocKey">
+					<xs:selector xpath="EnrollmentCoC"/>
+					<xs:field xpath="ClientCoC"/>
 				</xs:keyref>
 			</xs:element>
-			<xs:element name="Organization" type="hmis:organization" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Employment" type="hmis:employment" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">***Put a complete description of Organization here.  Source: May 2014 "HMIS Data Standards Manual", Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements), p. 13. https://www.onecpd.info/resources/documents/HMIS-Data-Standards-Manual.pdf</xs:documentation>
+					<xs:documentation xml:lang="en">***Put a complete description of Employment here.  See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.26</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.26 "Employment Status".</xs:documentation>
 				</xs:annotation>
-				<xs:key name="organizationKey">
-					<xs:selector xpath="Organization"/>
-					<xs:field xpath="OrganizationID"/>
-				</xs:key>
+				<xs:keyref name="enrollmentEmploymentKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="Employment"/>
+					<xs:field xpath="ProjectEntryID"/>
+				</xs:keyref>
 			</xs:element>
 			<xs:element name="Inventory" type="hmis:inventory" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
@@ -492,6 +695,35 @@
 					<xs:selector xpath="Inventory"/>
 					<xs:field xpath="ProjectID"/>
 				</xs:keyref>				
+			</xs:element>
+			<xs:element name="Funder" type="hmis:funder" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">***Put a complete description of Funder here.  Source: May 2014 "HMIS Data Standards Manual", Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements), p. 14. https://www.onecpd.info/resources/documents/HMIS-Data-Standards-Manual.pdf</xs:documentation>
+				</xs:annotation>
+				<xs:keyref name="projectFunderKeyRef" refer="projectKey">
+					<xs:selector xpath="Funder"/>
+					<xs:field xpath="ProjectID"/>
+				</xs:keyref>
+			</xs:element>
+			<xs:element name="MedicalAssistance" type="hmis:medicalAssistance" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">***Put a complete description of MedicalAssistance here.  See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.39</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.39.</xs:documentation>
+				</xs:annotation>
+				<xs:keyref name="enrollmentMedicalAssistanceKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="MedicalAssistance"/>
+					<xs:field xpath="ProjectEntryID"/>
+				</xs:keyref>
+			</xs:element>
+			<xs:element name="Organization" type="hmis:organization" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">***Put a complete description of Organization here.  Source: May 2014 "HMIS Data Standards Manual", Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements), p. 13. https://www.onecpd.info/resources/documents/HMIS-Data-Standards-Manual.pdf</xs:documentation>
+				</xs:annotation>
+				<xs:key name="organizationKey">
+					<xs:selector xpath="Organization"/>
+					<xs:field xpath="OrganizationID"/>
+				</xs:key>
 			</xs:element>
 			<xs:element name="Project" type="hmis:project" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
@@ -656,6 +888,47 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="informationDate"/>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+
+	<xs:complexType name="medicalAssistance">
+		<xs:sequence>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HIVAIDSAssistance" type="hmis:fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.39, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.39 Medical Assistance"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NoHIVAIDSAssistanceReason" type="hmis:noMedicalAssistanceReason" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.39, #2A.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.39 Medical Assistance"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ADAP" type="hmis:fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.39, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.39 Medical Assistance"</xs:documentation>
+				</xs:annotation>
+			</xs:element>	
+			<xs:element name="NoADAPReason" type="hmis:noMedicalAssistanceReason" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.39, #3B.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.39 Medical Assistance"</xs:documentation>
+				</xs:annotation>
+			</xs:element>	
+		</xs:sequence>
+		<xs:attribute ref="dataCollectionStage"/>
+		<xs:attribute name="informationDate"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 
@@ -860,11 +1133,6 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="hmisSchemaVersion" type="hmis:version">
-			<xs:annotation>
-				<xs:documentation xml:lang="en">The version number of HMIS XML Schema the XML instance document conforms to (e.g. 4.0).</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
 	</xs:complexType>
 	
 	<xs:attribute name="informationDate" type="xs:date"/>
@@ -894,6 +1162,38 @@
 			</xs:annotation>
 		</xs:attribute>
 	</xs:attributeGroup>
+
+	<xs:attribute name="dataCollectionStage">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, xxx.</xs:documentation>
+			<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 5.3.</xs:documentation>
+			<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Element Information, 2. Collection Point(s)", p. 7.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:unsignedInt">
+				<xs:enumeration value="1">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Project entry</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="2">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Project update</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="3">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Project exit</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="5">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Project annual assessment</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
 
 	<xs:simpleType name="availability">
 		<xs:annotation>
@@ -1015,6 +1315,52 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
+	<xs:simpleType name="disabilityType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				Disability Type
+				5 = Physical Disability
+				6 = Developmental Disability
+				7 = Chronic Health Condition
+				8 = HIV/AIDS
+				9 = Mental Health Problem
+				10 = Substance Abuse
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="5">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Physical Disability</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Developmental Disability</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="7">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Chronic Health Condition</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">HIV/AIDS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Mental Health Problem</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="10">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Substance Abuse</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
 	<xs:simpleType name="dobDataQuality">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
@@ -1058,6 +1404,35 @@
 	<xs:simpleType name="email">
 		<xs:restriction base="xs:string">
 		<xs:pattern value="(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="employmentType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				If Yes for “Employed”
+				Type of Employment
+				1 = Full-time
+				2 = Part-time
+				3 = Seasonal / sporadic (including day labor)
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Full-timed</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Part-time</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Seasonal / sporadic (including day labor)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 
@@ -1653,6 +2028,82 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
+	<xs:simpleType name="lastGradeCompleted">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">	
+				Last Grade Completed
+				1 = Less than Grade 5
+				2 = Grades 5-6
+				3 = Grades 7-8
+				4 = Grades 9-11
+				5 =Grade 12
+				6 = School program does not have grade levels
+				7 = GED
+				10 = Some college
+				8 = Client doesn’t know
+				9 = Client refused
+				99 = Data not collected
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Less than Grade 5</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Grades 5-6</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Grades 7-8</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Grades 9-11</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Grade 12</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">School program does not have grade levels</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="7">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">GED</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="10">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Some college</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>	
+	
 	<xs:simpleType name="militaryBranch">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">	
@@ -1861,6 +2312,112 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
+	
+	<xs:simpleType name="noMedicalAssistanceReason">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				If No for “Receiving Public HIV/AIDS Medical Assistance”
+				Reason
+				1 = Applied; decision pending
+				2 = Applied; client not eligible
+				3 = Client did not apply
+				4 = Insurance type N/A for this client
+				8 = Client doesn’t know
+				9 = Client refused
+				99 = Data not collected
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Applied; decision pending</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Applied; client not eligible</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client did not apply</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Insurance type N/A for this client</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="noADAPReason">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				If No to “Receiving AIDS Drug Assistance Program (ADAP)”
+				Reason
+				1 = Applied; decision pending
+				2 = Applied; client not eligible
+				3 = Client did not apply
+				4 = Insurance type N/A for this client
+				8 = Client doesn’t know
+				9 = Client refused
+				99 = Data not collected
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Applied; decision pending</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Applied; client not eligible</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client did not apply</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Insurance type N/A for this client</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 
 	<xs:simpleType name="noYes">
 		<xs:annotation>
@@ -1877,6 +2434,109 @@
 		</xs:restriction>
 	</xs:simpleType>
 
+	<xs:simpleType name="notEmployedReason">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				If No for “Employed”
+				Why Not Employed
+				1 = Looking for work
+				2 = Unable to work
+				3 = Not looking for work
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Looking for work</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Unable to work</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Not looking for work</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="pathHowConfirmed">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				How confirmed
+				1 = Unconfirmed; presumptive or self-report
+				2 = Confirmed through assessment and clinical evaluation
+				3 = Confirmed by prior evaluation or clinical records
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Unconfirmed; presumptive or self-report</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Confirmed through assessment and clinical evaluation</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Confirmed by prior evaluation or clinical records</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="pathSMIInformation">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				How Confirmed Response
+				0 = No
+				1 = Unconfirmed; presumptive or self-report
+				2 = Confirmed through assessment and clinical evaluation
+				3 = Confirmed by prior evaluation or clinical records
+				8 = Client doesn’t know
+				9 = Client refused
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">No</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Unconfirmed; presumptive or self-report</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Confirmed through assessment and clinical evaluation</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Confirmed by prior evaluation or clinical records</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
 	<xs:simpleType name="projectType">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">	
@@ -2287,6 +2947,76 @@
 		</xs:restriction>
 	</xs:simpleType>
 
+	<xs:simpleType name="schoolStatus">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				School Status
+				1 = Attending school regularly
+				2 = Attending school irregularly
+				3 = Graduated from high school
+				4 = Obtained GED
+				5 = Dropped out
+				6 = Suspended
+				7 = Expelled
+				8 = Client doesn’t know
+				9 = Client refused
+				99 =  Data not collected
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Attending school regularly</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Attending school irregularly</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Graduated from high school</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Obtained GED</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Dropped out</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Suspended</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="7">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Expelled</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
 	<xs:simpleType name="ssn">
 		<xs:restriction base="xs:string">
 			<xs:pattern value="[0-9x]{9}"/>
@@ -2531,6 +3261,59 @@
 			<xs:totalDigits value="5"/>
 			<xs:fractionDigits value="3"/>
 			<xs:minInclusive value="0.001"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="whenOccurred">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				If Yes for “Domestic Violence Victim/Survivor”
+				When experience occurredResponse(s)
+				1 = Within the past three months
+				2 = Three to six months ago (excluding six months exactly)
+				3 = Six months to one year ago (excluding one year exactly)
+				4 = One year ago or more
+				8 = Client doesn’t know
+				9 = Client refused
+				99 = Data not collected
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Within the past three months</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Three to six months ago (excluding six months exactly)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Six months to one year ago (excluding one year exactly)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">One year ago or more</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	
