@@ -1767,15 +1767,13 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements), p. 14.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:choice>
-				<xs:element name="UnitInventory" type="xs:integer">
-					<xs:annotation>
-						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.7, #5.</xs:documentation>
-						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements), p. 14.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element name="BedInventory" type="hmis:bedInventory"/>
-			</xs:choice>
+			<xs:element name="UnitInventory" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.7, #5.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements), p. 14.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BedInventory" type="hmis:bedInventory"/>
 			<xs:element name="InventoryStartDate" type="xs:date">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.7, #6.</xs:documentation>
