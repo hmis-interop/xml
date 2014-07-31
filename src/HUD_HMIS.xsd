@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <xs:schema 
 	targetNamespace="http://www.hudhdx.info/Resources/Vendors/4_0/HUD_HMIS.xsd"
@@ -1048,295 +1048,118 @@
 					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, Section X.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Client" type="hmis:client" minOccurs="0" maxOccurs="unbounded">
-				<xs:key name="clientKey">
-					<xs:selector xpath="Client"/>
-					<xs:field xpath="PersonalID"/>
-				</xs:key>
-			</xs:element>
+			<xs:element name="Client" type="hmis:client" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="ClientVeteranInfo" type="hmis:clientVeteranInfo" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>
 				</xs:annotation>
-				<xs:keyref name="clientVeteranInfoClientKeyRef" refer="clientKey">
-					<xs:selector xpath="ClientVeteranInfo"/>
-					<xs:field xpath="PersonalID"/>
-				</xs:keyref>
 			</xs:element>
-			<xs:element name="CoC" type="hmis:coc" minOccurs="0" maxOccurs="unbounded">
-				<xs:key name="cocKey">
-					<xs:selector xpath="CoC"/>
-					<xs:field xpath="CoCCode"/>
-				</xs:key>
-			</xs:element>
-			<xs:element name="Contact" type="hmis:contact" minOccurs="0" maxOccurs="unbounded">
-				<xs:keyref name="enrollmentContactKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="Contact"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
-			</xs:element>
-			<xs:element name="DateOfEngagement" type="hmis:dateOfEngagement" minOccurs="0" maxOccurs="unbounded">
-				<xs:keyref name="enrollmentDateOfEngagementKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="DateOfEngagement"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
-			</xs:element>
-			<xs:element name="Disabilities" type="hmis:disabilities" minOccurs="0" maxOccurs="unbounded">
-				<xs:keyref name="enrollmentDisabilitiesKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="Disabilities"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
-			</xs:element>
-			<xs:element name="DomesticViolence" type="hmis:domesticViolence" minOccurs="0" maxOccurs="unbounded">
-				<xs:keyref name="enrollmentDomesticViolenceKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="DomesticViolence"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
-			</xs:element>
-			<xs:element name="Education" type="hmis:education" minOccurs="0" maxOccurs="unbounded">
-				<xs:keyref name="enrollmentEducationKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="Education"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
-			</xs:element>
+			<xs:element name="CoC" type="hmis:coc" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Contact" type="hmis:contact" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="DateOfEngagement" type="hmis:dateOfEngagement" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Disabilities" type="hmis:disabilities" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="DomesticViolence" type="hmis:domesticViolence" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Education" type="hmis:education" minOccurs="0" maxOccurs="unbounded"/>			
 			<xs:element name="Employment" type="hmis:employment" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.26</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.26 "Employment Status".</xs:documentation>
 				</xs:annotation>
-				<xs:keyref name="enrollmentEmploymentKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="Employment"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
 			</xs:element>
-			<xs:element name="Enrollment" type="hmis:enrollment" minOccurs="0" maxOccurs="unbounded">
-				<xs:key name="enrollmentKey">
-					<xs:selector xpath="Enrollment"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:key>
-				<xs:keyref name="clientKeyRef" refer="clientKey">
-					<xs:selector xpath="Enrollment"/>
-					<xs:field xpath="PersonalID"/>
-				</xs:keyref>
-				<xs:keyref name="projectEnrollmentKeyRef" refer="projectKey">
-					<xs:selector xpath="Enrollment"/>
-					<xs:field xpath="ProjectID"/>
-				</xs:keyref>
-			</xs:element>
-			<xs:element name="EnrollmentCoC" type="hmis:enrollmentCoC" minOccurs="0" maxOccurs="unbounded">
-				<xs:keyref name="enrollmentEnrollmentCoCKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="EnrollmentCoC"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
-				<xs:keyref name="cocEnrollmentCoCKeyRef" refer="cocKey">
-					<xs:selector xpath="EnrollmentCoC"/>
-					<xs:field xpath="ClientCoC"/>
-				</xs:keyref>
-			</xs:element>
-			<xs:element name="EntryRHSAP" type="hmis:entryRHSAP" minOccurs="0" maxOccurs="unbounded">
-				<xs:keyref name="enrollmentEntryRHSAPKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="EntryRHSAP"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
-			</xs:element>
-			<xs:element name="EntryRHY" type="hmis:entryRHY" minOccurs="0" maxOccurs="unbounded">
-				<xs:keyref name="enrollmentEntryRHYKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="EntryRHY"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
-			</xs:element>
-			<xs:element name="EntrySSVF" type="hmis:entrySSVF" minOccurs="0" maxOccurs="unbounded">
-				<xs:keyref name="enrollmentEntrySSVFKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="EntrySSVF"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
-			</xs:element>
-			<xs:element name="Exit" type="hmis:exit" minOccurs="0" maxOccurs="unbounded">
-				<xs:key name="exitKey">
-					<xs:selector xpath="Exit"/>
-					<xs:field xpath="ExitID"/>
-				</xs:key>
-				<xs:keyref name="enrollmentExitKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="Exit"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
-			</xs:element>
+			<xs:element name="Enrollment" type="hmis:enrollment" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="EnrollmentCoC" type="hmis:enrollmentCoC" minOccurs="0" maxOccurs="unbounded"/>			
+			<xs:element name="EntryRHSAP" type="hmis:entryRHSAP" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="EntryRHY" type="hmis:entryRHY" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="EntrySSVF" type="hmis:entrySSVF" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Exit" type="hmis:exit" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="ExitHousingAssessment" type="hmis:exitHousingAssessment" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.19</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.19 Housing Assessment at Exit".</xs:documentation>
 				</xs:annotation>
-				<xs:keyref name="exitExitHousingAssessmentKeyRef" refer="exitKey">
-					<xs:selector xpath="ExitHousingAssessment"/>
-					<xs:field xpath="ExitID"/>
-				</xs:keyref>
 			</xs:element>
-			<xs:element name="ExitPATH" type="hmis:exitPATH" minOccurs="0" maxOccurs="unbounded">
-				<xs:keyref name="exitExitPATHKeyRef" refer="exitKey">
-					<xs:selector xpath="ExitPATH"/>
-					<xs:field xpath="ExitID"/>
-				</xs:keyref>
-			</xs:element>
-			<xs:element name="ExitRHY" type="hmis:exitRHY" minOccurs="0" maxOccurs="unbounded">
-				<xs:keyref name="exitExitRHYKeyRef" refer="exitKey">
-					<xs:selector xpath="ExitRHY"/>
-					<xs:field xpath="ExitID"/>
-				</xs:keyref>
-			</xs:element>
+			<xs:element name="ExitPATH" type="hmis:exitPATH" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ExitRHY" type="hmis:exitRHY" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="HealthInsurance" type="hmis:healthInsurance" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.4</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.4 "Health Insurance".</xs:documentation>
 				</xs:annotation>
-				<xs:keyref name="enrollmentHealthInsuranceKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="HealthInsurance"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
 			</xs:element>
 			<xs:element name="HealthStatus" type="hmis:healthStatus" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.27</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.27 "General Health Status".</xs:documentation>
 				</xs:annotation>
-				<xs:keyref name="enrollmentHealthStatusKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="HealthStatus"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
 			</xs:element>
 			<xs:element name="HousingAssessmentDisposition" type="hmis:housingAssessmentDisposition" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.18</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.18 Housing Assessment Disposition".</xs:documentation>
 				</xs:annotation>
-				<xs:keyref name="exitHousingAssessmentDispositionKeyRef" refer="exitKey">
-					<xs:selector xpath="HousingAssessmentDisposition"/>
-					<xs:field xpath="ExitID"/>
-				</xs:keyref>
 			</xs:element>
 			<xs:element name="IncomeAndSources" type="hmis:incomeAndSources" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.2</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.2 "Income And Sources".</xs:documentation>
 				</xs:annotation>
-				<xs:keyref name="enrollmentIncomeAndSourcesKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="IncomeAndSources"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
 			</xs:element>
 			<xs:element name="Inventory" type="hmis:inventory" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.7.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Bed and Unit Inventory Information", p. 14.</xs:documentation>
-				</xs:annotation>
-				<xs:keyref name="inventoryCoCKeyRef" refer="cocKey">
-					<xs:selector xpath="Inventory"/>
-					<xs:field xpath="CoCCode"/>
-				</xs:keyref>
-				<xs:keyref name="inventoryProjectKeyRef" refer="projectKey">
-					<xs:selector xpath="Inventory"/>
-					<xs:field xpath="ProjectID"/>
-				</xs:keyref>				
+				</xs:annotation>			
 			</xs:element>
-			<xs:element name="Funder" type="hmis:funder" minOccurs="0" maxOccurs="unbounded">
-				<xs:keyref name="projectFunderKeyRef" refer="projectKey">
-					<xs:selector xpath="Funder"/>
-					<xs:field xpath="ProjectID"/>
-				</xs:keyref>
-			</xs:element>
+			<xs:element name="Funder" type="hmis:funder" minOccurs="0" maxOccurs="unbounded"/>		
 			<xs:element name="MedicalAssistance" type="hmis:medicalAssistance" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.39</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.39.</xs:documentation>
 				</xs:annotation>
-				<xs:keyref name="enrollmentMedicalAssistanceKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="MedicalAssistance"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
 			</xs:element>
 			<xs:element name="NonCashBenefits" type="hmis:nonCashBenefits" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.3</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.3 "Non-Cash Benefits".</xs:documentation>
 				</xs:annotation>
-				<xs:keyref name="enrollmentNonCashBenefitsKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="NonCashBenefits"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
 			</xs:element>
-			<xs:element name="Organization" type="hmis:organization" minOccurs="0" maxOccurs="unbounded">
-				<xs:key name="organizationKey">
-					<xs:selector xpath="Organization"/>
-					<xs:field xpath="OrganizationID"/>
-				</xs:key>
-			</xs:element>
+			<xs:element name="Organization" type="hmis:organization" minOccurs="0" maxOccurs="unbounded"/>			
 			<xs:element name="PATHStatus" type="hmis:pathStatus" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.20</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.20 PATH Status".</xs:documentation>
 				</xs:annotation>
-				<xs:keyref name="enrollmentPATHStatusKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="PATHStatus"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
 			</xs:element>
 			<xs:element name="Project" type="hmis:project" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Project Setup Guidance", p. 12.</xs:documentation>
-				</xs:annotation>
-				<xs:key name="projectKey">
-					<xs:selector xpath="Project"/>
-					<xs:field xpath="ProjectID"/>
-				</xs:key>
-				<xs:keyref name="organizationKeyRef" refer="organizationKey">
-					<xs:selector xpath="Project"/>
-					<xs:field xpath="OrganizationID"/>
-				</xs:keyref>				
+				</xs:annotation>	
 			</xs:element>
 			<xs:element name="ResidentialMoveInDate" type="hmis:residentialMoveInDate" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.17</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.17 Residential Move-In Date".</xs:documentation>
 				</xs:annotation>
-				<xs:keyref name="enrollmentResidentialMoveInDateKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="ResidentialMoveInDate"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
 			</xs:element>
 			<xs:element name="RHYBCPStatus" type="hmis:rhybcpStatus" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.22</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.22 "RHYBCP Status".</xs:documentation>
 				</xs:annotation>
-				<xs:keyref name="enrollmentRHYBCPStatusKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="NonCashBenefits"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
 			</xs:element>
 			<xs:element name="ServiceFAReferral" type="hmis:serviceFAReferral" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.14-4.16</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.14-4.16 "Services Provided".</xs:documentation>
 				</xs:annotation>
-				<xs:keyref name="enrollmentServiceFAReferralKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="ServiceFAReferral"/>
-					<xs:field xpath="ProjectEntryID"/>
-				</xs:keyref>
 			</xs:element>
 			<xs:element name="Site" type="hmis:site" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.8.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Project Setup Guidance", p. 15.</xs:documentation>
 				</xs:annotation>
-				<xs:keyref name="siteCoCKeyRef" refer="cocKey">
-					<xs:selector xpath="Site"/>
-					<xs:field xpath="CoCCode"/>
-				</xs:keyref>
-				<xs:keyref name="siteProjectKeyRef" refer="projectKey">
-					<xs:selector xpath="Site"/>
-					<xs:field xpath="ProjectID"/>
-				</xs:keyref>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
@@ -2181,7 +2004,167 @@
 			<xs:element name="Export" type="hmis:export" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
-				</xs:annotation>                   
+				</xs:annotation>
+				<xs:key name="clientKey">
+					<xs:selector xpath="hmis:Client"/>
+					<xs:field xpath="hmis:PersonalID"/>
+				</xs:key>
+				<xs:key name="cocKey">
+					<xs:selector xpath="hmis:CoC"/>
+					<xs:field xpath="hmis:CoCCode"/>
+				</xs:key>
+				<xs:key name="enrollmentKey">
+					<xs:selector xpath="hmis:Enrollment"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:key>
+				<xs:key name="exitKey">
+					<xs:selector xpath="hmis:Exit"/>
+					<xs:field xpath="hmis:ExitID"/>
+				</xs:key>
+				<xs:key name="organizationKey">
+					<xs:selector xpath="hmis:Organization"/>
+					<xs:field xpath="hmis:OrganizationID"/>
+				</xs:key>
+				<xs:key name="projectKey">
+					<xs:selector xpath="hmis:Project"/>
+					<xs:field xpath="hmis:ProjectID"/>
+				</xs:key>
+				<xs:keyref name="clientKeyRef" refer="clientKey">
+					<xs:selector xpath="hmis:Enrollment"/>
+					<xs:field xpath="hmis:PersonalID"/>
+				</xs:keyref>
+				<xs:keyref name="clientVeteranInfoClientKeyRef" refer="clientKey">
+					<xs:selector xpath="hmis:ClientVeteranInfo"/>
+					<xs:field xpath="hmis:PersonalID"/>
+				</xs:keyref>
+				<xs:keyref name="cocEnrollmentCoCKeyRef" refer="cocKey">
+					<xs:selector xpath="hmis:EnrollmentCoC"/>
+					<xs:field xpath="hmis:ClientCoC"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentContactKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:Contact"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentDateOfEngagementKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:DateOfEngagement"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentDisabilitiesKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:Disabilities"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentDomesticViolenceKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:DomesticViolence"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentEducationKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:Education"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentEmploymentKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:Employment"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentEnrollmentCoCKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:EnrollmentCoC"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentEntryRHSAPKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:EntryRHSAP"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentEntryRHYKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:EntryRHY"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentEntrySSVFKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:EntrySSVF"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentExitKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:Exit"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentHealthInsuranceKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:HealthInsurance"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentHealthStatusKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:HealthStatus"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentIncomeAndSourcesKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:IncomeAndSources"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentMedicalAssistanceKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:MedicalAssistance"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentNonCashBenefitsKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:NonCashBenefits"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentPATHStatusKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:PATHStatus"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentResidentialMoveInDateKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:ResidentialMoveInDate"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentRHYBCPStatusKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:NonCashBenefits"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentServiceFAReferralKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:ServiceFAReferral"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="exitExitHousingAssessmentKeyRef" refer="exitKey">
+					<xs:selector xpath="hmis:ExitHousingAssessment"/>
+					<xs:field xpath="hmis:ExitID"/>
+				</xs:keyref>
+				<xs:keyref name="exitExitPATHKeyRef" refer="exitKey">
+					<xs:selector xpath="hmis:ExitPATH"/>
+					<xs:field xpath="hmis:ExitID"/>
+				</xs:keyref>
+				<xs:keyref name="exitExitRHYKeyRef" refer="exitKey">
+					<xs:selector xpath="hmis:ExitRHY"/>
+					<xs:field xpath="hmis:ExitID"/>
+				</xs:keyref>
+				<xs:keyref name="exitHousingAssessmentDispositionKeyRef" refer="exitKey">
+					<xs:selector xpath="hmis:HousingAssessmentDisposition"/>
+					<xs:field xpath="hmis:ExitID"/>
+				</xs:keyref>
+				<xs:keyref name="inventoryCoCKeyRef" refer="cocKey">
+					<xs:selector xpath="hmis:Inventory"/>
+					<xs:field xpath="hmis:CoCCode"/>
+				</xs:keyref>
+				<xs:keyref name="inventoryProjectKeyRef" refer="projectKey">
+					<xs:selector xpath="hmis:Inventory"/>
+					<xs:field xpath="hmis:ProjectID"/>
+				</xs:keyref>	
+				<xs:keyref name="organizationKeyRef" refer="organizationKey">
+					<xs:selector xpath="hmis:Project"/>
+					<xs:field xpath="hmis:OrganizationID"/>
+				</xs:keyref>
+				<xs:keyref name="projectEnrollmentKeyRef" refer="projectKey">
+					<xs:selector xpath="hmis:Enrollment"/>
+					<xs:field xpath="hmis:ProjectID"/>
+				</xs:keyref>
+				<xs:keyref name="projectFunderKeyRef" refer="projectKey">
+					<xs:selector xpath="hmis:Funder"/>
+					<xs:field xpath="hmis:ProjectID"/>
+				</xs:keyref>
+				<xs:keyref name="siteCoCKeyRef" refer="cocKey">
+					<xs:selector xpath="hmis:Site"/>
+					<xs:field xpath="hmis:CoCCode"/>
+				</xs:keyref>
+				<xs:keyref name="siteProjectKeyRef" refer="projectKey">
+					<xs:selector xpath="hmis:Site"/>
+					<xs:field xpath="hmis:ProjectID"/>
+				</xs:keyref>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
