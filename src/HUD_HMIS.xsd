@@ -156,7 +156,7 @@
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 
-	<xs:complexType name="clientVeteranInfo">
+	<xs:complexType name="veteranInfo">
 		<xs:sequence>
 			<xs:element name="PersonalID" type="hmis:string32">
 				<xs:annotation>
@@ -251,29 +251,6 @@
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
-	<xs:complexType name="contact">
-		<xs:sequence>
-			<xs:element name="ProjectEntryID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ContactDate" type="xs:date">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.12, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Section 4.12."</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ContactLocation" type="hmis:locationOfContact">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.12, #2.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Section 4.12."</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attributeGroup ref="baseMetaData"/>
-	</xs:complexType>
-	
 	<xs:complexType name="dateOfEngagement">
 		<xs:sequence>
 			<xs:element name="ProjectEntryID" type="hmis:string32">
@@ -319,7 +296,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Section 4.5-4.10."</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IndefiniteAndImpairsIndependence" type="hmis:fiveValDKRefused">
+			<xs:element name="IndefiniteAndImpairs" type="hmis:fiveValDKRefused">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.5-4.10, Response #2A.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Section 4.5-4.10."</xs:documentation>
@@ -549,7 +526,7 @@
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
-	<xs:complexType name="entryRHSAP">
+	<xs:complexType name="rhspEntry">
 		<xs:sequence>
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
@@ -579,37 +556,37 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.23 Sexual Orientation".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FormerlyAWardOfChildWelfareFosterCare" type="hmis:fiveValDKRefused">
+			<xs:element name="FormerWardChildWelfare" type="hmis:fiveValDKRefused">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.31, #1.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.31 Formerly a Ward of Child Welfare/Foster Care Agency".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="YearsChildWelfareFosterCare" type="hmis:entryRHYYears" minOccurs="0">
+			<xs:element name="ChildWelfareYears" type="hmis:entryRHYYears" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.31, #1B.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.31 Formerly a Ward of Child Welfare/Foster Care Agency".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MonthsChildWelfareFosterCare" type="xs:unsignedInt" minOccurs="0">
+			<xs:element name="ChildWelfareMonths" type="xs:unsignedInt" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.31, #1BA.  Values 1-11 permissible.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.31 Formerly a Ward of Child Welfare/Foster Care Agency".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FormerlyAWardOfJuvenileJustice" type="hmis:fiveValDKRefused">
+			<xs:element name="FormerWardJuvenileJustice" type="hmis:fiveValDKRefused">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.32, #1.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.32 Formerly a Ward of Juvenile Justice System".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="YearsJuvenileJustice" type="hmis:entryRHYYears" minOccurs="0">
+			<xs:element name="JuvenileJusticeYears" type="hmis:entryRHYYears" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.32, #1A.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.32 Formerly a Ward of Juvenile Justice System".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MonthsJuvenileJustice" type="xs:unsignedInt" minOccurs="0">
+			<xs:element name="JuvenileJusticeMonths" type="xs:unsignedInt" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.32, #1AB.  Values 1-11 permissible.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.32 Formerly a Ward of Juvenile Justice System".</xs:documentation>
@@ -621,19 +598,13 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SexualOrientationGenderIdentityYouth" type="hmis:noYes">
+			<xs:element name="SexualOrientationGenderIDYouth" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #2.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SexualOrientationGenderIdentityFamilyMember" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #3.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="SexualOrientationGenderIdentityFamilyMember" type="hmis:noYes">
+			<xs:element name="SexualOrientationGenderIDFam" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #3.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
@@ -645,7 +616,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="HousingIssuesFamilyMember" type="hmis:noYes">
+			<xs:element name="HousingIssuesFam" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #5.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
@@ -657,7 +628,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SchoolEducationalIssuesFamilyMember" type="hmis:noYes">
+			<xs:element name="SchoolEducationalIssuesFam" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #7.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
@@ -669,7 +640,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="UnemploymentFamilyMember" type="hmis:noYes">
+			<xs:element name="UnemploymentFam" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #9.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
@@ -681,7 +652,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MentalHealthIssuesFamilyMember" type="hmis:noYes">
+			<xs:element name="MentalHealthIssuesFam" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #11.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
@@ -693,7 +664,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="HealthIssuesFamilyMember" type="hmis:noYes">
+			<xs:element name="HealthIssuesFam" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #13.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
@@ -705,7 +676,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PhysicalDisabilityFamilyMember" type="hmis:noYes">
+			<xs:element name="PhysicalDisabilityFam" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #15.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
@@ -717,7 +688,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MentalDisabilityFamilyMember" type="hmis:noYes">
+			<xs:element name="MentalDisabilityFam" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #17.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
@@ -729,7 +700,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AbuseAndNeglectFamilyMember" type="hmis:noYes">
+			<xs:element name="AbuseAndNeglectFam" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #19.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
@@ -741,13 +712,13 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AlcoholDrugAbuseFamilyMember" type="hmis:noYes">
+			<xs:element name="AlcoholDrugAbuseFam" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #21.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="InsufficientIncomeToSupportYouth" type="hmis:noYes">
+			<xs:element name="InsufficientIncome" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #22.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
@@ -818,13 +789,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.42 Percent of AMI (SSVF Eligibility)".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="LastPermanentStreet" type="hmis:string50">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.43, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="LastPermanentStreet" type="hmis:string50">
+			<xs:element name="LastPermanentStreet" type="hmis:string100">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.43, #1.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
@@ -999,12 +964,6 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.36 Transitional, Exit-care, or Aftercare Plans and Actions".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ScheduledFollowUpContacts" type="hmis:noYesRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.36, #7.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.36 Transitional, Exit-care, or Aftercare Plans and Actions".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="ResourcePackage" type="hmis:noYesRefused">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.36, #8.</xs:documentation>
@@ -1049,14 +1008,13 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Client" type="hmis:client" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="ClientVeteranInfo" type="hmis:clientVeteranInfo" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="VeteranInfo" type="hmis:veteranInfo" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CoC" type="hmis:coc" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="Contact" type="hmis:contact" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="DateOfEngagement" type="hmis:dateOfEngagement" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="Disabilities" type="hmis:disabilities" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="DomesticViolence" type="hmis:domesticViolence" minOccurs="0" maxOccurs="unbounded"/>
@@ -1069,7 +1027,7 @@
 			</xs:element>
 			<xs:element name="Enrollment" type="hmis:enrollment" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="EnrollmentCoC" type="hmis:enrollmentCoC" minOccurs="0" maxOccurs="unbounded"/>			
-			<xs:element name="EntryRHSAP" type="hmis:entryRHSAP" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="RHSPEntry" type="hmis:rhspEntry" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="EntryRHY" type="hmis:entryRHY" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="EntrySSVF" type="hmis:entrySSVF" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="Exit" type="hmis:exit" minOccurs="0" maxOccurs="unbounded"/>
@@ -1149,7 +1107,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.22 "RHYBCP Status".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ServiceFAReferral" type="hmis:serviceFAReferral" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Services" type="hmis:services" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.14-4.16</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.14-4.16 "Services Provided".</xs:documentation>
@@ -1444,13 +1402,13 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, 4.2 Income and Sources.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PrivateDisabilityNonService" type="hmis:noYes">
+			<xs:element name="PrivateDisability" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.2, #9.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, 4.2 Income and Sources.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PrivateDisabilityNonServiceAmount" type="hmis:money" minOccurs="0">
+			<xs:element name="PrivateDisabilityAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.2, #9G.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, 4.2 Income and Sources.</xs:documentation>
@@ -1552,7 +1510,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, 4.2 Income and Sources.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherSourceIdentity" type="hmis:string50" minOccurs="0">
+			<xs:element name="OtherSourceIdentify" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.2, #17O.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, 4.2 Income and Sources.</xs:documentation>
@@ -1859,7 +1817,7 @@
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 
-	<xs:complexType name="serviceFAReferral">
+	<xs:complexType name="services">
 		<xs:sequence>
 			<xs:element name="ProjectEntryID" type="hmis:string32"/>
 			<xs:element name="DateProvided" type="xs:date">
@@ -1868,15 +1826,9 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.14-4.16 Date Provided".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ServiceCategory" type="hmis:serviceCategoryType">
+			<xs:element name="RecordType" type="hmis:recordType">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">The permissible values correspond to the decimal values of the corresponding Service FA Referral types.  4.14 Services Provided is "14" and 4.16 Referrals Provided is "16".</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.14-4.16.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="FunderList" type="hmis:funderList">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.14-4.16.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.14-4.16.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -2033,17 +1985,13 @@
 					<xs:selector xpath="hmis:Enrollment"/>
 					<xs:field xpath="hmis:PersonalID"/>
 				</xs:keyref>
-				<xs:keyref name="clientVeteranInfoClientKeyRef" refer="clientKey">
-					<xs:selector xpath="hmis:ClientVeteranInfo"/>
+				<xs:keyref name="veteranInfoClientKeyRef" refer="clientKey">
+					<xs:selector xpath="hmis:VeteranInfo"/>
 					<xs:field xpath="hmis:PersonalID"/>
 				</xs:keyref>
 				<xs:keyref name="cocEnrollmentCoCKeyRef" refer="cocKey">
 					<xs:selector xpath="hmis:EnrollmentCoC"/>
 					<xs:field xpath="hmis:ClientCoC"/>
-				</xs:keyref>
-				<xs:keyref name="enrollmentContactKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:Contact"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentDateOfEngagementKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:DateOfEngagement"/>
@@ -2069,8 +2017,8 @@
 					<xs:selector xpath="hmis:EnrollmentCoC"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
-				<xs:keyref name="enrollmentEntryRHSAPKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:EntryRHSAP"/>
+				<xs:keyref name="enrollmentEntryRHSPKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:RHSPEntry"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentEntryRHYKeyRef" refer="enrollmentKey">
@@ -2117,8 +2065,8 @@
 					<xs:selector xpath="hmis:NonCashBenefits"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
-				<xs:keyref name="enrollmentServiceFAReferralKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:ServiceFAReferral"/>
+				<xs:keyref name="enrollmentServicesKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:Services"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
 				<xs:keyref name="exitExitHousingAssessmentKeyRef" refer="exitKey">
@@ -3240,39 +3188,6 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="funderList">
-		<xs:annotation>
-			<xs:documentation xml:lang="en">
-				1 = HOPWA
-				2 = PATH
-				3 = RHY
-				4 = VA
-			</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">HOPWA</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">PATH</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">RHY</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">VA</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>		
-		</xs:restriction>
-	</xs:simpleType>
-
 	<xs:simpleType name="fysbReasonNoServices">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
@@ -3361,7 +3276,7 @@
 	</xs:simpleType>
 	
 	<xs:simpleType name="geocode">
-		<xs:restriction base="xs:integer">
+		<xs:restriction base="xs:unsignedInt">
 			<xs:pattern value="[0-9]{6}"></xs:pattern>    
 		</xs:restriction>
 	</xs:simpleType>
@@ -3821,34 +3736,6 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>	
-	
-	<xs:simpleType name="locationOfContact">
-		<xs:annotation>
-			<xs:documentation xml:lang="en">	
-				Location of Contact
-				1 = Place not meant for habitation
-				2 = Service setting, non-residential
-				3 = Service setting, residential
-			</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Place not meant for habitation</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Service setting, non-residential</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Service setting, residential</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
 	
 	<xs:simpleType name="militaryBranch">
 		<xs:annotation>
@@ -5191,7 +5078,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="serviceCategoryType">
+	<xs:simpleType name="recordType">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
 				14 = Services Provided
