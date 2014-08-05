@@ -156,89 +156,6 @@
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 
-	<xs:complexType name="veteranInfo">
-		<xs:sequence>
-			<xs:element name="PersonalID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Refers to a Client element</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="YearEnteredService" type="xs:gYear">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #1</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="YearSeparated" type="xs:gYear">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #2</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="WorldWarII" type="fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #3</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="KoreanWar" type="fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #4</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="VietnamWar" type="fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #5</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="DesertStorm" type="fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #6</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AfghanistanOEF" type="fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #7</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IraqOIF" type="fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #8</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IraqOND" type="fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #9</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="OtherTheater" type="fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #10</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MilitaryBranch" type="militaryBranch">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #11</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="DischargeStatus" type="dischargeStatus">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #11</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attributeGroup ref="baseMetaData"/>
-	</xs:complexType>
-
 	<xs:complexType name="coc">
 		<xs:sequence>
 			<xs:element name="CoCCode" type="hmis:string32">
@@ -247,7 +164,39 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, See May 2014 HMIS Data Manual, Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements), p. 13.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="ProjectCoCID" type="hmis:string32"/>
 		</xs:sequence>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+	
+	<xs:complexType name="commercialSexualExploitation">
+		<xs:sequence>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExchangeForSexPastThreeMonths" type="hmis:fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.35, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CountOfExchangeForSex" type="hmis:countOfExchangeForSex" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.35, #1A.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AskedOrForcedToExchangeForSex" type="hmis:askedOrForcedToExchangeForSex" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.35, #1B.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute ref="dataCollectionStage"/>
+		<xs:attribute name="informationDate"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
@@ -362,12 +311,6 @@
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="LastGradeCompleted" type="hmis:lastGradeCompleted" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.24, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.24 Last Grade Completed"</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SchoolStatus" type="hmis:schoolStatus" minOccurs="0">
@@ -526,303 +469,6 @@
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
-	<xs:complexType name="rhspEntry">
-		<xs:sequence>
-			<xs:element name="ProjectEntryID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="WorstHousingSituation" type="hmis:fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.40, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.40 Worst Housing Situation".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attributeGroup ref="baseMetaData"/>
-	</xs:complexType>
-
-	<xs:complexType name="entryRHY">
-		<xs:sequence>
-			<xs:element name="ProjectEntryID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="SexualOrientation" type="hmis:sexualOrientation">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.23, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.23 Sexual Orientation".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="FormerWardChildWelfare" type="hmis:fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.31, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.31 Formerly a Ward of Child Welfare/Foster Care Agency".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ChildWelfareYears" type="hmis:entryRHYYears" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.31, #1B.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.31 Formerly a Ward of Child Welfare/Foster Care Agency".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ChildWelfareMonths" type="xs:unsignedInt" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.31, #1BA.  Values 1-11 permissible.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.31 Formerly a Ward of Child Welfare/Foster Care Agency".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="FormerWardJuvenileJustice" type="hmis:fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.32, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.32 Formerly a Ward of Juvenile Justice System".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="JuvenileJusticeYears" type="hmis:entryRHYYears" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.32, #1A.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.32 Formerly a Ward of Juvenile Justice System".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="JuvenileJusticeMonths" type="xs:unsignedInt" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.32, #1AB.  Values 1-11 permissible.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.32 Formerly a Ward of Juvenile Justice System".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="HouseholdDynamics" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="SexualOrientationGenderIDYouth" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #2.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="SexualOrientationGenderIDFam" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #3.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="HousingIssuesYouth" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #4.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="HousingIssuesFam" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #5.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="SchoolEducationalIssuesYouth" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #6.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="SchoolEducationalIssuesFam" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #7.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="UnemploymentYouth" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #8.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="UnemploymentFam" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #9.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MentalHealthIssuesYouth" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #10.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MentalHealthIssuesFam" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #11.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="HealthIssuesYouth" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #12.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="HealthIssuesFam" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #13.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PhysicalDisabilityYouth" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #14.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PhysicalDisabilityFam" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #15.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MentalDisabilityYouth" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #16.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MentalDisabilityFam" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #17.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AbuseAndNeglectYouth" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #18.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AbuseAndNeglectFam" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #19.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AlcoholDrugAbuseYouth" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #20.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AlcoholDrugAbuseFam" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #21.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="InsufficientIncome" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #22.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ActiveMilitaryParent" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #23.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IncarceratedParent" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #24.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IncarceratedParentStatus" type="hmis:incarceratedParentStatus" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #24A.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ReferralSource" type="hmis:referralSource">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.34, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.34 Referral Source".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CountOutreachReferralApproaches" type="xs:unsignedInt" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.34, #1A.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.34 Referral Source".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ExchangeForSexPastThreeMonths" type="hmis:fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.35, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CountOfExchangeForSex" type="hmis:countOfExchangeForSex" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.35, #1A.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AskedOrForcedToExchangeForSex" type="hmis:askedOrForcedToExchangeForSex" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.35, #1B.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attributeGroup ref="baseMetaData"/>
-	</xs:complexType>
-	
-	<xs:complexType name="entrySSVF">
-		<xs:sequence>
-			<xs:element name="ProjectEntryID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PercentAMI" type="hmis:percentAMI">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.42, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.42 Percent of AMI (SSVF Eligibility)".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="LastPermanentStreet" type="hmis:string100">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.43, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="LastPermanentCity" type="hmis:string50">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.43, #2.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="LastPermanentState" type="hmis:state">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.43, #3.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="LastPermanentZIP" type="hmis:zipCode">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.43, #4.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AddressDataQuality" type="hmis:addressDataQuality">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.43, #5.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attributeGroup ref="baseMetaData"/>
-	</xs:complexType>
-	
 	<xs:complexType name="exit">
 		<xs:sequence>
 			<xs:element name="ExitID" type="hmis:string32">
@@ -857,7 +503,7 @@
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 
-	<xs:complexType name="exitPATH">
+	<xs:complexType name="connectionWithSOAR">
 		<xs:sequence>
 			<xs:element name="ExitID" type="hmis:string32">
 				<xs:annotation>
@@ -897,29 +543,11 @@
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
-	<xs:complexType name="exitRHY">
+	<xs:complexType name="exitPlansActions">
 		<xs:sequence>
 			<xs:element name="ExitID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ProjectCompletionStatus" type="hmis:projectCompletionStatus">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.37, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.37 Project Completion Status".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="EarlyExitReason" type="hmis:earlyExitReason">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.37, #1A.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.37 Project Completion Status".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="FamilyReunificationAchieved" type="hmis:fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.38, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.38 Family Reunification Achieved".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WrittenAftercarePlan" type="hmis:noYesRefused">
@@ -979,7 +607,7 @@
 		</xs:sequence>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
-	
+
 	<xs:complexType name="export">
 		<xs:sequence>
 			<xs:element name="ExportID" type="hmis:string32">
@@ -1007,121 +635,247 @@
 					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, Section X.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Client" type="hmis:client" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="VeteranInfo" type="hmis:veteranInfo" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CoC" type="hmis:coc" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="DateOfEngagement" type="hmis:dateOfEngagement" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="Disabilities" type="hmis:disabilities" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="DomesticViolence" type="hmis:domesticViolence" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="Education" type="hmis:education" minOccurs="0" maxOccurs="unbounded"/>			
-			<xs:element name="Employment" type="hmis:employment" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.26</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.26 "Employment Status".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Enrollment" type="hmis:enrollment" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="EnrollmentCoC" type="hmis:enrollmentCoC" minOccurs="0" maxOccurs="unbounded"/>			
-			<xs:element name="RHSPEntry" type="hmis:rhspEntry" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="EntryRHY" type="hmis:entryRHY" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="EntrySSVF" type="hmis:entrySSVF" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="Exit" type="hmis:exit" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="ExitHousingAssessment" type="hmis:exitHousingAssessment" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.19</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.19 Housing Assessment at Exit".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ExitPATH" type="hmis:exitPATH" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="ExitRHY" type="hmis:exitRHY" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="HealthInsurance" type="hmis:healthInsurance" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.4</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.4 "Health Insurance".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="HealthStatus" type="hmis:healthStatus" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.27</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.27 "General Health Status".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="HousingAssessmentDisposition" type="hmis:housingAssessmentDisposition" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.18</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.18 Housing Assessment Disposition".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IncomeAndSources" type="hmis:incomeAndSources" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.2</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.2 "Income And Sources".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Inventory" type="hmis:inventory" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.7.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Bed and Unit Inventory Information", p. 14.</xs:documentation>
-				</xs:annotation>			
-			</xs:element>
-			<xs:element name="Funder" type="hmis:funder" minOccurs="0" maxOccurs="unbounded"/>		
-			<xs:element name="MedicalAssistance" type="hmis:medicalAssistance" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.39</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.39.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="NonCashBenefits" type="hmis:nonCashBenefits" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.3</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.3 "Non-Cash Benefits".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Organization" type="hmis:organization" minOccurs="0" maxOccurs="unbounded"/>			
-			<xs:element name="PATHStatus" type="hmis:pathStatus" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.20</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.20 PATH Status".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Project" type="hmis:project" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Project Setup Guidance", p. 12.</xs:documentation>
-				</xs:annotation>	
-			</xs:element>
-			<xs:element name="ResidentialMoveInDate" type="hmis:residentialMoveInDate" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.17</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.17 Residential Move-In Date".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="RHYBCPStatus" type="hmis:rhybcpStatus" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.22</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.22 "RHYBCP Status".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Services" type="hmis:services" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.14-4.16</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.14-4.16 "Services Provided".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Site" type="hmis:site" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.8.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Project Setup Guidance", p. 15.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Client" type="hmis:client"/>
+				<xs:element name="CoC" type="hmis:coc"/>
+				<xs:element name="CommercialSexualExploitation" type="hmis:commercialSexualExploitation"/>
+				<xs:element name="ConnectionWithSOAR" type="hmis:connectionWithSOAR"/>
+				<xs:element name="DateOfEngagement" type="hmis:dateOfEngagement"/>
+				<xs:element name="Disabilities" type="hmis:disabilities"/>
+				<xs:element name="DomesticViolence" type="hmis:domesticViolence"/>
+				<xs:element name="Education" type="hmis:education"/>			
+				<xs:element name="Employment" type="hmis:employment">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.26</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.26 "Employment Status".</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Enrollment" type="hmis:enrollment"/>
+				<xs:element name="EnrollmentCoC" type="hmis:enrollmentCoC"/>			
+				<xs:element name="Exit" type="hmis:exit"/>
+				<xs:element name="ExitHousingAssessment" type="hmis:exitHousingAssessment">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.19</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.19 Housing Assessment at Exit".</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ExitPlansActions" type="hmis:exitPlansActions"/>
+				<xs:element name="FamilyReunification" type="hmis:familyReunification"/>
+				<xs:element name="FormerWardChildWelfare" type="hmis:formerWardChildWelfare"/>			
+				<xs:element name="FormerWardJuvenileJustice" type="hmis:formerWardJuvenileJustice"/>							
+				<xs:element name="Funder" type="hmis:funder"/>			
+				<xs:element name="HealthInsurance" type="hmis:healthInsurance">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.4</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.4 "Health Insurance".</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="HealthStatus" type="hmis:healthStatus">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.27</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.27 "General Health Status".</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="HousingAssessmentDisposition" type="hmis:housingAssessmentDisposition">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.18</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.18 Housing Assessment Disposition".</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="IncomeAndSources" type="hmis:incomeAndSources">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.2</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.2 "Income And Sources".</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Inventory" type="hmis:inventory">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.7.</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Bed and Unit Inventory Information", p. 14.</xs:documentation>
+					</xs:annotation>			
+				</xs:element>
+				<xs:element name="LastGradeCompleted" type="hmis:lastGradeCompleted"/>
+				<xs:element name="LastPermanentAddress" type="hmis:lastPermanentAddress"/>
+				<xs:element name="MedicalAssistance" type="hmis:medicalAssistance">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.39</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.39.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="NonCashBenefits" type="hmis:nonCashBenefits">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.3</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.3 "Non-Cash Benefits".</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Organization" type="hmis:organization"/>			
+				<xs:element name="PATHStatus" type="hmis:pathStatus">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.20</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.20 PATH Status".</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="PercentAMI" type="hmis:percentAMI"/>
+				<xs:element name="Project" type="hmis:project">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Project Setup Guidance", p. 12.</xs:documentation>
+					</xs:annotation>	
+				</xs:element>
+				<xs:element name="ProjectCoC" type="hmis:projectCoC">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Allows for a many-to-many relationship between Project and CoC.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ProjectCompletionStatus" type="hmis:projectCompletionStatus"/>
+				<xs:element name="ResidentialMoveInDate" type="hmis:residentialMoveInDate">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.17</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.17 Residential Move-In Date".</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="RHYBCPStatus" type="hmis:rhyBCPStatus">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.22</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.22 "RHYBCP Status".</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Services" type="hmis:services">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.14-4.16</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.14-4.16 "Services Provided".</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="SexualOrientation" type="hmis:sexualOrientation">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.23, #1.</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.23 Sexual Orientation".</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Site" type="hmis:site">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.8.</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Project Setup Guidance", p. 15.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="VeteranInfo" type="hmis:veteranInfo">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="WorstHousingSituation" type="hmis:worstHousingSituation">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.40, #1.</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.40 Worst Housing Situation".</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="YouthCriticalIssues" type="hmis:youthCriticalIssues">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33.</xs:documentation>
+						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
 		</xs:sequence>
 	</xs:complexType>
 	
+	<xs:complexType name="familyReunification">
+		<xs:sequence>
+			<xs:element name="ExitID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FamilyReunificationAchieved" type="hmis:fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.38, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.38 Family Reunification Achieved".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+
+	<xs:complexType name="familyReunificationAchieved">
+		<xs:sequence>
+			<xs:element name="ExitID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FamilyReunificationAchieved" type="hmis:fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.38, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.38 Family Reunification Achieved".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+
+	<xs:complexType name="formerWardChildWelfare">
+		<xs:sequence>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FormerWardChildWelfare" type="hmis:fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.31, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.31 Formerly a Ward of Child Welfare/Foster Care Agency".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ChildWelfareYears" type="hmis:issuesYears" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.31, #1B.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.31 Formerly a Ward of Child Welfare/Foster Care Agency".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ChildWelfareMonths" type="xs:unsignedInt" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.31, #1BA.  Values 1-11 permissible.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.31 Formerly a Ward of Child Welfare/Foster Care Agency".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute ref="dataCollectionStage"/>
+		<xs:attribute name="informationDate"/>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+
+	<xs:complexType name="formerWardJuvenileJustice">
+		<xs:sequence>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FormerWardJuvenileJustice" type="hmis:fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.32, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.32 Formerly a Ward of Juvenile Justice System".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="JuvenileJusticeYears" type="hmis:issuesYears" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.32, #1A.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.32 Formerly a Ward of Juvenile Justice System".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="JuvenileJusticeMonths" type="xs:unsignedInt" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.32, #1AB.  Values 1-11 permissible.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.32 Formerly a Ward of Juvenile Justice System".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute ref="dataCollectionStage"/>
+		<xs:attribute name="informationDate"/>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+
 	<xs:complexType name="funder">
 		<xs:sequence>
 			<xs:element name="ProjectID" type="hmis:string32">
@@ -1578,6 +1332,66 @@
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 
+	<xs:complexType name="lastGradeCompleted">
+		<xs:sequence>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastGradeCompleted" type="hmis:lastGradeCompletedSimple" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.24, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.24 Last Grade Completed"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute ref="dataCollectionStage"/>
+		<xs:attribute name="informationDate"/>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+	
+	<xs:complexType name="lastPermanentAddress">
+		<xs:sequence>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastPermanentStreet" type="hmis:string100">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.43, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastPermanentCity" type="hmis:string50">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.43, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastPermanentState" type="hmis:state">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.43, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastPermanentZIP" type="hmis:zipCode">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.43, #4.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AddressDataQuality" type="hmis:addressDataQuality">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.43, #5.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+
 	<xs:complexType name="medicalAssistance">
 		<xs:sequence>
 			<xs:element name="ProjectEntryID" type="hmis:string32"/>
@@ -1723,7 +1537,24 @@
 		</xs:sequence>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
-	
+
+	<xs:complexType name="percentAMI">
+		<xs:sequence>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PercentAMI" type="hmis:percentAMISimple">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.42, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.42 Percent of AMI (SSVF Eligibility)".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+
 	<xs:complexType name="project">
 		<xs:sequence>                   
 			<xs:element name="ProjectID" type="hmis:string32">
@@ -1733,12 +1564,14 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrganizationID" type="hmis:string32"/>
+			<xs:element name="ProjectCoCID" type="hmis:string32"/>
 			<xs:element name="ProjectName" type="hmis:string50">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.2, #2.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements)", p. 13.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			
 			<xs:element name="ContinuumProject" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.4, #1.</xs:documentation>
@@ -1773,6 +1606,37 @@
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
+	<xs:complexType name="projectCoC">
+		<xs:sequence>
+			<xs:element name="ProjectCoCID" type="hmis:string32"/>
+			<xs:element name="CoCCode" type="hmis:string32"/>
+			<xs:element name="ProjectID" type="hmis:string32"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="projectCompletionStatus">
+		<xs:sequence>
+			<xs:element name="ExitID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProjectCompletionStatus" type="hmis:projectCompletionStatusSimple">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.37, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.37 Project Completion Status".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EarlyExitReason" type="hmis:earlyExitReason">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.37, #1A.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.37 Project Completion Status".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+	
 	<xs:complexType name="residentialMoveInDate">
 		<xs:sequence>
 			<xs:element name="ProjectEntryID" type="hmis:string32"/>
@@ -1792,7 +1656,7 @@
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
-	<xs:complexType name="rhybcpStatus">
+	<xs:complexType name="rhyBCPStatus">
 		<xs:sequence>
 			<xs:element name="ProjectEntryID" type="hmis:string32"/>
 			<xs:element name="StatusDate" type="xs:date">
@@ -1822,32 +1686,32 @@
 			<xs:element name="ProjectEntryID" type="hmis:string32"/>
 			<xs:element name="DateProvided" type="xs:date">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.14-4.16, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.14-4.16 Date Provided".</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, " 4.12 and 4.14-4.16 Date Provided".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RecordType" type="hmis:recordType">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">The permissible values correspond to the decimal values of the corresponding Service FA Referral types.  4.14 Services Provided is "14" and 4.16 Referrals Provided is "16".</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.14-4.16.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.12 and 4.14-4.16.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TypeProvided" type="xs:unsignedInt">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.14-4.16, #2 (picklist values vary by service category and funder) .</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.14-4.16.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #2 (picklist values vary by service category and funder) .</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.12 and 4.14-4.16.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OtherTypeProvided" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.14-4.16, #2D (if it exists) .</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.14-4.16.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #2D (if it exists) .</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.12 and 4.14-4.16.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SubTypeProvided" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.14-4.16, #3A, 4B, 5C (if it exists).</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.14-4.16.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #3A, 4B, 5C (if it exists).</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.12 and 4.14-4.16.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FAAmount" type="hmis:money" minOccurs="0">
@@ -1865,7 +1729,26 @@
 		</xs:sequence>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
-	
+
+	<xs:complexType name="sexualOrientation">
+		<xs:sequence>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SexualOrientation" type="hmis:sexualOrientationSimple">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.23, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.23 Sexual Orientation".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute ref="dataCollectionStage"/>
+		<xs:attribute name="informationDate"/>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+
 	<xs:complexType name="site">
 		<xs:sequence>
 			<xs:element name="CoCCode" type="hmis:string32"/>
@@ -1981,17 +1864,25 @@
 					<xs:selector xpath="hmis:Project"/>
 					<xs:field xpath="hmis:ProjectID"/>
 				</xs:key>
+				<xs:key name="projectCoCKey">
+					<xs:selector xpath="hmis:ProjectCoC"/>
+					<xs:field xpath="hmis:ProjectCoCID"/>
+				</xs:key>
 				<xs:keyref name="clientKeyRef" refer="clientKey">
 					<xs:selector xpath="hmis:Enrollment"/>
-					<xs:field xpath="hmis:PersonalID"/>
-				</xs:keyref>
-				<xs:keyref name="veteranInfoClientKeyRef" refer="clientKey">
-					<xs:selector xpath="hmis:VeteranInfo"/>
 					<xs:field xpath="hmis:PersonalID"/>
 				</xs:keyref>
 				<xs:keyref name="cocEnrollmentCoCKeyRef" refer="cocKey">
 					<xs:selector xpath="hmis:EnrollmentCoC"/>
 					<xs:field xpath="hmis:ClientCoC"/>
+				</xs:keyref>
+				<xs:keyref name="cocProjectKeyRef" refer="projectCoCKey">
+					<xs:selector xpath="hmis:CoC"/>
+					<xs:field xpath="hmis:ProjectCoCID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentCommercialSexualExploitationKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:CommercialSexualExploitation"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentDateOfEngagementKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:DateOfEngagement"/>
@@ -2017,20 +1908,16 @@
 					<xs:selector xpath="hmis:EnrollmentCoC"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
-				<xs:keyref name="enrollmentEntryRHSPKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:RHSPEntry"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
-				</xs:keyref>
-				<xs:keyref name="enrollmentEntryRHYKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:EntryRHY"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
-				</xs:keyref>
-				<xs:keyref name="enrollmentEntrySSVFKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:EntrySSVF"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
-				</xs:keyref>
 				<xs:keyref name="enrollmentExitKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:Exit"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentFormerWardChildWelfareKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:FormerWardChildWelfare"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentFormerWardJuvenileJusticeKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:FormerWardJuvenileJustice"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentHealthInsuranceKeyRef" refer="enrollmentKey">
@@ -2045,6 +1932,14 @@
 					<xs:selector xpath="hmis:IncomeAndSources"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
+				<xs:keyref name="enrollmentLastGradeCompletedKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:LastGradeCompleted"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentLastPermanentAddressKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:LastPermanentAddress"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
 				<xs:keyref name="enrollmentMedicalAssistanceKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:MedicalAssistance"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
@@ -2055,6 +1950,10 @@
 				</xs:keyref>
 				<xs:keyref name="enrollmentPATHStatusKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:PATHStatus"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentPercentAMIKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:PercentAMI"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentResidentialMoveInDateKeyRef" refer="enrollmentKey">
@@ -2069,20 +1968,40 @@
 					<xs:selector xpath="hmis:Services"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
+				<xs:keyref name="enrollmentSexualOrientationKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:SexualOrientation"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentWorstHousingSituationKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:WorstHousingSituation"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentYouthCriticalIssuesKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:YouthCriticalIssues"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
 				<xs:keyref name="exitExitHousingAssessmentKeyRef" refer="exitKey">
 					<xs:selector xpath="hmis:ExitHousingAssessment"/>
 					<xs:field xpath="hmis:ExitID"/>
 				</xs:keyref>
-				<xs:keyref name="exitExitPATHKeyRef" refer="exitKey">
-					<xs:selector xpath="hmis:ExitPATH"/>
+				<xs:keyref name="exitConnectionWithSOARKeyRef" refer="exitKey">
+					<xs:selector xpath="hmis:ConnectionWithSOAR"/>
 					<xs:field xpath="hmis:ExitID"/>
 				</xs:keyref>
-				<xs:keyref name="exitExitRHYKeyRef" refer="exitKey">
-					<xs:selector xpath="hmis:ExitRHY"/>
+				<xs:keyref name="exitExitPlansActionsKeyRef" refer="exitKey">
+					<xs:selector xpath="hmis:ExitPlansActions"/>
+					<xs:field xpath="hmis:ExitID"/>
+				</xs:keyref>
+				<xs:keyref name="exitFamilyReunificationKeyRef" refer="exitKey">
+					<xs:selector xpath="hmis:FamilyReunification"/>
 					<xs:field xpath="hmis:ExitID"/>
 				</xs:keyref>
 				<xs:keyref name="exitHousingAssessmentDispositionKeyRef" refer="exitKey">
 					<xs:selector xpath="hmis:HousingAssessmentDisposition"/>
+					<xs:field xpath="hmis:ExitID"/>
+				</xs:keyref>
+				<xs:keyref name="exitProjectCompletionStatusKeyRef" refer="exitKey">
+					<xs:selector xpath="hmis:ProjectCompletionStatus"/>
 					<xs:field xpath="hmis:ExitID"/>
 				</xs:keyref>
 				<xs:keyref name="inventoryCoCKeyRef" refer="cocKey">
@@ -2093,9 +2012,21 @@
 					<xs:selector xpath="hmis:Inventory"/>
 					<xs:field xpath="hmis:ProjectID"/>
 				</xs:keyref>	
-				<xs:keyref name="organizationKeyRef" refer="organizationKey">
+				<xs:keyref name="projectOrganizationKeyRef" refer="organizationKey">
 					<xs:selector xpath="hmis:Project"/>
 					<xs:field xpath="hmis:OrganizationID"/>
+				</xs:keyref>
+				<xs:keyref name="projectCoCKeyRef" refer="projectCoCKey">
+					<xs:selector xpath="hmis:Project"/>
+					<xs:field xpath="hmis:ProjectCoCID"/>
+				</xs:keyref>
+				<xs:keyref name="projectCoCCoCKeyRef" refer="cocKey">
+					<xs:selector xpath="hmis:ProjectCoC"/>
+					<xs:field xpath="hmis:CoCCode"/>
+				</xs:keyref>
+				<xs:keyref name="projectCoCProjectKeyRef" refer="projectKey">
+					<xs:selector xpath="hmis:ProjectCoC"/>
+					<xs:field xpath="hmis:ProjectID"/>
 				</xs:keyref>
 				<xs:keyref name="projectEnrollmentKeyRef" refer="projectKey">
 					<xs:selector xpath="hmis:Enrollment"/>
@@ -2113,6 +2044,10 @@
 					<xs:selector xpath="hmis:Site"/>
 					<xs:field xpath="hmis:ProjectID"/>
 				</xs:keyref>
+				<xs:keyref name="veteranInfoClientKeyRef" refer="clientKey">
+					<xs:selector xpath="hmis:VeteranInfo"/>
+					<xs:field xpath="hmis:PersonalID"/>
+				</xs:keyref>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
@@ -2125,6 +2060,277 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="veteranInfo">
+		<xs:sequence>
+			<xs:element name="PersonalID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Refers to a Client element</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="YearEnteredService" type="xs:gYear">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #1</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="YearSeparated" type="xs:gYear">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #2</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WorldWarII" type="fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #3</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="KoreanWar" type="fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #4</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VietnamWar" type="fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #5</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DesertStorm" type="fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #6</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AfghanistanOEF" type="fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #7</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IraqOIF" type="fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #8</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IraqOND" type="fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #9</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OtherTheater" type="fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #10</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MilitaryBranch" type="militaryBranch">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #11</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DischargeStatus" type="dischargeStatus">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #11</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+	
+	<xs:complexType name="worstHousingSituation">
+		<xs:sequence>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WorstHousingSituation" type="hmis:fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.40, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.40 Worst Housing Situation".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+	
+	<xs:complexType name="youthCriticalIssues">
+		<xs:sequence>
+			<xs:element name="ProjectEntryID" type="hmis:string32"/>
+			<xs:element name="HouseholdDynamics" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SexualOrientationGenderIDYouth" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SexualOrientationGenderIDFam" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HousingIssuesYouth" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #4.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HousingIssuesFam" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #5.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SchoolEducationalIssuesYouth" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #6.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SchoolEducationalIssuesFam" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #7.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UnemploymentYouth" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #8.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UnemploymentFam" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #9.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MentalHealthIssuesYouth" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #10.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MentalHealthIssuesFam" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #11.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HealthIssuesYouth" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #12.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HealthIssuesFam" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #13.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PhysicalDisabilityYouth" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #14.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PhysicalDisabilityFam" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #15.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MentalDisabilityYouth" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #16.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MentalDisabilityFam" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #17.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AbuseAndNeglectYouth" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #18.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AbuseAndNeglectFam" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #19.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AlcoholDrugAbuseYouth" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #20.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AlcoholDrugAbuseFam" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #21.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="InsufficientIncome" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #22.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ActiveMilitaryParent" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #23.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncarceratedParent" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #24.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IncarceratedParentStatus" type="hmis:incarceratedParentStatus" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #24A.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ReferralSource" type="hmis:referralSource">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.34, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.34 Referral Source".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CountOutreachReferralApproaches" type="xs:unsignedInt" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.34, #1A.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.34 Referral Source".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute ref="dataCollectionStage"/>
+		<xs:attribute name="informationDate"/>
+		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
 	<xs:attribute name="informationDate" type="xs:date"/>
@@ -3661,7 +3867,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="lastGradeCompleted">
+	<xs:simpleType name="lastGradeCompletedSimple">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">	
 				Last Grade Completed
@@ -4244,7 +4450,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="percentAMI">
+	<xs:simpleType name="percentAMISimple">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">	
 				Household Income as a Percentage of AMI
@@ -4272,7 +4478,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="projectCompletionStatus">
+	<xs:simpleType name="projectCompletionStatusSimple">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">	
 				Project Completion Status
@@ -5105,7 +5311,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="sexualOrientation">
+	<xs:simpleType name="sexualOrientationSimple">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
 				Sexual Orientation
@@ -5497,7 +5703,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="entryRHYYears">
+	<xs:simpleType name="issuesYears">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
 				Number of Years
