@@ -71,14 +71,14 @@
             <hmis:DomesticViolence hmis:dataCollectionStage="1" hmis:informationDate="C2SmpYBeAZY" hmis:dateCreated="2014-11-21T23:14:59"
                  hmis:dateUpdated="2016-01-05T23:14:59Z" hmis:userID="fPKfm5Rtfi0m3OhjeFL_pozaSRUUA">
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:domesticViolenceVictim>8</hmis:domesticViolenceVictim>
-                <hmis:whenOccured>2</hmis:whenOccured>
+                <hmis:DomesticViolenceVictim>8</hmis:DomesticViolenceVictim>
+                <hmis:WhenOccurred>2</hmis:WhenOccurred>
             </hmis:DomesticViolence>
-            <hmis:Education hmis:dataCollectionStage="5" hmis:informationDate="PpaOn3r65Ww" hmis:dateCreated="2015-01-31T23:14:59"
+            <hmis:SchoolStatus hmis:dataCollectionStage="5" hmis:informationDate="PpaOn3r65Ww" hmis:dateCreated="2015-01-31T23:14:59"
                  hmis:dateUpdated="2016-01-10T23:14:59Z" hmis:userID="ZY_LSOlhidHlBIqeiqvbi1Oosl">
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:SchoolStatus>8</hmis:SchoolStatus>
-            </hmis:Education>
+            </hmis:SchoolStatus>
             <hmis:Employment hmis:dataCollectionStage="5" hmis:informationDate="KNNYk5f" hmis:dateCreated="2016-03-26T23:14:59Z"
                  hmis:dateUpdated="2015-04-01T23:14:59Z" hmis:userID="sXKqL">
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
@@ -98,6 +98,7 @@
                 <hmis:ContinuouslyHomelessOneYear>8</hmis:ContinuouslyHomelessOneYear>
                 <hmis:TimesHomelessPastThreeYears>0</hmis:TimesHomelessPastThreeYears>
                 <hmis:MonthsHomelessPastThreeYears>1.03</hmis:MonthsHomelessPastThreeYears>
+                <hmis:MonthsHomelessThisTime>1</hmis:MonthsHomelessThisTime>
                 <hmis:YearsHomeless>3</hmis:YearsHomeless>
                 <hmis:StatusDocumented>1</hmis:StatusDocumented>
                 <hmis:DisablingCondition>9</hmis:DisablingCondition>
@@ -326,6 +327,11 @@
                 <hmis:ProjectCompletionStatus>3</hmis:ProjectCompletionStatus>
                 <hmis:EarlyExitReason>1</hmis:EarlyExitReason>
             </hmis:ProjectCompletionStatus>
+            <hmis:ReferralSource hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="byoung32">
+                <hmis:ProjectEntryID></hmis:ProjectEntryID>
+                <hmis:ReferralSource>18</hmis:ReferralSource>
+                <hmis:CountOutreachReferralApproaches>3</hmis:CountOutreachReferralApproaches>
+            </hmis:ReferralSource>
             <hmis:ResidentialMoveInDate hmis:dateCreated="2015-04-25T23:14:59" hmis:dateUpdated="2015-07-23T23:14:59Z" hmis:userID="AUfZ2">
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:InPermanentHousing>0</hmis:InPermanentHousing>
@@ -343,7 +349,7 @@
                 <hmis:RecordType>16</hmis:RecordType>
                 <hmis:TypeProvided>341583807</hmis:TypeProvided>
                 <hmis:OtherTypeProvided>some other type here</hmis:OtherTypeProvided>
-                <hmis:SubTypeProvided>some subtype here</hmis:SubTypeProvided>
+                <hmis:SubTypeProvided>2</hmis:SubTypeProvided>
                 <hmis:FAAmount>1145.59</hmis:FAAmount>
                 <hmis:ReferralOutcome>2</hmis:ReferralOutcome>
             </hmis:Services>
@@ -407,8 +413,6 @@
                 <hmis:ActiveMilitaryParent>1</hmis:ActiveMilitaryParent>
                 <hmis:IncarceratedParent>1</hmis:IncarceratedParent>
                 <hmis:IncarceratedParentStatus>1</hmis:IncarceratedParentStatus>
-                <hmis:ReferralSource>26</hmis:ReferralSource>
-                <hmis:CountOutreachReferralApproaches>31</hmis:CountOutreachReferralApproaches>                
             </hmis:YouthCriticalIssues>
         </hmis:Export>
     </hmis:Source>

@@ -291,13 +291,13 @@
 					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="domesticViolenceVictim" type="hmis:fiveValDKRefused" minOccurs="0">
+			<xs:element name="DomesticViolenceVictim" type="hmis:fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.11, #2.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.11 Domestic Violence Victim/Survivor"</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="whenOccured" type="hmis:whenOccurred" minOccurs="0">
+			<xs:element name="WhenOccurred" type="hmis:whenOccurred" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.11, #2A.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.11 Domestic Violence Victim/Survivor"</xs:documentation>
@@ -309,14 +309,14 @@
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 
-	<xs:complexType name="education">
+	<xs:complexType name="schoolStatus">
 		<xs:sequence>
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SchoolStatus" type="hmis:schoolStatus" minOccurs="0">
+			<xs:element name="SchoolStatus" type="hmis:schoolStatusSimple" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.25, #1.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.25 School Status"</xs:documentation>
@@ -500,7 +500,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "3.11 Project Exit Date".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Destination" type="hmis:destination">
+			<xs:element name="Destination" type="hmis:destination" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.12, #1.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "3.12 Destination".</xs:documentation>
@@ -656,7 +656,6 @@
 				<xs:element name="DateOfEngagement" type="hmis:dateOfEngagement"/>
 				<xs:element name="Disabilities" type="hmis:disabilities"/>
 				<xs:element name="DomesticViolence" type="hmis:domesticViolence"/>
-				<xs:element name="Education" type="hmis:education"/>			
 				<xs:element name="Employment" type="hmis:employment">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.26</xs:documentation>
@@ -741,6 +740,7 @@
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="ProjectCompletionStatus" type="hmis:projectCompletionStatus"/>
+				<xs:element name="ReferralSource" type="hmis:referralSource"/>
 				<xs:element name="ResidentialMoveInDate" type="hmis:residentialMoveInDate">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.17</xs:documentation>
@@ -753,6 +753,7 @@
 						<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.22 "RHYBCP Status".</xs:documentation>
 					</xs:annotation>
 				</xs:element>
+				<xs:element name="SchoolStatus" type="hmis:schoolStatus"/>			
 				<xs:element name="Services" type="hmis:services">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.14-4.16</xs:documentation>
@@ -1654,6 +1655,27 @@
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
+	<xs:complexType name="referralSource">
+		<xs:sequence>
+			<xs:element name="ProjectEntryID" type="hmis:string32"/>
+			<xs:element name="ReferralSource" type="hmis:referralSourceSimple">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.34, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.34 Referral Source".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CountOutreachReferralApproaches" type="xs:unsignedInt" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.34, #1A.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.34 Referral Source".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute ref="dataCollectionStage"/>
+		<xs:attribute name="informationDate"/>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+	
 	<xs:complexType name="residentialMoveInDate">
 		<xs:sequence>
 			<xs:element name="ProjectEntryID" type="hmis:string32"/>
@@ -1709,7 +1731,7 @@
 			</xs:element>
 			<xs:element name="RecordType" type="hmis:recordType">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">The permissible values correspond to the decimal values of the corresponding Service FA Referral types.  4.14 Services Provided is "14" and 4.16 Referrals Provided is "16".</xs:documentation>
+					<xs:documentation xml:lang="en">The permissible values correspond to the decimal values of the corresponding Service FA Referral and Contact types.  4.12 is Contact, 4.14 Services Provided is "14" and 4.16 Referrals Provided is "16".</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.12 and 4.14-4.16.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -1725,7 +1747,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.12 and 4.14-4.16.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SubTypeProvided" type="hmis:string50" minOccurs="0">
+			<xs:element name="SubTypeProvided" type="xs:unsignedInt" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #3A, 4B, 5C (if it exists).</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.12 and 4.14-4.16.</xs:documentation>
@@ -2053,10 +2075,6 @@
 					<xs:field xpath="hmis:CoCCode"/>
 					<xs:field xpath="hmis:ProjectID"/>					
 				</xs:keyref>
-				<xs:keyref name="siteProjectKeyRef" refer="projectKey">
-					<xs:selector xpath="hmis:Site"/>
-					<xs:field xpath="hmis:ProjectID"/>
-				</xs:keyref>
 				<xs:keyref name="veteranInfoClientKeyRef" refer="clientKey">
 					<xs:selector xpath="hmis:VeteranInfo"/>
 					<xs:field xpath="hmis:PersonalID"/>
@@ -2326,18 +2344,6 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #24A.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ReferralSource" type="hmis:referralSource">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.34, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.34 Referral Source".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CountOutreachReferralApproaches" type="xs:unsignedInt" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.34, #1A.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.34 Referral Source".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -4714,7 +4720,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="	referralSource">
+	<xs:simpleType name="	referralSourceSimple">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
 				1 = Self-Referral
@@ -5227,7 +5233,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="schoolStatus">
+	<xs:simpleType name="schoolStatusSimple">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
 				School Status
