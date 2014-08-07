@@ -24,6 +24,22 @@
 		</xs:annotation>
 	</xs:element>
 
+	<xs:complexType name="affiliation">
+		<xs:sequence>
+			<xs:element name="ProjectID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to a Project element</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ResProjectID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See HMIS Data Dictionary (Proposed Amendment), Section 2.4, Project Type, #2AB.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="baseMetaData"/>
+	</xs:complexType>
+
 	<xs:complexType name="bedInventory">
 		<xs:sequence>
 			<xs:element name="BedInventory" type="xs:nonNegativeInteger">
@@ -152,19 +168,6 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.7.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-		</xs:sequence>
-		<xs:attributeGroup ref="baseMetaData"/>
-	</xs:complexType>
-
-	<xs:complexType name="coc">
-		<xs:sequence>
-			<xs:element name="CoCCode" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.3 #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, See May 2014 HMIS Data Manual, Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements), p. 13.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ProjectCoCID" type="hmis:string32"/>
 		</xs:sequence>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
@@ -386,70 +389,75 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.15.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ResidencePrior" type="hmis:residencePrior">
+			<xs:element name="ResidencePrior" type="hmis:residencePrior" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.9.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.9.</xs:documentation>					
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherResidencePrior" type="hmis:string50">
+			<xs:element name="OtherResidencePrior" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.9.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.9.</xs:documentation>					
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ResidencePriorLengthOfStay" type="hmis:residencePriorLengthOfStay">
+			<xs:element name="ResidencePriorLengthOfStay" type="hmis:residencePriorLengthOfStay" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.9.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.9.</xs:documentation>					
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DisablingCondition" type="hmis:fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.8.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.8.</xs:documentation>					
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="HousingStatus" type="hmis:housingStatus">
+			<xs:element name="ContinuouslyHomelessOneYear" type="hmis:fiveValDKRefused" minOccurs="0">
 				<xs:annotation>					
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.17 #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.17, #1.</xs:documentation>
 				</xs:annotation>				
 			</xs:element>
-			<xs:element name="ContinuouslyHomelessOneYear" type="hmis:fiveValDKRefused">
-				<xs:annotation>					
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.17.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.17.</xs:documentation>
-				</xs:annotation>				
-			</xs:element>
-			<xs:element name="TimesHomelessPastThreeYears" type="hmis:timesHomelessPastThreeYears">
+			<xs:element name="TimesHomelessPastThreeYears" type="hmis:timesHomelessPastThreeYears" minOccurs="0">
 				<xs:annotation>					
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.17, #2.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.17, #2.</xs:documentation>
 				</xs:annotation>				
 			</xs:element>
-			<xs:element name="MonthsHomelessPastThreeYears" type="hmis:monthsHomelessPastThreeYears">
+			<xs:element name="MonthsHomelessPastThreeYears" type="hmis:monthsHomelessPastThreeYears" minOccurs="0">
 				<xs:annotation>					
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.17, #3.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.17, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See 2014 HMIS Data Dictionary (Proposed Amendment), Section 3.17, #2A.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual (Proposed Amendment), Section 3.17, #2A.</xs:documentation>
 				</xs:annotation>				
 			</xs:element>
-			<xs:element name="YearsHomeless" type="xs:positiveInteger">
+			<xs:element name="MonthsHomelessThisTime" type="hmis:monthsHomelessPastThreeYears" minOccurs="0">
 				<xs:annotation>					
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.17, #3.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.17, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See 2014 HMIS Data Dictionary (Proposed Amendment), Section 3.17, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual (Proposed Amendment), Section 3.17, #3.</xs:documentation>
 				</xs:annotation>				
 			</xs:element>
-			<xs:element name="StatusDocumented" type="hmis:noYes">
+			<xs:element name="YearsHomeless" type="xs:positiveInteger" minOccurs="0">
+				<xs:annotation>					
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.17, #3A.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.17, #3A.</xs:documentation>
+				</xs:annotation>				
+			</xs:element>
+			<xs:element name="StatusDocumented" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>					
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.17, #4.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.17, #4.</xs:documentation>
 				</xs:annotation>				
 			</xs:element>
+			<xs:element name="DisablingCondition" type="hmis:fiveValDKRefused" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.8.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.8.</xs:documentation>					
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HousingStatus" type="hmis:housingStatus" minOccurs="0">
+				<xs:annotation>					
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.1.</xs:documentation>
+				</xs:annotation>				
+			</xs:element>
 		</xs:sequence>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
-
 
 	<xs:complexType name="enrollmentCoC">
 		<xs:sequence>
@@ -458,9 +466,14 @@
 					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ClientCoC" type="hmis:string32">
+			<xs:element name="CoCCode" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the CoC's ID which is related to this project enrollment.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the CoC Code which is related to this project enrollment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProjectID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to a Project element</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -636,8 +649,8 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Affiliation" type="hmis:affiliation"/>
 				<xs:element name="Client" type="hmis:client"/>
-				<xs:element name="CoC" type="hmis:coc"/>
 				<xs:element name="CommercialSexualExploitation" type="hmis:commercialSexualExploitation"/>
 				<xs:element name="ConnectionWithSOAR" type="hmis:connectionWithSOAR"/>
 				<xs:element name="DateOfEngagement" type="hmis:dateOfEngagement"/>
@@ -880,7 +893,7 @@
 		<xs:sequence>
 			<xs:element name="ProjectID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">refers to a Project element</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to a Project element</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Funder" type="hmis:federalPartnerProgramsAndComponents">
@@ -1278,12 +1291,12 @@
 
 	<xs:complexType name="inventory">
 		<xs:sequence>
-			<xs:element name="ProjectID" type="hmis:string32"/>
 			<xs:element name="CoCCode" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">refers to a CoC Element</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="ProjectID" type="hmis:string32"/>
 			<xs:element name="HouseholdType" type="hmis:householdType">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.7, #2.</xs:documentation>
@@ -1304,26 +1317,26 @@
 			</xs:element>
 			<xs:element name="UnitInventory" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.7, #5.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.7, #7.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements), p. 14.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BedInventory" type="hmis:bedInventory"/>
 			<xs:element name="InventoryStartDate" type="xs:date">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.7, #6.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.7, #7.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements), p. 14.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InventoryEndDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.7, #7.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.7, #8.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements), p. 14.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HMISParticipatingBeds" type="xs:nonNegativeInteger">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.7, #8.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.7, #9.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements), p. 14.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -1564,7 +1577,6 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrganizationID" type="hmis:string32"/>
-			<xs:element name="ProjectCoCID" type="hmis:string32"/>
 			<xs:element name="ProjectName" type="hmis:string50">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.2, #2.</xs:documentation>
@@ -1583,7 +1595,12 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.4, #2.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements)", p. 13.</xs:documentation>
 				</xs:annotation>
-				</xs:element>
+			</xs:element>
+			<xs:element name="ResidentialAffiliation" type="hmis:noYes" minOccurs="0">		
+				<xs:annotation>
+					<xs:documentation xml:lang="en">HMIS Data Dictionary, Proposed Amendment, Section 2.4, #2A.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="TrackingMethod" type="hmis:trackingMethod" minOccurs="0">		
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.5, #1.</xs:documentation>
@@ -1608,10 +1625,10 @@
 	
 	<xs:complexType name="projectCoC">
 		<xs:sequence>
-			<xs:element name="ProjectCoCID" type="hmis:string32"/>
 			<xs:element name="CoCCode" type="hmis:string32"/>
 			<xs:element name="ProjectID" type="hmis:string32"/>
 		</xs:sequence>
+		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
 	<xs:complexType name="projectCompletionStatus">
@@ -1844,10 +1861,6 @@
 					<xs:selector xpath="hmis:Client"/>
 					<xs:field xpath="hmis:PersonalID"/>
 				</xs:key>
-				<xs:key name="cocKey">
-					<xs:selector xpath="hmis:CoC"/>
-					<xs:field xpath="hmis:CoCCode"/>
-				</xs:key>
 				<xs:key name="enrollmentKey">
 					<xs:selector xpath="hmis:Enrollment"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
@@ -1866,19 +1879,29 @@
 				</xs:key>
 				<xs:key name="projectCoCKey">
 					<xs:selector xpath="hmis:ProjectCoC"/>
-					<xs:field xpath="hmis:ProjectCoCID"/>
+					<xs:field xpath="hmis:CoCCode"/>
+					<xs:field xpath="hmis:ProjectID"/>
 				</xs:key>
-				<xs:keyref name="clientKeyRef" refer="clientKey">
+				<xs:keyref name="affiliationProjectKeyRef" refer="projectKey">
+					<xs:selector xpath="hmis:Affiliation"/>
+					<xs:field xpath="hmis:ProjectID"/>
+				</xs:keyref>
+				<xs:keyref name="affiliationResProjectKeyRef" refer="projectKey">
+					<xs:selector xpath="hmis:Affiliation"/>
+					<xs:field xpath="hmis:ResProjectID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentClientKeyRef" refer="clientKey">
 					<xs:selector xpath="hmis:Enrollment"/>
 					<xs:field xpath="hmis:PersonalID"/>
 				</xs:keyref>
-				<xs:keyref name="cocEnrollmentCoCKeyRef" refer="cocKey">
+				<xs:keyref name="enrollmentCoCProjectCoCKeyRef" refer="projectCoCKey">
 					<xs:selector xpath="hmis:EnrollmentCoC"/>
-					<xs:field xpath="hmis:ClientCoC"/>
+					<xs:field xpath="hmis:CoCCode"/>
+					<xs:field xpath="hmis:ProjectID"/>
 				</xs:keyref>
-				<xs:keyref name="cocProjectKeyRef" refer="projectCoCKey">
-					<xs:selector xpath="hmis:CoC"/>
-					<xs:field xpath="hmis:ProjectCoCID"/>
+				<xs:keyref name="enrollmentCoCEnrollmentKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:EnrollmentCoC"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>					
 				</xs:keyref>
 				<xs:keyref name="enrollmentCommercialSexualExploitationKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:CommercialSexualExploitation"/>
@@ -2004,25 +2027,14 @@
 					<xs:selector xpath="hmis:ProjectCompletionStatus"/>
 					<xs:field xpath="hmis:ExitID"/>
 				</xs:keyref>
-				<xs:keyref name="inventoryCoCKeyRef" refer="cocKey">
+				<xs:keyref name="inventoryProjectCoCKeyRef" refer="projectCoCKey">
 					<xs:selector xpath="hmis:Inventory"/>
 					<xs:field xpath="hmis:CoCCode"/>
-				</xs:keyref>
-				<xs:keyref name="inventoryProjectKeyRef" refer="projectKey">
-					<xs:selector xpath="hmis:Inventory"/>
 					<xs:field xpath="hmis:ProjectID"/>
-				</xs:keyref>	
+				</xs:keyref>
 				<xs:keyref name="projectOrganizationKeyRef" refer="organizationKey">
 					<xs:selector xpath="hmis:Project"/>
 					<xs:field xpath="hmis:OrganizationID"/>
-				</xs:keyref>
-				<xs:keyref name="projectCoCKeyRef" refer="projectCoCKey">
-					<xs:selector xpath="hmis:Project"/>
-					<xs:field xpath="hmis:ProjectCoCID"/>
-				</xs:keyref>
-				<xs:keyref name="projectCoCCoCKeyRef" refer="cocKey">
-					<xs:selector xpath="hmis:ProjectCoC"/>
-					<xs:field xpath="hmis:CoCCode"/>
 				</xs:keyref>
 				<xs:keyref name="projectCoCProjectKeyRef" refer="projectKey">
 					<xs:selector xpath="hmis:ProjectCoC"/>
@@ -2036,9 +2048,10 @@
 					<xs:selector xpath="hmis:Funder"/>
 					<xs:field xpath="hmis:ProjectID"/>
 				</xs:keyref>
-				<xs:keyref name="siteCoCKeyRef" refer="cocKey">
+				<xs:keyref name="siteProjectCoCKeyRef" refer="projectCoCKey">
 					<xs:selector xpath="hmis:Site"/>
 					<xs:field xpath="hmis:CoCCode"/>
+					<xs:field xpath="hmis:ProjectID"/>					
 				</xs:keyref>
 				<xs:keyref name="siteProjectKeyRef" refer="projectKey">
 					<xs:selector xpath="hmis:Site"/>
@@ -2137,7 +2150,7 @@
 			</xs:element>
 			<xs:element name="DischargeStatus" type="dischargeStatus">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #11</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #12</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
 				</xs:annotation>
 			</xs:element>
@@ -3157,8 +3170,8 @@
 				12 = HUD:Rural Housing Stability Assistance Program 
 				13 = HUD:HOPWA – Hotel/Motel Vouchers 
 				14 = HUD:HOPWA – Housing Information 
-				15 = HUD:HOPWA – Permanent Housing 
-				16 = HUD:HOPWA – Permanent Housing Placement (facility based or TBRA) 
+				15 = HUD:HOPWA – Permanent Housing (facility based or TBRA)
+				16 = HUD:HOPWA – Permanent Housing Placement
 				17 = HUD:HOPWA – Short-Term Rent, Mortgage, Utility assistance 
 				18 = HUD:HOPWA – Short-Term Supportive Facility 
 				19 = HUD:HOPWA – Transitional Housing (facility based or TBRA) 
@@ -5538,8 +5551,8 @@
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
 				Number of Times the Client has been Homeless in the Past Three Years 
-					0 = 0 
-					1 = 1 
+					0 = 0 (not homeless - Prevention only)
+					1 = 1 (homeless only this time)
 					2 = 2 
 					3 = 3 
 					4 = 4 or more 
