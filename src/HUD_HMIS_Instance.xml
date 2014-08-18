@@ -134,15 +134,13 @@
                  hmis:dateUpdated="2016-02-19T23:14:59" hmis:userID="DU5m">
                 <hmis:EnrollmentCoCID>56332</hmis:EnrollmentCoCID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:CoCCode>500211</hmis:CoCCode>
-                <hmis:ProjectID>222E</hmis:ProjectID>
+                <hmis:ProjectCoCID>343</hmis:ProjectCoCID>
             </hmis:EnrollmentCoC>
             <hmis:EnrollmentCoC hmis:dataCollectionStage="5" hmis:informationDate="2015-06-24" hmis:dateCreated="2016-02-13T23:14:59Z"
                 hmis:dateUpdated="2016-02-19T23:14:59" hmis:userID="DU5m">
                 <hmis:EnrollmentCoCID>56332</hmis:EnrollmentCoCID>
                 <hmis:ProjectEntryID>w5642</hmis:ProjectEntryID>
-                <hmis:CoCCode>500211</hmis:CoCCode>
-                <hmis:ProjectID>222E</hmis:ProjectID>
+                <hmis:ProjectCoCID>344</hmis:ProjectCoCID>
             </hmis:EnrollmentCoC>
             <hmis:Exit hmis:dateCreated="2014-10-07T23:14:59Z" hmis:dateUpdated="2015-11-06T23:14:59Z" hmis:userID="GO">
                 <hmis:ExitID>C2x</hmis:ExitID>
@@ -315,8 +313,7 @@
             <hmis:Inventory hmis:informationDate="2015-04-04Z" hmis:dateCreated="2015-09-12T23:14:59Z" hmis:dateUpdated="2015-08-29T23:14:59Z"
                  hmis:userID="billj">
                 <hmis:InventoryID>56563a</hmis:InventoryID>
-                <hmis:CoCCode>500211</hmis:CoCCode>
-                <hmis:ProjectID>222E</hmis:ProjectID>
+                <hmis:ProjectCoCID>343</hmis:ProjectCoCID>
                 <hmis:HouseholdType>1</hmis:HouseholdType>
                 <hmis:BedType>3</hmis:BedType>
                 <hmis:Availabilty>3</hmis:Availabilty>
@@ -416,7 +413,7 @@
                 <hmis:ProjectID>222D</hmis:ProjectID>
             </hmis:ProjectCoC>
             <hmis:ProjectCoC  hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="bmerriweather">
-                <hmis:ProjectCoCID>343</hmis:ProjectCoCID>
+                <hmis:ProjectCoCID>344</hmis:ProjectCoCID>
                 <hmis:CoCCode>500211</hmis:CoCCode>
                 <hmis:ProjectID>222E</hmis:ProjectID>
             </hmis:ProjectCoC>
@@ -463,8 +460,7 @@
             </hmis:SexualOrientation>
             <hmis:Site hmis:dateCreated="2014-09-03T23:14:59" hmis:dateUpdated="2016-02-25T23:14:59Z" hmis:userID="ck">
                 <hmis:SiteID>4526</hmis:SiteID>
-                <hmis:CoCCode>500211</hmis:CoCCode>
-                <hmis:ProjectID>222E</hmis:ProjectID>
+                <hmis:ProjectCoCID>343</hmis:ProjectCoCID>
                 <hmis:PrincipalSite>1</hmis:PrincipalSite>
                 <hmis:Address>111 Pine St.</hmis:Address>
                 <hmis:City>Tuscaloosa</hmis:City>
