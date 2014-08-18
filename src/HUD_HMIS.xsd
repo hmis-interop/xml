@@ -507,14 +507,9 @@
 					<xs:documentation xml:lang="en">Key reference to the Enrollment's ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CoCCode" type="hmis:string32">
+			<xs:element name="ProjectCoCID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the CoC Code which is related to this project enrollment</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ProjectID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to a Project element</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to a ProjectCoC</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -1414,14 +1409,9 @@
 					<xs:documentation xml:lang="en">Reference to the Inventory's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CoCCode" type="hmis:string32">
+			<xs:element name="ProjectCoCID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the CoC Element</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ProjectID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the Project</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the ProjectCoC</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HouseholdType" type="hmis:householdType">
@@ -2024,14 +2014,9 @@
 					<xs:documentation xml:lang="en">Reference to the Site's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CoCCode" type="hmis:string32">
+			<xs:element name="ProjectCoCID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the CoCCode</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ProjectID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the Project</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the ProjectCoC</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PrincipalSite" type="hmis:noYes">
@@ -2143,8 +2128,7 @@
 				</xs:key>
 				<xs:key name="projectCoCKey">
 					<xs:selector xpath="hmis:ProjectCoC"/>
-					<xs:field xpath="hmis:CoCCode"/>
-					<xs:field xpath="hmis:ProjectID"/>
+					<xs:field xpath="hmis:ProjectCoCID"/>
 				</xs:key>
 				<xs:keyref name="affiliationProjectKeyRef" refer="projectKey">
 					<xs:selector xpath="hmis:Affiliation"/>
@@ -2160,8 +2144,7 @@
 				</xs:keyref>
 				<xs:keyref name="enrollmentCoCProjectCoCKeyRef" refer="projectCoCKey">
 					<xs:selector xpath="hmis:EnrollmentCoC"/>
-					<xs:field xpath="hmis:CoCCode"/>
-					<xs:field xpath="hmis:ProjectID"/>
+					<xs:field xpath="hmis:ProjectCoCID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentCoCEnrollmentKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:EnrollmentCoC"/>
@@ -2297,8 +2280,7 @@
 				</xs:keyref>
 				<xs:keyref name="inventoryProjectCoCKeyRef" refer="projectCoCKey">
 					<xs:selector xpath="hmis:Inventory"/>
-					<xs:field xpath="hmis:CoCCode"/>
-					<xs:field xpath="hmis:ProjectID"/>
+					<xs:field xpath="hmis:ProjectCoCID"/>
 				</xs:keyref>
 				<xs:keyref name="projectOrganizationKeyRef" refer="organizationKey">
 					<xs:selector xpath="hmis:Project"/>
@@ -2318,8 +2300,7 @@
 				</xs:keyref>
 				<xs:keyref name="siteProjectCoCKeyRef" refer="projectCoCKey">
 					<xs:selector xpath="hmis:Site"/>
-					<xs:field xpath="hmis:CoCCode"/>
-					<xs:field xpath="hmis:ProjectID"/>					
+					<xs:field xpath="hmis:ProjectCoCID"/>					
 				</xs:keyref>
 				<xs:keyref name="veteranInfoClientKeyRef" refer="clientKey">
 					<xs:selector xpath="hmis:VeteranInfo"/>
