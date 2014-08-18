@@ -1,10 +1,11 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
-<xs:schema 
+<xs:schema
 	targetNamespace="http://www.hudhdx.info/Resources/Vendors/4_0/HUD_HMIS.xsd"
 	xmlns="http://www.hudhdx.info/Resources/Vendors/4_0/HUD_HMIS.xsd"	
 	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_0/HUD_HMIS.xsd"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	vc:minVersion = "1.1"
 	elementFormDefault="qualified"
@@ -13,19 +14,25 @@
 		
 	<xs:defaultOpenContent mode="interleave" appliesToEmpty="true"> 
 		<xs:annotation>
-			<xs:documentation>Allows the schema to be extended with a different namespace.  See X</xs:documentation>
+			<xs:documentation>Allows the schema to be extended with a different namespace.  See "Open Content" in http://www.w3.org/TR/xmlschema11-1/#cvc-wildcard
+				http://www.w3.org/TR/xmlschema11-1/#cvc-wildcard</xs:documentation>
 		</xs:annotation>
 		<xs:any notNamespace="##targetNamespace"/> 
 	</xs:defaultOpenContent> 	
 	
 	<xs:element name="Sources" type="hmis:sources">
 		<xs:annotation>
-			<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+			<xs:documentation xml:lang="en">XML Root element.  A description of what software provider and organization are sending this XML information.  Many sources can be grouped together into one XML file.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 
 	<xs:complexType name="affiliation">
 		<xs:sequence>
+			<xs:element name="AffiliationID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the Affiliation's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="ProjectID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to a Project element</xs:documentation>
@@ -174,9 +181,14 @@
 	
 	<xs:complexType name="commercialSexualExploitation">
 		<xs:sequence>
+			<xs:element name="CommercialSexualExploitationID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the CommercialSexualExploitation's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExchangeForSexPastThreeMonths" type="hmis:fiveValDKRefused">
@@ -199,15 +211,19 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="dataCollectionStage"/>
-		<xs:attribute name="informationDate"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
 	<xs:complexType name="dateOfEngagement">
 		<xs:sequence>
+			<xs:element name="DateOfEngagementID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the DateOfEngagement's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DateOfEngagement" type="xs:date">
@@ -232,9 +248,14 @@
 
 	<xs:complexType name="disabilities">
 		<xs:sequence>
+			<xs:element name="DisabilitiesID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the Exit's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DisabilityType" type="hmis:disabilityType">
@@ -286,9 +307,14 @@
 	
 	<xs:complexType name="domesticViolence">
 		<xs:sequence>
+			<xs:element name="DomesticViolenceID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the DomesticViolence's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DomesticViolenceVictim" type="hmis:fiveValDKRefused" minOccurs="0">
@@ -311,9 +337,14 @@
 
 	<xs:complexType name="schoolStatus">
 		<xs:sequence>
+			<xs:element name="SchoolStatusID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the SchoolStatus' unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SchoolStatus" type="hmis:schoolStatusSimple" minOccurs="0">
@@ -330,9 +361,14 @@
 	
 	<xs:complexType name="employment">
 		<xs:sequence>
+			<xs:element name="EmploymentID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the Employment's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Employed" type="hmis:fiveValDKRefused">
@@ -363,7 +399,7 @@
 		<xs:sequence>
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Reference to the Enrollment's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PersonalID" type="hmis:string32">
@@ -461,9 +497,14 @@
 
 	<xs:complexType name="enrollmentCoC">
 		<xs:sequence>
+			<xs:element name="EnrollmentCoCID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the EnrollmentCoC's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment's ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CoCCode" type="hmis:string32">
@@ -486,12 +527,12 @@
 		<xs:sequence>
 			<xs:element name="ExitID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Reference to the Exit's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExitDate" type="xs:date">
@@ -518,9 +559,14 @@
 
 	<xs:complexType name="connectionWithSOAR">
 		<xs:sequence>
+			<xs:element name="ConnectionWithSOARID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the ConnectionWithSOARID's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ExitID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Exit ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ConnectionWithSOAR" type="hmis:fiveValDKRefused">
@@ -535,9 +581,14 @@
 	
 	<xs:complexType name="exitHousingAssessment">
 		<xs:sequence>
+			<xs:element name="ExitHousingAssessmentID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the ExitHousingAssessment's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ExitID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HousingAssessment" type="hmis:housingAssessmentAtExit">
@@ -558,9 +609,14 @@
 	
 	<xs:complexType name="exitPlansActions">
 		<xs:sequence>
+			<xs:element name="ExitPlansActionsID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the ExitPlansActions' unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="ExitID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WrittenAftercarePlan" type="hmis:noYesRefused">
@@ -625,27 +681,27 @@
 		<xs:sequence>
 			<xs:element name="ExportID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, Section X.</xs:documentation>
+					<xs:documentation xml:lang="en">Reference to the Export's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>			
 			<xs:element name="ExportDate" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, Section X.</xs:documentation>
+					<xs:documentation xml:lang="en">Time the export was performed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExportPeriod" type="hmis:dateRangeCapped" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, Section X.</xs:documentation>
+					<xs:documentation xml:lang="en">The date range bounding the data set being transmitted.  Used with ExportPeriodType to clarify what the date range represents.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExportPeriodType" type="hmis:exportPeriodType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, Section X.</xs:documentation>
+					<xs:documentation xml:lang="en">Pick one of the types to specify the definition of export period being used in ExportPeriod.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExportDirective" type="hmis:exportDirective" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, Section X.</xs:documentation>
+					<xs:documentation xml:lang="en">Select one of the ExportDirective choices to instruct the target as to how the data being transmitted should be handled.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:choice maxOccurs="unbounded">
@@ -792,30 +848,42 @@
 				</xs:element>
 			</xs:choice>
 		</xs:sequence>
+		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:Enrollment[hmis:PersonalID = $id]) ge 1)"/>		
+		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:VeteranInfo[hmis:PersonalID = $id]) le 1)"/>				
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:DateOfEngagement[hmis:ProjectEntryID = $id]) le 1)"/>				
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EnrollmentCoC[hmis:ProjectEntryID = $id]) ge 1)"/>		
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:Exit[hmis:ProjectEntryID = $id]) le 1)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:FormerWardChildWelfare[hmis:ProjectEntryID = $id]) le 1)"/>		
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:FormerWardJuvenileJustice[hmis:ProjectEntryID = $id]) le 1)"/>		
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:LastPermanentAddress[hmis:ProjectEntryID = $id]) le 1)"/>		
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:PathStatus[hmis:ProjectEntryID = $id]) le 1)"/>		
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:PercentAMI[hmis:ProjectEntryID = $id]) le 1)"/>				
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:ReferralSource[hmis:ProjectEntryID = $id]) le 1)"/>						
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:ResidentialMoveInDate[hmis:ProjectEntryID = $id]) le 1)"/>								
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:RHYBCPStatus[hmis:ProjectEntryID = $id]) le 1)"/>				
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:SexualOrientation[hmis:ProjectEntryID = $id]) le 1)"/>						
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:WorstHousingSituation[hmis:ProjectEntryID = $id]) le 1)"/>		
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:YouthCriticalIssues[hmis:ProjectEntryID = $id]) le 1)"/>		
+		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ConnectionWithSOAR[hmis:ExitID = $id]) le 1)"/>				
+		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitHousingAssessment[hmis:ExitID = $id]) le 1)"/>				
+		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitPlansActions[hmis:ExitID = $id]) le 1)"/>				
+		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:HousingAssessmentDisposition[hmis:ExitID = $id]) le 1)"/>		
+		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:FamilyReunification[hmis:ExitID = $id]) le 1)"/>
+		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ProjectCompletionStatus[hmis:ExitID = $id]) le 1)"/>				
+		<xs:assert test="every $id in hmis:Organization/hmis:OrganizationID satisfies (fn:count(hmis:Project[hmis:OrganizationID = $id]) ge 1)"/>						
+		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Funder[hmis:ProjectID = $id]) ge 1)"/>
+		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:ProjectCoC[hmis:ProjectID = $id]) ge 1)"/>								
 	</xs:complexType>
-	
 	<xs:complexType name="familyReunification">
 		<xs:sequence>
-			<xs:element name="ExitID" type="hmis:string32">
+			<xs:element name="FamilyReunificationID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Reference to the FamilyReunification's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FamilyReunificationAchieved" type="hmis:fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.38, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.38 Family Reunification Achieved".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attributeGroup ref="baseMetaData"/>
-	</xs:complexType>
-
-	<xs:complexType name="familyReunificationAchieved">
-		<xs:sequence>
 			<xs:element name="ExitID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Exit ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FamilyReunificationAchieved" type="hmis:fiveValDKRefused">
@@ -830,9 +898,14 @@
 
 	<xs:complexType name="formerWardChildWelfare">
 		<xs:sequence>
+			<xs:element name="FormerWardChildWelfareID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the FormerWardChildWelfare's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FormerWardChildWelfare" type="hmis:fiveValDKRefused">
@@ -861,9 +934,14 @@
 
 	<xs:complexType name="formerWardJuvenileJustice">
 		<xs:sequence>
+			<xs:element name="FormerWardJuvenileJusticeID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the FormerWardJuvenileJusticeID's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FormerWardJuvenileJustice" type="hmis:fiveValDKRefused">
@@ -892,6 +970,11 @@
 
 	<xs:complexType name="funder">
 		<xs:sequence>
+			<xs:element name="FunderID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the Funder's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="ProjectID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to a Project element</xs:documentation>
@@ -927,7 +1010,16 @@
 	
 	<xs:complexType name="healthInsurance">
 		<xs:sequence>
-			<xs:element name="ProjectEntryID" type="hmis:string32"/>
+			<xs:element name="HealthInsuranceID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the HealthInsurance's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="InsuranceFromAnySource" type="hmis:fiveValDKRefused">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.4, #2.</xs:documentation>
@@ -1038,7 +1130,16 @@
 	
 	<xs:complexType name="healthStatus">
 		<xs:sequence>
-			<xs:element name="ProjectEntryID" type="hmis:string32"/>
+			<xs:element name="HealthStatusID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the HealthStatus' unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="HealthCategory" type="hmis:healthCategory">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">The permissible values correspond to the decimal values of the corresponding disability types.  4.27 General Health Status is "27" and 4.29 Mental Health Status is "29".</xs:documentation>
@@ -1064,7 +1165,15 @@
 	
 	<xs:complexType name="housingAssessmentDisposition">
 		<xs:sequence>
+			<xs:element name="HousingAssessmentDispositionID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the HousingAssessmentDisposition's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ExitID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the ExitID</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 			<xs:element name="AssessmentDisposition" type="hmis:assessmentDisposition">
 				<xs:annotation>
@@ -1084,7 +1193,15 @@
 	
 	<xs:complexType name="incomeAndSources">
 		<xs:sequence>
+			<xs:element name="IncomeAndSourcesID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the IncomeAndSources' unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 			<xs:element name="IncomeFromAnySource" type="hmis:fiveValDKRefused">
 				<xs:annotation>
@@ -1292,12 +1409,21 @@
 
 	<xs:complexType name="inventory">
 		<xs:sequence>
-			<xs:element name="CoCCode" type="hmis:string32">
+			<xs:element name="InventoryID"  type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">refers to a CoC Element</xs:documentation>
+					<xs:documentation xml:lang="en">Reference to the Inventory's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectID" type="hmis:string32"/>
+			<xs:element name="CoCCode" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the CoC Element</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProjectID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Project</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="HouseholdType" type="hmis:householdType">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.7, #2.</xs:documentation>
@@ -1348,9 +1474,14 @@
 
 	<xs:complexType name="lastGradeCompleted">
 		<xs:sequence>
+			<xs:element name="LastGradeCompletedID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the LastGradeCompletedID's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LastGradeCompleted" type="hmis:lastGradeCompletedSimple" minOccurs="0">
@@ -1367,9 +1498,14 @@
 	
 	<xs:complexType name="lastPermanentAddress">
 		<xs:sequence>
+			<xs:element name="LastPermanentAddressID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the LastPermanentAddressID's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LastPermanentStreet" type="hmis:string100">
@@ -1408,7 +1544,16 @@
 
 	<xs:complexType name="medicalAssistance">
 		<xs:sequence>
-			<xs:element name="ProjectEntryID" type="hmis:string32"/>
+			<xs:element name="MedicalAssistanceID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the MedicalAssistance's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="HIVAIDSAssistance" type="hmis:fiveValDKRefused">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.39, #2.</xs:documentation>
@@ -1441,7 +1586,16 @@
 
 	<xs:complexType name="nonCashBenefits">
 		<xs:sequence>
-			<xs:element name="ProjectEntryID" type="hmis:string32"/>			
+			<xs:element name="NonCashBenefitsID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the NonCashBenefits's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>						
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
 			<xs:element name="BenefitsFromAnySource" type="hmis:fiveValDKRefused">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.3, #2.</xs:documentation>
@@ -1529,7 +1683,16 @@
 	
 	<xs:complexType name="pathStatus">
 		<xs:sequence>
-			<xs:element name="ProjectEntryID" type="hmis:string32"/>
+			<xs:element name="PathStatusID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the PathStatus' unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="DateOfStatus" type="xs:date">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.20, #1.</xs:documentation>
@@ -1554,9 +1717,14 @@
 
 	<xs:complexType name="percentAMI">
 		<xs:sequence>
+			<xs:element name="PercentAMIID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the PercentAMIID's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PercentAMI" type="hmis:percentAMISimple">
@@ -1577,7 +1745,11 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements)", p. 12.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OrganizationID" type="hmis:string32"/>
+			<xs:element name="OrganizationID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Organization</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ProjectName" type="hmis:string50">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.2, #2.</xs:documentation>
@@ -1626,17 +1798,35 @@
 	
 	<xs:complexType name="projectCoC">
 		<xs:sequence>
-			<xs:element name="CoCCode" type="hmis:string32"/>
-			<xs:element name="ProjectID" type="hmis:string32"/>
+			<xs:element name="ProjectCoCID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the ProjectCoC's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CoCCode" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the CoCCode ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProjectID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Project ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
 	<xs:complexType name="projectCompletionStatus">
 		<xs:sequence>
+			<xs:element name="ProjectCompletionStatusID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the ProjectCompletionStatus's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="ExitID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Exit ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProjectCompletionStatus" type="hmis:projectCompletionStatusSimple">
@@ -1657,7 +1847,16 @@
 	
 	<xs:complexType name="referralSource">
 		<xs:sequence>
-			<xs:element name="ProjectEntryID" type="hmis:string32"/>
+			<xs:element name="ReferralSourceID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the ReferralSource's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ReferralSource" type="hmis:referralSourceSimple">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.34, #1.</xs:documentation>
@@ -1672,13 +1871,21 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="dataCollectionStage"/>
-		<xs:attribute name="informationDate"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
 	<xs:complexType name="residentialMoveInDate">
 		<xs:sequence>
-			<xs:element name="ProjectEntryID" type="hmis:string32"/>
+			<xs:element name="ResidentialMoveInDateID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the ResidentialMoveInDate's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="InPermanentHousing" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.17, #1.</xs:documentation>
@@ -1697,7 +1904,16 @@
 	
 	<xs:complexType name="rhyBCPStatus">
 		<xs:sequence>
-			<xs:element name="ProjectEntryID" type="hmis:string32"/>
+			<xs:element name="RHYBCPStatusID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the RHYBCPStatus' unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="StatusDate" type="xs:date">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.22, #1.</xs:documentation>
@@ -1722,7 +1938,16 @@
 
 	<xs:complexType name="services">
 		<xs:sequence>
-			<xs:element name="ProjectEntryID" type="hmis:string32"/>
+			<xs:element name="ServicesID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the Services' unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="DateProvided" type="xs:date">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #1.</xs:documentation>
@@ -1771,9 +1996,14 @@
 
 	<xs:complexType name="sexualOrientation">
 		<xs:sequence>
+			<xs:element name="SexualOrientationID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the SexualOrientation's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SexualOrientation" type="hmis:sexualOrientationSimple">
@@ -1784,14 +2014,26 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="dataCollectionStage"/>
-		<xs:attribute name="informationDate"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 
 	<xs:complexType name="site">
 		<xs:sequence>
-			<xs:element name="CoCCode" type="hmis:string32"/>
-			<xs:element name="ProjectID" type="hmis:string32"/>
+			<xs:element name="SiteID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the Site's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CoCCode" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the CoCCode</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProjectID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Project</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="PrincipalSite" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.8, #1.</xs:documentation>
@@ -1800,22 +2042,22 @@
 			</xs:element>
 			<xs:element name="Address" type="hmis:string100" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Street Address</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="City" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">City of Address</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="State" type="hmis:state" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">State of Address</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ZIP" type="hmis:zipCode" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">See https://tools.usps.com/go/ZipLookupAction!input.action</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Geocode" type="hmis:geocode" minOccurs="0">
@@ -1832,52 +2074,52 @@
 		<xs:sequence>                   
 			<xs:element name="SourceID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Reference to the Source's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SoftwareVendor" type="hmis:string50">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">The name of the software provider generating this XML.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SoftwareVersion" type="xs:string">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Version number of the software being used by the software provider.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SourceContactEmail" type="hmis:email" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Email address of the person to contact about this XML data.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SourceContactExtension" type="hmis:extension" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Used with SourceContactPhone to contact the person who can answer questions about this XML.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SourceContactFirst" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">First name of the person to contact about this XML data.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SourceContactLast" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Last name of the person to contact about this XML data.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SourceContactPhone" type="hmis:phoneNumber" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Phone number of the person to contact about this XML data; used with SourceContactExtension.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SourceName" type="hmis:string50">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">A general text desrciption of what organization is sending this XML data.  Perhaps the Agency or Program name generating this XML data.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Export" type="hmis:export" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">An export is a set of data being transmitted for a specific purpose (see ExportType).  A single XML file can have many different Exports of different types and date ranges.</xs:documentation>
 				</xs:annotation>
 				<xs:key name="clientKey">
 					<xs:selector xpath="hmis:Client"/>
@@ -2001,6 +2243,10 @@
 					<xs:selector xpath="hmis:PercentAMI"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
+				<xs:keyref name="enrollmentReferralSourceKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:ReferralSource"/>
+					<xs:field xpath="hmis:ProjectEntryID"/>
+				</xs:keyref>
 				<xs:keyref name="enrollmentResidentialMoveInDateKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:ResidentialMoveInDate"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
@@ -2079,7 +2325,7 @@
 					<xs:selector xpath="hmis:VeteranInfo"/>
 					<xs:field xpath="hmis:PersonalID"/>
 				</xs:keyref>
-			</xs:element>
+			</xs:element>			
 		</xs:sequence>
 	</xs:complexType>
 	
@@ -2087,7 +2333,7 @@
 		<xs:sequence>
 			<xs:element name="Source" type="hmis:source" minOccurs="1" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>	
+					<xs:documentation xml:lang="en">A description of what software provider and organization are sending this XML information.  Many sources can be grouped together into one XML file.</xs:documentation>	
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -2095,6 +2341,11 @@
 
 	<xs:complexType name="veteranInfo">
 		<xs:sequence>
+			<xs:element name="VeteranInfoID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the VeteranInfo's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="PersonalID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Refers to a Client element</xs:documentation>
@@ -2178,9 +2429,14 @@
 	
 	<xs:complexType name="worstHousingSituation">
 		<xs:sequence>
+			<xs:element name="WorstHousingSituationID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the WorstHousingSituation's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS XML Version 4.0 Cumulative Package Overview, X.</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WorstHousingSituation" type="hmis:fiveValDKRefused">
@@ -2195,7 +2451,16 @@
 	
 	<xs:complexType name="youthCriticalIssues">
 		<xs:sequence>
-			<xs:element name="ProjectEntryID" type="hmis:string32"/>
+			<xs:element name="YouthCriticalIssuesID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the YouthCriticalIssues' unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="HouseholdDynamics" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.33, #1.</xs:documentation>
@@ -2348,7 +2613,6 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="dataCollectionStage"/>
-		<xs:attribute name="informationDate"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
@@ -2362,6 +2626,11 @@
 		<xs:attribute name="dateCreated" type="xs:dateTime" use="required">
 			<xs:annotation>
 				<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 5.1.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="dateDeleted" type="xs:dateTime" use="optional">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">If the intended record is to be deleted, this metadata allows you to both indicate the record should be deleted within the target system, as well as indicate the specific time it was deleted.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="dateUpdated" type="xs:dateTime" use="required">
@@ -5435,6 +5704,9 @@
 	</xs:simpleType>
 
 	<xs:simpleType name="state">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">from https://www.usps.com/send/official-abbreviations.htm</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<!-- US States -->
 			<xs:enumeration value="AK"/>
@@ -5498,6 +5770,10 @@
 			<xs:enumeration value="PR"/>
 			<xs:enumeration value="PW"/>
 			<xs:enumeration value="VI"/>
+			<!-- Military -->
+			<xs:enumeration value="AA"/>
+			<xs:enumeration value="AE"/>
+			<xs:enumeration value="AP"/>
 		</xs:restriction>
 	</xs:simpleType>
 
