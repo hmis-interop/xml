@@ -210,7 +210,7 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute ref="dataCollectionStage"/>
+		<xs:attribute ref="dataCollectionStage" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
@@ -300,8 +300,8 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute ref="dataCollectionStage"/>
-		<xs:attribute name="informationDate"/>
+		<xs:attribute ref="dataCollectionStage" use="required"/>
+		<xs:attribute ref="informationDate" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
@@ -330,8 +330,8 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute ref="dataCollectionStage"/>
-		<xs:attribute name="informationDate"/>
+		<xs:attribute ref="dataCollectionStage" use="required"/>
+		<xs:attribute ref="informationDate" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 
@@ -354,8 +354,8 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute ref="dataCollectionStage"/>
-		<xs:attribute name="informationDate"/>
+		<xs:attribute ref="dataCollectionStage" use="required"/>
+		<xs:attribute ref="informationDate" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
@@ -390,8 +390,8 @@
 				</xs:annotation>
 			</xs:element>	
 		</xs:sequence>
-		<xs:attribute ref="dataCollectionStage"/>
-		<xs:attribute name="informationDate"/>
+		<xs:attribute ref="dataCollectionStage" use="required"/>
+		<xs:attribute ref="informationDate" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
@@ -513,8 +513,8 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute ref="dataCollectionStage"/>
-		<xs:attribute ref="informationDate"/>
+		<xs:attribute ref="dataCollectionStage" use="required"/>
+		<xs:attribute ref="informationDate" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
@@ -922,8 +922,8 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute ref="dataCollectionStage"/>
-		<xs:attribute name="informationDate"/>
+		<xs:attribute ref="dataCollectionStage" use="required"/>
+		<xs:attribute ref="informationDate" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 
@@ -958,8 +958,8 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute ref="dataCollectionStage"/>
-		<xs:attribute name="informationDate"/>
+		<xs:attribute ref="dataCollectionStage" use="required"/>
+		<xs:attribute ref="informationDate" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 
@@ -1118,8 +1118,8 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute ref="dataCollectionStage"/>
-		<xs:attribute name="informationDate"/>
+		<xs:attribute ref="dataCollectionStage" use="required"/>
+		<xs:attribute ref="informationDate" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
@@ -1153,8 +1153,8 @@
 				</xs:annotation>
 			</xs:element>	
 		</xs:sequence>
-		<xs:attribute ref="dataCollectionStage"/>
-		<xs:attribute name="informationDate"/>
+		<xs:attribute ref="dataCollectionStage" use="required"/>
+		<xs:attribute ref="informationDate" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>	
 	
@@ -1397,8 +1397,8 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute ref="dataCollectionStage"/>
-		<xs:attribute ref="informationDate"/>
+		<xs:attribute ref="dataCollectionStage" use="required"/>
+		<xs:attribute ref="informationDate" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 
@@ -1458,7 +1458,7 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute ref="informationDate"/>
+		<xs:attribute ref="informationDate" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 
@@ -1481,8 +1481,8 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute ref="dataCollectionStage"/>
-		<xs:attribute name="informationDate"/>
+		<xs:attribute ref="dataCollectionStage" use="required"/>
+		<xs:attribute ref="informationDate" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
@@ -1569,8 +1569,8 @@
 				</xs:annotation>
 			</xs:element>	
 		</xs:sequence>
-		<xs:attribute ref="dataCollectionStage"/>
-		<xs:attribute name="informationDate"/>
+		<xs:attribute ref="dataCollectionStage" use="required"/>
+		<xs:attribute ref="informationDate" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 
@@ -1647,8 +1647,8 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute ref="dataCollectionStage"/>
-		<xs:attribute ref="informationDate"/>
+		<xs:attribute ref="dataCollectionStage" use="required"/>
+		<xs:attribute ref="informationDate" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 
@@ -1860,7 +1860,7 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute ref="dataCollectionStage"/>
+		<xs:attribute ref="dataCollectionStage" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
@@ -2003,7 +2003,7 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute ref="dataCollectionStage"/>
+		<xs:attribute ref="dataCollectionStage" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 
@@ -2593,7 +2593,7 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute ref="dataCollectionStage"/>
+		<xs:attribute ref="dataCollectionStage" use="required"/>
 		<xs:attributeGroup ref="baseMetaData"/>
 	</xs:complexType>
 	
