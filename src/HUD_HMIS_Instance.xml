@@ -2,7 +2,7 @@
 <hmis:Sources xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_0/HUD_HMIS.xsd"
  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/4_0/HUD_HMIS.xsd file:/home/eric/git/xml/src/HUD_HMIS.xsd">
+ xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/4_0/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/v4.0.0-rc.1/src/HUD_HMIS.xsd">
     <hmis:Source>
         <hmis:SourceID>12345</hmis:SourceID>
         <hmis:SoftwareVendor>HMISSoft Inc.</hmis:SoftwareVendor>
