@@ -12,7 +12,7 @@
 	elementFormDefault="qualified"
 	attributeFormDefault="qualified"
 	version="4.0">
-	<xs:import namespace="http://www.hudhdx.info/Resources/Vendors/4_0/HUD_HMIS.xsd" schemaLocation="https://raw.githubusercontent.com/hmis-interop/xml/v4.0.0-alpha.6/src/HUD_HMIS.xsd"/>
+	<xs:import namespace="http://www.hudhdx.info/Resources/Vendors/4_0/HUD_HMIS.xsd" schemaLocation="	https://raw.githubusercontent.com/hmis-interop/xml/v4.0.0-rc.1/src/HUD_HMIS.xsd"/>
 	
 	<!-- Adding hashing capabilities to the client's first name with this extension -->
 	<xs:attribute name="hashValue" type="hmis:string50"/>	
