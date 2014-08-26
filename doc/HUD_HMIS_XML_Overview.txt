@@ -1,4 +1,4 @@
-﻿August 19, 2014
+﻿August 21, 2014
 
 
 
@@ -21,8 +21,8 @@ Draft HMIS XML Data Exchange
 Format Specifications
 
 2014 HMIS Data Standards
-                          
-Subject to Approval by HUD and HHS
+
+Subject to Approval by HUD
 
 
 
@@ -57,10 +57,10 @@ ________________
 
 
 HUD HMIS XML 4.0 Documentation 
-08/18/2014, version: 4.0.0-release candidate 1
+08/21/2014, version: 4.0.0-release candidate 2
 
 
-This document was developed for the US Department of Housing and Urban Development (HUD), Office of Special Needs Assistance Programs (SNAPS) in the Office of Community Planning and Development, under a contract with Cloudburst Consulting Group. 
+This document was developed for the US Department of Housing and Urban Development (HUD), Office of Special Needs Assistance Programs (SNAPS) in the Office of Community Planning and Development, under a contract with Cloudburst Group, LLC. 
 
 
 Primary author: 
@@ -79,11 +79,11 @@ Tim Hockaday
 
 Contents
 Introduction
-Audience for This Document
-What Is This Document About?
-Purpose of HMIS XML
+Audience for this Document
+Purpose of this Document
+Scope of the HMIS XML Schema
 Alternatives
-Where to Find the HMIS XML Schema
+Location of the HMIS XML Schema
 Components
 Overall Structure
 Figure 1: HMIS XML 4.0 Basic Structure
@@ -109,19 +109,19 @@ Further Information
 ________________
 
 
-Document changes with this version are available here.
+Document changes with this version are available in the versioning system.
 Introduction
-Audience for This Document
-This document is intended for people implementing software systems which need to transmit HUD HMIS project and client information over a network.  Because of this, it is inherently a technical document.  Those new to eXtensible Markup Language (XML) should first familiarize themselves somewhat with that technology in general, before examining the actual schema product and the Technology sections.
+Audience for this Document
+This document is intended for developers and project managers implementing software systems which need to transmit HUD HMIS project and client information over a network.  Because of this, it is inherently a technical document.  Those new to eXtensible Markup Language (XML) should first familiarize themselves with XML technology in general, before examining the actual schema product and the Technology section of this document.
 
 
-What Is This Document About?
+Purpose of this Document
 The 2014 HMIS Data Standards consisting of the HMIS Data Dictionary and the HMIS Data Standards Manual, were released jointly by the Department of Housing and Urban Development (HUD), the Department of Health and Human Services (HHS), and the Department of Veterans Affairs (VA) on May 1, 2014. The data elements defined by the 2014 standards must be implemented by HMIS software providers and HMIS administrators by October 1, 2014.  
 
 
-The HUD HMIS XML Schema, version 4.0 is a format for transferring this HMIS data.  The data elements are defined in the May 2014 HUD HMIS Data Standards Manual, and further specified by the May 2014 HUD HMIS Data Dictionary and 2014 HMIS Logical Model.  XML is validatable and extensible.  This means that you can independently and automatically check if this data is being sent to specifications, which is XML’s main benefit.  You can customize it also, but still keep the ability to check it for accuracy.  This format can be used for data migrations between systems, or the data types defined within it could be individually referenced in custom (not officially HUD specified) API methods.
-Purpose of HMIS XML
-This schema requires complete data sets for each grouping of data (groups like Inventory, Project, Path Status, etc.), to accommodate the use case of transmitting complete data sets for reporting, periodic bulk data uploads from a partner agency to an HMIS or data warehouse, or for HMIS system migration purposes.  Because of this intended use case, most of the data elements are not optional.  For example, if you wish to include any of the Inventory data element within the Logical Model, you must include all of the data elements.  In past versions of the HMIS XML Schema (v3.1 and prior), most data elements were listed as optional, to accommodate use cases other than reporting complete data sets.  For other use cases, the individual data types could be individually transmitted (removing the key and cardinality restrictions with the Export element), but that is beyond the scope of this current specification.
+The HUD HMIS XML Schema, version 4.0 is a format for transferring this HMIS data.  The data elements are defined in the May 2014 HUD HMIS Data Standards Manual, and further specified by the May 2014 HUD HMIS Data Dictionary and 2014 HMIS Logical Model.  XML is validatable and extensible.  This means that systems both sending and receiving data can independently and automatically check if this data is being sent to specifications, which is XML’s main benefit.  The HMIS XML Schema can be customized, as well, but still keep the ability to check the generated data for accuracy against this original HMIS XML Schema.  This XML format can be used for data migrations between systems, or the data types defined within it could be individually referenced in custom (not officially HUD specified) web API methods.
+Scope of the HMIS XML Schema
+This schema requires complete data sets for each grouping of data (groups like Inventory, Project, Path Status, etc.), to accommodate the use case of transmitting complete data sets for reporting, periodic bulk data uploads from a partner agency to an HMIS or data warehouse, or for HMIS system migration purposes.  Because of this intended use case, most of the data elements are not optional.  For example, if an XML document following the Schema includes any of the data elements within the Funder class of the Logical Model, it must include almost all of the required data elements within Funder (since for Funder, all its elements are required, except one).  In past versions of the HMIS XML Schema (v3.1 and prior), most data elements were listed as optional, to accommodate use cases other than reporting complete data sets.  For other use cases, the individual data groups could be individually transmitted in bulk (by removing the key and cardinality restrictions with the Export element), but that is beyond the scope of this current specification.
 
 
 Specific requirements related to the overall functionality of HMIS applications and export and import processes in particular will be established by the forthcoming HMIS Software and Data Quality Standards and may result in revisions to this document.
@@ -129,7 +129,7 @@ Specific requirements related to the overall functionality of HMIS applications 
 
 Alternatives
 For HMIS implementers seeking an alternative format for HMIS client data transmission, see the HUD Comma-Separated Values (CSV) for HMIS data, version 4.0.  Both the XML and CSV sister formats are based off the same logical model and are completely semantically and logically compatible.
-Where to Find the HMIS XML Schema
+Location of the HMIS XML Schema
 The HMIS XML 4.0 and previous major releases are hosted at http://www.hudhdx.info/VendorResources.aspx
 Components
 This publication has multiple parts, each is available in two places: the HUD HDX link above, and a development website, where new versions are discussed, and all changes are stored. 
@@ -139,13 +139,13 @@ This publication has multiple parts, each is available in two places: the HUD HD
 * A rationale for the schema, including an overview of the process, and an explanation of the model.
 * A description of the steps involved beyond creation of a data standard, including development of communication protocols and documentation of responsibilities.
 * A brief discussion of the future path of HMIS XSD development.
-* An XML Schema Definition (XSD) document: HMIS XSD v4.0 (temp location).  It contains inline documentation which correlates each schema element to an item in the HMIS Data Dictionary and Data Manual.  Searching the HMIS XML Schema for the corresponding HMIS Data Dictionary data element numeral provides a cross-walk between technical schema and the HMIS Data Standards.
-* A sample, valid XML document (temp location) with fictitious data.
-* An example extension schema (temp location) of the HMIS XSD 4.0, illustrating how to add an additional data element.
-* A sample, valid XML instance document (temp location) for the extended schema.
-* Online, browseable, graphical documentation (temp location) for version 4.0 
+* An XML Schema Definition (XSD) document: HMIS XSD v4.0 (temporary location).  It contains inline documentation which correlates each schema element to an item in the HMIS Data Dictionary and Data Manual.  Searching the HMIS XML Schema for the corresponding HMIS Data Dictionary data element numeral provides a cross-walk between technical schema and the HMIS Data Standards.
+* A sample, valid XML document (temporary location) with fictitious data.
+* An example extension schema (temporary location) of the HMIS XSD 4.0, illustrating how to add an additional data element.
+* A sample, valid XML instance document (temporary location) for the extended schema.
+* Online, browseable, graphical documentation (temporary location) for version 4.0 
 Overall Structure
-The HMIS XML 4.0 structure is intended to be completely compliant with its parent specification, the HUD HMIS Logical Model, and with its other similarly purposed product, the HUD HMIS CSV 4.0. To keep it simple, the XML has a flat, single file structure.  Almost all the data types are one level below the Export data element and key references enforce relationships between types.  This allows the system serializing the XML to not have to worry about being in the correct context to add elements.  They can be added in any order within the “Export” element.
+The HMIS XML 4.0 structure is intended to be completely compliant with its parent specification, the HUD HMIS Logical Model, and with its other similarly purposed product, the HUD HMIS CSV 4.0. To keep it simple, the XML has a flat, single file structure.  Almost all the data types are one level below the Export data element and key references enforce relationships between types.  This allows the system serializing the XML to not be constrained by having to be in the correct context to add elements.  Elements can be added in any order within the “Export” element.
  pub 
 
 Figure 1: HMIS XML 4.0 Basic Structure
@@ -156,44 +156,44 @@ The HMIS Data Dictionary and Data Manual data element reference is listed within
 Browseable Graphical Documentation
  Screenshot from 2014-07-30 10:29:39.png 
 
-A browsable list of all the data element in the HMIS XML Schema is available at here (temporary location, to be moved to hudhdx site).  The definitions for each data element are available in the browseable documentation as well.
+A browsable list of all the data element in the HMIS XML Schema is available (temporary location, to be moved to hudhdx.info site).  The definitions for each data element are available in the browseable documentation as well.
 
 
 
 
 Relationship to Logical Model
-The HMIS XML Schema version 4.0 complies with Logical Model (temp location), The various relationship lines within the Logical Model are enforced by requiring matching IDs/Keys (see the section on Keys) between the two data types (like ProjectCoC to Inventory, or Exit to Enrollment) joined by a line in the Logical Model.  
+The HMIS XML Schema version 4.0 complies with Logical Model (temporary location), The various relationship lines within the Logical Model are enforced by requiring matching IDs/Keys (see the section on Keys) between the two data types (like ProjectCoC to Inventory, or Exit to Enrollment) joined by a line in the Logical Model.  
 
 
 Cardinality Enforcement
-The Logical Model is also very specific about cardinalities (like “many-to-many” and “zero to one”) between the related data types.  HMIS XML Schema strictly enforces cardinality by means of XPath 2.0 assertions[1]; a new feature of XML Schema 1.1.  If the Logical Model requires “zero to one” of something (like Date of Engagements per Enrollment), the HMIS XML 4.0 will likewise only let you declare the required zero or one of them.
+The Logical Model is also very specific about cardinalities (like “many-to-many” and “zero to one”) between the related data types.  HMIS XML Schema strictly enforces cardinality by means of XPath 2.0 assertions[1]; a new feature of XML Schema 1.1.  If the Logical Model requires “zero to one” of something (like Date of Engagements per Enrollment), the HMIS XML 4.0 will likewise require valid XML documents to declare the required zero or one occurrence.
 Changes from Previous Version
-* All data elements updated from the 2010 to the 2014 HUD HMIS Data Standard elements
+* All data elements are updated from the 2010 to the 2014 HUD HMIS Data Standard elements
 * AIRS namespace elements are dropped, so that the schema is purely defined by the scope of the HUD HMIS May 2014 Data Manual and Data Dictionary
 * Line-by-line comparison of version 3.1 to version 4.0.0-rc.1: https://github.com/hmis-interop/xml/compare/v3.1...v4.0.0-rc.1
 Technology
 XML Schema 1.1
-XML Schema version 1.1 is used by the HMIS Schema 4.0.   XML Schema 1.1 is a superset of XML Schema 1.0 used in previous versions of the HMIS XML format, and is forward compatible from XML Schema 1.0.  XML Schema 1.1 simply adds additional features to those of 1.0, two of which are used by HMIS XML 4.0.  These are extensibility features, and better key reference enforcement.  All major XML parsers have been updated to support version Schema 1.1, which was released in 2007, so XML Schema 1.1 is a mature technology.
+XML Schema version 1.1 is used by the HMIS Schema 4.0.   XML Schema 1.1 is a superset of XML Schema 1.0 used in previous versions of the HMIS XML format, and is forward compatible from XML Schema 1.0.  XML Schema 1.1 only adds additional features to those of 1.0, two of which are used by HMIS XML 4.0.  These are extensibility features, and better key reference enforcement features.  All major XML parsers have been updated to support version Schema 1.1, which was released in 2007, resulting in XML Schema 1.1 now being a mature technology.
 Extensibility
-Flexible vendor extensions are much more easily accomplished with XML Schema 1.1, as opposed to the previous 1.0.  To extend the HMIS XML Schema 4.0 using this new feature, please read the documentation on defaultOpenContent mode="interleave" at the The World Wide Web Consortium (W3C) website.  In an nutshell, it permits you to add new data elements anywhere in the HMIS XML Schema, and the original parts still can be found and validated.  The newly added extensions which a software provider might add should be validated by a second XML Schema which they can define elsewhere, and both the HMIS Schema and the new extension schema can work together to validate the extended XML documents.  The extended schema will still validate against the official HUD HMIS XML 4.0, but it will not complain about the custom elements added.
+Flexible vendor extensions are much more easily accomplished with XML Schema 1.1, as opposed to the previous XML Schema 1.0.  To extend the HMIS XML Schema 4.0 using this new feature, please read the documentation on defaultOpenContent mode="interleave" at the The World Wide Web Consortium (W3C) website.  This new feature permits is implemented in HMIS XML, allowing the addition of new data elements anywhere in the HMIS XML Schema, and the original parts still can be found and validated.  The newly added extensions which a software provider might add should be validated by a second XML Schema.  The second XML Schema can be defined elsewhere, and both the HMIS Schema and the new extension schema can function in concert to validate the extended XML documents.  The extended schema will still validate against the official HUD HMIS XML 4.0, but it will not invalidate the custom elements added.
 
 
 Currently, HUD HMIS is not publishing any official extensions, but the parties engaged in data integration may negotiate the use of an extension schema to be overlayed onto the HUD HMIS XML Schema for the addition of new data types, attributes, and elements.
 
 
-One potential extension that has been identified is the ability to indicate whether a field value is hashed or not, for deidentification/warehousing purposes.  Indicating and transmitting hashing was a capability in prior versions of the HUD HMIS XML Schema.  But hashing is seen as a more implementation dependent feature, so hashing has been removed from the current HMIS XML Schema.   However, a suggested hashed value model could include a "hashValue" attribute added for certain schema elements, such as personal identifiers.  hashValue would contain the hash value, and the element it applies to could have an overriden, dummy value that still validates.  This model would make it so you could, say, enforce that the value of DateOfBirth is still a date (albeit a dummy one), yet also transmit the hashing in the “hashValue” attribute.  It also makes it easy extend the hashValue attribute to other elements that haven't traditionally included it (like Address).[2]  The example extension schema implements this hashing model on a Client record.   
+One potential extension that has been identified is the ability to indicate whether a field value is hashed or not, for deidentification/warehousing purposes.  Indicating and transmitting hashing was a capability in prior versions of the HUD HMIS XML Schema.  But hashing is considered a more implementation dependent feature, so hashing has been removed from the current HMIS XML Schema.   However, a suggested hashed value model could include a "hashValue" attribute added for certain schema elements, such as personal identifiers.  hashValue would contain the hash value, and the element it applies to could have an overridden, fictitious value that still validates (see example XML extension instance).  This example model would enforce that the value of DateOfBirth is still a date (albeit a fictitious one), yet also transmit the hashing in the “hashValue” attribute.  This model also makes it simple to extend the hashValue attribute to other elements that haven't traditionally included it (like Address).[2]  The example extension schema implements this hashing model on a Client record.   
 Keys
-The HMIS XML schema uses keys and references to those keys (aka “keyrefs”) to create the relationships defined in the Logical Model.   The keys are enforced, so that if an enrollment in the XML references a project ID which isn’t defined somewhere else in the XML, it will raise a validation error, which enforces complete, self-referential data sets.  Keys also let us flatten the schema.  The advantage of a flat schema is data elements don’t need to be repeated within deeply nested structures.  Keys also makes programming easier, since there are not so many nested logic structures to handle.  It is also more flexible, since not every related data element has to be mentioned within the same tree branch of the XML.
+The HMIS XML schema uses keys and references to those keys (aka “keyrefs”) to create the relationships defined in the Logical Model.   The keys are enforced, so that if an enrollment in the XML references a project ID which isn’t defined somewhere else in the XML, it will raise a validation error, which enforces complete, self-referential data sets.  Keys also enable the flattened structure of the schema.  An advantage of a flattened schema is that data elements are not repeated within deeply nested structures.  Keys also makes programming simpler, since there are not so many nested logic structures to handle.  The flattened structure is also more flexible, since not every related data element has to be mentioned within the same tree branch of the XML.
 Examples
 Example Instance
-A fairly exhaustive example HMIS XML instance is available in the repository for download (temp location).  
+A fairly exhaustive example HMIS XML instance is available in the repository for download (temporary location).  
 Example Custom Extension
-(may be available in a future version of this document)
+An example HMIS XML extension is available in the repository for download (temporary location).  
 Change Process
-To request changes to the HUD HMIS XML Schema, there are multiple ways to register your requests.
+To request changes to the HUD HMIS XML Schema, there are multiple ways to register requests.
 * A software issue tracker is available at: https://github.com/hmis-interop/xml/issues
 * A HUD sponsored HMIS Software Provider forum regularly hosts a revision process to maintain the HMIS XML Schema 
-* Email hmisdx@gmail.com (temporary address) to discuss your request with a HUD Technical Assistance representative
+* Email hmisdx@gmail.com (temporary address) to discuss the request with a HUD Technical Assistance representative
 HMIS XML Schema Hosting
 HMIS XML schema development archives and issues list is unofficially (not an official HUD Website) hosted at: https://github.com/hmis-interop/xml.  The tags on that site contain the various versions available, from which the differences between versions can be listed in detail.
  Screenshot from 2014-07-30 22:23:06.png 
@@ -201,7 +201,7 @@ HMIS XML schema development archives and issues list is unofficially (not an off
 
 
 Further Information
-Contact the OneCPD Ask A Question to request general assistance with the HMIS XML Schema.  For direct technical recommendations or questions send an email to a temporary email set up at  hmisdx@gmail.com (temp address), or if you wish to log a detailed change directly, an issue tracker is available.
+Contact the OneCPD Ask A Question to request general assistance with the HMIS XML Schema.  For direct technical recommendations or questions, send an email to a temporary email set up at  hmisdx@gmail.com (temporary email address).  To log a detailed change directly, an issue tracker is available.
 
 
 ________________
