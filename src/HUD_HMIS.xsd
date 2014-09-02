@@ -407,6 +407,11 @@
 					<xs:documentation xml:lang="en">Key reference to the Client's ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="ProjectID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the associated Project's ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="EntryDate" type="xs:date">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.10.</xs:documentation>
@@ -1797,7 +1802,7 @@
 					<xs:documentation xml:lang="en">Reference to the ProjectCoC's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CoCCode" type="hmis:string32">
+			<xs:element name="CoCCode" type="hmis:cocCode">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the CoCCode ID</xs:documentation>
 				</xs:annotation>
@@ -2858,8 +2863,14 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-	</xs:simpleType>	
-
+	</xs:simpleType>
+	
+	<xs:simpleType name="cocCode">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Za-z]{2}-[0-9]{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
 	<xs:simpleType name="countOfExchangeForSex">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">	
@@ -4283,75 +4294,75 @@
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
 				Total Number of Months Homeless in the Past Three Years 
-					1.00 – 1.12 = integer from 0 to 12 
+					100 – 112 = 0 to 12 months (with a leading "1")
 					7 = More than 12 months 
 					8 = Client doesn’t know 
 					9 = Client refused 
 					99 = Data not collected 
 			</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:decimal">
-			<xs:enumeration value="1.00">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:enumeration value="100">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">0 months</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="1.01">
+			<xs:enumeration value="101">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">1 month</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="1.02">
+			<xs:enumeration value="102">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">2 months</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="1.03">
+			<xs:enumeration value="103">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">3 months</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="1.04">
+			<xs:enumeration value="104">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">4 months</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-						<xs:enumeration value="1.05">
+			<xs:enumeration value="105">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">5 months</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="1.06">
+			<xs:enumeration value="106">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">6 months</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="1.07">
+			<xs:enumeration value="107">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">7 months</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="1.08">
+			<xs:enumeration value="108">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">8 months</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="1.09">
+			<xs:enumeration value="109">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">9 months</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="1.10">
+			<xs:enumeration value="110">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">10 months</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="1.11">
+			<xs:enumeration value="111">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">11 months</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="1.12">
+			<xs:enumeration value="112">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">12 months</xs:documentation>
 				</xs:annotation>
