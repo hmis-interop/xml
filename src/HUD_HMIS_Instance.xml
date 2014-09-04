@@ -132,13 +132,13 @@
                 <hmis:DisablingCondition>9</hmis:DisablingCondition>
                 <hmis:HousingStatus>6</hmis:HousingStatus>
             </hmis:Enrollment>
-            <hmis:EnrollmentCoC hmis:dataCollectionStage="5" hmis:informationDate="2015-06-24" hmis:dateCreated="2016-02-13T23:14:59Z"
+            <hmis:EnrollmentCoC hmis:dataCollectionStage="1" hmis:informationDate="2015-06-24" hmis:dateCreated="2016-02-13T23:14:59Z"
                  hmis:dateUpdated="2016-02-19T23:14:59" hmis:userID="DU5m">
                 <hmis:EnrollmentCoCID>56332</hmis:EnrollmentCoCID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:ProjectCoCID>343</hmis:ProjectCoCID>
             </hmis:EnrollmentCoC>
-            <hmis:EnrollmentCoC hmis:dataCollectionStage="5" hmis:informationDate="2015-06-24" hmis:dateCreated="2016-02-13T23:14:59Z"
+            <hmis:EnrollmentCoC hmis:dataCollectionStage="1" hmis:informationDate="2015-06-24" hmis:dateCreated="2016-02-13T23:14:59Z"
                 hmis:dateUpdated="2016-02-19T23:14:59" hmis:userID="DU5m">
                 <hmis:EnrollmentCoCID>56332</hmis:EnrollmentCoCID>
                 <hmis:ProjectEntryID>w5642</hmis:ProjectEntryID>
@@ -147,14 +147,14 @@
             <hmis:Exit hmis:dateCreated="2014-10-07T23:14:59Z" hmis:dateUpdated="2015-11-06T23:14:59Z" hmis:userID="GO">
                 <hmis:ExitID>C2x</hmis:ExitID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:ExitDate>2015-11-16Z</hmis:ExitDate>
+                <hmis:ExitDate>2016-11-16Z</hmis:ExitDate>
                 <hmis:Destination>22</hmis:Destination>
                 <hmis:OtherDestination>w</hmis:OtherDestination>
             </hmis:Exit>
             <hmis:Exit hmis:dateCreated="2014-10-07T23:14:59Z" hmis:dateUpdated="2015-11-06T23:14:59Z" hmis:userID="GO">
                 <hmis:ExitID>C3x</hmis:ExitID>
                 <hmis:ProjectEntryID>w5642</hmis:ProjectEntryID>
-                <hmis:ExitDate>2015-11-16Z</hmis:ExitDate>
+                <hmis:ExitDate>2016-11-16Z</hmis:ExitDate>
                 <hmis:Destination>22</hmis:Destination>
                 <hmis:OtherDestination>w</hmis:OtherDestination>
             </hmis:Exit>
@@ -278,7 +278,7 @@
                  hmis:dateUpdated="2015-04-17T23:14:59" hmis:userID="DN2J6hP2SNfgBs30u8dgkh8cVjY4jApG">
                 <hmis:IncomeAndSourcesID>32dd</hmis:IncomeAndSourcesID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:IncomeFromAnySource>8</hmis:IncomeFromAnySource>
+                <hmis:IncomeFromAnySource>1</hmis:IncomeFromAnySource>
                 <hmis:TotalMonthlyIncome>1889.22</hmis:TotalMonthlyIncome>
                 <hmis:Earned>1</hmis:Earned>
                 <hmis:EarnedAmount>13916.10</hmis:EarnedAmount>
@@ -359,7 +359,7 @@
                  hmis:dateUpdated="2015-02-27T23:14:59" hmis:userID="ptravis">
                 <hmis:NonCashBenefitsID>766ww</hmis:NonCashBenefitsID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:BenefitsFromAnySource>8</hmis:BenefitsFromAnySource>
+                <hmis:BenefitsFromAnySource>1</hmis:BenefitsFromAnySource>
                 <hmis:SNAP>0</hmis:SNAP>
                 <hmis:WIC>0</hmis:WIC>
                 <hmis:TANFChildCare>0</hmis:TANFChildCare>
@@ -378,8 +378,8 @@
             <hmis:PATHStatus hmis:dateCreated="2014-08-31T23:14:59" hmis:dateUpdated="2016-01-06T23:14:59" hmis:userID="bmerriweather">
                 <hmis:PathStatusID>453332</hmis:PathStatusID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:DateOfStatus>2016-03-23</hmis:DateOfStatus>
-                <hmis:ClientEnrolledInPATH>1</hmis:ClientEnrolledInPATH>
+                <hmis:DateOfStatus>2016-04-23</hmis:DateOfStatus>
+                <hmis:ClientEnrolledInPATH>0</hmis:ClientEnrolledInPATH>
                 <hmis:ReasonNotEnrolled>2</hmis:ReasonNotEnrolled>
             </hmis:PATHStatus>
             <hmis:PercentAMI hmis:dateCreated="2014-11-21T23:14:59Z" hmis:dateUpdated="2015-06-11T23:14:59" hmis:userID="7653">
@@ -434,8 +434,8 @@
             <hmis:ResidentialMoveInDate hmis:dateCreated="2015-04-25T23:14:59" hmis:dateUpdated="2015-07-23T23:14:59Z" hmis:userID="AUfZ2">
                 <hmis:ResidentialMoveInDateID>z44332</hmis:ResidentialMoveInDateID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:InPermanentHousing>0</hmis:InPermanentHousing>
-                <hmis:ResidentialMoveInDate>2016-01-19Z</hmis:ResidentialMoveInDate>
+                <hmis:InPermanentHousing>1</hmis:InPermanentHousing>
+                <hmis:ResidentialMoveInDate>2016-05-19Z</hmis:ResidentialMoveInDate>
             </hmis:ResidentialMoveInDate>
             <hmis:RHYBCPStatus hmis:dateCreated="2014-10-25T23:14:59Z" hmis:dateUpdated="2015-03-27T23:14:59Z" hmis:userID="ryu">
                 <hmis:RHYBCPStatusID>erffedyte1</hmis:RHYBCPStatusID>
@@ -449,9 +449,9 @@
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:DateProvided>2015-09-06</hmis:DateProvided>
                 <hmis:RecordType>16</hmis:RecordType>
-                <hmis:TypeProvided>341583807</hmis:TypeProvided>
+                <hmis:TypeProvided>11</hmis:TypeProvided>
                 <hmis:OtherTypeProvided>some other type here</hmis:OtherTypeProvided>
-                <hmis:SubTypeProvided>2</hmis:SubTypeProvided>
+                <hmis:SubTypeProvided>12</hmis:SubTypeProvided>
                 <hmis:FAAmount>1145.59</hmis:FAAmount>
                 <hmis:ReferralOutcome>2</hmis:ReferralOutcome>
             </hmis:Services>
