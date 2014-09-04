@@ -1959,11 +1959,16 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.12 and 4.14-4.16.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TypeProvided" type="xs:unsignedInt">
+			<xs:element name="TypeProvided">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #2 (picklist values vary by service category and funder) .</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.12 and 4.14-4.16.</xs:documentation>
 				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:pattern value="[0-9][0-9]"/>
+					</xs:restriction>
+				</xs:simpleType>
 			</xs:element>
 			<xs:element name="OtherTypeProvided" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
@@ -1971,11 +1976,16 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.12 and 4.14-4.16.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SubTypeProvided" type="xs:unsignedInt" minOccurs="0">
+			<xs:element name="SubTypeProvided" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #3A, 4B, 5C (if it exists).</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.12 and 4.14-4.16.</xs:documentation>
 				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:pattern value="[0-9][0-9]"/>
+					</xs:restriction>
+				</xs:simpleType>
 			</xs:element>
 			<xs:element name="FAAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
@@ -2714,6 +2724,7 @@
 				1 = Yes
 				8 = Client doesn’t know
 				9 = Client refused
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -2736,7 +2747,12 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client refused</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>	
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	
@@ -3271,6 +3287,7 @@
 				3 = Left for other opportunities - Military
 				4 = Left for other opportunities - Other
 				5 = Needs could not be met by project
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -3299,6 +3316,11 @@
 					<xs:documentation xml:lang="en">Needs could not be met by project</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 
@@ -3316,6 +3338,7 @@
 				1 = Full-time
 				2 = Part-time
 				3 = Seasonal / sporadic (including day labor)
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -3332,6 +3355,11 @@
 			<xs:enumeration value="3">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Seasonal / sporadic (including day labor)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -3686,6 +3714,7 @@
 				2 = Ward of the State – Immediate Reunification
 				3 = Ward of the Criminal Justice System – Immediate Reunification
 				4 = Other
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -3708,7 +3737,12 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Other</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>		
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	
@@ -4030,6 +4064,7 @@
 				1 = One parent / legal guardian is incarcerated
 				2 = One parent / legal guardian is incarcerated
 				3 = The only parent / legal guardian is incarcerated
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -4048,104 +4083,9 @@
 					<xs:documentation xml:lang="en">The only parent / legal guardian is incarcerated</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="incomeSourceCodeBase">
-		<xs:annotation>
-			<xs:documentation xml:lang="en">
-				Income Source Code
-				1 = Earned Income (i.e., employment income)
-				2 = Unemployment Insurance 
-				3 = Supplemental Security Income (SSI)
-				4 = Social Security Disability Income (SSDI)
-				5 = Veteran's Disability Payment
-				6 = Private Disability Insurance
-				7 = Worker's Compensation
-				10 = Temporary Assistance for Needy Families (TANF) (or use local program name)
-				11 = General Assistance (GA) (or use local program name)
-				12 = Retirement Income from Social Security
-				13 = Veteran’s Pension
-				14 = Pension from a Former Job
-				15 = Child Support
-				16 = Alimony or Other Spousal Support
-				17 = Other Source
-			</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
+			<xs:enumeration value="99">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Earned Income (i.e., employment income)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Unemployment Insurance</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Supplemental Security Income (SSI)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Social Security Disability Income (SSDI)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="5">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Veteran's Disability Payment</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="6">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Private Disability Insurance</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="7">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Worker's Compensation</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="10">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Temporary Assistance for Needy Families (TANF) (or use local program name)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="11">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">General Assistance (GA) (or use local program name)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="12">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Retirement Income from Social Security</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="13">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Veteran’s Pension</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="14">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Pension from a Former Job</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="15">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Child Support</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="16">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Alimony or Other Spousal Support</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="17">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Other Source</xs:documentation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -4298,7 +4238,7 @@
 					7 = More than 12 months 
 					8 = Client doesn’t know 
 					9 = Client refused 
-					99 = Data not collected 
+					99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:positiveInteger">
@@ -4379,12 +4319,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+					<xs:documentation xml:lang="en">Client refused</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -4595,16 +4535,30 @@
 	
 	<xs:simpleType name="noYes">
 		<xs:annotation>
-			<xs:documentation xml:lang="en">0 = No, 1 = Yes</xs:documentation>
+			<xs:documentation xml:lang="en">0 = No, 1 = Yes, 99 = Data Not Collected</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:boolean">
-			<xs:pattern value="[01]"/>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">No</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Yes</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data Not Collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	
 	<xs:simpleType name="noYesRefused">
 		<xs:annotation>
-			<xs:documentation xml:lang="en">0 = No, 1 = Yes 2= Client refused</xs:documentation>
+			<xs:documentation xml:lang="en">0 = No, 1 = Yes, 2 = Client refused, 99 = Data Not Collected</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
@@ -4620,6 +4574,11 @@
 			<xs:enumeration value="9">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -4639,6 +4598,7 @@
 				1 = Looking for work
 				2 = Unable to work
 				3 = Not looking for work
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -4657,6 +4617,11 @@
 					<xs:documentation xml:lang="en">Not looking for work</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	
@@ -4667,6 +4632,7 @@
 				1 = Unconfirmed; presumptive or self-report
 				2 = Confirmed through assessment and clinical evaluation
 				3 = Confirmed by prior evaluation or clinical records
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -4685,6 +4651,11 @@
 					<xs:documentation xml:lang="en">Confirmed by prior evaluation or clinical records</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	
@@ -4698,6 +4669,7 @@
 				3 = Confirmed by prior evaluation or clinical records
 				8 = Client doesn’t know
 				9 = Client refused
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -4731,6 +4703,11 @@
 					<xs:documentation xml:lang="en">Client refused</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	
@@ -4741,6 +4718,7 @@
 				1 = Less than 30%
 				2 = 30% to 50%
 				3 = Greater than 50%
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -4759,6 +4737,11 @@
 					<xs:documentation xml:lang="en">Greater than 50%</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	
@@ -4769,6 +4752,7 @@
 				1 = Completed project
 				2 = Youth voluntarily left early
 				3 = Youth was expelled or otherwise involuntarily discharged from project
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -4785,6 +4769,11 @@
 			<xs:enumeration value="3">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Youth was expelled or otherwise involuntarily discharged from project</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -4942,6 +4931,7 @@
 				Reason not enrolled
 				1 = Client was found ineligible for PATH
 				2 = Client was not enrolled for other reason(s)
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -4953,6 +4943,11 @@
 			<xs:enumeration value="2">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client was not enrolled for other reason(s)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -5571,12 +5566,27 @@
 	<xs:simpleType name="recordType">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
+				12 = Contact
 				14 = Services Provided
 				15 = Financial Assistance
 				16 = Referrals Provided
+				141 = PATH service
+				142 = RHY service
+				143 = HOPWA service
+				144 = SSVF service
+				151 = HOPWA financial assistance
+				152 = SSVF financial assistance
+				161 = PATH referral
+				162 = RHY referral
+				200 = Bed night
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="12">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Contact</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="14">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Services Provided</xs:documentation>
@@ -5590,6 +5600,51 @@
 			<xs:enumeration value="16">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Referrals Provided</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="141">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">PATH service</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="142">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">RHY service</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="143">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">HOPWA service</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="144">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">SSVF service</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="151">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">HOPWA financial assistance</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="152">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">SSVF financial assistance</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="161">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">PATH referral</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="162">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">RHY referral</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="200">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Bed night</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
