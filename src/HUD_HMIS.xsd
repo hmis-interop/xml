@@ -1966,7 +1966,7 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:integer">
-						<xs:pattern value="[0-9][0-9]"/>
+						<xs:pattern value="[0-9]{1,2}"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -1983,7 +1983,7 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:integer">
-						<xs:pattern value="[0-9][0-9]"/>
+						<xs:pattern value="[0-9]{1,2}"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
