@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ext:Client hmis:dateCreated="2016-04-11T23:14:59Z" hmis:dateUpdated="2015-05-30T23:14:59" hmis:userID="ned100"
+    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_0/HUD_HMIS.xsd"
+    xmlns:ext="http://www.hudhdx.info/Resources/Vendors/4_0/HUD_HMIS_Example_Extension.xsd"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/4_0/HUD_HMIS_Example_Extension.xsd https://raw.githubusercontent.com/hmis-interop/xml/v4.0.0-rc.2/src/HUD_HMIS_Example_Extension.xsd">
+       
+    <ext:PersonalID>A1a1</ext:PersonalID>
+    <ext:FirstName ext:hashValue="Th563ed3344eedTY3">Edward</ext:FirstName>
+    <ext:MiddleName>Barnaby</ext:MiddleName>
+    <ext:LastName>Jones</ext:LastName>
+    <ext:NameSuffix>Sr.</ext:NameSuffix>
+    <ext:NameDataQuality>9</ext:NameDataQuality>
+    <ext:SSN>7xxx9xx8x</ext:SSN>
+    <ext:SSNDataQuality>2</ext:SSNDataQuality>
+    <ext:DOB>2014-11-18</ext:DOB>
+    <ext:DOBDataQuality>1</ext:DOBDataQuality>
+    <ext:Gender>3</ext:Gender>
+    <ext:OtherGender>intersex</ext:OtherGender>
+    <ext:Ethnicity>0</ext:Ethnicity>
+    <ext:Race>8</ext:Race>
+    <ext:VeteranStatus>9</ext:VeteranStatus>
+</ext:Client>
