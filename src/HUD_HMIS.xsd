@@ -3751,6 +3751,7 @@
 			<xs:documentation xml:lang="en">
 				Applicable to:
 				Gender 
+				0 = Female
 				1 = Male 
 				2 = Transgender male to female 
 				3 = Transgender female to male 
@@ -3761,6 +3762,11 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Female</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="1">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Male</xs:documentation>
