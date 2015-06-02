@@ -2351,73 +2351,73 @@
 					<xs:documentation xml:lang="en">Refers to a Client element</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="YearEnteredService" type="xs:gYear">
+			<xs:element name="YearEnteredService" type="xs:gYear" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #1</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="YearSeparated" type="xs:gYear">
+			<xs:element name="YearSeparated" type="xs:gYear" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #2</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WorldWarII" type="fiveValDKRefused">
+			<xs:element name="WorldWarII" type="fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #3</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="KoreanWar" type="fiveValDKRefused">
+			<xs:element name="KoreanWar" type="fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #4</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="VietnamWar" type="fiveValDKRefused">
+			<xs:element name="VietnamWar" type="fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #5</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DesertStorm" type="fiveValDKRefused">
+			<xs:element name="DesertStorm" type="fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #6</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AfghanistanOEF" type="fiveValDKRefused">
+			<xs:element name="AfghanistanOEF" type="fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #7</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IraqOIF" type="fiveValDKRefused">
+			<xs:element name="IraqOIF" type="fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #8</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IraqOND" type="fiveValDKRefused">
+			<xs:element name="IraqOND" type="fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #9</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherTheater" type="fiveValDKRefused">
+			<xs:element name="OtherTheater" type="fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #10</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MilitaryBranch" type="militaryBranch">
+			<xs:element name="MilitaryBranch" type="militaryBranch" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #11</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DischargeStatus" type="dischargeStatus">
+			<xs:element name="DischargeStatus" type="dischargeStatus" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.41, #12</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 4.41.</xs:documentation>				
