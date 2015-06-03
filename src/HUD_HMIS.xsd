@@ -1431,7 +1431,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements), p. 14.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Availabilty" type="hmis:availability" minOccurs="0">
+			<xs:element name="Availability" type="hmis:availability" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 2.7, #4.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Project Setup Guidance, Project Descriptor Data Elements (formerly Program Descriptor Data Elements), p. 14.</xs:documentation>
