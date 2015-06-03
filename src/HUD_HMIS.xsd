@@ -5861,6 +5861,8 @@
 				2 = With the subsidy they had at project entry
 				3 = With an on-going subsidy acquired since project entry
 				4 = Only with financial assistance other than a subsidy
+				11 = With on-going subsidy
+				12 = Without an on-going subsidy
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -5882,6 +5884,16 @@
 			<xs:enumeration value="4">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Only with financial assistance other than a subsidy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>	
+			<xs:enumeration value="11">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">With on-going subsidy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>	
+			<xs:enumeration value="12">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Without an on-going subsidy</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>	
 		</xs:restriction>
