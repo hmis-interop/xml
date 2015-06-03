@@ -1142,16 +1142,16 @@
 			</xs:element>
 			<xs:element name="HealthCategory" type="hmis:healthCategory">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">The permissible values correspond to the decimal values of the corresponding disability types.  4.27 General Health Status is "27" and 4.29 Mental Health Status is "29".</xs:documentation>
+					<xs:documentation xml:lang="en">The permissible values correspond to the decimal values of the corresponding health category.  4.27 General Health Status is "27" and 4.29 Mental Health Status is "29" and 4.30 Pregnancy Status is "30".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HealthStatus" type="hmis:healthStatusType">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.27-4.29, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, 4.27-4.29</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.27-4.30, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, 4.27-4.30</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DueDate" type="xs:date">
+			<xs:element name="DueDate" type="xs:date" minOccurs = "0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.30, #1A.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.30 Pregnancy Status"</xs:documentation>
@@ -3818,6 +3818,7 @@
 				27 = General Health Status 
 				28 = Dental Health Status 
 				29 = Mental Health Status
+				30 = Pregnancy Status
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
