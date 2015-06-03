@@ -1836,7 +1836,7 @@
 			</xs:element>
 			<xs:element name="EarlyExitReason" type="hmis:earlyExitReason">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.37, #1A.</xs:documentation>
+					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.37, 1A or 1B, depending on whether 2 (use 1A) or 3 (use 1B) is the response to 4.37.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.37 Project Completion Status".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -3306,39 +3306,45 @@
 	<xs:simpleType name="earlyExitReason">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
-				Select the major reason
-				1 = Left for other opportunities – Independent living
-				2 = Left for other opportunities - Education
-				3 = Left for other opportunities - Military
-				4 = Left for other opportunities - Other
-				5 = Needs could not be met by project
-				99 = Data not collected
+				Select the major reason (1-6 depend on answer to 4.37 Project Completion Status) 
+				1 = if 4.37A: Left for other opportunities – Independent living *OR* if 4.37B: Criminal activity/destruction of property/violence
+				2 = if 4.37A: Left for other opportunities - Education *OR* if 4.37B: Non-compliance with project rules
+				3 = if 4.37A: Left for other opportunities - Military *OR* if 4.37B: Non-payment of rent/occupancy charge
+				4 = if 4.37A: Left for other opportunities - Other *OR* if 4.37B: Reached maximum time allowed by project
+				5 = if 4.37A: Needs could not be met by project *OR* if 4.37B: Project terminated
+				6 = 4.37B only: Unknown/disappeared
+				99 = both 4.37A and 4.37B: Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Left for other opportunities – Independent living</xs:documentation>
+					<xs:documentation xml:lang="en">Left for other opportunities – Independent living *OR* Criminal activity/destruction of property/violence</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Left for other opportunities - Education</xs:documentation>
+					<xs:documentation xml:lang="en">Left for other opportunities - Education *OR* Non-compliance with project rules</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Left for other opportunities - Military</xs:documentation>
+					<xs:documentation xml:lang="en">Left for other opportunities - Military *OR* Non-payment of rent/occupancy charge</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Left for other opportunities - Other</xs:documentation>
+					<xs:documentation xml:lang="en">Left for other opportunities - Other *OR* Reached maximum time allowed by project</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="5">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Needs could not be met by project</xs:documentation>
+					<xs:documentation xml:lang="en">Needs could not be met by project *OR* Project terminated</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Unknown/disappeared</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
