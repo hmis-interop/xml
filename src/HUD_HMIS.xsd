@@ -1925,7 +1925,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.22 RHY - BCP Status".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ReasonNoServices" type="hmis:fysbReasonNoServices">
+			<xs:element name="ReasonNoServices" type="hmis:fysbReasonNoServices" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.22, #2A.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.22 RHY - BCP Status".</xs:documentation>
