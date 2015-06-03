@@ -2779,47 +2779,72 @@
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Honorable</xs:documentation>
+					<xs:documentation xml:lang="en">Referred to emergency shelter/safe haven</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">General under honorable conditions</xs:documentation>
+					<xs:documentation xml:lang="en">Referred to transitional housing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Referred to rapid re-housing</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Bad conduct</xs:documentation>
+					<xs:documentation xml:lang="en">Referred to permanent supportive housing</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="5">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Dishonorable</xs:documentation>
+					<xs:documentation xml:lang="en">Referred to homelessness prevention</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="6">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Under other than honorable conditions (OTH)</xs:documentation>
+					<xs:documentation xml:lang="en">Referred to street outreach</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="7">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Uncharacterized</xs:documentation>
+					<xs:documentation xml:lang="en">Referred to other continuum project type</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+					<xs:documentation xml:lang="en">Referred to a homelessness diversion program</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Unable to refer/accept within continuum; ineligible for continuum projects</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>			
-			<xs:enumeration value="99">
+			<xs:enumeration value="10">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+					<xs:documentation xml:lang="en">Unable to refer/accept within continuum; continuum services unavailable</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="11">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Referred to other community project (non-continuum)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="12">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Applicant declined referral/acceptance</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="13">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Applicant terminated assessment prior to completion</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="14">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Other/specify</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
