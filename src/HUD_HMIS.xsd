@@ -466,7 +466,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual (Proposed Amendment), Section 3.17, #2A.</xs:documentation>
 				</xs:annotation>				
 			</xs:element>
-			<xs:element name="MonthsHomelessThisTime" type="hmis:monthsHomelessPastThreeYears" minOccurs="0">
+			<xs:element name="MonthsHomelessThisTime" type="xs:nonNegativeInteger" minOccurs="0">
 				<xs:annotation>					
 					<xs:documentation xml:lang="en">See 2014 HMIS Data Dictionary (Proposed Amendment), Section 3.17, #3.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual (Proposed Amendment), Section 3.17, #3.</xs:documentation>
