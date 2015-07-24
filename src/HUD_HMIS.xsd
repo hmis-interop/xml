@@ -133,7 +133,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>			
-			<xs:element name="DOB" type="xs:date">
+			<xs:element name="DOB" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.3, #1.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.3.</xs:documentation>
