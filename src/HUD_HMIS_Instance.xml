@@ -22,11 +22,11 @@
             </hmis:ExportPeriod>
             <hmis:ExportPeriodType>effective</hmis:ExportPeriodType>
             <hmis:ExportDirective>deltaRefresh</hmis:ExportDirective>
-            <hmis:Affiliation hmis:dateCreated="2016-04-11T23:14:59Z" hmis:dateUpdated="2015-05-30T23:14:59" hmis:userID="nf">
+            <!--<hmis:Affiliation hmis:dateCreated="2016-04-11T23:14:59Z" hmis:dateUpdated="2015-05-30T23:14:59" hmis:userID="nf">
                 <hmis:AffiliationID>76yt</hmis:AffiliationID>
                 <hmis:ProjectID>222E</hmis:ProjectID>
                 <hmis:ResProjectID>222D</hmis:ResProjectID>
-            </hmis:Affiliation>
+            </hmis:Affiliation>-->
             <hmis:Client hmis:dateCreated="2016-04-11T23:14:59Z" hmis:dateUpdated="2015-05-30T23:14:59" hmis:userID="ned100">
                 <hmis:PersonalID>A1a1</hmis:PersonalID>
                 <hmis:FirstName>Edward</hmis:FirstName>
@@ -318,7 +318,7 @@
                 <hmis:ProjectCoCID>343</hmis:ProjectCoCID>
                 <hmis:HouseholdType>1</hmis:HouseholdType>
                 <hmis:BedType>3</hmis:BedType>
-                <hmis:Availabilty>3</hmis:Availabilty>
+                <hmis:Availability>3</hmis:Availability>
                 <hmis:UnitInventory>1595973432</hmis:UnitInventory>
                 <hmis:BedInventory>
                     <hmis:BedInventory>130</hmis:BedInventory>
