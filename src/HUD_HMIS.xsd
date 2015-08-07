@@ -1892,7 +1892,7 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.17".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ResidentialMoveInDate" type="xs:date">
+			<xs:element name="ResidentialMoveInDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.17, #1A.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, "4.17".</xs:documentation>
