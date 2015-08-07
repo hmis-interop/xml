@@ -10,7 +10,7 @@
 	vc:minVersion = "1.1"
 	elementFormDefault="qualified"
 	attributeFormDefault="qualified"
-	version="4.0">
+	version="4.0.1">
 		
 	<xs:defaultOpenContent mode="interleave" appliesToEmpty="true"> 
 		<xs:annotation>
