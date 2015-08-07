@@ -1504,25 +1504,25 @@
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="LastPermanentStreet" type="hmis:string100">
+			<xs:element name="LastPermanentStreet" type="hmis:string100" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.43, #1.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="LastPermanentCity" type="hmis:string50">
+			<xs:element name="LastPermanentCity" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.43, #2.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="LastPermanentState" type="hmis:state">
+			<xs:element name="LastPermanentState" type="hmis:state" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.43, #3.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="LastPermanentZIP" type="hmis:zipCode">
+			<xs:element name="LastPermanentZIP" type="hmis:zipCode" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 4.43, #4.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
