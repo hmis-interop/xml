@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<hmis:Sources xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_0/HUD_HMIS.xsd"
- xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/4_0/HUD_HMIS.xsd https://github.com/hmis-interop/xml/raw/master/src/HUD_HMIS.xsd">
+<?xml version="1.1" encoding="UTF-8"?>
+<hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/4_0_1/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/v4.0.1-rc.1/src/HUD_HMIS.xsd"
+ xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_0_1/HUD_HMIS.xsd"
+ xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning">
     <hmis:Source>
         <hmis:SourceID>12345</hmis:SourceID>
         <hmis:SoftwareVendor>HMISSoft Inc.</hmis:SoftwareVendor>
