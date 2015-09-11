@@ -1956,7 +1956,7 @@
 			</xs:element>
 			<xs:element name="RecordType" type="hmis:recordType">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">The permissible values correspond to the decimal values of the corresponding Service FA Referral and Contact types.  4.12 is Contact, 4.14 Services Provided is "14" and 4.16 Referrals Provided is "16".</xs:documentation>
+					<xs:documentation xml:lang="en">The permissible values correspond to the decimal values of the corresponding Service FA Referral and Contact types.  4.12 Contact is "12", 4.14 Services Provided is "14" and 4.16 Referrals Provided is "16".</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.12 and 4.14-4.16.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -5605,18 +5605,15 @@
 	<xs:simpleType name="recordType">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
-				12 = Contact
-				14 = Services Provided
-				15 = Financial Assistance
-				16 = Referrals Provided
-				141 = PATH service
-				142 = RHY service
-				143 = HOPWA service
-				144 = SSVF service
-				151 = HOPWA financial assistance
-				152 = SSVF financial assistance
-				161 = PATH referral
-				162 = RHY referral
+				12 = Contact 4.12
+				141 = PATH service 4.14 A
+				142 = RHY service 4.14 B 
+				143 = HOPWA service 4.14 C 
+				144 = SSVF service 4.14 D
+				151 = HOPWA financial assistance 4.15 A
+				152 = SSVF financial assistance 4.15 B 
+				161 = PATH referral 4.16 A
+				162 = RHY referral 4.16 B
 				200 = Bed night
 			</xs:documentation>
 		</xs:annotation>
