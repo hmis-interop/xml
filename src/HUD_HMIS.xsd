@@ -1956,7 +1956,7 @@
 			</xs:element>
 			<xs:element name="RecordType" type="hmis:recordType">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">The permissible values correspond to the decimal values of the corresponding Service FA Referral and Contact types.  4.12 Contact is "12", 4.14 Services Provided is "14X", 4.15 Financial Assistance is "15X", .16 Referrals Provided is "16X", and Bed Night is "200".</xs:documentation>
+					<xs:documentation xml:lang="en">The permissible values correspond to the decimal values of the corresponding Service FA Referral and Contact types.  4.12 Contact is "12", 4.14 Services Provided is "14X", 4.15 Financial Assistance is "15X", 4.16 Referrals Provided is "16X", and Bed Night is "200".</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Sections 4.12 and 4.14-4.16.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
