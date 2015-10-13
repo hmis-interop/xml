@@ -1,16 +1,16 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <xs:schema
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/4_0_1/HUD_HMIS.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/4_0_1/HUD_HMIS.xsd"	
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_0_1/HUD_HMIS.xsd"
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/4_1_0/HUD_HMIS.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/4_1_0/HUD_HMIS.xsd"	
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_1_0/HUD_HMIS.xsd"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	vc:minVersion = "1.1"
 	elementFormDefault="qualified"
 	attributeFormDefault="qualified"
-	version="4.0.1">
+	version="4.1.0">
 		
 	<xs:defaultOpenContent mode="interleave" appliesToEmpty="true"> 
 		<xs:annotation>
@@ -90,26 +90,32 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.13.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FirstName" type="hmis:identifierHashingOption">
+			<xs:element name="FirstName" type="hmis:nameHashingOption">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.1, #1.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.1.</xs:documentation>
 				</xs:annotation>
-				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:identifierHashingOptionNone"/>
-				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:identifierHashingOptionSHA1RHY"/>
-				<xs:alternative test="@hmis:hashStatus='3'" type="hmis:identifierHashingOption"/>
+				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
+				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
+				<xs:alternative test="@hmis:hashStatus='3'" type="hmis:nameHashingOption"/>
 			</xs:element>
-			<xs:element name="MiddleName" type="hmis:string50">
+			<xs:element name="MiddleName" type="hmis:nameHashingOption">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.1, #2.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.1.</xs:documentation>
 				</xs:annotation>
+				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
+				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
+				<xs:alternative test="@hmis:hashStatus='3'" type="hmis:nameHashingOption"/>
 			</xs:element>
-			<xs:element name="LastName" type="hmis:string50">
+			<xs:element name="LastName" type="hmis:nameHashingOption">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.1, #3.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.1.</xs:documentation>
 				</xs:annotation>
+				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
+				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
+				<xs:alternative test="@hmis:hashStatus='3'" type="hmis:nameHashingOption"/>
 			</xs:element>
 			<xs:element name="NameSuffix" type="hmis:string50">
 				<xs:annotation>
@@ -123,12 +129,16 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SSN" type="hmis:ssn">
+			<xs:element name="SSN" type="hmis:ssnHashingOption">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.2, #1.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.2.</xs:documentation>
 					<xs:documentation xml:lang="en">Unknown SSN digits should be indicated with a lower case "x".</xs:documentation>
 				</xs:annotation>
+				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:ssnHashingOptionPlain"/>
+				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:ssnHashingOptionSHA1RHY"/>
+				<xs:alternative test="@hmis:hashStatus='3'" type="hmis:ssnHashingOption"/>
+				<xs:alternative test="@hmis:hashStatus" type="hmis:ssnHashingOptionPlain"/>
 			</xs:element>
 			<xs:element name="SSNDataQuality" type="hmis:ssnDataQuality">
 				<xs:annotation>
@@ -1200,7 +1210,7 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
 	
-	<xs:complexType name="identifierHashingOption">
+	<xs:complexType name="nameHashingOption">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
 				<xs:attribute ref="hashStatus" use="required"/>
@@ -1208,22 +1218,19 @@
 		</xs:simpleContent>
 	</xs:complexType>
 	
-	<xs:complexType name="identifierHashingOptionNone">
+	<xs:complexType name="nameHashingOptionPlain">
 		<xs:simpleContent>
-			<xs:restriction base="hmis:identifierHashingOption">
-				<xs:simpleType>
-					<xs:restriction base="hmis:string50"/>
-				</xs:simpleType>
+			<xs:restriction base="hmis:nameHashingOption">
+				<xs:maxLength value="50"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
 	
-	<xs:complexType name="identifierHashingOptionSHA1RHY">
+	<xs:complexType name="nameHashingOptionSHA1RHY">
 		<xs:simpleContent>
-			<xs:restriction base="hmis:identifierHashingOption">
-				<xs:simpleType>
-					<xs:restriction base="hmis:string40"/>
-				</xs:simpleType>
+			<xs:restriction base="hmis:nameHashingOption">
+				<xs:length value="40"/>
+				<xs:pattern value="([a-zA-Z0-9])*"/>
 			</xs:restriction>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -2373,6 +2380,31 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ssnHashingOption">
+		<xs:simpleContent>
+			<xs:extension base="xs:token">
+				<xs:attribute ref="hashStatus" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="ssnHashingOptionPlain">
+		<xs:simpleContent>
+			<xs:restriction base="hmis:ssnHashingOption">
+				<xs:pattern value="[0-9x]{9}"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="ssnHashingOptionSHA1RHY">
+		<xs:simpleContent>
+			<xs:restriction base="hmis:ssnHashingOption">
+				<xs:length value="40"/>
+				<xs:pattern value="([a-zA-Z0-9])*"/>
+			</xs:restriction>
+		</xs:simpleContent>
 	</xs:complexType>
 
 	<xs:complexType name="veteranInfo">
@@ -5814,12 +5846,6 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="ssn">
-		<xs:restriction base="xs:string">
-			<xs:pattern value="[0-9x]{9}"/>
-		</xs:restriction>
-	</xs:simpleType>
-
 	<xs:simpleType name="ssnDataQuality">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
