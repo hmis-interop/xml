@@ -1793,8 +1793,7 @@
 			</xs:element>
 			<xs:element name="ProjectCommonName" type="hmis:string50" minOccurs="0">		
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section X.</xs:documentation>
-					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, X.</xs:documentation>
+					<xs:documentation xml:lang="en">A local or commonly used name for a project.  This is not referenced in the May 2014 HMIS Data Dictionary, and is optional.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
