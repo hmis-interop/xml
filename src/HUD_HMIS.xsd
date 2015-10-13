@@ -704,6 +704,11 @@
 					<xs:documentation xml:lang="en">Select one of the ExportDirective choices to instruct the target as to how the data being transmitted should be handled.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="HashStatus" type="hmis:hashStatus">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Indicates whether and how the data is hashed.  In this usage, it is for verifying matching data without actually sending it.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:choice maxOccurs="unbounded">
 				<xs:element name="Affiliation" type="hmis:affiliation"/>
 				<xs:element name="Client" type="hmis:client"/>
@@ -3845,6 +3850,34 @@
 	<xs:simpleType name="geocode">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:pattern value="[0-9]{6}"></xs:pattern>    
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="hashStatus">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				Hash Status 
+				1 = Unhashed 
+				2 = SHA-1 RHY
+				3 = Hashed - other
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Unhashed: Data sets with this Hash Status are expected conform to data type and field length parameters defined in this document.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">SHA-1 RHY: The SHA-1 algorithm produces a 40-character string of letters and numbers. Data sets with a HashStatus of ‘SHA-1 RHY’ (2) will be exported consistent with the specifications of this document with the exception that the following fields in Client.csv (and no others) will be hashed using the SHA-1 standard algorithm and data types for these four fields will differ as noted: - FirstName (S40)– SHA-1 hash of the SOUNDEX of the value for first name; - MiddleName (S40) – SHA-1 hash of the SOUNDEX of the value for middle name; -LastName (S40) – SHA-1 hash of the SOUNDEX of the value for last name; and - SSN (S44) – concatenation of the unhashed last 4 digits of the SSN followed by SHA-1 hash of the full SSN.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Hashed - other: The ‘Other’ HashStatus is used to identify exports in which data are hashed based on parameters mutually agreed upon by the sender and recipient of the CSV data.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	
