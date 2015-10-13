@@ -34,11 +34,11 @@
                 <hmis:LastName hmis:hashStatus="3">Jones</hmis:LastName>
                 <hmis:NameSuffix>Sr.</hmis:NameSuffix>
                 <hmis:NameDataQuality>9</hmis:NameDataQuality>
-                <hmis:SSN hmis:hashStatus="1">7xxx9xx8x</hmis:SSN>
+                <hmis:SSN hmis:hashStatus="1">79xx9xx8x</hmis:SSN>
                 <hmis:SSNDataQuality>2</hmis:SSNDataQuality>
                 <hmis:DOB>2014-11-18</hmis:DOB>
                 <hmis:DOBDataQuality>1</hmis:DOBDataQuality>
-                <hmis:Gender>3</hmis:Gender>
+                <hmis:Gender>4</hmis:Gender>
                 <hmis:OtherGender>intersex</hmis:OtherGender>
                 <hmis:Ethnicity>0</hmis:Ethnicity>
                 <hmis:Race>8</hmis:Race>
