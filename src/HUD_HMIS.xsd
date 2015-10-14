@@ -871,7 +871,7 @@
 		
 		<!--Cardinality Checking-->
 		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:Enrollment[hmis:PersonalID = $id]) ge 1)"/>		
-		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:VeteranInfo[hmis:PersonalID = $id]) le 1)"/>				
+		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:VeteranInfo[hmis:PersonalID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:CommercialSexualExploitation[hmis:ProjectEntryID = $id]) le 1)"/>						
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:DateOfEngagement[hmis:ProjectEntryID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EnrollmentCoC[hmis:ProjectEntryID = $id]) ge 0)"/>		
@@ -896,6 +896,10 @@
 		<xs:assert test="every $id in hmis:Organization/hmis:OrganizationID satisfies (fn:count(hmis:Project[hmis:OrganizationID = $id]) ge 1)"/>						
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Funder[hmis:ProjectID = $id]) ge 1)"/>
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:ProjectCoC[hmis:ProjectID = $id]) ge 1)"/>		
+		
+		<!-- Checking that there is only one Head of Household per Household enrolled -->
+		<xs:assert test="every $id in hmis:Enrollment/hmis:HouseholdID satisfies (fn:count(hmis:Enrollment/hmis:RelationshipToHoH[text()= '1'][../hmis:HouseholdID = $id] ) eq 1)"/>						
+		
 	</xs:complexType>
 	<xs:complexType name="familyReunification">
 		<xs:sequence>
