@@ -104,7 +104,8 @@
                 <hmis:ResidencePrior>17</hmis:ResidencePrior>
                 <hmis:OtherResidencePrior>some other residence text here</hmis:OtherResidencePrior>
                 <hmis:ResidencePriorLengthOfStay>8</hmis:ResidencePriorLengthOfStay>
-                <hmis:ContinuouslyHomelessOneYear>8</hmis:ContinuouslyHomelessOneYear>
+                <hmis:EntryFromStreetESSH>1</hmis:EntryFromStreetESSH>
+                <hmis:DateToStreetESSH>2015-04-01</hmis:DateToStreetESSH>
                 <hmis:TimesHomelessPastThreeYears>2</hmis:TimesHomelessPastThreeYears>
                 <hmis:MonthsHomelessPastThreeYears>103</hmis:MonthsHomelessPastThreeYears>
                 <hmis:MonthsHomelessThisTime>101</hmis:MonthsHomelessThisTime>
@@ -123,7 +124,7 @@
                 <hmis:ResidencePrior>17</hmis:ResidencePrior>
                 <hmis:OtherResidencePrior>some other residence text here</hmis:OtherResidencePrior>
                 <hmis:ResidencePriorLengthOfStay>8</hmis:ResidencePriorLengthOfStay>
-                <hmis:ContinuouslyHomelessOneYear>8</hmis:ContinuouslyHomelessOneYear>
+                <hmis:EntryFromStreetESSH>0</hmis:EntryFromStreetESSH>
                 <hmis:TimesHomelessPastThreeYears>1</hmis:TimesHomelessPastThreeYears>
                 <hmis:MonthsHomelessPastThreeYears>103</hmis:MonthsHomelessPastThreeYears>
                 <hmis:MonthsHomelessThisTime>101</hmis:MonthsHomelessThisTime>
