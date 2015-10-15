@@ -101,11 +101,11 @@
                 <hmis:EntryDate>2016-04-12Z</hmis:EntryDate>
                 <hmis:HouseholdID>a34563w</hmis:HouseholdID>
                 <hmis:RelationshipToHoH>1</hmis:RelationshipToHoH>
-                <hmis:ResidencePrior>12</hmis:ResidencePrior>
+                <hmis:ResidencePrior>17</hmis:ResidencePrior>
                 <hmis:OtherResidencePrior>some other residence text here</hmis:OtherResidencePrior>
                 <hmis:ResidencePriorLengthOfStay>8</hmis:ResidencePriorLengthOfStay>
                 <hmis:ContinuouslyHomelessOneYear>8</hmis:ContinuouslyHomelessOneYear>
-                <hmis:TimesHomelessPastThreeYears>0</hmis:TimesHomelessPastThreeYears>
+                <hmis:TimesHomelessPastThreeYears>2</hmis:TimesHomelessPastThreeYears>
                 <hmis:MonthsHomelessPastThreeYears>103</hmis:MonthsHomelessPastThreeYears>
                 <hmis:MonthsHomelessThisTime>101</hmis:MonthsHomelessThisTime>
                 <hmis:YearsHomeless>3</hmis:YearsHomeless>
@@ -119,12 +119,12 @@
                 <hmis:ProjectID>222E</hmis:ProjectID>
                 <hmis:EntryDate>2016-04-12Z</hmis:EntryDate>
                 <hmis:HouseholdID>a34563w</hmis:HouseholdID>
-                <hmis:RelationshipToHoH>1</hmis:RelationshipToHoH>
-                <hmis:ResidencePrior>12</hmis:ResidencePrior>
+                <hmis:RelationshipToHoH>2</hmis:RelationshipToHoH>
+                <hmis:ResidencePrior>17</hmis:ResidencePrior>
                 <hmis:OtherResidencePrior>some other residence text here</hmis:OtherResidencePrior>
                 <hmis:ResidencePriorLengthOfStay>8</hmis:ResidencePriorLengthOfStay>
                 <hmis:ContinuouslyHomelessOneYear>8</hmis:ContinuouslyHomelessOneYear>
-                <hmis:TimesHomelessPastThreeYears>0</hmis:TimesHomelessPastThreeYears>
+                <hmis:TimesHomelessPastThreeYears>1</hmis:TimesHomelessPastThreeYears>
                 <hmis:MonthsHomelessPastThreeYears>103</hmis:MonthsHomelessPastThreeYears>
                 <hmis:MonthsHomelessThisTime>101</hmis:MonthsHomelessThisTime>
                 <hmis:YearsHomeless>3</hmis:YearsHomeless>
@@ -441,7 +441,7 @@
                 <hmis:RHYBCPStatusID>erffedyte1</hmis:RHYBCPStatusID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:StatusDate>2014-09-20</hmis:StatusDate>
-                <hmis:FYSBYouth>1</hmis:FYSBYouth>
+                <hmis:FYSBYouth>0</hmis:FYSBYouth>
                 <hmis:ReasonNoServices>3</hmis:ReasonNoServices>
             </hmis:RHYBCPStatus>
             <hmis:Services hmis:dateCreated="2015-09-04T23:14:59" hmis:dateUpdated="2015-02-28T23:14:59Z" hmis:userID="CoaTbskfRfTvBSHN8_eRmMF4.4O-A">

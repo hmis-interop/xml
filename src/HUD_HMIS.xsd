@@ -455,7 +455,7 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Dictionary, Section 3.9.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.9.</xs:documentation>					
-				</xs:annotation>
+				</xs:annotation>				
 			</xs:element>
 			<xs:element name="ResidencePriorLengthOfStay" type="hmis:residencePriorLengthOfStay" minOccurs="0">
 				<xs:annotation>
@@ -475,7 +475,8 @@
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual, Section 3.17, #2.</xs:documentation>
 				</xs:annotation>				
 			</xs:element>
-			<xs:element name="MonthsHomelessPastThreeYears" type="hmis:monthsHomelessPastThreeYears" minOccurs="0">
+			<xs:element name="MonthsHomelessPastThreeYears
+				" type="hmis:monthsHomelessPastThreeYears" minOccurs="0">
 				<xs:annotation>					
 					<xs:documentation xml:lang="en">See 2014 HMIS Data Dictionary (Proposed Amendment), Section 3.17, #2A.</xs:documentation>
 					<xs:documentation xml:lang="en">See May 2014 HMIS Data Manual (Proposed Amendment), Section 3.17, #2A.</xs:documentation>
@@ -513,6 +514,13 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
+		
+		<!--Testing if ResidencePrior is 17, before allowing use of OtherResidencePrior-->
+		<xs:assert test="if (hmis:ResidencePrior/text()='17') then boolean(hmis:OtherResidencePrior) else (if (not(hmis:ResidencePrior/text()='17')) then (not(boolean(hmis:OtherResidencePrior))) else false())"/>
+	
+		<!--Testing if TimesHomelessPastThreeYears is 1-4, before allowing use of MonthsHomelessPastThreeYears-->
+		<xs:assert test="if (hmis:TimesHomelessPastThreeYears/text()='1' or hmis:TimesHomelessPastThreeYears/text()='2' or hmis:TimesHomelessPastThreeYears/text()='3'  or hmis:TimesHomelessPastThreeYears/text()='4') then boolean(hmis:MonthsHomelessPastThreeYears) else (if (not(hmis:TimesHomelessPastThreeYears/text()='1'  or hmis:TimesHomelessPastThreeYears/text()='2' or hmis:TimesHomelessPastThreeYears/text()='3'  or hmis:TimesHomelessPastThreeYears/text()='4')) then (not(boolean(hmis:MonthsHomelessPastThreeYears))) else false())"/>
+		
 	</xs:complexType>
 
 	<xs:complexType name="enrollmentCoC">
@@ -1764,6 +1772,10 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
+		
+		<!--Testing if ClientEnrolledInPATH is 0, before allowing use of ReasonNotEnrolled-->
+		<xs:assert test="if (hmis:ClientEnrolledInPATH/text()='0') then boolean(hmis:ReasonNotEnrolled) else (if (not(hmis:ClientEnrolledInPATH/text()='0')) then (not(boolean(hmis:ReasonNotEnrolled))) else false())"/>		
+		
 	</xs:complexType>
 
 	<xs:complexType name="percentAMI">
@@ -1984,6 +1996,10 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
+		
+		<!--Testing if FYSBYouth is 0, before allowing use of ReasonNoServices-->
+		<xs:assert test="if (hmis:FYSBYouth/text()='0') then boolean(hmis:ReasonNoServices) else (if (not(hmis:FYSBYouth/text()='0')) then (not(boolean(hmis:ReasonNoServices))) else false())"/>
+				
 	</xs:complexType>
 
 	<xs:complexType name="services">
