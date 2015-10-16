@@ -108,9 +108,7 @@
                 <hmis:DateToStreetESSH>2015-04-01</hmis:DateToStreetESSH>
                 <hmis:TimesHomelessPastThreeYears>2</hmis:TimesHomelessPastThreeYears>
                 <hmis:MonthsHomelessPastThreeYears>103</hmis:MonthsHomelessPastThreeYears>
-                <hmis:MonthsHomelessThisTime>101</hmis:MonthsHomelessThisTime>
                 <hmis:YearsHomeless>3</hmis:YearsHomeless>
-                <hmis:StatusDocumented>1</hmis:StatusDocumented>
                 <hmis:DisablingCondition>9</hmis:DisablingCondition>
                 <hmis:HousingStatus>6</hmis:HousingStatus>
             </hmis:Enrollment>
@@ -127,9 +125,7 @@
                 <hmis:EntryFromStreetESSH>0</hmis:EntryFromStreetESSH>
                 <hmis:TimesHomelessPastThreeYears>1</hmis:TimesHomelessPastThreeYears>
                 <hmis:MonthsHomelessPastThreeYears>103</hmis:MonthsHomelessPastThreeYears>
-                <hmis:MonthsHomelessThisTime>101</hmis:MonthsHomelessThisTime>
                 <hmis:YearsHomeless>3</hmis:YearsHomeless>
-                <hmis:StatusDocumented>1</hmis:StatusDocumented>
                 <hmis:DisablingCondition>9</hmis:DisablingCondition>
                 <hmis:HousingStatus>6</hmis:HousingStatus>
             </hmis:Enrollment>

@@ -484,26 +484,14 @@
 			<xs:element name="MonthsHomelessPastThreeYears
 				" type="hmis:monthsHomelessPastThreeYears" minOccurs="0">
 				<xs:annotation>					
-					<xs:documentation xml:lang="en">See 2014 HMIS Data Dictionary (Proposed Amendment), Section 3.17, #2A.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual (Proposed Amendment), Section 3.17, #2A.</xs:documentation>
-				</xs:annotation>				
-			</xs:element>
-			<xs:element name="MonthsHomelessThisTime" type="xs:nonNegativeInteger" minOccurs="0">
-				<xs:annotation>					
-					<xs:documentation xml:lang="en">See 2014 HMIS Data Dictionary (Proposed Amendment), Section 3.17, #3.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual (Proposed Amendment), Section 3.17, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See 2015 HMIS Data Dictionary, Section 3.17, #2A.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 3.17, #2A.</xs:documentation>
 				</xs:annotation>				
 			</xs:element>
 			<xs:element name="YearsHomeless" type="xs:positiveInteger" minOccurs="0">
 				<xs:annotation>					
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 3.17, #3A.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 3.17, #3A.</xs:documentation>
-				</xs:annotation>				
-			</xs:element>
-			<xs:element name="StatusDocumented" type="hmis:noYes" minOccurs="0">
-				<xs:annotation>					
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 3.17, #4.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 3.17, #4.</xs:documentation>
 				</xs:annotation>				
 			</xs:element>
 			<xs:element name="DisablingCondition" type="hmis:fiveValDKRefused" minOccurs="0">
@@ -4411,19 +4399,14 @@
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
 				Total Number of Months Homeless in the Past Three Years 
-					100 – 112 = 0 to 12 months (with a leading "1")
-					7 = More than 12 months 
+					101 – 112 = 1 to 12 months (with a leading "1")
+					113 = More than 12 months 
 					8 = Client doesn’t know 
 					9 = Client refused 
 					99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:positiveInteger">
-			<xs:enumeration value="100">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">0 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="101">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">1 month</xs:documentation>
@@ -4484,7 +4467,7 @@
 					<xs:documentation xml:lang="en">12 months</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="7">
+			<xs:enumeration value="113">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">More than 12 months</xs:documentation>
 				</xs:annotation>
@@ -6064,12 +6047,12 @@
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
 				Number of Times the Client has been Homeless in the Past Three Years 
-					0 = 0 (not homeless - Prevention only)
-					1 = 1 (homeless only this time)
-					2 = 2 
-					3 = 3 
-					4 = 4 or more 
-					8 = Client doesn’t know 
+					0 = Never in the 3 years
+					1 = One time
+					2 = Two times
+					3 = Three times
+					4 = Four or more times
+					8 = Client doesn’t know
 					9 = Client refused
 					99 = Data not collected
 			</xs:documentation>
@@ -6077,27 +6060,27 @@
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">0</xs:documentation>
+					<xs:documentation xml:lang="en">Never in the 3 years</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="1">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">1</xs:documentation>
+					<xs:documentation xml:lang="en">One time</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>			
 			<xs:enumeration value="2">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">2</xs:documentation>
+					<xs:documentation xml:lang="en">Two times</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>				
 			<xs:enumeration value="3">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">3</xs:documentation>
+					<xs:documentation xml:lang="en">Three times</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">4 or more</xs:documentation>
+					<xs:documentation xml:lang="en">Four or more times</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8">
