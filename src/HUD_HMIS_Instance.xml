@@ -147,15 +147,14 @@
                 <hmis:ExitID>C2x</hmis:ExitID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:ExitDate>2016-11-16Z</hmis:ExitDate>
-                <hmis:Destination>22</hmis:Destination>
-                <hmis:OtherDestination>w</hmis:OtherDestination>
+                <hmis:Destination>17</hmis:Destination>
+                <hmis:OtherDestination>Hotel Training Program</hmis:OtherDestination>
             </hmis:Exit>
             <hmis:Exit hmis:dateCreated="2014-10-07T23:14:59Z" hmis:dateUpdated="2015-11-06T23:14:59Z" hmis:userID="GO">
                 <hmis:ExitID>C3x</hmis:ExitID>
                 <hmis:ProjectEntryID>w5642</hmis:ProjectEntryID>
                 <hmis:ExitDate>2016-11-16Z</hmis:ExitDate>
                 <hmis:Destination>22</hmis:Destination>
-                <hmis:OtherDestination>w</hmis:OtherDestination>
             </hmis:Exit>
             <hmis:ExitHousingAssessment hmis:dateCreated="2015-02-09T23:14:59" hmis:dateUpdated="2015-08-17T23:14:59" hmis:userID="l_Xj">
                 <hmis:ExitHousingAssessmentID>326</hmis:ExitHousingAssessmentID>
