@@ -47,9 +47,11 @@
             <hmis:CommercialSexualExploitation hmis:dataCollectionStage="1" hmis:dateCreated="2016-05-08T23:14:59" hmis:dateUpdated="2016-05-06T23:14:59Z" hmis:userID="DG4IfIQuAFF6I.yl7">
                 <hmis:CommercialSexualExploitationID>787h</hmis:CommercialSexualExploitationID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:ExchangeForSexPastThreeMonths>0</hmis:ExchangeForSexPastThreeMonths>
+                <hmis:ExchangeForSex>1</hmis:ExchangeForSex>
+                <hmis:ExchangeForSexPastThreeMonths>1</hmis:ExchangeForSexPastThreeMonths>
                 <hmis:CountOfExchangeForSex>3</hmis:CountOfExchangeForSex>
-                <hmis:AskedOrForcedToExchangeForSex>8</hmis:AskedOrForcedToExchangeForSex>
+                <hmis:AskedOrForcedToExchangeForSex>1</hmis:AskedOrForcedToExchangeForSex>
+                <hmis:AskedOrForcedToExchangeForSexPastThreeMonths>8</hmis:AskedOrForcedToExchangeForSexPastThreeMonths>
             </hmis:CommercialSexualExploitation>
             <hmis:ConnectionWithSOAR hmis:dateCreated="2015-05-20T23:14:59Z" hmis:dateUpdated="2016-05-21T23:14:59" hmis:userID="y9SC3Udh_t0aJCX">
                 <hmis:ConnectionWithSOARID>676rt</hmis:ConnectionWithSOARID>

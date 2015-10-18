@@ -206,27 +206,51 @@
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="ExchangeForSex" type="hmis:fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35A, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ExchangeForSexPastThreeMonths" type="hmis:fiveValDKRefused">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35A, #1A</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CountOfExchangeForSex" type="hmis:countOfExchangeForSex" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35, #1A.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35A, #1B.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AskedOrForcedToExchangeForSex" type="hmis:askedOrForcedToExchangeForSex" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35, #1B.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35, #1C.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AskedOrForcedToExchangeForSexPastThreeMonths" type="hmis:fiveValDKRefused" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35, #1D.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
+		<!--Testing if ExchangeForSex is 1, before allowing use of ExchangeForSexPastThreeMonths-->
+		<xs:assert test="if (hmis:ExchangeForSex/text()='1') then boolean(hmis:ExchangeForSexPastThreeMonths) else (if (not(hmis:ExchangeForSex/text()='1')) then (not(boolean(hmis:ExchangeForSexPastThreeMonths))) else false())"/>
+
+		<!--Testing if ExchangeForSex is 1, before allowing use of CountOfExchangeForSex-->
+		<xs:assert test="if (hmis:ExchangeForSex/text()='1') then boolean(hmis:CountOfExchangeForSex) else (if (not(hmis:ExchangeForSex/text()='1')) then (not(boolean(hmis:CountOfExchangeForSex))) else false())"/>
+		
+		<!--Testing if ExchangeForSex is 1, before allowing use of AskedOrForcedToExchangeForSex-->
+		<xs:assert test="if (hmis:ExchangeForSex/text()='1') then boolean(hmis:AskedOrForcedToExchangeForSex) else (if (not(hmis:ExchangeForSex/text()='1')) then (not(boolean(hmis:AskedOrForcedToExchangeForSex))) else false())"/>
+		
+		<!--Testing if AskedOrForcedToExchangeForSex is 1, before allowing use of AskedOrForcedToExchangeForSex-->
+		<xs:assert test="if (hmis:AskedOrForcedToExchangeForSex/text()='1') then boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths) else (if (not(hmis:AskedOrForcedToExchangeForSex/text()='1')) then (not(boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths))) else false())"/>
+		
 	</xs:complexType>
 	
 	<xs:complexType name="dateOfEngagement">
@@ -4467,7 +4491,7 @@
 					<xs:documentation xml:lang="en">12 months</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="113">
+			<xs:enumeration value="1">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">More than 12 months</xs:documentation>
 				</xs:annotation>
