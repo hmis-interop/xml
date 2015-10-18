@@ -889,7 +889,7 @@
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.40 Worst Housing Situation".</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="YouthCriticalIssues" type="hmis:youthCriticalIssues">
+				<xs:element name="EntryRHY" type="hmis:entryRHY">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.33.</xs:documentation>
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
@@ -915,7 +915,7 @@
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:RHYBCPStatus[hmis:ProjectEntryID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:SexualOrientation[hmis:ProjectEntryID = $id]) le 1)"/>						
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:WorstHousingSituation[hmis:ProjectEntryID = $id]) le 1)"/>		
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:YouthCriticalIssues[hmis:ProjectEntryID = $id]) le 1)"/>		
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntryRHY[hmis:ProjectEntryID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ConnectionWithSOAR[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitHousingAssessment[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitPlansActions[hmis:ExitID = $id]) le 1)"/>				
@@ -1952,9 +1952,11 @@
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.34 Referral Source".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+	
 		</xs:sequence>
 		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
+
 	</xs:complexType>
 	
 	<xs:complexType name="residentialMoveInDate">
@@ -2357,8 +2359,8 @@
 					<xs:selector xpath="hmis:WorstHousingSituation"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
-				<xs:keyref name="enrollmentYouthCriticalIssuesKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:YouthCriticalIssues"/>
+				<xs:keyref name="enrollmentEntryRHYKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:EntryRHY"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
 				<xs:keyref name="exitExitHousingAssessmentKeyRef" refer="exitKey">
@@ -2565,11 +2567,11 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
 	
-	<xs:complexType name="youthCriticalIssues">
+	<xs:complexType name="entryRHY">
 		<xs:sequence>
-			<xs:element name="YouthCriticalIssuesID" type="hmis:string32">
+			<xs:element name="EntryRHYID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the YouthCriticalIssues' unique ID</xs:documentation>
+					<xs:documentation xml:lang="en">Reference to the EntryRHY' unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>			
 			<xs:element name="ProjectEntryID" type="hmis:string32">
@@ -2727,9 +2729,40 @@
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="WorkPlaceViolenceThreats" type="hmis:fiveValDKRefused" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35, B1.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35B Labor Exploitation".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WorkplacePromiseDifference" type="hmis:fiveValDKRefused" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35, B2.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35B Labor Exploitation".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CoercedToContinueWork" type="hmis:fiveValDKRefused" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35, BA.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35B Labor Exploitation".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LaborExploitPastThreeMonths" type="hmis:fiveValDKRefused" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35, BB.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35B Labor Exploitation".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
+		
+		<!--Testing if WorkPlaceViolenceThreats or WorkplacePromiseDifference is 1, before allowing use of CoercedToContinueWork-->
+		<xs:assert test="if (hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1') then boolean(hmis:CoercedToContinueWork) else (if (not(hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1')) then (not(boolean(hmis:CoercedToContinueWork))) else false())"/>
+		
+		<!--Testing if WorkPlaceViolenceThreats or WorkplacePromiseDifference is 1, before allowing use of LaborExploitPastThreeMonths-->
+		<xs:assert test="if (hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1') then boolean(hmis:LaborExploitPastThreeMonths) else (if (not(hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1')) then (not(boolean(hmis:LaborExploitPastThreeMonths))) else false())"/>
+		
 	</xs:complexType>
 	
 	<xs:attribute name="hashStatus">

@@ -490,8 +490,8 @@
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:WorstHousingSituation>9</hmis:WorstHousingSituation>
             </hmis:WorstHousingSituation>
-            <hmis:YouthCriticalIssues hmis:dataCollectionStage="1" hmis:dateCreated="2016-05-08T23:14:59" hmis:dateUpdated="2016-05-06T23:14:59Z" hmis:userID="DG4IfIQuAFF6I.yl7">
-                <hmis:YouthCriticalIssuesID>y76754</hmis:YouthCriticalIssuesID>
+            <hmis:EntryRHY hmis:dataCollectionStage="1" hmis:dateCreated="2016-05-08T23:14:59" hmis:dateUpdated="2016-05-06T23:14:59Z" hmis:userID="DG4IfIQuAFF6I.yl7">
+                <hmis:EntryRHYID>y76754</hmis:EntryRHYID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:HouseholdDynamics>0</hmis:HouseholdDynamics>
                 <hmis:SexualOrientationGenderIDYouth>1</hmis:SexualOrientationGenderIDYouth>
@@ -518,7 +518,11 @@
                 <hmis:ActiveMilitaryParent>1</hmis:ActiveMilitaryParent>
                 <hmis:IncarceratedParent>1</hmis:IncarceratedParent>
                 <hmis:IncarceratedParentStatus>1</hmis:IncarceratedParentStatus>
-            </hmis:YouthCriticalIssues>
+                <hmis:WorkPlaceViolenceThreats>0</hmis:WorkPlaceViolenceThreats>
+                <hmis:WorkplacePromiseDifference>1</hmis:WorkplacePromiseDifference>
+                <hmis:CoercedToContinueWork>0</hmis:CoercedToContinueWork>
+                <hmis:LaborExploitPastThreeMonths>8</hmis:LaborExploitPastThreeMonths>
+            </hmis:EntryRHY>
         </hmis:Export>
     </hmis:Source>
 </hmis:Sources>
