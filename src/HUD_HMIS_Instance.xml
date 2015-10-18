@@ -386,6 +386,7 @@
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:PercentAMI>1</hmis:PercentAMI>
                 <hmis:HPScreeningScore>12</hmis:HPScreeningScore>
+                <hmis:VAMCStation>76762T78</hmis:VAMCStation>
             </hmis:EntrySSVF>
             <hmis:Project hmis:dateCreated="2016-02-17T23:14:59" hmis:dateUpdated="2015-03-14T23:14:59Z" hmis:userID="j2ZsRLAPv">
                 <hmis:ProjectID>222D</hmis:ProjectID>

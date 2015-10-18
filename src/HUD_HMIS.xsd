@@ -1817,10 +1817,16 @@
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.42 Percent of AMI (SSVF Eligibility)".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="HPScreeningScore" type="hmis:hpScreeningScore">
+			<xs:element name="HPScreeningScore" type="hmis:hpScreeningScore" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.44</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.44 #1</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.44 HP Screening Score".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VAMCStation" type="hmis:vamcStation" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.45 #1</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.45 HP Screening Score".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -6217,6 +6223,12 @@
 					<xs:documentation xml:lang="en">Night-by-Night</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>			
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="vamcStation">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Za-z0-9]{8}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
