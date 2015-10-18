@@ -381,11 +381,12 @@
                 <hmis:ClientEnrolledInPATH>0</hmis:ClientEnrolledInPATH>
                 <hmis:ReasonNotEnrolled>2</hmis:ReasonNotEnrolled>
             </hmis:PATHStatus>
-            <hmis:PercentAMI hmis:dateCreated="2014-11-21T23:14:59Z" hmis:dateUpdated="2015-06-11T23:14:59" hmis:userID="7653">
-                <hmis:PercentAMIID>787ughj55</hmis:PercentAMIID>
+            <hmis:EntrySSVF hmis:dateCreated="2014-11-21T23:14:59Z" hmis:dateUpdated="2015-06-11T23:14:59" hmis:userID="7653">
+                <hmis:EntrySSVFID>787ughj55</hmis:EntrySSVFID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:PercentAMI>1</hmis:PercentAMI>
-            </hmis:PercentAMI>
+                <hmis:HPScreeningScore>12</hmis:HPScreeningScore>
+            </hmis:EntrySSVF>
             <hmis:Project hmis:dateCreated="2016-02-17T23:14:59" hmis:dateUpdated="2015-03-14T23:14:59Z" hmis:userID="j2ZsRLAPv">
                 <hmis:ProjectID>222D</hmis:ProjectID>
                 <hmis:OrganizationID>34</hmis:OrganizationID>

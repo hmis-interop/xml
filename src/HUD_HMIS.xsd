@@ -832,7 +832,7 @@
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.20 PATH Status".</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="PercentAMI" type="hmis:percentAMI"/>
+				<xs:element name="EntrySSVF" type="hmis:entrySSVF"/>
 				<xs:element name="Project" type="hmis:project">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 2.</xs:documentation>
@@ -909,7 +909,7 @@
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:FormerWardJuvenileJustice[hmis:ProjectEntryID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:LastPermanentAddress[hmis:ProjectEntryID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:PathStatus[hmis:ProjectEntryID = $id]) le 1)"/>		
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:PercentAMI[hmis:ProjectEntryID = $id]) le 1)"/>				
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntrySSVF[hmis:ProjectEntryID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:ReferralSource[hmis:ProjectEntryID = $id]) le 1)"/>						
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:ResidentialMoveInDate[hmis:ProjectEntryID = $id]) le 1)"/>								
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:RHYBCPStatus[hmis:ProjectEntryID = $id]) le 1)"/>				
@@ -1799,11 +1799,11 @@
 		
 	</xs:complexType>
 
-	<xs:complexType name="percentAMI">
+	<xs:complexType name="entrySSVF">
 		<xs:sequence>
-			<xs:element name="PercentAMIID" type="hmis:string32">
+			<xs:element name="EntrySSVFID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the PercentAMIID's unique ID</xs:documentation>
+					<xs:documentation xml:lang="en">Reference to the EntrySSVFID's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProjectEntryID" type="hmis:string32">
@@ -1815,6 +1815,12 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.42, #1.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.42 Percent of AMI (SSVF Eligibility)".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HPScreeningScore" type="hmis:hpScreeningScore">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.44</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.44 HP Screening Score".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -2331,8 +2337,8 @@
 					<xs:selector xpath="hmis:PATHStatus"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
-				<xs:keyref name="enrollmentPercentAMIKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:PercentAMI"/>
+				<xs:keyref name="enrollmentEntrySSVFKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:EntrySSVF"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentReferralSourceKeyRef" refer="enrollmentKey">
@@ -4277,6 +4283,12 @@
 					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="hpScreeningScore">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{2}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
