@@ -79,8 +79,9 @@
                  hmis:dateUpdated="2016-01-05T23:14:59Z" hmis:userID="fPKfm5Rtfi0m3OhjeFL_pozaSRUUA">
                 <hmis:DomesticViolenceID>87865g</hmis:DomesticViolenceID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:DomesticViolenceVictim>8</hmis:DomesticViolenceVictim>
+                <hmis:DomesticViolenceVictim>1</hmis:DomesticViolenceVictim>
                 <hmis:WhenOccurred>2</hmis:WhenOccurred>
+                <hmis:CurrentlyFleeing>8</hmis:CurrentlyFleeing>
             </hmis:DomesticViolence>
             <hmis:SchoolStatus hmis:dataCollectionStage="5" hmis:informationDate="2014-11-21" hmis:dateCreated="2015-01-31T23:14:59"
                  hmis:dateUpdated="2016-01-10T23:14:59Z" hmis:userID="ZY_LSOlhidHlBIqeiqvbi1Oosl">
