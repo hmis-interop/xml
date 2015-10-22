@@ -621,11 +621,6 @@
 					<xs:documentation xml:lang="en">Key reference to the Enrollment's ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectCoCID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to a ProjectCoC</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
 		<xs:attribute ref="hmis:informationDate" use="required"/>
@@ -908,9 +903,9 @@
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, "Project Setup Guidance", p. 12.</xs:documentation>
 					</xs:annotation>	
 				</xs:element>
-				<xs:element name="ProjectCoC" type="hmis:projectCoC">
+				<xs:element name="CoC" type="hmis:coc">
 					<xs:annotation>
-						<xs:documentation xml:lang="en">Allows for a many-to-many relationship between Project and CoC.</xs:documentation>
+						<xs:documentation xml:lang="en"></xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="ProjectCompletionStatus" type="hmis:projectCompletionStatus"/>
@@ -970,6 +965,8 @@
 		<!--Cardinality Checking-->
 		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:Enrollment[hmis:PersonalID = $id]) ge 1)"/>		
 		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:ClientVeteranInfo[hmis:PersonalID = $id]) le 1)"/>		
+		<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:Inventory[hmis:CoCCode = $id]) ge 0)"/>				
+		<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:Site[hmis:CoCCode = $id]) ge 0)"/>						
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:CommercialSexualExploitation[hmis:ProjectEntryID = $id]) le 1)"/>						
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:DateOfEngagement[hmis:ProjectEntryID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EnrollmentCoC[hmis:ProjectEntryID = $id]) ge 0)"/>		
@@ -993,7 +990,7 @@
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ProjectCompletionStatus[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Organization/hmis:OrganizationID satisfies (fn:count(hmis:Project[hmis:OrganizationID = $id]) ge 1)"/>						
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Funder[hmis:ProjectID = $id]) ge 1)"/>
-		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:ProjectCoC[hmis:ProjectID = $id]) ge 1)"/>		
+		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:CoC[hmis:ProjectID = $id]) ge 1)"/>		
 		
 		<!-- Checking that there is only one Head of Household per Household enrolled -->
 		<xs:assert test="every $id in hmis:Enrollment/hmis:HouseholdID satisfies (fn:count(hmis:Enrollment/hmis:RelationshipToHoH[text()= '1'][../hmis:HouseholdID = $id] ) eq 1)"/>						
@@ -1564,9 +1561,9 @@
 					<xs:documentation xml:lang="en">Reference to the Inventory's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectCoCID" type="hmis:string32">
+			<xs:element name="CoCCode" type="hmis:cocCode">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the ProjectCoC</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the CoC</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HouseholdType" type="hmis:householdType">
@@ -1960,13 +1957,8 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
 	
-	<xs:complexType name="projectCoC">
+	<xs:complexType name="coc">
 		<xs:sequence>
-			<xs:element name="ProjectCoCID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the ProjectCoC's unique ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="CoCCode" type="hmis:cocCode">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the CoCCode ID</xs:documentation>
@@ -2204,9 +2196,9 @@
 					<xs:documentation xml:lang="en">Reference to the Site's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectCoCID" type="hmis:string32">
+			<xs:element name="CoCCode" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the ProjectCoC</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the CoC</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PrincipalSite" type="hmis:noYes">
@@ -2316,9 +2308,9 @@
 					<xs:selector xpath="hmis:Project"/>
 					<xs:field xpath="hmis:ProjectID"/>
 				</xs:key>
-				<xs:key name="projectCoCKey">
-					<xs:selector xpath="hmis:ProjectCoC"/>
-					<xs:field xpath="hmis:ProjectCoCID"/>
+				<xs:key name="cocKey">
+					<xs:selector xpath="hmis:CoC"/>
+					<xs:field xpath="hmis:CoCCode"/>
 				</xs:key>
 				<xs:keyref name="affiliationProjectKeyRef" refer="projectKey">
 					<xs:selector xpath="hmis:Affiliation"/>
@@ -2331,10 +2323,6 @@
 				<xs:keyref name="enrollmentClientKeyRef" refer="clientKey">
 					<xs:selector xpath="hmis:Enrollment"/>
 					<xs:field xpath="hmis:PersonalID"/>
-				</xs:keyref>
-				<xs:keyref name="enrollmentCoCProjectCoCKeyRef" refer="projectCoCKey">
-					<xs:selector xpath="hmis:EnrollmentCoC"/>
-					<xs:field xpath="hmis:ProjectCoCID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentCoCEnrollmentKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:EnrollmentCoC"/>
@@ -2468,16 +2456,16 @@
 					<xs:selector xpath="hmis:ProjectCompletionStatus"/>
 					<xs:field xpath="hmis:ExitID"/>
 				</xs:keyref>
-				<xs:keyref name="inventoryProjectCoCKeyRef" refer="projectCoCKey">
+				<xs:keyref name="inventoryCoCKeyRef" refer="cocKey">
 					<xs:selector xpath="hmis:Inventory"/>
-					<xs:field xpath="hmis:ProjectCoCID"/>
+					<xs:field xpath="hmis:CoCCode"/>
 				</xs:keyref>
 				<xs:keyref name="projectOrganizationKeyRef" refer="organizationKey">
 					<xs:selector xpath="hmis:Project"/>
 					<xs:field xpath="hmis:OrganizationID"/>
 				</xs:keyref>
-				<xs:keyref name="projectCoCProjectKeyRef" refer="projectKey">
-					<xs:selector xpath="hmis:ProjectCoC"/>
+				<xs:keyref name="cocProjectKeyRef" refer="projectKey">
+					<xs:selector xpath="hmis:CoC"/>
 					<xs:field xpath="hmis:ProjectID"/>
 				</xs:keyref>
 				<xs:keyref name="projectEnrollmentKeyRef" refer="projectKey">
@@ -2488,9 +2476,9 @@
 					<xs:selector xpath="hmis:Funder"/>
 					<xs:field xpath="hmis:ProjectID"/>
 				</xs:keyref>
-				<xs:keyref name="siteProjectCoCKeyRef" refer="projectCoCKey">
+				<xs:keyref name="siteCoCKeyRef" refer="cocKey">
 					<xs:selector xpath="hmis:Site"/>
-					<xs:field xpath="hmis:ProjectCoCID"/>					
+					<xs:field xpath="hmis:CoCCode"/>					
 				</xs:keyref>
 				<xs:keyref name="clientVeteranInfoClientKeyRef" refer="clientKey">
 					<xs:selector xpath="hmis:ClientVeteranInfo"/>
