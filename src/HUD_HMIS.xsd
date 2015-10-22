@@ -338,10 +338,65 @@
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, "Section 4.9."</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="TCellCountAvailable" type="hmis:fiveValDKRefused" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.47 #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, "Section 4.47."</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TCellCount" type="hmis:tCellCount" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.47 A.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, "Section 4.47."</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TCellSource" type="hmis:tCellOrViralLoadSource" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.47 B.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, "Section 4.47."</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ViralLoadAvailable" type="hmis:fiveValDKRefused" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.47 #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, "Section 4.47."</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ViralLoad" type="hmis:viralLoad" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.47 C.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, "Section 4.47."</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ViralLoadSource" type="hmis:tCellOrViralLoadSource" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.47 D.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, "Section 4.47."</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
 		<xs:attribute ref="hmis:informationDate" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
+		
+		<!--Testing if DisabilityType is 8, before allowing use of TCellCountAvailable-->
+		<xs:assert test="if (hmis:TCellCountAvailable) then boolean(hmis:DisabilityType/text()='8') else true()"/>
+
+		<!--Testing if TCellCountAvailable is 1, before allowing use of TCellCount-->
+		<xs:assert test="if (hmis:TCellCountAvailable/text()='1') then boolean(hmis:TCellCount) else (if (not(hmis:TCellCountAvailable/text()='1')) then (not(boolean(hmis:TCellCount))) else false())"/>
+
+		<!--Testing if TCellCount is not null, before allowing use of TCellSource-->
+		<xs:assert test="if (hmis:TCellCount) then boolean(hmis:TCellSource) else (if (not(hmis:TCellCount)) then (not(boolean(hmis:TCellSource))) else false())"/>
+
+		<!--Testing if DisabilityType is 8, before allowing use of ViralLoadAvailable-->
+		<xs:assert test="if (hmis:ViralLoadAvailable) then boolean(hmis:DisabilityType/text()='8') else true()"/>
+		
+		<!--Testing if ViralLoadAvailable is 1, before allowing use of ViralLoad-->
+		<xs:assert test="if (hmis:ViralLoadAvailable/text()='1') then boolean(hmis:ViralLoad) else (if (not(hmis:ViralLoadAvailable/text()='1')) then (not(boolean(hmis:ViralLoad))) else false())"/>
+		
+		<!--Testing if  ViralLoad is not null, before allowing use of  ViralLoadSource-->
+		<xs:assert test="if (hmis:ViralLoad) then boolean(hmis:ViralLoadSource) else (if (not(hmis:ViralLoad)) then (not(boolean(hmis:ViralLoadSource))) else false())"/>
+		
 	</xs:complexType>
 	
 	<xs:complexType name="domesticViolence">
@@ -6218,6 +6273,41 @@
 		</xs:restriction>
 	</xs:simpleType>
 
+	<xs:simpleType name="tCellCount">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="1500"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tCellOrViralLoadSource">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				T Cell Or Viral Load Source
+				1 = Medical Report 
+				2 = Client Report 
+				3 = Other
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Medical Report </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client Report</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Other</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
 	<xs:simpleType name="trackingMethod">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
@@ -6251,6 +6341,13 @@
 			<xs:totalDigits value="5"/>
 			<xs:fractionDigits value="3"/>
 			<xs:minInclusive value="0.001"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="viralLoad">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="999999"/>
 		</xs:restriction>
 	</xs:simpleType>
 	

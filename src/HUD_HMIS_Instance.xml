@@ -67,13 +67,19 @@
                  hmis:userID="YBR5goXMKigc.">
                 <hmis:DisabilitiesID>6743e</hmis:DisabilitiesID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:DisabilityType>10</hmis:DisabilityType>
+                <hmis:DisabilityType>8</hmis:DisabilityType>
                 <hmis:DisabilityResponse>2</hmis:DisabilityResponse>
                 <hmis:IndefiniteAndImpairs>9</hmis:IndefiniteAndImpairs>
                 <hmis:DocumentationOnFile>1</hmis:DocumentationOnFile>
                 <hmis:ReceivingServices>99</hmis:ReceivingServices>
                 <hmis:PATHHowConfirmed>1</hmis:PATHHowConfirmed>
                 <hmis:PATHSMIInformation>3</hmis:PATHSMIInformation>
+                <hmis:TCellCountAvailable>1</hmis:TCellCountAvailable>
+                <hmis:TCellCount>1401</hmis:TCellCount>
+                <hmis:TCellSource>3</hmis:TCellSource>
+                <hmis:ViralLoadAvailable>1</hmis:ViralLoadAvailable>
+                <hmis:ViralLoad>999999</hmis:ViralLoad>
+                <hmis:ViralLoadSource>2</hmis:ViralLoadSource>
             </hmis:Disabilities>
             <hmis:DomesticViolence hmis:dataCollectionStage="1" hmis:informationDate="2014-11-21" hmis:dateCreated="2014-11-21T23:14:59"
                  hmis:dateUpdated="2016-01-05T23:14:59Z" hmis:userID="fPKfm5Rtfi0m3OhjeFL_pozaSRUUA">
