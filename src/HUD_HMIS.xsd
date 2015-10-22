@@ -194,65 +194,6 @@
 		<xs:assert test="if (hmis:Gender/text()='4') then boolean(hmis:OtherGender) else (if (not(hmis:Gender/text()='4')) then (not(boolean(hmis:OtherGender))) else false())"/>
 	</xs:complexType>
 	
-	<xs:complexType name="commercialSexualExploitation">
-		<xs:sequence>
-			<xs:element name="CommercialSexualExploitationID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the CommercialSexualExploitation's unique ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>				
-			<xs:element name="ProjectEntryID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ExchangeForSex" type="hmis:fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35A, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ExchangeForSexPastThreeMonths" type="hmis:fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35A, #1A</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CountOfExchangeForSex" type="hmis:countOfExchangeForSex" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35A, #1B.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AskedOrForcedToExchangeForSex" type="hmis:askedOrForcedToExchangeForSex" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35, #1C.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AskedOrForcedToExchangeForSexPastThreeMonths" type="hmis:fiveValDKRefused" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35, #1D.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
-		<xs:attributeGroup ref="hmis:baseMetaData"/>
-		<!--Testing if ExchangeForSex is 1, before allowing use of ExchangeForSexPastThreeMonths-->
-		<xs:assert test="if (hmis:ExchangeForSex/text()='1') then boolean(hmis:ExchangeForSexPastThreeMonths) else (if (not(hmis:ExchangeForSex/text()='1')) then (not(boolean(hmis:ExchangeForSexPastThreeMonths))) else false())"/>
-
-		<!--Testing if ExchangeForSex is 1, before allowing use of CountOfExchangeForSex-->
-		<xs:assert test="if (hmis:ExchangeForSex/text()='1') then boolean(hmis:CountOfExchangeForSex) else (if (not(hmis:ExchangeForSex/text()='1')) then (not(boolean(hmis:CountOfExchangeForSex))) else false())"/>
-		
-		<!--Testing if ExchangeForSex is 1, before allowing use of AskedOrForcedToExchangeForSex-->
-		<xs:assert test="if (hmis:ExchangeForSex/text()='1') then boolean(hmis:AskedOrForcedToExchangeForSex) else (if (not(hmis:ExchangeForSex/text()='1')) then (not(boolean(hmis:AskedOrForcedToExchangeForSex))) else false())"/>
-		
-		<!--Testing if AskedOrForcedToExchangeForSex is 1, before allowing use of AskedOrForcedToExchangeForSex-->
-		<xs:assert test="if (hmis:AskedOrForcedToExchangeForSex/text()='1') then boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths) else (if (not(hmis:AskedOrForcedToExchangeForSex/text()='1')) then (not(boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths))) else false())"/>
-		
-	</xs:complexType>
-	
 	<xs:complexType name="dateOfEngagement">
 		<xs:sequence>
 			<xs:element name="DateOfEngagementID" type="hmis:string32">
@@ -820,7 +761,6 @@
 			<xs:choice maxOccurs="unbounded">
 				<xs:element name="Affiliation" type="hmis:affiliation"/>
 				<xs:element name="Client" type="hmis:client"/>
-				<xs:element name="CommercialSexualExploitation" type="hmis:commercialSexualExploitation"/>
 				<xs:element name="ConnectionWithSOAR" type="hmis:connectionWithSOAR"/>
 				<xs:element name="DateOfEngagement" type="hmis:dateOfEngagement"/>
 				<xs:element name="Disabilities" type="hmis:disabilities"/>
@@ -967,7 +907,6 @@
 		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:ClientVeteranInfo[hmis:PersonalID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:Inventory[hmis:CoCCode = $id]) ge 0)"/>				
 		<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:Site[hmis:CoCCode = $id]) ge 0)"/>						
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:CommercialSexualExploitation[hmis:ProjectEntryID = $id]) le 1)"/>						
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:DateOfEngagement[hmis:ProjectEntryID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EnrollmentCoC[hmis:ProjectEntryID = $id]) ge 0)"/>		
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:Exit[hmis:ProjectEntryID = $id]) le 1)"/>
@@ -2328,10 +2267,6 @@
 					<xs:selector xpath="hmis:EnrollmentCoC"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>					
 				</xs:keyref>
-				<xs:keyref name="enrollmentCommercialSexualExploitationKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:CommercialSexualExploitation"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
-				</xs:keyref>
 				<xs:keyref name="enrollmentDateOfEngagementKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:DateOfEngagement"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
@@ -2822,6 +2757,36 @@
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35B Labor Exploitation".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="ExchangeForSex" type="hmis:fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35A, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExchangeForSexPastThreeMonths" type="hmis:fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35A, #1A</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CountOfExchangeForSex" type="hmis:countOfExchangeForSex" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35A, #1B.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AskedOrForcedToExchangeForSex" type="hmis:askedOrForcedToExchangeForSex" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35, #1C.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AskedOrForcedToExchangeForSexPastThreeMonths" type="hmis:fiveValDKRefused" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.35, #1D.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
@@ -2831,6 +2796,18 @@
 		
 		<!--Testing if WorkPlaceViolenceThreats or WorkplacePromiseDifference is 1, before allowing use of LaborExploitPastThreeMonths-->
 		<xs:assert test="if (hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1') then boolean(hmis:LaborExploitPastThreeMonths) else (if (not(hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1')) then (not(boolean(hmis:LaborExploitPastThreeMonths))) else false())"/>
+		
+		<!--Testing if ExchangeForSex is 1, before allowing use of ExchangeForSexPastThreeMonths-->
+		<xs:assert test="if (hmis:ExchangeForSex/text()='1') then boolean(hmis:ExchangeForSexPastThreeMonths) else (if (not(hmis:ExchangeForSex/text()='1')) then (not(boolean(hmis:ExchangeForSexPastThreeMonths))) else false())"/>
+		
+		<!--Testing if ExchangeForSex is 1, before allowing use of CountOfExchangeForSex-->
+		<xs:assert test="if (hmis:ExchangeForSex/text()='1') then boolean(hmis:CountOfExchangeForSex) else (if (not(hmis:ExchangeForSex/text()='1')) then (not(boolean(hmis:CountOfExchangeForSex))) else false())"/>
+		
+		<!--Testing if ExchangeForSex is 1, before allowing use of AskedOrForcedToExchangeForSex-->
+		<xs:assert test="if (hmis:ExchangeForSex/text()='1') then boolean(hmis:AskedOrForcedToExchangeForSex) else (if (not(hmis:ExchangeForSex/text()='1')) then (not(boolean(hmis:AskedOrForcedToExchangeForSex))) else false())"/>
+		
+		<!--Testing if AskedOrForcedToExchangeForSex is 1, before allowing use of AskedOrForcedToExchangeForSex-->
+		<xs:assert test="if (hmis:AskedOrForcedToExchangeForSex/text()='1') then boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths) else (if (not(hmis:AskedOrForcedToExchangeForSex/text()='1')) then (not(boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths))) else false())"/>
 		
 	</xs:complexType>
 	
