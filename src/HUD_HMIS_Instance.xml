@@ -44,11 +44,12 @@
                 <hmis:Race>8</hmis:Race>
                 <hmis:VeteranStatus>9</hmis:VeteranStatus>
             </hmis:Client>
-            <hmis:ConnectionWithSOAR hmis:dateCreated="2015-05-20T23:14:59Z" hmis:dateUpdated="2016-05-21T23:14:59" hmis:userID="y9SC3Udh_t0aJCX">
-                <hmis:ConnectionWithSOARID>676rt</hmis:ConnectionWithSOARID>
-                <hmis:ExitID>C2x</hmis:ExitID>
-                <hmis:ConnectionWithSOAR>0</hmis:ConnectionWithSOAR>
-            </hmis:ConnectionWithSOAR>
+            <hmis:Contact  hmis:dateCreated="2015-08-13T23:14:59" hmis:dateUpdated="2015-03-30T23:14:59" hmis:userID="IFmMP">
+                <hmis:ContactID>98yuywwyy776ww</hmis:ContactID>
+                <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
+                <hmis:ContactDate>2015-08-13T23:14:59</hmis:ContactDate>
+                <hmis:ContactLocation>2</hmis:ContactLocation>
+            </hmis:Contact>
             <hmis:DateOfEngagement hmis:dateCreated="2015-08-13T23:14:59" hmis:dateUpdated="2015-03-30T23:14:59" hmis:userID="IFmMP">
                 <hmis:DateOfEngagementID>4321s</hmis:DateOfEngagementID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
@@ -158,6 +159,11 @@
                 <hmis:HousingAssessment>6</hmis:HousingAssessment>
                 <hmis:SubsidyInformation>2</hmis:SubsidyInformation>
             </hmis:ExitHousingAssessment>
+            <hmis:ExitPATH hmis:dateCreated="2015-05-20T23:14:59Z" hmis:dateUpdated="2016-05-21T23:14:59" hmis:userID="y9SC3Udh_t0aJCX">
+                <hmis:ExitPATHID>676rt</hmis:ExitPATHID>
+                <hmis:ExitID>C2x</hmis:ExitID>
+                <hmis:ConnectionWithSOAR>0</hmis:ConnectionWithSOAR>
+            </hmis:ExitPATH>
             <hmis:ExitPlansActions hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="Zu6Nb5-">
                 <hmis:ExitPlansActionsID>342r</hmis:ExitPlansActionsID>
                 <hmis:ExitID>C2x</hmis:ExitID>
