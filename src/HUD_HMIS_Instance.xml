@@ -81,12 +81,12 @@
                 <hmis:WhenOccurred>2</hmis:WhenOccurred>
                 <hmis:CurrentlyFleeing>8</hmis:CurrentlyFleeing>
             </hmis:DomesticViolence>
-            <hmis:SchoolStatus hmis:dataCollectionStage="5" hmis:informationDate="2014-11-21" hmis:dateCreated="2015-01-31T23:14:59"
-                 hmis:dateUpdated="2016-01-10T23:14:59Z" hmis:userID="ZY_LSOlhidHlBIqeiqvbi1Oosl">
-                <hmis:SchoolStatusID>a76752a</hmis:SchoolStatusID>
-                <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
+            <hmis:Education hmis:dataCollectionStage="1" hmis:informationDate="2014-11-21" hmis:dateCreated="2014-11-21T23:14:59" hmis:dateUpdated="2014-11-21T23:14:59" hmis:userID="user7">
+                <hmis:EducationID></hmis:EducationID>
+                <hmis:ProjectEntryID></hmis:ProjectEntryID>
+                <hmis:LastGradeCompleted>3</hmis:LastGradeCompleted>
                 <hmis:SchoolStatus>8</hmis:SchoolStatus>
-            </hmis:SchoolStatus>
+            </hmis:Education>
             <hmis:Employment hmis:dataCollectionStage="5" hmis:informationDate="2014-11-21" hmis:dateCreated="2016-03-26T23:14:59Z"
                  hmis:dateUpdated="2015-04-01T23:14:59Z" hmis:userID="sXKqL">
                 <hmis:EmploymentID>344r445y</hmis:EmploymentID>
@@ -331,12 +331,6 @@
                 <hmis:InventoryEndDate>2015-05-12Z</hmis:InventoryEndDate>
                 <hmis:HMISParticipatingBeds>539390492</hmis:HMISParticipatingBeds>
             </hmis:Inventory>
-            <hmis:LastGradeCompleted hmis:dataCollectionStage="5" hmis:informationDate="2014-11-21" hmis:dateCreated="2015-01-31T23:14:59"
-                hmis:dateUpdated="2016-01-10T23:14:59Z" hmis:userID="billj">
-                <hmis:LastGradeCompletedID>34433w</hmis:LastGradeCompletedID>
-                <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:LastGradeCompleted>3</hmis:LastGradeCompleted>
-            </hmis:LastGradeCompleted>
             <hmis:LastPermanentAddress hmis:dateCreated="2014-11-21T23:14:59Z" hmis:dateUpdated="2015-06-11T23:14:59" hmis:userID="J6FewJxbZC12u1g2Ep.0hnCH">
                 <hmis:LastPermanentAddressID>87hh6t</hmis:LastPermanentAddressID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>

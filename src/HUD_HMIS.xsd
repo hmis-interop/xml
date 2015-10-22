@@ -194,6 +194,22 @@
 		<xs:assert test="if (hmis:Gender/text()='4') then boolean(hmis:OtherGender) else (if (not(hmis:Gender/text()='4')) then (not(boolean(hmis:OtherGender))) else false())"/>
 	</xs:complexType>
 	
+	<xs:complexType name="coc">
+		<xs:sequence>
+			<xs:element name="CoCCode" type="hmis:cocCode">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the CoCCode ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProjectID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Project ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="hmis:baseMetaData"/>
+	</xs:complexType>
+	
 	<xs:complexType name="contact">
 		<xs:sequence>
 			<xs:element name="ContactID" type="hmis:string32">
@@ -410,11 +426,11 @@
 		
 	</xs:complexType>
 
-	<xs:complexType name="schoolStatus">
+	<xs:complexType name="education">
 		<xs:sequence>
-			<xs:element name="SchoolStatusID" type="hmis:string32">
+			<xs:element name="EducationID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the SchoolStatus' unique ID</xs:documentation>
+					<xs:documentation xml:lang="en">Reference to the LastGradeCompletedID's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>				
 			<xs:element name="ProjectEntryID" type="hmis:string32">
@@ -422,7 +438,13 @@
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SchoolStatus" type="hmis:schoolStatusSimple" minOccurs="0">
+			<xs:element name="LastGradeCompleted" type="hmis:lastGradeCompletedSimple" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.24, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, "4.24 Last Grade Completed"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SchoolStatus" type="hmis:schoolStatus" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.25, #1.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, "4.25 School Status"</xs:documentation>
@@ -597,7 +619,41 @@
 		<xs:attribute ref="hmis:informationDate" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
-	
+
+	<xs:complexType name="entrySSVF">
+		<xs:sequence>
+			<xs:element name="EntrySSVFID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the EntrySSVFID's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PercentAMI" type="hmis:percentAMISimple">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.42, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.42 Percent of AMI (SSVF Eligibility)".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HPScreeningScore" type="hmis:hpScreeningScore" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.44 #1</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.44 HP Screening Score".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VAMCStation" type="hmis:vamcStation" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.45 #1</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.45 HP Screening Score".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="hmis:baseMetaData"/>
+	</xs:complexType>
+
 	<xs:complexType name="exit">
 		<xs:sequence>
 			<xs:element name="ExitID" type="hmis:string32">
@@ -795,6 +851,7 @@
 				<xs:element name="DateOfEngagement" type="hmis:dateOfEngagement"/>
 				<xs:element name="Disabilities" type="hmis:disabilities"/>
 				<xs:element name="DomesticViolence" type="hmis:domesticViolence"/>
+				<xs:element name="Education" type="hmis:education"/>
 				<xs:element name="Employment" type="hmis:employment">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.26</xs:documentation>
@@ -846,7 +903,6 @@
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, "Bed and Unit Inventory Information", p. 14.</xs:documentation>
 					</xs:annotation>			
 				</xs:element>
-				<xs:element name="LastGradeCompleted" type="hmis:lastGradeCompleted"/>
 				<xs:element name="LastPermanentAddress" type="hmis:lastPermanentAddress"/>
 				<xs:element name="MedicalAssistance" type="hmis:medicalAssistance">
 					<xs:annotation>
@@ -893,7 +949,6 @@
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 4.22 "RHYBCP Status".</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="SchoolStatus" type="hmis:schoolStatus"/>			
 				<xs:element name="Services" type="hmis:services">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.14-4.16</xs:documentation>
@@ -1584,30 +1639,6 @@
 		<xs:attribute ref="hmis:informationDate" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
-
-	<xs:complexType name="lastGradeCompleted">
-		<xs:sequence>
-			<xs:element name="LastGradeCompletedID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the LastGradeCompletedID's unique ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>				
-			<xs:element name="ProjectEntryID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="LastGradeCompleted" type="hmis:lastGradeCompletedSimple" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.24, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, "4.24 Last Grade Completed"</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
-		<xs:attribute ref="hmis:informationDate" use="required"/>
-		<xs:attributeGroup ref="hmis:baseMetaData"/>
-	</xs:complexType>
 	
 	<xs:complexType name="lastPermanentAddress">
 		<xs:sequence>
@@ -1833,41 +1864,6 @@
 		
 		<!--Testing if ClientEnrolledInPATH is 0, before allowing use of ReasonNotEnrolled-->
 		<xs:assert test="if (hmis:ClientEnrolledInPATH/text()='0') then boolean(hmis:ReasonNotEnrolled) else (if (not(hmis:ClientEnrolledInPATH/text()='0')) then (not(boolean(hmis:ReasonNotEnrolled))) else false())"/>		
-		
-	</xs:complexType>
-
-	<xs:complexType name="entrySSVF">
-		<xs:sequence>
-			<xs:element name="EntrySSVFID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the EntrySSVFID's unique ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ProjectEntryID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PercentAMI" type="hmis:percentAMISimple">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.42, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.42 Percent of AMI (SSVF Eligibility)".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="HPScreeningScore" type="hmis:hpScreeningScore" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.44 #1</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.44 HP Screening Score".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="VAMCStation" type="hmis:vamcStation" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.45 #1</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.45 HP Screening Score".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
 
 	<xs:complexType name="project">
@@ -1928,21 +1924,7 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
 	
-	<xs:complexType name="coc">
-		<xs:sequence>
-			<xs:element name="CoCCode" type="hmis:cocCode">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the CoCCode ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ProjectID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the Project ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attributeGroup ref="hmis:baseMetaData"/>
-	</xs:complexType>
+	
 	
 	<xs:complexType name="projectCompletionStatus">
 		<xs:sequence>
@@ -2066,7 +2048,6 @@
 		
 		<!--Testing if FYSBYouth is 0, before allowing use of ReasonNoServices-->
 		<xs:assert test="if (hmis:FYSBYouth/text()='0') then boolean(hmis:ReasonNoServices) else (if (not(hmis:FYSBYouth/text()='0')) then (not(boolean(hmis:ReasonNoServices))) else false())"/>
-				
 	</xs:complexType>
 
 	<xs:complexType name="services">
@@ -2349,10 +2330,6 @@
 				</xs:keyref>
 				<xs:keyref name="enrollmentIncomeAndSourcesKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:IncomeAndSources"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
-				</xs:keyref>
-				<xs:keyref name="enrollmentLastGradeCompletedKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:LastGradeCompleted"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentLastPermanentAddressKeyRef" refer="enrollmentKey">
@@ -5832,7 +5809,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="schoolStatusSimple">
+	<xs:simpleType name="schoolStatus">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
 				School Status
