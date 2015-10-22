@@ -477,8 +477,8 @@
                 <hmis:ZIP>84683</hmis:ZIP>
                 <hmis:Geocode>177988</hmis:Geocode>
             </hmis:Site>
-            <hmis:VeteranInfo hmis:dateCreated="2014-12-17T23:14:59" hmis:dateUpdated="2016-03-10T23:14:59" hmis:userID="dZPlRM">
-                <hmis:VeteranInfoID>7878665s</hmis:VeteranInfoID>
+            <hmis:ClientVeteranInfo hmis:dateCreated="2014-12-17T23:14:59" hmis:dateUpdated="2016-03-10T23:14:59" hmis:userID="dZPlRM">
+                <hmis:ClientVeteranInfoID>7878665s</hmis:ClientVeteranInfoID>
                 <hmis:PersonalID>A1a1</hmis:PersonalID>
                 <hmis:YearEnteredService>2002</hmis:YearEnteredService>
                 <hmis:YearSeparated>2004</hmis:YearSeparated>
@@ -492,7 +492,7 @@
                 <hmis:OtherTheater>8</hmis:OtherTheater>
                 <hmis:MilitaryBranch>8</hmis:MilitaryBranch>
                 <hmis:DischargeStatus>6</hmis:DischargeStatus>
-            </hmis:VeteranInfo>
+            </hmis:ClientVeteranInfo>
             <hmis:WorstHousingSituation hmis:dateCreated="2015-06-24T23:14:59" hmis:dateUpdated="2015-02-13T23:14:59Z" hmis:userID="as1Peee5hTGWNY6mtD1O_M">
                 <hmis:WorstHousingSituationID>8i76</hmis:WorstHousingSituationID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>

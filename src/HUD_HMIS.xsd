@@ -946,7 +946,7 @@
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, "Project Setup Guidance", p. 15.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="VeteranInfo" type="hmis:veteranInfo">
+				<xs:element name="ClientVeteranInfo" type="hmis:clientVeteranInfo">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.41</xs:documentation>
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 4.41.</xs:documentation>
@@ -969,7 +969,7 @@
 		
 		<!--Cardinality Checking-->
 		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:Enrollment[hmis:PersonalID = $id]) ge 1)"/>		
-		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:VeteranInfo[hmis:PersonalID = $id]) le 1)"/>		
+		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:ClientVeteranInfo[hmis:PersonalID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:CommercialSexualExploitation[hmis:ProjectEntryID = $id]) le 1)"/>						
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:DateOfEngagement[hmis:ProjectEntryID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EnrollmentCoC[hmis:ProjectEntryID = $id]) ge 0)"/>		
@@ -2492,8 +2492,8 @@
 					<xs:selector xpath="hmis:Site"/>
 					<xs:field xpath="hmis:ProjectCoCID"/>					
 				</xs:keyref>
-				<xs:keyref name="veteranInfoClientKeyRef" refer="clientKey">
-					<xs:selector xpath="hmis:VeteranInfo"/>
+				<xs:keyref name="clientVeteranInfoClientKeyRef" refer="clientKey">
+					<xs:selector xpath="hmis:ClientVeteranInfo"/>
 					<xs:field xpath="hmis:PersonalID"/>
 				</xs:keyref>
 			</xs:element>			
@@ -2538,11 +2538,11 @@
 		</xs:simpleContent>
 	</xs:complexType>
 
-	<xs:complexType name="veteranInfo">
+	<xs:complexType name="clientVeteranInfo">
 		<xs:sequence>
-			<xs:element name="VeteranInfoID" type="hmis:string32">
+			<xs:element name="ClientVeteranInfoID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the VeteranInfo's unique ID</xs:documentation>
+					<xs:documentation xml:lang="en">Reference to the ClientVeteranInfo's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>				
 			<xs:element name="PersonalID" type="hmis:string32">
