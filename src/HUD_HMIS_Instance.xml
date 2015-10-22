@@ -61,7 +61,7 @@
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:DisabilityType>8</hmis:DisabilityType>
                 <hmis:DisabilityResponse>2</hmis:DisabilityResponse>
-                <hmis:IndefiniteAndImpairs>9</hmis:IndefiniteAndImpairs>
+                <hmis:IndefiniteAndImpairsIndependence>9</hmis:IndefiniteAndImpairsIndependence>
                 <hmis:DocumentationOnFile>1</hmis:DocumentationOnFile>
                 <hmis:ReceivingServices>99</hmis:ReceivingServices>
                 <hmis:PATHHowConfirmed>1</hmis:PATHHowConfirmed>

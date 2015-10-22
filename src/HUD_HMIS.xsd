@@ -279,7 +279,7 @@
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, "Section 4.5-4.10."</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IndefiniteAndImpairs" type="hmis:fiveValDKRefused">
+			<xs:element name="IndefiniteAndImpairsIndependence" type="hmis:fiveValDKRefused">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.5-4.10, Response #2A.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, "Section 4.5-4.10."</xs:documentation>
