@@ -90,7 +90,7 @@
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 3.13.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FirstName" type="hmis:nameHashingOption">
+			<xs:element name="FirstName" type="hmis:nameHashingOption"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 3.1, #1.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 3.1.</xs:documentation>
@@ -99,7 +99,7 @@
 				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
 				<xs:alternative test="@hmis:hashStatus='3'" type="hmis:nameHashingOption"/>
 			</xs:element>
-			<xs:element name="MiddleName" type="hmis:nameHashingOption">
+			<xs:element name="MiddleName" type="hmis:nameHashingOption"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 3.1, #2.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 3.1.</xs:documentation>
@@ -108,7 +108,7 @@
 				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
 				<xs:alternative test="@hmis:hashStatus='3'" type="hmis:nameHashingOption"/>
 			</xs:element>
-			<xs:element name="LastName" type="hmis:nameHashingOption">
+			<xs:element name="LastName" type="hmis:nameHashingOption" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 3.1, #3.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 3.1.</xs:documentation>
@@ -117,7 +117,7 @@
 				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
 				<xs:alternative test="@hmis:hashStatus='3'" type="hmis:nameHashingOption"/>
 			</xs:element>
-			<xs:element name="NameSuffix" type="hmis:string50">
+			<xs:element name="NameSuffix" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 3.1, #4.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 3.1.</xs:documentation>
@@ -129,7 +129,7 @@
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 3.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SSN" type="hmis:ssnHashingOption">
+			<xs:element name="SSN" type="hmis:ssnHashingOption"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 3.2, #1.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 3.2.</xs:documentation>
