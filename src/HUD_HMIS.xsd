@@ -772,70 +772,88 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
 	
-	<xs:complexType name="exitPlansActions">
+	<xs:complexType name="exitRHY">
 		<xs:sequence>
-			<xs:element name="ExitPlansActionsID" type="hmis:string32">
+			<xs:element name="ExitRHYID" type="hmis:string32"  minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the ExitPlansActions' unique ID</xs:documentation>
+					<xs:documentation xml:lang="en">Reference to the ExitRHY' unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>				
-			<xs:element name="ExitID" type="hmis:string32">
+			<xs:element name="ExitID" type="hmis:string32"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WrittenAftercarePlan" type="hmis:noYesRefused">
+			<xs:element name="WrittenAftercarePlan" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.36, #1.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.36 Transitional, Exit-care, or Aftercare Plans and Actions".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AssistanceMainstreamBenefits" type="hmis:noYesRefused">
+			<xs:element name="AssistanceMainstreamBenefits" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.36, #2.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.36 Transitional, Exit-care, or Aftercare Plans and Actions".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PermanentHousingPlacement" type="hmis:noYesRefused">
+			<xs:element name="PermanentHousingPlacement" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.36, #3.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.36 Transitional, Exit-care, or Aftercare Plans and Actions".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TemporaryShelterPlacement" type="hmis:noYesRefused">
+			<xs:element name="TemporaryShelterPlacement" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.36, #4.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.36 Transitional, Exit-care, or Aftercare Plans and Actions".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ExitCounseling" type="hmis:noYesRefused">
+			<xs:element name="ExitCounseling" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.36, #5.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.36 Transitional, Exit-care, or Aftercare Plans and Actions".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FurtherFollowUpServices" type="hmis:noYesRefused">
+			<xs:element name="FurtherFollowUpServices" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.36, #6.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.36 Transitional, Exit-care, or Aftercare Plans and Actions".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ScheduledFollowUpContacts" type="hmis:noYesRefused">
+			<xs:element name="ScheduledFollowUpContacts" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.36, #7.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.36 Transitional, Exit-care, or Aftercare Plans and Actions".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ResourcePackage" type="hmis:noYesRefused">
+			<xs:element name="ResourcePackage" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.36, #8.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.36 Transitional, Exit-care, or Aftercare Plans and Actions".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherAftercarePlanOrAction" type="hmis:noYesRefused">
+			<xs:element name="OtherAftercarePlanOrAction" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.36, #9.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.36 Transitional, Exit-care, or Aftercare Plans and Actions".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FamilyReunificationAchieved" type="hmis:fiveValDKRefused"  minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.38, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.38 Family Reunification Achieved".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProjectCompletionStatus" type="hmis:projectCompletionStatusSimple" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.37, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.37 Project Completion Status".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EarlyExitReason" type="hmis:earlyExitReason" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.37, 1A or 1B, depending on whether 2 (use 1A) or 3 (use 1B) is the response to 4.37.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.37 Project Completion Status".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -898,8 +916,7 @@
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="ExitPATH" type="hmis:exitPATH"/>
-				<xs:element name="ExitPlansActions" type="hmis:exitPlansActions"/>
-				<xs:element name="FamilyReunification" type="hmis:familyReunification"/>
+				<xs:element name="ExitRHY" type="hmis:exitRHY"/>
 				<xs:element name="Funder" type="hmis:funder"/>			
 				<xs:element name="HealthInsurance" type="hmis:healthInsurance">
 					<xs:annotation>
@@ -962,7 +979,6 @@
 						<xs:documentation xml:lang="en"></xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="ProjectCompletionStatus" type="hmis:projectCompletionStatus"/>
 				<xs:element name="ResidentialMoveInDate" type="hmis:residentialMoveInDate">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.17</xs:documentation>
@@ -1025,10 +1041,9 @@
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntryRHY[hmis:ProjectEntryID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ConnectionWithSOAR[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitHousingAssessment[hmis:ExitID = $id]) le 1)"/>				
-		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitPlansActions[hmis:ExitID = $id]) le 1)"/>				
+		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitRHY[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:HousingAssessmentDisposition[hmis:ExitID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:FamilyReunification[hmis:ExitID = $id]) le 1)"/>
-		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ProjectCompletionStatus[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Organization/hmis:OrganizationID satisfies (fn:count(hmis:Project[hmis:OrganizationID = $id]) ge 1)"/>						
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Funder[hmis:ProjectID = $id]) ge 1)"/>
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:CoC[hmis:ProjectID = $id]) ge 1)"/>		
@@ -1036,27 +1051,6 @@
 		<!-- Checking that there is only one Head of Household per Household enrolled -->
 		<xs:assert test="every $id in hmis:Enrollment/hmis:HouseholdID satisfies (fn:count(hmis:Enrollment/hmis:RelationshipToHoH[text()= '1'][../hmis:HouseholdID = $id] ) eq 1)"/>						
 		
-	</xs:complexType>
-	<xs:complexType name="familyReunification">
-		<xs:sequence>
-			<xs:element name="FamilyReunificationID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the FamilyReunification's unique ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ExitID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the Exit ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="FamilyReunificationAchieved" type="hmis:fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.38, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.38 Family Reunification Achieved".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
 
 	<xs:complexType name="funder">
@@ -1820,36 +1814,6 @@
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
-	
-	
-	
-	<xs:complexType name="projectCompletionStatus">
-		<xs:sequence>
-			<xs:element name="ProjectCompletionStatusID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the ProjectCompletionStatus's unique ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>				
-			<xs:element name="ExitID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the Exit ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ProjectCompletionStatus" type="hmis:projectCompletionStatusSimple">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.37, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.37 Project Completion Status".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="EarlyExitReason" type="hmis:earlyExitReason" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.37, 1A or 1B, depending on whether 2 (use 1A) or 3 (use 1B) is the response to 4.37.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.37 Project Completion Status".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attributeGroup ref="hmis:baseMetaData"/>
-	</xs:complexType>
 
 	<xs:complexType name="residentialMoveInDate">
 		<xs:sequence>
@@ -2227,8 +2191,8 @@
 					<xs:selector xpath="hmis:ConnectionWithSOAR"/>
 					<xs:field xpath="hmis:ExitID"/>
 				</xs:keyref>
-				<xs:keyref name="exitExitPlansActionsKeyRef" refer="exitKey">
-					<xs:selector xpath="hmis:ExitPlansActions"/>
+				<xs:keyref name="exitExitRHYKeyRef" refer="exitKey">
+					<xs:selector xpath="hmis:ExitRHY"/>
 					<xs:field xpath="hmis:ExitID"/>
 				</xs:keyref>
 				<xs:keyref name="exitFamilyReunificationKeyRef" refer="exitKey">

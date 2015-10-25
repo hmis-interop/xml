@@ -164,8 +164,8 @@
                 <hmis:ExitID>C2x</hmis:ExitID>
                 <hmis:ConnectionWithSOAR>0</hmis:ConnectionWithSOAR>
             </hmis:ExitPATH>
-            <hmis:ExitPlansActions hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="Zu6Nb5-">
-                <hmis:ExitPlansActionsID>342r</hmis:ExitPlansActionsID>
+            <hmis:ExitRHY hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="Zu6Nb5-">
+                <hmis:ExitRHYID>342r</hmis:ExitRHYID>
                 <hmis:ExitID>C2x</hmis:ExitID>
                 <hmis:WrittenAftercarePlan>9</hmis:WrittenAftercarePlan>
                 <hmis:AssistanceMainstreamBenefits>0</hmis:AssistanceMainstreamBenefits>
@@ -176,17 +176,11 @@
                 <hmis:ScheduledFollowUpContacts>1</hmis:ScheduledFollowUpContacts>
                 <hmis:ResourcePackage>9</hmis:ResourcePackage>
                 <hmis:OtherAftercarePlanOrAction>0</hmis:OtherAftercarePlanOrAction>
-            </hmis:ExitPlansActions>
-            <hmis:FamilyReunification hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="Zu6Nb5-">
-                <hmis:FamilyReunificationID>C2x</hmis:FamilyReunificationID>
-                <hmis:ExitID>C2x</hmis:ExitID>
                 <hmis:FamilyReunificationAchieved>1</hmis:FamilyReunificationAchieved>
-            </hmis:FamilyReunification>
-            <hmis:FamilyReunification hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="Zu6Nb5-">
-                <hmis:FamilyReunificationID>C2x</hmis:FamilyReunificationID>
-                <hmis:ExitID>C3x</hmis:ExitID>
-                <hmis:FamilyReunificationAchieved>1</hmis:FamilyReunificationAchieved>
-            </hmis:FamilyReunification>
+                <hmis:ProjectCompletionStatus>3</hmis:ProjectCompletionStatus>
+                <hmis:EarlyExitReason>1</hmis:EarlyExitReason>
+            </hmis:ExitRHY>
+
             <hmis:Funder hmis:dateCreated="2015-09-19T23:14:59" hmis:dateUpdated="2016-01-29T23:14:59Z" hmis:userID="m2Pym5-77tSVuI-IjerY">
                 <hmis:FunderID>76g</hmis:FunderID>
                 <hmis:ProjectID>222D</hmis:ProjectID>
@@ -395,12 +389,6 @@
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
                 <hmis:ProjectID>222E</hmis:ProjectID>
             </hmis:CoC>
-            <hmis:ProjectCompletionStatus hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="bmerriweather">
-                <hmis:ProjectCompletionStatusID>4533wwq</hmis:ProjectCompletionStatusID>
-                <hmis:ExitID>C2x</hmis:ExitID>
-                <hmis:ProjectCompletionStatus>3</hmis:ProjectCompletionStatus>
-                <hmis:EarlyExitReason>1</hmis:EarlyExitReason>
-            </hmis:ProjectCompletionStatus>
             <hmis:ResidentialMoveInDate hmis:dateCreated="2015-04-25T23:14:59" hmis:dateUpdated="2015-07-23T23:14:59Z" hmis:userID="AUfZ2">
                 <hmis:ResidentialMoveInDateID>z44332</hmis:ResidentialMoveInDateID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
