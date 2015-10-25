@@ -82,8 +82,8 @@
                 <hmis:CurrentlyFleeing>8</hmis:CurrentlyFleeing>
             </hmis:DomesticViolence>
             <hmis:Education hmis:dataCollectionStage="1" hmis:informationDate="2014-11-21" hmis:dateCreated="2014-11-21T23:14:59" hmis:dateUpdated="2014-11-21T23:14:59" hmis:userID="user7">
-                <hmis:EducationID></hmis:EducationID>
-                <hmis:ProjectEntryID></hmis:ProjectEntryID>
+                <hmis:EducationID>56t54</hmis:EducationID>
+                <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:LastGradeCompleted>3</hmis:LastGradeCompleted>
                 <hmis:SchoolStatus>8</hmis:SchoolStatus>
             </hmis:Education>
@@ -187,20 +187,6 @@
                 <hmis:ExitID>C3x</hmis:ExitID>
                 <hmis:FamilyReunificationAchieved>1</hmis:FamilyReunificationAchieved>
             </hmis:FamilyReunification>
-            <hmis:FormerWardChildWelfare hmis:dataCollectionStage="5" hmis:informationDate="2015-06-24" hmis:dateCreated="2016-05-08T23:14:59" hmis:dateUpdated="2016-05-06T23:14:59Z" hmis:userID="DG4IfIQuAFF6I.yl7">
-                <hmis:FormerWardChildWelfareID>87655fdd5</hmis:FormerWardChildWelfareID>
-                <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:FormerWardChildWelfare>1</hmis:FormerWardChildWelfare>
-                <hmis:ChildWelfareYears>2</hmis:ChildWelfareYears>
-                <hmis:ChildWelfareMonths>42</hmis:ChildWelfareMonths>
-            </hmis:FormerWardChildWelfare>
-            <hmis:FormerWardJuvenileJustice hmis:dataCollectionStage="5" hmis:informationDate="2015-06-24" hmis:dateCreated="2016-05-08T23:14:59" hmis:dateUpdated="2016-05-06T23:14:59Z" hmis:userID="DG4IfIQuAFF6I.yl7">
-                <hmis:FormerWardJuvenileJusticeID>87676c</hmis:FormerWardJuvenileJusticeID>
-                <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:FormerWardJuvenileJustice>9</hmis:FormerWardJuvenileJustice>
-                <hmis:JuvenileJusticeYears>3</hmis:JuvenileJusticeYears>
-                <hmis:JuvenileJusticeMonths>2</hmis:JuvenileJusticeMonths>
-            </hmis:FormerWardJuvenileJustice>
             <hmis:Funder hmis:dateCreated="2015-09-19T23:14:59" hmis:dateUpdated="2016-01-29T23:14:59Z" hmis:userID="m2Pym5-77tSVuI-IjerY">
                 <hmis:FunderID>76g</hmis:FunderID>
                 <hmis:ProjectID>222D</hmis:ProjectID>
@@ -419,12 +405,6 @@
                 <hmis:ProjectCompletionStatus>3</hmis:ProjectCompletionStatus>
                 <hmis:EarlyExitReason>1</hmis:EarlyExitReason>
             </hmis:ProjectCompletionStatus>
-            <hmis:ReferralSource hmis:dataCollectionStage="5" hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="byoung32">
-                <hmis:ReferralSourceID>jhjhyyy</hmis:ReferralSourceID>
-                <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:ReferralSource>18</hmis:ReferralSource>
-                <hmis:CountOutreachReferralApproaches>3</hmis:CountOutreachReferralApproaches>
-            </hmis:ReferralSource>
             <hmis:ResidentialMoveInDate hmis:dateCreated="2015-04-25T23:14:59" hmis:dateUpdated="2015-07-23T23:14:59Z" hmis:userID="AUfZ2">
                 <hmis:ResidentialMoveInDateID>z44332</hmis:ResidentialMoveInDateID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
@@ -449,11 +429,6 @@
                 <hmis:FAAmount>1145.59</hmis:FAAmount>
                 <hmis:ReferralOutcome>2</hmis:ReferralOutcome>
             </hmis:Services>
-            <hmis:SexualOrientation hmis:dataCollectionStage="1" hmis:dateCreated="2016-05-08T23:14:59" hmis:dateUpdated="2016-05-06T23:14:59Z" hmis:userID="DG4IfIQuAFF6I.yl7">
-                <hmis:SexualOrientationID>767ggg</hmis:SexualOrientationID>
-                <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:SexualOrientation>99</hmis:SexualOrientation>               
-            </hmis:SexualOrientation>
             <hmis:Site hmis:dateCreated="2014-09-03T23:14:59" hmis:dateUpdated="2016-02-25T23:14:59Z" hmis:userID="ck">
                 <hmis:SiteID>4526</hmis:SiteID>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
@@ -489,7 +464,8 @@
                 <hmis:EntryRHYID>y76754</hmis:EntryRHYID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:HouseholdDynamics>0</hmis:HouseholdDynamics>
-                <hmis:SexualOrientationGenderIDYouth>1</hmis:SexualOrientationGenderIDYouth>
+                <hmis:SexualOrientation>99</hmis:SexualOrientation>               
+                <hmis:SexualOrientationGenderIdentityYouth>1</hmis:SexualOrientationGenderIdentityYouth>
                 <hmis:SexualOrientationGenderIDFam>0</hmis:SexualOrientationGenderIDFam>
                 <hmis:HousingIssuesYouth>1</hmis:HousingIssuesYouth>
                 <hmis:HousingIssuesFam>1</hmis:HousingIssuesFam>
@@ -522,6 +498,14 @@
                 <hmis:CountOfExchangeForSex>3</hmis:CountOfExchangeForSex>
                 <hmis:AskedOrForcedToExchangeForSex>1</hmis:AskedOrForcedToExchangeForSex>
                 <hmis:AskedOrForcedToExchangeForSexPastThreeMonths>8</hmis:AskedOrForcedToExchangeForSexPastThreeMonths>
+                <hmis:FormerWardJuvenileJustice>9</hmis:FormerWardJuvenileJustice>
+                <hmis:JuvenileJusticeYears>3</hmis:JuvenileJusticeYears>
+                <hmis:JuvenileJusticeMonths>2</hmis:JuvenileJusticeMonths>
+                <hmis:FormerWardChildWelfare>1</hmis:FormerWardChildWelfare>
+                <hmis:ChildWelfareYears>2</hmis:ChildWelfareYears>
+                <hmis:ChildWelfareMonths>42</hmis:ChildWelfareMonths>
+                <hmis:ReferralSource>18</hmis:ReferralSource>
+                <hmis:CountOutreachReferralApproaches>3</hmis:CountOutreachReferralApproaches>
             </hmis:EntryRHY>
         </hmis:Export>
     </hmis:Source>

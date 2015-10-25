@@ -870,8 +870,6 @@
 				<xs:element name="ExitPATH" type="hmis:exitPATH"/>
 				<xs:element name="ExitPlansActions" type="hmis:exitPlansActions"/>
 				<xs:element name="FamilyReunification" type="hmis:familyReunification"/>
-				<xs:element name="FormerWardChildWelfare" type="hmis:formerWardChildWelfare"/>			
-				<xs:element name="FormerWardJuvenileJustice" type="hmis:formerWardJuvenileJustice"/>							
 				<xs:element name="Funder" type="hmis:funder"/>			
 				<xs:element name="HealthInsurance" type="hmis:healthInsurance">
 					<xs:annotation>
@@ -936,7 +934,6 @@
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="ProjectCompletionStatus" type="hmis:projectCompletionStatus"/>
-				<xs:element name="ReferralSource" type="hmis:referralSource"/>
 				<xs:element name="ResidentialMoveInDate" type="hmis:residentialMoveInDate">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.17</xs:documentation>
@@ -953,12 +950,6 @@
 					<xs:annotation>
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.14-4.16</xs:documentation>
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 4.14-4.16 "Services Provided".</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element name="SexualOrientation" type="hmis:sexualOrientation">
-					<xs:annotation>
-						<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.23, #1.</xs:documentation>
-						<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.23 Sexual Orientation".</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="Site" type="hmis:site">
@@ -997,15 +988,11 @@
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:DateOfEngagement[hmis:ProjectEntryID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EnrollmentCoC[hmis:ProjectEntryID = $id]) ge 0)"/>		
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:Exit[hmis:ProjectEntryID = $id]) le 1)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:FormerWardChildWelfare[hmis:ProjectEntryID = $id]) le 1)"/>		
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:FormerWardJuvenileJustice[hmis:ProjectEntryID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:LastPermanentAddress[hmis:ProjectEntryID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:PathStatus[hmis:ProjectEntryID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntrySSVF[hmis:ProjectEntryID = $id]) le 1)"/>				
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:ReferralSource[hmis:ProjectEntryID = $id]) le 1)"/>						
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:ResidentialMoveInDate[hmis:ProjectEntryID = $id]) le 1)"/>								
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:RHYBCPStatus[hmis:ProjectEntryID = $id]) le 1)"/>				
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:SexualOrientation[hmis:ProjectEntryID = $id]) le 1)"/>						
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:WorstHousingSituation[hmis:ProjectEntryID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntryRHY[hmis:ProjectEntryID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ConnectionWithSOAR[hmis:ExitID = $id]) le 1)"/>				
@@ -1041,78 +1028,6 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attributeGroup ref="hmis:baseMetaData"/>
-	</xs:complexType>
-
-	<xs:complexType name="formerWardChildWelfare">
-		<xs:sequence>
-			<xs:element name="FormerWardChildWelfareID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the FormerWardChildWelfare's unique ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>				
-			<xs:element name="ProjectEntryID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="FormerWardChildWelfare" type="hmis:fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.31, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.31 Formerly a Ward of Child Welfare/Foster Care Agency".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ChildWelfareYears" type="hmis:issuesYears" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.31, #1B.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.31 Formerly a Ward of Child Welfare/Foster Care Agency".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ChildWelfareMonths" type="xs:unsignedInt" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.31, #1BA.  Values 1-11 permissible.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.31 Formerly a Ward of Child Welfare/Foster Care Agency".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
-		<xs:attribute ref="hmis:informationDate" use="required"/>
-		<xs:attributeGroup ref="hmis:baseMetaData"/>
-	</xs:complexType>
-
-	<xs:complexType name="formerWardJuvenileJustice">
-		<xs:sequence>
-			<xs:element name="FormerWardJuvenileJusticeID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the FormerWardJuvenileJusticeID's unique ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>			
-			<xs:element name="ProjectEntryID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="FormerWardJuvenileJustice" type="hmis:fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.32, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.32 Formerly a Ward of Juvenile Justice System".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="JuvenileJusticeYears" type="hmis:issuesYears" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.32, #1A.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.32 Formerly a Ward of Juvenile Justice System".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="JuvenileJusticeMonths" type="xs:unsignedInt" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.32, #1AB.  Values 1-11 permissible.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.32 Formerly a Ward of Juvenile Justice System".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
-		<xs:attribute ref="hmis:informationDate" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
 
@@ -1953,38 +1868,7 @@
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
-	
-	<xs:complexType name="referralSource">
-		<xs:sequence>
-			<xs:element name="ReferralSourceID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the ReferralSource's unique ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>			
-			<xs:element name="ProjectEntryID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ReferralSource" type="hmis:referralSourceSimple">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.34, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.34 Referral Source".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CountOutreachReferralApproaches" type="xs:unsignedInt" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.34, #1A.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.34 Referral Source".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-	
-		</xs:sequence>
-		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
-		<xs:attributeGroup ref="hmis:baseMetaData"/>
 
-	</xs:complexType>
-	
 	<xs:complexType name="residentialMoveInDate">
 		<xs:sequence>
 			<xs:element name="ResidentialMoveInDateID" type="hmis:string32">
@@ -2115,29 +1999,6 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attributeGroup ref="hmis:baseMetaData"/>
-	</xs:complexType>
-
-	<xs:complexType name="sexualOrientation">
-		<xs:sequence>
-			<xs:element name="SexualOrientationID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the SexualOrientation's unique ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>				
-			<xs:element name="ProjectEntryID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="SexualOrientation" type="hmis:sexualOrientationSimple">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.23, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.23 Sexual Orientation".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
 
@@ -2602,7 +2463,13 @@
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SexualOrientationGenderIDYouth" type="hmis:noYes">
+			<xs:element name="SexualOrientation" type="hmis:sexualOrientation">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.23, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.23 Sexual Orientation".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SexualOrientationGenderIdentityYouth" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.33, #2.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.33 Young Person’s Critical Issues".</xs:documentation>
@@ -2800,6 +2667,54 @@
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.35 Commercial Sexual Exploitation".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="FormerWardJuvenileJustice" type="hmis:fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.32, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.32 Formerly a Ward of Juvenile Justice System".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="JuvenileJusticeYears" type="hmis:issuesYears" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.32, #1A.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.32 Formerly a Ward of Juvenile Justice System".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="JuvenileJusticeMonths" type="xs:unsignedInt" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.32, #1AB.  Values 1-11 permissible.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.32 Formerly a Ward of Juvenile Justice System".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FormerWardChildWelfare" type="hmis:fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.31, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.31 Formerly a Ward of Child Welfare/Foster Care Agency".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ChildWelfareYears" type="hmis:issuesYears" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.31, #1B.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.31 Formerly a Ward of Child Welfare/Foster Care Agency".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ChildWelfareMonths" type="xs:unsignedInt" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.31, #1BA.  Values 1-11 permissible.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.31 Formerly a Ward of Child Welfare/Foster Care Agency".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ReferralSource" type="hmis:referralSource">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.34, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.34 Referral Source".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CountOutreachReferralApproaches" type="xs:unsignedInt" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.34, #1A.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.34 Referral Source".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
@@ -2821,7 +2736,6 @@
 		
 		<!--Testing if AskedOrForcedToExchangeForSex is 1, before allowing use of AskedOrForcedToExchangeForSex-->
 		<xs:assert test="if (hmis:AskedOrForcedToExchangeForSex/text()='1') then boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths) else (if (not(hmis:AskedOrForcedToExchangeForSex/text()='1')) then (not(boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths))) else false())"/>
-		
 	</xs:complexType>
 	
 	<xs:attribute name="hashStatus">
@@ -5296,7 +5210,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="	referralSourceSimple">
+	<xs:simpleType name="	referralSource">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
 				1 = Self-Referral
@@ -5963,7 +5877,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="sexualOrientationSimple">
+	<xs:simpleType name="sexualOrientation">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
 				Sexual Orientation
