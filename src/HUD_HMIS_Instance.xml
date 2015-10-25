@@ -12,7 +12,7 @@
         <hmis:SourceContactFirst>Patricia</hmis:SourceContactFirst>
         <hmis:SourceContactLast>Duke</hmis:SourceContactLast>
         <hmis:SourceContactPhone>5939698367</hmis:SourceContactPhone>
-        <hmis:SourceName>County HMIS</hmis:SourceName>
+        <hmis:SourceName>Fictitious County HMIS</hmis:SourceName>
         <hmis:Export>
             <hmis:ExportID>37</hmis:ExportID>
             <hmis:ExportDate>2015-02-27T23:14:59</hmis:ExportDate>
