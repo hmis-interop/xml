@@ -317,15 +317,6 @@
                 <hmis:InventoryEndDate>2015-05-12Z</hmis:InventoryEndDate>
                 <hmis:HMISParticipatingBeds>539390492</hmis:HMISParticipatingBeds>
             </hmis:Inventory>
-            <hmis:LastPermanentAddress hmis:dateCreated="2014-11-21T23:14:59Z" hmis:dateUpdated="2015-06-11T23:14:59" hmis:userID="J6FewJxbZC12u1g2Ep.0hnCH">
-                <hmis:LastPermanentAddressID>87hh6t</hmis:LastPermanentAddressID>
-                <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:LastPermanentStreet>13th Ave W</hmis:LastPermanentStreet>
-                <hmis:LastPermanentCity>Yreka</hmis:LastPermanentCity>
-                <hmis:LastPermanentState>AR</hmis:LastPermanentState>
-                <hmis:LastPermanentZIP>57601</hmis:LastPermanentZIP>
-                <hmis:AddressDataQuality>2</hmis:AddressDataQuality>
-            </hmis:LastPermanentAddress>
             <hmis:MedicalAssistance hmis:dataCollectionStage="1" hmis:informationDate="2014-11-21" hmis:dateCreated="2015-08-22T23:14:59"
                  hmis:dateUpdated="2014-10-25T23:14:59" hmis:userID="ptravis">
                 <hmis:MedicalAssistanceID>y7665</hmis:MedicalAssistanceID>
@@ -368,6 +359,11 @@
                 <hmis:PercentAMI>1</hmis:PercentAMI>
                 <hmis:HPScreeningScore>12</hmis:HPScreeningScore>
                 <hmis:VAMCStation>76762T78</hmis:VAMCStation>
+                <hmis:LastPermanentStreet>13th Ave W</hmis:LastPermanentStreet>
+                <hmis:LastPermanentCity>Yreka</hmis:LastPermanentCity>
+                <hmis:LastPermanentState>AR</hmis:LastPermanentState>
+                <hmis:LastPermanentZIP>57601</hmis:LastPermanentZIP>
+                <hmis:AddressDataQuality>2</hmis:AddressDataQuality>
             </hmis:EntrySSVF>
             <hmis:Project hmis:dateCreated="2016-02-17T23:14:59" hmis:dateUpdated="2015-03-14T23:14:59Z" hmis:userID="j2ZsRLAPv">
                 <hmis:ProjectID>222D</hmis:ProjectID>

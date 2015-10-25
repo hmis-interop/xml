@@ -632,7 +632,7 @@
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PercentAMI" type="hmis:percentAMISimple">
+			<xs:element name="PercentAMI" type="hmis:percentAMISimple" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.42, #1.</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.42 Percent of AMI (SSVF Eligibility)".</xs:documentation>
@@ -648,6 +648,36 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.45 #1</xs:documentation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.45 HP Screening Score".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastPermanentStreet" type="hmis:string100" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.43, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastPermanentCity" type="hmis:string50" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.43, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastPermanentState" type="hmis:state" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.43, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastPermanentZIP" type="hmis:zipCode" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.43, #4.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AddressDataQuality" type="hmis:addressDataQuality" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.43, #5.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -901,7 +931,6 @@
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, "Bed and Unit Inventory Information", p. 14.</xs:documentation>
 					</xs:annotation>			
 				</xs:element>
-				<xs:element name="LastPermanentAddress" type="hmis:lastPermanentAddress"/>
 				<xs:element name="MedicalAssistance" type="hmis:medicalAssistance">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.39</xs:documentation>
@@ -988,7 +1017,6 @@
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:DateOfEngagement[hmis:ProjectEntryID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EnrollmentCoC[hmis:ProjectEntryID = $id]) ge 0)"/>		
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:Exit[hmis:ProjectEntryID = $id]) le 1)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:LastPermanentAddress[hmis:ProjectEntryID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:PathStatus[hmis:ProjectEntryID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntrySSVF[hmis:ProjectEntryID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:ResidentialMoveInDate[hmis:ProjectEntryID = $id]) le 1)"/>								
@@ -1552,52 +1580,6 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="hmis:informationDate" use="required"/>
-		<xs:attributeGroup ref="hmis:baseMetaData"/>
-	</xs:complexType>
-	
-	<xs:complexType name="lastPermanentAddress">
-		<xs:sequence>
-			<xs:element name="LastPermanentAddressID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the LastPermanentAddressID's unique ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>				
-			<xs:element name="ProjectEntryID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="LastPermanentStreet" type="hmis:string100" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.43, #1.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="LastPermanentCity" type="hmis:string50" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.43, #2.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="LastPermanentState" type="hmis:state" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.43, #3.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="LastPermanentZIP" type="hmis:zipCode" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.43, #4.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AddressDataQuality" type="hmis:addressDataQuality">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.43, #5.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section "4.43 Address Prior to Entry".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
 
@@ -2191,10 +2173,6 @@
 				</xs:keyref>
 				<xs:keyref name="enrollmentIncomeAndSourcesKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:IncomeAndSources"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
-				</xs:keyref>
-				<xs:keyref name="enrollmentLastPermanentAddressKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:LastPermanentAddress"/>
 					<xs:field xpath="hmis:ProjectEntryID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentMedicalAssistanceKeyRef" refer="enrollmentKey">
