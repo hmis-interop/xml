@@ -2203,10 +2203,6 @@
 					<xs:selector xpath="hmis:HousingAssessmentDisposition"/>
 					<xs:field xpath="hmis:ExitID"/>
 				</xs:keyref>
-				<xs:keyref name="exitProjectCompletionStatusKeyRef" refer="exitKey">
-					<xs:selector xpath="hmis:ProjectCompletionStatus"/>
-					<xs:field xpath="hmis:ExitID"/>
-				</xs:keyref>
 				<xs:keyref name="inventoryCoCKeyRef" refer="cocKey">
 					<xs:selector xpath="hmis:Inventory"/>
 					<xs:field xpath="hmis:CoCCode"/>
