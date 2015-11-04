@@ -608,6 +608,11 @@
 					<xs:documentation xml:lang="en">Key reference to the Enrollment's ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="CoCCode" type="hmis:cocCode">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the CoC's ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
 		<xs:attribute ref="hmis:informationDate" use="required"/>
@@ -1019,28 +1024,29 @@
 		</xs:sequence>
 		
 		<!--Cardinality Checking-->
+		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:ClientVeteranInfo[hmis:PersonalID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:Enrollment[hmis:PersonalID = $id]) ge 1)"/>		
-		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:ClientVeteranInfo[hmis:PersonalID = $id]) le 1)"/>		
+		<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:EnrollmentCoC[hmis:CoCCode = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:Inventory[hmis:CoCCode = $id]) ge 0)"/>				
 		<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:Site[hmis:CoCCode = $id]) ge 0)"/>						
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:Contact[hmis:ProjectEntryID = $id]) ge 0)"/>						
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:DateOfEngagement[hmis:ProjectEntryID = $id]) le 1)"/>				
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EnrollmentCoC[hmis:ProjectEntryID = $id]) ge 0)"/>		
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:DateOfEngagement[hmis:ProjectEntryID = $id]) le 1)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EnrollmentCoC[hmis:ProjectEntryID = $id]) ge 0)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntryRHY[hmis:ProjectEntryID = $id]) le 1)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntrySSVF[hmis:ProjectEntryID = $id]) le 1)"/>						
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:Exit[hmis:ProjectEntryID = $id]) le 1)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:PathStatus[hmis:ProjectEntryID = $id]) le 1)"/>		
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntrySSVF[hmis:ProjectEntryID = $id]) le 1)"/>				
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:ResidentialMoveInDate[hmis:ProjectEntryID = $id]) le 1)"/>								
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:RHYBCPStatus[hmis:ProjectEntryID = $id]) le 1)"/>				
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:PathStatus[hmis:ProjectEntryID = $id]) le 1)"/>					
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:WorstHousingSituation[hmis:ProjectEntryID = $id]) le 1)"/>		
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntryRHY[hmis:ProjectEntryID = $id]) le 1)"/>		
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:ResidentialMoveInDate[hmis:ProjectEntryID = $id]) le 1)"/>								
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:RHYBCPStatus[hmis:ProjectEntryID = $id]) le 1)"/>	
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ConnectionWithSOAR[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitHousingAssessment[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitRHY[hmis:ExitID = $id]) le 1)"/>				
+		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:FamilyReunification[hmis:ExitID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:HousingAssessmentDisposition[hmis:ExitID = $id]) le 1)"/>		
-		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:FamilyReunification[hmis:ExitID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Organization/hmis:OrganizationID satisfies (fn:count(hmis:Project[hmis:OrganizationID = $id]) ge 0)"/>						
-		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Funder[hmis:ProjectID = $id]) ge 1)"/>
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:CoC[hmis:ProjectID = $id]) ge 1)"/>		
+		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Funder[hmis:ProjectID = $id]) ge 1)"/>
 		
 		<!-- Checking that there is only one Head of Household per Household enrolled -->
 		<xs:assert test="every $id in hmis:Enrollment/hmis:HouseholdID satisfies (fn:count(hmis:Enrollment/hmis:RelationshipToHoH[text()= '1'][../hmis:HouseholdID = $id] ) eq 1)"/>						
@@ -2076,6 +2082,10 @@
 				<xs:keyref name="enrollmentClientKeyRef" refer="clientKey">
 					<xs:selector xpath="hmis:Enrollment"/>
 					<xs:field xpath="hmis:PersonalID"/>
+				</xs:keyref>
+				<xs:keyref name="enrollmentCoCCoCKeyRef" refer="cocKey">
+					<xs:selector xpath="hmis:EnrollmentCoC"/>
+					<xs:field xpath="hmis:CoCCode"/>					
 				</xs:keyref>
 				<xs:keyref name="enrollmentCoCEnrollmentKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:EnrollmentCoC"/>

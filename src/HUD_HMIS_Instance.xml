@@ -132,11 +132,13 @@
                  hmis:dateUpdated="2016-02-19T23:14:59" hmis:userID="DU5m">
                 <hmis:EnrollmentCoCID>56332</hmis:EnrollmentCoCID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
+                <hmis:CoCCode>BZ-123</hmis:CoCCode>
             </hmis:EnrollmentCoC>
             <hmis:EnrollmentCoC hmis:dataCollectionStage="1" hmis:informationDate="2015-06-24" hmis:dateCreated="2016-02-13T23:14:59Z"
                 hmis:dateUpdated="2016-02-19T23:14:59" hmis:userID="DU5m">
                 <hmis:EnrollmentCoCID>56332</hmis:EnrollmentCoCID>
                 <hmis:ProjectEntryID>w5642</hmis:ProjectEntryID>
+                <hmis:CoCCode>BZ-123</hmis:CoCCode>
             </hmis:EnrollmentCoC>
             <hmis:Exit hmis:dateCreated="2014-10-07T23:14:59Z" hmis:dateUpdated="2015-11-06T23:14:59Z" hmis:userID="GO">
                 <hmis:ExitID>C2x</hmis:ExitID>
