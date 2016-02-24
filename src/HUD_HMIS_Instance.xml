@@ -1,8 +1,8 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/4_1_0/HUD_HMIS.xsd http://www.hudhdx.info/Resources/Vendors/4_1_0/HUD_HMIS.xsd"
- xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_1_0/HUD_HMIS.xsd"
- xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning">
+    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/4_1_1/HUD_HMIS.xsd http://www.hudhdx.info/Resources/Vendors/4_1_1/HUD_HMIS.xsd"
+ xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+ xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_1_1/HUD_HMIS.xsd">
     <hmis:Source>
         <hmis:SourceID>12345</hmis:SourceID>
         <hmis:SoftwareVendor>HMISSoft Inc.</hmis:SoftwareVendor>
@@ -406,8 +406,8 @@
                 <hmis:ServicesID>44gg</hmis:ServicesID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:DateProvided>2015-09-06</hmis:DateProvided>
-                <hmis:RecordType>16</hmis:RecordType>
-                <hmis:TypeProvided>11</hmis:TypeProvided>
+                <hmis:RecordType>200</hmis:RecordType>
+                <hmis:TypeProvided>200</hmis:TypeProvided>
                 <hmis:OtherTypeProvided>some other type here</hmis:OtherTypeProvided>
                 <hmis:SubTypeProvided>12</hmis:SubTypeProvided>
                 <hmis:FAAmount>1145.59</hmis:FAAmount>
