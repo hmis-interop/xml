@@ -415,6 +415,7 @@
             </hmis:Services>
             <hmis:Site hmis:dateCreated="2014-09-03T23:14:59" hmis:dateUpdated="2016-02-25T23:14:59Z" hmis:userID="ck">
                 <hmis:SiteID>4526</hmis:SiteID>
+                <hmis:CoCCode>BZ-123</hmis:CoCCode>
                 <hmis:ProjectID>222E</hmis:ProjectID>
                 <hmis:PrincipalSite>1</hmis:PrincipalSite>
                 <hmis:Address>111 Pine St.</hmis:Address>
