@@ -4484,7 +4484,7 @@
 					<xs:documentation xml:lang="en">12 months</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="1">
+			<xs:enumeration value="113">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">More than 12 months</xs:documentation>
 				</xs:annotation>
