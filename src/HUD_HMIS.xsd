@@ -1,16 +1,16 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <xs:schema
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/4_1_3/HUD_HMIS.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/4_1_3/HUD_HMIS.xsd"	
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_1_3/HUD_HMIS.xsd"
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/5_0_0/HUD_HMIS.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/5_0_0/HUD_HMIS.xsd"	
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_0_0/HUD_HMIS.xsd"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	vc:minVersion = "1.1"
 	elementFormDefault="qualified"
 	attributeFormDefault="qualified"
-	version="4.1.3">
+	version="5.0.0">
 		
 	<xs:defaultOpenContent mode="interleave" appliesToEmpty="true"> 
 		<xs:annotation>
@@ -164,12 +164,6 @@
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 3.6.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherGender" type="hmis:string50" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 3.6, #1A.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 3.6.</xs:documentation>
-				</xs:annotation>				
-			</xs:element>
 			<xs:element name="Ethnicity" type="hmis:ethnicity">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 3.5, #1.</xs:documentation>
@@ -190,8 +184,6 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
-		<!--Testing if Gender is 4, before allowing use of OtherGender-->
-		<xs:assert test="if (hmis:Gender/text()='4') then boolean(hmis:OtherGender) else (if (not(hmis:Gender/text()='4')) then (not(boolean(hmis:OtherGender))) else false())"/>
 	</xs:complexType>
 	
 	<xs:complexType name="coc">
@@ -236,8 +228,6 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
-		<!--Testing if Gender is 4, before allowing use of OtherGender-->
-		<xs:assert test="if (hmis:Gender/text()='4') then boolean(hmis:OtherGender) else (if (not(hmis:Gender/text()='4')) then (not(boolean(hmis:OtherGender))) else false())"/>
 	</xs:complexType>
 	
 	<xs:complexType name="dateOfEngagement">
@@ -529,20 +519,14 @@
 			</xs:element>
 			<xs:element name="ResidencePrior" type="hmis:residencePrior" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 3.9.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 3.9.</xs:documentation>					
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 3.917.1.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 3.917.1</xs:documentation>					
 				</xs:annotation>
-			</xs:element>
-			<xs:element name="OtherResidencePrior" type="hmis:string50" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 3.9.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 3.9.</xs:documentation>					
-				</xs:annotation>				
 			</xs:element>
 			<xs:element name="ResidencePriorLengthOfStay" type="hmis:residencePriorLengthOfStay" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 3.9.</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 3.9.</xs:documentation>					
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 3.917.2.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Section 3.917.2</xs:documentation>					
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EntryFromStreetESSH" type="hmis:fiveValDKRefused" minOccurs="0">
@@ -585,9 +569,6 @@
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 		
-		<!--Testing if ResidencePrior is 17, before allowing use of OtherResidencePrior-->
-		<xs:assert test="if (hmis:ResidencePrior/text()='17') then boolean(hmis:OtherResidencePrior) else (if (not(hmis:ResidencePrior/text()='17')) then (not(boolean(hmis:OtherResidencePrior))) else false())"/>
-	
 		<!--Testing if TimesHomelessPastThreeYears is 1-4, before allowing use of MonthsHomelessPastThreeYears-->
 		<xs:assert test="if (hmis:TimesHomelessPastThreeYears/text()='1' or hmis:TimesHomelessPastThreeYears/text()='2' or hmis:TimesHomelessPastThreeYears/text()='3'  or hmis:TimesHomelessPastThreeYears/text()='4') then boolean(hmis:MonthsHomelessPastThreeYears) else (if (not(hmis:TimesHomelessPastThreeYears/text()='1'  or hmis:TimesHomelessPastThreeYears/text()='2' or hmis:TimesHomelessPastThreeYears/text()='3'  or hmis:TimesHomelessPastThreeYears/text()='4')) then (not(boolean(hmis:MonthsHomelessPastThreeYears))) else false())"/>
 
@@ -1026,12 +1007,12 @@
 		<!--Cardinality Checking-->
 		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:ClientVeteranInfo[hmis:PersonalID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:Enrollment[hmis:PersonalID = $id]) ge 1)"/>		
-		<!--<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:EnrollmentCoC[hmis:CoCCode = $id]) ge 0)"/>-->
-		<!--<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:Inventory[hmis:CoCCode = $id]) ge 0)"/>-->		
-		<!--<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:Site[hmis:CoCCode = $id]) ge 0)"/>-->						
-		<!--<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:Contact[hmis:ProjectEntryID = $id]) ge 0)"/>-->						
+		<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:EnrollmentCoC[hmis:CoCCode = $id]) ge 0)"/>
+		<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:Inventory[hmis:CoCCode = $id]) ge 0)"/>		
+		<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:Site[hmis:CoCCode = $id]) ge 0)"/>						
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:Contact[hmis:ProjectEntryID = $id]) ge 0)"/>						
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:DateOfEngagement[hmis:ProjectEntryID = $id]) le 1)"/>
-		<!--<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EnrollmentCoC[hmis:ProjectEntryID = $id]) ge 0)"/>-->
+		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EnrollmentCoC[hmis:ProjectEntryID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntryRHY[hmis:ProjectEntryID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntrySSVF[hmis:ProjectEntryID = $id]) le 1)"/>						
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:Exit[hmis:ProjectEntryID = $id]) le 1)"/>
@@ -1044,7 +1025,7 @@
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitRHY[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:FamilyReunification[hmis:ExitID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:HousingAssessmentDisposition[hmis:ExitID = $id]) le 1)"/>		
-		<!--<xs:assert test="every $id in hmis:Organization/hmis:OrganizationID satisfies (fn:count(hmis:Project[hmis:OrganizationID = $id]) ge 0)"/>-->								
+		<xs:assert test="every $id in hmis:Organization/hmis:OrganizationID satisfies (fn:count(hmis:Project[hmis:OrganizationID = $id]) ge 0)"/>								
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Funder[hmis:ProjectID = $id]) ge 1)"/>
 		
 		<!-- Checking that there is only one Head of Household per Household enrolled -->
@@ -2002,9 +1983,19 @@
 	
 	<xs:complexType name="source">
 		<xs:sequence>                   
-			<xs:element name="SourceID" type="hmis:string32">
+			<xs:element name="SourceID" type="hmis:string32" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the Source's unique ID</xs:documentation>
+					<xs:documentation xml:lang="en">Reference to the Source's unique ID. If SourceType = 1, this field may not be null and must identify the HUD CoC Code of the HMIS implementation from which data are being exported in the format of two letters, a dash, and 3 numbers.  ^[a-zA-Z]{2}-[0-9]{3}$ . If SourceType !=1, this field may be null or used to specify other characteristics, as agreed upon by sender and receiver.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SourceType" type="hmis:sourceType">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Identifies whether the source database is a continuum-operated HMIS (1), an agency-specific database (2), a data warehouse (3), or other (4).  An HMIS implementation operated jointly by more than one continuum should be identified as a data warehouse.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SourceName" type="hmis:string50" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">If the source database is not an HMIS implementation (if SourceType != 1), this field may not be null and must identify the organization responsible for the database.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SoftwareVendor" type="hmis:string50">
@@ -2040,11 +2031,6 @@
 			<xs:element name="SourceContactPhone" type="hmis:phoneNumber" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Phone number of the person to contact about this XML data; used with SourceContactExtension.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="SourceName" type="hmis:string50">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">A general text desrciption of what organization is sending this XML data.  Perhaps the Agency or Program name generating this XML data.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Export" type="hmis:export" minOccurs="0" maxOccurs="unbounded">
@@ -2241,6 +2227,12 @@
 				</xs:keyref>
 			</xs:element>			
 		</xs:sequence>
+		<!--Testing if the source database is not an HMIS implementation (if SourceType <> 1), then SourceName may not be null.-->
+		<xs:assert test="if (hmis:SourceType/text()!='1') then boolean(hmis:SourceName) else true()"/>
+		
+		<!--Testing if sourceType = 1, then SourceID may not be null -->
+		<xs:assert test="if (hmis:SourceType/text()='1') then boolean(hmis:SourceID) else true()"/>
+		
 	</xs:complexType>
 	
 	<xs:complexType name="sources">
@@ -3923,7 +3915,7 @@
 				1 = Male 
 				2 = Transgender male to female 
 				3 = Transgender female to male 
-				4 = Other 
+				4 = Doesn’t identify as male, female, or transgender 
 				8 = Client doesn’t know 
 				9 = Client refused 
 				99 Data not collected 
@@ -3952,7 +3944,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Other</xs:documentation>
+					<xs:documentation xml:lang="en">Doesn’t identify as male, female, or transgender</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>	
 			<xs:enumeration value="8">
@@ -5473,6 +5465,7 @@
 				24 = Long-term care facility or nursing home
 				25 = Rental by client, with GPD TIP subsidy
 				26 = Residential project or halfway house with no homeless criteria
+				27 = Interim housing
 				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
@@ -5597,6 +5590,11 @@
 					<xs:documentation xml:lang="en">Residential project or halfway house with no homeless criteria</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="27">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Interim housing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="99">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
@@ -5609,31 +5607,32 @@
 		<xs:annotation>
 			<xs:documentation xml:lang="en">	
 				Length of Stay in Previous Place
-					2 = More than one week, but less than one month 
-					3 = One to three months 
-					4 = More than three months, but less than one year 
+					2 = One week or more, but less than one month
+					3 = One month or more, but less than 90 days
+					4 = 90 days or more but less than one year
 					5 = One year or longer 
 					8 = Client doesn’t know 
 					9 = Client refused
-					10 = One day or less
-					11 = Two days to one week 
+					10 = One night or less
+					11 = Two to six nights 
 					99 = Data not collected 
+					
     		</xs:documentation>
     	</xs:annotation>
     	<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="2">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">More than one week, but less than one month</xs:documentation>
+					<xs:documentation xml:lang="en">One week or more, but less than one month</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">One to three months</xs:documentation>
+					<xs:documentation xml:lang="en">One month or more, but less than 90 days</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">More than three months, but less than one year </xs:documentation>
+					<xs:documentation xml:lang="en">90 days or more but less than one year</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="5">
@@ -5653,12 +5652,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="10">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">One day or less</xs:documentation>
+					<xs:documentation xml:lang="en">One night or less</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="11">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Two days to one week</xs:documentation>
+					<xs:documentation xml:lang="en">Two to six nights</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -5876,6 +5875,40 @@
 			<xs:enumeration value="99">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="sourceType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				Source Type 
+				1 = continuum-operated HMIS 
+				2 = agency-specific database
+				3 = data warehouse
+				4 = other
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">continuum-operated HMIS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">agency-specific database</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">data warehouse</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
