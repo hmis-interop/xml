@@ -371,6 +371,16 @@
                 <hmis:LastPermanentState>AR</hmis:LastPermanentState>
                 <hmis:LastPermanentZIP>57601</hmis:LastPermanentZIP>
                 <hmis:AddressDataQuality>2</hmis:AddressDataQuality>
+                <hmis:UrgentReferral>0</hmis:UrgentReferral>
+                <hmis:TimeToHousingLoss>99</hmis:TimeToHousingLoss>
+                <hmis:ZeroIncome>1</hmis:ZeroIncome>
+                <hmis:AnnualPercentAMI>2</hmis:AnnualPercentAMI>
+                <hmis:FinancialChange>99</hmis:FinancialChange>
+                <hmis:HouseholdChange>0</hmis:HouseholdChange>
+                <hmis:EvictionHistory>3</hmis:EvictionHistory>
+                <hmis:SubsidyAtRisk>1</hmis:SubsidyAtRisk>
+                <hmis:LiteralHomelessHistory>2</hmis:LiteralHomelessHistory>
+                <hmis:DisabledHoH>99</hmis:DisabledHoH>
             </hmis:EntrySSVF>
             <hmis:Project hmis:dateCreated="2016-02-17T23:14:59" hmis:dateUpdated="2015-03-14T23:14:59Z" hmis:userID="j2ZsRLAPv">
                 <hmis:ProjectID>222D</hmis:ProjectID>
@@ -403,7 +413,6 @@
             <hmis:ResidentialMoveInDate hmis:dateCreated="2015-04-25T23:14:59" hmis:dateUpdated="2015-07-23T23:14:59Z" hmis:userID="AUfZ2">
                 <hmis:ResidentialMoveInDateID>z44332</hmis:ResidentialMoveInDateID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:InPermanentHousing>1</hmis:InPermanentHousing>
                 <hmis:ResidentialMoveInDate>2016-05-19Z</hmis:ResidentialMoveInDate>
             </hmis:ResidentialMoveInDate>
             <hmis:RHYBCPStatus hmis:dateCreated="2014-10-25T23:14:59Z" hmis:dateUpdated="2015-03-27T23:14:59Z" hmis:userID="ryu">

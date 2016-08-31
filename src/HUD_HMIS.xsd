@@ -565,11 +565,6 @@
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.42, #1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="HPScreeningScore" type="hmis:hpScreeningScore" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.44 #1</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="VAMCStation" type="hmis:vamcStation" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.45 #1</xs:documentation>
@@ -598,6 +593,101 @@
 			<xs:element name="AddressDataQuality" type="hmis:addressDataQuality" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.43, #5.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UrgentReferral" type="hmis:noPointsYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.1.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TimeToHousingLoss" type="hmis:timeToHousingLoss" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.2.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ZeroIncome" type="hmis:noPointsYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.3.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AnnualPercentAMI" type="hmis:annualPercentAMI" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.4.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FinancialChange" type="hmis:noPointsYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.5.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HouseholdChange" type="hmis:noPointsYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.6.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EvictionHistory" type="hmis:evictionHistory" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.7.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SubsidyAtRisk" type="hmis:noPointsYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.8.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LiteralHomelessHistory" type="hmis:literalHomelessHistory" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.9.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DisabledHoH" type="hmis:noPointsYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.10.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CriminalRecord" type="hmis:noPointsYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.11.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SexOffender" type="hmis:noPointsYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.12.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DependentUnder6" type="hmis:noPointsYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.13.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SingleParent" type="hmis:noPointsYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.14.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HH5Plus" type="hmis:noPointsYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.15.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IraqAfghanistan" type="hmis:noPointsYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.16.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FemVet" type="hmis:noPointsYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.17.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HPScreeningScore" type="hmis:hpScreeningScore" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.20</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ThresholdScore" type="xs:positiveInteger" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.21</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -2543,6 +2633,39 @@
 		</xs:restriction>
 	</xs:simpleType>
 
+	<xs:simpleType name="annualPercentAMI">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				0 = 0-14% of AMI for household size
+				1 = 15-30% of AMI for household size
+				2 = More than 30% of AMI for household size (0 points)
+				99 = Data not collected
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">0-14% of AMI for household size</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">15-30% of AMI for household size</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">More than 30% of AMI for household size (0 points)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>				
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
 	<xs:simpleType name="askedOrForcedToExchangeForSex">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
@@ -3297,6 +3420,45 @@
 		</xs:restriction>
 	</xs:simpleType>
 
+	<xs:simpleType name="evictionHistory">
+		<xs:annotation>
+			<xs:documentation xml:lang="en"> 
+				0 = 4 or more prior rental evictions
+				1 = 2-3 prior rental evictions
+				2 = 1 prior rental eviction
+				3 = No prior rental evictions (0 points)
+				99 = Data not collected
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">4 or more prior rental evictions</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">2-3 prior rental evictions</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">1 prior rental eviction</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">No prior rental evictions (0 points)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
 	<xs:simpleType name="exportPeriodType">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="updated">
@@ -4075,7 +4237,40 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-	</xs:simpleType>	
+	</xs:simpleType>
+	
+	<xs:simpleType name="literalHomelessHistory">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">	
+				0 = 4 or more times or total of at least 12 months in past three years
+				1 = 2-3 times in past three years
+				2 = 1 time in past three years
+				99 = Data not collected
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">4 or more times or total of at least 12 months in past three years</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">2-3 times in past three years</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">1 time in past three years</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 	
 	<xs:simpleType name="militaryBranch">
 		<xs:annotation>
@@ -4428,6 +4623,33 @@
 			<xs:enumeration value="9">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="noPointsYes">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+					0 = No (0 points)
+					1 = Yes
+					99 = Data not collected
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">No (0 points)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Yes</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -5826,6 +6048,45 @@
 					<xs:documentation xml:lang="en">Without an on-going subsidy</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>	
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="timeToHousingLoss">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				0 = 0-6 days
+				1 = 7-13 days
+				2 = 14-21 days
+				3 = More than 21 days (0 points)
+				99 = Data not collected
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">0-6 days</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">7-13 days</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">14-21 days</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>				
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">More than 21 days (0 points)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>		
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
 		</xs:restriction>
 	</xs:simpleType>
 	
