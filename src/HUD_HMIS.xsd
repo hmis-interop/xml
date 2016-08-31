@@ -502,10 +502,9 @@
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.917.4.</xs:documentation>
 				</xs:annotation>				
 			</xs:element>
-			<xs:element name="MonthsHomelessPastThreeYears
-				" type="hmis:monthsHomelessPastThreeYears" minOccurs="0">
+			<xs:element name="MonthsHomelessPastThreeYears" type="hmis:monthsHomelessPastThreeYears" minOccurs="0">
 				<xs:annotation>					
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.17, #2A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.917.5.</xs:documentation>
 				</xs:annotation>				
 			</xs:element>
 			<xs:element name="DisablingCondition" type="hmis:fiveValDKRefused">
@@ -1620,11 +1619,6 @@
 			<xs:element name="ProjectEntryID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="InPermanentHousing" type="hmis:noYes">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.17, #1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ResidentialMoveInDate" type="xs:date" minOccurs="0">
@@ -5839,7 +5833,6 @@
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
 				Number of Times the Client has been Homeless in the Past Three Years 
-					0 = Never in the 3 years
 					1 = One time
 					2 = Two times
 					3 = Three times
@@ -5850,11 +5843,6 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Never in the 3 years</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="1">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">One time</xs:documentation>

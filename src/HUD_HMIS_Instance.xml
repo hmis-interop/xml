@@ -120,7 +120,6 @@
                 <hmis:RelationshipToHoH>3</hmis:RelationshipToHoH>
                 <hmis:ResidencePrior>17</hmis:ResidencePrior>
                 <hmis:ResidencePriorLengthOfStay>8</hmis:ResidencePriorLengthOfStay>
-                <hmis:PreviousStreetESSH>1</hmis:PreviousStreetESSH>
                 <hmis:DateToStreetESSH>2015-04-01</hmis:DateToStreetESSH>
                 <hmis:TimesHomelessPastThreeYears>2</hmis:TimesHomelessPastThreeYears>
                 <hmis:MonthsHomelessPastThreeYears>103</hmis:MonthsHomelessPastThreeYears>
