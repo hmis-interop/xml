@@ -40,7 +40,7 @@
 			</xs:element>
 			<xs:element name="ResProjectID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS Data Dictionary (Proposed Amendment), Section 2.4, Project Type, #2AB.</xs:documentation>
+					<xs:documentation xml:lang="en">See HMIS Data Dictionary (Proposed Amendment), Section 2.4, Project Type.2AB.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -51,12 +51,12 @@
 		<xs:sequence>
 			<xs:element name="BedInventory" type="xs:nonNegativeInteger">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7, #5.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7.5.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CHBedInventory" type="xs:nonNegativeInteger" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7, Chronic Homeless Bed Inventory (PSH Only), #5.A.1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7, Chronic Homeless Bed Inventory (PSH Only).5.A.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VetBedInventory" type="xs:nonNegativeInteger" minOccurs="0">
@@ -66,12 +66,12 @@
 			</xs:element>
 			<xs:element name="YouthBedInventory" type="xs:nonNegativeInteger" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7, #5.A.3.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7.5.A.3.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="YouthAgeGroup" type="youthAgeGroup" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7, #5.B.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7.5.B.</xs:documentation>
 				</xs:annotation>
 			</xs:element>			
 		</xs:sequence>
@@ -86,7 +86,7 @@
 			</xs:element>
 			<xs:element name="FirstName" type="hmis:nameHashingOption"  minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.1, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.1.1.</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
 				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
@@ -94,7 +94,7 @@
 			</xs:element>
 			<xs:element name="MiddleName" type="hmis:nameHashingOption"  minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.1, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.1.2.</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
 				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
@@ -102,7 +102,7 @@
 			</xs:element>
 			<xs:element name="LastName" type="hmis:nameHashingOption" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.1, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.1.3.</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
 				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
@@ -110,17 +110,17 @@
 			</xs:element>
 			<xs:element name="NameSuffix" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.1, #4.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.1.4.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NameDataQuality" type="hmis:nameDataQuality">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.1, #5.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.1.5.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SSN" type="hmis:ssnHashingOption"  minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.2, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.2.1.</xs:documentation>
 					<xs:documentation xml:lang="en">Unknown SSN digits should be indicated with a lower case "x".</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:ssnHashingOptionPlain"/>
@@ -130,37 +130,37 @@
 			</xs:element>
 			<xs:element name="SSNDataQuality" type="hmis:ssnDataQuality">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.2, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.2.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>			
 			<xs:element name="DOB" type="xs:date" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.3, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.3.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DOBDataQuality" type="hmis:dobDataQuality">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.3, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.3.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Gender" type="hmis:gender">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.6, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.6.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Ethnicity" type="hmis:ethnicity">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.5, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.5.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Race" type="hmis:race" maxOccurs="5">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.4, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.4.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VeteranStatus" type="hmis:fiveValDKRefused">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.7, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.7.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -197,12 +197,12 @@
 			</xs:element>
 			<xs:element name="ContactDate" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.12, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.12.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ContactLocation" type="hmis:contactLocation">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.12, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.12.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -223,7 +223,7 @@
 			</xs:element>
 			<xs:element name="DateOfEngagement" type="xs:date">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.13, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.13.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -356,17 +356,17 @@
 			</xs:element>
 			<xs:element name="DomesticViolenceVictim" type="hmis:fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.11, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.11.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WhenOccurred" type="hmis:whenOccurred" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.11, #A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.11.A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CurrentlyFleeing" type="hmis:fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.11, #B.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.11.B.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -393,12 +393,12 @@
 			</xs:element>
 			<xs:element name="LastGradeCompleted" type="hmis:lastGradeCompletedSimple" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.24, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.24.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SchoolStatus" type="hmis:schoolStatus" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.25, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.25.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -421,17 +421,17 @@
 			</xs:element>
 			<xs:element name="Employed" type="hmis:fiveValDKRefused">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.26, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.26.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EmploymentType" type="hmis:employmentType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.26, #2A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.26.2A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NotEmployedReason" type="hmis:notEmployedReason" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.26, #2B.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.26.2B.</xs:documentation>
 				</xs:annotation>
 			</xs:element>	
 		</xs:sequence>
@@ -537,6 +537,11 @@
 					<xs:documentation xml:lang="en">Key reference to the Enrollment's ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="HouseholdID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Household ID, as a convenience</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="CoCCode" type="hmis:cocCode">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the CoC's ID</xs:documentation>
@@ -562,37 +567,32 @@
 			</xs:element>
 			<xs:element name="PercentAMI" type="hmis:percentAMISimple" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.42, #1.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="VAMCStation" type="hmis:vamcStation" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.45 #1</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.42.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LastPermanentStreet" type="hmis:string100" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.43, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.43.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LastPermanentCity" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.43, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.43.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LastPermanentState" type="hmis:state" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.43, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.43.3.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LastPermanentZIP" type="hmis:zipCode" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.43, #4.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.43.4.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AddressDataQuality" type="hmis:addressDataQuality" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.43, #5.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.43.5.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="UrgentReferral" type="hmis:noPointsYes" minOccurs="0">
@@ -690,6 +690,26 @@
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.48.21</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="ERVisits" type="hmis:crisisServicesUse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.49.1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="JailNights" type="hmis:crisisServicesUse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.49.2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HospitalNights" type="hmis:crisisServicesUse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.49.3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VAMCStation" type="hmis:vamcStation" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.45.1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
@@ -708,17 +728,17 @@
 			</xs:element>
 			<xs:element name="ExitDate" type="xs:date">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.11, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.11.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Destination" type="hmis:destination" minOccurs="1">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.12, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.12.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OtherDestination" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.12, #1A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 3.12.1A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -743,7 +763,7 @@
 			</xs:element>
 			<xs:element name="ConnectionWithSOAR" type="hmis:fiveValDKRefused">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.21, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.21.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -764,12 +784,12 @@
 			</xs:element>
 			<xs:element name="HousingAssessment" type="hmis:housingAssessmentAtExit">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.19, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.19.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SubsidyInformation" type="hmis:subsidyInformation" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.19, #1A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.19.1A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -790,57 +810,57 @@
 			</xs:element>
 			<xs:element name="WrittenAftercarePlan" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AssistanceMainstreamBenefits" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PermanentHousingPlacement" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36.3.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TemporaryShelterPlacement" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36, #4.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36.4.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExitCounseling" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36, #5.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36.5.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FurtherFollowUpServices" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36, #6.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36.6.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ScheduledFollowUpContacts" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36, #7.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36.7.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ResourcePackage" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36, #8.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36.8.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OtherAftercarePlanOrAction" type="hmis:noYesRefused"  minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36, #9.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.36.9.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FamilyReunificationAchieved" type="hmis:fiveValDKRefused"  minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.38, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.38.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProjectCompletionStatus" type="hmis:projectCompletionStatusSimple" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.37, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.37.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EarlyExitReason" type="hmis:earlyExitReason" minOccurs="0">
@@ -987,7 +1007,7 @@
 				</xs:element>
 				<xs:element name="WorstHousingSituation" type="hmis:worstHousingSituation">
 					<xs:annotation>
-						<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.40, #1.</xs:documentation>
+						<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.40.1.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="EntryRHY" type="hmis:entryRHY">
@@ -1041,22 +1061,22 @@
 			</xs:element>
 			<xs:element name="Funder" type="hmis:federalPartnerProgramsAndComponents">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.6, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.6.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GrantID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.6, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.6.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StartDate" type="xs:date">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.6, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.6.3.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.6, #4.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.6.4.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -1077,93 +1097,117 @@
 			</xs:element>
 			<xs:element name="InsuranceFromAnySource" type="hmis:fiveValDKRefused">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Medicaid" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.3.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NoMedicaidReason" type="hmis:noHealthInsuranceReason" minOccurs="0">
+			<xs:element name="NoMedicaidReason" type="reasonNotInsuredOrAssisted" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4, #3A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.3A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Medicare" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4, #4.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.4.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NoMedicareReason" type="hmis:noHealthInsuranceReason" minOccurs="0">
+			<xs:element name="NoMedicareReason" type="hmis:reasonNotInsuredOrAssisted" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4, #4A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.4A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SCHIP" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4, #5.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.5.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NoSCHIPReason" type="hmis:noHealthInsuranceReason" minOccurs="0">
+			<xs:element name="NoSCHIPReason" type="hmis:reasonNotInsuredOrAssisted" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4, #5A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.5A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VAMedicalServices" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4, #6.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.6.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NoVAMedReason" type="hmis:noHealthInsuranceReason" minOccurs="0">
+			<xs:element name="NoVAMedReason" type="hmis:reasonNotInsuredOrAssisted" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4, #6A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.6A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EmployerProvided" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4, #7.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.7.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NoEmployerProvidedReason" type="hmis:noHealthInsuranceReason" minOccurs="0">
+			<xs:element name="NoEmployerProvidedReason" type="hmis:reasonNotInsuredOrAssisted" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4, #7A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.7A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="COBRA" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4, #8.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.8.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NoCOBRAReason" type="hmis:noHealthInsuranceReason" minOccurs="0">
+			<xs:element name="NoCOBRAReason" type="hmis:reasonNotInsuredOrAssisted" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4, #8A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.8A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PrivatePay" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4, #9.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.9.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NoPrivatePayReason" type="hmis:noHealthInsuranceReason" minOccurs="0">
+			<xs:element name="NoPrivatePayReason" type="hmis:reasonNotInsuredOrAssisted" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4, #9A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.9A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StateHealthIns" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4, #10.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.10.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NoStateHealthInsReason" type="hmis:noHealthInsuranceReason" minOccurs="0">
+			<xs:element name="NoStateHealthInsReason" type="hmis:reasonNotInsuredOrAssisted" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4, #10A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.10A.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IndianHealthServices" type="hmis:noYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.11.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NoIndianHealthServicesReason" type="hmis:reasonNotInsuredOrAssisted" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.11A.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OtherInsurance" type="hmis:noYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.12.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OtherInsuranceIdentify" type="hmis:string50" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.12A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
 		<xs:attribute ref="hmis:informationDate" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
+		<!--Testing if IndianHealthServices is 0, before allowing use of NoIndianHealthServicesReason-->
+		<xs:assert test="if (hmis:IndianHealthServices/text()='0') then boolean(hmis:NoIndianHealthServicesReason) else (if (not(hmis:IndianHealthServices/text()='0')) then (not(boolean(hmis:NoIndianHealthServicesReason))) else false())"/>
+		<!--Testing if OtherInsurance is 1, before allowing use of OtherInsuranceIdentify-->
+		<xs:assert test="if (hmis:OtherInsurance/text()='1') then boolean(hmis:OtherInsuranceIdentify) else (if (not(hmis:OtherInsurance/text()='1')) then (not(boolean(hmis:OtherInsuranceIdentify))) else false())"/>				
 	</xs:complexType>
 	
 	<xs:complexType name="healthStatus">
@@ -1185,12 +1229,12 @@
 			</xs:element>
 			<xs:element name="HealthStatus" type="hmis:healthStatusType">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.27-4.30, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.27-4.30.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DueDate" type="xs:date" minOccurs = "0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.30, #1A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.30.1A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>	
 		</xs:sequence>
@@ -1213,12 +1257,12 @@
 			</xs:element>
 			<xs:element name="AssessmentDisposition" type="hmis:assessmentDisposition">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.18, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.18.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OtherDisposition" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.18, #1A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.18.1A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -1264,167 +1308,167 @@
 			</xs:element>
 			<xs:element name="IncomeFromAnySource" type="hmis:fiveValDKRefused">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TotalMonthlyIncome" type="hmis:money">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #18.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.18.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Earned" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.3.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EarnedAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #3A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.3A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Unemployment" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #4.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.4.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="UnemploymentAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #4B.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.4B.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SSI" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #5.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.5.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SSIAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #5C.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.5C.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SSDI" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #6.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.6.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SSDIAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #6D.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.6D.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VADisabilityService" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #7.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.7.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VADisabilityServiceAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #7E.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.7E.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VADisabilityNonService" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #8.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.8.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VADisabilityNonServiceAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #8F.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.8F.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PrivateDisability" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #9.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.9.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PrivateDisabilityAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #9G.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.9G.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WorkersComp" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #10.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.10.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WorkersCompAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #10H.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.10H.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TANF" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #11.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.11.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TANFAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #11I.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.11I.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GA" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #12.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.12.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GAAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #12J.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.12J.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SocSecRetirement" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #13.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.13.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SocSecRetirementAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #13K.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.13K.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Pension" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #14.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.14.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PensionAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #14L.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.14L.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ChildSupport" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #15.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.15.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ChildSupportAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #15M.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.15M.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Alimony" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #16.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.16.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AlimonyAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #16N.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.16N.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OtherSource" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #17.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.17.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OtherSourceAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #17O.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.17O.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OtherSourceIdentify" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2, #17O.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.17O.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -1447,38 +1491,38 @@
 			</xs:element>
 			<xs:element name="HouseholdType" type="hmis:householdType">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BedType" type="hmis:bedType" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7.3.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Availability" type="hmis:availability" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7, #4.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7.4.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="UnitInventory" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7, #7.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7.7.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BedInventory" type="hmis:bedInventory"/>
 			<xs:element name="InventoryStartDate" type="xs:date">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7, #7.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7.7.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InventoryEndDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7, #8.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7.8.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HMISParticipatingBeds" type="xs:nonNegativeInteger">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7, #9.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.7.9.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -1500,22 +1544,22 @@
 			</xs:element>
 			<xs:element name="HIVAIDSAssistance" type="hmis:fiveValDKRefused">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.39, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.39.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NoHIVAIDSAssistanceReason" type="hmis:noMedicalAssistanceReason" minOccurs="0">
+			<xs:element name="NoHIVAIDSAssistanceReason" type="hmis:reasonNotInsuredOrAssisted" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.39, #2A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.39.2A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ADAP" type="hmis:fiveValDKRefused">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.39, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.39.3.</xs:documentation>
 				</xs:annotation>
 			</xs:element>	
-			<xs:element name="NoADAPReason" type="hmis:noMedicalAssistanceReason" minOccurs="0">
+			<xs:element name="NoADAPReason" type="hmis:reasonNotInsuredOrAssisted" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.39, #3B.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.39.3B.</xs:documentation>
 				</xs:annotation>
 			</xs:element>	
 		</xs:sequence>
@@ -1538,52 +1582,52 @@
 			</xs:element>			
 			<xs:element name="BenefitsFromAnySource" type="hmis:fiveValDKRefused">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SNAP" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3.3.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WIC" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3, #4.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3.4.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TANFChildCare" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3, #5.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3.5.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TANFTransportation" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3, #6.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3.6.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OtherTANF" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3, #7.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3.7.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RentalAssistanceOngoing" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3, #8.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3.8.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RentalAssistanceTemp" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3, #10.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3.10.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OtherSource" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3, #9.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3.9.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OtherSourceIdentify" type="hmis:string50">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3, #9A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.3.9A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -1596,12 +1640,12 @@
 		<xs:sequence>
 			<xs:element name="OrganizationID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.1, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.1.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrganizationName" type="hmis:string50">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.1, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.1.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrganizationCommonName" type="hmis:string50" minOccurs="0">
@@ -1627,17 +1671,17 @@
 			</xs:element>
 			<xs:element name="DateOfStatus" type="xs:date">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.20, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.20.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ClientEnrolledInPATH" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.20, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.20.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ReasonNotEnrolled" type="hmis:reasonNotEnrolled" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.20, #2A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.20.2A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -1651,7 +1695,7 @@
 		<xs:sequence>                   
 			<xs:element name="ProjectID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.2, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.2.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrganizationID" type="hmis:string32">
@@ -1661,33 +1705,33 @@
 			</xs:element>
 			<xs:element name="ProjectName" type="hmis:string50">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.2, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.2.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			
 			<xs:element name="ContinuumProject" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.4, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.4.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProjectType" type="hmis:projectType">		
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.4, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.4.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ResidentialAffiliation" type="hmis:noYes" minOccurs="0">		
 				<xs:annotation>
-					<xs:documentation xml:lang="en">HMIS Data Dictionary, Proposed Amendment, Section 2.4, #2A.</xs:documentation>
+					<xs:documentation xml:lang="en">HMIS Data Dictionary, Proposed Amendment, Section 2.4.2A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TrackingMethod" type="hmis:trackingMethod" minOccurs="0">		
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.5, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.5.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TargetPopulation" type="hmis:targetPopulation" minOccurs="0">		
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.9, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.9.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProjectCommonName" type="hmis:string50" minOccurs="0">		
@@ -1713,7 +1757,7 @@
 			</xs:element>
 			<xs:element name="ResidentialMoveInDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.17, #1A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.17.1A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -1734,17 +1778,17 @@
 			</xs:element>
 			<xs:element name="StatusDate" type="xs:date">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.22, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.22.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FYSBYouth" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.22, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.22.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ReasonNoServices" type="hmis:fysbReasonNoServices" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.22, #2A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.22.2A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -1768,7 +1812,7 @@
 			</xs:element>
 			<xs:element name="DateProvided" type="xs:date">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.12 and 4.14-4.16.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RecordType" type="hmis:recordType">
@@ -1778,7 +1822,7 @@
 			</xs:element>
 			<xs:element name="TypeProvided">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #2 (picklist values vary by service category and funder).</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.12 and 4.14-4.16.2 (picklist values vary by service category and funder).</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:integer">
@@ -1788,12 +1832,12 @@
 			</xs:element>
 			<xs:element name="OtherTypeProvided" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #2D (if it exists) .</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.12 and 4.14-4.16.2D (if it exists) .</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SubTypeProvided" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #3A, 4B, 5C (if it exists).</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.12 and 4.14-4.16.3A, 4B, 5C (if it exists).</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:integer">
@@ -1834,7 +1878,7 @@
 			</xs:element>
 			<xs:element name="PrincipalSite" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.8, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.8.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Address" type="hmis:string100" minOccurs="0">
@@ -1859,7 +1903,7 @@
 			</xs:element>
 			<xs:element name="Geocode" type="hmis:geocode" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.8, #1.A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 2.8.1.A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -2172,62 +2216,62 @@
 			</xs:element>
 			<xs:element name="YearEnteredService" type="xs:gYear" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41, #1</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41.1</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="YearSeparated" type="xs:gYear" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41, #2</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41.2</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WorldWarII" type="fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41, #3</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41.3</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="KoreanWar" type="fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41, #4</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41.4</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VietnamWar" type="fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41, #5</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41.5</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DesertStorm" type="fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41, #6</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41.6</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AfghanistanOEF" type="fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41, #7</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41.7</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IraqOIF" type="fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41, #8</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41.8</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IraqOND" type="fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41, #9</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41.9</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OtherTheater" type="fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41, #10</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41.10</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MilitaryBranch" type="militaryBranch" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41, #11</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41.11</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DischargeStatus" type="dischargeStatus" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41, #12</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.41.12</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -2248,7 +2292,7 @@
 			</xs:element>
 			<xs:element name="WorstHousingSituation" type="hmis:fiveValDKRefused">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.40, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.40.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -2269,132 +2313,132 @@
 			</xs:element>
 			<xs:element name="HouseholdDynamics" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SexualOrientation" type="hmis:sexualOrientation">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.23, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.23.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SexualOrientationGenderIdentityYouth" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #2.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SexualOrientationGenderIDFam" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.3.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HousingIssuesYouth" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #4.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.4.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HousingIssuesFam" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #5.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.5.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SchoolEducationalIssuesYouth" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #6.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.6.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SchoolEducationalIssuesFam" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #7.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.7.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="UnemploymentYouth" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #8.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.8.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="UnemploymentFam" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #9.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.9.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MentalHealthIssuesYouth" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #10.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.10.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MentalHealthIssuesFam" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #11.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.11.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HealthIssuesYouth" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #12.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.12.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HealthIssuesFam" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #13.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.13.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PhysicalDisabilityYouth" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #14.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.14.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PhysicalDisabilityFam" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #15.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.15.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MentalDisabilityYouth" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #16.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.16.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MentalDisabilityFam" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #17.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.17.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AbuseAndNeglectYouth" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #18.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.18.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AbuseAndNeglectFam" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #19.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.19.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AlcoholDrugAbuseYouth" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #20.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.20.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AlcoholDrugAbuseFam" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #21.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.21.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InsufficientIncome" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #22.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.22.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ActiveMilitaryParent" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #23.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.23.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IncarceratedParent" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #24.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.24.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IncarceratedParentStatus" type="hmis:incarceratedParentStatus" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33, #24A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.33.24A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WorkPlaceViolenceThreats" type="hmis:fiveValDKRefused" minOccurs="0">
@@ -2419,67 +2463,67 @@
 			</xs:element>
 			<xs:element name="ExchangeForSex" type="hmis:fiveValDKRefused">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.35A, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.35A.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExchangeForSexPastThreeMonths" type="hmis:fiveValDKRefused">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.35A, #1A</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.35A.1A</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CountOfExchangeForSex" type="hmis:countOfExchangeForSex" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.35A, #1B.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.35A.1B.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AskedOrForcedToExchangeForSex" type="hmis:askedOrForcedToExchangeForSex" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.35, #1C.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.35.1C.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AskedOrForcedToExchangeForSexPastThreeMonths" type="hmis:fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.35, #1D.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.35.1D.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FormerWardJuvenileJustice" type="hmis:fiveValDKRefused">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.32, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.32.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="JuvenileJusticeYears" type="hmis:issuesYears" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.32, #1A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.32.1A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="JuvenileJusticeMonths" type="xs:unsignedInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.32, #1AB.  Values 1-11 permissible.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.32.1AB.  Values 1-11 permissible.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FormerWardChildWelfare" type="hmis:fiveValDKRefused">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.31, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.31.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ChildWelfareYears" type="hmis:issuesYears" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.31, #1B.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.31.1B.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ChildWelfareMonths" type="xs:unsignedInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.31, #1BA.  Values 1-11 permissible.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.31.1BA.  Values 1-11 permissible.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ReferralSource" type="hmis:referralSource">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.34, #1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.34.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CountOutreachReferralApproaches" type="xs:unsignedInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.34, #1A.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.34.1A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -2922,6 +2966,70 @@
 			<xs:enumeration value="4">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">12 or more</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="crisisServicesUse">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">	
+				Crisis Services Use
+				0 = 0
+				1 = 1-2
+				2 = 3-5
+				3 = 6-10
+				4 = 11-20
+				5 = More than 20
+				8 = Client doesn’t know
+				9 = Client refused
+				99 = Data not collected
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">0</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">1-2</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">3-5</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">6-10</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">11-20</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">More than 20</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8">
@@ -4476,115 +4584,9 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="noMedicalAssistanceReason">
+	<xs:simpleType name="reasonNotInsuredOrAssisted">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
-				If No for “Receiving Public HIV/AIDS Medical Assistance”
-				Reason
-				1 = Applied; decision pending
-				2 = Applied; client not eligible
-				3 = Client did not apply
-				4 = Insurance type N/A for this client
-				8 = Client doesn’t know
-				9 = Client refused
-				99 = Data not collected
-			</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Applied; decision pending</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Applied; client not eligible</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client did not apply</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>			
-			<xs:enumeration value="4">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Insurance type N/A for this client</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="noADAPReason">
-		<xs:annotation>
-			<xs:documentation xml:lang="en">
-				Reason
-				1 = Applied; decision pending
-				2 = Applied; client not eligible
-				3 = Client did not apply
-				4 = Insurance type N/A for this client
-				8 = Client doesn’t know
-				9 = Client refused
-				99 = Data not collected
-			</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Applied; decision pending</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Applied; client not eligible</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client did not apply</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>			
-			<xs:enumeration value="4">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Insurance type N/A for this client</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="noHealthInsuranceReason">
-		<xs:annotation>
-			<xs:documentation xml:lang="en">
-				Reason
 				1 = Applied; decision pending
 				2 = Applied; client not eligible
 				3 = Client did not apply

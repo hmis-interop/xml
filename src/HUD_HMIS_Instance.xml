@@ -145,12 +145,14 @@
                  hmis:dateUpdated="2016-02-19T23:14:59" hmis:userID="DU5m">
                 <hmis:EnrollmentCoCID>56332</hmis:EnrollmentCoCID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
+                <hmis:HouseholdID>a34563w</hmis:HouseholdID>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
             </hmis:EnrollmentCoC>
             <hmis:EnrollmentCoC hmis:dataCollectionStage="1" hmis:informationDate="2015-06-24" hmis:dateCreated="2016-02-13T23:14:59Z"
                 hmis:dateUpdated="2016-02-19T23:14:59" hmis:userID="DU5m">
                 <hmis:EnrollmentCoCID>56332</hmis:EnrollmentCoCID>
                 <hmis:ProjectEntryID>w5642</hmis:ProjectEntryID>
+                <hmis:HouseholdID>a34563w</hmis:HouseholdID>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
             </hmis:EnrollmentCoC>
             <hmis:Exit hmis:dateCreated="2014-10-07T23:14:59Z" hmis:dateUpdated="2015-11-06T23:14:59Z" hmis:userID="GO">
@@ -231,6 +233,10 @@
                 <hmis:NoPrivatePayReason>8</hmis:NoPrivatePayReason>
                 <hmis:StateHealthIns>0</hmis:StateHealthIns>
                 <hmis:NoStateHealthInsReason>4</hmis:NoStateHealthInsReason>
+                <hmis:IndianHealthServices>0</hmis:IndianHealthServices>
+                <hmis:NoIndianHealthServicesReason>9</hmis:NoIndianHealthServicesReason>
+                <hmis:OtherInsurance>1</hmis:OtherInsurance>
+                <hmis:OtherInsuranceIdentify>could not apply for insurance due to some reason</hmis:OtherInsuranceIdentify>
             </hmis:HealthInsurance>
             <hmis:HealthInsurance hmis:dataCollectionStage="1" hmis:informationDate="2014-11-21" hmis:dateCreated="2016-01-13T23:14:59" hmis:dateDeleted="2016-01-14T21:11:19" hmis:dateUpdated="2016-01-13T23:14:59" hmis:userID="NdLgvXYr7g">
                 <hmis:HealthInsuranceID>sw1ws3</hmis:HealthInsuranceID>
@@ -364,8 +370,6 @@
                 <hmis:EntrySSVFID>787ughj55</hmis:EntrySSVFID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:PercentAMI>1</hmis:PercentAMI>
-                <hmis:HPScreeningScore>12</hmis:HPScreeningScore>
-                <hmis:VAMCStation>76762T78</hmis:VAMCStation>
                 <hmis:LastPermanentStreet>13th Ave W</hmis:LastPermanentStreet>
                 <hmis:LastPermanentCity>Yreka</hmis:LastPermanentCity>
                 <hmis:LastPermanentState>AR</hmis:LastPermanentState>
@@ -381,6 +385,12 @@
                 <hmis:SubsidyAtRisk>1</hmis:SubsidyAtRisk>
                 <hmis:LiteralHomelessHistory>2</hmis:LiteralHomelessHistory>
                 <hmis:DisabledHoH>99</hmis:DisabledHoH>
+                <hmis:CriminalRecord>1</hmis:CriminalRecord>
+                <hmis:DependentUnder6>0</hmis:DependentUnder6>
+                <hmis:FemVet>0</hmis:FemVet>
+                <hmis:HPScreeningScore>23</hmis:HPScreeningScore>
+                <hmis:ThresholdScore>342</hmis:ThresholdScore>
+                <hmis:ERVisits>2</hmis:ERVisits>
             </hmis:EntrySSVF>
             <hmis:Project hmis:dateCreated="2016-02-17T23:14:59" hmis:dateUpdated="2015-03-14T23:14:59Z" hmis:userID="j2ZsRLAPv">
                 <hmis:ProjectID>222D</hmis:ProjectID>
