@@ -1061,12 +1061,12 @@
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="InsuranceFromAnySource" type="hmis:fiveValDKRefused">
+			<xs:element name="InsuranceFromAnySource" type="hmis:fiveValDKRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Medicaid" type="hmis:noYes">
+			<xs:element name="Medicaid" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.3.</xs:documentation>
 				</xs:annotation>
@@ -1076,7 +1076,7 @@
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.3A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Medicare" type="hmis:noYes">
+			<xs:element name="Medicare" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.4.</xs:documentation>
 				</xs:annotation>
@@ -1086,7 +1086,7 @@
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.4A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SCHIP" type="hmis:noYes">
+			<xs:element name="SCHIP" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.5.</xs:documentation>
 				</xs:annotation>
@@ -1096,7 +1096,7 @@
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.5A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="VAMedicalServices" type="hmis:noYes">
+			<xs:element name="VAMedicalServices" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.6.</xs:documentation>
 				</xs:annotation>
@@ -1106,7 +1106,7 @@
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.6A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="EmployerProvided" type="hmis:noYes">
+			<xs:element name="EmployerProvided" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.7.</xs:documentation>
 				</xs:annotation>
@@ -1116,7 +1116,7 @@
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.7A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="COBRA" type="hmis:noYes">
+			<xs:element name="COBRA" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.8.</xs:documentation>
 				</xs:annotation>
@@ -1126,7 +1126,7 @@
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.8A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PrivatePay" type="hmis:noYes">
+			<xs:element name="PrivatePay" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.9.</xs:documentation>
 				</xs:annotation>
@@ -1136,7 +1136,7 @@
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.9A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="StateHealthIns" type="hmis:noYes">
+			<xs:element name="StateHealthIns" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.4.10.</xs:documentation>
 				</xs:annotation>
@@ -1457,6 +1457,37 @@
 		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
 		<xs:attribute ref="hmis:informationDate" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
+		<!--Testing if Earned is 1, before allowing use of EarnedAmount-->
+		<xs:assert test="if (hmis:Earned/text()='1') then boolean(hmis:EarnedAmount) else (if (not(Earned/text()='1')) then (not(boolean(hmis:EarnedAmount))) else false())"/>
+		<!--Testing if Unemployment is 1, before allowing use of UnemploymentAmount-->
+		<xs:assert test="if (hmis:Unemployment/text()='1') then boolean(hmis:UnemploymentAmount) else (if (not(Unemployment/text()='1')) then (not(boolean(hmis:UnemploymentAmount))) else false())"/>						
+		<!--Testing if SSI is 1, before allowing use of SSIAmount-->
+		<xs:assert test="if (hmis:SSI/text()='1') then boolean(hmis:SSIAmount) else (if (not(SSI/text()='1')) then (not(boolean(hmis:SSIAmount))) else false())"/>						
+		<!--Testing if SSDI is 1, before allowing use of SSDIAmount-->
+		<xs:assert test="if (hmis:SSDI/text()='1') then boolean(hmis:SSDIAmount) else (if (not(SSDI/text()='1')) then (not(boolean(hmis:SSDIAmount))) else false())"/>						
+		<!--Testing if VADisabilityService is 1, before allowing use of VADisabilityServiceAmount-->
+		<xs:assert test="if (hmis:VADisabilityService/text()='1') then boolean(hmis:VADisabilityServiceAmount) else (if (not(VADisabilityService/text()='1')) then (not(boolean(hmis:VADisabilityServiceAmount))) else false())"/>						
+		<!--Testing if PrivateDisability is 1, before allowing use of PrivateDisabilityAmount-->
+		<xs:assert test="if (hmis:PrivateDisability/text()='1') then boolean(hmis:PrivateDisabilityAmount) else (if (not(PrivateDisability/text()='1')) then (not(boolean(hmis:PrivateDisabilityAmount))) else false())"/>						
+		<!--Testing if WorkersComp is 1, before allowing use of WorkersCompAmount-->
+		<xs:assert test="if (hmis:WorkersComp/text()='1') then boolean(hmis:WorkersCompAmount) else (if (not(WorkersComp/text()='1')) then (not(boolean(hmis:WorkersCompAmount))) else false())"/>						
+		<!--Testing if TANF is 1, before allowing use of TANFAmount-->
+		<xs:assert test="if (hmis:TANF/text()='1') then boolean(hmis:TANFAmount) else (if (not(TANF/text()='1')) then (not(boolean(hmis:TANFAmount))) else false())"/>						
+		<!--Testing if GA is 1, before allowing use of GAAmount-->
+		<xs:assert test="if (hmis:GA/text()='1') then boolean(hmis:GAAmount) else (if (not(GA/text()='1')) then (not(boolean(hmis:GAAmount))) else false())"/>						
+		<!--Testing if SocSecRetirement is 1, before allowing use of SocSecRetirementAmount-->
+		<xs:assert test="if (hmis:SocSecRetirement/text()='1') then boolean(hmis:SocSecRetirementAmount) else (if (not(SocSecRetirement/text()='1')) then (not(boolean(hmis:SocSecRetirementAmount))) else false())"/>						
+		<!--Testing if Pension is 1, before allowing use of PensionAmount-->
+		<xs:assert test="if (hmis:Pension/text()='1') then boolean(hmis:PensionAmount) else (if (not(Pension/text()='1')) then (not(boolean(hmis:PensionAmount))) else false())"/>						
+		<!--Testing if ChildSupport is 1, before allowing use of ChildSupportAmount-->
+		<xs:assert test="if (hmis:ChildSupport/text()='1') then boolean(hmis:ChildSupportAmount) else (if (not(ChildSupport/text()='1')) then (not(boolean(hmis:ChildSupportAmount))) else false())"/>						
+		<!--Testing if Alimony is 1, before allowing use of AlimonyAmount-->
+		<xs:assert test="if (hmis:Alimony/text()='1') then boolean(hmis:AlimonyAmount) else (if (not(Alimony/text()='1')) then (not(boolean(hmis:AlimonyAmount))) else false())"/>						
+		<!--Testing if OtherSource is 1, before allowing use of OtherSourceAmount-->
+		<xs:assert test="if (hmis:OtherSource/text()='1') then boolean(hmis:OtherSourceAmount) else (if (not(OtherSource/text()='1')) then (not(boolean(hmis:OtherSourceAmount))) else false())"/>						
+		<!--Testing if OtherSource is 1, before allowing use of OtherSourceIdentify-->
+		<xs:assert test="if (hmis:OtherSource/text()='1') then boolean(hmis:OtherSourceIdentify) else (if (not(OtherSource/text()='1')) then (not(boolean(hmis:OtherSourceIdentify))) else false())"/>						
+		
 	</xs:complexType>
 
 	<xs:complexType name="inventory">
