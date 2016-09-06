@@ -7,7 +7,7 @@
         <hmis:SourceID>12345</hmis:SourceID>
         <hmis:SourceType>1</hmis:SourceType>
         <hmis:SourceName>Fictitious County HMIS</hmis:SourceName>
-        <hmis:SoftwareVendor>HMISSoft Inc.</hmis:SoftwareVendor>
+        <hmis:SoftwareName>HMISSoft Inc.</hmis:SoftwareName>
         <hmis:SoftwareVersion>3</hmis:SoftwareVersion>
         <hmis:SourceContactEmail>bill@gsnail.com</hmis:SourceContactEmail>
         <hmis:SourceContactExtension>775</hmis:SourceContactExtension>
@@ -44,12 +44,6 @@
                 <hmis:Race>8</hmis:Race>
                 <hmis:VeteranStatus>9</hmis:VeteranStatus>
             </hmis:Client>
-            <hmis:Contact  hmis:dateCreated="2015-08-13T23:14:59" hmis:dateUpdated="2015-03-30T23:14:59" hmis:userID="IFmMP">
-                <hmis:ContactID>98yuywwyy776ww</hmis:ContactID>
-                <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:ContactDate>2015-08-13T23:14:59</hmis:ContactDate>
-                <hmis:ContactLocation>2</hmis:ContactLocation>
-            </hmis:Contact>
             <hmis:DateOfEngagement hmis:dateCreated="2015-08-13T23:14:59" hmis:dateUpdated="2015-03-30T23:14:59" hmis:userID="IFmMP">
                 <hmis:DateOfEngagementID>4321s</hmis:DateOfEngagementID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
@@ -221,15 +215,15 @@
                 <hmis:NoMedicaidReason>1</hmis:NoMedicaidReason>
                 <hmis:Medicare>0</hmis:Medicare>
                 <hmis:NoMedicareReason>4</hmis:NoMedicareReason>
-                <hmis:SCHIP>1</hmis:SCHIP>
+                <hmis:SCHIP>0</hmis:SCHIP>
                 <hmis:NoSCHIPReason>3</hmis:NoSCHIPReason>
                 <hmis:VAMedicalServices>0</hmis:VAMedicalServices>
                 <hmis:NoVAMedReason>99</hmis:NoVAMedReason>
-                <hmis:EmployerProvided>1</hmis:EmployerProvided>
+                <hmis:EmployerProvided>0</hmis:EmployerProvided>
                 <hmis:NoEmployerProvidedReason>9</hmis:NoEmployerProvidedReason>
-                <hmis:COBRA>1</hmis:COBRA>
+                <hmis:COBRA>0</hmis:COBRA>
                 <hmis:NoCOBRAReason>9</hmis:NoCOBRAReason>
-                <hmis:PrivatePay>1</hmis:PrivatePay>
+                <hmis:PrivatePay>0</hmis:PrivatePay>
                 <hmis:NoPrivatePayReason>8</hmis:NoPrivatePayReason>
                 <hmis:StateHealthIns>0</hmis:StateHealthIns>
                 <hmis:NoStateHealthInsReason>4</hmis:NoStateHealthInsReason>
@@ -246,15 +240,15 @@
                 <hmis:NoMedicaidReason>1</hmis:NoMedicaidReason>
                 <hmis:Medicare>0</hmis:Medicare>
                 <hmis:NoMedicareReason>4</hmis:NoMedicareReason>
-                <hmis:SCHIP>1</hmis:SCHIP>
+                <hmis:SCHIP>0</hmis:SCHIP>
                 <hmis:NoSCHIPReason>3</hmis:NoSCHIPReason>
                 <hmis:VAMedicalServices>0</hmis:VAMedicalServices>
                 <hmis:NoVAMedReason>99</hmis:NoVAMedReason>
-                <hmis:EmployerProvided>1</hmis:EmployerProvided>
+                <hmis:EmployerProvided>0</hmis:EmployerProvided>
                 <hmis:NoEmployerProvidedReason>9</hmis:NoEmployerProvidedReason>
-                <hmis:COBRA>1</hmis:COBRA>
+                <hmis:COBRA>0</hmis:COBRA>
                 <hmis:NoCOBRAReason>9</hmis:NoCOBRAReason>
-                <hmis:PrivatePay>1</hmis:PrivatePay>
+                <hmis:PrivatePay>0</hmis:PrivatePay>
                 <hmis:NoPrivatePayReason>8</hmis:NoPrivatePayReason>
                 <hmis:StateHealthIns>0</hmis:StateHealthIns>
                 <hmis:NoStateHealthInsReason>4</hmis:NoStateHealthInsReason>
@@ -281,21 +275,21 @@
                 <hmis:TotalMonthlyIncome>1889.22</hmis:TotalMonthlyIncome>
                 <hmis:Earned>1</hmis:Earned>
                 <hmis:EarnedAmount>13916.10</hmis:EarnedAmount>
-                <hmis:Unemployment>0</hmis:Unemployment>
+                <hmis:Unemployment>1</hmis:Unemployment>
                 <hmis:UnemploymentAmount>315.87</hmis:UnemploymentAmount>
                 <hmis:SSI>1</hmis:SSI>
                 <hmis:SSIAmount>2885.09</hmis:SSIAmount>
-                <hmis:SSDI>0</hmis:SSDI>
+                <hmis:SSDI>1</hmis:SSDI>
                 <hmis:SSDIAmount>41016.91</hmis:SSDIAmount>
                 <hmis:VADisabilityService>1</hmis:VADisabilityService>
                 <hmis:VADisabilityServiceAmount>5642.48</hmis:VADisabilityServiceAmount>
-                <hmis:VADisabilityNonService>0</hmis:VADisabilityNonService>
+                <hmis:VADisabilityNonService>1</hmis:VADisabilityNonService>
                 <hmis:VADisabilityNonServiceAmount>6847.91</hmis:VADisabilityNonServiceAmount>
-                <hmis:PrivateDisability>0</hmis:PrivateDisability>
+                <hmis:PrivateDisability>1</hmis:PrivateDisability>
                 <hmis:PrivateDisabilityAmount>11484.77</hmis:PrivateDisabilityAmount>
                 <hmis:WorkersComp>1</hmis:WorkersComp>
                 <hmis:WorkersCompAmount>8951855.15</hmis:WorkersCompAmount>
-                <hmis:TANF>0</hmis:TANF>
+                <hmis:TANF>1</hmis:TANF>
                 <hmis:TANFAmount>963412872.89</hmis:TANFAmount>
                 <hmis:GA>1</hmis:GA>
                 <hmis:GAAmount>15254.55</hmis:GAAmount>

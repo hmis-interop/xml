@@ -8,7 +8,7 @@
         <hmis:SourceID>12345</hmis:SourceID>
         <hmis:SourceType>1</hmis:SourceType>
         <hmis:SourceName>Fictitious County HMIS</hmis:SourceName>
-        <hmis:SoftwareVendor>HMISSoft Inc.</hmis:SoftwareVendor>
+        <hmis:SoftwareName>HMISSoft Inc.</hmis:SoftwareName>
         <hmis:SoftwareVersion>3</hmis:SoftwareVersion>
         <hmis:SourceContactEmail>bill@gsnail.com</hmis:SourceContactEmail>
         <hmis:SourceContactExtension>775</hmis:SourceContactExtension>
