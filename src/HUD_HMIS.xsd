@@ -299,17 +299,17 @@
 			</xs:element>
 			<xs:element name="TCellSource" type="hmis:tCellOrViralLoadSource" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.47 B.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.47.B.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ViralLoadAvailable" type="hmis:fiveValDKRefused" minOccurs="0">
+			<xs:element name="ViralLoadAvailable" type="hmis:viralLoadAvailable" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.47 #3.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.47.3.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ViralLoad" type="hmis:viralLoad" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.47 C.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.47.C.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ViralLoadSource" type="hmis:tCellOrViralLoadSource" minOccurs="0">
@@ -1561,11 +1561,13 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.39.3B.</xs:documentation>
 				</xs:annotation>
-			</xs:element>	
+			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
 		<xs:attribute ref="hmis:informationDate" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
+		<!--Testing if HIVAIDSAssistance is 0, before allowing use of NoHIVAIDSAssistanceReason-->
+		<xs:assert test="if (hmis:HIVAIDSAssistance/text()='0') then boolean(hmis:NoHIVAIDSAssistanceReason) else (if (not(hmis:HIVAIDSAssistance/text()='0')) then (not(boolean(hmis:NoHIVAIDSAssistanceReason))) else false())"/>		
 	</xs:complexType>
 
 	<xs:complexType name="nonCashBenefits">
@@ -1823,6 +1825,136 @@
 			<xs:element name="TypeProvided">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.12 and 4.14-4.16.2 (picklist values vary by service category and funder).</xs:documentation>
+					<xs:documentation xml:lang="en">
+						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 12 (Contact Location 4.12.2):
+						1 = Place not meant for habitation
+						2 = Service setting, non-residential
+						3 = Service setting, residential
+						
+						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 141 (PATH Services 4.14.A):
+						
+						PATH Services
+						1 = Re-engagement
+						2 = Screening
+						3 = Habilitation/rehabilitation
+						4 = Community mental health
+						5 = Substance use treatment
+						6 = Case management
+						7 = Residential supportive services
+						8 = Housing minor renovation
+						9 = Housing moving assistance
+						10 = Housing eligibility determination
+						11 = Security deposits
+						12 = One-time rent for eviction prevention
+						14 = Clinical assessment
+						
+						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 142 (RHY Services 4.14.B):
+						1 = Basic support services
+						2 = Community service/service learning (CSL)
+						3 = Counseling/therapy
+						4 = Dental care
+						5 = Education
+						6 = Employment and training services
+						7 = Criminal justice /legal services
+						8 = Life skills training
+						9 = Parenting education for parent of youth
+						10 = Parenting education for youth with children
+						11 = Peer (youth) counseling
+						12 = Post-natal care
+						13 = Pre-natal care
+						14 = Health/medical care 
+						15 = Psychological or psychiatric care
+						16 = Recreational activities
+						17 = Substance abuse assessment and/or treatment
+						18 = Substance abuse prevention
+						19 = Support group
+						20 = Preventative – overnight interim, respite
+						21 = Preventative – formal placement in an alternative setting outside of BCP
+						22 = Preventative – entry into BCP after preventative services
+						23 = Street outreach – health and hygiene products distributed
+						24 = Street outreach – food and drink items
+						25 = Street outreach – services information/brochures
+
+						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 143 (HOPWA Services 4.14.C):
+						1 Adult day care and personal assistance
+						2 Case management
+						3 Child care
+						4 Criminal justice/legal services
+						5 Education
+						6 Employment and training services
+						7 Food/meals/nutritional services
+						8 Health/medical care
+						9 Life skills training
+						10 Mental health care/counseling
+						11 Outreach and/or engagement
+						12 Substance abuse services/treatment
+						13 Transportation
+						14 Other HOPWA funded service
+						
+						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 144 (SSVF Services 4.14.D):
+						1 Outreach services
+						2 Case management services
+						3 Assistance obtaining VA benefits
+						4 Assistance obtaining/coordinating other public benefits
+						5 Direct provision of other public benefits
+						6 Other (non-TFA) supportive service approved by VA
+						
+						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 151 (Financial Assistance - HOPWA Services 4.15.A):
+						1 Rental assistance [collect for PHP and STRMU]
+						2 Security deposits [collect for PHP]
+						3 Utility deposits [collect for PHP]
+						4 Utility payments [collect for PHP and STRMU]
+						7 Mortgage assistance [collect for STRMU]
+						
+						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 152 (Financial Assistance – SSVF 4.15.B):
+						1 Rental assistance
+						4 Utility fee payment assistance
+						2 Security deposit
+						3 Utility deposit
+						5 Moving costs
+						8 Transportation services: tokens/vouchers
+						9 Transportation services: vehicle repair/maintenance
+						10 Child Care
+						11 General housing stability assistance - emergency supplies
+						12 General housing stability assistance - other
+						14 Emergency housing assistance
+						
+						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 161 (Referrals Provided – PATH 4.16.A):
+						1 Community Mental Health
+						2 Substance Use Treatment
+						3 Primary Health/ Dental Care
+						4 Job Training
+						5 Educational Services
+						6 Housing Services
+						11 Temporary Housing
+						7 Permanent Housing
+						8 Income Assistance
+						9 Employment Assistance
+						10 Medical Insurance
+						
+						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 162 (Referrals Provided - RHY 4.16.B):
+						1 Child Care Non-TANF
+						2 Supplemental Nutritional Assistance Program (Food Stamps)
+						3 Education – McKinney/Vento Liaison Assistance to Remain in School
+						4 HUD Section 8 or Other Permanent Housing Assistance
+						5 Individual Development Account
+						6 Medicaid
+						7 Mentoring Program Other than RHY Agency
+						8 National Service (Americorp, VISTA, Learn and Serve)
+						9 Non-Residential Substance Abuse or Mental Health Program
+						10 Other Public – Federal, State, or Local Program
+						11 Private Non-profit Charity or Foundation Support
+						12 SCHIP
+						13 SSI, SSDI, or other Disability Insurance
+						14 TANF or other Welfare/Non-Disability Income Maintenance (all TANF Services)
+						15 Unemployment Insurance
+						16 WIC
+						17 Workforce Development (WIA)
+						
+						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 200 (Services Provided - Bed-night Date 4.14E):
+						200	BedNight
+						
+					</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:integer">
@@ -1857,6 +1989,12 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
+		<!--Testing if the RecordType is '144' and the TypeProvided is '6' before requiring and even allowing the use of OtherTypeProvided -->
+		<xs:assert test="if (not (hmis:RecordType/text() ='144' and hmis:TypeProvided/text() ='6')) then not (boolean(hmis:OtherTypeProvided)) else boolean(hmis:OtherTypeProvided)"/>
+		<!--Testing if the RecordType is '144' and the TypeProvided is '3', '4', or '5' before requiring and even allowing the use of SubTypeProvided -->
+		<xs:assert test="if (not (hmis:RecordType/text() ='144' and (hmis:TypeProvided/text() ='3' or hmis:TypeProvided/text() ='4' or hmis:TypeProvided/text() ='5'))) then not (boolean(hmis:SubTypeProvided)) else boolean(hmis:TypeProvided)"/>
+		<!--Testing if the RecordType is '151' or '152' before requiring and even allowing the use of FAAmount -->
+		<xs:assert test="if (not (hmis:RecordType/text() ='151') and not (hmis:RecordType/text() ='152')) then (not (boolean(hmis:FAAmount))) else boolean(hmis:FAAmount)"/>
 	</xs:complexType>
 
 	<xs:complexType name="site">
@@ -4283,6 +4421,10 @@
 				6 = School program does not have grade levels
 				7 = GED
 				10 = Some college
+				11 = Associate’s degree
+				12 = Bachelor’s degree
+				13 = Graduate degree
+				14 = Vocational certification
 				8 = Client doesn’t know
 				9 = Client refused
 				99 = Data not collected
@@ -4327,6 +4469,26 @@
 			<xs:enumeration value="10">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Some college</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="11">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Associate’s degree</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="12">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Bachelor’s degree</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="13">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Graduate degree</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="14">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Vocational certification</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8">
@@ -4590,7 +4752,7 @@
 				1 = Applied; decision pending
 				2 = Applied; client not eligible
 				3 = Client did not apply
-				4 = Insurance type N/A for this client
+				4 = Insurance type not applicable for this client
 				8 = Client doesn’t know
 				9 = Client refused
 				99 = Data not collected
@@ -4614,7 +4776,7 @@
 			</xs:enumeration>			
 			<xs:enumeration value="4">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Insurance type N/A for this client</xs:documentation>
+					<xs:documentation xml:lang="en">Insurance type not applicable for this client</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8">
@@ -5703,14 +5865,17 @@
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
 				12 = Contact 4.12
-				141 = PATH service 4.14 A
-				142 = RHY service 4.14 B 
-				143 = HOPWA service 4.14 C 
-				144 = SSVF service 4.14 D
-				151 = HOPWA financial assistance 4.15 A
-				152 = SSVF financial assistance 4.15 B 
-				161 = PATH referral 4.16 A
-				162 = RHY referral 4.16 B
+				14 = Services Provided
+				15 = Financial Assistance
+				16 = Referrals Provided
+				141 = PATH service 4.14.A
+				142 = RHY service 4.14.B 
+				143 = HOPWA service 4.14.C 
+				144 = SSVF service 4.14.D
+				151 = HOPWA financial assistance 4.15.A
+				152 = SSVF financial assistance 4.15.B 
+				161 = PATH referral 4.16.A
+				162 = RHY referral 4.16.B
 				200 = Bed night
 			</xs:documentation>
 		</xs:annotation>
@@ -6249,7 +6414,52 @@
 			<xs:maxInclusive value="999999"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
+	<xs:simpleType name="viralLoadAvailable">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				0 = Not available
+				1 = Available
+				2 = Undetectable
+				8 = Client doesn’t know
+				9 = Client refused
+				99 = Data not collected
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Not available</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Available</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Undetectable</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
 	<xs:simpleType name="whenOccurred">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">

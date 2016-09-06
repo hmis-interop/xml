@@ -334,7 +334,7 @@
                  hmis:dateUpdated="2014-10-25T23:14:59" hmis:userID="ptravis">
                 <hmis:MedicalAssistanceID>y7665</hmis:MedicalAssistanceID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:HIVAIDSAssistance>99</hmis:HIVAIDSAssistance>
+                <hmis:HIVAIDSAssistance>0</hmis:HIVAIDSAssistance>
                 <hmis:NoHIVAIDSAssistanceReason>1</hmis:NoHIVAIDSAssistanceReason>
                 <hmis:ADAP>9</hmis:ADAP>
                 <hmis:NoADAPReason>9</hmis:NoADAPReason>
@@ -436,11 +436,27 @@
                 <hmis:ServicesID>44gg</hmis:ServicesID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:DateProvided>2015-09-06</hmis:DateProvided>
-                <hmis:RecordType>200</hmis:RecordType>
-                <hmis:TypeProvided>200</hmis:TypeProvided>
+                <hmis:RecordType>144</hmis:RecordType>
+                <hmis:TypeProvided>6</hmis:TypeProvided>
                 <hmis:OtherTypeProvided>some other type here</hmis:OtherTypeProvided>
+                <hmis:ReferralOutcome>2</hmis:ReferralOutcome>
+            </hmis:Services>
+            <hmis:Services hmis:dateCreated="2015-09-05T23:14:59" hmis:dateUpdated="2015-02-28T23:15:59Z" hmis:userID="CoaTbskfRfTvBSHN8_eRmMF4.4O-A">
+                <hmis:ServicesID>44gh</hmis:ServicesID>
+                <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
+                <hmis:DateProvided>2015-09-07</hmis:DateProvided>
+                <hmis:RecordType>144</hmis:RecordType>
+                <hmis:TypeProvided>5</hmis:TypeProvided>
                 <hmis:SubTypeProvided>12</hmis:SubTypeProvided>
-                <hmis:FAAmount>1145.59</hmis:FAAmount>
+                <hmis:ReferralOutcome>2</hmis:ReferralOutcome>
+            </hmis:Services>
+            <hmis:Services hmis:dateCreated="2015-09-05T23:14:59" hmis:dateUpdated="2015-02-28T23:15:59Z" hmis:userID="CoaTbskfRfTvBSHN8_eRmMF4.4O-A">
+                <hmis:ServicesID>44gi</hmis:ServicesID>
+                <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
+                <hmis:DateProvided>2015-09-07</hmis:DateProvided>
+                <hmis:RecordType>151</hmis:RecordType>
+                <hmis:TypeProvided>5</hmis:TypeProvided>
+                <hmis:FAAmount>167.43</hmis:FAAmount>
                 <hmis:ReferralOutcome>2</hmis:ReferralOutcome>
             </hmis:Services>
             <hmis:Site hmis:dateCreated="2014-09-03T23:14:59" hmis:dateUpdated="2016-02-25T23:14:59Z" hmis:userID="ck">
