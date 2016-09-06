@@ -496,7 +496,6 @@
 		
 		<!--Testing if TimesHomelessPastThreeYears is 1-4, before allowing use of MonthsHomelessPastThreeYears-->
 		<xs:assert test="if (hmis:TimesHomelessPastThreeYears/text()='1' or hmis:TimesHomelessPastThreeYears/text()='2' or hmis:TimesHomelessPastThreeYears/text()='3'  or hmis:TimesHomelessPastThreeYears/text()='4') then boolean(hmis:MonthsHomelessPastThreeYears) else (if (not(hmis:TimesHomelessPastThreeYears/text()='1'  or hmis:TimesHomelessPastThreeYears/text()='2' or hmis:TimesHomelessPastThreeYears/text()='3'  or hmis:TimesHomelessPastThreeYears/text()='4')) then (not(boolean(hmis:MonthsHomelessPastThreeYears))) else false())"/>
-
 	</xs:complexType>
 
 	<xs:complexType name="enrollmentCoC">
@@ -1174,7 +1173,23 @@
 		<!--Testing if IndianHealthServices is 0, before allowing use of NoIndianHealthServicesReason-->
 		<xs:assert test="if (hmis:IndianHealthServices/text()='0') then boolean(hmis:NoIndianHealthServicesReason) else (if (not(hmis:IndianHealthServices/text()='0')) then (not(boolean(hmis:NoIndianHealthServicesReason))) else false())"/>
 		<!--Testing if OtherInsurance is 1, before allowing use of OtherInsuranceIdentify-->
-		<xs:assert test="if (hmis:OtherInsurance/text()='1') then boolean(hmis:OtherInsuranceIdentify) else (if (not(hmis:OtherInsurance/text()='1')) then (not(boolean(hmis:OtherInsuranceIdentify))) else false())"/>				
+		<xs:assert test="if (hmis:OtherInsurance/text()='1') then boolean(hmis:OtherInsuranceIdentify) else (if (not(hmis:OtherInsurance/text()='1')) then (not(boolean(hmis:OtherInsuranceIdentify))) else false())"/>
+		<!--Testing if Medicaid is 0, before allowing use of NoMedicaidReason-->
+		<xs:assert test="if (hmis:Medicaid/text()='0') then boolean(hmis:NoMedicaidReason) else (if (not(hmis:Medicaid/text()='0')) then (not(boolean(hmis:NoMedicaidReason))) else false())"/>				
+		<!--Testing if Medicare is 0, before allowing use of NoMedicareReason-->
+		<xs:assert test="if (hmis:Medicare/text()='0') then boolean(hmis:NoMedicareReason) else (if (not(hmis:Medicare/text()='0')) then (not(boolean(hmis:NoMedicareReason))) else false())"/>				
+		<!--Testing if SCHIP is 0, before allowing use of NoSCHIPReason-->
+		<xs:assert test="if (hmis:SCHIP/text()='0') then boolean(hmis:NoSCHIPReason) else (if (not(hmis:SCHIP/text()='0')) then (not(boolean(hmis:NoSCHIPReason))) else false())"/>				
+		<!--Testing if VAMedicalServices is 0, before allowing use of NoVAMedReason-->
+		<xs:assert test="if (hmis:VAMedicalServices/text()='0') then boolean(hmis:NoVAMedReason) else (if (not(hmis:VAMedicalServices/text()='0')) then (not(boolean(hmis:NoVAMedReason))) else false())"/>				
+		<!--Testing if EmployerProvided is 0, before allowing use of NoVAMedReason-->
+		<xs:assert test="if (hmis:EmployerProvided/text()='0') then boolean(hmis:NoEmployerProvidedReason) else (if (not(hmis:EmployerProvided/text()='0')) then (not(boolean(hmis:NoEmployerProvidedReason))) else false())"/>				
+		<!--Testing if COBRA is 0, before allowing use of NoCOBRAReason-->
+		<xs:assert test="if (hmis:COBRA/text()='0') then boolean(hmis:NoCOBRAReason) else (if (not(hmis:COBRA/text()='0')) then (not(boolean(hmis:NoCOBRAReason))) else false())"/>				
+		<!--Testing if PrivatePay is 0, before allowing use of NoPrivatePayReason-->
+		<xs:assert test="if (hmis:PrivatePay/text()='0') then boolean(hmis:NoPrivatePayReason) else (if (not(hmis:PrivatePay/text()='0')) then (not(boolean(hmis:NoPrivatePayReason))) else false())"/>				
+		<!--Testing if StateHealthIns is 0, before allowing use of NoStateHealthInsReason-->
+		<xs:assert test="if (hmis:StateHealthIns/text()='0') then boolean(hmis:NoStateHealthInsReason) else (if (not(hmis:StateHealthIns/text()='0')) then (not(boolean(hmis:NoStateHealthInsReason))) else false())"/>						
 	</xs:complexType>
 	
 	<xs:complexType name="healthStatus">
@@ -2032,7 +2047,7 @@
 					<xs:documentation xml:lang="en">If the source database is not an HMIS implementation (if SourceType != 1), this field may not be null and must identify the organization responsible for the database.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SoftwareVendor" type="hmis:string50">
+			<xs:element name="SoftwareName" type="hmis:string50">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">The name of the software provider generating this XML.</xs:documentation>
 				</xs:annotation>
