@@ -1,24 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ext:Client hmis:dateCreated="2016-04-11T23:14:59Z" hmis:dateUpdated="2015-05-30T23:14:59" hmis:userID="ned100"
-    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_0/HUD_HMIS.xsd"
-    xmlns:ext="http://www.hudhdx.info/Resources/Vendors/4_0/HUD_HMIS_Example_Extension.xsd"
-    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/4_0/HUD_HMIS_Example_Extension.xsd https://raw.githubusercontent.com/hmis-interop/xml/v4.0.0-rc.2/src/HUD_HMIS_Example_Extension.xsd">
-       
-    <ext:PersonalID>A1a1</ext:PersonalID>
-    <ext:FirstName ext:hashValue="Th563ed3344eedTY3">Edward</ext:FirstName>
-    <ext:MiddleName>Barnaby</ext:MiddleName>
-    <ext:LastName>Jones</ext:LastName>
-    <ext:NameSuffix>Sr.</ext:NameSuffix>
-    <ext:NameDataQuality>9</ext:NameDataQuality>
-    <ext:SSN>7xxx9xx8x</ext:SSN>
-    <ext:SSNDataQuality>2</ext:SSNDataQuality>
-    <ext:DOB>2014-11-18</ext:DOB>
-    <ext:DOBDataQuality>1</ext:DOBDataQuality>
-    <ext:Gender>3</ext:Gender>
-    <ext:OtherGender>intersex</ext:OtherGender>
-    <ext:Ethnicity>0</ext:Ethnicity>
-    <ext:Race>8</ext:Race>
-    <ext:VeteranStatus>9</ext:VeteranStatus>
-</ext:Client>
+<hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/5_1_0/HUD_HMIS_Example_Extension.xsd HUD_HMIS_Example_Extension.xsd"
+ xmlns:ext="http://www.hudhdx.info/Resources/Vendors/5_1_0/HUD_HMIS_Example_Extension.xsd"
+ xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+ xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_0/HUD_HMIS.xsd">
+    <hmis:Source>
+        <hmis:SourceID>12345</hmis:SourceID>
+        <hmis:SourceType>1</hmis:SourceType>
+        <hmis:SourceName>Fictitious County HMIS</hmis:SourceName>
+        <hmis:SoftwareVendor>HMISSoft Inc.</hmis:SoftwareVendor>
+        <hmis:SoftwareVersion>3</hmis:SoftwareVersion>
+        <hmis:SourceContactEmail>bill@gsnail.com</hmis:SourceContactEmail>
+        <hmis:SourceContactExtension>775</hmis:SourceContactExtension>
+        <hmis:SourceContactFirst>Patricia</hmis:SourceContactFirst>
+        <hmis:SourceContactLast>Duke</hmis:SourceContactLast>
+        <hmis:SourceContactPhone>5939698367</hmis:SourceContactPhone>
+        <hmis:Export>
+            <hmis:ExportID>37</hmis:ExportID>
+            <hmis:ExportDate>2015-02-27T23:14:59</hmis:ExportDate>
+            <hmis:ExportPeriod>
+                <hmis:StartDate>2015-01-04T23:14:59</hmis:StartDate>
+                <hmis:EndDate>2015-03-26T23:14:59Z</hmis:EndDate>
+            </hmis:ExportPeriod>
+            <hmis:ExportPeriodType>effective</hmis:ExportPeriodType>
+            <hmis:ExportDirective>other</hmis:ExportDirective>
+            <hmis:Affiliation hmis:dateCreated="2016-04-11T23:14:59Z" hmis:dateUpdated="2015-05-30T23:14:59" hmis:userID="nf">
+                <hmis:AffiliationID>76yt</hmis:AffiliationID>
+                <hmis:ProjectID>222D</hmis:ProjectID>
+                <hmis:ResProjectID>222D</hmis:ResProjectID>
+            </hmis:Affiliation>
+            <hmis:Client hmis:dateCreated="2016-04-11T23:14:59Z" hmis:dateUpdated="2015-05-30T23:14:59" hmis:userID="ned100">
+                <hmis:PersonalID>A1a1</hmis:PersonalID>
+                <hmis:FirstName hmis:hashStatus="2">123456789012345678901234567890ABCDEF12d4</hmis:FirstName>
+                <hmis:MiddleName hmis:hashStatus="1">Barnaby</hmis:MiddleName>
+                <hmis:LastName hmis:hashStatus="3">Jones</hmis:LastName>
+                <hmis:NameSuffix>Sr.</hmis:NameSuffix>
+                <hmis:NameDataQuality>9</hmis:NameDataQuality>
+                <hmis:SSN hmis:hashStatus="1">79xx9xx8x</hmis:SSN>
+                <hmis:SSNDataQuality>2</hmis:SSNDataQuality>
+                <hmis:DOB>2014-11-18</hmis:DOB>
+                <hmis:DOBDataQuality>1</hmis:DOBDataQuality>
+                <hmis:Gender>4</hmis:Gender>
+                <hmis:Ethnicity>0</hmis:Ethnicity>
+                <hmis:Race>8</hmis:Race>
+                <hmis:VeteranStatus>9</hmis:VeteranStatus>
+                <!--Here is the extension element:-->
+                <hmis:FavoriteColor>Mauve</hmis:FavoriteColor>
+            </hmis:Client>
+            <hmis:Enrollment hmis:dateCreated="2015-05-08T23:14:59" hmis:dateUpdated="2015-01-27T23:14:59Z" hmis:userID="Hc8CQeYVWWj0dA9cWkDLe">
+                <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
+                <hmis:PersonalID>A1a1</hmis:PersonalID>
+                <hmis:ProjectID>222D</hmis:ProjectID>
+                <hmis:EntryDate>2016-04-12Z</hmis:EntryDate>
+                <hmis:HouseholdID>a34563w</hmis:HouseholdID>
+                <hmis:RelationshipToHoH>1</hmis:RelationshipToHoH>
+                <hmis:ResidencePrior>17</hmis:ResidencePrior>
+                <hmis:ResidencePriorLengthOfStay>8</hmis:ResidencePriorLengthOfStay>
+                <hmis:PreviousStreetESSH>1</hmis:PreviousStreetESSH>
+                <hmis:DateToStreetESSH>2015-04-01</hmis:DateToStreetESSH>
+                <hmis:TimesHomelessPastThreeYears>2</hmis:TimesHomelessPastThreeYears>
+                <hmis:MonthsHomelessPastThreeYears>103</hmis:MonthsHomelessPastThreeYears>
+                <hmis:DisablingCondition>9</hmis:DisablingCondition>
+                <hmis:HousingStatus>6</hmis:HousingStatus>
+            </hmis:Enrollment>
+            <hmis:EnrollmentCoC hmis:dataCollectionStage="1" hmis:informationDate="2015-06-24" hmis:dateCreated="2016-02-13T23:14:59Z"
+                 hmis:dateUpdated="2016-02-19T23:14:59" hmis:userID="DU5m">
+                <hmis:EnrollmentCoCID>56332</hmis:EnrollmentCoCID>
+                <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
+                <hmis:HouseholdID>a34563w</hmis:HouseholdID>
+                <hmis:CoCCode>BZ-123</hmis:CoCCode>
+            </hmis:EnrollmentCoC>
+            <hmis:Funder hmis:dateCreated="2015-09-19T23:14:59" hmis:dateUpdated="2016-01-29T23:14:59Z" hmis:userID="m2Pym5-77tSVuI-IjerY">
+                <hmis:FunderID>76g</hmis:FunderID>
+                <hmis:ProjectID>222D</hmis:ProjectID>
+                <hmis:Funder>16</hmis:Funder>
+                <hmis:GrantID>S_w9P0npP</hmis:GrantID>
+                <hmis:StartDate>2016-06-11Z</hmis:StartDate>
+                <hmis:EndDate>2016-04-08</hmis:EndDate>
+            </hmis:Funder>
+            <hmis:Inventory hmis:informationDate="2015-04-04Z" hmis:dateCreated="2015-09-12T23:14:59Z" hmis:dateUpdated="2015-08-29T23:14:59Z"
+                 hmis:userID="billj">
+                <hmis:InventoryID>56563a</hmis:InventoryID>
+                <hmis:CoCCode>BZ-123</hmis:CoCCode>
+                <hmis:HouseholdType>1</hmis:HouseholdType>
+                <hmis:BedType>3</hmis:BedType>
+                <hmis:Availability>3</hmis:Availability>
+                <hmis:UnitInventory>1595973432</hmis:UnitInventory>
+                <hmis:BedInventory>
+                    <hmis:BedInventory>130</hmis:BedInventory>
+                    <hmis:CHBedInventory>17</hmis:CHBedInventory>
+                    <hmis:VetBedInventory>14</hmis:VetBedInventory>
+                    <hmis:YouthBedInventory>16</hmis:YouthBedInventory>
+                    <hmis:YouthAgeGroup>1</hmis:YouthAgeGroup>
+                </hmis:BedInventory>
+                <hmis:InventoryStartDate>2014-10-31</hmis:InventoryStartDate>
+                <hmis:InventoryEndDate>2015-05-12Z</hmis:InventoryEndDate>
+                <hmis:HMISParticipatingBeds>539390492</hmis:HMISParticipatingBeds>
+            </hmis:Inventory>
+            <hmis:Organization hmis:dateCreated="2015-02-17T23:14:59" hmis:dateUpdated="2016-02-29T23:14:59" hmis:userID="ptravis">
+                <hmis:OrganizationID>34</hmis:OrganizationID>
+                <hmis:OrganizationName>Helping People, Inc.</hmis:OrganizationName>
+                <hmis:OrganizationCommonName>Helping</hmis:OrganizationCommonName>
+            </hmis:Organization>
+            <hmis:Project hmis:dateCreated="2016-02-17T23:14:59" hmis:dateUpdated="2015-03-14T23:14:59Z" hmis:userID="j2ZsRLAPv">
+                <hmis:ProjectID>222D</hmis:ProjectID>
+                <hmis:OrganizationID>34</hmis:OrganizationID>
+                <hmis:ProjectName>Residence Enablers</hmis:ProjectName>
+                <hmis:ContinuumProject>0</hmis:ContinuumProject>
+                <hmis:ProjectType>9</hmis:ProjectType>
+                <hmis:ResidentialAffiliation>0</hmis:ResidentialAffiliation>
+                <hmis:TrackingMethod>0</hmis:TrackingMethod>
+                <hmis:TargetPopulation>4</hmis:TargetPopulation>
+                <hmis:ProjectCommonName>Residence Enablers</hmis:ProjectCommonName>
+            </hmis:Project>
+            <hmis:CoC  hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="bmerriweather">
+                <hmis:CoCCode>BZ-123</hmis:CoCCode>
+            </hmis:CoC>
+            <hmis:CoC  hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="bmerriweather">
+                <hmis:CoCCode>MA-500</hmis:CoCCode>
+            </hmis:CoC>
+            <hmis:Site hmis:dateCreated="2014-09-03T23:14:59" hmis:dateUpdated="2016-02-25T23:14:59Z" hmis:userID="ck">
+                <hmis:SiteID>4526</hmis:SiteID>
+                <hmis:CoCCode>BZ-123</hmis:CoCCode>
+                <hmis:ProjectID>222Ds</hmis:ProjectID>
+                <hmis:PrincipalSite>1</hmis:PrincipalSite>
+                <hmis:Address>111 Pine St.</hmis:Address>
+                <hmis:City>Tuscaloosa</hmis:City>
+                <hmis:State>OK</hmis:State>
+                <hmis:ZIP>84683</hmis:ZIP>
+                <hmis:Geocode>177988</hmis:Geocode>
+            </hmis:Site>
+        </hmis:Export>
+    </hmis:Source>
+</hmis:Sources>

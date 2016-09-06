@@ -899,11 +899,6 @@
 					<xs:documentation xml:lang="en">Select one of the ExportDirective choices to instruct the target as to how the data being transmitted should be handled.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<!--<xs:element name="HashStatus" type="hmis:hashStatus">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Indicates whether and how the data is hashed.  In this usage, it is for verifying matching data without actually sending it.</xs:documentation>
-				</xs:annotation>
-			</xs:element>-->
 			<xs:choice maxOccurs="unbounded">
 				<xs:element name="Affiliation" type="hmis:affiliation"/>
 				<xs:element name="Client" type="hmis:client"/>
