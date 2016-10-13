@@ -1,16 +1,16 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <xs:schema
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/5_1_0/HUD_HMIS.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/5_1_0/HUD_HMIS.xsd"	
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_0/HUD_HMIS.xsd"
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.2/HUD_HMIS.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.2/HUD_HMIS.xsd"	
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.2/HUD_HMIS.xsd"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	vc:minVersion = "1.1"
 	elementFormDefault="qualified"
 	attributeFormDefault="qualified"
-	version="5.1.0">
+	version="5.1.1-rc.2">
 		
 	<xs:defaultOpenContent mode="interleave" appliesToEmpty="true"> 
 		<xs:annotation>
@@ -241,7 +241,7 @@
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.5-4.10, Response #2A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DocumentationOnFile" type="hmis:noYes">
+			<xs:element name="DocumentationOnFile" type="hmis:noYesOnly" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.5-4.10, Response #2B.</xs:documentation>
 				</xs:annotation>
@@ -4827,6 +4827,24 @@
 			<xs:enumeration value="99">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Data Not Collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="noYesOnly">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">0 = No, 1 = Yes</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">No</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Yes</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
