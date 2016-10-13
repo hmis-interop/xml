@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hmis:Sources xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_0_1/HUD_HMIS.xsd"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/4_0_1/HUD_HMIS.xsd https://github.com/hmis-interop/xml/raw/v4.0.1/src/HUD_HMIS.xsd">
+ xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/4_0_1/HUD_HMIS.xsd https://github.com/hmis-interop/xml/raw/v4.0.2/src/HUD_HMIS.xsd">
     <hmis:Source>
         <hmis:SourceID>12345</hmis:SourceID>
         <hmis:SoftwareVendor>HMISSoft Inc.</hmis:SoftwareVendor>
@@ -67,7 +67,6 @@
                 <hmis:DisabilityType>10</hmis:DisabilityType>
                 <hmis:DisabilityResponse>2</hmis:DisabilityResponse>
                 <hmis:IndefiniteAndImpairs>9</hmis:IndefiniteAndImpairs>
-                <hmis:DocumentationOnFile>1</hmis:DocumentationOnFile>
                 <hmis:ReceivingServices>99</hmis:ReceivingServices>
                 <hmis:PATHHowConfirmed>1</hmis:PATHHowConfirmed>
                 <hmis:PATHSMIInformation>3</hmis:PATHSMIInformation>
