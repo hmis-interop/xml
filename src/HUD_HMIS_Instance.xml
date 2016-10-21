@@ -1,8 +1,8 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.2/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/v5.1.1-rc.2/src/HUD_HMIS.xsd"
+    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.3/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/v5.1.1-rc.3/src/HUD_HMIS.xsd"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.2/HUD_HMIS.xsd">
+    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.3/HUD_HMIS.xsd">
     <hmis:Source>
         <hmis:SourceID>12345</hmis:SourceID>
         <hmis:SourceType>1</hmis:SourceType>
@@ -308,18 +308,17 @@
             <hmis:Inventory hmis:informationDate="2015-04-04Z" hmis:dateCreated="2015-09-12T23:14:59Z" hmis:dateUpdated="2015-08-29T23:14:59Z"
                  hmis:userID="billj">
                 <hmis:InventoryID>56563a</hmis:InventoryID>
+                <hmis:ProjectID>222D</hmis:ProjectID>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
                 <hmis:HouseholdType>1</hmis:HouseholdType>
                 <hmis:BedType>3</hmis:BedType>
                 <hmis:Availability>3</hmis:Availability>
                 <hmis:UnitInventory>1595973432</hmis:UnitInventory>
-                <hmis:BedInventory>
-                    <hmis:BedInventory>130</hmis:BedInventory>
-                    <hmis:CHBedInventory>17</hmis:CHBedInventory>
-                    <hmis:VetBedInventory>14</hmis:VetBedInventory>
-                    <hmis:YouthBedInventory>16</hmis:YouthBedInventory>
-                    <hmis:YouthAgeGroup>1</hmis:YouthAgeGroup>
-                </hmis:BedInventory>
+                <hmis:BedInventory>130</hmis:BedInventory>
+                <hmis:CHBedInventory>17</hmis:CHBedInventory>
+                <hmis:VetBedInventory>14</hmis:VetBedInventory>
+                <hmis:YouthBedInventory>16</hmis:YouthBedInventory>
+                <hmis:YouthAgeGroup>1</hmis:YouthAgeGroup>
                 <hmis:InventoryStartDate>2014-10-31</hmis:InventoryStartDate>
                 <hmis:InventoryEndDate>2015-05-12Z</hmis:InventoryEndDate>
                 <hmis:HMISParticipatingBeds>539390492</hmis:HMISParticipatingBeds>
@@ -345,8 +344,8 @@
                 <hmis:OtherTANF>0</hmis:OtherTANF>
                 <hmis:RentalAssistanceOngoing>1</hmis:RentalAssistanceOngoing>
                 <hmis:RentalAssistanceTemp>1</hmis:RentalAssistanceTemp>
-                <hmis:OtherSource>0</hmis:OtherSource>
-                <hmis:OtherSourceIdentify>some other source name</hmis:OtherSourceIdentify>
+                <hmis:OtherBenefitsSource>0</hmis:OtherBenefitsSource>
+                <hmis:OtherBenefitsSourceIdentify>some other source name</hmis:OtherBenefitsSourceIdentify>
             </hmis:NonCashBenefits>
             <hmis:Organization hmis:dateCreated="2015-02-17T23:14:59" hmis:dateUpdated="2016-02-29T23:14:59" hmis:userID="ptravis">
                 <hmis:OrganizationID>34</hmis:OrganizationID>
@@ -410,9 +409,11 @@
             </hmis:Project>
             <hmis:CoC  hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="bmerriweather">
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
+                <hmis:ProjectID>222D</hmis:ProjectID>
             </hmis:CoC>
             <hmis:CoC  hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="bmerriweather">
                 <hmis:CoCCode>MA-500</hmis:CoCCode>
+                <hmis:ProjectID>222E</hmis:ProjectID>
             </hmis:CoC>
             <hmis:ResidentialMoveInDate hmis:dateCreated="2015-04-25T23:14:59" hmis:dateUpdated="2015-07-23T23:14:59Z" hmis:userID="AUfZ2">
                 <hmis:ResidentialMoveInDateID>z44332</hmis:ResidentialMoveInDateID>
@@ -426,33 +427,33 @@
                 <hmis:FYSBYouth>0</hmis:FYSBYouth>
                 <hmis:ReasonNoServices>3</hmis:ReasonNoServices>
             </hmis:RHYBCPStatus>
-            <hmis:Services hmis:dateCreated="2015-09-04T23:14:59" hmis:dateUpdated="2015-02-28T23:14:59Z" hmis:userID="CoaTbskfRfTvBSHN8_eRmMF4.4O-A">
-                <hmis:ServicesID>44gg</hmis:ServicesID>
+            <hmis:ServiceFAReferral hmis:dateCreated="2015-09-04T23:14:59" hmis:dateUpdated="2015-02-28T23:14:59Z" hmis:userID="CoaTbskfRfTvBSHN8_eRmMF4.4O-A">
+                <hmis:ServiceFAReferralID>44gg</hmis:ServiceFAReferralID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:DateProvided>2015-09-06</hmis:DateProvided>
                 <hmis:RecordType>144</hmis:RecordType>
                 <hmis:TypeProvided>6</hmis:TypeProvided>
                 <hmis:OtherTypeProvided>some other type here</hmis:OtherTypeProvided>
                 <hmis:ReferralOutcome>2</hmis:ReferralOutcome>
-            </hmis:Services>
-            <hmis:Services hmis:dateCreated="2015-09-05T23:14:59" hmis:dateUpdated="2015-02-28T23:15:59Z" hmis:userID="CoaTbskfRfTvBSHN8_eRmMF4.4O-A">
-                <hmis:ServicesID>44gh</hmis:ServicesID>
+            </hmis:ServiceFAReferral>
+            <hmis:ServiceFAReferral hmis:dateCreated="2015-09-05T23:14:59" hmis:dateUpdated="2015-02-28T23:15:59Z" hmis:userID="CoaTbskfRfTvBSHN8_eRmMF4.4O-A">
+                <hmis:ServiceFAReferralID>44gh</hmis:ServiceFAReferralID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:DateProvided>2015-09-07</hmis:DateProvided>
                 <hmis:RecordType>144</hmis:RecordType>
                 <hmis:TypeProvided>5</hmis:TypeProvided>
                 <hmis:SubTypeProvided>12</hmis:SubTypeProvided>
                 <hmis:ReferralOutcome>2</hmis:ReferralOutcome>
-            </hmis:Services>
-            <hmis:Services hmis:dateCreated="2015-09-05T23:14:59" hmis:dateUpdated="2015-02-28T23:15:59Z" hmis:userID="CoaTbskfRfTvBSHN8_eRmMF4.4O-A">
-                <hmis:ServicesID>44gi</hmis:ServicesID>
+            </hmis:ServiceFAReferral>
+            <hmis:ServiceFAReferral hmis:dateCreated="2015-09-05T23:14:59" hmis:dateUpdated="2015-02-28T23:15:59Z" hmis:userID="CoaTbskfRfTvBSHN8_eRmMF4.4O-A">
+                <hmis:ServiceFAReferralID>44gi</hmis:ServiceFAReferralID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:DateProvided>2015-09-07</hmis:DateProvided>
                 <hmis:RecordType>151</hmis:RecordType>
                 <hmis:TypeProvided>5</hmis:TypeProvided>
                 <hmis:FAAmount>167.43</hmis:FAAmount>
                 <hmis:ReferralOutcome>2</hmis:ReferralOutcome>
-            </hmis:Services>
+            </hmis:ServiceFAReferral>
             <hmis:Site hmis:dateCreated="2014-09-03T23:14:59" hmis:dateUpdated="2016-02-25T23:14:59Z" hmis:userID="ck">
                 <hmis:SiteID>4526</hmis:SiteID>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
@@ -480,17 +481,12 @@
                 <hmis:MilitaryBranch>8</hmis:MilitaryBranch>
                 <hmis:DischargeStatus>6</hmis:DischargeStatus>
             </hmis:ClientVeteranInfo>
-            <hmis:WorstHousingSituation hmis:dateCreated="2015-06-24T23:14:59" hmis:dateUpdated="2015-02-13T23:14:59Z" hmis:userID="as1Peee5hTGWNY6mtD1O_M">
-                <hmis:WorstHousingSituationID>8i76</hmis:WorstHousingSituationID>
-                <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:WorstHousingSituation>9</hmis:WorstHousingSituation>
-            </hmis:WorstHousingSituation>
-            <hmis:EntryRHY hmis:dataCollectionStage="1" hmis:dateCreated="2016-05-08T23:14:59" hmis:dateUpdated="2016-05-06T23:14:59Z" hmis:userID="DG4IfIQuAFF6I.yl7">
+            <hmis:EntryRHY hmis:dateCreated="2016-05-08T23:14:59" hmis:dateUpdated="2016-05-06T23:14:59Z" hmis:userID="DG4IfIQuAFF6I.yl7">
                 <hmis:EntryRHYID>y76754</hmis:EntryRHYID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:HouseholdDynamics>0</hmis:HouseholdDynamics>
                 <hmis:SexualOrientation>99</hmis:SexualOrientation>               
-                <hmis:SexualOrientationGenderIdentityYouth>1</hmis:SexualOrientationGenderIdentityYouth>
+                <hmis:SexualOrientationGenderIDYouth>1</hmis:SexualOrientationGenderIDYouth>
                 <hmis:SexualOrientationGenderIDFam>0</hmis:SexualOrientationGenderIDFam>
                 <hmis:HousingIssuesYouth>1</hmis:HousingIssuesYouth>
                 <hmis:HousingIssuesFam>1</hmis:HousingIssuesFam>
