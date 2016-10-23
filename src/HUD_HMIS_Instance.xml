@@ -1,8 +1,8 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.3/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/v5.1.1-rc.3/src/HUD_HMIS.xsd"
+    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.4/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/v5.1.1-rc.4/src/HUD_HMIS.xsd"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.3/HUD_HMIS.xsd">
+    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.4/HUD_HMIS.xsd">
     <hmis:Source>
         <hmis:SourceID>12345</hmis:SourceID>
         <hmis:SourceType>1</hmis:SourceType>
@@ -168,11 +168,6 @@
                 <hmis:HousingAssessment>6</hmis:HousingAssessment>
                 <hmis:SubsidyInformation>2</hmis:SubsidyInformation>
             </hmis:ExitHousingAssessment>
-            <hmis:ExitPATH hmis:dateCreated="2015-05-20T23:14:59Z" hmis:dateUpdated="2016-05-21T23:14:59" hmis:userID="y9SC3Udh_t0aJCX">
-                <hmis:ExitPATHID>676rt</hmis:ExitPATHID>
-                <hmis:ExitID>C2x</hmis:ExitID>
-                <hmis:ConnectionWithSOAR>0</hmis:ConnectionWithSOAR>
-            </hmis:ExitPATH>
             <hmis:ExitRHY hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="Zu6Nb5-">
                 <hmis:ExitRHYID>342r</hmis:ExitRHYID>
                 <hmis:ExitID>C2x</hmis:ExitID>
@@ -327,8 +322,7 @@
                  hmis:dateUpdated="2014-10-25T23:14:59" hmis:userID="ptravis">
                 <hmis:MedicalAssistanceID>y7665</hmis:MedicalAssistanceID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
-                <hmis:HIVAIDSAssistance>0</hmis:HIVAIDSAssistance>
-                <hmis:NoHIVAIDSAssistanceReason>1</hmis:NoHIVAIDSAssistanceReason>
+                <hmis:HIVAIDSAssistance>8</hmis:HIVAIDSAssistance>
                 <hmis:ADAP>9</hmis:ADAP>
                 <hmis:NoADAPReason>9</hmis:NoADAPReason>
             </hmis:MedicalAssistance>

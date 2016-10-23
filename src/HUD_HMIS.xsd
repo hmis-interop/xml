@@ -1,16 +1,16 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <xs:schema
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.3/HUD_HMIS.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.3/HUD_HMIS.xsd"	
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.3/HUD_HMIS.xsd"
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.4/HUD_HMIS.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.4/HUD_HMIS.xsd"	
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.4/HUD_HMIS.xsd"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	vc:minVersion = "1.1"
 	elementFormDefault="qualified"
 	attributeFormDefault="qualified"
-	version="5.1.1-rc.3">
+	version="5.1.1-rc.4">
 		
 	<xs:defaultOpenContent mode="interleave" appliesToEmpty="true"> 
 		<xs:annotation>
@@ -691,27 +691,6 @@
 		<xs:assert test="if (hmis:Destination/text()='17') then boolean(hmis:OtherDestination) else (if (not(hmis:Destination/text()='17')) then (not(boolean(hmis:OtherDestination))) else false())"/>
 		
 	</xs:complexType>
-
-	<xs:complexType name="exitPATH">
-		<xs:sequence>
-			<xs:element name="ExitPATHID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the ExitPATHID's unique ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ExitID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the Exit ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ConnectionWithSOAR" type="hmis:fiveValDKRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.21.1.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attributeGroup ref="hmis:baseMetaData"/>
-	</xs:complexType>
 	
 	<xs:complexType name="exitHousingAssessment">
 		<xs:sequence>
@@ -803,7 +782,7 @@
 			</xs:element>
 			<xs:element name="ProjectCompletionStatus" type="hmis:projectCompletionStatusSimple" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.37.1.</xs:documentation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.37.1.  In communities exporting HUDVASH VA Repository, may also contain data for HUD-VASH Exit Information (not defined in the HMIS Data Standards) using list 4.51.1</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EarlyExitReason" type="hmis:earlyExitReason" minOccurs="0">
@@ -862,7 +841,6 @@
 						<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.19</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="ExitPATH" type="hmis:exitPATH"/>
 				<xs:element name="ExitRHY" type="hmis:exitRHY"/>
 				<xs:element name="Funder" type="hmis:funder"/>			
 				<xs:element name="HealthInsurance" type="hmis:healthInsurance">
@@ -969,7 +947,6 @@
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:ResidentialMoveInDate[hmis:ProjectEntryID = $id]) le 1)"/>								
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:RHYBCPStatus[hmis:ProjectEntryID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:ServiceFAReferral[hmis:ProjectEntryID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ConnectionWithSOAR[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitHousingAssessment[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitRHY[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:FamilyReunification[hmis:ExitID = $id]) le 1)"/>		
@@ -1425,6 +1402,11 @@
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.17O.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="ConnectionWithSOAR" type="hmis:fiveValDKRefused" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.21.1.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
 		<xs:attribute ref="hmis:informationDate" use="required"/>
@@ -1833,7 +1815,7 @@
 			</xs:element>
 			<xs:element name="RecordType" type="hmis:recordType">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">The permissible values correspond to the decimal values of the corresponding Service FA Referral and Contact types.  4.12 Contact is "12", 4.14 Services Provided is "14X", 4.15 Financial Assistance is "15X", 4.16 Referrals Provided is "16X", and Bed Night is "200".</xs:documentation>
+					<xs:documentation xml:lang="en">The permissible values correspond to the decimal values of the corresponding Service FA Referral and Contact types.  4.12 Contact is "12", 4.14 Services Provided is "14X", 4.15 Financial Assistance is "15X", 4.16 Referrals Provided is "16X", Bed Night is "200", and is HUD-VASH OTH voucher tracking "210".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TypeProvided">
@@ -1967,6 +1949,22 @@
 						
 						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 200 (Services Provided - Bed-night Date 4.14E):
 						200	BedNight
+						
+						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 210 (Services Provided - HUD-VASH OTH voucher tracking 4.50.1):
+						4.50.1 VoucherTracking
+						Value Text
+						1 Referral package forwarded to PHA
+						2 Voucher denied by PHA
+						3 Voucher issued by PHA
+						4 Voucher revoked or expired
+						5 Voucher in use – veteran moved into housing
+						6 Voucher was ported locally
+						7 Voucher was administratively absorbed by new PHA
+						8 Voucher was converted to Housing Choice Voucher
+						9 Veteran exited – voucher was returned
+						10 Veteran exited – family maintained the voucher
+						11 Veteran exited – prior to ever receiving a voucher
+						12 Other
 						
 					</xs:documentation>
 				</xs:annotation>
@@ -2260,10 +2258,6 @@
 				</xs:keyref>
 				<xs:keyref name="exitExitHousingAssessmentKeyRef" refer="exitKey">
 					<xs:selector xpath="hmis:ExitHousingAssessment"/>
-					<xs:field xpath="hmis:ExitID"/>
-				</xs:keyref>
-				<xs:keyref name="exitConnectionWithSOARKeyRef" refer="exitKey">
-					<xs:selector xpath="hmis:ConnectionWithSOAR"/>
 					<xs:field xpath="hmis:ExitID"/>
 				</xs:keyref>
 				<xs:keyref name="exitExitRHYKeyRef" refer="exitKey">
@@ -5047,6 +5041,26 @@
 				2 = Youth voluntarily left early
 				3 = Youth was expelled or otherwise involuntarily discharged from project
 				99 = Data not collected
+				
+				*In communities exporting HUDVASH OTH data for upload to the VA Repository, 
+				may also contain data for HUD-VASH Exit	Information (not defined in the
+				HMIS Data Standards) using list 4.51.1 below:
+				
+				4.51.1 HUD VASH Exit Information
+				1 = Accomplished goals and/or obtained services and no longer needs CM
+				2 = Transferred to another HUD/VASH program site
+				3 = Found/chose other housing
+				4 = Did not comply with HUD/VASH CM
+				5 = Eviction and/or other housing related issues
+				6 = Unhappy with HUD/VASH housing
+				7 = No longer financially eligible for HUD/VASH voucher
+				8 = No longer interested in participating in this program
+				9 = Veteran cannot be located
+				10 = Veteran too ill to participate at this time
+				11 = Veteran is incarcerated
+				12 = Veteran is deceased
+				13 = Other
+				
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -5868,9 +5882,6 @@
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
 				12 = Contact 4.12
-				14 = Services Provided
-				15 = Financial Assistance
-				16 = Referrals Provided
 				141 = PATH service 4.14.A
 				142 = RHY service 4.14.B 
 				143 = HOPWA service 4.14.C 
@@ -5880,27 +5891,13 @@
 				161 = PATH referral 4.16.A
 				162 = RHY referral 4.16.B
 				200 = Bed night
+				210 = HUD-VASH OTH voucher tracking
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="12">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Contact</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="14">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Services Provided</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="15">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Financial Assistance</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="16">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Referrals Provided</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="141">
@@ -5944,6 +5941,11 @@
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="200">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Bed night</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="210">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Bed night</xs:documentation>
 				</xs:annotation>
