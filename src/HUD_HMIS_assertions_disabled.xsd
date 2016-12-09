@@ -191,7 +191,7 @@
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 		<!--Testing if Gender is 4, before allowing use of OtherGender-->
-		<xs:assert test="if (hmis:Gender/text()='4') then boolean(hmis:OtherGender) else (if (not(hmis:Gender/text()='4')) then (not(boolean(hmis:OtherGender))) else false())"/>
+		<!--<xs:assert test="if (hmis:Gender/text()='4') then boolean(hmis:OtherGender) else (if (not(hmis:Gender/text()='4')) then (not(boolean(hmis:OtherGender))) else false())"/>-->
 	</xs:complexType>
 	
 	<xs:complexType name="coc">
@@ -237,7 +237,7 @@
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 		<!--Testing if Gender is 4, before allowing use of OtherGender-->
-		<xs:assert test="if (hmis:Gender/text()='4') then boolean(hmis:OtherGender) else (if (not(hmis:Gender/text()='4')) then (not(boolean(hmis:OtherGender))) else false())"/>
+		<!--<xs:assert test="if (hmis:Gender/text()='4') then boolean(hmis:OtherGender) else (if (not(hmis:Gender/text()='4')) then (not(boolean(hmis:OtherGender))) else false())"/>-->
 	</xs:complexType>
 	
 	<xs:complexType name="dateOfEngagement">
@@ -367,22 +367,22 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 		
 		<!--Testing if DisabilityType is 8, before allowing use of TCellCountAvailable-->
-		<xs:assert test="if (hmis:TCellCountAvailable) then boolean(hmis:DisabilityType/text()='8') else true()"/>
+		<!--<xs:assert test="if (hmis:TCellCountAvailable) then boolean(hmis:DisabilityType/text()='8') else true()"/>-->
 
 		<!--Testing if TCellCountAvailable is 1, before allowing use of TCellCount-->
-		<xs:assert test="if (hmis:TCellCountAvailable/text()='1') then boolean(hmis:TCellCount) else (if (not(hmis:TCellCountAvailable/text()='1')) then (not(boolean(hmis:TCellCount))) else false())"/>
+		<!--<xs:assert test="if (hmis:TCellCountAvailable/text()='1') then boolean(hmis:TCellCount) else (if (not(hmis:TCellCountAvailable/text()='1')) then (not(boolean(hmis:TCellCount))) else false())"/>-->
 
 		<!--Testing if TCellCount is not null, before allowing use of TCellSource-->
-		<xs:assert test="if (hmis:TCellCount) then boolean(hmis:TCellSource) else (if (not(hmis:TCellCount)) then (not(boolean(hmis:TCellSource))) else false())"/>
+		<!--<xs:assert test="if (hmis:TCellCount) then boolean(hmis:TCellSource) else (if (not(hmis:TCellCount)) then (not(boolean(hmis:TCellSource))) else false())"/>-->
 
 		<!--Testing if DisabilityType is 8, before allowing use of ViralLoadAvailable-->
-		<xs:assert test="if (hmis:ViralLoadAvailable) then boolean(hmis:DisabilityType/text()='8') else true()"/>
+		<!--<xs:assert test="if (hmis:ViralLoadAvailable) then boolean(hmis:DisabilityType/text()='8') else true()"/>-->
 		
 		<!--Testing if ViralLoadAvailable is 1, before allowing use of ViralLoad-->
-		<xs:assert test="if (hmis:ViralLoadAvailable/text()='1') then boolean(hmis:ViralLoad) else (if (not(hmis:ViralLoadAvailable/text()='1')) then (not(boolean(hmis:ViralLoad))) else false())"/>
+		<!--<xs:assert test="if (hmis:ViralLoadAvailable/text()='1') then boolean(hmis:ViralLoad) else (if (not(hmis:ViralLoadAvailable/text()='1')) then (not(boolean(hmis:ViralLoad))) else false())"/>-->
 		
 		<!--Testing if  ViralLoad is not null, before allowing use of  ViralLoadSource-->
-		<xs:assert test="if (hmis:ViralLoad) then boolean(hmis:ViralLoadSource) else (if (not(hmis:ViralLoad)) then (not(boolean(hmis:ViralLoadSource))) else false())"/>
+		<!--<xs:assert test="if (hmis:ViralLoad) then boolean(hmis:ViralLoadSource) else (if (not(hmis:ViralLoad)) then (not(boolean(hmis:ViralLoadSource))) else false())"/>-->
 		
 	</xs:complexType>
 	
@@ -422,7 +422,7 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 		
 		<!--Testing if DomesticViolenceVictim is 1, before allowing use of CurrentlyFleeing-->
-		<xs:assert test="if (hmis:DomesticViolenceVictim/text()='1') then boolean(hmis:CurrentlyFleeing) else (if (not(hmis:DomesticViolenceVictim/text()='1')) then (not(boolean(hmis:CurrentlyFleeing))) else false())"/>
+		<!--<xs:assert test="if (hmis:DomesticViolenceVictim/text()='1') then boolean(hmis:CurrentlyFleeing) else (if (not(hmis:DomesticViolenceVictim/text()='1')) then (not(boolean(hmis:CurrentlyFleeing))) else false())"/>-->
 		
 	</xs:complexType>
 
@@ -586,13 +586,13 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 		
 		<!--Testing if ResidencePrior is 17, before allowing use of OtherResidencePrior-->
-		<xs:assert test="if (hmis:ResidencePrior/text()='17') then boolean(hmis:OtherResidencePrior) else (if (not(hmis:ResidencePrior/text()='17')) then (not(boolean(hmis:OtherResidencePrior))) else false())"/>
+		<!--<xs:assert test="if (hmis:ResidencePrior/text()='17') then boolean(hmis:OtherResidencePrior) else (if (not(hmis:ResidencePrior/text()='17')) then (not(boolean(hmis:OtherResidencePrior))) else false())"/>-->
 	
 		<!--Testing if TimesHomelessPastThreeYears is 1-4, before allowing use of MonthsHomelessPastThreeYears-->
-		<xs:assert test="if (hmis:TimesHomelessPastThreeYears/text()='1' or hmis:TimesHomelessPastThreeYears/text()='2' or hmis:TimesHomelessPastThreeYears/text()='3'  or hmis:TimesHomelessPastThreeYears/text()='4') then boolean(hmis:MonthsHomelessPastThreeYears) else (if (not(hmis:TimesHomelessPastThreeYears/text()='1'  or hmis:TimesHomelessPastThreeYears/text()='2' or hmis:TimesHomelessPastThreeYears/text()='3'  or hmis:TimesHomelessPastThreeYears/text()='4')) then (not(boolean(hmis:MonthsHomelessPastThreeYears))) else false())"/>
+		<!--<xs:assert test="if (hmis:TimesHomelessPastThreeYears/text()='1' or hmis:TimesHomelessPastThreeYears/text()='2' or hmis:TimesHomelessPastThreeYears/text()='3'  or hmis:TimesHomelessPastThreeYears/text()='4') then boolean(hmis:MonthsHomelessPastThreeYears) else (if (not(hmis:TimesHomelessPastThreeYears/text()='1'  or hmis:TimesHomelessPastThreeYears/text()='2' or hmis:TimesHomelessPastThreeYears/text()='3'  or hmis:TimesHomelessPastThreeYears/text()='4')) then (not(boolean(hmis:MonthsHomelessPastThreeYears))) else false())"/>-->
 
 		<!--Testing if EntryFromStreetESSH is 1, before allowing use of DateToStreetESSH-->
-		<xs:assert test="if (hmis:EntryFromStreetESSH/text()='1') then boolean(hmis:DateToStreetESSH) else (if (not(hmis:EntryFromStreetESSH/text()='1')) then (not(boolean(hmis:DateToStreetESSH))) else false())"/>		
+		<!--<xs:assert test="if (hmis:EntryFromStreetESSH/text()='1') then boolean(hmis:DateToStreetESSH) else (if (not(hmis:EntryFromStreetESSH/text()='1')) then (not(boolean(hmis:DateToStreetESSH))) else false())"/>-->		
 
 	</xs:complexType>
 
@@ -717,7 +717,7 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 		
 		<!--Testing if Destination is 17, before allowing use of OtherDestination-->
-		<xs:assert test="if (hmis:Destination/text()='17') then boolean(hmis:OtherDestination) else (if (not(hmis:Destination/text()='17')) then (not(boolean(hmis:OtherDestination))) else false())"/>
+		<!--<xs:assert test="if (hmis:Destination/text()='17') then boolean(hmis:OtherDestination) else (if (not(hmis:Destination/text()='17')) then (not(boolean(hmis:OtherDestination))) else false())"/>-->
 		
 	</xs:complexType>
 
@@ -1024,31 +1024,31 @@
 		</xs:sequence>
 		
 		<!--Cardinality Checking-->
-		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:ClientVeteranInfo[hmis:PersonalID = $id]) le 1)"/>
-		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:Enrollment[hmis:PersonalID = $id]) ge 1)"/>		
+		<!--<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:ClientVeteranInfo[hmis:PersonalID = $id]) le 1)"/>-->
+		<!--<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:Enrollment[hmis:PersonalID = $id]) ge 1)"/>-->		
 		<!--<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:EnrollmentCoC[hmis:CoCCode = $id]) ge 0)"/>-->
 		<!--<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:Inventory[hmis:CoCCode = $id]) ge 0)"/>-->		
 		<!--<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:Site[hmis:CoCCode = $id]) ge 0)"/>-->						
 		<!--<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:Contact[hmis:ProjectEntryID = $id]) ge 0)"/>-->						
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:DateOfEngagement[hmis:ProjectEntryID = $id]) le 1)"/>
+		<!--<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:DateOfEngagement[hmis:ProjectEntryID = $id]) le 1)"/>-->
 		<!--<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EnrollmentCoC[hmis:ProjectEntryID = $id]) ge 0)"/>-->
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntryRHY[hmis:ProjectEntryID = $id]) le 1)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntrySSVF[hmis:ProjectEntryID = $id]) le 1)"/>						
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:Exit[hmis:ProjectEntryID = $id]) le 1)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:PathStatus[hmis:ProjectEntryID = $id]) le 1)"/>					
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:WorstHousingSituation[hmis:ProjectEntryID = $id]) le 1)"/>		
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:ResidentialMoveInDate[hmis:ProjectEntryID = $id]) le 1)"/>								
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:RHYBCPStatus[hmis:ProjectEntryID = $id]) le 1)"/>	
-		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ConnectionWithSOAR[hmis:ExitID = $id]) le 1)"/>				
-		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitHousingAssessment[hmis:ExitID = $id]) le 1)"/>				
-		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitRHY[hmis:ExitID = $id]) le 1)"/>				
-		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:FamilyReunification[hmis:ExitID = $id]) le 1)"/>		
-		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:HousingAssessmentDisposition[hmis:ExitID = $id]) le 1)"/>		
+		<!--<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntryRHY[hmis:ProjectEntryID = $id]) le 1)"/>-->
+		<!--<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntrySSVF[hmis:ProjectEntryID = $id]) le 1)"/>-->						
+		<!--<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:Exit[hmis:ProjectEntryID = $id]) le 1)"/>-->
+		<!--<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:PathStatus[hmis:ProjectEntryID = $id]) le 1)"/>-->					
+		<!--<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:WorstHousingSituation[hmis:ProjectEntryID = $id]) le 1)"/>-->		
+		<!--<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:ResidentialMoveInDate[hmis:ProjectEntryID = $id]) le 1)"/>-->								
+		<!--<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:RHYBCPStatus[hmis:ProjectEntryID = $id]) le 1)"/>-->	
+		<!--<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ConnectionWithSOAR[hmis:ExitID = $id]) le 1)"/>-->				
+		<!--<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitHousingAssessment[hmis:ExitID = $id]) le 1)"/>-->				
+		<!--<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitRHY[hmis:ExitID = $id]) le 1)"/>-->				
+		<!--<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:FamilyReunification[hmis:ExitID = $id]) le 1)"/>-->		
+		<!--<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:HousingAssessmentDisposition[hmis:ExitID = $id]) le 1)"/>-->		
 		<!--<xs:assert test="every $id in hmis:Organization/hmis:OrganizationID satisfies (fn:count(hmis:Project[hmis:OrganizationID = $id]) ge 0)"/>-->								
-		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Funder[hmis:ProjectID = $id]) ge 1)"/>
+		<!--<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Funder[hmis:ProjectID = $id]) ge 1)"/>-->
 		
 		<!-- Checking that there is only one Head of Household per Household enrolled -->
-		<xs:assert test="every $id in hmis:Enrollment/hmis:HouseholdID satisfies (fn:count(hmis:Enrollment/hmis:RelationshipToHoH[text()= '1'][../hmis:HouseholdID = $id] ) eq 1)"/>						
+		<!--<xs:assert test="every $id in hmis:Enrollment/hmis:HouseholdID satisfies (fn:count(hmis:Enrollment/hmis:RelationshipToHoH[text()= '1'][../hmis:HouseholdID = $id] ) eq 1)"/>-->						
 		
 	</xs:complexType>
 
@@ -1753,7 +1753,7 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 		
 		<!--Testing if ClientEnrolledInPATH is 0, before allowing use of ReasonNotEnrolled-->
-		<xs:assert test="if (hmis:ClientEnrolledInPATH/text()='0') then boolean(hmis:ReasonNotEnrolled) else (if (not(hmis:ClientEnrolledInPATH/text()='0')) then (not(boolean(hmis:ReasonNotEnrolled))) else false())"/>		
+		<!--<xs:assert test="if (hmis:ClientEnrolledInPATH/text()='0') then boolean(hmis:ReasonNotEnrolled) else (if (not(hmis:ClientEnrolledInPATH/text()='0')) then (not(boolean(hmis:ReasonNotEnrolled))) else false())"/>-->		
 	</xs:complexType>
 
 	<xs:complexType name="project">
@@ -1876,7 +1876,7 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 		
 		<!--Testing if FYSBYouth is 0, before allowing use of ReasonNoServices-->
-		<xs:assert test="if (hmis:FYSBYouth/text()='0') then boolean(hmis:ReasonNoServices) else (if (not(hmis:FYSBYouth/text()='0')) then (not(boolean(hmis:ReasonNoServices))) else false())"/>
+		<!--<xs:assert test="if (hmis:FYSBYouth/text()='0') then boolean(hmis:ReasonNoServices) else (if (not(hmis:FYSBYouth/text()='0')) then (not(boolean(hmis:ReasonNoServices))) else false())"/>-->
 	</xs:complexType>
 
 	<xs:complexType name="services">
@@ -2666,22 +2666,22 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 		
 		<!--Testing if WorkPlaceViolenceThreats or WorkplacePromiseDifference is 1, before allowing use of CoercedToContinueWork-->
-		<xs:assert test="if (hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1') then boolean(hmis:CoercedToContinueWork) else (if (not(hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1')) then (not(boolean(hmis:CoercedToContinueWork))) else false())"/>
+		<!--<xs:assert test="if (hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1') then boolean(hmis:CoercedToContinueWork) else (if (not(hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1')) then (not(boolean(hmis:CoercedToContinueWork))) else false())"/>-->
 		
 		<!--Testing if WorkPlaceViolenceThreats or WorkplacePromiseDifference is 1, before allowing use of LaborExploitPastThreeMonths-->
-		<xs:assert test="if (hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1') then boolean(hmis:LaborExploitPastThreeMonths) else (if (not(hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1')) then (not(boolean(hmis:LaborExploitPastThreeMonths))) else false())"/>
+		<!--<xs:assert test="if (hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1') then boolean(hmis:LaborExploitPastThreeMonths) else (if (not(hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1')) then (not(boolean(hmis:LaborExploitPastThreeMonths))) else false())"/>-->
 		
 		<!--Testing if ExchangeForSex is 1, before allowing use of ExchangeForSexPastThreeMonths-->
-		<xs:assert test="if (hmis:ExchangeForSex/text()='1') then boolean(hmis:ExchangeForSexPastThreeMonths) else (if (not(hmis:ExchangeForSex/text()='1')) then (not(boolean(hmis:ExchangeForSexPastThreeMonths))) else false())"/>
+		<!--<xs:assert test="if (hmis:ExchangeForSex/text()='1') then boolean(hmis:ExchangeForSexPastThreeMonths) else (if (not(hmis:ExchangeForSex/text()='1')) then (not(boolean(hmis:ExchangeForSexPastThreeMonths))) else false())"/>-->
 		
 		<!--Testing if ExchangeForSex is 1, before allowing use of CountOfExchangeForSex-->
-		<xs:assert test="if (hmis:ExchangeForSex/text()='1') then boolean(hmis:CountOfExchangeForSex) else (if (not(hmis:ExchangeForSex/text()='1')) then (not(boolean(hmis:CountOfExchangeForSex))) else false())"/>
+		<!--<xs:assert test="if (hmis:ExchangeForSex/text()='1') then boolean(hmis:CountOfExchangeForSex) else (if (not(hmis:ExchangeForSex/text()='1')) then (not(boolean(hmis:CountOfExchangeForSex))) else false())"/>-->
 		
 		<!--Testing if ExchangeForSex is 1, before allowing use of AskedOrForcedToExchangeForSex-->
-		<xs:assert test="if (hmis:ExchangeForSex/text()='1') then boolean(hmis:AskedOrForcedToExchangeForSex) else (if (not(hmis:ExchangeForSex/text()='1')) then (not(boolean(hmis:AskedOrForcedToExchangeForSex))) else false())"/>
+		<!--<xs:assert test="if (hmis:ExchangeForSex/text()='1') then boolean(hmis:AskedOrForcedToExchangeForSex) else (if (not(hmis:ExchangeForSex/text()='1')) then (not(boolean(hmis:AskedOrForcedToExchangeForSex))) else false())"/>-->
 		
 		<!--Testing if AskedOrForcedToExchangeForSex is 1, before allowing use of AskedOrForcedToExchangeForSex-->
-		<xs:assert test="if (hmis:AskedOrForcedToExchangeForSex/text()='1') then boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths) else (if (not(hmis:AskedOrForcedToExchangeForSex/text()='1')) then (not(boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths))) else false())"/>
+		<!--<xs:assert test="if (hmis:AskedOrForcedToExchangeForSex/text()='1') then boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths) else (if (not(hmis:AskedOrForcedToExchangeForSex/text()='1')) then (not(boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths))) else false())"/>-->
 	</xs:complexType>
 	
 	<xs:attribute name="hashStatus">
