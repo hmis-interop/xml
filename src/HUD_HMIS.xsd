@@ -1,16 +1,16 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <xs:schema
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.4/HUD_HMIS.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.4/HUD_HMIS.xsd"	
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.4/HUD_HMIS.xsd"
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.5/HUD_HMIS.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.5/HUD_HMIS.xsd"	
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.5/HUD_HMIS.xsd"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	vc:minVersion = "1.1"
 	elementFormDefault="qualified"
 	attributeFormDefault="qualified"
-	version="5.1.1-rc.4">
+	version="5.1.1-rc.5">
 		
 	<xs:defaultOpenContent mode="interleave" appliesToEmpty="true"> 
 		<xs:annotation>
@@ -150,6 +150,29 @@
 				</xs:annotation>
 			</xs:element> 
 		</xs:sequence>
+		<xs:attributeGroup ref="hmis:baseMetaData"/>
+	</xs:complexType>
+	
+	<xs:complexType name="connectionWithSOAR">
+		<xs:sequence>
+			<xs:element name="ConnectionWithSOARID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the connectionWithSOAR's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
+			<xs:element name="ProjectEntryID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ConnectionWithSOAR" type="hmis:fiveValDKRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.21.1.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
+		<xs:attribute ref="hmis:informationDate" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
 	
@@ -327,7 +350,7 @@
 		<xs:sequence>
 			<xs:element name="EducationID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the LastGradeCompletedID's unique ID</xs:documentation>
+					<xs:documentation xml:lang="en">Reference to the LastGradeCompleted's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>				
 			<xs:element name="ProjectEntryID" type="hmis:string32">
@@ -806,17 +829,17 @@
 					<xs:documentation xml:lang="en">Time the export was performed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ExportPeriod" type="hmis:dateRangeCapped" minOccurs="0">
+			<xs:element name="ExportPeriod" type="hmis:dateRangeCapped">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">The date range bounding the data set being transmitted.  Used with ExportPeriodType to clarify what the date range represents.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ExportPeriodType" type="hmis:exportPeriodType" minOccurs="0">
+			<xs:element name="ExportPeriodType" type="hmis:exportPeriodType">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Pick one of the types to specify the definition of export period being used in ExportPeriod.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ExportDirective" type="hmis:exportDirective" minOccurs="0">
+			<xs:element name="ExportDirective" type="hmis:exportDirective">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Select one of the ExportDirective choices to instruct the target as to how the data being transmitted should be handled.</xs:documentation>
 				</xs:annotation>
@@ -1400,11 +1423,6 @@
 			<xs:element name="OtherSourceIdentify" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.2.17O.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ConnectionWithSOAR" type="hmis:fiveValDKRefused" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See August 2016 HMIS Data Dictionary, Section 4.21.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
