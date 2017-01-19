@@ -4,19 +4,19 @@
  xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.5/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/v5.1.1-rc.5/src/HUD_HMIS_Example_Extension.xsd"
  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
  xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_1-rc.5/HUD_HMIS.xsd">
-    <Source>
-        <SourceType>1</SourceType>
-        <SourceName>Fictitious County HMIS</SourceName>
-        <SoftwareName>HMISSoft Inc.</SoftwareName>
-        <SoftwareVersion>3</SoftwareVersion>
-        <SourceContactEmail>bill@gsnail.com</SourceContactEmail>
-        <SourceContactExtension>775</SourceContactExtension>
-        <SourceContactFirst>Patricia</SourceContactFirst>
-        <SourceContactLast>Duke</SourceContactLast>
-        <SourceContactPhone>5939698367</SourceContactPhone>
-        <Export>
-            <MyFavoriteColor>Orange</MyFavoriteColor>
-            <ExportPeriod>reportingPeriod</ExportPeriod>
-        </Export>
-    </Source>
+    <hmis:Source>
+        <hmis:SourceType>2</hmis:SourceType>
+        <hmis:SourceName>Fictitious County HMIS</hmis:SourceName>
+        <hmis:SoftwareName>HMISSoft Inc.</hmis:SoftwareName>
+        <hmis:SoftwareVersion>3</hmis:SoftwareVersion>
+        <hmis:SourceContactEmail>bill@gsnail.com</hmis:SourceContactEmail>
+        <hmis:SourceContactExtension>775</hmis:SourceContactExtension>
+        <hmis:SourceContactFirst>Patricia</hmis:SourceContactFirst>
+        <hmis:SourceContactLast>Duke</hmis:SourceContactLast>
+        <hmis:SourceContactPhone>5939698367</hmis:SourceContactPhone>
+        <hmis:Export>
+            <hmis:MyFavoriteColor>Orange</hmis:MyFavoriteColor>
+            <hmis:ExportPeriod>reportingPeriod</hmis:ExportPeriod>
+        </hmis:Export>
+    </hmis:Source>
 </hmis:Sources>
