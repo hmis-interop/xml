@@ -44,7 +44,7 @@
                 <hmis:Race>8</hmis:Race>
                 <hmis:VeteranStatus>9</hmis:VeteranStatus>
             </hmis:Client>
-            <hmis:ConnectionWithSOAR hmis:dataCollectionStage="1" hmis:dateCreated="2015-08-13T23:14:59" hmis:dateUpdated="2015-03-30T23:14:59" hmis:userID="IFmMP">
+            <hmis:ConnectionWithSOAR hmis:dataCollectionStage="1" hmis:informationDate="2014-09-01"  hmis:dateCreated="2015-08-13T23:14:59" hmis:dateUpdated="2015-03-30T23:14:59" hmis:userID="IFmMP">
                 <hmis:ConnectionWithSOARID>784r5</hmis:ConnectionWithSOARID>
                 <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
                 <hmis:ConnectionWithSOAR>1</hmis:ConnectionWithSOAR>
