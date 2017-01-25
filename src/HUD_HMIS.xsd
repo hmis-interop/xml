@@ -1,9 +1,9 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <xs:schema
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/4_1_4/HUD_HMIS.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/4_1_4/HUD_HMIS.xsd"	
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_1_4/HUD_HMIS.xsd"
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/4_1_5/HUD_HMIS.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/4_1_5/HUD_HMIS.xsd"	
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_1_5/HUD_HMIS.xsd"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
@@ -4005,12 +4005,18 @@
 					<xs:documentation xml:lang="en">Mental Health Status</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="30">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Pregnancy Status</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	
 	<xs:simpleType name="healthStatusType">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
+				for 4.27-4.29:
 				1 = Excellent
 				2 = Very good
 				3 = Good
@@ -4019,12 +4025,23 @@
 				8 = Client doesn’t know 
 				9 = Client refused 
 				99 = Data not collected 
+				for 4.30:
+				0 = No
+				1 = Yes
+				8 = Client doesn’t know 
+				9 = Client refused 
+				99 = Data not collected 
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">No</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="1">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Excellent</xs:documentation>
+					<xs:documentation xml:lang="en">Excellent/Yes</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2">
