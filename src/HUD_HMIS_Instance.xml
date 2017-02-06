@@ -383,6 +383,7 @@
                 <hmis:HPScreeningScore>23</hmis:HPScreeningScore>
                 <hmis:ThresholdScore>342</hmis:ThresholdScore>
                 <hmis:ERVisits>2</hmis:ERVisits>
+                <hmis:VAMCStation>123Ab678</hmis:VAMCStation>
             </hmis:EntrySSVF>
             <hmis:Project hmis:dateCreated="2016-02-17T23:14:59" hmis:dateUpdated="2015-03-14T23:14:59Z" hmis:userID="j2ZsRLAPv">
                 <hmis:ProjectID>222D</hmis:ProjectID>
