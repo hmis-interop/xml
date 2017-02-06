@@ -1,14 +1,14 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <xs:schema
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/5_1_1/HUD_HMIS.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/5_1_1/HUD_HMIS.xsd"	
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_1/HUD_HMIS.xsd"
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/5_1_2/HUD_HMIS.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/5_1_2/HUD_HMIS.xsd"	
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_2/HUD_HMIS.xsd"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	vc:minVersion = "1.1"
-	version="5.1.1"
+	version="5.1.2"
 	elementFormDefault="qualified"		
 	attributeFormDefault="qualified">
 		
@@ -4523,7 +4523,7 @@
 				0 = 4 or more times or total of at least 12 months in past three years
 				1 = 2-3 times in past three years
 				2 = 1 time in past three years
-				99 = Data not collected
+				3 = None (0 points)
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -4542,9 +4542,9 @@
 					<xs:documentation xml:lang="en">1 time in past three years</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="99">
+			<xs:enumeration value="3">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+					<xs:documentation xml:lang="en">None (0 points)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -6430,7 +6430,7 @@
 	
 	<xs:simpleType name="vamcStation">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="[A-Za-z0-9]{8}"/>
+			<xs:pattern value="[A-Za-z0-9]{1,8}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
