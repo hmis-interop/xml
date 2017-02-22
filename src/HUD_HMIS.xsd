@@ -6239,7 +6239,7 @@
 	
 	<xs:simpleType name="vamcStation">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="[A-Za-z0-9]{8}"/>
+			<xs:pattern value="[A-Za-z0-9]{1,8}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
