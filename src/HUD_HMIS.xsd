@@ -1,14 +1,14 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <xs:schema
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/5_1_2/HUD_HMIS.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/5_1_2/HUD_HMIS.xsd"	
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_2/HUD_HMIS.xsd"
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/5_1_3/HUD_HMIS.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/5_1_3/HUD_HMIS.xsd"	
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_3/HUD_HMIS.xsd"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	vc:minVersion = "1.1"
-	version="5.1.2"
+	version="5.1.3"
 	elementFormDefault="qualified"		
 	attributeFormDefault="qualified">
 		
@@ -1855,6 +1855,7 @@
 						1 = Place not meant for habitation
 						2 = Service setting, non-residential
 						3 = Service setting, residential
+						99 = Data Not Collected
 						
 						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 141 (PATH Services 4.14.A):
 						
@@ -1872,6 +1873,7 @@
 						11 = Security deposits
 						12 = One-time rent for eviction prevention
 						14 = Clinical assessment
+						99 = Data Not Collected
 						
 						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 142 (RHY Services 4.14.B):
 						1 = Basic support services
@@ -1899,6 +1901,7 @@
 						23 = Street outreach – health and hygiene products distributed
 						24 = Street outreach – food and drink items
 						25 = Street outreach – services information/brochures
+						99 = Data Not Collected
 
 						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 143 (HOPWA Services 4.14.C):
 						1 Adult day care and personal assistance
@@ -1915,6 +1918,7 @@
 						12 Substance abuse services/treatment
 						13 Transportation
 						14 Other HOPWA funded service
+						99 Data Not Collected
 						
 						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 144 (SSVF Services 4.14.D):
 						1 Outreach services
@@ -1923,6 +1927,7 @@
 						4 Assistance obtaining/coordinating other public benefits
 						5 Direct provision of other public benefits
 						6 Other (non-TFA) supportive service approved by VA
+						99 Data Not Collected
 						
 						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 151 (Financial Assistance - HOPWA Services 4.15.A):
 						1 Rental assistance [collect for PHP and STRMU]
@@ -1930,6 +1935,7 @@
 						3 Utility deposits [collect for PHP]
 						4 Utility payments [collect for PHP and STRMU]
 						7 Mortgage assistance [collect for STRMU]
+						99 Data Not Collected
 						
 						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 152 (Financial Assistance – SSVF 4.15.B):
 						1 Rental assistance
@@ -1943,6 +1949,7 @@
 						11 General housing stability assistance - emergency supplies
 						12 General housing stability assistance - other
 						14 Emergency housing assistance
+						99 Data Not Collected
 						
 						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 161 (Referrals Provided – PATH 4.16.A):
 						1 Community Mental Health
@@ -1956,6 +1963,7 @@
 						8 Income Assistance
 						9 Employment Assistance
 						10 Medical Insurance
+						99 Data Not Collected
 						
 						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 162 (Referrals Provided - RHY 4.16.B):
 						1 Child Care Non-TANF
@@ -1975,9 +1983,11 @@
 						15 Unemployment Insurance
 						16 WIC
 						17 Workforce Development (WIA)
+						99 Data Not Collected
 						
 						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 200 (Services Provided - Bed-night Date 4.14E):
 						200	BedNight
+						99 Data Not Collected
 						
 						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 210 (Services Provided - HUD-VASH OTH voucher tracking 4.50.1):
 						4.50.1 VoucherTracking
@@ -1994,7 +2004,7 @@
 						10 Veteran exited – family maintained the voucher
 						11 Veteran exited – prior to ever receiving a voucher
 						12 Other
-						
+						99 = Data Not Collected
 					</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
@@ -2942,6 +2952,7 @@
 				12 = Applicant declined referral/acceptance
 				13 = Applicant terminated assessment prior to completion
 				14 = Other/specify
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -3013,6 +3024,11 @@
 			<xs:enumeration value="14">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Other/specify</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -3465,6 +3481,7 @@
 				8 = HIV/AIDS
 				9 = Mental Health Problem
 				10 = Substance Abuse
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -3496,6 +3513,11 @@
 			<xs:enumeration value="10">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Substance Abuse</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -4524,6 +4546,7 @@
 				1 = 2-3 times in past three years
 				2 = 1 time in past three years
 				3 = None (0 points)
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -4545,6 +4568,11 @@
 			<xs:enumeration value="3">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">None (0 points)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -4857,7 +4885,7 @@
 	
 	<xs:simpleType name="noYesOnly">
 		<xs:annotation>
-			<xs:documentation xml:lang="en">0 = No, 1 = Yes</xs:documentation>
+			<xs:documentation xml:lang="en">0 = No, 1 = Yes, 99 = Data not collected</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
@@ -4868,6 +4896,11 @@
 			<xs:enumeration value="1">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Yes</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -5089,6 +5122,7 @@
 				11 = Veteran is incarcerated
 				12 = Veteran is deceased
 				13 = Other
+				99 = Data not collected
 				
 			</xs:documentation>
 		</xs:annotation>
@@ -5296,6 +5330,7 @@
 				1 = Attained
 				2 = Not attained
 				3 = Unknown
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -5312,6 +5347,11 @@
 			<xs:enumeration value="3">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Unknown</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -5575,6 +5615,7 @@
 					3 = Head of household’s spouse or partner
 					4 = Head of household’s other relation member (other relation to head of household) 
  					5 = Other: non-relation member 
+ 					99 = Data not collected
 				</xs:documentation>
 			</xs:annotation>
 			<xs:restriction base="xs:unsignedInt">
@@ -5601,6 +5642,11 @@
 				<xs:enumeration value="5">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">Other: non-relation member</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="99">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 					</xs:annotation>
 				</xs:enumeration>
 			</xs:restriction>
@@ -6216,6 +6262,7 @@
 				4 = Only with financial assistance other than a subsidy
 				11 = With on-going subsidy
 				12 = Without an on-going subsidy
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -6248,7 +6295,12 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Without an on-going subsidy</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>	
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	
@@ -6385,6 +6437,7 @@
 				1 = Medical Report 
 				2 = Client Report 
 				3 = Other
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -6401,6 +6454,11 @@
 			<xs:enumeration value="3">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Other</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -6554,6 +6612,7 @@
 				1 = Less than one year
 				2 = 1 to 2 years
 				3 = 3 to 5 or more years
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -6571,6 +6630,11 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">3 to 5 or more years</xs:documentation>
 				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
 			</xs:enumeration>			
 		</xs:restriction>
 	</xs:simpleType>
@@ -6581,7 +6645,8 @@
 				Of the youth beds what number are restricted to: 
 				1 = Only under age 18 
 				2 = Only ages 18 to 24 
-				3 = Only youth under age 24 (both of the above) 
+				3 = Only youth under age 24 (both of the above)
+				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -6598,6 +6663,11 @@
 			<xs:enumeration value="3">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Only youth under age 24 (both of the above)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>			
 		</xs:restriction>
