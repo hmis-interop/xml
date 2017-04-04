@@ -1,16 +1,16 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <xs:schema
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/4_1_6/HUD_HMIS.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/4_1_6/HUD_HMIS.xsd"	
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_1_6/HUD_HMIS.xsd"
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/4_1_7/HUD_HMIS.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/4_1_7/HUD_HMIS.xsd"	
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_1_7/HUD_HMIS.xsd"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	vc:minVersion = "1.1"
 	elementFormDefault="qualified"
 	attributeFormDefault="qualified"
-	version="4.1.6">
+	version="4.1.7">
 		
 	<xs:defaultOpenContent mode="interleave" appliesToEmpty="true"> 
 		<xs:annotation>
@@ -1906,7 +1906,7 @@
 			<xs:element name="TypeProvided">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #2 (picklist values vary by service category and funder) .</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Sections 4.12 and 4.14-4.16.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Sections 4.12 and 4.14-4.16.  99 = ""Data Not Collected" is also permissable.</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:integer">
@@ -1916,14 +1916,12 @@
 			</xs:element>
 			<xs:element name="OtherTypeProvided" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #2D (if it exists) .</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Sections 4.12 and 4.14-4.16.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #2D (if an OtherTypeProvided exists).    99 = ""Data Not Collected" is also permissable.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SubTypeProvided" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #3A, 4B, 5C (if it exists).</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Sections 4.12 and 4.14-4.16.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #3A, 4B, 5C (if a SubType exists).  99 = ""Data Not Collected" is also permissable.</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:integer">
@@ -2872,6 +2870,7 @@
 				12 = Applicant declined referral/acceptance
 				13 = Applicant terminated assessment prior to completion
 				14 = Other/specify
+				99 = Data Not Collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -2943,6 +2942,11 @@
 			<xs:enumeration value="14">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Other/specify</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data Not Collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -3359,6 +3363,7 @@
 				8 = HIV/AIDS
 				9 = Mental Health Problem
 				10 = Substance Abuse
+				99 = Data Not Collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -3390,6 +3395,11 @@
 			<xs:enumeration value="10">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Substance Abuse</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+						<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -3987,6 +3997,7 @@
 				28 = Dental Health Status 
 				29 = Mental Health Status
 				30 = Pregnancy Status
+				99 = Data Not Collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -4008,6 +4019,11 @@
 			<xs:enumeration value="30">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Pregnancy Status</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+						<xs:enumeration value="99">
+			<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -5449,6 +5465,7 @@
 					3 = Head of household’s spouse or partner
 					4 = Head of household’s other relation member (other relation to head of household) 
  					5 = Other: non-relation member 
+ 					99 = Data Not Collected
 				</xs:documentation>
 			</xs:annotation>
 			<xs:restriction base="xs:unsignedInt">
@@ -5475,6 +5492,11 @@
 				<xs:enumeration value="5">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">Other: non-relation member</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="99">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 					</xs:annotation>
 				</xs:enumeration>
 			</xs:restriction>
@@ -6058,6 +6080,7 @@
 				4 = Only with financial assistance other than a subsidy
 				11 = With on-going subsidy
 				12 = Without an on-going subsidy
+				99 = Data Not Collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -6091,6 +6114,11 @@
 					<xs:documentation xml:lang="en">Without an on-going subsidy</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>	
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	
@@ -6194,6 +6222,7 @@
 				1 = Medical Report 
 				2 = Client Report 
 				3 = Other
+				99 = Data Not Collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -6210,6 +6239,11 @@
 			<xs:enumeration value="3">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Other</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+						<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
