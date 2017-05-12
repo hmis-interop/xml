@@ -1,8 +1,8 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/5_1_2/HUD_HMIS.xsd http://raw.githubusercontent.com/hmis-interop/xml/v5.1.2/src/HUD_HMIS.xsd"
+    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/6_0_0/HUD_HMIS.xsd HUD_HMIS.xsd"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_2/HUD_HMIS.xsd">
+    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/6_0_0/HUD_HMIS.xsd">
     <hmis:Source>
         <hmis:SourceID>12345</hmis:SourceID>
         <hmis:SourceType>1</hmis:SourceType>
@@ -311,14 +311,12 @@
                 <hmis:ProjectID>222D</hmis:ProjectID>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
                 <hmis:HouseholdType>1</hmis:HouseholdType>
-                <hmis:BedType>3</hmis:BedType>
                 <hmis:Availability>3</hmis:Availability>
                 <hmis:UnitInventory>1595973432</hmis:UnitInventory>
                 <hmis:BedInventory>130</hmis:BedInventory>
                 <hmis:CHBedInventory>17</hmis:CHBedInventory>
                 <hmis:VetBedInventory>14</hmis:VetBedInventory>
                 <hmis:YouthBedInventory>16</hmis:YouthBedInventory>
-                <hmis:YouthAgeGroup>1</hmis:YouthAgeGroup>
                 <hmis:InventoryStartDate>2014-10-31</hmis:InventoryStartDate>
                 <hmis:InventoryEndDate>2015-05-12Z</hmis:InventoryEndDate>
                 <hmis:HMISParticipatingBeds>539390492</hmis:HMISParticipatingBeds>
@@ -390,10 +388,13 @@
                 <hmis:OrganizationID>34</hmis:OrganizationID>
                 <hmis:ProjectName>Residence Enablers</hmis:ProjectName>
                 <hmis:ContinuumProject>0</hmis:ContinuumProject>
-                <hmis:ProjectType>9</hmis:ProjectType>
+                <hmis:ProjectType>1</hmis:ProjectType>
+                <hmis:OperatingStartDate>2016-12-20</hmis:OperatingStartDate>
+                <hmis:OperatingEndDate>2018-01-01</hmis:OperatingEndDate>
                 <hmis:ResidentialAffiliation>0</hmis:ResidentialAffiliation>
                 <hmis:TrackingMethod>0</hmis:TrackingMethod>
                 <hmis:TargetPopulation>4</hmis:TargetPopulation>
+                <hmis:VictimServicesProvider>99</hmis:VictimServicesProvider>
                 <hmis:ProjectCommonName>Residence Enablers</hmis:ProjectCommonName>
             </hmis:Project>
             <hmis:Project hmis:dateCreated="2016-02-17T23:14:59" hmis:dateUpdated="2015-03-14T23:14:59Z" hmis:userID="j2ZsRLAPv">
@@ -402,6 +403,7 @@
                 <hmis:ProjectName>City Shelter</hmis:ProjectName>
                 <hmis:ContinuumProject>0</hmis:ContinuumProject>
                 <hmis:ProjectType>9</hmis:ProjectType>
+                <hmis:OperatingStartDate>2016-01-01</hmis:OperatingStartDate>
                 <hmis:ResidentialAffiliation>1</hmis:ResidentialAffiliation>
                 <hmis:TrackingMethod>0</hmis:TrackingMethod>
                 <hmis:TargetPopulation>4</hmis:TargetPopulation>
