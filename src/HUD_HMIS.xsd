@@ -35,12 +35,12 @@
 			</xs:element>				
 			<xs:element name="ProjectID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to a Project element</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to a Project element.  ProjectType must equal "6".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ResProjectID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See HMIS Data Dictionary (Proposed Amendment), Section 2.4, Project Type.2AB.</xs:documentation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.4.B.  Must match a ProjectID of a Project with ProjectType =1,2, 3, 8, 10, or 13.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -160,7 +160,7 @@
 					<xs:documentation xml:lang="en">Reference to the connectionWithSOAR's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>				
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -183,7 +183,7 @@
 					<xs:documentation xml:lang="en">Reference to the DateOfEngagement's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>				
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -214,7 +214,7 @@
 					<xs:documentation xml:lang="en">Reference to the Exit's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>				
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -316,7 +316,7 @@
 					<xs:documentation xml:lang="en">Reference to the DomesticViolence's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>				
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -353,7 +353,7 @@
 					<xs:documentation xml:lang="en">Reference to the LastGradeCompleted's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>				
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -381,7 +381,7 @@
 					<xs:documentation xml:lang="en">Reference to the Employment's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>				
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -409,7 +409,7 @@
 	
 	<xs:complexType name="enrollment">
 		<xs:sequence>
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Reference to the Enrollment's unique ID</xs:documentation>
 				</xs:annotation>
@@ -426,25 +426,25 @@
 			</xs:element>
 			<xs:element name="EntryDate" type="xs:date">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 3.10.</xs:documentation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 3.10.1</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HouseholdID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 3.14.</xs:documentation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 5.9.1</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RelationshipToHoH" type="hmis:relationshipToHoH">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 3.15.</xs:documentation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 3.15.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ResidencePrior" type="hmis:residencePrior" minOccurs="0">
+			<xs:element name="LivingSituation" type="hmis:livingSituation" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 3.917.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ResidencePriorLengthOfStay" type="hmis:residencePriorLengthOfStay" minOccurs="0">
+			<xs:element name="LengthOfStay" type="hmis:lengthOfStay" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 3.917.2.</xs:documentation>
 				</xs:annotation>
@@ -477,12 +477,8 @@
 			<xs:element name="DisablingCondition" type="hmis:fiveValDKRefused">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 3.8.</xs:documentation>
+					<xs:documentation xml:lang="en">Export 99 (Data not collected) for any project entry where there is no response.</xs:documentation>
 				</xs:annotation>
-			</xs:element>
-			<xs:element name="HousingStatus" type="hmis:housingStatus" minOccurs="0">
-				<xs:annotation>					
-					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 4.1.</xs:documentation>
-				</xs:annotation>				
 			</xs:element>
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
@@ -498,7 +494,7 @@
 					<xs:documentation xml:lang="en">Reference to the EnrollmentCoC's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>				
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment's ID</xs:documentation>
 				</xs:annotation>
@@ -526,7 +522,7 @@
 					<xs:documentation xml:lang="en">Reference to the EntrySSVFID's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -687,7 +683,7 @@
 					<xs:documentation xml:lang="en">Reference to the Exit's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -919,9 +915,9 @@
 						<xs:documentation xml:lang="en"></xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="ResidentialMoveInDate" type="hmis:residentialMoveInDate">
+				<xs:element name="MoveInDate" type="hmis:moveInDate">
 					<xs:annotation>
-						<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 4.17</xs:documentation>
+						<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 3.20</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="RHYBCPStatus" type="hmis:rhyBCPStatus">
@@ -934,7 +930,7 @@
 						<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 4.14-4.16</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="Site" type="hmis:site">
+				<xs:element name="Geography" type="hmis:geography">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.8.</xs:documentation>
 					</xs:annotation>
@@ -961,26 +957,26 @@
 		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:ClientVeteranInfo[hmis:PersonalID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:Enrollment[hmis:PersonalID = $id]) ge 1)"/>		
 		<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:EnrollmentCoC[hmis:CoCCode = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:ConnectionWithSOAR[hmis:ProjectEntryID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:Contact[hmis:ProjectEntryID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:DateOfEngagement[hmis:ProjectEntryID = $id]) le 1)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:Disabilities[hmis:ProjectEntryID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:DomesticViolence[hmis:ProjectEntryID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:Employment[hmis:ProjectEntryID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EnrollmentCoC[hmis:ProjectEntryID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntryRHY[hmis:ProjectEntryID = $id]) le 1)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntrySSVF[hmis:ProjectEntryID = $id]) le 1)"/>						
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:Exit[hmis:ProjectEntryID = $id]) le 1)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:HealthInsurance[hmis:ProjectEntryID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:HealthStatus[hmis:ProjectEntryID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:IncomeAndSources[hmis:ProjectEntryID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:MedicalAssistance[hmis:ProjectEntryID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:NonCashBenefits[hmis:ProjectEntryID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:PathStatus[hmis:ProjectEntryID = $id]) le 1)"/>					
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:EntryRHSP[hmis:ProjectEntryID = $id]) le 1)"/>		
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:ResidentialMoveInDate[hmis:ProjectEntryID = $id]) le 1)"/>								
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:RHYBCPStatus[hmis:ProjectEntryID = $id]) le 1)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:ProjectEntryID satisfies (fn:count(hmis:ServiceFAReferral[hmis:ProjectEntryID = $id]) ge 0)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:ConnectionWithSOAR[hmis:EnrollmentID = $id]) ge 0)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:Contact[hmis:EnrollmentID = $id]) ge 0)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:DateOfEngagement[hmis:EnrollmentID = $id]) le 1)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:Disabilities[hmis:EnrollmentID = $id]) ge 0)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:DomesticViolence[hmis:EnrollmentID = $id]) ge 0)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:Employment[hmis:EnrollmentID = $id]) ge 0)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:EnrollmentCoC[hmis:EnrollmentID = $id]) ge 0)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:EntryRHY[hmis:EnrollmentID = $id]) le 1)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:EntrySSVF[hmis:EnrollmentID = $id]) le 1)"/>						
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:Exit[hmis:EnrollmentID = $id]) le 1)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:HealthInsurance[hmis:EnrollmentID = $id]) ge 0)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:HealthStatus[hmis:EnrollmentID = $id]) ge 0)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:IncomeAndSources[hmis:EnrollmentID = $id]) ge 0)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:MedicalAssistance[hmis:EnrollmentID = $id]) ge 0)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:NonCashBenefits[hmis:EnrollmentID = $id]) ge 0)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:PathStatus[hmis:EnrollmentID = $id]) le 1)"/>					
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:EntryRHSP[hmis:EnrollmentID = $id]) le 1)"/>		
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:MoveInDate[hmis:EnrollmentID = $id]) le 1)"/>								
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:RHYBCPStatus[hmis:EnrollmentID = $id]) le 1)"/>
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:ServiceFAReferral[hmis:EnrollmentID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitHousingAssessment[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitRHY[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:FamilyReunification[hmis:ExitID = $id]) le 1)"/>		
@@ -990,7 +986,7 @@
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:CoC[hmis:ProjectID = $id]) ge 1)"/>
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Funder[hmis:ProjectID = $id]) ge 1)"/>
 		<!-- Checking that that the Project Type = ‘Emergency shelter’ for certain 2.7 data elements to exist -->
-		<xs:assert test="every $inventory in hmis:Inventory satisfies (if (boolean($inventory/hmis:Availability)) then (if (every $id in $inventory/hmis:ProjectID satisfies (hmis:Project[hmis:ProjectID = $id]/hmis:ProjectType/text()='1')) then (true()) else false()) else (true()))"/>
+		<xs:assert test="every $inventory in hmis:Inventory satisfies (if (boolean($inventory/hmis:Availability) or boolean($inventory/hmis:FacilityBedInventory) or boolean($inventory/hmis:VoucherBedInventory) or boolean($inventory/hmis:OtherBedInventory)) then (if (every $id in $inventory/hmis:ProjectID satisfies (hmis:Project[hmis:ProjectID = $id]/hmis:ProjectType/text()='1')) then (true()) else false()) else (true()))"/>
 		<!-- Checking that there is only one Head of Household per Household enrolled -->
 		<xs:assert test="every $id in hmis:Enrollment/hmis:HouseholdID satisfies (fn:count(hmis:Enrollment/hmis:RelationshipToHoH[text()= '1'][../hmis:HouseholdID = $id] ) eq 1)"/>						
 		
@@ -1039,7 +1035,7 @@
 					<xs:documentation xml:lang="en">Reference to the HealthInsurance's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -1182,7 +1178,7 @@
 					<xs:documentation xml:lang="en">Reference to the HealthStatus' unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -1266,7 +1262,7 @@
 					<xs:documentation xml:lang="en">Reference to the IncomeAndSources' unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>				
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -1558,11 +1554,6 @@
 		</xs:sequence>
 		<xs:attribute ref="hmis:informationDate" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
-		<!-- and $project/ProjectType/text()='1') 
-			boolean(hmis:Availability) else (if (not(hmis:Project[ProjectID/text()]/ProjectType/text()='1')) then (not(boolean(hmis:Availability))) else false())"/>
--->		<!-- add other 3 tests for new elements 
-		some $emp in /emps/employee satisfies 
-     ($emp/bonus > 0.25 * $emp/salary)-->
 	</xs:complexType>
 
 	<xs:complexType name="medicalAssistance">
@@ -1572,7 +1563,7 @@
 					<xs:documentation xml:lang="en">Reference to the MedicalAssistance's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -1612,7 +1603,7 @@
 					<xs:documentation xml:lang="en">Reference to the NonCashBenefits's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>						
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -1701,7 +1692,7 @@
 					<xs:documentation xml:lang="en">Reference to the PathStatus' unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -1794,19 +1785,19 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
 
-	<xs:complexType name="residentialMoveInDate">
+	<xs:complexType name="moveInDate">
 		<xs:sequence>
-			<xs:element name="ResidentialMoveInDateID" type="hmis:string32">
+			<xs:element name="MoveInDateID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the ResidentialMoveInDate's unique ID</xs:documentation>
+					<xs:documentation xml:lang="en">Reference to the MoveInDate's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ResidentialMoveInDate" type="xs:date" minOccurs="0">
+			<xs:element name="MoveInDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 4.17.1A.</xs:documentation>
 				</xs:annotation>
@@ -1822,7 +1813,7 @@
 					<xs:documentation xml:lang="en">Reference to the RHYBCPStatus' unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -1856,7 +1847,7 @@
 					<xs:documentation xml:lang="en">Reference to the Services' unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -2072,51 +2063,64 @@
 		<xs:assert test="if (not (hmis:RecordType/text() ='151') and not (hmis:RecordType/text() ='152')) then (not (boolean(hmis:FAAmount))) else boolean(hmis:FAAmount)"/>
 	</xs:complexType>
 
-	<xs:complexType name="site">
+	<xs:complexType name="geography">
 		<xs:sequence>
-			<xs:element name="SiteID" type="hmis:string32">
+			<xs:element name="GeographyID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the Site's unique ID</xs:documentation>
+					<xs:documentation xml:lang="en">Reference to the Geography's unique ID</xs:documentation>
 				</xs:annotation>
-			</xs:element>
-			<xs:element name="CoCCode" type="hmis:string32">
-					<xs:annotation>
-						<xs:documentation xml:lang="en">Key reference to the CoC</xs:documentation>
-					</xs:annotation>
 			</xs:element>
 			<xs:element name="ProjectID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Project</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PrincipalSite" type="hmis:noYesOnly">
+			<xs:element name="InformationDate" type="xs:date">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.8.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Address" type="hmis:string100" minOccurs="0">
+			<xs:element name="CoCCode" type="hmis:cocCode">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Key reference to the CoC</xs:documentation>
+						<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.8.2.</xs:documentation>
+					</xs:annotation>
+			</xs:element>
+			<xs:element name="Geocode" type="hmis:geocode">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Street Address</xs:documentation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.8.3</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="GeographyType" type="hmis:geographyType" >
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.8.7</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Address1" type="hmis:string100" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.8.9</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Address2" type="hmis:string100" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.8.10</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="City" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">City of Address</xs:documentation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.8.11</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="State" type="hmis:state" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">State of Address</xs:documentation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.8.12</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ZIP" type="hmis:zipCode" minOccurs="0">
 				<xs:annotation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.8.6</xs:documentation>
 					<xs:documentation xml:lang="en">See https://tools.usps.com/go/ZipLookupAction!input.action</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Geocode" type="hmis:geocode" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.8.1.A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -2189,7 +2193,7 @@
 				</xs:key>
 				<xs:key name="enrollmentKey">
 					<xs:selector xpath="hmis:Enrollment"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:key>
 				<xs:key name="exitKey">
 					<xs:selector xpath="hmis:Exit"/>
@@ -2221,103 +2225,103 @@
 				</xs:keyref>
 				<xs:keyref name="enrollmentCoCEnrollmentKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:EnrollmentCoC"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>					
+					<xs:field xpath="hmis:EnrollmentID"/>					
 				</xs:keyref>
 				<xs:keyref name="enrollmentContactKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:Contact"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>					
+					<xs:field xpath="hmis:EnrollmentID"/>					
 				</xs:keyref>
 				<xs:keyref name="enrollmentDateOfEngagementKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:DateOfEngagement"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentDisabilitiesKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:Disabilities"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentDomesticViolenceKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:DomesticViolence"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentEducationKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:Education"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentEmploymentKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:Employment"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentEnrollmentCoCKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:EnrollmentCoC"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentExitKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:Exit"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentFormerWardChildWelfareKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:FormerWardChildWelfare"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentFormerWardJuvenileJusticeKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:FormerWardJuvenileJustice"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentHealthInsuranceKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:HealthInsurance"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentHealthStatusKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:HealthStatus"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentIncomeAndSourcesKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:IncomeAndSources"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentMedicalAssistanceKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:MedicalAssistance"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentNonCashBenefitsKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:NonCashBenefits"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentPATHStatusKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:PATHStatus"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentEntrySSVFKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:EntrySSVF"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentReferralSourceKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:ReferralSource"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
-				<xs:keyref name="enrollmentResidentialMoveInDateKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:ResidentialMoveInDate"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+				<xs:keyref name="enrollmentMoveInDateKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:MoveInDate"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentRHYBCPStatusKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:NonCashBenefits"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentServiceFAReferralKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:ServiceFAReferral"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentSexualOrientationKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:SexualOrientation"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentEntryRHSPKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:EntryRHSP"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="enrollmentEntryRHYKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:EntryRHY"/>
-					<xs:field xpath="hmis:ProjectEntryID"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="exitExitHousingAssessmentKeyRef" refer="exitKey">
 					<xs:selector xpath="hmis:ExitHousingAssessment"/>
@@ -2355,8 +2359,8 @@
 					<xs:selector xpath="hmis:Funder"/>
 					<xs:field xpath="hmis:ProjectID"/>
 				</xs:keyref>
-				<xs:keyref name="siteCoCKeyRef" refer="cocKey">
-					<xs:selector xpath="hmis:Site"/>
+				<xs:keyref name="geographyCoCKeyRef" refer="cocKey">
+					<xs:selector xpath="hmis:Geography"/>
 					<xs:field xpath="hmis:CoCCode"/>					
 				</xs:keyref>
 				<xs:keyref name="clientVeteranInfoClientKeyRef" refer="clientKey">
@@ -2494,7 +2498,7 @@
 					<xs:documentation xml:lang="en">Reference to the EntryRHSP's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>				
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -2515,7 +2519,7 @@
 					<xs:documentation xml:lang="en">Reference to the EntryRHY' unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>			
-			<xs:element name="ProjectEntryID" type="hmis:string32">
+			<xs:element name="EnrollmentID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
@@ -2787,7 +2791,11 @@
 		</xs:simpleType>
 	</xs:attribute>
 	
-	<xs:attribute name="informationDate" type="xs:date"/>
+	<xs:attribute name="informationDate" type="xs:date">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 5.4.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
 	
 	<xs:attributeGroup name="baseMetaData">
 		<xs:annotation>
@@ -3773,7 +3781,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="reportingPeriod">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">‘reportingPeriod’ exports include all records needed for reporting on clients and enrollments active in the export period.  This will include all records in Enrollments (regardless of informationDate, dateCreated, dateUpdated, etc.), client files, and project descriptor files associated with a ProjectEntryID where: ProjectEntryDate is on or before the Export.EndDate; Project.ExitDate is null OR Project.ExitDate is on or after the Export.StartDate; ProjectID is associated with a project selected by a user for export OR the user did not choose to filter the export by Project; A CoCCode associated with the ProjectEntryID matches a CoCCode selected by a user for export OR the user did not choose to filter the export by CoCCode.</xs:documentation>
+					<xs:documentation xml:lang="en">‘reportingPeriod’ exports include all records needed for reporting on clients and enrollments active in the export period.  This will include all records in Enrollments (regardless of informationDate, dateCreated, dateUpdated, etc.), client files, and project descriptor files associated with a EnrollmentID where: EnrollmentDate is on or before the Export.EndDate; Project.ExitDate is null OR Project.ExitDate is on or after the Export.StartDate; ProjectID is associated with a project selected by a user for export OR the user did not choose to filter the export by Project; A CoCCode associated with the EnrollmentID matches a CoCCode selected by a user for export OR the user did not choose to filter the export by CoCCode.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="other">
@@ -4173,6 +4181,34 @@
 	<xs:simpleType name="geocode">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:pattern value="[0-9]{6}"></xs:pattern>    
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="geographyType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				Geography Type 
+				1 = Urban 
+				2 = Suburban 
+				3 = Rural
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Urban</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Suburban</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Rural</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	
@@ -5682,13 +5718,13 @@
 			</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="residencePrior">
+	<xs:simpleType name="livingSituation">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">	
 				Residence Type
 				1 = Emergency shelter, including hotel or motel paid for with emergency shelter voucher
 				2 = Transitional housing for homeless persons (including homeless youth)
-				3 = Permanent housing for formerly homeless persons (such as: CoC project; HUD legacy programs; or HOPWA PH) 
+				3 = Permanent housing (other than RRH) for formerly homeless persons
 				4 = Psychiatric hospital or other psychiatric facility
 				5 = Substance abuse treatment facility or detox center
 				6 = Hospital or other residential non-psychiatric medical facility
@@ -5698,12 +5734,12 @@
 				12 = Staying or living in a family member’s room, apartment or house          
 				13 = Staying or living in a friend’s room, apartment or house
 				14 = Hotel or motel paid for without emergency shelter voucher 
-				15 = Foster care home or foster care group home				
+				15 = Foster care home or foster care group home				s
 				16 = Place not meant for habitation (e.g., a vehicle, an abandoned building, bus/train/subway station/airport or anywhere outside)
 				17 = Other
 				18 = Safe Haven
 				19 = Rental by client, with VASH subsidy
-				20 = Rental by client, with other ongoing housing subsidy
+				20 = Rental by client, with other housing subsidy (including RRH)
 				21 = Owned by client, with ongoing housing subsidy 
 				22 = Rental by client, no ongoing housing subsidy
 				23 = Owned by client, no ongoing housing subsidy 
@@ -5848,7 +5884,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="residencePriorLengthOfStay">
+	<xs:simpleType name="lengthOfStay">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">	
 				Length of Stay in Previous Place
@@ -6263,7 +6299,7 @@
 			<xs:enumeration value="AP"/>
 		</xs:restriction>
 	</xs:simpleType>
-
+	
 	<xs:simpleType name="string32">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="32"/>
@@ -6705,7 +6741,7 @@
 	
 	<xs:simpleType name="zipCode">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="[0-9]{5}(-[0-9]{4})?"/>
+			<xs:pattern value="[0-9]{5}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
