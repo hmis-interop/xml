@@ -422,9 +422,10 @@
             <hmis:RHYBCPStatus hmis:dateCreated="2014-10-25T23:14:59Z" hmis:dateUpdated="2015-03-27T23:14:59Z" hmis:userID="ryu">
                 <hmis:RHYBCPStatusID>erffedyte1</hmis:RHYBCPStatusID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
-                <hmis:StatusDate>2014-09-20</hmis:StatusDate>
-                <hmis:FYSBYouth>0</hmis:FYSBYouth>
-                <hmis:ReasonNoServices>3</hmis:ReasonNoServices>
+                <hmis:DateOfBCPStatus>2014-09-20</hmis:DateOfBCPStatus>
+                <hmis:EligibleForRHY>1</hmis:EligibleForRHY>
+                <!-- <hmis:ReasonNoServices>3</hmis:ReasonNoServices> -->
+                <hmis:RunawayYouth>8</hmis:RunawayYouth>
             </hmis:RHYBCPStatus>
             <hmis:ServiceFAReferral hmis:dateCreated="2015-09-04T23:14:59" hmis:dateUpdated="2015-02-28T23:14:59Z" hmis:userID="CoaTbskfRfTvBSHN8_eRmMF4.4O-A">
                 <hmis:ServiceFAReferralID>44gg</hmis:ServiceFAReferralID>
@@ -484,32 +485,12 @@
             <hmis:EntryRHY hmis:dateCreated="2016-05-08T23:14:59" hmis:dateUpdated="2016-05-06T23:14:59Z" hmis:userID="DG4IfIQuAFF6I.yl7">
                 <hmis:EntryRHYID>y76754</hmis:EntryRHYID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
-                <hmis:HouseholdDynamics>0</hmis:HouseholdDynamics>
-                <hmis:SexualOrientation>99</hmis:SexualOrientation>               
-                <hmis:SexualOrientationGenderIDYouth>1</hmis:SexualOrientationGenderIDYouth>
-                <hmis:SexualOrientationGenderIDFam>0</hmis:SexualOrientationGenderIDFam>
-                <hmis:HousingIssuesYouth>1</hmis:HousingIssuesYouth>
-                <hmis:HousingIssuesFam>1</hmis:HousingIssuesFam>
-                <hmis:SchoolEducationalIssuesYouth>0</hmis:SchoolEducationalIssuesYouth>
-                <hmis:SchoolEducationalIssuesFam>0</hmis:SchoolEducationalIssuesFam>
-                <hmis:UnemploymentYouth>1</hmis:UnemploymentYouth>
                 <hmis:UnemploymentFam>0</hmis:UnemploymentFam>
-                <hmis:MentalHealthIssuesYouth>0</hmis:MentalHealthIssuesYouth>
                 <hmis:MentalHealthIssuesFam>0</hmis:MentalHealthIssuesFam>
-                <hmis:HealthIssuesYouth>1</hmis:HealthIssuesYouth>
-                <hmis:HealthIssuesFam>0</hmis:HealthIssuesFam>
-                <hmis:PhysicalDisabilityYouth>0</hmis:PhysicalDisabilityYouth>
                 <hmis:PhysicalDisabilityFam>0</hmis:PhysicalDisabilityFam>
-                <hmis:MentalDisabilityYouth>1</hmis:MentalDisabilityYouth>
-                <hmis:MentalDisabilityFam>0</hmis:MentalDisabilityFam>
-                <hmis:AbuseAndNeglectYouth>0</hmis:AbuseAndNeglectYouth>
-                <hmis:AbuseAndNeglectFam>1</hmis:AbuseAndNeglectFam>
-                <hmis:AlcoholDrugAbuseYouth>0</hmis:AlcoholDrugAbuseYouth>
                 <hmis:AlcoholDrugAbuseFam>0</hmis:AlcoholDrugAbuseFam>
                 <hmis:InsufficientIncome>0</hmis:InsufficientIncome>
-                <hmis:ActiveMilitaryParent>1</hmis:ActiveMilitaryParent>
                 <hmis:IncarceratedParent>1</hmis:IncarceratedParent>
-                <hmis:IncarceratedParentStatus>1</hmis:IncarceratedParentStatus>
                 <hmis:WorkPlaceViolenceThreats>0</hmis:WorkPlaceViolenceThreats>
                 <hmis:WorkplacePromiseDifference>1</hmis:WorkplacePromiseDifference>
                 <hmis:CoercedToContinueWork>0</hmis:CoercedToContinueWork>
