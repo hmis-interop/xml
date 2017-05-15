@@ -173,6 +173,15 @@
             <hmis:ExitRHY hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="Zu6Nb5-">
                 <hmis:ExitRHYID>342r</hmis:ExitRHYID>
                 <hmis:ExitID>C2x</hmis:ExitID>
+                <hmis:ExchangeForSex>1</hmis:ExchangeForSex>
+                <hmis:ExchangeForSexPastThreeMonths>1</hmis:ExchangeForSexPastThreeMonths>
+                <hmis:CountOfExchangeForSex>3</hmis:CountOfExchangeForSex>
+                <hmis:AskedOrForcedToExchangeForSex>1</hmis:AskedOrForcedToExchangeForSex>
+                <hmis:AskedOrForcedToExchangeForSexPastThreeMonths>8</hmis:AskedOrForcedToExchangeForSexPastThreeMonths>
+                <hmis:WorkPlaceViolenceThreats>0</hmis:WorkPlaceViolenceThreats>
+                <hmis:WorkplacePromiseDifference>1</hmis:WorkplacePromiseDifference>
+                <hmis:CoercedToContinueWork>0</hmis:CoercedToContinueWork>
+                <hmis:LaborExploitPastThreeMonths>8</hmis:LaborExploitPastThreeMonths>
                 <hmis:WrittenAftercarePlan>9</hmis:WrittenAftercarePlan>
                 <hmis:AssistanceMainstreamBenefits>0</hmis:AssistanceMainstreamBenefits>
                 <hmis:PermanentHousingPlacement>0</hmis:PermanentHousingPlacement>
@@ -491,15 +500,6 @@
                 <hmis:AlcoholDrugAbuseFam>0</hmis:AlcoholDrugAbuseFam>
                 <hmis:InsufficientIncome>0</hmis:InsufficientIncome>
                 <hmis:IncarceratedParent>1</hmis:IncarceratedParent>
-                <hmis:WorkPlaceViolenceThreats>0</hmis:WorkPlaceViolenceThreats>
-                <hmis:WorkplacePromiseDifference>1</hmis:WorkplacePromiseDifference>
-                <hmis:CoercedToContinueWork>0</hmis:CoercedToContinueWork>
-                <hmis:LaborExploitPastThreeMonths>8</hmis:LaborExploitPastThreeMonths>
-                <hmis:ExchangeForSex>1</hmis:ExchangeForSex>
-                <hmis:ExchangeForSexPastThreeMonths>1</hmis:ExchangeForSexPastThreeMonths>
-                <hmis:CountOfExchangeForSex>3</hmis:CountOfExchangeForSex>
-                <hmis:AskedOrForcedToExchangeForSex>1</hmis:AskedOrForcedToExchangeForSex>
-                <hmis:AskedOrForcedToExchangeForSexPastThreeMonths>8</hmis:AskedOrForcedToExchangeForSexPastThreeMonths>
                 <hmis:FormerWardJuvenileJustice>9</hmis:FormerWardJuvenileJustice>
                 <hmis:JuvenileJusticeYears>3</hmis:JuvenileJusticeYears>
                 <hmis:JuvenileJusticeMonths>2</hmis:JuvenileJusticeMonths>
