@@ -182,18 +182,6 @@
                 <hmis:WorkplacePromiseDifference>1</hmis:WorkplacePromiseDifference>
                 <hmis:CoercedToContinueWork>0</hmis:CoercedToContinueWork>
                 <hmis:LaborExploitPastThreeMonths>8</hmis:LaborExploitPastThreeMonths>
-                <hmis:WrittenAftercarePlan>9</hmis:WrittenAftercarePlan>
-                <hmis:AssistanceMainstreamBenefits>0</hmis:AssistanceMainstreamBenefits>
-                <hmis:PermanentHousingPlacement>0</hmis:PermanentHousingPlacement>
-                <hmis:TemporaryShelterPlacement>0</hmis:TemporaryShelterPlacement>
-                <hmis:ExitCounseling>0</hmis:ExitCounseling>
-                <hmis:FurtherFollowUpServices>1</hmis:FurtherFollowUpServices>
-                <hmis:ScheduledFollowUpContacts>1</hmis:ScheduledFollowUpContacts>
-                <hmis:ResourcePackage>9</hmis:ResourcePackage>
-                <hmis:OtherAftercarePlanOrAction>0</hmis:OtherAftercarePlanOrAction>
-                <hmis:FamilyReunificationAchieved>1</hmis:FamilyReunificationAchieved>
-                <hmis:ProjectCompletionStatus>3</hmis:ProjectCompletionStatus>
-                <hmis:EarlyExitReason>1</hmis:EarlyExitReason>
             </hmis:ExitRHY>
 
             <hmis:Funder hmis:dateCreated="2015-09-19T23:14:59" hmis:dateUpdated="2016-01-29T23:14:59Z" hmis:userID="m2Pym5-77tSVuI-IjerY">
@@ -428,6 +416,16 @@
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:MoveInDate>2016-05-19Z</hmis:MoveInDate>
             </hmis:MoveInDate>
+            <hmis:RHYAftercare hmis:dateCreated="2015-04-25T23:14:59" hmis:dateUpdated="2015-04-25T23:14:59" hmis:userID="AUfZ2">
+                <hmis:RhyAfterCareID>34Rwwh</hmis:RhyAfterCareID>
+                <hmis:ExitID></hmis:ExitID>
+                <hmis:AfterCareDate>2015-04-25</hmis:AfterCareDate>
+                <hmis:AfterCareProvided>1</hmis:AfterCareProvided>
+                <hmis:EmailSocialMedia>99</hmis:EmailSocialMedia>
+                <hmis:Telephone>0</hmis:Telephone>
+                <hmis:InPersonIndividual>1</hmis:InPersonIndividual>
+                <hmis:InPersonGroup>1</hmis:InPersonGroup>
+            </hmis:RHYAftercare>
             <hmis:RHYBCPStatus hmis:dateCreated="2014-10-25T23:14:59Z" hmis:dateUpdated="2015-03-27T23:14:59Z" hmis:userID="ryu">
                 <hmis:RHYBCPStatusID>erffedyte1</hmis:RHYBCPStatusID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>

@@ -820,54 +820,39 @@
 					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section R18.B.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WrittenAftercarePlan" type="hmis:noYesRefused"  minOccurs="0">
+			<xs:element name="SessionsInPlan" type="xs:unsignedInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 4.36.1.</xs:documentation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section R18.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AssistanceMainstreamBenefits" type="hmis:noYesRefused"  minOccurs="0">
+			<xs:element name="PostExitCounselingPlan" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 4.36.2.</xs:documentation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section R18.3.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PermanentHousingPlacement" type="hmis:noYesRefused"  minOccurs="0">
+			<xs:element name="DestinationSafeClient" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 4.36.3.</xs:documentation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section R19.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TemporaryShelterPlacement" type="hmis:noYesRefused"  minOccurs="0">
+			<xs:element name="DestinationSafeWorker" type="hmis:noYesWorkerDoesntKnow" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 4.36.4.</xs:documentation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section R19.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ExitCounseling" type="hmis:noYesRefused"  minOccurs="0">
+			<xs:element name="PosAdultConnections" type="hmis:noYesWorkerDoesntKnow" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 4.36.5.</xs:documentation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section R19.3.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FurtherFollowUpServices" type="hmis:noYesRefused"  minOccurs="0">
+			<xs:element name="PosPeerConnections" type="hmis:noYesWorkerDoesntKnow" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 4.36.6.</xs:documentation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section R19.4.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ScheduledFollowUpContacts" type="hmis:noYesRefused"  minOccurs="0">
+			<xs:element name="PosCommunityConnections" type="hmis:noYesWorkerDoesntKnow" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 4.36.7.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ResourcePackage" type="hmis:noYesRefused"  minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 4.36.8.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="OtherAftercarePlanOrAction" type="hmis:noYesRefused"  minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 4.36.9.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="FamilyReunificationAchieved" type="hmis:noYesDoesntKnowRefused"  minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 4.38.1.</xs:documentation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section R19.5.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -889,14 +874,14 @@
 		<!--Testing if ExchangeForSex is 1, before allowing use of AskedOrForcedToExchangeForSex-->
 		<xs:assert test="if (hmis:ExchangeForSex/text()='1') then boolean(hmis:AskedOrForcedToExchangeForSex) else (if (not(hmis:ExchangeForSex/text()='1')) then (not(boolean(hmis:AskedOrForcedToExchangeForSex))) else false())"/>
 		
-		<!--Testing if AskedOrForcedToExchangeForSex is 1, before allowing use of AskedOrForcedToExchangeForSex-->
+		<!--Testing if AskedOrForcedToExchangeForSex is 1, before allowing use of AskedOrForcedToExchangeForSexPastThreeMonths-->
 		<xs:assert test="if (hmis:AskedOrForcedToExchangeForSex/text()='1') then boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths) else (if (not(hmis:AskedOrForcedToExchangeForSex/text()='1')) then (not(boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths))) else false())"/>
 		
-		<!--Testing if CounselingReceived is 1, before allowing use of AskedOrForcedToExchangeForSex-->
-		<xs:assert test="if (hmis:/text()='1') then boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths) else (if (not(hmis:AskedOrForcedToExchangeForSex/text()='1')) then (not(boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths))) else false())"/>
+		<!--Testing if CounselingReceived is 1, before allowing use of CounselingType-->
+		<xs:assert test="if (hmis:CounselingReceived/text()='1') then boolean(hmis:CounselingType) else (if (not(CounselingReceived/text()='1')) then (not(boolean(hmis:CounselingType))) else false())"/>
 		
-		<!--Testing if AskedOrForcedToExchangeForSex is 1, before allowing use of AskedOrForcedToExchangeForSex-->
-		<xs:blah test="if (hmis:/text()='1') then boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths) else (if (not(hmis:AskedOrForcedToExchangeForSex/text()='1')) then (not(boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths))) else false())"/>
+		<!--Testing if CounselingReceived is 1, before allowing use of SessionCountAtExit-->
+		<xs:assert test="if (hmis:CounselingReceived/text()='1') then boolean(hmis:SessionCountAtExit) else (if (not(hmis:CounselingReceived/text()='1')) then (not(boolean(hmis:SessionCountAtExit))) else false())"/>
 		
 	</xs:complexType>
 
@@ -929,6 +914,7 @@
 			</xs:element>
 			<xs:choice maxOccurs="unbounded">
 				<xs:element name="Affiliation" type="hmis:affiliation"/>
+				<xs:element name="RHYAftercare" type="hmis:rhyAftercare"/>
 				<xs:element name="Client" type="hmis:client"/>
 				<xs:element name="ConnectionWithSOAR" type="hmis:connectionWithSOAR"/>
 				<xs:element name="DateOfEngagement" type="hmis:dateOfEngagement"/>
@@ -1072,6 +1058,8 @@
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Affiliation[hmis:ProjectID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:CoC[hmis:ProjectID = $id]) ge 1)"/>
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Funder[hmis:ProjectID = $id]) ge 1)"/>
+		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:RHYAftercare[hmis:ExitID = $id]) le 1)"/>
+	
 		<!-- Checking that that the Project Type = ‘Emergency shelter’ for certain 2.7 data elements to exist -->
 		<xs:assert test="every $inventory in hmis:Inventory satisfies (if (boolean($inventory/hmis:Availability) or boolean($inventory/hmis:FacilityBedInventory) or boolean($inventory/hmis:VoucherBedInventory) or boolean($inventory/hmis:OtherBedInventory)) then (if (every $id in $inventory/hmis:ProjectID satisfies (hmis:Project[hmis:ProjectID = $id]/hmis:ProjectType/text()='1')) then (true()) else false()) else (true()))"/>
 		<!-- Checking that there is only one Head of Household per Household enrolled -->
@@ -1891,6 +1879,66 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
+	</xs:complexType>
+	
+	<xs:complexType name="rhyAftercare">
+		<xs:sequence>
+			<xs:element name="RhyAfterCareID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the rhyAftercare's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExitID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AfterCareDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section R20.1.  Renamed to match CSV's name for this element, which was made specific, since this section is merged into Exit.csv for normalization reasons.</xs:documentation>
+					<xs:documentation xml:lang="en">Must be between ExitDate and ExitDate +  180 days AND AftercareProvided is not null</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AfterCareProvided" type="hmis:noYesRefused">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section R20.2.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EmailSocialMedia" type="hmis:noYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section R20.A: via email/social media.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Telephone" type="hmis:noYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section R20.A: via telephone</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="InPersonIndividual" type="hmis:noYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section R20.A: via in person: one-on-one.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="InPersonGroup" type="hmis:noYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section R20.A: via in person: group.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="hmis:baseMetaData"/>
+		
+		<!--Testing if AfterCareProvided is 1, before allowing use of EmailSocialMedia-->
+		<xs:assert test="if (hmis:AfterCareProvided/text()='1') then boolean(hmis:EmailSocialMedia) else (if (not(hmis:AfterCareProvided/text()='1')) then (not(boolean(hmis:EmailSocialMedia))) else false())"/>
+	
+		<!--Testing if AfterCareProvided is 1, before allowing use of Telephone-->
+		<xs:assert test="if (hmis:AfterCareProvided/text()='1') then boolean(hmis:Telephone) else (if (not(hmis:AfterCareProvided/text()='1')) then (not(boolean(hmis:Telephone))) else false())"/>
+		
+		<!--Testing if AfterCareProvided is 1, before allowing use of InPersonIndividual-->
+		<xs:assert test="if (hmis:AfterCareProvided/text()='1') then boolean(hmis:InPersonIndividual) else (if (not(hmis:AfterCareProvided/text()='1')) then (not(boolean(hmis:InPersonIndividual))) else false())"/>
+
+		<!--Testing if AfterCareProvided is 1, before allowing use of InPersonGroup-->
+		<xs:assert test="if (hmis:AfterCareProvided/text()='1') then boolean(hmis:InPersonGroup) else (if (not(hmis:AfterCareProvided/text()='1')) then (not(boolean(hmis:InPersonGroup))) else false())"/>
+		
 	</xs:complexType>
 	
 	<xs:complexType name="rhyBCPStatus">
@@ -3630,7 +3678,7 @@
 		<xs:pattern value="(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}"/>
 		</xs:restriction>
 	</xs:simpleType>
-
+	
 	<xs:simpleType name="employmentType">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
@@ -4865,7 +4913,7 @@
 	
 	<xs:simpleType name="noYesRefused">
 		<xs:annotation>
-			<xs:documentation xml:lang="en">0 = No, 1 = Yes, 2 = Client refused, 99 = Data Not Collected</xs:documentation>
+			<xs:documentation xml:lang="en">0 = No, 1 = Yes, 9 = Client refused, 99 = Data Not Collected</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
@@ -4881,6 +4929,34 @@
 			<xs:enumeration value="9">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="noYesWorkerDoesntKnow">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">0 = No, 1 = Yes, 2 = Worker Doesn't Know, 99 = Data Not Collected</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">No</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Yes</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Worker Doesn't Know</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
