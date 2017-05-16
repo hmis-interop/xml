@@ -118,7 +118,7 @@
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:PersonalID>A1a1</hmis:PersonalID>
                 <hmis:ProjectID>222D</hmis:ProjectID>
-                <hmis:EntryDate>2016-04-12Z</hmis:EntryDate>
+                <hmis:ProjectStartDate>2016-04-12Z</hmis:ProjectStartDate>
                 <hmis:HouseholdID>a34563w</hmis:HouseholdID>
                 <hmis:RelationshipToHoH>1</hmis:RelationshipToHoH>
                 <hmis:LivingSituation>17</hmis:LivingSituation>
@@ -133,7 +133,7 @@
                 <hmis:EnrollmentID>w5642</hmis:EnrollmentID>
                 <hmis:PersonalID>A1a1</hmis:PersonalID>
                 <hmis:ProjectID>222D</hmis:ProjectID>
-                <hmis:EntryDate>2016-04-12Z</hmis:EntryDate>
+                <hmis:ProjectStartDate>2016-04-12Z</hmis:ProjectStartDate>
                 <hmis:HouseholdID>a34563w</hmis:HouseholdID>
                 <hmis:RelationshipToHoH>3</hmis:RelationshipToHoH>
                 <hmis:LivingSituation>17</hmis:LivingSituation>
@@ -147,7 +147,7 @@
                 <hmis:EnrollmentID>w5643</hmis:EnrollmentID>
                 <hmis:PersonalID>A1a1</hmis:PersonalID>
                 <hmis:ProjectID>222E</hmis:ProjectID>
-                <hmis:EntryDate>2016-04-12Z</hmis:EntryDate>
+                <hmis:ProjectStartDate>2016-04-12Z</hmis:ProjectStartDate>
                 <hmis:HouseholdID>a34563w</hmis:HouseholdID>
                 <hmis:RelationshipToHoH>2</hmis:RelationshipToHoH>
                 <hmis:LivingSituation>17</hmis:LivingSituation>
@@ -248,6 +248,16 @@
                 <hmis:WorkplacePromiseDifference>1</hmis:WorkplacePromiseDifference>
                 <hmis:CoercedToContinueWork>0</hmis:CoercedToContinueWork>
                 <hmis:LaborExploitPastThreeMonths>8</hmis:LaborExploitPastThreeMonths>
+                <hmis:CounselingReceived>1</hmis:CounselingReceived>
+                <hmis:CounselingType>2</hmis:CounselingType>
+                <hmis:SessionCountAtExit>23</hmis:SessionCountAtExit>
+                <hmis:SessionsInPlan>1</hmis:SessionsInPlan>
+                <hmis:PostExitCounselingPlan>0</hmis:PostExitCounselingPlan>
+                <hmis:DestinationSafeClient>1</hmis:DestinationSafeClient>
+                <hmis:DestinationSafeWorker>0</hmis:DestinationSafeWorker>
+                <hmis:PosAdultConnections>2</hmis:PosAdultConnections>
+                <hmis:PosPeerConnections>1</hmis:PosPeerConnections>
+                <hmis:PosCommunityConnections>0</hmis:PosCommunityConnections>                
             </hmis:ExitRHY>
             <hmis:Funder hmis:dateCreated="2015-09-19T23:14:59" hmis:dateUpdated="2016-01-29T23:14:59Z" hmis:userID="m2Pym5-77tSVuI-IjerY">
                 <hmis:FunderID>76g</hmis:FunderID>
