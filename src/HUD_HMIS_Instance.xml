@@ -44,6 +44,30 @@
                 <hmis:Race>8</hmis:Race>
                 <hmis:VeteranStatus>9</hmis:VeteranStatus>
             </hmis:Client>
+            <hmis:ClientVeteranInfo hmis:dateCreated="2014-12-17T23:14:59" hmis:dateUpdated="2016-03-10T23:14:59" hmis:userID="dZPlRM">
+                <hmis:ClientVeteranInfoID>7878665s</hmis:ClientVeteranInfoID>
+                <hmis:PersonalID>A1a1</hmis:PersonalID>
+                <hmis:YearEnteredService>2002</hmis:YearEnteredService>
+                <hmis:YearSeparated>2004</hmis:YearSeparated>
+                <hmis:WorldWarII>0</hmis:WorldWarII>
+                <hmis:KoreanWar>99</hmis:KoreanWar>
+                <hmis:VietnamWar>1</hmis:VietnamWar>
+                <hmis:DesertStorm>0</hmis:DesertStorm>
+                <hmis:AfghanistanOEF>8</hmis:AfghanistanOEF>
+                <hmis:IraqOIF>9</hmis:IraqOIF>
+                <hmis:IraqOND>99</hmis:IraqOND>
+                <hmis:OtherTheater>8</hmis:OtherTheater>
+                <hmis:MilitaryBranch>8</hmis:MilitaryBranch>
+                <hmis:DischargeStatus>6</hmis:DischargeStatus>
+            </hmis:ClientVeteranInfo>
+            <hmis:CoC  hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="bmerriweather">
+                <hmis:CoCCode>BZ-123</hmis:CoCCode>
+                <hmis:ProjectID>222D</hmis:ProjectID>
+            </hmis:CoC>
+            <hmis:CoC  hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="bmerriweather">
+                <hmis:CoCCode>MA-500</hmis:CoCCode>
+                <hmis:ProjectID>222E</hmis:ProjectID>
+            </hmis:CoC>
             <hmis:ConnectionWithSOAR hmis:dataCollectionStage="1" hmis:informationDate="2014-09-01"  hmis:dateCreated="2015-08-13T23:14:59" hmis:dateUpdated="2015-03-30T23:14:59" hmis:userID="IFmMP">
                 <hmis:ConnectionWithSOARID>784r5</hmis:ConnectionWithSOARID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
@@ -61,10 +85,6 @@
                 <hmis:DisabilityType>8</hmis:DisabilityType>
                 <hmis:DisabilityResponse>2</hmis:DisabilityResponse>
                 <hmis:IndefiniteAndImpairsIndependence>9</hmis:IndefiniteAndImpairsIndependence>
-                <hmis:DocumentationOnFile>1</hmis:DocumentationOnFile>
-                <hmis:ReceivingServices>99</hmis:ReceivingServices>
-                <hmis:PATHHowConfirmed>1</hmis:PATHHowConfirmed>
-                <hmis:PATHSMIInformation>3</hmis:PATHSMIInformation>
                 <hmis:TCellCountAvailable>1</hmis:TCellCountAvailable>
                 <hmis:TCellCount>1401</hmis:TCellCount>
                 <hmis:TCellSource>3</hmis:TCellSource>
@@ -151,6 +171,50 @@
                 <hmis:HouseholdID>a34563w</hmis:HouseholdID>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
             </hmis:EnrollmentCoC>
+            <hmis:EntryRHY hmis:dateCreated="2016-05-08T23:14:59" hmis:dateUpdated="2016-05-06T23:14:59Z" hmis:userID="DG4IfIQuAFF6I.yl7">
+                <hmis:EntryRHYID>y76754</hmis:EntryRHYID>
+                <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
+                <hmis:UnemploymentFam>0</hmis:UnemploymentFam>
+                <hmis:MentalHealthIssuesFam>0</hmis:MentalHealthIssuesFam>
+                <hmis:PhysicalDisabilityFam>0</hmis:PhysicalDisabilityFam>
+                <hmis:AlcoholDrugAbuseFam>0</hmis:AlcoholDrugAbuseFam>
+                <hmis:InsufficientIncome>0</hmis:InsufficientIncome>
+                <hmis:IncarceratedParent>1</hmis:IncarceratedParent>
+                <hmis:FormerWardJuvenileJustice>9</hmis:FormerWardJuvenileJustice>
+                <hmis:JuvenileJusticeYears>3</hmis:JuvenileJusticeYears>
+                <hmis:JuvenileJusticeMonths>2</hmis:JuvenileJusticeMonths>
+                <hmis:FormerWardChildWelfare>1</hmis:FormerWardChildWelfare>
+                <hmis:ChildWelfareYears>2</hmis:ChildWelfareYears>
+                <hmis:ChildWelfareMonths>42</hmis:ChildWelfareMonths>
+                <hmis:ReferralSource>18</hmis:ReferralSource>
+                <hmis:CountOutreachReferralApproaches>3</hmis:CountOutreachReferralApproaches>
+            </hmis:EntryRHY>
+            <hmis:EntrySSVF hmis:dateCreated="2014-11-21T23:14:59Z" hmis:dateUpdated="2015-06-11T23:14:59" hmis:userID="7653">
+                <hmis:EntrySSVFID>787ughj55</hmis:EntrySSVFID>
+                <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
+                <hmis:PercentAMI>1</hmis:PercentAMI>
+                <hmis:LastPermanentStreet>13th Ave W</hmis:LastPermanentStreet>
+                <hmis:LastPermanentCity>Yreka</hmis:LastPermanentCity>
+                <hmis:LastPermanentState>AR</hmis:LastPermanentState>
+                <hmis:LastPermanentZIP>57601</hmis:LastPermanentZIP>
+                <hmis:AddressDataQuality>2</hmis:AddressDataQuality>
+                <hmis:UrgentReferral>0</hmis:UrgentReferral>
+                <hmis:TimeToHousingLoss>99</hmis:TimeToHousingLoss>
+                <hmis:ZeroIncome>1</hmis:ZeroIncome>
+                <hmis:AnnualPercentAMI>2</hmis:AnnualPercentAMI>
+                <hmis:FinancialChange>99</hmis:FinancialChange>
+                <hmis:HouseholdChange>0</hmis:HouseholdChange>
+                <hmis:EvictionHistory>3</hmis:EvictionHistory>
+                <hmis:SubsidyAtRisk>1</hmis:SubsidyAtRisk>
+                <hmis:LiteralHomelessHistory>2</hmis:LiteralHomelessHistory>
+                <hmis:DisabledHoH>99</hmis:DisabledHoH>
+                <hmis:CriminalRecord>1</hmis:CriminalRecord>
+                <hmis:DependentUnder6>0</hmis:DependentUnder6>
+                <hmis:FemVet>0</hmis:FemVet>
+                <hmis:HPScreeningScore>23</hmis:HPScreeningScore>
+                <hmis:ThresholdScore>342</hmis:ThresholdScore>
+                <hmis:VAMCStation>123Ab678</hmis:VAMCStation>
+            </hmis:EntrySSVF>
             <hmis:Exit hmis:dateCreated="2014-10-07T23:14:59Z" hmis:dateUpdated="2015-11-06T23:14:59Z" hmis:userID="GO">
                 <hmis:ExitID>C2x</hmis:ExitID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
@@ -173,6 +237,8 @@
             <hmis:ExitRHY hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="Zu6Nb5-">
                 <hmis:ExitRHYID>342r</hmis:ExitRHYID>
                 <hmis:ExitID>C2x</hmis:ExitID>
+                <hmis:ProjectCompletionStatus>3</hmis:ProjectCompletionStatus>
+                <hmis:EarlyExitReason>2</hmis:EarlyExitReason>
                 <hmis:ExchangeForSex>1</hmis:ExchangeForSex>
                 <hmis:ExchangeForSexPastThreeMonths>1</hmis:ExchangeForSexPastThreeMonths>
                 <hmis:CountOfExchangeForSex>3</hmis:CountOfExchangeForSex>
@@ -183,7 +249,6 @@
                 <hmis:CoercedToContinueWork>0</hmis:CoercedToContinueWork>
                 <hmis:LaborExploitPastThreeMonths>8</hmis:LaborExploitPastThreeMonths>
             </hmis:ExitRHY>
-
             <hmis:Funder hmis:dateCreated="2015-09-19T23:14:59" hmis:dateUpdated="2016-01-29T23:14:59Z" hmis:userID="m2Pym5-77tSVuI-IjerY">
                 <hmis:FunderID>76g</hmis:FunderID>
                 <hmis:ProjectID>222D</hmis:ProjectID>
@@ -200,6 +265,18 @@
                 <hmis:StartDate>2016-06-11Z</hmis:StartDate>
                 <hmis:EndDate>2016-04-08</hmis:EndDate>
             </hmis:Funder>
+            <hmis:Geography hmis:dateCreated="2014-09-03T23:14:59" hmis:dateUpdated="2016-02-25T23:14:59Z" hmis:userID="ck">
+                <hmis:GeographyID>4526</hmis:GeographyID>
+                <hmis:ProjectID>222E</hmis:ProjectID>
+                <hmis:InformationDate>2016-01-10</hmis:InformationDate>
+                <hmis:CoCCode>BZ-123</hmis:CoCCode>
+                <hmis:Geocode>177988</hmis:Geocode>
+                <hmis:GeographyType>2</hmis:GeographyType>
+                <hmis:Address1>111 Pine St.</hmis:Address1>
+                <hmis:City>Tuscaloosa</hmis:City>
+                <hmis:State>OK</hmis:State>
+                <hmis:ZIP>84683</hmis:ZIP>
+            </hmis:Geography>
             <hmis:HealthInsurance hmis:dataCollectionStage="1" hmis:informationDate="2014-11-21" hmis:dateCreated="2016-01-13T23:14:59" hmis:dateUpdated="2014-09-29T23:14:59Z"
                  hmis:userID="NdLgvXYr7g">
                 <hmis:HealthInsuranceID>sw1ws2</hmis:HealthInsuranceID>
@@ -323,6 +400,11 @@
                 <hmis:ADAP>9</hmis:ADAP>
                 <hmis:NoADAPReason>9</hmis:NoADAPReason>
             </hmis:MedicalAssistance>
+            <hmis:MoveInDate hmis:dateCreated="2015-04-25T23:14:59" hmis:dateUpdated="2015-07-23T23:14:59Z" hmis:userID="AUfZ2">
+                <hmis:MoveInDateID>z44332</hmis:MoveInDateID>
+                <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
+                <hmis:MoveInDate>2016-05-19Z</hmis:MoveInDate>
+            </hmis:MoveInDate>
             <hmis:NonCashBenefits hmis:dataCollectionStage="1" hmis:informationDate="2016-05-03" hmis:dateCreated="2014-11-19T23:14:59"
                  hmis:dateUpdated="2015-02-27T23:14:59" hmis:userID="ptravis">
                 <hmis:NonCashBenefitsID>766ww</hmis:NonCashBenefitsID>
@@ -333,8 +415,6 @@
                 <hmis:TANFChildCare>0</hmis:TANFChildCare>
                 <hmis:TANFTransportation>0</hmis:TANFTransportation>
                 <hmis:OtherTANF>0</hmis:OtherTANF>
-                <hmis:RentalAssistanceOngoing>1</hmis:RentalAssistanceOngoing>
-                <hmis:RentalAssistanceTemp>1</hmis:RentalAssistanceTemp>
                 <hmis:OtherBenefitsSource>0</hmis:OtherBenefitsSource>
                 <hmis:OtherBenefitsSourceIdentify>some other source name</hmis:OtherBenefitsSourceIdentify>
             </hmis:NonCashBenefits>
@@ -350,33 +430,6 @@
                 <hmis:ClientEnrolledInPATH>0</hmis:ClientEnrolledInPATH>
                 <hmis:ReasonNotEnrolled>2</hmis:ReasonNotEnrolled>
             </hmis:PATHStatus>
-            <hmis:EntrySSVF hmis:dateCreated="2014-11-21T23:14:59Z" hmis:dateUpdated="2015-06-11T23:14:59" hmis:userID="7653">
-                <hmis:EntrySSVFID>787ughj55</hmis:EntrySSVFID>
-                <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
-                <hmis:PercentAMI>1</hmis:PercentAMI>
-                <hmis:LastPermanentStreet>13th Ave W</hmis:LastPermanentStreet>
-                <hmis:LastPermanentCity>Yreka</hmis:LastPermanentCity>
-                <hmis:LastPermanentState>AR</hmis:LastPermanentState>
-                <hmis:LastPermanentZIP>57601</hmis:LastPermanentZIP>
-                <hmis:AddressDataQuality>2</hmis:AddressDataQuality>
-                <hmis:UrgentReferral>0</hmis:UrgentReferral>
-                <hmis:TimeToHousingLoss>99</hmis:TimeToHousingLoss>
-                <hmis:ZeroIncome>1</hmis:ZeroIncome>
-                <hmis:AnnualPercentAMI>2</hmis:AnnualPercentAMI>
-                <hmis:FinancialChange>99</hmis:FinancialChange>
-                <hmis:HouseholdChange>0</hmis:HouseholdChange>
-                <hmis:EvictionHistory>3</hmis:EvictionHistory>
-                <hmis:SubsidyAtRisk>1</hmis:SubsidyAtRisk>
-                <hmis:LiteralHomelessHistory>2</hmis:LiteralHomelessHistory>
-                <hmis:DisabledHoH>99</hmis:DisabledHoH>
-                <hmis:CriminalRecord>1</hmis:CriminalRecord>
-                <hmis:DependentUnder6>0</hmis:DependentUnder6>
-                <hmis:FemVet>0</hmis:FemVet>
-                <hmis:HPScreeningScore>23</hmis:HPScreeningScore>
-                <hmis:ThresholdScore>342</hmis:ThresholdScore>
-                <hmis:ERVisits>2</hmis:ERVisits>
-                <hmis:VAMCStation>123Ab678</hmis:VAMCStation>
-            </hmis:EntrySSVF>
             <hmis:Project hmis:dateCreated="2016-02-17T23:14:59" hmis:dateUpdated="2015-03-14T23:14:59Z" hmis:userID="j2ZsRLAPv">
                 <hmis:ProjectID>222D</hmis:ProjectID>
                 <hmis:OrganizationID>34</hmis:OrganizationID>
@@ -403,22 +456,9 @@
                 <hmis:TargetPopulation>4</hmis:TargetPopulation>
                 <hmis:ProjectCommonName>City Shelter</hmis:ProjectCommonName>
             </hmis:Project>
-            <hmis:CoC  hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="bmerriweather">
-                <hmis:CoCCode>BZ-123</hmis:CoCCode>
-                <hmis:ProjectID>222D</hmis:ProjectID>
-            </hmis:CoC>
-            <hmis:CoC  hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="bmerriweather">
-                <hmis:CoCCode>MA-500</hmis:CoCCode>
-                <hmis:ProjectID>222E</hmis:ProjectID>
-            </hmis:CoC>
-            <hmis:MoveInDate hmis:dateCreated="2015-04-25T23:14:59" hmis:dateUpdated="2015-07-23T23:14:59Z" hmis:userID="AUfZ2">
-                <hmis:MoveInDateID>z44332</hmis:MoveInDateID>
-                <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
-                <hmis:MoveInDate>2016-05-19Z</hmis:MoveInDate>
-            </hmis:MoveInDate>
             <hmis:RHYAftercare hmis:dateCreated="2015-04-25T23:14:59" hmis:dateUpdated="2015-04-25T23:14:59" hmis:userID="AUfZ2">
                 <hmis:RhyAfterCareID>34Rwwh</hmis:RhyAfterCareID>
-                <hmis:ExitID></hmis:ExitID>
+                <hmis:ExitID>C2x</hmis:ExitID>
                 <hmis:AfterCareDate>2015-04-25</hmis:AfterCareDate>
                 <hmis:AfterCareProvided>1</hmis:AfterCareProvided>
                 <hmis:EmailSocialMedia>99</hmis:EmailSocialMedia>
@@ -460,53 +500,12 @@
                 <hmis:TypeProvided>5</hmis:TypeProvided>
                 <hmis:FAAmount>167.43</hmis:FAAmount>
                 <hmis:ReferralOutcome>2</hmis:ReferralOutcome>
-            </hmis:ServiceFAReferral>
-            <hmis:Geography hmis:dateCreated="2014-09-03T23:14:59" hmis:dateUpdated="2016-02-25T23:14:59Z" hmis:userID="ck">
-                <hmis:GeographyID>4526</hmis:GeographyID>
-                <hmis:ProjectID>222E</hmis:ProjectID>
-                <hmis:InformationDate>2016-01-10</hmis:InformationDate>
-                <hmis:CoCCode>BZ-123</hmis:CoCCode>
-                <hmis:Geocode>177988</hmis:Geocode>
-                <hmis:GeographyType>2</hmis:GeographyType>
-                <hmis:Address1>111 Pine St.</hmis:Address1>
-                <hmis:City>Tuscaloosa</hmis:City>
-                <hmis:State>OK</hmis:State>
-                <hmis:ZIP>84683</hmis:ZIP>
-            </hmis:Geography>
-            <hmis:ClientVeteranInfo hmis:dateCreated="2014-12-17T23:14:59" hmis:dateUpdated="2016-03-10T23:14:59" hmis:userID="dZPlRM">
-                <hmis:ClientVeteranInfoID>7878665s</hmis:ClientVeteranInfoID>
-                <hmis:PersonalID>A1a1</hmis:PersonalID>
-                <hmis:YearEnteredService>2002</hmis:YearEnteredService>
-                <hmis:YearSeparated>2004</hmis:YearSeparated>
-                <hmis:WorldWarII>0</hmis:WorldWarII>
-                <hmis:KoreanWar>99</hmis:KoreanWar>
-                <hmis:VietnamWar>1</hmis:VietnamWar>
-                <hmis:DesertStorm>0</hmis:DesertStorm>
-                <hmis:AfghanistanOEF>8</hmis:AfghanistanOEF>
-                <hmis:IraqOIF>9</hmis:IraqOIF>
-                <hmis:IraqOND>99</hmis:IraqOND>
-                <hmis:OtherTheater>8</hmis:OtherTheater>
-                <hmis:MilitaryBranch>8</hmis:MilitaryBranch>
-                <hmis:DischargeStatus>6</hmis:DischargeStatus>
-            </hmis:ClientVeteranInfo>
-            <hmis:EntryRHY hmis:dateCreated="2016-05-08T23:14:59" hmis:dateUpdated="2016-05-06T23:14:59Z" hmis:userID="DG4IfIQuAFF6I.yl7">
-                <hmis:EntryRHYID>y76754</hmis:EntryRHYID>
-                <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
-                <hmis:UnemploymentFam>0</hmis:UnemploymentFam>
-                <hmis:MentalHealthIssuesFam>0</hmis:MentalHealthIssuesFam>
-                <hmis:PhysicalDisabilityFam>0</hmis:PhysicalDisabilityFam>
-                <hmis:AlcoholDrugAbuseFam>0</hmis:AlcoholDrugAbuseFam>
-                <hmis:InsufficientIncome>0</hmis:InsufficientIncome>
-                <hmis:IncarceratedParent>1</hmis:IncarceratedParent>
-                <hmis:FormerWardJuvenileJustice>9</hmis:FormerWardJuvenileJustice>
-                <hmis:JuvenileJusticeYears>3</hmis:JuvenileJusticeYears>
-                <hmis:JuvenileJusticeMonths>2</hmis:JuvenileJusticeMonths>
-                <hmis:FormerWardChildWelfare>1</hmis:FormerWardChildWelfare>
-                <hmis:ChildWelfareYears>2</hmis:ChildWelfareYears>
-                <hmis:ChildWelfareMonths>42</hmis:ChildWelfareMonths>
-                <hmis:ReferralSource>18</hmis:ReferralSource>
-                <hmis:CountOutreachReferralApproaches>3</hmis:CountOutreachReferralApproaches>
-            </hmis:EntryRHY>
+            </hmis:ServiceFAReferral>     
+            <hmis:VASHExitReason hmis:dateCreated="2015-08-13T23:14:59" hmis:dateUpdated="2015-08-13T23:14:59" hmis:userID="452sd">
+                <hmis:VashExitReasonID>1sshhdw1121</hmis:VashExitReasonID>
+                <hmis:ExitID>C2x</hmis:ExitID>
+                <hmis:CMExitReason>99</hmis:CMExitReason>
+            </hmis:VASHExitReason>
         </hmis:Export>
     </hmis:Source>
 </hmis:Sources>
