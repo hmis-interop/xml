@@ -604,6 +604,11 @@
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="SexualOrientation" type="hmis:sexualOrientation">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section R3.1.</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
 			<xs:element name="UnemploymentFam" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section R13.9.</xs:documentation>
@@ -903,7 +908,7 @@
 					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section R17.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="EarlyExitReason" type="hmis:earlyExitReason">
+			<xs:element name="EarlyExitReason" type="hmis:earlyExitReason" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section  R17.A.</xs:documentation>
 				</xs:annotation>
@@ -1819,7 +1824,9 @@
 		<xs:attribute ref="hmis:informationDate" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 		<!--Testing if HIVAIDSAssistance is 0, before allowing use of NoHIVAIDSAssistanceReason-->
-		<xs:assert test="if (hmis:HIVAIDSAssistance/text()='0') then boolean(hmis:NoHIVAIDSAssistanceReason) else (if (not(hmis:HIVAIDSAssistance/text()='0')) then (not(boolean(hmis:NoHIVAIDSAssistanceReason))) else false())"/>		
+		<xs:assert test="if (hmis:HIVAIDSAssistance/text()='0') then boolean(hmis:NoHIVAIDSAssistanceReason) else (if (not(hmis:HIVAIDSAssistance/text()='0')) then (not(boolean(hmis:NoHIVAIDSAssistanceReason))) else false())"/>	
+		<!--Testing if ADAP is 0, before allowing use of NoADAPReason-->
+		<xs:assert test="if (hmis:ADAP/text()='0') then boolean(hmis:NoADAPReason) else (if (not(hmis:ADAP/text()='0')) then (not(boolean(hmis:NoADAPReason))) else false())"/>	
 	</xs:complexType>
 
 	<xs:complexType name="nonCashBenefits">
@@ -1878,8 +1885,9 @@
 		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
 		<xs:attribute ref="hmis:informationDate" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
+		<!--Testing if OtherBenefitsSource is 1, before allowing use of OtherBenefitsSourceIdentify -->
+		<xs:assert test="if (hmis:OtherBenefitsSource/text()='1') then boolean(hmis:OtherBenefitsSourceIdentify) else (if (not(hmis:OtherBenefitsSource/text()='1')) then (not(boolean(hmis:OtherBenefitsSourceIdentify))) else false())"/>	
 	</xs:complexType>
-
 	<xs:complexType name="organization">
 		<xs:sequence>
 			<xs:element name="OrganizationID" type="hmis:string32">
@@ -1984,14 +1992,20 @@
 			</xs:element>
 			<xs:element name="TargetPopulation" type="hmis:targetPopulation" minOccurs="0">		
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.9.1.</xs:documentation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.8.4.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VictimServicesProvider" type="hmis:noYes" minOccurs="0">		
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.8.5.</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>	
+			<xs:element name="HousingType" type="hmis:housingType" minOccurs="0">		
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.8.8.</xs:documentation>
+				</xs:annotation>			
+			</xs:element>
+			
 			<xs:element name="ProjectCommonName" type="hmis:string50" minOccurs="0">		
 				<xs:annotation>
 					<xs:documentation xml:lang="en">A local or commonly used name for a project.  This is not referenced in the April 2017 HMIS Data Dictionary, and is optional.</xs:documentation>
@@ -2170,8 +2184,7 @@
 						0 = No
 						1 = Yes
 						2 = Worker unable to determine
-						99 = Data Not Collected
-						
+												
 						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 141 (PATH Services P1):
 						
 						PATH Services
@@ -2356,7 +2369,7 @@
 						<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.8.2.</xs:documentation>
 					</xs:annotation>
 			</xs:element>
-			<xs:element name="Geocode" type="hmis:geocode">
+			<xs:element name="Geocode" type="hmis:geocode" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See April 2017 HMIS Data Dictionary, Section 2.8.3</xs:documentation>
 				</xs:annotation>
@@ -3037,35 +3050,6 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-
-	<xs:simpleType name="bedType">
-		<xs:annotation>
-			<xs:documentation xml:lang="en">
-				Bed Type (ES Only) 
-				1 = Facility-based 
-				2 = Voucher 
-				3 = Other 
-			</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Facility-based</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Voucher</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Other</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
 	<xs:simpleType name="cmExitReason">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">	
@@ -3173,8 +3157,6 @@
 				1 = Individual
 				2 = Family
 				3 = Group –  peer counseling
-				8 = Client doesn’t know
-				9 = Client refused
 				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
@@ -3192,16 +3174,6 @@
 			<xs:enumeration value="3">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Group –  peer counseling</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -3264,71 +3236,6 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
-	<xs:simpleType name="crisisServicesUse">
-		<xs:annotation>
-			<xs:documentation xml:lang="en">	
-				Crisis Services Use
-				0 = 0
-				1 = 1-2
-				2 = 3-5
-				3 = 6-10
-				4 = 11-20
-				5 = More than 20
-				8 = Client doesn’t know
-				9 = Client refused
-				99 = Data not collected
-			</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">0</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">1-2</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">3-5</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">6-10</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">11-20</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="5">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">More than 20</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
 	<xs:simpleType name="destination">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">	
@@ -3343,10 +3250,11 @@
 				27 = Moved from one HOPWA funded project to HOPWA TH
 				11 = Owned by client, no ongoing housing subsidy
 				21 = Owned by client, with ongoing housing subsidy
-				3 = Permanent housing for formerly homeless persons (such as: CoC project; or HUD legacy programs; or HOPWA PH)
+				3 = Permanent housing (other than RRH) for formerly homeless persons
 				16 = Place not meant for habitation (e.g., a vehicle, an abandoned building, bus/train/subway station/airport or anywhere outside)
 				4 = Psychiatric hospital or other psychiatric facility
 				10 = Rental by client, no ongoing housing subsidy
+				31 = Rental by client, with RRH or equivalent subsidy
 				19 = Rental by client, with VASH housing subsidy
 				28 = Rental by client, with GPD TIP housing subsidy
 				20 = Rental by client, with other ongoing housing subsidy
@@ -3423,7 +3331,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Permanent housing for formerly homeless persons (such as: CoC project; or HUD legacy programs; or HOPWA PH)</xs:documentation>
+					<xs:documentation xml:lang="en">Permanent housing (other than RRH) for formerly homeless persons</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="16">
@@ -3439,6 +3347,11 @@
 			<xs:enumeration value="10">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Rental by client, no ongoing housing subsidy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="31">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Rental by client, with RRH or equivalent subsidy</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="19">
@@ -4082,12 +3995,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="27">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">VA: Community Contract Emergency Housing</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="28">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">VA: Community Contract Residential Treatment Program</xs:documentation>
+					<xs:documentation xml:lang="en">VA: CRS Contract Residential Services</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="29">
@@ -4098,11 +4006,6 @@
 			<xs:enumeration value="30">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">VA:Community Contract Safe Haven Program</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="31">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">VA:Grant and Per Diem Program</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="32">
@@ -4120,6 +4023,47 @@
 					<xs:documentation xml:lang="en">N/A</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="35">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">HUD: Pay for Success</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="36">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">HUD: Public and Indian Housing (PIH) Programs</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="37">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">VA:Grant Per Diem – Bridge Housing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="38">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">VA:Grant Per Diem – Low Demand</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="39">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">VA:Grant Per Diem – Hospital to Housing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="40">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">VA:Grant Per Diem – Clinical Treatment</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="41">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">VA:Grant Per Diem – Service Intensive Transitional Housing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="42">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">VA:Grant Per Diem – Transition in Place</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			
 		</xs:restriction>
 	</xs:simpleType>
 	
@@ -4486,46 +4430,40 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="housingType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				Housing Type 
+				1 = Site-based - single site 
+				2 = Site-based - clustered/multiple sites
+				3 = Tenant-based - scattered site
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Site-based - single site</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Site-based - clustered/multiple sites</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Tenant-based - scattered site</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 	
 	<xs:simpleType name="hpScreeningScore">
 		<xs:restriction base="xs:string">
 			<xs:pattern value="[0-9]{2}"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
-	<xs:simpleType name="incarceratedParentStatus">
-		<xs:annotation>
-			<xs:documentation xml:lang="en">	
-				1 = One parent / legal guardian is incarcerated
-				2 = One parent / legal guardian is incarcerated
-				3 = The only parent / legal guardian is incarcerated
-				99 = Data not collected
-			</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">One parent / legal guardian is incarcerated</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">One parent / legal guardian is incarcerated</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">The only parent / legal guardian is incarcerated</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
+
 	<xs:simpleType name="lastGradeCompletedSimple">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">	
@@ -5350,8 +5288,8 @@
 				2 = Individual: Parent/Guardian/Relative/Friend/Foster Parent/Other Individual
 				7 = Outreach Project
 				11 = Temporary Shelter
-				18 = Residential Project:
-				28 = Hotline:
+				18 = Residential Project
+				28 = Hotline
 				30 = Child Welfare/CPS
 				34 = Juvenile Justice
 				35 = Law Enforcement/ Police
@@ -5371,152 +5309,32 @@
 			</xs:enumeration>
 			<xs:enumeration value="2">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Individual: Parent/Guardian</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Individual: Relative or Friend</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Individual: Other Adult or Youth</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="5">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Individual: Partner/Spouse</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="6">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Individual: Foster Parent</xs:documentation>
+					<xs:documentation xml:lang="en">Individual: Parent/Guardian/Relative/Friend/Foster Parent/Other Individual</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="7">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Outreach Project: FYSB</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="10">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Outreach Project: Other</xs:documentation>
+					<xs:documentation xml:lang="en">Outreach Project</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="11">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Temporary Shelter: FYSB Basic Center Project</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="12">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Temporary Shelter: Other Youth Only Emergency Shelter</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="13">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Temporary Shelter: Emergency Shelter for Families</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="14">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Temporary Shelter: Emergency Shelter for Individuals</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="15">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Temporary Shelter: Domestic Violence Shelter</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="16">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Temporary Shelter: Safe Place</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="17">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Temporary Shelter: Other</xs:documentation>
+					<xs:documentation xml:lang="en">Temporary Shelter</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="18">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Residential Project: FYSB Transitional Living Project</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="19">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Residential Project: Other Transitional Living Project</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="20">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Residential Project: Group Home</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="21">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Residential Project: Independent Living Project</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="22">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Residential Project: Job Corps</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="23">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Residential Project: Drug Treatment Center</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="24">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Residential Project: Treatment Center</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="25">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Residential Project: Educational Institute</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="26">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Residential Project: Other Agency project</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="27">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Residential Project: Other Project</xs:documentation>
+					<xs:documentation xml:lang="en">Residential Project</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="28">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Hotline: National Runaway Switchboard</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="29">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Hotline: Other</xs:documentation>
+					<xs:documentation xml:lang="en">Hotline</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="30">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Other Agency: Child Welfare/CPS</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="31">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Other Agency: Non-Residential Independent Living Project</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Other Project Operated by your Agency</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="33">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Other Youth Services Agency</xs:documentation>
+					<xs:documentation xml:lang="en">Child Welfare/CPS</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="34">
@@ -5527,11 +5345,6 @@
 			<xs:enumeration value="35">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Law Enforcement/ Police</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="36">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Religious Organization</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="37">
@@ -5658,7 +5471,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Permanent housing for formerly homeless persons (such as: CoC project; HUD legacy programs; or HOPWA PH)</xs:documentation>
+					<xs:documentation xml:lang="en">Permanent housing (other than RRH) for formerly homeless persons</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4">
@@ -5733,7 +5546,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="20">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Rental by client, with other ongoing housing subsidy</xs:documentation>
+					<xs:documentation xml:lang="en">Rental by client, with other housing subsidy (including RRH)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="21">
@@ -6590,40 +6403,6 @@
 			<xs:enumeration value="3">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">3 to 5 or more years</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>			
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="youthAgeGroup">
-		<xs:annotation>
-			<xs:documentation xml:lang="en">
-				Of the youth beds what number are restricted to: 
-				1 = Only under age 18 
-				2 = Only ages 18 to 24 
-				3 = Only youth under age 24 (both of the above)
-				99 = Data not collected
-			</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Only under age 18</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Only ages 18 to 24</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>	
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Only youth under age 24 (both of the above)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
