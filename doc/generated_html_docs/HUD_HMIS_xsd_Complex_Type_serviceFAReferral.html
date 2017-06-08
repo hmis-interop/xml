@@ -1,0 +1,1970 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Schema documentation for component ServiceFAReferralID</title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
+         <!--
+        var propertiesBoxes= new Array('properties_serviceFAReferral_ServiceFAReferralID', 
+				'properties_serviceFAReferral_EnrollmentID', 
+				'properties_serviceFAReferral_DateProvided', 
+				'properties_serviceFAReferral_RecordType', 
+				'properties_serviceFAReferral_TypeProvided', 
+				'properties_serviceFAReferral_OtherTypeProvided', 
+				'properties_serviceFAReferral_SubTypeProvided', 
+				'properties_serviceFAReferral_FAAmount', 
+				'properties_serviceFAReferral_ReferralOutcome');
+var facetsBoxes= new Array('facets_serviceFAReferral_ServiceFAReferralID', 
+				'facets_serviceFAReferral_EnrollmentID', 
+				'facets_serviceFAReferral_RecordType', 
+				'facets_serviceFAReferral_TypeProvided', 
+				'facets_serviceFAReferral_OtherTypeProvided', 
+				'facets_serviceFAReferral_SubTypeProvided', 
+				'facets_serviceFAReferral_FAAmount', 
+				'facets_serviceFAReferral_ReferralOutcome');
+var usedByBoxes= new Array('usedBy_serviceFAReferral');
+var sourceBoxes= new Array('source_serviceFAReferral_ServiceFAReferralID', 
+				'source_serviceFAReferral_EnrollmentID', 
+				'source_serviceFAReferral_DateProvided', 
+				'source_serviceFAReferral_RecordType', 
+				'source_serviceFAReferral_TypeProvided', 
+				'source_serviceFAReferral_OtherTypeProvided', 
+				'source_serviceFAReferral_SubTypeProvided', 
+				'source_serviceFAReferral_FAAmount', 
+				'source_serviceFAReferral_ReferralOutcome', 
+				'source_serviceFAReferral');
+var diagramBoxes= new Array('diagram_serviceFAReferral_ServiceFAReferralID', 
+				'diagram_serviceFAReferral_EnrollmentID', 
+				'diagram_serviceFAReferral_DateProvided', 
+				'diagram_serviceFAReferral_RecordType', 
+				'diagram_serviceFAReferral_TypeProvided', 
+				'diagram_serviceFAReferral_OtherTypeProvided', 
+				'diagram_serviceFAReferral_SubTypeProvided', 
+				'diagram_serviceFAReferral_FAAmount', 
+				'diagram_serviceFAReferral_ReferralOutcome', 
+				'diagram_serviceFAReferral');
+var annotationBoxes= new Array('annotations_serviceFAReferral_ServiceFAReferralID', 
+				'annotations_serviceFAReferral_EnrollmentID', 
+				'annotations_serviceFAReferral_RecordType', 
+				'annotations_serviceFAReferral_TypeProvided', 
+				'annotations_serviceFAReferral_OtherTypeProvided', 
+				'annotations_serviceFAReferral_SubTypeProvided', 
+				'annotations_serviceFAReferral_FAAmount', 
+				'annotations_serviceFAReferral_ReferralOutcome');
+var attributesBoxes= new Array('attributes_serviceFAReferral');
+var assertsBoxes= new Array('asserts_serviceFAReferral');
+var modelBoxes= new Array('model_serviceFAReferral');
+
+      
+        var button_prefix = 'button_';
+        
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+    
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updatePageTitle(message) {
+            top.document.title = message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+
+            if (!isChunked) {
+             var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+             // Make all the tabs invisible.
+               for (i = 0; i < 3; i++){
+                  var tab = getElementObject(selectIds[i]);
+                  tab.style.display = 'none';
+               }
+               var selTab = getElementObject(id);
+               selTab.style.display = 'block';
+            } else {
+             if (id == 'toc_group_by_namespace') {
+               parent.indexFrame.location = indexFileNamespace;
+             } else  if (id == 'toc_group_by_location') {
+               parent.indexFrame.location = indexFileLocation;
+             } else  if (id == 'toc_group_by_component_type') {
+              parent.indexFrame.location = indexFileComponent;
+             }
+            }
+         }
+          
+
+    
+                    //--></script></head>
+   <body>
+      <div id="global_controls" class="globalControls" style="position:absolute;right:0;">
+         <table class="rt">
+            <tr>
+               <td class="rt_cornerTopLeft"></td>
+               <td class="rt_lineTop"></td>
+               <td class="rt_cornerTopRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_lineLeft"></td>
+               <td class="rt_content">
+                  <h3>Showing:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, annotationBoxes);" class="control" /></span><span class="globalControlName">Annotations</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, attributesBoxes);" class="control" /></span><span class="globalControlName">Attributes </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, assertsBoxes);" class="control" /></span><span class="globalControlName">Asserts </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, diagramBoxes);" class="control" /></span><span class="globalControlName">Diagrams</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, facetsBoxes);" class="control" /></span><span class="globalControlName">Facets </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, modelBoxes);" class="control" /></span><span class="globalControlName">Model </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, propertiesBoxes);" class="control" /></span><span class="globalControlName">Properties </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, sourceBoxes);" class="control" /></span><span class="globalControlName">Source</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, usedByBoxes);" class="control" /></span><span class="globalControlName">Used by </span></td>
+                     </tr>
+                  </table>
+                  <div align="right"><span><input type="button" onclick="getElementObject('global_controls').style.display = 'none';" value="Close" /></span></div>
+               </td>
+               <td class="rt_lineRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_cornerBottomLeft"></td>
+               <td class="rt_lineBottom"></td>
+               <td class="rt_cornerBottomRight"></td>
+            </tr>
+         </table>
+      </div><a id="serviceFAReferral_ServiceFAReferralID"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component serviceFAReferral')">serviceFAReferral</a></b> / ServiceFAReferralID</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_serviceFAReferral_ServiceFAReferralID" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_serviceFAReferral_ServiceFAReferralID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_serviceFAReferral_ServiceFAReferralID" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">Reference to the Services' unique ID</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_serviceFAReferral_ServiceFAReferralID" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_serviceFAReferral_ServiceFAReferralID');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_serviceFAReferral_ServiceFAReferralID" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_ServiceFAReferralID.jpeg" usemap="#HUD_HMIS_xsd_Element_ServiceFAReferralID" /><map name="HUD_HMIS_xsd_Element_ServiceFAReferralID" id="HUD_HMIS_xsd_Element_ServiceFAReferralID">
+                                 <area alt="HUD_HMIS_xsd_Simple_Type_string32.tmp#string32" href="HUD_HMIS_xsd_Simple_Type_string32.html#string32" coords="190,7,319,33" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Simple_Type_string32.html#string32" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component string32')">string32</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_serviceFAReferral_ServiceFAReferralID" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_serviceFAReferral_ServiceFAReferralID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_serviceFAReferral_ServiceFAReferralID" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_serviceFAReferral_ServiceFAReferralID" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_serviceFAReferral_ServiceFAReferralID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_serviceFAReferral_ServiceFAReferralID" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">maxLength</td>
+                                    <td width="30%"><b>32</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_serviceFAReferral_ServiceFAReferralID" type="image" src="img/btM.gif" value="-" onclick="switchState('source_serviceFAReferral_ServiceFAReferralID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_serviceFAReferral_ServiceFAReferralID" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ServiceFAReferralID"</span><span class="tAN"> type=</span><span class="tAV">"hmis:string32"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Reference to the Services' unique ID</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="serviceFAReferral_EnrollmentID"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component serviceFAReferral')">serviceFAReferral</a></b> / EnrollmentID</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_serviceFAReferral_EnrollmentID" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_serviceFAReferral_EnrollmentID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_serviceFAReferral_EnrollmentID" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">Key reference to the Enrollment</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_serviceFAReferral_EnrollmentID" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_serviceFAReferral_EnrollmentID');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_serviceFAReferral_EnrollmentID" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_EnrollmentID_20.jpeg" usemap="#HUD_HMIS_xsd_Element_EnrollmentID_20" /><map name="HUD_HMIS_xsd_Element_EnrollmentID_20" id="HUD_HMIS_xsd_Element_EnrollmentID_20">
+                                 <area alt="HUD_HMIS_xsd_Simple_Type_string32.tmp#string32" href="HUD_HMIS_xsd_Simple_Type_string32.html#string32" coords="188,7,317,33" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Simple_Type_string32.html#string32" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component string32')">string32</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_serviceFAReferral_EnrollmentID" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_serviceFAReferral_EnrollmentID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_serviceFAReferral_EnrollmentID" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_serviceFAReferral_EnrollmentID" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_serviceFAReferral_EnrollmentID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_serviceFAReferral_EnrollmentID" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">maxLength</td>
+                                    <td width="30%"><b>32</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_serviceFAReferral_EnrollmentID" type="image" src="img/btM.gif" value="-" onclick="switchState('source_serviceFAReferral_EnrollmentID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_serviceFAReferral_EnrollmentID" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"EnrollmentID"</span><span class="tAN"> type=</span><span class="tAV">"hmis:string32"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Key reference to the Enrollment</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="serviceFAReferral_DateProvided"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component serviceFAReferral')">serviceFAReferral</a></b> / DateProvided</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_serviceFAReferral_DateProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_serviceFAReferral_DateProvided');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_serviceFAReferral_DateProvided" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_DateProvided.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:date</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_serviceFAReferral_DateProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_serviceFAReferral_DateProvided');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_serviceFAReferral_DateProvided" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_serviceFAReferral_DateProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('source_serviceFAReferral_DateProvided');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_serviceFAReferral_DateProvided" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"DateProvided"</span><span class="tAN"> type=</span><span class="tAV">"xs:date"</span><span class="tEl">&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="serviceFAReferral_RecordType"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component serviceFAReferral')">serviceFAReferral</a></b> / RecordType</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_serviceFAReferral_RecordType" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_serviceFAReferral_RecordType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_serviceFAReferral_RecordType" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">Contact records collected under 2014 HMIS Data Standards v5.1 (RecordType 12)</span><span class="tI">
+</span><span class="tT">4.12 Contact records collected under 2017 HMIS Data Standards (RecordType 13)</span><span class="tI">
+</span><span class="tT">4.14 Bed Night (RecordType 200)</span><span class="tI">
+</span><span class="tT">P1 Services Provided – PATH (RecordType 141)</span><span class="tI">
+</span><span class="tT">P2 Referrals Provided – PATH (RecordType 161)</span><span class="tI">
+</span><span class="tT">R14 RHY Service Connections (RecordType 142)</span><span class="tI">
+</span><span class="tT">W1 Services Provided – HOPWA (RecordType 143)</span><span class="tI">
+</span><span class="tT">W2 Financial Assistance – HOPWA (RecordType 151)</span><span class="tI">
+</span><span class="tT">V2 Services Provided – SSVF (RecordType 144)</span><span class="tI">
+</span><span class="tT">V3 Financial Assistance – SSVF (RecordType 152)</span><span class="tI">
+</span><span class="tT">V8 HUD-VASH Voucher Tracking (RecordType 210)</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_serviceFAReferral_RecordType" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_serviceFAReferral_RecordType');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_serviceFAReferral_RecordType" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_RecordType.jpeg" usemap="#HUD_HMIS_xsd_Element_RecordType" /><map name="HUD_HMIS_xsd_Element_RecordType" id="HUD_HMIS_xsd_Element_RecordType">
+                                 <area alt="HUD_HMIS_xsd_Simple_Type_recordType.tmp#recordType" href="HUD_HMIS_xsd_Simple_Type_recordType.html#recordType" coords="206,7,353,33" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Simple_Type_recordType.html#recordType" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component recordType')">recordType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_serviceFAReferral_RecordType" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_serviceFAReferral_RecordType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_serviceFAReferral_RecordType" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_serviceFAReferral_RecordType" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_serviceFAReferral_RecordType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_serviceFAReferral_RecordType" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>12</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Contact v5.1</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>13</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Contact v6.0</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>141</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">PATH service</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>142</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">RHY service connections</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>143</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">HOPWA service</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>144</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">SSVF service</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>151</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">HOPWA financial assistance</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>152</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">SSVF financial assistance</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>161</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">PATH referral</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>200</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Bed night</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>210</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Bed night</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_serviceFAReferral_RecordType" type="image" src="img/btM.gif" value="-" onclick="switchState('source_serviceFAReferral_RecordType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_serviceFAReferral_RecordType" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"RecordType"</span><span class="tAN"> type=</span><span class="tAV">"hmis:recordType"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Contact records collected under 2014 HMIS Data Standards v5.1 (RecordType 12) 4.12 Contact records collected under 2017 HMIS Data Standards (RecordType 13) 4.14 Bed Night (RecordType 200) P1 Services Provided – PATH (RecordType 141) P2 Referrals Provided – PATH (RecordType 161) R14 RHY Service Connections (RecordType 142) W1 Services Provided – HOPWA (RecordType 143) W2 Financial Assistance – HOPWA (RecordType 151) V2 Services Provided – SSVF (RecordType 144) V3 Financial Assistance – SSVF (RecordType 152) V8 HUD-VASH Voucher Tracking (RecordType 210)</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="serviceFAReferral_TypeProvided"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component serviceFAReferral')">serviceFAReferral</a></b> / TypeProvided</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_serviceFAReferral_TypeProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_serviceFAReferral_TypeProvided');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_serviceFAReferral_TypeProvided" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2,</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 12 (v5.1 Contact Location 4.12.2):</span><span class="tI">
+</span><span class="tT">						1 = Place not meant for habitation</span><span class="tI">
+</span><span class="tT">						2 = Service setting, non-residential</span><span class="tI">
+</span><span class="tT">						3 = Service setting, residential</span><span class="tI">
+</span><span class="tT">						99 = Data Not Collected</span><span class="tI">
+</span><span class="tT">						</span><span class="tI">
+</span><span class="tT">						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 13 (v6.0 Contact Location 4.12.2):</span><span class="tI">
+</span><span class="tT">						</span><span class="tI">
+</span><span class="tT">						Staying on Streets, ES, or SH</span><span class="tI">
+</span><span class="tT">						0 = No</span><span class="tI">
+</span><span class="tT">						1 = Yes</span><span class="tI">
+</span><span class="tT">						2 = Worker unable to determine</span><span class="tI">
+</span><span class="tT">												</span><span class="tI">
+</span><span class="tT">						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 141 (PATH Services P1):</span><span class="tI">
+</span><span class="tT">						</span><span class="tI">
+</span><span class="tT">						PATH Services</span><span class="tI">
+</span><span class="tT">						1 = Re-engagement</span><span class="tI">
+</span><span class="tT">						2 = Screening</span><span class="tI">
+</span><span class="tT">						3 = Habilitation/rehabilitation</span><span class="tI">
+</span><span class="tT">						4 = Community mental health</span><span class="tI">
+</span><span class="tT">						5 = Substance use treatment</span><span class="tI">
+</span><span class="tT">						6 = Case management</span><span class="tI">
+</span><span class="tT">						7 = Residential supportive services</span><span class="tI">
+</span><span class="tT">						8 = Housing minor renovation</span><span class="tI">
+</span><span class="tT">						9 = Housing moving assistance</span><span class="tI">
+</span><span class="tT">						10 = Housing eligibility determination</span><span class="tI">
+</span><span class="tT">						11 = Security deposits</span><span class="tI">
+</span><span class="tT">						12 = One-time rent for eviction prevention</span><span class="tI">
+</span><span class="tT">						14 = Clinical assessment</span><span class="tI">
+</span><span class="tT">						99 = Data Not Collected</span><span class="tI">
+</span><span class="tT">						</span><span class="tI">
+</span><span class="tT">						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 142 (RHY Services R14):</span><span class="tI">
+</span><span class="tT">						2 = Community service/service learning (CSL)</span><span class="tI">
+</span><span class="tT">						5 = Education</span><span class="tI">
+</span><span class="tT">						6 = Employment and/or training services</span><span class="tI">
+</span><span class="tT">						7 = Criminal justice /legal services</span><span class="tI">
+</span><span class="tT">						8 = Life skills training</span><span class="tI">
+</span><span class="tT">						10 = Parenting education for youth with children</span><span class="tI">
+</span><span class="tT">						12 = Post-natal care for mother</span><span class="tI">
+</span><span class="tT">						13 = Pre-natal care</span><span class="tI">
+</span><span class="tT">						14 = Health/medical care </span><span class="tI">
+</span><span class="tT">						17 = Substance abuse treatment</span><span class="tI">
+</span><span class="tT">						18 = Substance Abuse Ed/Prevention Services</span><span class="tI">
+</span><span class="tT">						26 =  Home-based Services</span><span class="tI">
+</span><span class="tT">						27 = Post-natal newborn care (wellness exams; immunizations)</span><span class="tI">
+</span><span class="tT">						28 = STD Testing</span><span class="tI">
+</span><span class="tT">						29 = Street-based Services</span><span class="tI">
+</span><span class="tT">						99 = Data Not Collected</span><span class="tI">
+</span><span class="tT"></span><span class="tI">
+</span><span class="tT">						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 143 (HOPWA Services W1):</span><span class="tI">
+</span><span class="tT">						1 Adult day care and personal assistance</span><span class="tI">
+</span><span class="tT">						2 Case management</span><span class="tI">
+</span><span class="tT">						3 Child care</span><span class="tI">
+</span><span class="tT">						4 Criminal justice/legal services</span><span class="tI">
+</span><span class="tT">						5 Education</span><span class="tI">
+</span><span class="tT">						6 Employment and training services</span><span class="tI">
+</span><span class="tT">						7 Food/meals/nutritional services</span><span class="tI">
+</span><span class="tT">						8 Health/medical care</span><span class="tI">
+</span><span class="tT">						9 Life skills training</span><span class="tI">
+</span><span class="tT">						10 Mental health care/counseling</span><span class="tI">
+</span><span class="tT">						11 Outreach and/or engagement</span><span class="tI">
+</span><span class="tT">						12 Substance abuse services/treatment</span><span class="tI">
+</span><span class="tT">						13 Transportation</span><span class="tI">
+</span><span class="tT">						14 Other HOPWA funded service</span><span class="tI">
+</span><span class="tT">						99 Data Not Collected</span><span class="tI">
+</span><span class="tT">						</span><span class="tI">
+</span><span class="tT">						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 144 (SSVF Services V2):</span><span class="tI">
+</span><span class="tT">						1 Outreach services</span><span class="tI">
+</span><span class="tT">						2 Case management services</span><span class="tI">
+</span><span class="tT">						3 Assistance obtaining VA benefits</span><span class="tI">
+</span><span class="tT">						4 Assistance obtaining/coordinating other public benefits</span><span class="tI">
+</span><span class="tT">						5 Direct provision of other public benefits</span><span class="tI">
+</span><span class="tT">						6 Other (non-TFA) supportive service approved by VA</span><span class="tI">
+</span><span class="tT">						99 Data Not Collected</span><span class="tI">
+</span><span class="tT">						</span><span class="tI">
+</span><span class="tT">						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 151 (Financial Assistance - HOPWA Services 4.15.A):</span><span class="tI">
+</span><span class="tT">						1 Rental assistance [collect for PHP and STRMU]</span><span class="tI">
+</span><span class="tT">						2 Security deposits [collect for PHP]</span><span class="tI">
+</span><span class="tT">						3 Utility deposits [collect for PHP]</span><span class="tI">
+</span><span class="tT">						4 Utility payments [collect for PHP and STRMU]</span><span class="tI">
+</span><span class="tT">						7 Mortgage assistance [collect for STRMU]</span><span class="tI">
+</span><span class="tT">						99 Data Not Collected</span><span class="tI">
+</span><span class="tT">						</span><span class="tI">
+</span><span class="tT">						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 152 (Financial Assistance – SSVF V3):</span><span class="tI">
+</span><span class="tT">						1 Rental assistance</span><span class="tI">
+</span><span class="tT">						4 Utility fee payment assistance</span><span class="tI">
+</span><span class="tT">						2 Security deposit</span><span class="tI">
+</span><span class="tT">						3 Utility deposit</span><span class="tI">
+</span><span class="tT">						5 Moving costs</span><span class="tI">
+</span><span class="tT">						8 Transportation services: tokens/vouchers</span><span class="tI">
+</span><span class="tT">						9 Transportation services: vehicle repair/maintenance</span><span class="tI">
+</span><span class="tT">						10 Child Care</span><span class="tI">
+</span><span class="tT">						11 General housing stability assistance - emergency supplies</span><span class="tI">
+</span><span class="tT">						12 General housing stability assistance - other</span><span class="tI">
+</span><span class="tT">						14 Emergency housing assistance</span><span class="tI">
+</span><span class="tT">						99 Data Not Collected</span><span class="tI">
+</span><span class="tT">						</span><span class="tI">
+</span><span class="tT">						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 161 (Referrals Provided – PATH P2):</span><span class="tI">
+</span><span class="tT">						1 Community Mental Health</span><span class="tI">
+</span><span class="tT">						2 Substance Use Treatment</span><span class="tI">
+</span><span class="tT">						3 Primary Health/ Dental Care</span><span class="tI">
+</span><span class="tT">						4 Job Training</span><span class="tI">
+</span><span class="tT">						5 Educational Services</span><span class="tI">
+</span><span class="tT">						6 Housing Services</span><span class="tI">
+</span><span class="tT">						11 Temporary Housing</span><span class="tI">
+</span><span class="tT">						7 Permanent Housing</span><span class="tI">
+</span><span class="tT">						8 Income Assistance</span><span class="tI">
+</span><span class="tT">						9 Employment Assistance</span><span class="tI">
+</span><span class="tT">						10 Medical Insurance</span><span class="tI">
+</span><span class="tT">						99 Data Not Collected</span><span class="tI">
+</span><span class="tT">						</span><span class="tI">
+</span><span class="tT">						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 200 (Services Provided - Bed-night Date 4.14E):</span><span class="tI">
+</span><span class="tT">						200	BedNight</span><span class="tI">
+</span><span class="tT">						99 Data Not Collected</span><span class="tI">
+</span><span class="tT">						</span><span class="tI">
+</span><span class="tT">						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 210 (Services Provided - HUD-VASH OTH voucher tracking 4.50.1):</span><span class="tI">
+</span><span class="tT">						4.50.1 VoucherTracking</span><span class="tI">
+</span><span class="tT">						Value Text</span><span class="tI">
+</span><span class="tT">						1 Referral package forwarded to PHA</span><span class="tI">
+</span><span class="tT">						2 Voucher denied by PHA</span><span class="tI">
+</span><span class="tT">						3 Voucher issued by PHA</span><span class="tI">
+</span><span class="tT">						4 Voucher revoked or expired</span><span class="tI">
+</span><span class="tT">						5 Voucher in use – veteran moved into housing</span><span class="tI">
+</span><span class="tT">						6 Voucher was ported locally</span><span class="tI">
+</span><span class="tT">						7 Voucher was administratively absorbed by new PHA</span><span class="tI">
+</span><span class="tT">						8 Voucher was converted to Housing Choice Voucher</span><span class="tI">
+</span><span class="tT">						9 Veteran exited – voucher was returned</span><span class="tI">
+</span><span class="tT">						10 Veteran exited – family maintained the voucher</span><span class="tI">
+</span><span class="tT">						11 Veteran exited – prior to ever receiving a voucher</span><span class="tI">
+</span><span class="tT">						12 Other</span><span class="tI">
+</span><span class="tT">						99 = Data Not Collected</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_serviceFAReferral_TypeProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_serviceFAReferral_TypeProvided');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_serviceFAReferral_TypeProvided" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_TypeProvided.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>restriction of <b>xs:integer</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_serviceFAReferral_TypeProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_serviceFAReferral_TypeProvided');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_serviceFAReferral_TypeProvided" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_serviceFAReferral_TypeProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_serviceFAReferral_TypeProvided');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_serviceFAReferral_TypeProvided" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">pattern</td>
+                                    <td width="30%"><b>([\-+]?[0-9]+) &amp; ([0-9]{1,3})</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_serviceFAReferral_TypeProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('source_serviceFAReferral_TypeProvided');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_serviceFAReferral_TypeProvided" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"TypeProvided"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2,</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 12 (v5.1 Contact Location 4.12.2): 1 = Place not meant for habitation 2 = Service setting, non-residential 3 = Service setting, residential 99 = Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 13 (v6.0 Contact Location 4.12.2): Staying on Streets, ES, or SH 0 = No 1 = Yes 2 = Worker unable to determine In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 141 (PATH Services P1): PATH Services 1 = Re-engagement 2 = Screening 3 = Habilitation/rehabilitation 4 = Community mental health 5 = Substance use treatment 6 = Case management 7 = Residential supportive services 8 = Housing minor renovation 9 = Housing moving assistance 10 = Housing eligibility determination 11 = Security deposits 12 = One-time rent for eviction prevention 14 = Clinical assessment 99 = Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 142 (RHY Services R14): 2 = Community service/service learning (CSL) 5 = Education 6 = Employment and/or training services 7 = Criminal justice /legal services 8 = Life skills training 10 = Parenting education for youth with children 12 = Post-natal care for mother 13 = Pre-natal care 14 = Health/medical care 17 = Substance abuse treatment 18 = Substance Abuse Ed/Prevention Services 26 = Home-based Services 27 = Post-natal newborn care (wellness exams; immunizations) 28 = STD Testing 29 = Street-based Services 99 = Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 143 (HOPWA Services W1): 1 Adult day care and personal assistance 2 Case management 3 Child care 4 Criminal justice/legal services 5 Education 6 Employment and training services 7 Food/meals/nutritional services 8 Health/medical care 9 Life skills training 10 Mental health care/counseling 11 Outreach and/or engagement 12 Substance abuse services/treatment 13 Transportation 14 Other HOPWA funded service 99 Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 144 (SSVF Services V2): 1 Outreach services 2 Case management services 3 Assistance obtaining VA benefits 4 Assistance obtaining/coordinating other public benefits 5 Direct provision of other public benefits 6 Other (non-TFA) supportive service approved by VA 99 Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 151 (Financial Assistance - HOPWA Services 4.15.A): 1 Rental assistance [collect for PHP and STRMU] 2 Security deposits [collect for PHP] 3 Utility deposits [collect for PHP] 4 Utility payments [collect for PHP and STRMU] 7 Mortgage assistance [collect for STRMU] 99 Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 152 (Financial Assistance – SSVF V3): 1 Rental assistance 4 Utility fee payment assistance 2 Security deposit 3 Utility deposit 5 Moving costs 8 Transportation services: tokens/vouchers 9 Transportation services: vehicle repair/maintenance 10 Child Care 11 General housing stability assistance - emergency supplies 12 General housing stability assistance - other 14 Emergency housing assistance 99 Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 161 (Referrals Provided – PATH P2): 1 Community Mental Health 2 Substance Use Treatment 3 Primary Health/ Dental Care 4 Job Training 5 Educational Services 6 Housing Services 11 Temporary Housing 7 Permanent Housing 8 Income Assistance 9 Employment Assistance 10 Medical Insurance 99 Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 200 (Services Provided - Bed-night Date 4.14E): 200 BedNight 99 Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 210 (Services Provided - HUD-VASH OTH voucher tracking 4.50.1): 4.50.1 VoucherTracking Value Text 1 Referral package forwarded to PHA 2 Voucher denied by PHA 3 Voucher issued by PHA 4 Voucher revoked or expired 5 Voucher in use – veteran moved into housing 6 Voucher was ported locally 7 Voucher was administratively absorbed by new PHA 8 Voucher was converted to Housing Choice Voucher 9 Veteran exited – voucher was returned 10 Veteran exited – family maintained the voucher 11 Veteran exited – prior to ever receiving a voucher 12 Other 99 = Data Not Collected</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:integer"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"[0-9]{1,3}"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="serviceFAReferral_OtherTypeProvided"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component serviceFAReferral')">serviceFAReferral</a></b> / OtherTypeProvided</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_serviceFAReferral_OtherTypeProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_serviceFAReferral_OtherTypeProvided');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_serviceFAReferral_OtherTypeProvided" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section 4.12 and 4.14-4.16.2D (if it exists) .</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_serviceFAReferral_OtherTypeProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_serviceFAReferral_OtherTypeProvided');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_serviceFAReferral_OtherTypeProvided" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_OtherTypeProvided.jpeg" usemap="#HUD_HMIS_xsd_Element_OtherTypeProvided" /><map name="HUD_HMIS_xsd_Element_OtherTypeProvided" id="HUD_HMIS_xsd_Element_OtherTypeProvided">
+                                 <area alt="HUD_HMIS_xsd_Simple_Type_string50.tmp#string50" href="HUD_HMIS_xsd_Simple_Type_string50.html#string50" coords="188,7,317,33" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Simple_Type_string50.html#string50" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component string50')">string50</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_serviceFAReferral_OtherTypeProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_serviceFAReferral_OtherTypeProvided');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_serviceFAReferral_OtherTypeProvided" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_serviceFAReferral_OtherTypeProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_serviceFAReferral_OtherTypeProvided');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_serviceFAReferral_OtherTypeProvided" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">maxLength</td>
+                                    <td width="30%"><b>50</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_serviceFAReferral_OtherTypeProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('source_serviceFAReferral_OtherTypeProvided');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_serviceFAReferral_OtherTypeProvided" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"OtherTypeProvided"</span><span class="tAN"> type=</span><span class="tAV">"hmis:string50"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section 4.12 and 4.14-4.16.2D (if it exists) .</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="serviceFAReferral_SubTypeProvided"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component serviceFAReferral')">serviceFAReferral</a></b> / SubTypeProvided</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_serviceFAReferral_SubTypeProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_serviceFAReferral_SubTypeProvided');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_serviceFAReferral_SubTypeProvided" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section 4.12 and 4.14-4.16.3A, 4B, 5C (if it exists).</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_serviceFAReferral_SubTypeProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_serviceFAReferral_SubTypeProvided');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_serviceFAReferral_SubTypeProvided" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_SubTypeProvided.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>restriction of <b>xs:integer</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_serviceFAReferral_SubTypeProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_serviceFAReferral_SubTypeProvided');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_serviceFAReferral_SubTypeProvided" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_serviceFAReferral_SubTypeProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_serviceFAReferral_SubTypeProvided');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_serviceFAReferral_SubTypeProvided" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">pattern</td>
+                                    <td width="30%"><b>([\-+]?[0-9]+) &amp; ([0-9]{1,2})</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_serviceFAReferral_SubTypeProvided" type="image" src="img/btM.gif" value="-" onclick="switchState('source_serviceFAReferral_SubTypeProvided');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_serviceFAReferral_SubTypeProvided" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"SubTypeProvided"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section 4.12 and 4.14-4.16.3A, 4B, 5C (if it exists).</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:integer"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"[0-9]{1,2}"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="serviceFAReferral_FAAmount"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component serviceFAReferral')">serviceFAReferral</a></b> / FAAmount</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_serviceFAReferral_FAAmount" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_serviceFAReferral_FAAmount');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_serviceFAReferral_FAAmount" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section W2 #3 and V3 #2, Financial Assistance Amount.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_serviceFAReferral_FAAmount" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_serviceFAReferral_FAAmount');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_serviceFAReferral_FAAmount" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_FAAmount.jpeg" usemap="#HUD_HMIS_xsd_Element_FAAmount" /><map name="HUD_HMIS_xsd_Element_FAAmount" id="HUD_HMIS_xsd_Element_FAAmount">
+                                 <area alt="HUD_HMIS_xsd_Simple_Type_money.tmp#money" href="HUD_HMIS_xsd_Simple_Type_money.html#money" coords="179,7,299,33" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Simple_Type_money.html#money" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component money')">money</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_serviceFAReferral_FAAmount" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_serviceFAReferral_FAAmount');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_serviceFAReferral_FAAmount" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_serviceFAReferral_FAAmount" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_serviceFAReferral_FAAmount');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_serviceFAReferral_FAAmount" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">fractionDigits</td>
+                                    <td width="30%"><b>2</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_serviceFAReferral_FAAmount" type="image" src="img/btM.gif" value="-" onclick="switchState('source_serviceFAReferral_FAAmount');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_serviceFAReferral_FAAmount" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"FAAmount"</span><span class="tAN"> type=</span><span class="tAV">"hmis:money"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section W2 #3 and V3 #2, Financial Assistance Amount.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="serviceFAReferral_ReferralOutcome"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component serviceFAReferral')">serviceFAReferral</a></b> / ReferralOutcome</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_serviceFAReferral_ReferralOutcome" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_serviceFAReferral_ReferralOutcome');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_serviceFAReferral_ReferralOutcome" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section 4.16A #2A.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_serviceFAReferral_ReferralOutcome" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_serviceFAReferral_ReferralOutcome');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_serviceFAReferral_ReferralOutcome" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_ReferralOutcome.jpeg" usemap="#HUD_HMIS_xsd_Element_ReferralOutcome" /><map name="HUD_HMIS_xsd_Element_ReferralOutcome" id="HUD_HMIS_xsd_Element_ReferralOutcome">
+                                 <area alt="HUD_HMIS_xsd_Simple_Type_referralOutcome.tmp#referralOutcome" href="HUD_HMIS_xsd_Simple_Type_referralOutcome.html#referralOutcome" coords="236,7,413,33" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Simple_Type_referralOutcome.html#referralOutcome" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component referralOutcome')">referralOutcome</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_serviceFAReferral_ReferralOutcome" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_serviceFAReferral_ReferralOutcome');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_serviceFAReferral_ReferralOutcome" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_serviceFAReferral_ReferralOutcome" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_serviceFAReferral_ReferralOutcome');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_serviceFAReferral_ReferralOutcome" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>1</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Attained</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>2</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Not attained</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>3</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Unknown</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>99</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Data not collected</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_serviceFAReferral_ReferralOutcome" type="image" src="img/btM.gif" value="-" onclick="switchState('source_serviceFAReferral_ReferralOutcome');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_serviceFAReferral_ReferralOutcome" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ReferralOutcome"</span><span class="tAN"> type=</span><span class="tAV">"hmis:referralOutcome"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section 4.16A #2A.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="serviceFAReferral"></a><div class="componentTitle">Complex Type <span class="qname">serviceFAReferral</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_serviceFAReferral" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_serviceFAReferral');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_serviceFAReferral" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Complex_Type_serviceFAReferral.jpeg" usemap="#HUD_HMIS_xsd_Complex_Type_serviceFAReferral" /><map name="HUD_HMIS_xsd_Complex_Type_serviceFAReferral" id="HUD_HMIS_xsd_Complex_Type_serviceFAReferral">
+                                 <area alt="HUD_HMIS_xsd_Attribute_Group_baseMetaData.tmp#baseMetaData" href="HUD_HMIS_xsd_Attribute_Group_baseMetaData.html#baseMetaData" coords="198,40,360,66" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.tmp#serviceFAReferral_ServiceFAReferralID" href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_ServiceFAReferralID" coords="252,260,394,300" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.tmp#serviceFAReferral_EnrollmentID" href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_EnrollmentID" coords="252,339,392,379" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.tmp#serviceFAReferral_DateProvided" href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_DateProvided" coords="252,418,359,458" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.tmp#serviceFAReferral_RecordType" href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_RecordType" coords="252,468,410,508" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.tmp#serviceFAReferral_TypeProvided" href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_TypeProvided" coords="252,559,458,599" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.tmp#serviceFAReferral_OtherTypeProvided" href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_OtherTypeProvided" coords="252,662,392,702" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.tmp#serviceFAReferral_SubTypeProvided" href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_SubTypeProvided" coords="252,753,458,793" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.tmp#serviceFAReferral_FAAmount" href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_FAAmount" coords="252,844,383,884" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.tmp#serviceFAReferral_ReferralOutcome" href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_ReferralOutcome" coords="252,935,440,975" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_serviceFAReferral" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_serviceFAReferral');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_serviceFAReferral" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="HUD_HMIS_xsd_Complex_Type_export.html#export_ServiceFAReferral" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component export/ServiceFAReferral')">export/ServiceFAReferral</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_serviceFAReferral" type="image" src="img/btM.gif" value="-" onclick="switchState('model_serviceFAReferral');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_serviceFAReferral" style="display:block">
+                              <table>
+                                 <tr>
+                                    <td colspan="2"><b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_ServiceFAReferralID" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component ServiceFAReferralID')">ServiceFAReferralID</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_EnrollmentID" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component EnrollmentID')">EnrollmentID</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_DateProvided" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component DateProvided')">DateProvided</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_RecordType" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component RecordType')">RecordType</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_TypeProvided" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component TypeProvided')">TypeProvided</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_OtherTypeProvided" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component OtherTypeProvided{0,1}')">OtherTypeProvided{0,1}</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_SubTypeProvided" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component SubTypeProvided{0,1}')">SubTypeProvided{0,1}</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_FAAmount" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component FAAmount{0,1}')">FAAmount{0,1}</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_ReferralOutcome" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component ReferralOutcome{0,1}')">ReferralOutcome{0,1}</a></b></td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="2"><b><a href="HUD_HMIS_xsd_Main_schema_HUD_HMIS_xsd.html#HUD_HMIS.xsd" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component Default Open Content')">Default Open Content</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_DateProvided" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component DateProvided')">DateProvided</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_EnrollmentID" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component EnrollmentID')">EnrollmentID</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_FAAmount" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component FAAmount')">FAAmount</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_OtherTypeProvided" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component OtherTypeProvided')">OtherTypeProvided</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_RecordType" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component RecordType')">RecordType</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_ReferralOutcome" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component ReferralOutcome')">ReferralOutcome</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_ServiceFAReferralID" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component ServiceFAReferralID')">ServiceFAReferralID</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_SubTypeProvided" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component SubTypeProvided')">SubTypeProvided</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_serviceFAReferral.html#serviceFAReferral_TypeProvided" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component TypeProvided')">TypeProvided</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_serviceFAReferral" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_serviceFAReferral');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_serviceFAReferral" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th width="10%">Type</th>
+                                       <th width="5%">Use</th>
+                                       <th>Annotation</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="HUD_HMIS_xsd_Attribute_Group_baseMetaData.html#baseMetaData_dateCreated" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component dateCreated')">dateCreated</a></b></td>
+                                    <td><b>xs:dateTime</b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section 5.1.</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="HUD_HMIS_xsd_Attribute_Group_baseMetaData.html#baseMetaData_dateDeleted" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component dateDeleted')">dateDeleted</a></b></td>
+                                    <td><b>xs:dateTime</b></td>
+                                    <td>optional</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">If the intended record is to be deleted, this metadata allows you to both indicate the record should be deleted within the target system, as well as indicate the specific time it was deleted.</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="HUD_HMIS_xsd_Attribute_Group_baseMetaData.html#baseMetaData_dateUpdated" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component dateUpdated')">dateUpdated</a></b></td>
+                                    <td><b>xs:dateTime</b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section 5.2.</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="HUD_HMIS_xsd_Attribute_Group_baseMetaData.html#baseMetaData_userID" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component userID')">userID</a></b></td>
+                                    <td><b><a href="HUD_HMIS_xsd_Simple_Type_string32.html#string32" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component string32')">string32</a></b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section 5.7.</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Asserts</b></div>
+                           <div class="floatRight"><input id="button_asserts_serviceFAReferral" type="image" src="img/btM.gif" value="-" onclick="switchState('asserts_serviceFAReferral');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="asserts_serviceFAReferral" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>Test</th>
+                                       <th>XPath default namespace</th>
+                                       <th>Annotation</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn">if (not (hmis:RecordType/text() ='144' and hmis:TypeProvided/text() ='6')) then not
+                                       (boolean(hmis:OtherTypeProvided)) else boolean(hmis:OtherTypeProvided)
+                                    </td>
+                                    <td width="10%"></td>
+                                    <td width="10%">
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">if (not (hmis:RecordType/text() ='144' and (hmis:TypeProvided/text() ='3' or hmis:TypeProvided/text()
+                                       ='4' or hmis:TypeProvided/text() ='5'))) then not (boolean(hmis:SubTypeProvided))
+                                       else boolean(hmis:TypeProvided)
+                                    </td>
+                                    <td width="10%"></td>
+                                    <td width="10%">
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">if (not (hmis:RecordType/text() ='151') and not (hmis:RecordType/text() ='152')) then
+                                       (not (boolean(hmis:FAAmount))) else boolean(hmis:FAAmount)
+                                    </td>
+                                    <td width="10%"></td>
+                                    <td width="10%">
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_serviceFAReferral" type="image" src="img/btM.gif" value="-" onclick="switchState('source_serviceFAReferral');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_serviceFAReferral" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:complexType</span><span class="tAN"> name=</span><span class="tAV">"serviceFAReferral"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ServiceFAReferralID"</span><span class="tAN"> type=</span><span class="tAV">"hmis:string32"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Reference to the Services' unique ID</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"EnrollmentID"</span><span class="tAN"> type=</span><span class="tAV">"hmis:string32"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Key reference to the Enrollment</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"DateProvided"</span><span class="tAN"> type=</span><span class="tAV">"xs:date"</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"RecordType"</span><span class="tAN"> type=</span><span class="tAV">"hmis:recordType"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Contact records collected under 2014 HMIS Data Standards v5.1 (RecordType 12) 4.12 Contact records collected under 2017 HMIS Data Standards (RecordType 13) 4.14 Bed Night (RecordType 200) P1 Services Provided – PATH (RecordType 141) P2 Referrals Provided – PATH (RecordType 161) R14 RHY Service Connections (RecordType 142) W1 Services Provided – HOPWA (RecordType 143) W2 Financial Assistance – HOPWA (RecordType 151) V2 Services Provided – SSVF (RecordType 144) V3 Financial Assistance – SSVF (RecordType 152) V8 HUD-VASH Voucher Tracking (RecordType 210)</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"TypeProvided"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2,</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 12 (v5.1 Contact Location 4.12.2): 1 = Place not meant for habitation 2 = Service setting, non-residential 3 = Service setting, residential 99 = Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 13 (v6.0 Contact Location 4.12.2): Staying on Streets, ES, or SH 0 = No 1 = Yes 2 = Worker unable to determine In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 141 (PATH Services P1): PATH Services 1 = Re-engagement 2 = Screening 3 = Habilitation/rehabilitation 4 = Community mental health 5 = Substance use treatment 6 = Case management 7 = Residential supportive services 8 = Housing minor renovation 9 = Housing moving assistance 10 = Housing eligibility determination 11 = Security deposits 12 = One-time rent for eviction prevention 14 = Clinical assessment 99 = Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 142 (RHY Services R14): 2 = Community service/service learning (CSL) 5 = Education 6 = Employment and/or training services 7 = Criminal justice /legal services 8 = Life skills training 10 = Parenting education for youth with children 12 = Post-natal care for mother 13 = Pre-natal care 14 = Health/medical care 17 = Substance abuse treatment 18 = Substance Abuse Ed/Prevention Services 26 = Home-based Services 27 = Post-natal newborn care (wellness exams; immunizations) 28 = STD Testing 29 = Street-based Services 99 = Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 143 (HOPWA Services W1): 1 Adult day care and personal assistance 2 Case management 3 Child care 4 Criminal justice/legal services 5 Education 6 Employment and training services 7 Food/meals/nutritional services 8 Health/medical care 9 Life skills training 10 Mental health care/counseling 11 Outreach and/or engagement 12 Substance abuse services/treatment 13 Transportation 14 Other HOPWA funded service 99 Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 144 (SSVF Services V2): 1 Outreach services 2 Case management services 3 Assistance obtaining VA benefits 4 Assistance obtaining/coordinating other public benefits 5 Direct provision of other public benefits 6 Other (non-TFA) supportive service approved by VA 99 Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 151 (Financial Assistance - HOPWA Services 4.15.A): 1 Rental assistance [collect for PHP and STRMU] 2 Security deposits [collect for PHP] 3 Utility deposits [collect for PHP] 4 Utility payments [collect for PHP and STRMU] 7 Mortgage assistance [collect for STRMU] 99 Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 152 (Financial Assistance – SSVF V3): 1 Rental assistance 4 Utility fee payment assistance 2 Security deposit 3 Utility deposit 5 Moving costs 8 Transportation services: tokens/vouchers 9 Transportation services: vehicle repair/maintenance 10 Child Care 11 General housing stability assistance - emergency supplies 12 General housing stability assistance - other 14 Emergency housing assistance 99 Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 161 (Referrals Provided – PATH P2): 1 Community Mental Health 2 Substance Use Treatment 3 Primary Health/ Dental Care 4 Job Training 5 Educational Services 6 Housing Services 11 Temporary Housing 7 Permanent Housing 8 Income Assistance 9 Employment Assistance 10 Medical Insurance 99 Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 200 (Services Provided - Bed-night Date 4.14E): 200 BedNight 99 Data Not Collected In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 210 (Services Provided - HUD-VASH OTH voucher tracking 4.50.1): 4.50.1 VoucherTracking Value Text 1 Referral package forwarded to PHA 2 Voucher denied by PHA 3 Voucher issued by PHA 4 Voucher revoked or expired 5 Voucher in use – veteran moved into housing 6 Voucher was ported locally 7 Voucher was administratively absorbed by new PHA 8 Voucher was converted to Housing Choice Voucher 9 Veteran exited – voucher was returned 10 Veteran exited – family maintained the voucher 11 Veteran exited – prior to ever receiving a voucher 12 Other 99 = Data Not Collected</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:integer"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"[0-9]{1,3}"</span><span class="tEl">/&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"OtherTypeProvided"</span><span class="tAN"> type=</span><span class="tAV">"hmis:string50"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section 4.12 and 4.14-4.16.2D (if it exists) .</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"SubTypeProvided"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section 4.12 and 4.14-4.16.3A, 4B, 5C (if it exists).</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:integer"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"[0-9]{1,2}"</span><span class="tEl">/&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"FAAmount"</span><span class="tAN"> type=</span><span class="tAV">"hmis:money"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section W2 #3 and V3 #2, Financial Assistance Amount.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ReferralOutcome"</span><span class="tAN"> type=</span><span class="tAV">"hmis:referralOutcome"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section 4.16A #2A.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> ref=</span><span class="tAV">"hmis:baseMetaData"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tC">&lt;!--Testing if the RecordType is '144' and the TypeProvided is '6' before requiring and even allowing the use of OtherTypeProvided --&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:assert</span><span class="tAN"> test=</span><span class="tAV">"if (not (hmis:RecordType/text() ='144' and hmis:TypeProvided/text() ='6')) then not (boolean(hmis:OtherTypeProvided)) else boolean(hmis:OtherTypeProvided)"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tC">&lt;!--Testing if the RecordType is '144' and the TypeProvided is '3', '4', or '5' before requiring and even allowing the use of SubTypeProvided --&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:assert</span><span class="tAN"> test=</span><span class="tAV">"if (not (hmis:RecordType/text() ='144' and (hmis:TypeProvided/text() ='3' or hmis:TypeProvided/text() ='4' or hmis:TypeProvided/text() ='5'))) then not (boolean(hmis:SubTypeProvided)) else boolean(hmis:TypeProvided)"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tC">&lt;!--Testing if the RecordType is '151' or '152' before requiring and even allowing the use of FAAmount --&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:assert</span><span class="tAN"> test=</span><span class="tAV">"if (not (hmis:RecordType/text() ='151') and not (hmis:RecordType/text() ='152')) then (not (boolean(hmis:FAAmount))) else boolean(hmis:FAAmount)"</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:complexType&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="footer">
+         <hr />
+         <div align="center">XML Schema documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Editor.
+         </div>
+      </div><script type="text/javascript">
+         <!--
+                     // The namespace is the selected option in the TOC combo.
+                    
+                     // Floats the toolbar.
+                     var globalControls = getElementObject("global_controls"); 
+                     
+                     if(globalControls != null){
+	                     var browser=navigator.appName;
+						 var version = parseFloat(navigator.appVersion.split('MSIE')[1]);
+						 
+						 var IE6 = false;
+						 if ((browser=="Microsoft Internet Explorer") && (version < 7)){
+						 	IE6 = true;
+						 }
+	
+	                     //alert (IE6 + " |V| " + version);
+	                     
+	                     if(IE6){
+	                     	// On IE 6 the 'fixed' property is not supported. We must use javascript. 
+	                         globalControls.style.position='absolute';                         
+	                         // The global controls will do not exist in the TOC frame, when chunking.
+	                         findAndFloat("global_controls", 225, 30);    
+	                     } else {
+	                      	  globalControls.style.position='fixed';                     	
+	                     }
+	                     
+	                     globalControls.style.right='0';                       
+                     }
+                //--></script></body>
+</html>

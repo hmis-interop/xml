@@ -1,0 +1,2333 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Schema documentation for component DisabilitiesID</title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
+         <!--
+        var propertiesBoxes= new Array('properties_disabilities_DisabilitiesID', 
+				'properties_disabilities_EnrollmentID', 
+				'properties_disabilities_DisabilityType', 
+				'properties_disabilities_DisabilityResponse', 
+				'properties_disabilities_IndefiniteAndImpairsIndependence', 
+				'properties_disabilities_TCellCountAvailable', 
+				'properties_disabilities_TCellCount', 
+				'properties_disabilities_TCellSource', 
+				'properties_disabilities_ViralLoadAvailable', 
+				'properties_disabilities_ViralLoad', 
+				'properties_disabilities_ViralLoadSource');
+var facetsBoxes= new Array('facets_disabilities_DisabilitiesID', 
+				'facets_disabilities_EnrollmentID', 
+				'facets_disabilities_DisabilityType', 
+				'facets_disabilities_IndefiniteAndImpairsIndependence', 
+				'facets_disabilities_TCellCountAvailable', 
+				'facets_disabilities_TCellCount', 
+				'facets_disabilities_TCellSource', 
+				'facets_disabilities_ViralLoadAvailable', 
+				'facets_disabilities_ViralLoad', 
+				'facets_disabilities_ViralLoadSource');
+var usedByBoxes= new Array('usedBy_disabilities');
+var sourceBoxes= new Array('source_disabilities_DisabilitiesID', 
+				'source_disabilities_EnrollmentID', 
+				'source_disabilities_DisabilityType', 
+				'source_disabilities_DisabilityResponse', 
+				'source_disabilities_IndefiniteAndImpairsIndependence', 
+				'source_disabilities_TCellCountAvailable', 
+				'source_disabilities_TCellCount', 
+				'source_disabilities_TCellSource', 
+				'source_disabilities_ViralLoadAvailable', 
+				'source_disabilities_ViralLoad', 
+				'source_disabilities_ViralLoadSource', 
+				'source_disabilities');
+var diagramBoxes= new Array('diagram_disabilities_DisabilitiesID', 
+				'diagram_disabilities_EnrollmentID', 
+				'diagram_disabilities_DisabilityType', 
+				'diagram_disabilities_DisabilityResponse', 
+				'diagram_disabilities_IndefiniteAndImpairsIndependence', 
+				'diagram_disabilities_TCellCountAvailable', 
+				'diagram_disabilities_TCellCount', 
+				'diagram_disabilities_TCellSource', 
+				'diagram_disabilities_ViralLoadAvailable', 
+				'diagram_disabilities_ViralLoad', 
+				'diagram_disabilities_ViralLoadSource', 
+				'diagram_disabilities');
+var annotationBoxes= new Array('annotations_disabilities_DisabilitiesID', 
+				'annotations_disabilities_EnrollmentID', 
+				'annotations_disabilities_DisabilityType', 
+				'annotations_disabilities_DisabilityResponse', 
+				'annotations_disabilities_IndefiniteAndImpairsIndependence', 
+				'annotations_disabilities_TCellCountAvailable', 
+				'annotations_disabilities_TCellCount', 
+				'annotations_disabilities_TCellSource', 
+				'annotations_disabilities_ViralLoadAvailable', 
+				'annotations_disabilities_ViralLoad', 
+				'annotations_disabilities_ViralLoadSource');
+var attributesBoxes= new Array('attributes_disabilities');
+var assertsBoxes= new Array('asserts_disabilities');
+var modelBoxes= new Array('model_disabilities');
+
+      
+        var button_prefix = 'button_';
+        
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+    
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updatePageTitle(message) {
+            top.document.title = message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+
+            if (!isChunked) {
+             var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+             // Make all the tabs invisible.
+               for (i = 0; i < 3; i++){
+                  var tab = getElementObject(selectIds[i]);
+                  tab.style.display = 'none';
+               }
+               var selTab = getElementObject(id);
+               selTab.style.display = 'block';
+            } else {
+             if (id == 'toc_group_by_namespace') {
+               parent.indexFrame.location = indexFileNamespace;
+             } else  if (id == 'toc_group_by_location') {
+               parent.indexFrame.location = indexFileLocation;
+             } else  if (id == 'toc_group_by_component_type') {
+              parent.indexFrame.location = indexFileComponent;
+             }
+            }
+         }
+          
+
+    
+                    //--></script></head>
+   <body>
+      <div id="global_controls" class="globalControls" style="position:absolute;right:0;">
+         <table class="rt">
+            <tr>
+               <td class="rt_cornerTopLeft"></td>
+               <td class="rt_lineTop"></td>
+               <td class="rt_cornerTopRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_lineLeft"></td>
+               <td class="rt_content">
+                  <h3>Showing:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, annotationBoxes);" class="control" /></span><span class="globalControlName">Annotations</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, attributesBoxes);" class="control" /></span><span class="globalControlName">Attributes </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, assertsBoxes);" class="control" /></span><span class="globalControlName">Asserts </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, diagramBoxes);" class="control" /></span><span class="globalControlName">Diagrams</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, facetsBoxes);" class="control" /></span><span class="globalControlName">Facets </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, modelBoxes);" class="control" /></span><span class="globalControlName">Model </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, propertiesBoxes);" class="control" /></span><span class="globalControlName">Properties </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, sourceBoxes);" class="control" /></span><span class="globalControlName">Source</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, usedByBoxes);" class="control" /></span><span class="globalControlName">Used by </span></td>
+                     </tr>
+                  </table>
+                  <div align="right"><span><input type="button" onclick="getElementObject('global_controls').style.display = 'none';" value="Close" /></span></div>
+               </td>
+               <td class="rt_lineRight"></td>
+            </tr>
+            <tr>
+               <td class="rt_cornerBottomLeft"></td>
+               <td class="rt_lineBottom"></td>
+               <td class="rt_cornerBottomRight"></td>
+            </tr>
+         </table>
+      </div><a id="disabilities_DisabilitiesID"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component disabilities')">disabilities</a></b> / DisabilitiesID</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_disabilities_DisabilitiesID" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_disabilities_DisabilitiesID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_disabilities_DisabilitiesID" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">Reference to the Exit's unique ID</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_disabilities_DisabilitiesID" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_disabilities_DisabilitiesID');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_disabilities_DisabilitiesID" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_DisabilitiesID.jpeg" usemap="#HUD_HMIS_xsd_Element_DisabilitiesID" /><map name="HUD_HMIS_xsd_Element_DisabilitiesID" id="HUD_HMIS_xsd_Element_DisabilitiesID">
+                                 <area alt="HUD_HMIS_xsd_Simple_Type_string32.tmp#string32" href="HUD_HMIS_xsd_Simple_Type_string32.html#string32" coords="188,7,317,33" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Simple_Type_string32.html#string32" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component string32')">string32</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_disabilities_DisabilitiesID" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_disabilities_DisabilitiesID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_disabilities_DisabilitiesID" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_disabilities_DisabilitiesID" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_disabilities_DisabilitiesID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_disabilities_DisabilitiesID" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">maxLength</td>
+                                    <td width="30%"><b>32</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_disabilities_DisabilitiesID" type="image" src="img/btM.gif" value="-" onclick="switchState('source_disabilities_DisabilitiesID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_disabilities_DisabilitiesID" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"DisabilitiesID"</span><span class="tAN"> type=</span><span class="tAV">"hmis:string32"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Reference to the Exit's unique ID</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="disabilities_EnrollmentID"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component disabilities')">disabilities</a></b> / EnrollmentID</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_disabilities_EnrollmentID" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_disabilities_EnrollmentID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_disabilities_EnrollmentID" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">Key reference to the Enrollment</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_disabilities_EnrollmentID" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_disabilities_EnrollmentID');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_disabilities_EnrollmentID" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_EnrollmentID_2.jpeg" usemap="#HUD_HMIS_xsd_Element_EnrollmentID_2" /><map name="HUD_HMIS_xsd_Element_EnrollmentID_2" id="HUD_HMIS_xsd_Element_EnrollmentID_2">
+                                 <area alt="HUD_HMIS_xsd_Simple_Type_string32.tmp#string32" href="HUD_HMIS_xsd_Simple_Type_string32.html#string32" coords="188,7,317,33" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Simple_Type_string32.html#string32" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component string32')">string32</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_disabilities_EnrollmentID" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_disabilities_EnrollmentID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_disabilities_EnrollmentID" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_disabilities_EnrollmentID" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_disabilities_EnrollmentID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_disabilities_EnrollmentID" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">maxLength</td>
+                                    <td width="30%"><b>32</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_disabilities_EnrollmentID" type="image" src="img/btM.gif" value="-" onclick="switchState('source_disabilities_EnrollmentID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_disabilities_EnrollmentID" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"EnrollmentID"</span><span class="tAN"> type=</span><span class="tAV">"hmis:string32"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Key reference to the Enrollment</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="disabilities_DisabilityType"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component disabilities')">disabilities</a></b> / DisabilityType</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_disabilities_DisabilityType" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_disabilities_DisabilityType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_disabilities_DisabilityType" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">The permissible values correspond to the decimal values of the corresponding disability types.  4.5 Physical Disability is "5" and 4.10 Substance Abuse is "10".</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_disabilities_DisabilityType" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_disabilities_DisabilityType');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_disabilities_DisabilityType" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_DisabilityType.jpeg" usemap="#HUD_HMIS_xsd_Element_DisabilityType" /><map name="HUD_HMIS_xsd_Element_DisabilityType" id="HUD_HMIS_xsd_Element_DisabilityType">
+                                 <area alt="HUD_HMIS_xsd_Simple_Type_disabilityType.tmp#disabilityType" href="HUD_HMIS_xsd_Simple_Type_disabilityType.html#disabilityType" coords="217,7,375,33" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Simple_Type_disabilityType.html#disabilityType" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component disabilityType')">disabilityType</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_disabilities_DisabilityType" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_disabilities_DisabilityType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_disabilities_DisabilityType" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_disabilities_DisabilityType" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_disabilities_DisabilityType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_disabilities_DisabilityType" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>5</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Physical Disability</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>6</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Developmental Disability</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>7</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Chronic Health Condition</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>8</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">HIV/AIDS</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>9</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Mental Health Problem</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>10</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Substance Abuse</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>99</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Data not collected</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_disabilities_DisabilityType" type="image" src="img/btM.gif" value="-" onclick="switchState('source_disabilities_DisabilityType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_disabilities_DisabilityType" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"DisabilityType"</span><span class="tAN"> type=</span><span class="tAV">"hmis:disabilityType"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The permissible values correspond to the decimal values of the corresponding disability types. 4.5 Physical Disability is "5" and 4.10 Substance Abuse is "10".</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="disabilities_DisabilityResponse"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component disabilities')">disabilities</a></b> / DisabilityResponse</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_disabilities_DisabilityResponse" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_disabilities_DisabilityResponse');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_disabilities_DisabilityResponse" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section 4.5-4.10, Response #2.  Permissable values vary depending on which disability type is declared.  The values are contined with "Field and Response(s) 2" within 4.5 through 4.10.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_disabilities_DisabilityResponse" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_disabilities_DisabilityResponse');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_disabilities_DisabilityResponse" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_DisabilityResponse.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:nonNegativeInteger</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_disabilities_DisabilityResponse" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_disabilities_DisabilityResponse');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_disabilities_DisabilityResponse" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_disabilities_DisabilityResponse" type="image" src="img/btM.gif" value="-" onclick="switchState('source_disabilities_DisabilityResponse');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_disabilities_DisabilityResponse" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"DisabilityResponse"</span><span class="tAN"> type=</span><span class="tAV">"xs:nonNegativeInteger"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section 4.5-4.10, Response #2. Permissable values vary depending on which disability type is declared. The values are contined with "Field and Response(s) 2" within 4.5 through 4.10.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="disabilities_IndefiniteAndImpairsIndependence"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component disabilities')">disabilities</a></b> / IndefiniteAndImpairsIndependence</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_disabilities_IndefiniteAndImpairsIndependence" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_disabilities_IndefiniteAndImpairsIndependence');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_disabilities_IndefiniteAndImpairsIndependence" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section 4.5-4.10, Response #2A.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_disabilities_IndefiniteAndImpairsIndependence" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_disabilities_IndefiniteAndImpairsIndependence');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_disabilities_IndefiniteAndImpairsIndependence" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_IndefiniteAndImpairsIndependence.jpeg" usemap="#HUD_HMIS_xsd_Element_IndefiniteAndImpairsIndependence" /><map name="HUD_HMIS_xsd_Element_IndefiniteAndImpairsIndependence" id="HUD_HMIS_xsd_Element_IndefiniteAndImpairsIndependence">
+                                 <area alt="HUD_HMIS_xsd_Simple_Type_noYesDoesntKnowRefused.tmp#noYesDoesntKnowRefused" href="HUD_HMIS_xsd_Simple_Type_noYesDoesntKnowRefused.html#noYesDoesntKnowRefused" coords="291,7,523,33" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Simple_Type_noYesDoesntKnowRefused.html#noYesDoesntKnowRefused" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component noYesDoesntKnowRefused')">noYesDoesntKnowRefused</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_disabilities_IndefiniteAndImpairsIndependence" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_disabilities_IndefiniteAndImpairsIndependence');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_disabilities_IndefiniteAndImpairsIndependence" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_disabilities_IndefiniteAndImpairsIndependence" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_disabilities_IndefiniteAndImpairsIndependence');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_disabilities_IndefiniteAndImpairsIndependence" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>0</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">No</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>1</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Yes</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>8</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Client doesn't know</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>9</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Client refused</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>99</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Data not collected</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_disabilities_IndefiniteAndImpairsIndependence" type="image" src="img/btM.gif" value="-" onclick="switchState('source_disabilities_IndefiniteAndImpairsIndependence');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_disabilities_IndefiniteAndImpairsIndependence" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"IndefiniteAndImpairsIndependence"</span><span class="tAN"> type=</span><span class="tAV">"hmis:noYesDoesntKnowRefused"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section 4.5-4.10, Response #2A.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="disabilities_TCellCountAvailable"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component disabilities')">disabilities</a></b> / TCellCountAvailable</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_disabilities_TCellCountAvailable" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_disabilities_TCellCountAvailable');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_disabilities_TCellCountAvailable" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section W4 #2.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_disabilities_TCellCountAvailable" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_disabilities_TCellCountAvailable');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_disabilities_TCellCountAvailable" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_TCellCountAvailable.jpeg" usemap="#HUD_HMIS_xsd_Element_TCellCountAvailable" /><map name="HUD_HMIS_xsd_Element_TCellCountAvailable" id="HUD_HMIS_xsd_Element_TCellCountAvailable">
+                                 <area alt="HUD_HMIS_xsd_Simple_Type_noYesDoesntKnowRefused.tmp#noYesDoesntKnowRefused" href="HUD_HMIS_xsd_Simple_Type_noYesDoesntKnowRefused.html#noYesDoesntKnowRefused" coords="291,7,523,33" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Simple_Type_noYesDoesntKnowRefused.html#noYesDoesntKnowRefused" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component noYesDoesntKnowRefused')">noYesDoesntKnowRefused</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_disabilities_TCellCountAvailable" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_disabilities_TCellCountAvailable');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_disabilities_TCellCountAvailable" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_disabilities_TCellCountAvailable" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_disabilities_TCellCountAvailable');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_disabilities_TCellCountAvailable" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>0</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">No</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>1</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Yes</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>8</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Client doesn't know</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>9</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Client refused</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>99</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Data not collected</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_disabilities_TCellCountAvailable" type="image" src="img/btM.gif" value="-" onclick="switchState('source_disabilities_TCellCountAvailable');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_disabilities_TCellCountAvailable" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"TCellCountAvailable"</span><span class="tAN"> type=</span><span class="tAV">"hmis:noYesDoesntKnowRefused"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section W4 #2.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="disabilities_TCellCount"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component disabilities')">disabilities</a></b> / TCellCount</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_disabilities_TCellCount" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_disabilities_TCellCount');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_disabilities_TCellCount" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section W4 A.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_disabilities_TCellCount" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_disabilities_TCellCount');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_disabilities_TCellCount" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_TCellCount.jpeg" usemap="#HUD_HMIS_xsd_Element_TCellCount" /><map name="HUD_HMIS_xsd_Element_TCellCount" id="HUD_HMIS_xsd_Element_TCellCount">
+                                 <area alt="HUD_HMIS_xsd_Simple_Type_tCellCount.tmp#tCellCount" href="HUD_HMIS_xsd_Simple_Type_tCellCount.html#tCellCount" coords="200,7,341,33" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Simple_Type_tCellCount.html#tCellCount" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component tCellCount')">tCellCount</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_disabilities_TCellCount" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_disabilities_TCellCount');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_disabilities_TCellCount" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_disabilities_TCellCount" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_disabilities_TCellCount');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_disabilities_TCellCount" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">maxInclusive</td>
+                                    <td width="30%"><b>1500</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">minInclusive</td>
+                                    <td width="30%"><b>0</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_disabilities_TCellCount" type="image" src="img/btM.gif" value="-" onclick="switchState('source_disabilities_TCellCount');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_disabilities_TCellCount" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"TCellCount"</span><span class="tAN"> type=</span><span class="tAV">"hmis:tCellCount"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section W4 A.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="disabilities_TCellSource"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component disabilities')">disabilities</a></b> / TCellSource</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_disabilities_TCellSource" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_disabilities_TCellSource');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_disabilities_TCellSource" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section W4.B.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_disabilities_TCellSource" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_disabilities_TCellSource');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_disabilities_TCellSource" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_TCellSource.jpeg" usemap="#HUD_HMIS_xsd_Element_TCellSource" /><map name="HUD_HMIS_xsd_Element_TCellSource" id="HUD_HMIS_xsd_Element_TCellSource">
+                                 <area alt="HUD_HMIS_xsd_Simple_Type_tCellOrViralLoadSource.tmp#tCellOrViralLoadSource" href="HUD_HMIS_xsd_Simple_Type_tCellOrViralLoadSource.html#tCellOrViralLoadSource" coords="270,7,481,33" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Simple_Type_tCellOrViralLoadSource.html#tCellOrViralLoadSource" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component tCellOrViralLoadSource')">tCellOrViralLoadSource</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_disabilities_TCellSource" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_disabilities_TCellSource');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_disabilities_TCellSource" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_disabilities_TCellSource" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_disabilities_TCellSource');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_disabilities_TCellSource" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>1</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Medical Report</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>2</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Client Report</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>3</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Other</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>99</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Data not collected</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_disabilities_TCellSource" type="image" src="img/btM.gif" value="-" onclick="switchState('source_disabilities_TCellSource');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_disabilities_TCellSource" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"TCellSource"</span><span class="tAN"> type=</span><span class="tAV">"hmis:tCellOrViralLoadSource"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section W4.B.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="disabilities_ViralLoadAvailable"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component disabilities')">disabilities</a></b> / ViralLoadAvailable</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_disabilities_ViralLoadAvailable" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_disabilities_ViralLoadAvailable');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_disabilities_ViralLoadAvailable" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section W4.3.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_disabilities_ViralLoadAvailable" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_disabilities_ViralLoadAvailable');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_disabilities_ViralLoadAvailable" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_ViralLoadAvailable.jpeg" usemap="#HUD_HMIS_xsd_Element_ViralLoadAvailable" /><map name="HUD_HMIS_xsd_Element_ViralLoadAvailable" id="HUD_HMIS_xsd_Element_ViralLoadAvailable">
+                                 <area alt="HUD_HMIS_xsd_Simple_Type_viralLoadAvailable.tmp#viralLoadAvailable" href="HUD_HMIS_xsd_Simple_Type_viralLoadAvailable.html#viralLoadAvailable" coords="240,7,421,33" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Simple_Type_viralLoadAvailable.html#viralLoadAvailable" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component viralLoadAvailable')">viralLoadAvailable</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_disabilities_ViralLoadAvailable" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_disabilities_ViralLoadAvailable');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_disabilities_ViralLoadAvailable" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_disabilities_ViralLoadAvailable" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_disabilities_ViralLoadAvailable');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_disabilities_ViralLoadAvailable" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>0</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Not available</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>1</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Available</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>2</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Undetectable</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>8</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Client doesn’t know</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>9</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Client refused</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>99</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Data not collected</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_disabilities_ViralLoadAvailable" type="image" src="img/btM.gif" value="-" onclick="switchState('source_disabilities_ViralLoadAvailable');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_disabilities_ViralLoadAvailable" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ViralLoadAvailable"</span><span class="tAN"> type=</span><span class="tAV">"hmis:viralLoadAvailable"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section W4.3.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="disabilities_ViralLoad"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component disabilities')">disabilities</a></b> / ViralLoad</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_disabilities_ViralLoad" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_disabilities_ViralLoad');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_disabilities_ViralLoad" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section W4.C.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_disabilities_ViralLoad" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_disabilities_ViralLoad');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_disabilities_ViralLoad" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_ViralLoad.jpeg" usemap="#HUD_HMIS_xsd_Element_ViralLoad" /><map name="HUD_HMIS_xsd_Element_ViralLoad" id="HUD_HMIS_xsd_Element_ViralLoad">
+                                 <area alt="HUD_HMIS_xsd_Simple_Type_viralLoad.tmp#viralLoad" href="HUD_HMIS_xsd_Simple_Type_viralLoad.html#viralLoad" coords="191,7,323,33" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Simple_Type_viralLoad.html#viralLoad" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component viralLoad')">viralLoad</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_disabilities_ViralLoad" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_disabilities_ViralLoad');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_disabilities_ViralLoad" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_disabilities_ViralLoad" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_disabilities_ViralLoad');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_disabilities_ViralLoad" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">maxInclusive</td>
+                                    <td width="30%"><b>999999</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">minInclusive</td>
+                                    <td width="30%"><b>0</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_disabilities_ViralLoad" type="image" src="img/btM.gif" value="-" onclick="switchState('source_disabilities_ViralLoad');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_disabilities_ViralLoad" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ViralLoad"</span><span class="tAN"> type=</span><span class="tAV">"hmis:viralLoad"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section W4.C.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="disabilities_ViralLoadSource"></a><div class="componentTitle">Element <span class="qname"><b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component disabilities')">disabilities</a></b> / ViralLoadSource</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_disabilities_ViralLoadSource" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_disabilities_ViralLoadSource');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_disabilities_ViralLoadSource" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section W4 D.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_disabilities_ViralLoadSource" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_disabilities_ViralLoadSource');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_disabilities_ViralLoadSource" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Element_ViralLoadSource.jpeg" usemap="#HUD_HMIS_xsd_Element_ViralLoadSource" /><map name="HUD_HMIS_xsd_Element_ViralLoadSource" id="HUD_HMIS_xsd_Element_ViralLoadSource">
+                                 <area alt="HUD_HMIS_xsd_Simple_Type_tCellOrViralLoadSource.tmp#tCellOrViralLoadSource" href="HUD_HMIS_xsd_Simple_Type_tCellOrViralLoadSource.html#tCellOrViralLoadSource" coords="270,7,481,33" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Simple_Type_tCellOrViralLoadSource.html#tCellOrViralLoadSource" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component tCellOrViralLoadSource')">tCellOrViralLoadSource</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_disabilities_ViralLoadSource" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_disabilities_ViralLoadSource');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_disabilities_ViralLoadSource" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_disabilities_ViralLoadSource" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_disabilities_ViralLoadSource');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_disabilities_ViralLoadSource" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>1</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Medical Report</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>2</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Client Report</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>3</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Other</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>99</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Data not collected</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_disabilities_ViralLoadSource" type="image" src="img/btM.gif" value="-" onclick="switchState('source_disabilities_ViralLoadSource');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_disabilities_ViralLoadSource" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ViralLoadSource"</span><span class="tAN"> type=</span><span class="tAV">"hmis:tCellOrViralLoadSource"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section W4 D.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="disabilities"></a><div class="componentTitle">Complex Type <span class="qname">disabilities</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_disabilities" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_disabilities');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_disabilities" style="display:block"><img alt="Diagram" border="0" src="img/HUD_HMIS_xsd_Complex_Type_disabilities.jpeg" usemap="#HUD_HMIS_xsd_Complex_Type_disabilities" /><map name="HUD_HMIS_xsd_Complex_Type_disabilities" id="HUD_HMIS_xsd_Complex_Type_disabilities">
+                                 <area alt="HUD_HMIS_xsd_Attribute_dataCollectionStage.tmp#dataCollectionStage" href="HUD_HMIS_xsd_Attribute_dataCollectionStage.html#dataCollectionStage" coords="154,37,384,77" />
+                                 <area alt="HUD_HMIS_xsd_Attribute_informationDate.tmp#informationDate" href="HUD_HMIS_xsd_Attribute_informationDate.html#informationDate" coords="154,116,324,156" />
+                                 <area alt="HUD_HMIS_xsd_Attribute_Group_baseMetaData.tmp#baseMetaData" href="HUD_HMIS_xsd_Attribute_Group_baseMetaData.html#baseMetaData" coords="157,198,319,224" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_disabilities.tmp#disabilities_DisabilitiesID" href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_DisabilitiesID" coords="211,517,351,557" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_disabilities.tmp#disabilities_EnrollmentID" href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_EnrollmentID" coords="211,596,351,636" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_disabilities.tmp#disabilities_DisabilityType" href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_DisabilityType" coords="211,675,380,715" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_disabilities.tmp#disabilities_DisabilityResponse" href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_DisabilityResponse" coords="211,766,403,806" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_disabilities.tmp#disabilities_IndefiniteAndImpairsIndependence" href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_IndefiniteAndImpairsIndependence" coords="211,857,454,897" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_disabilities.tmp#disabilities_TCellCountAvailable" href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_TCellCountAvailable" coords="211,936,454,976" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_disabilities.tmp#disabilities_TCellCount" href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_TCellCount" coords="211,1015,363,1055" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_disabilities.tmp#disabilities_TCellSource" href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_TCellSource" coords="211,1094,433,1134" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_disabilities.tmp#disabilities_ViralLoadAvailable" href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_ViralLoadAvailable" coords="211,1173,403,1213" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_disabilities.tmp#disabilities_ViralLoad" href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_ViralLoad" coords="211,1252,354,1292" />
+                                 <area alt="HUD_HMIS_xsd_Complex_Type_disabilities.tmp#disabilities_ViralLoadSource" href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_ViralLoadSource" coords="211,1331,433,1371" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_disabilities" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_disabilities');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_disabilities" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="HUD_HMIS_xsd_Complex_Type_export.html#export_Disabilities" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component export/Disabilities')">export/Disabilities</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_disabilities" type="image" src="img/btM.gif" value="-" onclick="switchState('model_disabilities');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_disabilities" style="display:block">
+                              <table>
+                                 <tr>
+                                    <td colspan="2"><b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_DisabilitiesID" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component DisabilitiesID')">DisabilitiesID</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_EnrollmentID" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component EnrollmentID')">EnrollmentID</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_DisabilityType" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component DisabilityType')">DisabilityType</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_DisabilityResponse" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component DisabilityResponse')">DisabilityResponse</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_IndefiniteAndImpairsIndependence" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component IndefiniteAndImpairsIndependence')">IndefiniteAndImpairsIndependence</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_TCellCountAvailable" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component TCellCountAvailable{0,1}')">TCellCountAvailable{0,1}</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_TCellCount" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component TCellCount{0,1}')">TCellCount{0,1}</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_TCellSource" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component TCellSource{0,1}')">TCellSource{0,1}</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_ViralLoadAvailable" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component ViralLoadAvailable{0,1}')">ViralLoadAvailable{0,1}</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_ViralLoad" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component ViralLoad{0,1}')">ViralLoad{0,1}</a></b> , <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_ViralLoadSource" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component ViralLoadSource{0,1}')">ViralLoadSource{0,1}</a></b></td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="2"><b><a href="HUD_HMIS_xsd_Main_schema_HUD_HMIS_xsd.html#HUD_HMIS.xsd" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component Default Open Content')">Default Open Content</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_DisabilitiesID" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component DisabilitiesID')">DisabilitiesID</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_DisabilityResponse" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component DisabilityResponse')">DisabilityResponse</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_DisabilityType" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component DisabilityType')">DisabilityType</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_EnrollmentID" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component EnrollmentID')">EnrollmentID</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_IndefiniteAndImpairsIndependence" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component IndefiniteAndImpairsIndependence')">IndefiniteAndImpairsIndependence</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_TCellCount" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component TCellCount')">TCellCount</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_TCellCountAvailable" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component TCellCountAvailable')">TCellCountAvailable</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_TCellSource" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component TCellSource')">TCellSource</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_ViralLoad" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component ViralLoad')">ViralLoad</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_ViralLoadAvailable" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component ViralLoadAvailable')">ViralLoadAvailable</a></b>, <b><a href="HUD_HMIS_xsd_Complex_Type_disabilities.html#disabilities_ViralLoadSource" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component ViralLoadSource')">ViralLoadSource</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_disabilities" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_disabilities');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_disabilities" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th width="10%">Type</th>
+                                       <th width="5%">Use</th>
+                                       <th>Annotation</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="HUD_HMIS_xsd_Attribute_dataCollectionStage.html#dataCollectionStage" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component dataCollectionStage')">dataCollectionStage</a></b></td>
+                                    <td>restriction of <b>xs:unsignedInt</b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section 5.3.</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="HUD_HMIS_xsd_Attribute_Group_baseMetaData.html#baseMetaData_dateCreated" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component dateCreated')">dateCreated</a></b></td>
+                                    <td><b>xs:dateTime</b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section 5.1.</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="HUD_HMIS_xsd_Attribute_Group_baseMetaData.html#baseMetaData_dateDeleted" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component dateDeleted')">dateDeleted</a></b></td>
+                                    <td><b>xs:dateTime</b></td>
+                                    <td>optional</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">If the intended record is to be deleted, this metadata allows you to both indicate the record should be deleted within the target system, as well as indicate the specific time it was deleted.</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="HUD_HMIS_xsd_Attribute_Group_baseMetaData.html#baseMetaData_dateUpdated" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component dateUpdated')">dateUpdated</a></b></td>
+                                    <td><b>xs:dateTime</b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section 5.2.</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="HUD_HMIS_xsd_Attribute_informationDate.html#informationDate" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component informationDate')">informationDate</a></b></td>
+                                    <td><b>xs:date</b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section 5.4.</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="HUD_HMIS_xsd_Attribute_Group_baseMetaData.html#baseMetaData_userID" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component userID')">userID</a></b></td>
+                                    <td><b><a href="HUD_HMIS_xsd_Simple_Type_string32.html#string32" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component string32')">string32</a></b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">See June 2017 HMIS Data Dictionary v1.2, Section 5.7.</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Asserts</b></div>
+                           <div class="floatRight"><input id="button_asserts_disabilities" type="image" src="img/btM.gif" value="-" onclick="switchState('asserts_disabilities');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="asserts_disabilities" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>Test</th>
+                                       <th>XPath default namespace</th>
+                                       <th>Annotation</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn">if (hmis:TCellCountAvailable) then boolean(hmis:DisabilityType/text()='8') else true()</td>
+                                    <td width="10%"></td>
+                                    <td width="10%">
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">if (hmis:TCellCountAvailable/text()='1') then boolean(hmis:TCellCount) else (if (not(hmis:TCellCountAvailable/text()='1'))
+                                       then (not(boolean(hmis:TCellCount))) else false())
+                                    </td>
+                                    <td width="10%"></td>
+                                    <td width="10%">
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">if (hmis:TCellCount) then boolean(hmis:TCellSource) else (if (not(hmis:TCellCount))
+                                       then (not(boolean(hmis:TCellSource))) else false())
+                                    </td>
+                                    <td width="10%"></td>
+                                    <td width="10%">
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">if (hmis:ViralLoadAvailable) then boolean(hmis:DisabilityType/text()='8') else true()</td>
+                                    <td width="10%"></td>
+                                    <td width="10%">
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">if (hmis:ViralLoadAvailable/text()='1') then boolean(hmis:ViralLoad) else (if (not(hmis:ViralLoadAvailable/text()='1'))
+                                       then (not(boolean(hmis:ViralLoad))) else false())
+                                    </td>
+                                    <td width="10%"></td>
+                                    <td width="10%">
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">if (hmis:ViralLoad) then boolean(hmis:ViralLoadSource) else (if (not(hmis:ViralLoad))
+                                       then (not(boolean(hmis:ViralLoadSource))) else false())
+                                    </td>
+                                    <td width="10%"></td>
+                                    <td width="10%">
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_disabilities" type="image" src="img/btM.gif" value="-" onclick="switchState('source_disabilities');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_disabilities" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:complexType</span><span class="tAN"> name=</span><span class="tAV">"disabilities"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"DisabilitiesID"</span><span class="tAN"> type=</span><span class="tAV">"hmis:string32"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Reference to the Exit's unique ID</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"EnrollmentID"</span><span class="tAN"> type=</span><span class="tAV">"hmis:string32"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Key reference to the Enrollment</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"DisabilityType"</span><span class="tAN"> type=</span><span class="tAV">"hmis:disabilityType"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The permissible values correspond to the decimal values of the corresponding disability types. 4.5 Physical Disability is "5" and 4.10 Substance Abuse is "10".</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"DisabilityResponse"</span><span class="tAN"> type=</span><span class="tAV">"xs:nonNegativeInteger"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section 4.5-4.10, Response #2. Permissable values vary depending on which disability type is declared. The values are contined with "Field and Response(s) 2" within 4.5 through 4.10.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"IndefiniteAndImpairsIndependence"</span><span class="tAN"> type=</span><span class="tAV">"hmis:noYesDoesntKnowRefused"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section 4.5-4.10, Response #2A.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"TCellCountAvailable"</span><span class="tAN"> type=</span><span class="tAV">"hmis:noYesDoesntKnowRefused"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section W4 #2.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"TCellCount"</span><span class="tAN"> type=</span><span class="tAV">"hmis:tCellCount"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section W4 A.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"TCellSource"</span><span class="tAN"> type=</span><span class="tAV">"hmis:tCellOrViralLoadSource"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section W4.B.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ViralLoadAvailable"</span><span class="tAN"> type=</span><span class="tAV">"hmis:viralLoadAvailable"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section W4.3.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ViralLoad"</span><span class="tAN"> type=</span><span class="tAV">"hmis:viralLoad"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section W4.C.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ViralLoadSource"</span><span class="tAN"> type=</span><span class="tAV">"hmis:tCellOrViralLoadSource"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">See June 2017 HMIS Data Dictionary v1.2, Section W4 D.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> ref=</span><span class="tAV">"hmis:dataCollectionStage"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> ref=</span><span class="tAV">"hmis:informationDate"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> ref=</span><span class="tAV">"hmis:baseMetaData"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tC">&lt;!--Testing if DisabilityType is 8, before allowing use of TCellCountAvailable--&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:assert</span><span class="tAN"> test=</span><span class="tAV">"if (hmis:TCellCountAvailable) then boolean(hmis:DisabilityType/text()='8') else true()"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tC">&lt;!--Testing if TCellCountAvailable is 1, before allowing use of TCellCount--&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:assert</span><span class="tAN"> test=</span><span class="tAV">"if (hmis:TCellCountAvailable/text()='1') then boolean(hmis:TCellCount) else (if (not(hmis:TCellCountAvailable/text()='1')) then (not(boolean(hmis:TCellCount))) else false())"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tC">&lt;!--Testing if TCellCount is not null, before allowing use of TCellSource--&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:assert</span><span class="tAN"> test=</span><span class="tAV">"if (hmis:TCellCount) then boolean(hmis:TCellSource) else (if (not(hmis:TCellCount)) then (not(boolean(hmis:TCellSource))) else false())"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tC">&lt;!--Testing if DisabilityType is 8, before allowing use of ViralLoadAvailable--&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:assert</span><span class="tAN"> test=</span><span class="tAV">"if (hmis:ViralLoadAvailable) then boolean(hmis:DisabilityType/text()='8') else true()"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tC">&lt;!--Testing if ViralLoadAvailable is 1, before allowing use of ViralLoad--&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:assert</span><span class="tAN"> test=</span><span class="tAV">"if (hmis:ViralLoadAvailable/text()='1') then boolean(hmis:ViralLoad) else (if (not(hmis:ViralLoadAvailable/text()='1')) then (not(boolean(hmis:ViralLoad))) else false())"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tC">&lt;!--Testing if  ViralLoad is not null, before allowing use of  ViralLoadSource--&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:assert</span><span class="tAN"> test=</span><span class="tAV">"if (hmis:ViralLoad) then boolean(hmis:ViralLoadSource) else (if (not(hmis:ViralLoad)) then (not(boolean(hmis:ViralLoadSource))) else false())"</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:complexType&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="footer">
+         <hr />
+         <div align="center">XML Schema documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Editor.
+         </div>
+      </div><script type="text/javascript">
+         <!--
+                     // The namespace is the selected option in the TOC combo.
+                    
+                     // Floats the toolbar.
+                     var globalControls = getElementObject("global_controls"); 
+                     
+                     if(globalControls != null){
+	                     var browser=navigator.appName;
+						 var version = parseFloat(navigator.appVersion.split('MSIE')[1]);
+						 
+						 var IE6 = false;
+						 if ((browser=="Microsoft Internet Explorer") && (version < 7)){
+						 	IE6 = true;
+						 }
+	
+	                     //alert (IE6 + " |V| " + version);
+	                     
+	                     if(IE6){
+	                     	// On IE 6 the 'fixed' property is not supported. We must use javascript. 
+	                         globalControls.style.position='absolute';                         
+	                         // The global controls will do not exist in the TOC frame, when chunking.
+	                         findAndFloat("global_controls", 225, 30);    
+	                     } else {
+	                      	  globalControls.style.position='fixed';                     	
+	                     }
+	                     
+	                     globalControls.style.right='0';                       
+                     }
+                //--></script></body>
+</html>
