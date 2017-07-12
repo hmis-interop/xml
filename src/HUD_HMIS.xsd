@@ -1,9 +1,9 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <xs:schema
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd"	
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd"
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/2017_1_2_0/HUD_HMIS.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/2017_1_2_0/HUD_HMIS.xsd"	
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/2017_1_2_0/HUD_HMIS.xsd"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
