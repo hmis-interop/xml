@@ -1,16 +1,16 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <xs:schema
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/4_1_7/HUD_HMIS.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/4_1_7/HUD_HMIS.xsd"	
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_1_7/HUD_HMIS.xsd"
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/4_1_8/HUD_HMIS.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/4_1_8/HUD_HMIS.xsd"	
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/4_1_8/HUD_HMIS.xsd"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	vc:minVersion = "1.1"
 	elementFormDefault="qualified"
 	attributeFormDefault="qualified"
-	version="4.1.7">
+	version="4.1.8">
 		
 	<xs:defaultOpenContent mode="interleave" appliesToEmpty="true"> 
 		<xs:annotation>
@@ -1906,7 +1906,24 @@
 			<xs:element name="TypeProvided">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See September 2015 HMIS Data Dictionary, Section 4.12 and 4.14-4.16, #2 (picklist values vary by service category and funder) .</xs:documentation>
-					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Sections 4.12 and 4.14-4.16.  99 = ""Data Not Collected" is also permissable.</xs:documentation>
+					<xs:documentation xml:lang="en">See September 2015 HMIS Data Manual, Sections 4.12 and 4.14-4.16.  99 = ""Data Not Collected" is also permissible.
+						4.14.A PATHServices
+						Used in Services.csv when RecordType = 141 (PATH service).
+						Value Text
+						1 Outreach
+						2 Screening/assessment
+						3 Habilitation/rehabilitation
+						4 Community mental health
+						5 Substance use treatment
+						6 Case management
+						7 Residential supportive services
+						8 Housing minor renovation
+						9 Housing moving assistance
+						10 Housing technical assistance
+						11 Security deposits
+						12 One-time rent for eviction prevention
+						13 Other PATH funded service
+					</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:integer">
