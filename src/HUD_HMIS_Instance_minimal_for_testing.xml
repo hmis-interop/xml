@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/5_1_1/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/v5.1.1/src/HUD_HMIS.xsd"
+    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/2017_1_2_0/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/2017-v1.2.0/src/HUD_HMIS.xsd"
  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
- xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/5_1_1/HUD_HMIS.xsd">
+ xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/2017_1_2_0/HUD_HMIS.xsd">
     <hmis:Source>
         <hmis:SourceID>12345</hmis:SourceID>
         <hmis:SourceType>1</hmis:SourceType>
@@ -45,25 +45,22 @@
                 <hmis:VeteranStatus>9</hmis:VeteranStatus>            
             </hmis:Client>
             <hmis:Enrollment hmis:dateCreated="2015-05-08T23:14:59" hmis:dateUpdated="2015-01-27T23:14:59Z" hmis:userID="Hc8CQeYVWWj0dA9cWkDLe">
-                <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
+                <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:PersonalID>A1a1</hmis:PersonalID>
                 <hmis:ProjectID>222D</hmis:ProjectID>
                 <hmis:EntryDate>2016-04-12Z</hmis:EntryDate>
                 <hmis:HouseholdID>a34563w</hmis:HouseholdID>
                 <hmis:RelationshipToHoH>1</hmis:RelationshipToHoH>
-                <hmis:ResidencePrior>17</hmis:ResidencePrior>
-                <hmis:ResidencePriorLengthOfStay>8</hmis:ResidencePriorLengthOfStay>
                 <hmis:PreviousStreetESSH>1</hmis:PreviousStreetESSH>
                 <hmis:DateToStreetESSH>2015-04-01</hmis:DateToStreetESSH>
                 <hmis:TimesHomelessPastThreeYears>2</hmis:TimesHomelessPastThreeYears>
                 <hmis:MonthsHomelessPastThreeYears>103</hmis:MonthsHomelessPastThreeYears>
                 <hmis:DisablingCondition>9</hmis:DisablingCondition>
-                <hmis:HousingStatus>6</hmis:HousingStatus>
             </hmis:Enrollment>
             <hmis:EnrollmentCoC hmis:dataCollectionStage="1" hmis:informationDate="2015-06-24" hmis:dateCreated="2016-02-13T23:14:59Z"
                  hmis:dateUpdated="2016-02-19T23:14:59" hmis:userID="DU5m">
                 <hmis:EnrollmentCoCID>56332</hmis:EnrollmentCoCID>
-                <hmis:ProjectEntryID>w5641</hmis:ProjectEntryID>
+                <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:HouseholdID>a34563w</hmis:HouseholdID>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
             </hmis:EnrollmentCoC>
@@ -81,14 +78,11 @@
                 <hmis:ProjectID>222D</hmis:ProjectID>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
                 <hmis:HouseholdType>1</hmis:HouseholdType>
-                <hmis:BedType>3</hmis:BedType>
-                <hmis:Availability>3</hmis:Availability>
                 <hmis:UnitInventory>1595973432</hmis:UnitInventory>
                 <hmis:BedInventory>130</hmis:BedInventory>
                 <hmis:CHBedInventory>17</hmis:CHBedInventory>
                 <hmis:VetBedInventory>14</hmis:VetBedInventory>
                 <hmis:YouthBedInventory>16</hmis:YouthBedInventory>
-                <hmis:YouthAgeGroup>1</hmis:YouthAgeGroup>
                 <hmis:InventoryStartDate>2014-10-31</hmis:InventoryStartDate>
                 <hmis:InventoryEndDate>2015-05-12Z</hmis:InventoryEndDate>
                 <hmis:HMISParticipatingBeds>539390492</hmis:HMISParticipatingBeds>
@@ -103,8 +97,8 @@
                 <hmis:OrganizationID>34</hmis:OrganizationID>
                 <hmis:ProjectName>Residence Enablers</hmis:ProjectName>
                 <hmis:ContinuumProject>0</hmis:ContinuumProject>
-                <hmis:ProjectType>9</hmis:ProjectType>
-                <hmis:ResidentialAffiliation>0</hmis:ResidentialAffiliation>
+                <hmis:ProjectType>3</hmis:ProjectType>
+                <hmis:OperatingStartDate>2017-01-01</hmis:OperatingStartDate>
                 <hmis:TrackingMethod>0</hmis:TrackingMethod>
                 <hmis:TargetPopulation>4</hmis:TargetPopulation>
                 <hmis:ProjectCommonName>Residence Enablers</hmis:ProjectCommonName>
@@ -113,17 +107,6 @@
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
                 <hmis:ProjectID>222D</hmis:ProjectID>
             </hmis:CoC>
-            <hmis:Site hmis:dateCreated="2014-09-03T23:14:59" hmis:dateUpdated="2016-02-25T23:14:59Z" hmis:userID="ck">
-                <hmis:SiteID>4526</hmis:SiteID>
-                <hmis:CoCCode>BZ-123</hmis:CoCCode>
-                <hmis:ProjectID>222Ds</hmis:ProjectID>
-                <hmis:PrincipalSite>1</hmis:PrincipalSite>
-                <hmis:Address>111 Pine St.</hmis:Address>
-                <hmis:City>Tuscaloosa</hmis:City>
-                <hmis:State>OK</hmis:State>
-                <hmis:ZIP>84683</hmis:ZIP>
-                <hmis:Geocode>177988</hmis:Geocode>
-            </hmis:Site>
         </hmis:Export>
     </hmis:Source>
 </hmis:Sources>
