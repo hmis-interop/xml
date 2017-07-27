@@ -1,14 +1,14 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <xs:schema
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/2017_1_2_0/HUD_HMIS.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/2017_1_2_0/HUD_HMIS.xsd"	
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/2017_1_2_0/HUD_HMIS.xsd"
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/2017_1_2_1/HUD_HMIS.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/2017_1_2_1/HUD_HMIS.xsd"	
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/2017_1_2_1/HUD_HMIS.xsd"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	vc:minVersion = "1.1"
-	version="2017-1.2.0"
+	version="2017-1.2.1"
 	elementFormDefault="qualified"		
 	attributeFormDefault="qualified">
 		
@@ -963,7 +963,7 @@
 					<xs:documentation xml:lang="en">See June 2017 HMIS Data Dictionary v1.2, Section R18.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CounselingType" type="hmis:counselingType" minOccurs="0">
+			<xs:element name="CounselingType" type="hmis:counselingType" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See June 2017 HMIS Data Dictionary v1.2, Section R18.A.</xs:documentation>
 				</xs:annotation>
