@@ -20,7 +20,7 @@ public class Validate {
 
 		Source instanceDocument = new StAXSource(reader);
 		StreamSource schemaDocument = new StreamSource("file:///home/user/git/hmis-xml/src/HUD_HMIS.xsd");
-//		StreamSource schemaDocument = new StreamSource("https://raw.githubusercontent.com/hmis-interop/xml/2017-v1.2/src/HUD_HMIS.xsd");
+//		StreamSource schemaDocument = new StreamSource("https://raw.githubusercontent.com/hmis-interop/xml/v6.1.0/src/HUD_HMIS.xsd");
 		SchemaFactory sf = SchemaFactory.newInstance("http://www.w3.org/XML/XMLSchema/v1.1");
 		Schema s = sf.newSchema(schemaDocument);
 		Validator v = s.newValidator();
