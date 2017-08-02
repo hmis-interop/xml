@@ -1046,6 +1046,15 @@
 		<!--Testing if CounselingReceived is 1, before allowing use of SessionCountAtExit-->
 		<xs:assert test="if (hmis:CounselingReceived/text()='1') then boolean(hmis:SessionCountAtExit) else (if (not(hmis:CounselingReceived/text()='1')) then (not(boolean(hmis:SessionCountAtExit))) else false())"/>
 		
+		<!--Testing if CounselingReceived is 1, before allowing use of IndividualCounseling-->
+		<xs:assert test="if (not(hmis:CounselingReceived/text()='1')) then (not(boolean(hmis:IndividualCounseling))) else false()"/>
+		
+		<!--Testing if CounselingReceived is 1, before allowing use of FamilyCounseling-->
+		<xs:assert test="if (not(hmis:CounselingReceived/text()='1')) then (not(boolean(FamilyCounseling))) else false()"/>
+		
+		<!--Testing if CounselingReceived is 1, before allowing use of GroupCounseling-->
+		<xs:assert test="if (not(hmis:CounselingReceived/text()='1')) then (not(boolean(GroupCounseling))) else false()"/>
+		
 	</xs:complexType>
 
 	<xs:complexType name="export">
