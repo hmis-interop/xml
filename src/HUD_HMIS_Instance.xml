@@ -1,8 +1,8 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/2017_1_2_1/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/2017-v1.2.1/src/HUD_HMIS.xsd"
+    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/v6.1.1/src/HUD_HMIS.xsd"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/2017_1_2_1/HUD_HMIS.xsd">
+    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd">
     <hmis:Source>
         <hmis:SourceID>12345</hmis:SourceID>
         <hmis:SourceType>1</hmis:SourceType>
@@ -276,10 +276,9 @@
                 <hmis:StartDate>2016-06-11Z</hmis:StartDate>
                 <hmis:EndDate>2016-04-08</hmis:EndDate>
             </hmis:Funder>
-            <hmis:Geography hmis:dateCreated="2014-09-03T23:14:59" hmis:dateUpdated="2016-02-25T23:14:59Z" hmis:userID="ck">
+            <hmis:Geography hmis:dateCreated="2014-09-03T23:14:59" hmis:dateUpdated="2016-02-25T23:14:59Z" hmis:userID="ck" hmis:informationDate="2016-02-25T23:14:59Z">
                 <hmis:GeographyID>4526</hmis:GeographyID>
                 <hmis:ProjectID>222E</hmis:ProjectID>
-                <hmis:InformationDate>2016-01-10</hmis:InformationDate>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
                 <hmis:Geocode>177988</hmis:Geocode>
                 <hmis:GeographyType>2</hmis:GeographyType>

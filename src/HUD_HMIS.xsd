@@ -1,14 +1,14 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <xs:schema
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/6_1_0/HUD_HMIS.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/6_1_0/HUD_HMIS.xsd"	
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/6_1_0/HUD_HMIS.xsd"
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd"	
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	vc:minVersion = "1.1"
-	version="6.1.0"
+	version="6.1.1"
 	elementFormDefault="qualified"		
 	attributeFormDefault="qualified">
 		
@@ -562,7 +562,7 @@
 			</xs:element>
 			<xs:element name="CoCCode" type="hmis:cocCode">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the CoC's ID</xs:documentation>
+					<xs:documentation xml:lang="en">Key reference to the CoC's ID.  See June 2017 HMIS Data Dictionary v1.2, Section 3.16.1</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -963,7 +963,17 @@
 					<xs:documentation xml:lang="en">See June 2017 HMIS Data Dictionary v1.2, Section R18.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CounselingType" type="hmis:counselingType" maxOccurs="unbounded">
+			<xs:element name="IndividualCounseling" type="hmis:noYes"  minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See June 2017 HMIS Data Dictionary v1.2, Section R18.A.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FamilyCounseling" type="hmis:noYes"  minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">See June 2017 HMIS Data Dictionary v1.2, Section R18.A.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GroupCounseling" type="hmis:noYes"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See June 2017 HMIS Data Dictionary v1.2, Section R18.A.</xs:documentation>
 				</xs:annotation>
@@ -1032,9 +1042,6 @@
 		
 		<!--Testing if AskedOrForcedToExchangeForSex is 1, before allowing use of AskedOrForcedToExchangeForSexPastThreeMonths-->
 		<xs:assert test="if (hmis:AskedOrForcedToExchangeForSex/text()='1') then boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths) else (if (not(hmis:AskedOrForcedToExchangeForSex/text()='1')) then (not(boolean(hmis:AskedOrForcedToExchangeForSexPastThreeMonths))) else false())"/>
-		
-		<!--Testing if CounselingReceived is 1, before allowing use of CounselingType-->
-		<xs:assert test="if (hmis:CounselingReceived/text()='1') then boolean(hmis:CounselingType) else (if (not(CounselingReceived/text()='1')) then (not(boolean(hmis:CounselingType))) else false())"/>
 		
 		<!--Testing if CounselingReceived is 1, before allowing use of SessionCountAtExit-->
 		<xs:assert test="if (hmis:CounselingReceived/text()='1') then boolean(hmis:SessionCountAtExit) else (if (not(hmis:CounselingReceived/text()='1')) then (not(boolean(hmis:SessionCountAtExit))) else false())"/>
@@ -2350,11 +2357,6 @@
 					<xs:documentation xml:lang="en">Key reference to the Project</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="InformationDate" type="xs:date">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See June 2017 HMIS Data Dictionary v1.2, Section 2.8.1.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="CoCCode" type="hmis:cocCode">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">Key reference to the CoC</xs:documentation>
@@ -2399,6 +2401,7 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
+		<xs:attribute ref="hmis:informationDate" use="required"/>
 	</xs:complexType>
 	
 	<xs:complexType name="source">
@@ -3168,41 +3171,6 @@
 			<xs:pattern value="[A-Za-z]{2}-[0-9]{3}"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
-	<xs:simpleType name="counselingType">
-		<xs:annotation>
-			<xs:documentation xml:lang="en">	
-				Number of times
-				1 = Individual
-				2 = Family
-				3 = Group –  peer counseling
-				99 = Data not collected
-			</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Individual</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Family</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Group –  peer counseling</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
 	
 	<xs:simpleType name="countOfExchangeForSex">
 		<xs:annotation>
@@ -4239,6 +4207,7 @@
 				1 = Urban 
 				2 = Suburban 
 				3 = Rural
+				99 = Unknown / data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -4255,6 +4224,11 @@
 			<xs:enumeration value="3">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Rural</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Unknown / data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
