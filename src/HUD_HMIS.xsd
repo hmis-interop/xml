@@ -1050,10 +1050,10 @@
 		<xs:assert test="if (not(hmis:CounselingReceived/text()='1')) then (not(boolean(hmis:IndividualCounseling))) else true()"/>
 		
 		<!--Testing if CounselingReceived is 1, before allowing use of FamilyCounseling-->
-		<xs:assert test="if (not(hmis:CounselingReceived/text()='1')) then (not(boolean(FamilyCounseling))) else true()"/>
+		<xs:assert test="if (not(hmis:CounselingReceived/text()='1')) then (not(boolean(hmis:FamilyCounseling))) else true()"/>
 		
 		<!--Testing if CounselingReceived is 1, before allowing use of GroupCounseling-->
-		<xs:assert test="if (not(hmis:CounselingReceived/text()='1')) then (not(boolean(GroupCounseling))) else true()"/>
+		<xs:assert test="if (not(hmis:CounselingReceived/text()='1')) then (not(boolean(hmis:GroupCounseling))) else true()"/>
 		
 	</xs:complexType>
 
