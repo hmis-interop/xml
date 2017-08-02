@@ -250,7 +250,9 @@
                 <hmis:CoercedToContinueWork>0</hmis:CoercedToContinueWork>
                 <hmis:LaborExploitPastThreeMonths>8</hmis:LaborExploitPastThreeMonths>
                 <hmis:CounselingReceived>1</hmis:CounselingReceived>
-                <hmis:CounselingType>2</hmis:CounselingType>
+                <hmis:IndividualCounseling>0</hmis:IndividualCounseling>
+                <hmis:FamilyCounseling>99</hmis:FamilyCounseling>
+                <hmis:GroupCounseling>1</hmis:GroupCounseling>
                 <hmis:SessionCountAtExit>23</hmis:SessionCountAtExit>
                 <hmis:SessionsInPlan>1</hmis:SessionsInPlan>
                 <hmis:PostExitCounselingPlan>0</hmis:PostExitCounselingPlan>
@@ -276,7 +278,7 @@
                 <hmis:StartDate>2016-06-11Z</hmis:StartDate>
                 <hmis:EndDate>2016-04-08</hmis:EndDate>
             </hmis:Funder>
-            <hmis:Geography hmis:dateCreated="2014-09-03T23:14:59" hmis:dateUpdated="2016-02-25T23:14:59Z" hmis:userID="ck" hmis:informationDate="2016-02-25T23:14:59Z">
+            <hmis:Geography hmis:dateCreated="2014-09-03T23:14:59" hmis:dateUpdated="2016-02-25T23:14:59Z" hmis:userID="ck" hmis:informationDate="2016-02-25">
                 <hmis:GeographyID>4526</hmis:GeographyID>
                 <hmis:ProjectID>222E</hmis:ProjectID>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
