@@ -1204,7 +1204,6 @@
 		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:Enrollment[hmis:PersonalID = $id]) ge 1)"/>		
 		<xs:assert test="every $id in hmis:CoC/hmis:CoCCode satisfies (fn:count(hmis:EnrollmentCoC[hmis:CoCCode = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:ConnectionWithSOAR[hmis:EnrollmentID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:Contact[hmis:EnrollmentID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:DateOfEngagement[hmis:EnrollmentID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:Disabilities[hmis:EnrollmentID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:DomesticViolence[hmis:EnrollmentID = $id]) ge 0)"/>
@@ -2513,10 +2512,6 @@
 					<xs:selector xpath="hmis:EnrollmentCoC"/>
 					<xs:field xpath="hmis:EnrollmentID"/>					
 				</xs:keyref>
-				<xs:keyref name="enrollmentContactKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:Contact"/>
-					<xs:field xpath="hmis:EnrollmentID"/>					
-				</xs:keyref>
 				<xs:keyref name="enrollmentDateOfEngagementKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:DateOfEngagement"/>
 					<xs:field xpath="hmis:EnrollmentID"/>
@@ -3770,7 +3765,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="effective">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Exported data sets with an ExportPeriod type of ‘effective’ will include all enrollment data, along with associated client and project descriptor data, where the informationDate (or other effective date such as Project.EntryDate, Project.ExitDate, ContactDate, etc.) falls between the Export.StartDate and the Export.EndDate.</xs:documentation>
+					<xs:documentation xml:lang="en">Exported data sets with an ExportPeriod type of ‘effective’ will include all enrollment data, along with associated client and project descriptor data, where the informationDate (or other effective date such as Project.EntryDate, Project.ExitDate, etc.) falls between the Export.StartDate and the Export.EndDate.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="reportingPeriod">
