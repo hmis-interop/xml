@@ -1,2 +1,1 @@
-xml
-===
+This repository hosts the HUD HMIS XML Schema Definition (XSD) specification.  For more info about HMIS and its specifications, see https://www.hudexchange.info/programs/hmis/ and http://www.hudhdx.info/VendorResources.aspx.
