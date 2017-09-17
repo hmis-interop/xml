@@ -2540,14 +2540,6 @@
 					<xs:selector xpath="hmis:Exit"/>
 					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
-				<xs:keyref name="enrollmentFormerWardChildWelfareKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:FormerWardChildWelfare"/>
-					<xs:field xpath="hmis:EnrollmentID"/>
-				</xs:keyref>
-				<xs:keyref name="enrollmentFormerWardJuvenileJusticeKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:FormerWardJuvenileJustice"/>
-					<xs:field xpath="hmis:EnrollmentID"/>
-				</xs:keyref>
 				<xs:keyref name="enrollmentHealthInsuranceKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:HealthInsurance"/>
 					<xs:field xpath="hmis:EnrollmentID"/>
