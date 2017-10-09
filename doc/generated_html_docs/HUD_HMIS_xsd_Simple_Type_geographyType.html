@@ -296,7 +296,7 @@ var annotationBoxes= new Array('annotations_geographyType');
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd</td>
+                        <td>http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -311,7 +311,8 @@ var annotationBoxes= new Array('annotations_geographyType');
                                        <td width="100%"><pre><span class="tT">Geography Type </span><span class="tI">
 </span><span class="tT">1 = Urban </span><span class="tI">
 </span><span class="tT">2 = Suburban </span><span class="tI">
-</span><span class="tT">3 = Rural</span></pre></td>
+</span><span class="tT">3 = Rural</span><span class="tI">
+</span><span class="tT">99 = Unknown / data not collected</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -378,6 +379,19 @@ var annotationBoxes= new Array('annotations_geographyType');
                                        </div>
                                     </td>
                                  </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>99</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Unknown / data not collected</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
                               </table>
                            </div>
                         </td>
@@ -392,7 +406,7 @@ var annotationBoxes= new Array('annotations_geographyType');
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
-                                    <td><b><a href="HUD_HMIS_xsd_Complex_Type_geography.html#geography_GeographyType" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/2017_1_2/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component geography/GeographyType')">geography/GeographyType</a></b></td>
+                                    <td><b><a href="HUD_HMIS_xsd_Complex_Type_geography.html#geography_GeographyType" target="mainFrame" title="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd" onclick="updatePageTitle('Schema documentation for component geography/GeographyType')">geography/GeographyType</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -409,7 +423,7 @@ var annotationBoxes= new Array('annotations_geographyType');
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:simpleType</span><span class="tAN"> name=</span><span class="tAV">"geographyType"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Geography Type 1 = Urban 2 = Suburban 3 = Rural</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Geography Type 1 = Urban 2 = Suburban 3 = Rural 99 = Unknown / data not collected</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:unsignedInt"</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"1"</span><span class="tEl">&gt;</span><span class="tI">
@@ -425,6 +439,11 @@ var annotationBoxes= new Array('annotations_geographyType');
     </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"3"</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
         </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Rural</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"99"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tAN"> xml:lang=</span><span class="tAV">"en"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Unknown / data not collected</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
