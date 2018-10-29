@@ -3842,6 +3842,7 @@
 				40 = VA:Grant Per Diem – Clinical Treatment
 				41 = VA:Grant Per Diem – Service Intensive Transitional Housing
 				42 = VA:Grant Per Diem – Transition in Place
+				43 = HUD:CoC – Youth Homeless Demonstration Program (YHDP)
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -4040,7 +4041,11 @@
 					<xs:documentation xml:lang="en">VA:Grant Per Diem – Transition in Place</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>			
-			
+			<xs:enumeration value="43">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">HUD:CoC – Youth Homeless Demonstration Program (YHDP)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	
