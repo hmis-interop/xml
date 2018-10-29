@@ -3980,11 +3980,6 @@
 					<xs:documentation xml:lang="en">VA: CRS Contract Residential Services</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="29">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">VA:Domiciliary Care</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="30">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">VA:Community Contract Safe Haven Program</xs:documentation>
