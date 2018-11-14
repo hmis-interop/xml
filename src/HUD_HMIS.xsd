@@ -2171,7 +2171,7 @@
 						W2 Financial Assistance – HOPWA (RecordType 151)
 						V2 Services Provided – SSVF (RecordType 144)
 						V3 Financial Assistance – SSVF (RecordType 152)
-						V8 HUD-VASH Voucher Tracking (RecordType 210)
+						V8.1 HUD-VASH Voucher Tracking (RecordType 210)
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -5728,7 +5728,7 @@
 				152 = V3 Financial Assistance – SSVF 
 				161 = P2 Referrals Provided – PATH 
 				200 = 4.14  Bed night
-				210 = V8 HUD-VASH Voucher Tracking 
+				210 = V8.1 HUD-VASH Voucher Tracking 
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
