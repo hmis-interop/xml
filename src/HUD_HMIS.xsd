@@ -978,12 +978,12 @@
 					<xs:documentation xml:lang="en">See June 2017 HMIS Data Dictionary v1.2, Section R18.A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SessionCountAtExit" type="xs:unsignedInt" minOccurs="0">
+			<xs:element name="SessionCountAtExit" type="xs:positiveInteger" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See June 2017 HMIS Data Dictionary v1.2, Section R18.B.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SessionsInPlan" type="xs:unsignedInt">
+			<xs:element name="SessionsInPlan" type="xs:positiveInteger">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See June 2017 HMIS Data Dictionary v1.2, Section R18.2.</xs:documentation>
 				</xs:annotation>
