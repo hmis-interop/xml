@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hmis:Sources
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/v6.1.1/src/HUD_HMIS_Example_Extension.xsd"
+    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/6_1_2/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/v6.1.2/src/HUD_HMIS_Example_Extension.xsd"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd">
+    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/6_1_2/HUD_HMIS.xsd">
     <hmis:Source>
         <hmis:SourceType>2</hmis:SourceType>
         <hmis:SourceName>Fictitious County HMIS</hmis:SourceName>

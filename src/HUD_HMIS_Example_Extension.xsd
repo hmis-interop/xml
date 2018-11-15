@@ -2,12 +2,12 @@
 
 <xs:schema 
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd"
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd"
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/6_1_2/HUD_HMIS.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/6_1_2/HUD_HMIS.xsd"
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/6_1_2/HUD_HMIS.xsd"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" 
     vc:minVersion="1.1">
-	<xs:override schemaLocation="https://raw.githubusercontent.com/hmis-interop/xml/v6.1.1/src/HUD_HMIS.xsd">
+	<xs:override schemaLocation="https://raw.githubusercontent.com/hmis-interop/xml/v6.1.2/src/HUD_HMIS.xsd">
 		<xs:complexType name="export">
 			<xs:sequence>
 				<xs:element name="MyFavoriteColor" type="xs:string" minOccurs="1"/>
