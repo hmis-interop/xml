@@ -6346,109 +6346,6 @@
 					<xs:documentation xml:lang="en"></xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="">
-				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-	
-
-
 
 
 			
@@ -6832,45 +6729,197 @@
 					<xs:documentation xml:lang="en">(619) Central Alabama Veterans HCS, AL</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="620">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(620) VA Hudson Valley HCS, NY</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="621">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(621) Mountain Home, TN</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="623">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(623) Muskogee, OK</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="626">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(626) Middle Tennessee HCS, TN</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="629">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(629) New Orleans, LA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="630">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(630) New York Harbor HCS, NY</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration> 
+			<xs:enumeration value="631">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(631) VA Central Western Massachusetts HCS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="632">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(632) Northport, NY</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="635">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(635) Oklahoma City, OK</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="636">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(636) Nebraska‐W Iowa, NE</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="637">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(637) Asheville, NC</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="640">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(640) Palo Alto, CA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="642">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(642) Philadelphia, PA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="644">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(644) Phoenix, AZ</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration> 
+			<xs:enumeration value="646">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(646) Pittsburgh, PA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="648">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(648) Portland, OR</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="649">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(649) Northern Arizona HCS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="650">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(650) Providence, RI</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="652">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(652) Richmond, VA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="653">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(653) Roseburg, OR</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="654">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(654) Reno, NV</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="655">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(655) Saginaw, MI</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="656">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(656) St. Cloud, MN</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="657">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(657) St. Louis, MO</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="658">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(658) Salem, VA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="659">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(659) Salisbury, NC</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="660">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(660) Salt Lake City, UT</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="662">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(662) San Francisco, CA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="663">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(663) VA Puget Sound, WA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="664">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(664) San Diego, CA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration> 
+			<xs:enumeration value="666">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(666) Sheridan, WY</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="667">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(667) Shreveport, LA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="668">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(668) Spokane, WA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="671">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(671) San Antonio, TX</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="672">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(672) San Juan, PR</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="673">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(673) Tampa, FL</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="674">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(674) Temple, TX</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="675">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(675) Orlando, FL</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			 
-			620 (620) VA Hudson Valley HCS, NY
-			621 (621) Mountain Home, TN
-			623 (623) Muskogee, OK
-			626 (626) Middle Tennessee HCS, TN
-			629 (629) New Orleans, LA
-			630 (630) New York Harbor HCS, NY
-			631 (631) VA Central Western Massachusetts HCS
-			632 (632) Northport, NY
-			635 (635) Oklahoma City, OK
-			636 (636) Nebraska‐W Iowa, NE
-			637 (637) Asheville, NC
-			640 (640) Palo Alto, CA
-			642 (642) Philadelphia, PA
-			644 (644) Phoenix, AZ
-			646 (646) Pittsburgh, PA
-			648 (648) Portland, OR
-			649 (649) Northern Arizona HCS
-			650 (650) Providence, RI
-			652 (652) Richmond, VA
-			653 (653) Roseburg, OR
-			654 (654) Reno, NV
-			655 (655) Saginaw, MI
-			656 (656) St. Cloud, MN
-			657 (657) St. Louis, MO
-			658 (658) Salem, VA
-			659 (659) Salisbury, NC
-			660 (660) Salt Lake City, UT
-			662 (662) San Francisco, CA
-			663 (663) VA Puget Sound, WA
-			664 (664) San Diego, CA
-			666 (666) Sheridan, WY
-			667 (667) Shreveport, LA
-			668 (668) Spokane, WA
-			671 (671) San Antonio, TX
-			672 (672) San Juan, PR
-			673 (673) Tampa, FL
-			674 (674) Temple, TX
-			675 (675) Orlando, FL
 			676 (676) Tomah, WI
 			678 (678) Southern Arizona HCS
 			679 (679) Tuscaloosa, AL
