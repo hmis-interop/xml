@@ -2068,22 +2068,22 @@
 			</xs:element>
 			<xs:element name="EmailSocialMedia" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See 2017 HMIS Data Dictionary v1.3, Section R20.A: via email/social media.</xs:documentation>
+					<xs:documentation xml:lang="en">See 2017 HMIS Data Dictionary v1.3, Section R20.2.A: via email/social media.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Telephone" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See 2017 HMIS Data Dictionary v1.3, Section R20.A: via telephone</xs:documentation>
+					<xs:documentation xml:lang="en">See 2017 HMIS Data Dictionary v1.3, Section R20.2.A: via telephone</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InPersonIndividual" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See 2017 HMIS Data Dictionary v1.3, Section R20.A: via in person: one-on-one.</xs:documentation>
+					<xs:documentation xml:lang="en">See 2017 HMIS Data Dictionary v1.3, Section R20.2.A: via in person: one-on-one.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InPersonGroup" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See 2017 HMIS Data Dictionary v1.3, Section R20.A: via in person: group.</xs:documentation>
+					<xs:documentation xml:lang="en">See 2017 HMIS Data Dictionary v1.3, Section R20.2.A: via in person: group.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
