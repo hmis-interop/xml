@@ -6919,35 +6919,141 @@
 					<xs:documentation xml:lang="en">(675) Orlando, FL</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			 
-			676 (676) Tomah, WI
-			678 (678) Southern Arizona HCS
-			679 (679) Tuscaloosa, AL
-			687 (687) Walla Walla, WA
-			688 (688) Washington, DC
-			689 (689) VA Connecticut HCS, CT
-			691 (691) Greater Los Angeles HCS
-			692 (692) White City, OR
-			693 (693) Wilkes‐Barre, PA
-			695 (695) Milwaukee, WI
-			740 (740) VA Texas Valley Coastal Bend HCS
-			756 (756) El Paso, TX
-			757 (757) Columbus, OH
-			459GE (459GE) Guam
-			528A5 (528A5) Canandaigua, NY
-			528A6 (528A6) Bath, NY
-			528A7 (528A7) Syracuse, NY
-			528A8 (528A8) Albany, NY
-			589A4 (589A4) Columbia, MO
-			589A5 (589A5) Kansas City, MO
-			589A6 (589A6) Eastern KS HCS, KS
-			589A7 (589A7) Wichita, KS
-			636A6 (636A6) Central Iowa, IA
-			636A8 (636A8) Iowa City, IA
-			657A4 (657A4) Poplar Bluff, MO
-			657A5 (657A5) Marion, IL
-			99 Data not collected
-			
+			<xs:enumeration value="676">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(676) Tomah, WI</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="678">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(678) Southern Arizona HCS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="679">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(679) Tuscaloosa, AL</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="687">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(687) Walla Walla, WA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="688">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(688) Washington, DC</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="689">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(689) VA Connecticut HCS, CT</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="691">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(691) Greater Los Angeles HCS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="692">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(692) White City, OR</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="693">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(693) Wilkes‐Barre, PA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="695">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(695) Milwaukee, WI</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="740">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(740) VA Texas Valley Coastal Bend HCS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="756">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(756) El Paso, TX</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="757">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(757) Columbus, OH</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="459GE">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(459GE) Guam</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="528A5">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(528A5) Canandaigua, NY</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="528A6">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(528A6) Bath, NY</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="528A7">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(528A7) Syracuse, NY</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="528A8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(528A8) Albany, NY</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="589A4">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(589A4) Columbia, MO</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="589A5">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(589A5) Kansas City, MO</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="589A6">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(589A6) Eastern KS HCS, KS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="589A7">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(589A7) Wichita, KS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="636A6">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(636A6) Central Iowa, IA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="636A8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(636A8) Iowa City, IA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="657A4">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(657A4) Poplar Bluff, MO</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="657A5">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">(657A5) Marion, IL</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	
