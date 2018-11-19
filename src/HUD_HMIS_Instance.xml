@@ -96,7 +96,7 @@
                 hmis:userID="YBR5goXMKigc.">
                 <hmis:DisabilitiesID>6743f</hmis:DisabilitiesID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
-                <hmis:DisabilityType>10</hmis:DisabilityType>
+                <hmis:DisabilityType>9</hmis:DisabilityType>
                 <hmis:DisabilityResponse>99</hmis:DisabilityResponse>
                 <hmis:IndefiniteAndImpairsIndependence>9</hmis:IndefiniteAndImpairsIndependence>
             </hmis:Disabilities>
