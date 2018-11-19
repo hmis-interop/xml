@@ -304,8 +304,8 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See 2017 HMIS Data Dictionary v1.3, Section 4.5-4.10, Response #2.  Permissable values vary depending on which disability type is declared.  The values are contined with "Field and Response(s) 2" within 4.5 through 4.10.</xs:documentation>
 				</xs:annotation>
-				<xs:alternative test="../hmis:DisabilityType='10'" type="substanceAbuse"/>
-				<xs:alternative test="../hmis:DisabilityType!='10'" type="noYesDoesntKnowRefused"/>
+				<xs:alternative test="../hmis:DisabilityType/text()=10" type="hmis:substanceAbuse"/>
+				<xs:alternative test="../hmis:DisabilityType/text()!=10" type="hmis:noYesDoesntKnowRefused"/>
 				<xs:alternative type="xs:error"/>
 			</xs:element>
 			<xs:element name="IndefiniteAndImpairsIndependence" type="hmis:noYesDoesntKnowRefused">
@@ -4084,7 +4084,7 @@
 					<xs:documentation xml:lang="en">Client refused</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="98">
+			<xs:enumeration value="99">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
@@ -6112,7 +6112,7 @@
 						<xs:documentation xml:lang="en">Client refused</xs:documentation>
 					</xs:annotation>
 				</xs:enumeration>
-				<xs:enumeration value="99">
+				<xs:enumeration value="98">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 					</xs:annotation>
