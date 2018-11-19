@@ -306,7 +306,6 @@
 				</xs:annotation>
 				<xs:alternative test="../hmis:DisabilityType/text()=10" type="hmis:substanceAbuse"/>
 				<xs:alternative test="../hmis:DisabilityType/text()!=10" type="hmis:noYesDoesntKnowRefused"/>
-				<xs:alternative type="xs:error"/>
 			</xs:element>
 			<xs:element name="IndefiniteAndImpairsIndependence" type="hmis:noYesDoesntKnowRefused">
 				<xs:annotation>

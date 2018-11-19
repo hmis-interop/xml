@@ -222,7 +222,7 @@
                 <hmis:FemVet>0</hmis:FemVet>
                 <hmis:HPScreeningScore>23</hmis:HPScreeningScore>
                 <hmis:ThresholdScore>342</hmis:ThresholdScore>
-                <hmis:VAMCStation>123Ab678</hmis:VAMCStation>
+                <hmis:VAMCStation>402</hmis:VAMCStation>
             </hmis:EntrySSVF>
             <hmis:Exit hmis:dateCreated="2014-10-07T23:14:59Z" hmis:dateUpdated="2015-11-06T23:14:59Z" hmis:userID="GO">
                 <hmis:ExitID>C2x</hmis:ExitID>
