@@ -97,7 +97,7 @@
                 <hmis:DisabilitiesID>6743f</hmis:DisabilitiesID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:DisabilityType>10</hmis:DisabilityType>
-                <hmis:DisabilityResponse>2</hmis:DisabilityResponse>
+                <hmis:DisabilityResponse>99</hmis:DisabilityResponse>
                 <hmis:IndefiniteAndImpairsIndependence>9</hmis:IndefiniteAndImpairsIndependence>
             </hmis:Disabilities>
             <hmis:DomesticViolence hmis:dataCollectionStage="1" hmis:informationDate="2014-11-21" hmis:dateCreated="2014-11-21T23:14:59"
