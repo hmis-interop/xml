@@ -92,6 +92,14 @@
                 <hmis:ViralLoad>999999</hmis:ViralLoad>
                 <hmis:ViralLoadSource>2</hmis:ViralLoadSource>
             </hmis:Disabilities>
+            <hmis:Disabilities hmis:dataCollectionStage="1" hmis:informationDate="2014-09-01" hmis:dateCreated="2014-09-01T23:14:59" hmis:dateUpdated="2016-04-17T23:14:59Z"
+                hmis:userID="YBR5goXMKigc.">
+                <hmis:DisabilitiesID>6743f</hmis:DisabilitiesID>
+                <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
+                <hmis:DisabilityType>10</hmis:DisabilityType>
+                <hmis:DisabilityResponse>2</hmis:DisabilityResponse>
+                <hmis:IndefiniteAndImpairsIndependence>9</hmis:IndefiniteAndImpairsIndependence>
+            </hmis:Disabilities>
             <hmis:DomesticViolence hmis:dataCollectionStage="1" hmis:informationDate="2014-11-21" hmis:dateCreated="2014-11-21T23:14:59"
                  hmis:dateUpdated="2016-01-05T23:14:59Z" hmis:userID="fPKfm5Rtfi0m3OhjeFL_pozaSRUUA">
                 <hmis:DomesticViolenceID>87865g</hmis:DomesticViolenceID>
