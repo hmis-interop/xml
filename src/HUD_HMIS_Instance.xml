@@ -1,8 +1,8 @@
 <?xml version="1.1" encoding="UTF-8"?>
-<hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/6_1_2/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/v6.1.2/src/HUD_HMIS.xsd"
-    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/6_1_2/HUD_HMIS.xsd">
+ xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+ xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/6_1_2/HUD_HMIS.xsd">
     <hmis:Source>
         <hmis:SourceID>12345</hmis:SourceID>
         <hmis:SourceType>1</hmis:SourceType>
@@ -83,7 +83,7 @@
                 <hmis:DisabilitiesID>6743e</hmis:DisabilitiesID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:DisabilityType>8</hmis:DisabilityType>
-                <hmis:DisabilityResponse>22</hmis:DisabilityResponse>
+                <hmis:DisabilityResponse xsi:type="hmis:disabilityResponseNoYesDoesntKnowRefused">99</hmis:DisabilityResponse>
                 <hmis:IndefiniteAndImpairsIndependence>9</hmis:IndefiniteAndImpairsIndependence>
                 <hmis:TCellCountAvailable>1</hmis:TCellCountAvailable>
                 <hmis:TCellCount>1401</hmis:TCellCount>
@@ -96,8 +96,8 @@
                 hmis:userID="YBR5goXMKigc.">
                 <hmis:DisabilitiesID>6743f</hmis:DisabilitiesID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
-                <hmis:DisabilityType>9</hmis:DisabilityType>
-                <hmis:DisabilityResponse>98</hmis:DisabilityResponse>
+                <hmis:DisabilityType>10</hmis:DisabilityType>
+                <hmis:DisabilityResponse xsi:type="hmis:disabilityResponseSubstanceAbuse">99</hmis:DisabilityResponse>
                 <hmis:IndefiniteAndImpairsIndependence>9</hmis:IndefiniteAndImpairsIndependence>
             </hmis:Disabilities>
             <hmis:DomesticViolence hmis:dataCollectionStage="1" hmis:informationDate="2014-11-21" hmis:dateCreated="2014-11-21T23:14:59"
