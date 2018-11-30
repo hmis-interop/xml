@@ -68,7 +68,7 @@ Overview
 Audience for this Document
 This document is intended for developers and project managers implementing software systems which need to transmit HUD HMIS project and client information over a network.  Because of this, it is inherently a technical document.  Those new to eXtensible Markup Language (XML) should first familiarize themselves with XML technology in general, before examining the actual schema product and the “Technology Used” section of this document.
 Purpose of this Document
-The US Department of Housing and Urban Development (HUD), in cooperation with the Department of Health and Human Services (HHS) and the Department of Veterans Affairs (VA), is responsible for the Homeless Management Information System (HMIS) Data Standards, which define data collection requirements for any software used as an HMIS. The first version of the data standards was published in 2004; the current version (2017 v) has an effective date of October 1, 2017.   
+The US Department of Housing and Urban Development (HUD), in cooperation with the Department of Health and Human Services (HHS) and the Department of Veterans Affairs (VA), is responsible for the Homeless Management Information System (HMIS) Data Standards, which define data collection requirements for any software used as an HMIS. The first version of the data standards was published in 2004; the current version (2017 v1.3) has an effective date of October 1, 2017.   
 
 The HUD HMIS XML Schema, version v6 specifies a format for transferring this HMIS data.  The data elements are defined in the July 2017 HUD HMIS Data Manual, and further specified by the June 2017 HUD HMIS Data Dictionary and v6 HMIS Logical Model.  The Logical Model, Manual, and Dictionary all changed between 2014 v5.1 and v6, and so the XML Schema has been changed accordingly.  The key benefit of XML is its ability to be validated and extended.  This means that systems both sending and receiving data can independently and automatically check if this data is being sent to specifications.  This helps to evaluate data quality and correctness independently, without either transmitting party (sender/receiver) needing to develop validation software.  The HMIS XML Schema can be customized, as well, but still keep the ability to check the generated data for accuracy against this original HMIS XML Schema.  This XML format can be used for data migrations between systems, or the data types defined within it could be individually referenced in custom web methods.
 Alternative
@@ -157,7 +157,16 @@ Contact the HUD Exchange’s “Ask A Question” portal to request general assi
 Overview of Changes
 Change List
 
-    • v6.1.2 changes – all changes listed here:  https://github.com/hmis-interop/xml/compare/v6.1.1...v6.1.2
+    • v6.1.2 changes – all changes listed here: https://github.com/hmis-interop/xml/compare/v6.1.1...v6.1.2
+          - change June 2017 HMIS Data Dictionary v1.2 references to 2017 HMIS Data Dictionary v1.3
+- change SessionCountAtExit and SessionsInPlan to not allow '0' as a response value
+- Update all RecordType 210 VoucherTracking references from V8 to V8.1
+- Appendix B: Add “43:HUD:CoC – Youth Homeless Demonstration Program (YHDP) to list 2.6.1
+- Appendix B: Remove “29:VA:Domiciliary Care” from list 2.6.1
+- change R20.A references to R20.2.A references
+- VAMC codes should be listed, not just string validation
+- XML should list all Disability Response Values
+
     • v6.1.1 changes - all changes listed here: https://github.com/hmis-interop/xml/compare/v5.1-latest...v6.1.1 
 - changed XML Schema and Instance Version Numbers and namespace references
 - changed all August 2016 to April 2017 references
