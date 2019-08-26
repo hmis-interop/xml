@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hmis:Sources
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/v6.1.1/src/HUD_HMIS_Example_Extension.xsd"
+    xsi:schemaLocation="HUD_HMIS_Example_Extension.xsd"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd">
+    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS.xsd"
+    xmlns:ext="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS_Example_Extension.xsd">
     <hmis:Source>
         <hmis:SourceType>2</hmis:SourceType>
         <hmis:SourceName>Fictitious County HMIS</hmis:SourceName>
@@ -15,8 +16,15 @@
         <hmis:SourceContactLast>Duke</hmis:SourceContactLast>
         <hmis:SourceContactPhone>5939698367</hmis:SourceContactPhone>
         <hmis:Export>
-            <hmis:MyFavoriteColor>Orange</hmis:MyFavoriteColor>
-            <hmis:ExportPeriod>reportingPeriod</hmis:ExportPeriod>
+            <hmis:ExportID>12345</hmis:ExportID>
+            <hmis:ExportDate>2015-02-27T23:14:59</hmis:ExportDate>
+            <hmis:ExportPeriod>
+                <hmis:StartDate>2015-01-04T23:14:59</hmis:StartDate>
+                <hmis:EndDate>2015-03-26T23:14:59Z</hmis:EndDate>
+            </hmis:ExportPeriod>
+            <hmis:ExportPeriodType>effective</hmis:ExportPeriodType>
+            <hmis:ExportDirective>other</hmis:ExportDirective>
+            <ext:MyFavoriteColor>Orange</ext:MyFavoriteColor>
         </hmis:Export>
     </hmis:Source>
 </hmis:Sources>

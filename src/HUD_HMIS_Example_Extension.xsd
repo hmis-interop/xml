@@ -2,17 +2,23 @@
 
 <xs:schema 
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd"
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd"
-    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" 
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS_Example_Extension.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS_Example_Extension.xsd"
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS.xsd"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+    xmlns:ext="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS_Example_Extension.xsd"
     vc:minVersion="1.1">
-	<xs:override schemaLocation="https://raw.githubusercontent.com/hmis-interop/xml/v6.1.1/src/HUD_HMIS.xsd">
-		<xs:complexType name="export">
-			<xs:sequence>
-				<xs:element name="MyFavoriteColor" type="xs:string" minOccurs="1"/>
-				<xs:element name="ExportPeriod" type="exportPeriodType"/>
-			</xs:sequence>
+	<xs:import namespace="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS.xsd" schemaLocation="https://raw.githubusercontent.com/hmis-interop/xml/FY2020/src/HUD_HMIS.xsd"/>
+	<xs:element name="Export" type="ext:extendedExport"/>
+	
+	<xs:complexType name="extendedExport">
+			<xs:complexContent>
+				<xs:extension base="hmis:export">
+					<xs:sequence>
+						<xs:element name="MyFavoriteColor" type="xs:string" minOccurs="1"/>						
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
 		</xs:complexType>
-	</xs:override>
+
 </xs:schema>

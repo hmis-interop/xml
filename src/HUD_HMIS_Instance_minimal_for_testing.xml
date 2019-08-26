@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/v6.1.1/src/HUD_HMIS.xsd"
- xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
- xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/6_1_1/HUD_HMIS.xsd">
+    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/FY2020/src/HUD_HMIS.xsd"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS.xsd">
     <hmis:Source>
         <hmis:SourceID>12345</hmis:SourceID>
         <hmis:SourceType>1</hmis:SourceType>
@@ -39,9 +39,9 @@
                 <hmis:SSNDataQuality>2</hmis:SSNDataQuality>
                 <hmis:DOB>2014-11-18</hmis:DOB>
                 <hmis:DOBDataQuality>1</hmis:DOBDataQuality>
-                <hmis:Gender>4</hmis:Gender>
-                <hmis:Ethnicity>0</hmis:Ethnicity>
                 <hmis:Race>8</hmis:Race>
+                <hmis:Ethnicity>0</hmis:Ethnicity>                
+                <hmis:Gender>4</hmis:Gender>
                 <hmis:VeteranStatus>9</hmis:VeteranStatus>            
             </hmis:Client>
             <hmis:Enrollment hmis:dateCreated="2015-05-08T23:14:59" hmis:dateUpdated="2015-01-27T23:14:59Z" hmis:userID="Hc8CQeYVWWj0dA9cWkDLe">
@@ -72,41 +72,40 @@
                 <hmis:StartDate>2016-06-11Z</hmis:StartDate>
                 <hmis:EndDate>2016-04-08</hmis:EndDate>
             </hmis:Funder>
-            <hmis:Inventory hmis:informationDate="2015-04-04Z" hmis:dateCreated="2015-09-12T23:14:59Z" hmis:dateUpdated="2015-08-29T23:14:59Z"
-                 hmis:userID="billj">
+            <hmis:Inventory hmis:dateCreated="2015-09-12T23:14:59Z" hmis:dateUpdated="2015-08-29T23:14:59Z" hmis:userID="billj">
                 <hmis:InventoryID>56563a</hmis:InventoryID>
                 <hmis:ProjectID>222D</hmis:ProjectID>
-                <hmis:CoCCode>BZ-123</hmis:CoCCode>
-                <hmis:HouseholdType>1</hmis:HouseholdType>
-                <hmis:UnitInventory>1595973432</hmis:UnitInventory>
-                <hmis:BedInventory>130</hmis:BedInventory>
-                <hmis:CHBedInventory>17</hmis:CHBedInventory>
-                <hmis:VetBedInventory>14</hmis:VetBedInventory>
-                <hmis:YouthBedInventory>16</hmis:YouthBedInventory>
                 <hmis:InventoryStartDate>2014-10-31</hmis:InventoryStartDate>
                 <hmis:InventoryEndDate>2015-05-12Z</hmis:InventoryEndDate>
-                <hmis:HMISParticipatingBeds>539390492</hmis:HMISParticipatingBeds>
+                <hmis:CoCCode>BZ-123</hmis:CoCCode>
+                <hmis:HouseholdType>1</hmis:HouseholdType>
+                <hmis:VetBedInventory>14</hmis:VetBedInventory>
+                <hmis:YouthBedInventory>16</hmis:YouthBedInventory>
+                <hmis:CHBedInventory>17</hmis:CHBedInventory>
+                <hmis:BedInventory>130</hmis:BedInventory>
+                <hmis:UnitInventory>1595973432</hmis:UnitInventory>
             </hmis:Inventory>
             <hmis:Organization hmis:dateCreated="2015-02-17T23:14:59" hmis:dateUpdated="2016-02-29T23:14:59" hmis:userID="ptravis">
                 <hmis:OrganizationID>34</hmis:OrganizationID>
                 <hmis:OrganizationName>Helping People, Inc.</hmis:OrganizationName>
                 <hmis:OrganizationCommonName>Helping</hmis:OrganizationCommonName>
+                <hmis:VictimServicesProvider>99</hmis:VictimServicesProvider>
             </hmis:Organization>
             <hmis:Project hmis:dateCreated="2016-02-17T23:14:59" hmis:dateUpdated="2015-03-14T23:14:59Z" hmis:userID="j2ZsRLAPv">
                 <hmis:ProjectID>222D</hmis:ProjectID>
                 <hmis:OrganizationID>34</hmis:OrganizationID>
                 <hmis:ProjectName>Residence Enablers</hmis:ProjectName>
+                <hmis:ProjectCommonName>Residence Enablers</hmis:ProjectCommonName>
+                <hmis:OperatingStartDate>2017-01-01</hmis:OperatingStartDate>
                 <hmis:ContinuumProject>0</hmis:ContinuumProject>
                 <hmis:ProjectType>3</hmis:ProjectType>
-                <hmis:OperatingStartDate>2017-01-01</hmis:OperatingStartDate>
-                <hmis:TrackingMethod>0</hmis:TrackingMethod>
+                <hmis:HMISParticipatingProject>1</hmis:HMISParticipatingProject>
                 <hmis:TargetPopulation>4</hmis:TargetPopulation>
-                <hmis:ProjectCommonName>Residence Enablers</hmis:ProjectCommonName>
             </hmis:Project>
-            <hmis:CoC  hmis:dateCreated="2015-11-22T23:14:59" hmis:dateUpdated="2015-10-11T23:14:59Z" hmis:userID="bmerriweather">
-                <hmis:CoCCode>BZ-123</hmis:CoCCode>
+            <hmis:ProjectCoC hmis:dateCreated="2016-02-17T23:14:59" hmis:dateUpdated="2015-03-14T23:14:59Z" hmis:userID="j2ZsRLAPv" hmis:informationDate="2015-04-04Z">
                 <hmis:ProjectID>222D</hmis:ProjectID>
-            </hmis:CoC>
+                <hmis:CoCCode>BZ-123</hmis:CoCCode>
+            </hmis:ProjectCoC>
         </hmis:Export>
     </hmis:Source>
 </hmis:Sources>
