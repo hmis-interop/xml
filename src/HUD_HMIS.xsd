@@ -2204,7 +2204,11 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
-		<xs:attribute ref="hmis:informationDate" use="required"/>
+		<xs:attribute ref="hmis:informationDate" use="required">
+			<xs:annotation>
+				<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.1.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 		<!--Testing if Earned is 1, before allowing use of EarnedAmount-->
 		<xs:assert test="if (hmis:Earned/text()='1') then boolean(hmis:EarnedAmount) else (if (not(Earned/text()='1')) then (not(boolean(hmis:EarnedAmount))) else false())"/>
