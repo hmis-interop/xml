@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/FY2020-v1.0.0/src/HUD_HMIS.xsd"
+    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/FY2020-latest/src/HUD_HMIS.xsd"
  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
  xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS.xsd">
     <hmis:Source>
@@ -418,12 +418,6 @@
                 <hmis:HealthStatus>4</hmis:HealthStatus>
                 <hmis:DueDate>2015-04-15Z</hmis:DueDate>
             </hmis:HealthStatus>
-            <hmis:HousingAssessmentDisposition hmis:dateCreated="2019-04-09T23:14:59Z" hmis:dateUpdated="2019-07-01T23:14:59Z" hmis:userID="BtcDoTPF4UC-8ybtUm-woIM">
-                <hmis:HousingAssessmentDispositionID>456q</hmis:HousingAssessmentDispositionID>
-                <hmis:ExitID>C2x</hmis:ExitID>
-                <hmis:AssessmentDisposition>9</hmis:AssessmentDisposition>
-                <hmis:OtherDisposition>some other disposition text here</hmis:OtherDisposition>
-            </hmis:HousingAssessmentDisposition>
             <hmis:IncomeAndSources hmis:dataCollectionStage="1" hmis:informationDate="2019-07-15" hmis:dateCreated="2019-01-13T23:14:59"
                  hmis:dateUpdated="2019-04-17T23:14:59" hmis:userID="DN2J6hP2SNfgBs30u8dgkh8cVjY4jApG">
                 <hmis:IncomeAndSourcesID>32dd</hmis:IncomeAndSourcesID>

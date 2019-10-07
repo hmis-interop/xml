@@ -1631,11 +1631,6 @@
 						<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.27</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="HousingAssessmentDisposition" type="hmis:housingAssessmentDisposition">
-					<xs:annotation>
-						<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.18</xs:documentation>
-					</xs:annotation>
-				</xs:element>
 				<xs:element name="IncomeAndSources" type="hmis:incomeAndSources">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02</xs:documentation>
