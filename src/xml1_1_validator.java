@@ -12,7 +12,7 @@ import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 import org.xml.sax.SAXException;
 
-public class Validate {
+public class xml1_1_validator {
 
 	public static void main(String[] args) throws  XMLStreamException, IOException, SAXException {		
 		XMLInputFactory factory = XMLInputFactory.newInstance();
