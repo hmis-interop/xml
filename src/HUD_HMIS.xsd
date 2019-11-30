@@ -4429,7 +4429,7 @@
 	<xs:simpleType name="householdType">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
-				Name Data Quality 
+				Household Type
 				1 = Households without children 
 				3 = Households with at least one adult and one child 
 				4 = Households with only children
