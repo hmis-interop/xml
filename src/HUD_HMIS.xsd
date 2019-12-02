@@ -622,7 +622,7 @@
 					No Yes
 					0 = No
 					1 = Yes
-					8 = Client doesn't know
+					8 = Client doesn’t know
 					9 = Client refused
 					99 = Data not collected
 				</xs:documentation>
@@ -640,7 +640,7 @@
 				</xs:enumeration>			
 				<xs:enumeration value="8">
 					<xs:annotation>
-						<xs:documentation xml:lang="en">Client doesn't know</xs:documentation>
+						<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
 					</xs:annotation>
 				</xs:enumeration>				
 				<xs:enumeration value="9">
@@ -3427,7 +3427,7 @@
 				Address Data Quality
 				1 = Full address reported
 				2 = Incomplete or estimated address reported
-				8 = Client doesn't know
+				8 = Client doesn’t know
 				9 = Client refused
 				99 = Data not collected
 			</xs:documentation>
@@ -3445,7 +3445,7 @@
 			</xs:enumeration>			
 			<xs:enumeration value="8">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn't know</xs:documentation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>				
 			<xs:enumeration value="9">
@@ -3518,7 +3518,7 @@
 			</xs:enumeration>			
 			<xs:enumeration value="8">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn't know</xs:documentation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>				
 			<xs:enumeration value="9">
@@ -4642,7 +4642,7 @@
 				No Yes
     				0 = No
     				1 = Yes
-    				8 = Client doesn't know
+    				8 = Client doesn’t know
     				9 = Client refused
     				99 = Data not collected
 			</xs:documentation>
@@ -4660,7 +4660,7 @@
 			</xs:enumeration>			
 			<xs:enumeration value="8">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn't know</xs:documentation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>				
 			<xs:enumeration value="9">
@@ -4761,7 +4761,7 @@
 			</xs:enumeration>	
 			<xs:enumeration value="8">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn't know</xs:documentation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>				
 			<xs:enumeration value="9">
@@ -4887,7 +4887,7 @@
 			</xs:enumeration>	
 			<xs:enumeration value="8">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn't know</xs:documentation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>				
 			<xs:enumeration value="9">
@@ -5514,7 +5514,7 @@
 	
 	<xs:simpleType name="noYesWorkerDoesntKnow">
 		<xs:annotation>
-			<xs:documentation xml:lang="en">0 = No, 1 = Yes, 2 = Worker Doesn't Know, 99 = Data Not Collected</xs:documentation>
+			<xs:documentation xml:lang="en">0 = No, 1 = Yes, 2 = Worker Doesn’t Know, 99 = Data Not Collected</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
@@ -5529,7 +5529,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Worker Doesn't Know</xs:documentation>
+					<xs:documentation xml:lang="en">Worker Doesn’t Know</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
