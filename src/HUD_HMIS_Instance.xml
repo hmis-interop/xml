@@ -59,7 +59,7 @@
                 <hmis:PersonalID>A1a1</hmis:PersonalID>
                 <hmis:FirstName hmis:hashStatus="2">123456789012345678901234567890ABCDEF12d4</hmis:FirstName>
                 <hmis:MiddleName hmis:hashStatus="1">Barnaby</hmis:MiddleName>
-                <hmis:LastName hmis:hashStatus="3">Jones</hmis:LastName>
+                <hmis:LastName hmis:hashStatus="3">DE123456789012345678901234567890ABCDEF12</hmis:LastName>
                 <hmis:NameSuffix>Sr.</hmis:NameSuffix>
                 <hmis:NameDataQuality>9</hmis:NameDataQuality>
                 <hmis:SSN hmis:hashStatus="1">79xx9xx8x</hmis:SSN>
