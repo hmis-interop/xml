@@ -8,7 +8,7 @@
 
 
 
-HMIS XML FY2020 Data Exchange Format Specifications
+HMIS XML FY2020 Data Exchange Format Specifications v1.0.2
 aligns with HMIS Data Standards Version 2020 version 1.4, effective October 1, 2019
 
 
@@ -17,7 +17,7 @@ aligns with HMIS Data Standards Version 2020 version 1.4, effective October 1, 2
 
 
 HUD HMIS XML Schema Documentation 
-10/01/2019, version: FY2020, succeeds v6.1.2
+6/11/2020, version: FY2020v1.0.2, succeeds FY2020v1.0.0
 
 This document was developed for the US Department of Housing and Urban Development (HUD), Office of Special Needs Assistance Programs (SNAPS) in the Office of Community Planning and Development, under a contract with Abt Associates, Inc..
 
@@ -162,7 +162,9 @@ Overview of Changes
 
 Change List
 
-    • FY2020 changes – all changes listed here: https://github.com/hmis-interop/xml/compare/v6.1.2...FY2020-latest
+    • FY2020v1.0.2 changes – all changes listed here:
+https://github.com/hmis-interop/xml/compare/FY2020-v1.0.0...FY2020-v1.0.2
+    • FY2020v1.0.0 changes – all changes listed here: https://github.com/hmis-interop/xml/compare/v6.1.2...FY2020-latest
     • renumbered Project Information (2.2->2.02)
     • reordered fields in organization type 
     • added VictimServiceProvider to organization type (was in project)
