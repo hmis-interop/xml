@@ -9,7 +9,7 @@
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	vc:minVersion = "1.1"
-	version="v1.0.0"
+	version="v1.0.2"
 	elementFormDefault="qualified"		
 	attributeFormDefault="qualified">
 		
@@ -4419,6 +4419,8 @@
 				44 = HUD: CoC – Joint Component TH/RRH
 				45 = VA: Grant per Diem – Case Management/Housing Retention
 				46 = Local or Other Funding Source (Please Specify)
+				47 = HUD: ESG – CV
+				48 = HUD: HOPWA – CV
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -4630,6 +4632,16 @@
 			<xs:enumeration value="46">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Local or Other Funding Source (Please Specify)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="47">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">HUD: ESG – CV</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="48">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">HUD: HOPWA – CV</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
