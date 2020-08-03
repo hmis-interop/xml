@@ -2430,7 +2430,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.03.8.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherBenefitsSourceIdentify" type="hmis:string50">
+			<xs:element name="OtherBenefitsSourceIdentify" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.03.A.</xs:documentation>
 				</xs:annotation>
