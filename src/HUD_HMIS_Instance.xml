@@ -115,7 +115,7 @@
                 <hmis:DisabilitiesID>6743e</hmis:DisabilitiesID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:DisabilityType>8</hmis:DisabilityType>
-                <hmis:DisabilityResponse xsi:type="hmis:disabilityResponseNoYesDoesntKnowRefused">99</hmis:DisabilityResponse>
+                <hmis:DisabilityResponse xsi:type="hmis:disabilityResponseNoYesDoesntKnowRefused">1</hmis:DisabilityResponse>
                 <hmis:IndefiniteAndImpairsIndependence>9</hmis:IndefiniteAndImpairsIndependence>
                 <hmis:TCellCountAvailable>1</hmis:TCellCountAvailable>
                 <hmis:TCellCount>1401</hmis:TCellCount>
@@ -129,8 +129,7 @@
                 <hmis:DisabilitiesID>6743f</hmis:DisabilitiesID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:DisabilityType>10</hmis:DisabilityType>
-                <hmis:DisabilityResponse xsi:type="hmis:disabilityResponseSubstanceAbuse">99</hmis:DisabilityResponse>
-                <hmis:IndefiniteAndImpairsIndependence>9</hmis:IndefiniteAndImpairsIndependence>
+                <hmis:DisabilityResponse xsi:type="hmis:disabilityResponseSubstanceAbuse">9</hmis:DisabilityResponse>
             </hmis:Disabilities>
             <hmis:DomesticViolence hmis:dataCollectionStage="1" hmis:informationDate="2019-11-21" hmis:dateCreated="2019-11-21T23:14:59"
                  hmis:dateUpdated="2019-01-05T23:14:59Z" hmis:userID="fPKfm5Rtfi0m3OhjeFL_pozaSRUUA">
