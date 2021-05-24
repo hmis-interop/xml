@@ -1,8 +1,8 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/FY2020-latest/src/HUD_HMIS.xsd"
+    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd file:////home/eric/git/hmis-xml/src/HUD_HMIS.xsd"
  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
- xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS.xsd">
+ xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd">
     <hmis:Source>
         <hmis:SourceID>12345</hmis:SourceID>
         <hmis:SourceType>1</hmis:SourceType>
@@ -66,9 +66,19 @@
                 <hmis:SSNDataQuality>2</hmis:SSNDataQuality>
                 <hmis:DOB>2014-11-18</hmis:DOB>
                 <hmis:DOBDataQuality>1</hmis:DOBDataQuality>
-                <hmis:Race>8</hmis:Race>
+                <hmis:AmIndAKNative>0</hmis:AmIndAKNative>
+                <hmis:Asian>99</hmis:Asian>
+                <hmis:BlackAfAmerican>0</hmis:BlackAfAmerican>
+                <hmis:NativeHIOtherPacific>99</hmis:NativeHIOtherPacific>
+                <hmis:White>99</hmis:White>
+                <hmis:RaceNone>9</hmis:RaceNone>
                 <hmis:Ethnicity>0</hmis:Ethnicity>
-                <hmis:Gender>4</hmis:Gender>
+                <hmis:Female>0</hmis:Female>
+                <hmis:Male>0</hmis:Male>
+                <hmis:GenderOther>99</hmis:GenderOther>
+                <hmis:Transgender>99</hmis:Transgender>
+                <hmis:Questioning>0</hmis:Questioning>
+                <hmis:GenderNone>8</hmis:GenderNone>
                 <hmis:VeteranStatus>9</hmis:VeteranStatus>
             </hmis:Client>
             <hmis:ClientVeteranInfo hmis:dateCreated="2019-12-17T23:14:59" hmis:dateUpdated="2019-03-10T23:14:59" hmis:userID="dZPlRM">
@@ -115,8 +125,8 @@
                 <hmis:DisabilitiesID>6743e</hmis:DisabilitiesID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:DisabilityType>8</hmis:DisabilityType>
-                <hmis:DisabilityResponse xsi:type="hmis:disabilityResponseNoYesDoesntKnowRefused">1</hmis:DisabilityResponse>
-                <hmis:IndefiniteAndImpairsIndependence>9</hmis:IndefiniteAndImpairsIndependence>
+                <hmis:DisabilityResponse xsi:type="hmis:disabilityResponsePhysicalDisability">1</hmis:DisabilityResponse>
+                <hmis:IndefiniteAndImpairsIndependence xsi:type="hmis:indefiniteAndImpairsIndependencePhysicalDisability">9</hmis:IndefiniteAndImpairsIndependence>
                 <hmis:TCellCountAvailable>1</hmis:TCellCountAvailable>
                 <hmis:TCellCount>1401</hmis:TCellCount>
                 <hmis:TCellSource>3</hmis:TCellSource>
@@ -129,7 +139,7 @@
                 <hmis:DisabilitiesID>6743f</hmis:DisabilitiesID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:DisabilityType>10</hmis:DisabilityType>
-                <hmis:DisabilityResponse xsi:type="hmis:disabilityResponseSubstanceAbuse">9</hmis:DisabilityResponse>
+                <hmis:DisabilityResponse xsi:type="hmis:disabilityResponseSubstanceUseDisorder">9</hmis:DisabilityResponse>
             </hmis:Disabilities>
             <hmis:DomesticViolence hmis:dataCollectionStage="1" hmis:informationDate="2019-11-21" hmis:dateCreated="2019-11-21T23:14:59"
                  hmis:dateUpdated="2019-01-05T23:14:59Z" hmis:userID="fPKfm5Rtfi0m3OhjeFL_pozaSRUUA">
@@ -233,17 +243,15 @@
                 <hmis:UnemploymentFam>0</hmis:UnemploymentFam>
                 <hmis:MentalHealthIssuesFam>0</hmis:MentalHealthIssuesFam>
                 <hmis:PhysicalDisabilityFam>0</hmis:PhysicalDisabilityFam>
-                <hmis:AlcoholDrugAbuseFam>0</hmis:AlcoholDrugAbuseFam>
+                <hmis:AlcoholDrugUseDisorderFam>99</hmis:AlcoholDrugUseDisorderFam>
                 <hmis:InsufficientIncome>0</hmis:InsufficientIncome>
                 <hmis:IncarceratedParent>1</hmis:IncarceratedParent>
                 <hmis:FormerWardJuvenileJustice>9</hmis:FormerWardJuvenileJustice>
                 <hmis:JuvenileJusticeYears>3</hmis:JuvenileJusticeYears>
-                <hmis:JuvenileJusticeMonths>2</hmis:JuvenileJusticeMonths>
+                <hmis:JuvenileJusticeMonths>11</hmis:JuvenileJusticeMonths>
                 <hmis:FormerWardChildWelfare>1</hmis:FormerWardChildWelfare>
                 <hmis:ChildWelfareYears>2</hmis:ChildWelfareYears>
-                <hmis:ChildWelfareMonths>42</hmis:ChildWelfareMonths>
-                <hmis:ReferralSource>18</hmis:ReferralSource>
-                <hmis:CountOutreachReferralApproaches>3</hmis:CountOutreachReferralApproaches>
+                <hmis:ChildWelfareMonths>1</hmis:ChildWelfareMonths>
             </hmis:EntryRHY>
             <hmis:EntrySSVF hmis:dateCreated="2019-11-21T23:14:59Z" hmis:dateUpdated="2019-06-11T23:14:59" hmis:userID="7653">
                 <hmis:EntrySSVFID>787ughj55</hmis:EntrySSVFID>
@@ -256,20 +264,15 @@
                 <hmis:AddressDataQuality>2</hmis:AddressDataQuality>
                 <hmis:UrgentReferral>0</hmis:UrgentReferral>
                 <hmis:TimeToHousingLoss>99</hmis:TimeToHousingLoss>
-                <hmis:ZeroIncome>1</hmis:ZeroIncome>
                 <hmis:AnnualPercentAMI>2</hmis:AnnualPercentAMI>
-                <hmis:FinancialChange>99</hmis:FinancialChange>
-                <hmis:HouseholdChange>0</hmis:HouseholdChange>
-                <hmis:EvictionHistory>3</hmis:EvictionHistory>
-                <hmis:SubsidyAtRisk>1</hmis:SubsidyAtRisk>
-                <hmis:LiteralHomelessHistory>2</hmis:LiteralHomelessHistory>
-                <hmis:DisabledHoH>99</hmis:DisabledHoH>
+                <hmis:ClientLeaseHolder>99</hmis:ClientLeaseHolder>
                 <hmis:CriminalRecord>1</hmis:CriminalRecord>
-                <hmis:DependentUnder6>0</hmis:DependentUnder6>
-                <hmis:FemVet>0</hmis:FemVet>
-                <hmis:HPScreeningScore>23</hmis:HPScreeningScore>
+                <hmis:CurrentPregnant>99</hmis:CurrentPregnant>
+                <hmis:DependentUnder6>1</hmis:DependentUnder6>
+                <hmis:HH5Plus>99</hmis:HH5Plus>
+                <hmis:CoCPrioritized>1</hmis:CoCPrioritized>
+                <hmis:HPScreeningScore>22</hmis:HPScreeningScore>
                 <hmis:ThresholdScore>342</hmis:ThresholdScore>
-                <hmis:VAMCStation>402</hmis:VAMCStation>
             </hmis:EntrySSVF>
             <hmis:Event hmis:dateCreated="2019-11-21T23:14:59Z" hmis:dateUpdated="2019-11-22T22:11:56Z" hmis:userID="GO">
                 <hmis:EventID>234a1</hmis:EventID>
@@ -413,8 +416,7 @@
                  hmis:dateUpdated="2019-08-05T23:14:59Z" hmis:userID="e79Gzul_HbyrI9JY">
                 <hmis:HealthStatusID>y676755</hmis:HealthStatusID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
-                <hmis:HealthCategory>27</hmis:HealthCategory>
-                <hmis:HealthStatus>4</hmis:HealthStatus>
+                <hmis:PregnancyStatus>1</hmis:PregnancyStatus>
                 <hmis:DueDate>2015-04-15Z</hmis:DueDate>
             </hmis:HealthStatus>
             <hmis:IncomeAndSources hmis:dataCollectionStage="1" hmis:informationDate="2019-07-15" hmis:dateCreated="2019-01-13T23:14:59"
@@ -476,6 +478,8 @@
                 <hmis:HIVAIDSAssistance>8</hmis:HIVAIDSAssistance>
                 <hmis:ADAP>0</hmis:ADAP>
                 <hmis:NoADAPReason>9</hmis:NoADAPReason>
+                <hmis:RyanWhiteMedDent>0</hmis:RyanWhiteMedDent>
+                <hmis:NoRyanWhiteReason>99</hmis:NoRyanWhiteReason>
             </hmis:MedicalAssistance>
             <hmis:MoveInDate hmis:dateCreated="2019-04-25T23:14:59" hmis:dateUpdated="2019-07-23T23:14:59Z" hmis:userID="AUfZ2">
                 <hmis:MoveInDateID>z44332</hmis:MoveInDateID>
@@ -563,8 +567,8 @@
             <hmis:RHYAftercare hmis:dateCreated="2019-04-25T23:14:59" hmis:dateUpdated="2019-04-25T23:14:59" hmis:userID="AUfZ2">
                 <hmis:RhyAfterCareID>34Rwwh</hmis:RhyAfterCareID>
                 <hmis:ExitID>C2x</hmis:ExitID>
-                <hmis:AfterCareDate>2015-04-25</hmis:AfterCareDate>
-                <hmis:AfterCareProvided>1</hmis:AfterCareProvided>
+                <hmis:AftercareDate>2015-04-25</hmis:AftercareDate>
+                <hmis:AftercareProvided>1</hmis:AftercareProvided>
                 <hmis:EmailSocialMedia>99</hmis:EmailSocialMedia>
                 <hmis:Telephone>0</hmis:Telephone>
                 <hmis:InPersonIndividual>1</hmis:InPersonIndividual>
@@ -582,27 +586,25 @@
                 <hmis:ServiceFAReferralID>44gg</hmis:ServiceFAReferralID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:DateProvided>2015-09-06</hmis:DateProvided>
-                <hmis:RecordType>144</hmis:RecordType>
-                <hmis:TypeProvided>6</hmis:TypeProvided>
-                <hmis:OtherTypeProvided>some other type here</hmis:OtherTypeProvided>
-                <hmis:ReferralOutcome>2</hmis:ReferralOutcome>
+                <hmis:RecordType>151</hmis:RecordType>
+                <hmis:TypeProvided xsi:type="hmis:typeProvidedW1ServicesHOPWA">6</hmis:TypeProvided>
+                <!--<hmis:OtherTypeProvided>some other type here</hmis:OtherTypeProvided>-->
+                <hmis:FAAmount xsi:type="hmis:fAAmountHOPWA">50.00</hmis:FAAmount>
             </hmis:ServiceFAReferral>
             <hmis:ServiceFAReferral hmis:dateCreated="2019-09-05T23:14:59" hmis:dateUpdated="2019-02-28T23:15:59Z" hmis:userID="CoaTbskfRfTvBSHN8_eRmMF4.4O-A">
                 <hmis:ServiceFAReferralID>44gh</hmis:ServiceFAReferralID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:DateProvided>2015-09-07</hmis:DateProvided>
-                <hmis:RecordType>144</hmis:RecordType>
-                <hmis:TypeProvided>5</hmis:TypeProvided>
-                <hmis:SubTypeProvided>12</hmis:SubTypeProvided>
-                <hmis:ReferralOutcome>2</hmis:ReferralOutcome>
+                <hmis:RecordType>300</hmis:RecordType>
+                <hmis:TypeProvided xsi:type="hmis:typeProvidedC2MovingOnAssistance">5</hmis:TypeProvided>
+                <hmis:MovingOnOtherType>some other type here</hmis:MovingOnOtherType>
             </hmis:ServiceFAReferral>
             <hmis:ServiceFAReferral hmis:dateCreated="2019-09-05T23:14:59" hmis:dateUpdated="2019-02-28T23:15:59Z" hmis:userID="CoaTbskfRfTvBSHN8_eRmMF4.4O-A">
                 <hmis:ServiceFAReferralID>44gi</hmis:ServiceFAReferralID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:DateProvided>2015-09-07</hmis:DateProvided>
-                <hmis:RecordType>151</hmis:RecordType>
-                <hmis:TypeProvided>5</hmis:TypeProvided>
-                <hmis:FAAmount>167.43</hmis:FAAmount>
+                <hmis:RecordType>161</hmis:RecordType>
+                <hmis:TypeProvided xsi:type="hmis:typeProvidedP2ReferralPATH">5</hmis:TypeProvided>
                 <hmis:ReferralOutcome>2</hmis:ReferralOutcome>
             </hmis:ServiceFAReferral>     
             <hmis:User hmis:dateCreated="2019-09-05T23:14:59" hmis:dateUpdated="2019-09-05T23:14:59" hmis:userID="3cf231">
@@ -613,6 +615,13 @@
                 <hmis:ExitID>C2x</hmis:ExitID>
                 <hmis:CMExitReason>99</hmis:CMExitReason>
             </hmis:VASHExitReason>
+            <hmis:YouthEducationStatus hmis:dataCollectionStage="1" hmis:informationDate="2019-11-21" hmis:dateCreated="2019-08-13T23:14:59" hmis:dateUpdated="2019-08-13T23:14:59" hmis:userID="452sd">
+                <hmis:YouthEducationStatusID>1</hmis:YouthEducationStatusID>
+                <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
+                <hmis:CurrentSchoolAttend>0</hmis:CurrentSchoolAttend>
+                <hmis:MostRecentEdStatus>2</hmis:MostRecentEdStatus>
+                <!--<hmis:CurrentEdStatus>1</hmis:CurrentEdStatus>-->
+            </hmis:YouthEducationStatus>
         </hmis:Export>
     </hmis:Source>
 </hmis:Sources>
