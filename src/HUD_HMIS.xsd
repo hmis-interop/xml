@@ -1494,7 +1494,6 @@
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:RHYBCPStatus[hmis:EnrollmentID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:ServiceFAReferral[hmis:EnrollmentID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:Wellbeing[hmis:EnrollmentID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Household/hmis:HouseholdID satisfies (fn:count(hmis:EnrollmentCoC[hmis:HouseholdID = $id]) ge 1)"/>
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitHousingAssessment[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitRHY[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:HousingAssessmentDisposition[hmis:ExitID = $id]) le 1)"/>		
