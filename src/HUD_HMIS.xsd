@@ -790,12 +790,12 @@
 					<xs:documentation xml:lang="en">Length of stay in prior living situation</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="LOSUnderThreshold" id="_3.917.2AB" type="hmis:noYes" minOccurs="0">
+			<xs:element name="LOSUnderThreshold" id="_3.917.2AB" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">for Institutional Situations: Did you stay less than 90 days? for Housing Situations: Did you stay less than 7 nights?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PreviousStreetESSH" id="_3.917.2C" type="hmis:noYes" minOccurs="0">
+			<xs:element name="PreviousStreetESSH" id="_3.917.2C" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>					
 					<xs:documentation xml:lang="en">On the night before did you stay on the streets, ES, or SH</xs:documentation>
 				</xs:annotation>				
@@ -892,32 +892,32 @@
 					<xs:documentation xml:lang="en">If other, please describe</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="UnemploymentFam" id="_R13.9" type="hmis:noYes">
+			<xs:element name="UnemploymentFam" id="_R13.9" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Unemployment - Family member</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MentalHealthIssuesFam" id="_R13.11" type="hmis:noYes">
+			<xs:element name="MentalHealthIssuesFam" id="_R13.11" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Mental Health Disorder - Family member</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PhysicalDisabilityFam" id="_R13.15" type="hmis:noYes">
+			<xs:element name="PhysicalDisabilityFam" id="_R13.15" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Physical Disability – Family member</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AlcoholDrugUseDisorderFam" id="_R13.21" type="hmis:noYes">
+			<xs:element name="AlcoholDrugUseDisorderFam" id="_R13.21" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Alcohol or Substance Use Disorder - Family member</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="InsufficientIncome" id="_R13.22" type="hmis:noYes">
+			<xs:element name="InsufficientIncome" id="_R13.22" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Insufficient Income to support youth - Family member</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IncarceratedParent" id="_R13.24" type="hmis:noYes">
+			<xs:element name="IncarceratedParent" id="_R13.24" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Incarcerated Parent of Youth</xs:documentation>
 				</xs:annotation>
@@ -1129,12 +1129,12 @@
 					<xs:documentation xml:lang="en">Event</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProbSolDivRRResult" id="_4.20.A" type="hmis:noYes" minOccurs="0">
+			<xs:element name="ProbSolDivRRResult" id="_4.20.A" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Problem Solving/Diversion/Rapid Resolution intervention or service result - Client housed/re-housed in a safe alternative</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ReferralCaseManageAfter" id="_4.20.B" type="hmis:noYes" minOccurs="0">
+			<xs:element name="ReferralCaseManageAfter" id="_4.20.B" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Referral to post-placement/follow-up case management result - Enrolled in Aftercare project</xs:documentation>
 				</xs:annotation>
@@ -1291,22 +1291,22 @@
 					<xs:documentation xml:lang="en">In the last 3 months</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CounselingReceived" id="R18.1" type="hmis:noYes">
+			<xs:element name="CounselingReceived" id="R18.1" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Counseling received by client</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IndividualCounseling" id="R18.A.1" type="hmis:noYes" minOccurs="0">
+			<xs:element name="IndividualCounseling" id="R18.A.1" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Individual</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FamilyCounseling" id="R18.A.2" type="hmis:noYes" minOccurs="0">
+			<xs:element name="FamilyCounseling" id="R18.A.2" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Family</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GroupCounseling" id="R18.A.3" type="hmis:noYes" minOccurs="0">
+			<xs:element name="GroupCounseling" id="R18.A.3" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Group – including peer counseling</xs:documentation>
 				</xs:annotation>
@@ -1321,7 +1321,7 @@
 					<xs:documentation xml:lang="en">Total number of sessions planned in youth’s treatment or service plan</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PostExitCounselingPlan" id="R18.3" type="hmis:noYes">
+			<xs:element name="PostExitCounselingPlan" id="R18.3" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">A plan is in place to start or continue counseling after exit</xs:documentation>
 				</xs:annotation>
@@ -1607,7 +1607,7 @@
 					<xs:documentation xml:lang="en">Covered by Health Insurance</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Medicaid" id="_4.04.3" type="hmis:noYes" minOccurs="0">
+			<xs:element name="Medicaid" id="_4.04.3" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">MEDICAID</xs:documentation>
 				</xs:annotation>
@@ -1617,7 +1617,7 @@
 					<xs:documentation xml:lang="en">No Medicaid Reason</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Medicare" id="_4.04.4" type="hmis:noYes" minOccurs="0">
+			<xs:element name="Medicare" id="_4.04.4" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">MEDICARE</xs:documentation>
 				</xs:annotation>
@@ -1627,7 +1627,7 @@
 					<xs:documentation xml:lang="en">No Medicare Reason</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SCHIP" id="_4.04.5" type="hmis:noYes" minOccurs="0">
+			<xs:element name="SCHIP" id="_4.04.5" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">State Children’s Health Insurance Program (or use local name)</xs:documentation>
 				</xs:annotation>
@@ -1637,7 +1637,7 @@
 					<xs:documentation xml:lang="en">No SCHIP Reason</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="VAMedicalServices" id="_4.04.6" type="hmis:noYes" minOccurs="0">
+			<xs:element name="VAMedicalServices" id="_4.04.6" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Veteran’s Administration (VA) Medical Services</xs:documentation>
 				</xs:annotation>
@@ -1647,7 +1647,7 @@
 					<xs:documentation xml:lang="en">No VA Medical Reason</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="EmployerProvided" id="_4.04.7" type="hmis:noYes" minOccurs="0">
+			<xs:element name="EmployerProvided" id="_4.04.7" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Employer – Provided Health Insurance</xs:documentation>
 				</xs:annotation>
@@ -1657,7 +1657,7 @@
 					<xs:documentation xml:lang="en">No Employer Provided Health Insurance Reason</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="COBRA" id="_4.04.8" type="hmis:noYes" minOccurs="0">
+			<xs:element name="COBRA" id="_4.04.8" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Health Insurance obtained through COBRA</xs:documentation>
 				</xs:annotation>
@@ -1667,7 +1667,7 @@
 					<xs:documentation xml:lang="en">No Health Insurance obtained through COBRA Reason</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PrivatePay" id="_4.04.9" type="hmis:noYes" minOccurs="0">
+			<xs:element name="PrivatePay" id="_4.04.9" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Private Pay Health Insurance</xs:documentation>
 				</xs:annotation>
@@ -1677,7 +1677,7 @@
 					<xs:documentation xml:lang="en">No Private Pay Health Insurance Reason</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="StateHealthIns" id="_4.04.10" type="hmis:noYes" minOccurs="0">
+			<xs:element name="StateHealthIns" id="_4.04.10" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">State Health Insurance for Adults (or use local name)</xs:documentation>
 				</xs:annotation>
@@ -1687,7 +1687,7 @@
 					<xs:documentation xml:lang="en">No State Health Insurance for Adults (or use local name) Reason</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IndianHealthServices" id="_4.04.11" type="hmis:noYes" minOccurs="0">
+			<xs:element name="IndianHealthServices" id="_4.04.11" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Indian Health Services Program</xs:documentation>
 				</xs:annotation>
@@ -1697,7 +1697,7 @@
 					<xs:documentation xml:lang="en">No Indian Health Services Program Reason</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherInsurance" id="_4.04.12" type="hmis:noYes" minOccurs="0">
+			<xs:element name="OtherInsurance" id="_4.04.12" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Other</xs:documentation>
 				</xs:annotation>
@@ -1819,7 +1819,7 @@
 					<xs:documentation xml:lang="en">Total Monthly Income</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Earned" id="_4.02.3" type="hmis:noYes">
+			<xs:element name="Earned" id="_4.02.3" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Earned income</xs:documentation>
 				</xs:annotation>
@@ -1829,7 +1829,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Unemployment" id="_4.02.4" type="hmis:noYes">
+			<xs:element name="Unemployment" id="_4.02.4" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Unemployment Insurance</xs:documentation>
 				</xs:annotation>
@@ -1839,7 +1839,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SSI" id="_4.02.5" type="hmis:noYes">
+			<xs:element name="SSI" id="_4.02.5" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Supplemental Security Income (SSI)</xs:documentation>
 				</xs:annotation>
@@ -1849,7 +1849,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SSDI" id="_4.02.6" type="hmis:noYes">
+			<xs:element name="SSDI" id="_4.02.6" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Social Security Disability Insurance (SSDI)</xs:documentation>
 				</xs:annotation>
@@ -1859,7 +1859,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="VADisabilityService" id="_4.02.7" type="hmis:noYes">
+			<xs:element name="VADisabilityService" id="_4.02.7" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">VA Service-Connected Disability Compensation</xs:documentation>
 				</xs:annotation>
@@ -1869,7 +1869,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="VADisabilityNonService" id="_4.02.8" type="hmis:noYes">
+			<xs:element name="VADisabilityNonService" id="_4.02.8" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">VA Non-Service-Connected Disability Pension</xs:documentation>
 				</xs:annotation>
@@ -1879,7 +1879,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PrivateDisability" id="_4.02.9" type="hmis:noYes">
+			<xs:element name="PrivateDisability" id="_4.02.9" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Private disability insurance</xs:documentation>
 				</xs:annotation>
@@ -1889,7 +1889,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WorkersComp" id="_4.02.10" type="hmis:noYes">
+			<xs:element name="WorkersComp" id="_4.02.10" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Worker’s Compensation</xs:documentation>
 				</xs:annotation>
@@ -1899,7 +1899,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TANF" id="_4.02.11" type="hmis:noYes">
+			<xs:element name="TANF" id="_4.02.11" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Temporary Assistance for Needy Families (TANF) </xs:documentation>
 				</xs:annotation>
@@ -1909,7 +1909,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GA" id="_4.02.12" type="hmis:noYes">
+			<xs:element name="GA" id="_4.02.12" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">General Assistance (GA)</xs:documentation>
 				</xs:annotation>
@@ -1919,7 +1919,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SocSecRetirement" id="_4.02.13" type="hmis:noYes">
+			<xs:element name="SocSecRetirement" id="_4.02.13" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Retirement Income from Social Security</xs:documentation>
 				</xs:annotation>
@@ -1929,7 +1929,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Pension" id="_4.02.14" type="hmis:noYes">
+			<xs:element name="Pension" id="_4.02.14" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Pension or retirement income from a former job</xs:documentation>
 				</xs:annotation>
@@ -1939,7 +1939,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ChildSupport" id="_4.02.15" type="hmis:noYes">
+			<xs:element name="ChildSupport" id="_4.02.15" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Child support</xs:documentation>
 				</xs:annotation>
@@ -1949,7 +1949,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Alimony" id="_4.02.16" type="hmis:noYes">
+			<xs:element name="Alimony" id="_4.02.16" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Alimony and other spousal support</xs:documentation>
 				</xs:annotation>
@@ -1959,7 +1959,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherSource" id="_4.02.17" type="hmis:noYes">
+			<xs:element name="OtherSource" id="_4.02.17" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Other source</xs:documentation>
 				</xs:annotation>
@@ -2225,32 +2225,32 @@
 					<xs:documentation xml:lang="en">Non-Cash Benefits from Any Source</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SNAP" id="_4.03.3" type="hmis:noYes">
+			<xs:element name="SNAP" id="_4.03.3" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Supplemental Nutrition Assistance Program (SNAP) (Previously known as Food Stamps)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WIC" id="_4.03.4" type="hmis:noYes">
+			<xs:element name="WIC" id="_4.03.4" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TANFChildCare" id="_4.03.5" type="hmis:noYes">
+			<xs:element name="TANFChildCare" id="_4.03.5" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">TANF Child Care services</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TANFTransportation" id="_4.03.6" type="hmis:noYes">
+			<xs:element name="TANFTransportation" id="_4.03.6" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">TANF transportation services</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherTANF" id="_4.03.7" type="hmis:noYes">
+			<xs:element name="OtherTANF" id="_4.03.7" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Other TANF-funded services</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherBenefitsSource" id="_4.03.8" type="hmis:noYes">
+			<xs:element name="OtherBenefitsSource" id="_4.03.8" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Other source</xs:documentation>
 				</xs:annotation>
@@ -2276,7 +2276,7 @@
 			</xs:element>
 			<xs:element name="OrganizationName" id="_2.01.2" type="hmis:string50"/>
 			<xs:element name="OrganizationCommonName" type="hmis:string50" minOccurs="0"/>
-			<xs:element name="VictimServicesProvider" id="_2.01.3" type="hmis:noYes"/>
+			<xs:element name="VictimServiceProvider" id="_2.01.3" type="hmis:noYesMissing"/>
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
@@ -2294,7 +2294,7 @@
 					<xs:documentation xml:lang="en">Date of Status Determination</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ClientEnrolledInPATH" id="_P3.2" type="hmis:noYes">
+			<xs:element name="ClientEnrolledInPATH" id="_P3.2" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client Became Enrolled in PATH</xs:documentation>
 				</xs:annotation>
@@ -2343,7 +2343,7 @@
 					<xs:documentation xml:lang="en">Operating End Date</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ContinuumProject" id="_2.02.5" type="hmis:noYes">
+			<xs:element name="ContinuumProject" id="_2.02.5" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Continuum Project</xs:documentation>
 				</xs:annotation>
@@ -2353,7 +2353,7 @@
 					<xs:documentation xml:lang="en">Project Type</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ResidentialAffiliation" id="_2.02.A" type="hmis:noYes" minOccurs="0">		
+			<xs:element name="ResidentialAffiliation" id="_2.02.A" type="hmis:noYesMissing" minOccurs="0">		
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Affiliated with a residential project</xs:documentation>
 				</xs:annotation>
@@ -2373,7 +2373,7 @@
 					<xs:documentation xml:lang="en">Housing Type</xs:documentation>
 				</xs:annotation>			
 			</xs:element>
-			<xs:element name="HMISParticipatingProject" id="_2.02.7" type="hmis:noYes">
+			<xs:element name="HMISParticipatingProject" id="_2.02.7" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">HMIS Participating Project</xs:documentation>
 				</xs:annotation>
@@ -2981,22 +2981,22 @@
 					<xs:documentation xml:lang="en">Aftercare was provided</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="EmailSocialMedia" id="_R20.A.1" type="hmis:noYes" minOccurs="0">
+			<xs:element name="EmailSocialMedia" id="_R20.A.1" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Via email/social media.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Telephone" id="_R20.A.2" type="hmis:noYes" minOccurs="0">
+			<xs:element name="Telephone" id="_R20.A.2" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Via telephone</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="InPersonIndividual" id="_R20.A.3" type="hmis:noYes" minOccurs="0">
+			<xs:element name="InPersonIndividual" id="_R20.A.3" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">In person: one-on-one</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="InPersonGroup" id="_R20.A.4" type="hmis:noYes" minOccurs="0">
+			<xs:element name="InPersonGroup" id="_R20.A.4" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">In person: group</xs:documentation>
 				</xs:annotation>
@@ -3031,7 +3031,7 @@
 					<xs:documentation xml:lang="en">Date of Status Determination</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="EligibleForRHY" id="_R2.2" type="hmis:noYes">
+			<xs:element name="EligibleForRHY" id="_R2.2" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Youth Eligible for RHY Services</xs:documentation>
 				</xs:annotation>
@@ -5508,26 +5508,6 @@
 			<xs:enumeration value="99">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="noYes">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">No</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Yes</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data Not Collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

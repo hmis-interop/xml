@@ -98,7 +98,7 @@
                 <hmis:OrganizationID>34</hmis:OrganizationID>
                 <hmis:OrganizationName>Helping People, Inc.</hmis:OrganizationName>
                 <hmis:OrganizationCommonName>Helping</hmis:OrganizationCommonName>
-                <hmis:VictimServicesProvider>99</hmis:VictimServicesProvider>
+                <hmis:VictimServiceProvider>99</hmis:VictimServiceProvider>
             </hmis:Organization>
             <hmis:Project hmis:dateCreated="2016-02-17T23:14:59" hmis:dateUpdated="2015-03-14T23:14:59Z" hmis:userID="j2ZsRLAPv">
                 <hmis:ProjectID>222D</hmis:ProjectID>
