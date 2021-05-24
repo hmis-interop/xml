@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
-<xs:schema targetNamespace="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vc:minVersion="1.1" version="v1.0.3" elementFormDefault="qualified" attributeFormDefault="qualified">
+<xs:schema targetNamespace="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vc:minVersion="1.1" version="v0.1.0-rc.1" elementFormDefault="qualified" attributeFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>All data elements referenced with an "id" attribute correspond to that same data element id within the  FY2022 HMIS Data Dictionary v1.4 (sans the "_" prefix).</xs:documentation>
 	</xs:annotation>
@@ -1494,7 +1494,6 @@
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:RHYBCPStatus[hmis:EnrollmentID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:ServiceFAReferral[hmis:EnrollmentID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:Wellbeing[hmis:EnrollmentID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Household/hmis:HouseholdID satisfies (fn:count(hmis:EnrollmentCoC[hmis:HouseholdID = $id]) ge 1)"/>
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitHousingAssessment[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitRHY[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:HousingAssessmentDisposition[hmis:ExitID = $id]) le 1)"/>		
@@ -3248,10 +3247,6 @@
 				<xs:key name="exitKey">
 					<xs:selector xpath="hmis:Exit"/>
 					<xs:field xpath="hmis:ExitID"/>
-				</xs:key>
-				<xs:key name="householdKey">
-					<xs:selector xpath="hmis:Household"/>
-					<xs:field xpath="hmis:HouseholdID"/>
 				</xs:key>
 				<xs:key name="organizationKey">
 					<xs:selector xpath="hmis:Organization"/>
