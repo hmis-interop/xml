@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hmis:Sources
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="https://raw.githubusercontent.com/hmis-interop/xml/FY2020-latest/src/HUD_HMIS_Example_Extension.xsd"
+    xsi:schemaLocation="https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS_Example_Extension.xsd"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS.xsd"
-    xmlns:ext="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS_Example_Extension.xsd">
+    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd"
+    xmlns:ext="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS_Example_Extension.xsd">
     <hmis:Source>
         <hmis:SourceType>2</hmis:SourceType>
         <hmis:SourceName>Fictitious County HMIS</hmis:SourceName>
