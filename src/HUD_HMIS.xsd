@@ -3249,10 +3249,6 @@
 					<xs:selector xpath="hmis:Exit"/>
 					<xs:field xpath="hmis:ExitID"/>
 				</xs:key>
-				<xs:key name="householdKey">
-					<xs:selector xpath="hmis:Household"/>
-					<xs:field xpath="hmis:HouseholdID"/>
-				</xs:key>
 				<xs:key name="organizationKey">
 					<xs:selector xpath="hmis:Organization"/>
 					<xs:field xpath="hmis:OrganizationID"/>
