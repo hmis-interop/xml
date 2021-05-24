@@ -12,13 +12,13 @@
 	<xs:element name="Export" type="ext:extendedExport"/>
 	
 	<xs:complexType name="extendedExport">
-			<xs:complexContent>
-				<xs:extension base="hmis:export">
-					<xs:sequence>
-						<xs:element name="MyFavoriteColor" type="xs:string" minOccurs="1"/>						
-					</xs:sequence>
-				</xs:extension>
-			</xs:complexContent>
-		</xs:complexType>
+		<xs:complexContent>
+			<xs:extension base="hmis:export">
+				<xs:sequence>
+					<xs:element name="MyFavoriteColor" type="xs:string" minOccurs="1"/>						
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 
 </xs:schema>
