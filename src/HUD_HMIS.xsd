@@ -169,7 +169,7 @@
 			</xs:element>
 			<xs:element name="NameSuffix"  id="_3.01.4" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Suffix (text)</xs:documentation>					
+					<xs:documentation xml:lang="en">Suffix</xs:documentation>					
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NameDataQuality"  id="_3.01.5" type="hmis:nameDataQuality">
