@@ -1496,7 +1496,6 @@
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:Wellbeing[hmis:EnrollmentID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitHousingAssessment[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitRHY[hmis:ExitID = $id]) le 1)"/>				
-		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:HousingAssessmentDisposition[hmis:ExitID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Organization/hmis:OrganizationID satisfies (fn:count(hmis:Project[hmis:OrganizationID = $id]) ge 0)"/>								
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Affiliation[hmis:ProjectID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Funder[hmis:ProjectID = $id]) ge 1)"/>
@@ -3364,10 +3363,6 @@
 				<xs:keyref name="healthStatusEnrollmentKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:HealthStatus"/>
 					<xs:field xpath="hmis:EnrollmentID"/>
-				</xs:keyref>
-				<xs:keyref name="housingAssessmentDispositionExitKeyRef" refer="exitKey">
-					<xs:selector xpath="hmis:HousingAssessmentDisposition"/>
-					<xs:field xpath="hmis:ExitID"/>
 				</xs:keyref>
 				<xs:keyref name="incomeAndSourcesEnrollmentKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:IncomeAndSources"/>
