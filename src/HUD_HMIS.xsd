@@ -145,7 +145,7 @@
 			<xs:element name="PersonalID" type="hmis:personalID"/>
 			<xs:element name="FirstName" id="_3.01.1" type="hmis:nameHashingOption" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">First (text)</xs:documentation>
+					<xs:documentation xml:lang="en">First</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
 				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
@@ -153,7 +153,7 @@
 			</xs:element>
 			<xs:element name="MiddleName"  id="_3.01.2" type="hmis:nameHashingOption" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Middle (text)</xs:documentation>
+					<xs:documentation xml:lang="en">Middle</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
 				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
@@ -161,7 +161,7 @@
 			</xs:element>
 			<xs:element name="LastName" id="_3.01.3" type="hmis:nameHashingOption" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Last (text)</xs:documentation>
+					<xs:documentation xml:lang="en">Last</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
 				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
@@ -169,7 +169,7 @@
 			</xs:element>
 			<xs:element name="NameSuffix"  id="_3.01.4" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Suffix (text)</xs:documentation>					
+					<xs:documentation xml:lang="en">Suffix</xs:documentation>					
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NameDataQuality"  id="_3.01.5" type="hmis:nameDataQuality">
@@ -1488,7 +1488,7 @@
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:IncomeAndSources[hmis:EnrollmentID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:MedicalAssistance[hmis:EnrollmentID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:NonCashBenefits[hmis:EnrollmentID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:PathStatus[hmis:EnrollmentID = $id]) le 1)"/>					
+		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:PATHStatus[hmis:EnrollmentID = $id]) le 1)"/>					
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:EntryRHSP[hmis:EnrollmentID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:MoveInDate[hmis:EnrollmentID = $id]) le 1)"/>								
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:RHYBCPStatus[hmis:EnrollmentID = $id]) le 1)"/>
@@ -1496,7 +1496,6 @@
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:Wellbeing[hmis:EnrollmentID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitHousingAssessment[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitRHY[hmis:ExitID = $id]) le 1)"/>				
-		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:HousingAssessmentDisposition[hmis:ExitID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Organization/hmis:OrganizationID satisfies (fn:count(hmis:Project[hmis:OrganizationID = $id]) ge 0)"/>								
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Affiliation[hmis:ProjectID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Funder[hmis:ProjectID = $id]) ge 1)"/>
@@ -2283,9 +2282,9 @@
 	
 	<xs:complexType name="pathStatus">
 		<xs:sequence>
-			<xs:element name="PathStatusID" type="hmis:string32">
+			<xs:element name="PATHStatusID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the PathStatus' unique ID</xs:documentation>
+					<xs:documentation xml:lang="en">Reference to the PATHStatus' unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>
@@ -3364,10 +3363,6 @@
 				<xs:keyref name="healthStatusEnrollmentKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:HealthStatus"/>
 					<xs:field xpath="hmis:EnrollmentID"/>
-				</xs:keyref>
-				<xs:keyref name="housingAssessmentDispositionExitKeyRef" refer="exitKey">
-					<xs:selector xpath="hmis:HousingAssessmentDisposition"/>
-					<xs:field xpath="hmis:ExitID"/>
 				</xs:keyref>
 				<xs:keyref name="incomeAndSourcesEnrollmentKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:IncomeAndSources"/>
