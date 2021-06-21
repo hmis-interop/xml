@@ -153,7 +153,7 @@
 			</xs:element>
 			<xs:element name="MiddleName"  id="_3.01.2" type="hmis:nameHashingOption" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Middle (text)</xs:documentation>
+					<xs:documentation xml:lang="en">Middle</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
 				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
@@ -161,7 +161,7 @@
 			</xs:element>
 			<xs:element name="LastName" id="_3.01.3" type="hmis:nameHashingOption" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Last (text)</xs:documentation>
+					<xs:documentation xml:lang="en">Last</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
 				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
