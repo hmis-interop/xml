@@ -4861,6 +4861,11 @@
 					<xs:documentation xml:lang="en">Mental Health Status</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="30">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Pregnancy Status</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	
