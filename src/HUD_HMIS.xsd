@@ -9,7 +9,7 @@
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	vc:minVersion = "1.1"
-	version="v1.0.4"
+	version="v1.0.5"
 	elementFormDefault="qualified"		
 	attributeFormDefault="qualified">
 		
@@ -1736,7 +1736,6 @@
 		<xs:assert test="every $id in hmis:Household/hmis:HouseholdID satisfies (fn:count(hmis:EnrollmentCoC[hmis:HouseholdID = $id]) ge 1)"/>
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitHousingAssessment[hmis:ExitID = $id]) le 1)"/>				
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitRHY[hmis:ExitID = $id]) le 1)"/>				
-		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:HousingAssessmentDisposition[hmis:ExitID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Organization/hmis:OrganizationID satisfies (fn:count(hmis:Project[hmis:OrganizationID = $id]) ge 0)"/>								
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Affiliation[hmis:ProjectID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Funder[hmis:ProjectID = $id]) ge 1)"/>
@@ -1974,32 +1973,6 @@
 		<xs:attribute ref="hmis:informationDate" use="required"/>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>	
-	
-	<xs:complexType name="housingAssessmentDisposition">
-		<xs:sequence>
-			<xs:element name="HousingAssessmentDispositionID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the HousingAssessmentDisposition's unique ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ExitID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Key reference to the ExitID</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AssessmentDisposition" type="hmis:assessmentDisposition">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.18.1.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="OtherDisposition" type="hmis:string50" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.18.1A.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attributeGroup ref="hmis:baseMetaData"/>
-	</xs:complexType>
 	
 	<xs:complexType name="nameHashingOption">
 		<xs:simpleContent>
@@ -3180,10 +3153,6 @@
 				<xs:keyref name="healthStatusEnrollmentKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:HealthStatus"/>
 					<xs:field xpath="hmis:EnrollmentID"/>
-				</xs:keyref>
-				<xs:keyref name="housingAssessmentDispositionExitKeyRef" refer="exitKey">
-					<xs:selector xpath="hmis:HousingAssessmentDisposition"/>
-					<xs:field xpath="hmis:ExitID"/>
 				</xs:keyref>
 				<xs:keyref name="incomeAndSourcesEnrollmentKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:IncomeAndSources"/>
