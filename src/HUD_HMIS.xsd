@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
-<xs:schema targetNamespace="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vc:minVersion="1.1" version="v0.1.0-rc.1" elementFormDefault="qualified" attributeFormDefault="qualified">
+<xs:schema targetNamespace="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vc:minVersion="1.1" version="v0.1.0-rc.3" elementFormDefault="qualified" attributeFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>All data elements referenced with an "id" attribute correspond to that same data element id within the  FY2022 HMIS Data Dictionary v1.4 (sans the "_" prefix).</xs:documentation>
 	</xs:annotation>
@@ -47,7 +47,7 @@
 			<xs:element name="PersonalID" type="hmis:personalID"/>
 			<xs:element name="AssessmentDate" id="_4.19.1" type="xs:date">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Date of assessment [date]</xs:documentation>
+					<xs:documentation xml:lang="en">Date of assessment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AssessmentLocation" id="_4.19.2" type="hmis:string250">
@@ -3669,7 +3669,7 @@
 		</xs:simpleType>
 	</xs:attribute>
 	
-	<xs:simpleType name="addressDataQuality">
+	<xs:simpleType name="addressDataQuality" id="addressDataQuality">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -3699,7 +3699,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="annualPercentAMI">
+	<xs:simpleType name="annualPercentAMI" id="annualPercentAMI">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
@@ -3729,7 +3729,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="askedOrForcedToExchangeForSex">
+	<xs:simpleType name="askedOrForcedToExchangeForSex" id="askedOrForcedToExchangeForSex">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
@@ -3759,7 +3759,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="assessmentDisposition">
+	<xs:simpleType name="assessmentDisposition" id="assessmentDisposition">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -3839,7 +3839,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="assessmentLevel">
+	<xs:simpleType name="assessmentLevel" id="assessmentLevel" >
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -3854,7 +3854,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="assessmentType">
+	<xs:simpleType name="assessmentType" id="assessmentType">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -3874,7 +3874,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="availability">
+	<xs:simpleType name="availability" id="availability">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -3894,7 +3894,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="bedType">
+	<xs:simpleType name="bedType" id="bedType">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -3914,7 +3914,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="cmExitReason">
+	<xs:simpleType name="cmExitReason" id="cmExitReason">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -3989,13 +3989,13 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="cocCode">
+	<xs:simpleType name="cocCode" id="cocCode">
 		<xs:restriction base="xs:string">
 			<xs:pattern value="[A-Za-z]{2}-[0-9]{3}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="countOfExchangeForSex">
+	<xs:simpleType name="countOfExchangeForSex" id="countOfExchangeForSex">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -4035,7 +4035,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="currentEdStatus">
+	<xs:simpleType name="currentEdStatus" id="currentEdStatus">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
@@ -4080,7 +4080,7 @@
 		</xs:restriction>
 	</xs:simpleType>	
 	
-	<xs:simpleType name="currentSchoolAttend">
+	<xs:simpleType name="currentSchoolAttend" id="currentSchoolAttend">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
@@ -4115,7 +4115,7 @@
 		</xs:restriction>
 	</xs:simpleType>	
 
-	<xs:simpleType name="dependentUnder6">
+	<xs:simpleType name="dependentUnder6" id="dependentUnder6">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
@@ -4140,7 +4140,7 @@
 		</xs:restriction>
 	</xs:simpleType>	
 	
-	<xs:simpleType name="disabilityType">
+	<xs:simpleType name="disabilityType" id="disabilityType">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="5" id="_4.05">
 				<xs:annotation>
@@ -4180,7 +4180,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="dischargeStatus">
+	<xs:simpleType name="dischargeStatus" id="dischargeStatus">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -4230,7 +4230,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="dobDataQuality">
+	<xs:simpleType name="dobDataQuality" id="dobDataQuality">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -4260,7 +4260,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="earlyExitReason">
+	<xs:simpleType name="earlyExitReason" id="earlyExitReason">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -4300,13 +4300,13 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="email">
+	<xs:simpleType name="email" id="email">
 		<xs:restriction base="xs:string">
 		<xs:pattern value="(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="employmentType">
+	<xs:simpleType name="employmentType" id="employmentType">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -4340,7 +4340,7 @@
 		<xs:restriction base="hmis:string32"/>			
 	</xs:simpleType>
 
-	<xs:simpleType name="ethnicity">
+	<xs:simpleType name="ethnicity" id="ethnicity">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
@@ -4370,7 +4370,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="eventType">
+	<xs:simpleType name="eventType" id="eventType">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -4465,7 +4465,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="evictionHistory">
+	<xs:simpleType name="evictionHistory" id="evictionHistory">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
@@ -4515,7 +4515,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 		
-	<xs:simpleType name="exportDirective">
+	<xs:simpleType name="exportDirective" id="exportDirective">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="deltaRefresh">
 				<xs:annotation>
@@ -4535,13 +4535,13 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="extension">
+	<xs:simpleType name="extension" id="extension">
 		<xs:restriction base="xs:string">
 			<xs:pattern value="[0-9]{1,5}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="federalPartnerProgramsAndComponents">
+	<xs:simpleType name="federalPartnerProgramsAndComponents" id="federalPartnerProgramsAndComponents">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -4786,7 +4786,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="noYesDoesntKnowRefused">
+	<xs:simpleType name="noYesDoesntKnowRefused" id="noYesDoesntKnowRefused">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
@@ -4816,7 +4816,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="rhyReasonNoServices">
+	<xs:simpleType name="rhyReasonNoServices" id="rhyReasonNoServices">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -4846,7 +4846,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="feelingFrequency">
+	<xs:simpleType name="feelingFrequency" id="feelingFrequency">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
@@ -4891,13 +4891,13 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="geocode">
+	<xs:simpleType name="geocode" id="geocode">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:pattern value="[0-9]{6}"/>    
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="geographyType">
+	<xs:simpleType name="geographyType" id="geographyType">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -4922,7 +4922,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="healthStatusType">
+	<xs:simpleType name="healthStatusType" id="healthStatusType">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -4967,7 +4967,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="hopwaMedAssistedLivingFac">
+	<xs:simpleType name="hopwaMedAssistedLivingFac" id="hopwaMedAssistedLivingFac">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
@@ -4996,7 +4996,7 @@
 		<xs:restriction base="hmis:string32"/>			
 	</xs:simpleType>
 	
-	<xs:simpleType name="householdType">
+	<xs:simpleType name="householdType" id="householdType">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -5016,7 +5016,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="housingAssessmentAtExit">
+	<xs:simpleType name="housingAssessmentAtExit" id="housingAssessmentAtExit">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -5075,7 +5075,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="housingType">
+	<xs:simpleType name="housingType" id="housingType">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -5095,13 +5095,58 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="hpScreeningScore">
+	<xs:simpleType name="hpScreeningScore" id="hpScreeningScore">
 		<xs:restriction base="xs:string">
 			<xs:pattern value="[0-9]{2}"/>
 		</xs:restriction>
 	</xs:simpleType>
+	
+	<xs:simpleType name="incarceratedAdult" id="incarceratedAdult">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Not incarcerated</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Incarcerated once</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Incarcerated two or more times</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>	
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="issuesYears" id="issuesYears">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Less than one year</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">1 to 2 years</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>	
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">3 to 5 or more years</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>		
+		</xs:restriction>
+	</xs:simpleType>	
 
-	<xs:simpleType name="lastGradeCompletedSimple">
+	<xs:simpleType name="lastGradeCompletedSimple" id="lastGradeCompletedSimple">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -5181,7 +5226,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="literalHomelessHistory">
+	<xs:simpleType name="literalHomelessHistory" id="literalHomelessHistory">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
@@ -5210,194 +5255,27 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
-	<xs:simpleType name="militaryBranch">
+
+	<xs:simpleType name="lengthOfStay" id="lengthOfStay">
 		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Army</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="2">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Air Force</xs:documentation>
+					<xs:documentation xml:lang="en">One week or more, but less than one month</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Navy</xs:documentation>
+					<xs:documentation xml:lang="en">One month or more, but less than 90 days</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Marines</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="6">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Coast Guard</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="7">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Other</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>			
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="monthsHomelessPastThreeYears">
-		<xs:restriction base="xs:positiveInteger">
-			<xs:enumeration value="101">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">1 month</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="102">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">2 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="103">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">3 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="104">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">4 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="105">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">5 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="106">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">6 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="107">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">7 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="108">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">8 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="109">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">9 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="110">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">10 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="111">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">11 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="112">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">12 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="113">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">More than 12 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="money">
-		<xs:restriction base="xs:decimal">
-			<xs:fractionDigits value="2"/>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="months">
-		<xs:restriction base="xs:positiveInteger">
-			<xs:maxInclusive value="11"/>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="mostRecentEdStatus">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">K12: Graduated from high school</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">K12: Obtained GED</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">K12: Dropped out</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">K12: Suspended</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">K12: Expelled</xs:documentation>
+					<xs:documentation xml:lang="en">90 days or more but less than one year</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="5">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Higher education: Pursuing a credential but not currently attending</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="6">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Higher education: Dropped out</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="7">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Higher education: Obtained a credential/degree</xs:documentation>
+					<xs:documentation xml:lang="en">One year or longer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8">
@@ -5408,375 +5286,16 @@
 			<xs:enumeration value="9">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="nameDataQuality">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Full name reported</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Partial, street name, or code name reported</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="reasonNotInsuredOrAssisted">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Applied; decision pending</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Applied; client not eligible</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client did not apply</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>			
-			<xs:enumeration value="4">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Insurance type N/A for this client</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="noYesMissing">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">No</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Yes</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="noYesRefused">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">No</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Yes</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="noYesWorkerDoesntKnow">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">No</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Yes</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Worker Doesn’t Know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="personalID" id="_5.08.1">
-		<xs:annotation>
-			<xs:documentation>
-				<xs:documentation xml:lang="en">Personal ID (HMIS Generated)</xs:documentation>
-			</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="hmis:string32"/>			
-	</xs:simpleType>
-	
-	<xs:simpleType name="phoneNumber">
-		<xs:restriction base="xs:string">
-			<xs:pattern value="[2-9][0-9]{2}[2-9][0-9]{2}[0-9]{4}"/>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="notEmployedReason">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Looking for work</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Unable to work</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Not looking for work</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="percentAMISimple">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Less than 30%</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">30% to 50%</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Greater than 50%</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="prioritizationStatus">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Placed on prioritization list</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Not placed on prioritization list</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="projectCompletionStatus">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Completed project</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Youth voluntarily left early</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Youth was expelled or otherwise involuntarily discharged from project</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="projectID" id="_5.05.1">
-		<xs:annotation>
-			<xs:documentation>
-				<xs:documentation xml:lang="en">Project Identifier (2.02) of the project that entered or edited the data</xs:documentation>
-			</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="hmis:string32"/>			
-	</xs:simpleType>
-	
-	<xs:simpleType name="projectType">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Emergency Shelter</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Transitional Housing</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">PH - Permanent Supportive Housing (disability required for entry)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Street Outreach</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="6">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Services Only</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="7">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Other</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Safe Haven</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">PH – Housing Only</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="10">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">PH – Housing with Services (no disability required for entry)</xs:documentation>
+					<xs:documentation xml:lang="en">One night or less</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="11">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Day Shelter</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="12">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Homelessness Prevention</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="13">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">PH - Rapid Re-Housing</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>			
-			<xs:enumeration value="14">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Coordinated Entry</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="raceGenderNone">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="8">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="reasonNotEnrolled">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client was found ineligible for PATH</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client was not enrolled for other reason(s)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Unable to locate client</xs:documentation>
+					<xs:documentation xml:lang="en">Two to six nights</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -5787,167 +5306,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="referralOutcome">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Attained</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Not attained</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Unknown</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="referralResult">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Successful referral: client accepted</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Unsuccessful referral: client rejected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Unsuccessful referral: provider rejected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="referralSource">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Self-Referral</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Individual: Parent/Guardian/Relative/Friend/Foster Parent/Other Individual</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="7">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Outreach Project</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="11">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Temporary Shelter</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="18">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Residential Project</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="28">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Hotline</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="30">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Child Welfare/CPS</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="34">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Juvenile Justice</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="35">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Law Enforcement/ Police</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="37">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Mental Hospital</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="38">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">School</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="39">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Other Organization</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="relationshipToHoH">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Self (head of household)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Head of household’s child</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Head of household’s spouse or partner</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Head of household’s other relation member (other relation to head of household)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="5">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Other: non-relation member</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="livingSituation">
+	<xs:simpleType name="livingSituation" id="livingSituation">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -6140,28 +5499,123 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="lengthOfStay">
-    	<xs:restriction base="xs:unsignedInt">
+	</xs:simpleType>	
+
+	<xs:simpleType name="militaryBranch" id="militaryBranch">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Army</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="2">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">One week or more, but less than one month</xs:documentation>
+					<xs:documentation xml:lang="en">Air Force</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">One month or more, but less than 90 days</xs:documentation>
+					<xs:documentation xml:lang="en">Navy</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">90 days or more but less than one year</xs:documentation>
+					<xs:documentation xml:lang="en">Marines</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="5">
+			<xs:enumeration value="6">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">One year or longer</xs:documentation>
+					<xs:documentation xml:lang="en">Coast Guard</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="7">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Other</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="monthsHomelessPastThreeYears" id="monthsHomelessPastThreeYears">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:enumeration value="101">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">1 month</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="102">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">2 months</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="103">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">3 months</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="104">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">4 months</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="105">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">5 months</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="106">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">6 months</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="107">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">7 months</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="108">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">8 months</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="109">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">9 months</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="110">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">10 months</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="111">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">11 months</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="112">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">12 months</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="113">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">More than 12 months</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8">
@@ -6174,14 +5628,76 @@
 					<xs:documentation xml:lang="en">Client refused</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="10">
+			<xs:enumeration value="99">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">One night or less</xs:documentation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="11">
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="money" id="money">
+		<xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="months" id="months">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:maxInclusive value="11"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="mostRecentEdStatus" id="mostRecentEdStatus">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Two to six nights</xs:documentation>
+					<xs:documentation xml:lang="en">K12: Graduated from high school</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">K12: Obtained GED</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">K12: Dropped out</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">K12: Suspended</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">K12: Expelled</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Higher education: Pursuing a credential but not currently attending</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Higher education: Dropped out</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="7">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Higher education: Obtained a credential/degree</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client refused</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -6192,7 +5708,536 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="schoolStatus">
+	<xs:simpleType name="nameDataQuality" id="nameDataQuality">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Full name reported</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Partial, street name, or code name reported</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="reasonNotInsuredOrAssisted" id="reasonNotInsuredOrAssisted">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Applied; decision pending</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Applied; client not eligible</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client did not apply</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Insurance type N/A for this client</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="noYesMissing" id="noYesMissing">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">No</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Yes</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="noYesRefused" id="noYesRefused">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">No</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Yes</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="noYesWorkerDoesntKnow" id="noYesWorkerDoesntKnow">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">No</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Yes</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Worker Doesn’t Know</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="personalID" id="_5.08.1">
+		<xs:annotation>
+			<xs:documentation>
+				<xs:documentation xml:lang="en">Personal ID (HMIS Generated)</xs:documentation>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="hmis:string32"/>			
+	</xs:simpleType>
+	
+	<xs:simpleType name="phoneNumber" id="phoneNumber">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[2-9][0-9]{2}[2-9][0-9]{2}[0-9]{4}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="notEmployedReason" id="notEmployedReason">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Looking for work</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Unable to work</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Not looking for work</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="percentAMISimple" id="percentAMISimple">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Less than 30%</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">30% to 50%</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Greater than 50%</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="prioritizationStatus" id="prioritizationStatus">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Placed on prioritization list</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Not placed on prioritization list</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="projectCompletionStatus" id="projectCompletionStatus">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Completed project</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Youth voluntarily left early</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Youth was expelled or otherwise involuntarily discharged from project</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="projectID" id="_5.05.1">
+		<xs:annotation>
+			<xs:documentation>
+				<xs:documentation xml:lang="en">Project Identifier (2.02) of the project that entered or edited the data</xs:documentation>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="hmis:string32"/>			
+	</xs:simpleType>
+	
+	<xs:simpleType name="projectType" id="projectType">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Emergency Shelter</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Transitional Housing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">PH - Permanent Supportive Housing (disability required for entry)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Street Outreach</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Services Only</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="7">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Other</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Safe Haven</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">PH – Housing Only</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="10">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">PH – Housing with Services (no disability required for entry)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="11">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Day Shelter</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="12">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Homelessness Prevention</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="13">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">PH - Rapid Re-Housing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>			
+			<xs:enumeration value="14">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Coordinated Entry</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="raceGenderNone" id="raceGenderNone">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="reasonNotEnrolled" id="reasonNotEnrolled">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client was found ineligible for PATH</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client was not enrolled for other reason(s)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Unable to locate client</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="referralOutcome" id="referralOutcome">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Attained</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Not attained</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Unknown</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="referralResult" id="referralResult">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Successful referral: client accepted</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Unsuccessful referral: client rejected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Unsuccessful referral: provider rejected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="referralSource" id="referralSource">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Self-Referral</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Individual: Parent/Guardian/Relative/Friend/Foster Parent/Other Individual</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="7">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Outreach Project</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="11">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Temporary Shelter</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="18">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Residential Project</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="28">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Hotline</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="30">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Child Welfare/CPS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="34">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Juvenile Justice</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="35">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Law Enforcement/ Police</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="37">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Mental Hospital</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="38">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">School</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="39">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Other Organization</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="relationshipToHoH" id="relationshipToHoH">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Self (head of household)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Head of household’s child</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Head of household’s spouse or partner</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Head of household’s other relation member (other relation to head of household)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Other: non-relation member</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="99">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="schoolStatus" id="schoolStatus">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -6247,7 +6292,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="recordType">
+	<xs:simpleType name="recordType" id="recordType">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration id="_P1" value="141">
 				<xs:annotation>
@@ -6302,7 +6347,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="sexualOrientation">		
+	<xs:simpleType name="sexualOrientation" id="sexualOrientation">		
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -6352,7 +6397,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="sourceType">
+	<xs:simpleType name="sourceType" id="sourceType">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -6377,7 +6422,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="ssnDataQuality">
+	<xs:simpleType name="ssnDataQuality" id="ssnDataQuality">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -6407,7 +6452,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="state">
+	<xs:simpleType name="state" id="state">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">from https://www.usps.com/send/official-abbreviations.htm</xs:documentation>
 		</xs:annotation>
@@ -6481,31 +6526,31 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="string32">
+	<xs:simpleType name="string32" id="string32">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="32"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="string50">
+	<xs:simpleType name="string50" id="string50">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="50"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="string100">
+	<xs:simpleType name="string100" id="string100">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="100"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="string250">
+	<xs:simpleType name="string250" id="string250">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="250"/>
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="subsidyInformation">
+	<xs:simpleType name="subsidyInformation" id="subsidyInformation">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -6545,7 +6590,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="timeToHousingLoss">
+	<xs:simpleType name="timeToHousingLoss" id="timeToHousingLoss">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
@@ -6575,7 +6620,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="timesHomelessPastThreeYears">
+	<xs:simpleType name="timesHomelessPastThreeYears" id="timesHomelessPastThreeYears">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -6615,7 +6660,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="targetPopulation">
+	<xs:simpleType name="targetPopulation" id="targetPopulation">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -6635,14 +6680,14 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="tCellCount">
+	<xs:simpleType name="tCellCount" id="tCellCount">
 		<xs:restriction base="xs:integer">
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="1500"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="tCellOrViralLoadSource">
+	<xs:simpleType name="tCellOrViralLoadSource" id="tCellOrViralLoadSource">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -6667,7 +6712,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="trackingMethod">
+	<xs:simpleType name="trackingMethod" id="trackingMethod">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
@@ -6682,7 +6727,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="vamcStation">
+	<xs:simpleType name="vamcStation" id="vamcStation">
 		<xs:restriction base="xs:string">
 			<xs:pattern value="[A-Za-z0-9]{1,8}"/>
 			<xs:enumeration value="402">
@@ -7403,7 +7448,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="version">
+	<xs:simpleType name="version" id="version">
 		<xs:restriction base="xs:decimal">
 			<xs:totalDigits value="5"/>
 			<xs:fractionDigits value="3"/>
@@ -7411,14 +7456,14 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="viralLoad">
+	<xs:simpleType name="viralLoad" id="viralLoad">
 		<xs:restriction base="xs:integer">
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="999999"/>
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="viralLoadAvailable">
+	<xs:simpleType name="viralLoadAvailable" id="viralLoadAvailable">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
@@ -7453,7 +7498,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="wellbeingAgreement">
+	<xs:simpleType name="wellbeingAgreement" id="wellbeingAgreement">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
@@ -7498,7 +7543,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="whenOccurred">
+	<xs:simpleType name="whenOccurred" id="whenOccurred">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -7538,53 +7583,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="incarceratedAdult">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Not incarcerated</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Incarcerated once</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Incarcerated two or more times</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>	
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>			
-		</xs:restriction>
-	</xs:simpleType>
-		
-	
-	<xs:simpleType name="issuesYears">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Less than one year</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">1 to 2 years</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>	
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">3 to 5 or more years</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>		
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="zipCode">
+	<xs:simpleType name="zipCode" id="zipCode">
 		<xs:restriction base="xs:string">
 			<xs:pattern value="[0-9]{5}"/>
 		</xs:restriction>
