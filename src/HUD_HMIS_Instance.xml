@@ -241,7 +241,7 @@
                 <hmis:SexualOrientation>6</hmis:SexualOrientation>
                 <hmis:SexualOrientationOther>An other sexual orientation listed here.</hmis:SexualOrientationOther>
                 <hmis:UnemploymentFam>0</hmis:UnemploymentFam>
-                <hmis:MentalHealthIssuesFam>0</hmis:MentalHealthIssuesFam>
+                <hmis:MentalHealthDisorderFam>0</hmis:MentalHealthDisorderFam>
                 <hmis:PhysicalDisabilityFam>0</hmis:PhysicalDisabilityFam>
                 <hmis:AlcoholDrugUseDisorderFam>99</hmis:AlcoholDrugUseDisorderFam>
                 <hmis:InsufficientIncome>0</hmis:InsufficientIncome>

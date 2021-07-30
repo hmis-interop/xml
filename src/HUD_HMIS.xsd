@@ -901,7 +901,7 @@
 					<xs:documentation xml:lang="en">Unemployment - Family member</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MentalHealthIssuesFam" id="_R13.11" type="hmis:noYesMissing">
+			<xs:element name="MentalHealthDisorderFam" id="_R13.11" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Mental Health Disorder - Family member</xs:documentation>
 				</xs:annotation>
