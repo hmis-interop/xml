@@ -301,7 +301,7 @@
 			</xs:element>
 			<xs:element name="DisabilityType" type="hmis:disabilityType">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">The permissible values correspond to the decimal values of the corresponding disability types.  4.5 Physical Disability is "5" and 4.10 Substance Abuse is "10". </xs:documentation>
+					<xs:documentation xml:lang="en">The permissible values correspond to the decimal values of the corresponding disability types.  4.5 Physical Disability is "5" and 4.10 Substance Abuse is "10".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DisabilityResponse" type="hmis:disabilityResponseBase">
@@ -388,7 +388,7 @@
 					No Yes
 					0 = No
 					1 = Yes
-					8 = Client doesn't know
+					8 = Client doesn’t know
 					9 = Client refused
 					99 = Data not collected
 				</xs:documentation>
@@ -406,7 +406,7 @@
 				</xs:enumeration>			
 				<xs:enumeration value="8">
 					<xs:annotation>
-						<xs:documentation xml:lang="en">Client doesn't know</xs:documentation>
+						<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
 					</xs:annotation>
 				</xs:enumeration>				
 				<xs:enumeration value="9">
@@ -2289,7 +2289,7 @@
 			</xs:element>
 			<xs:element name="TypeProvided">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See 2017 HMIS Data Dictionary v1.3, </xs:documentation>
+					<xs:documentation xml:lang="en">See 2017 HMIS Data Dictionary v1.3,</xs:documentation>
 					<xs:documentation xml:lang="en">
 						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 12 (v5.1 Contact Location 4.12.2):
 						1 = Place not meant for habitation
@@ -2925,7 +2925,7 @@
 				Address Data Quality
 				1 = Full address reported
 				2 = Incomplete or estimated address reported
-				8 = Client doesn't know
+				8 = Client doesn’t know
 				9 = Client refused
 				99 = Data not collected
 			</xs:documentation>
@@ -2943,7 +2943,7 @@
 			</xs:enumeration>			
 			<xs:enumeration value="8">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn't know</xs:documentation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>				
 			<xs:enumeration value="9">
@@ -3016,7 +3016,7 @@
 			</xs:enumeration>			
 			<xs:enumeration value="8">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn't know</xs:documentation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>				
 			<xs:enumeration value="9">
@@ -3657,7 +3657,7 @@
 	<xs:simpleType name="dobDataQuality">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
-				Name Data Quality 
+				DOB Data Quality 
 				1 = Full DOB reported 
 				2 = Approximate or partial DOB reported 
 				8 = Client doesn’t know 
@@ -4174,7 +4174,7 @@
 				No Yes
     				0 = No
     				1 = Yes
-    				8 = Client doesn't know
+    				8 = Client doesn’t know
     				9 = Client refused
     				99 = Data not collected
 			</xs:documentation>
@@ -4192,7 +4192,7 @@
 			</xs:enumeration>			
 			<xs:enumeration value="8">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn't know</xs:documentation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>				
 			<xs:enumeration value="9">
@@ -4293,7 +4293,7 @@
 			</xs:enumeration>	
 			<xs:enumeration value="8">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn't know</xs:documentation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>				
 			<xs:enumeration value="9">
@@ -4419,7 +4419,7 @@
 			</xs:enumeration>	
 			<xs:enumeration value="8">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn't know</xs:documentation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>				
 			<xs:enumeration value="9">
@@ -4438,7 +4438,7 @@
 	<xs:simpleType name="householdType">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
-				Name Data Quality 
+				Household Type
 				1 = Households without children 
 				3 = Households with at least one adult and one child 
 				4 = Households with only children
@@ -4580,7 +4580,7 @@
 				2 = Grades 5-6
 				3 = Grades 7-8
 				4 = Grades 9-11
-				5 =Grade 12
+				5 = Grade 12
 				6 = School program does not have grade levels
 				7 = GED
 				10 = Some college
@@ -5046,7 +5046,7 @@
 	
 	<xs:simpleType name="noYesWorkerDoesntKnow">
 		<xs:annotation>
-			<xs:documentation xml:lang="en">0 = No, 1 = Yes, 2 = Worker Doesn't Know, 99 = Data Not Collected</xs:documentation>
+			<xs:documentation xml:lang="en">0 = No, 1 = Yes, 2 = Worker Doesn’t Know, 99 = Data Not Collected</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
@@ -5061,7 +5061,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Worker Doesn't Know</xs:documentation>
+					<xs:documentation xml:lang="en">Worker Doesn’t Know</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -6324,7 +6324,7 @@
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Medical Report </xs:documentation>
+					<xs:documentation xml:lang="en">Medical Report</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2">
