@@ -541,7 +541,7 @@
 					<xs:documentation xml:lang="en">In the instance document, the xsi:type of this element must be declared, and the type depends on the value within the sibling hmis:DisabilityType element.  See the example HUD_HMIS_Instance.xml file to see how this should appear.  Either xsi:type="hmis:disabilityResponseNoYesDoesntKnowRefused" or xsi:type="hmis:disabilityResponseSubstanceAbuse"can be used.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IndefiniteAndImpairsIndependence" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="IndefiniteAndImpairs" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.05, 4.07, 4.09, and 4.10, Response A.</xs:documentation>
 				</xs:annotation>
@@ -602,11 +602,11 @@
 		<!--Testing if DisabilityType is 8, before allowing use of ViralLoadAvailable-->
 		<xs:assert test="if (hmis:ViralLoadAvailable) then boolean(hmis:DisabilityType/text()='8') else true()"/>
 		
-		<!--Testing if DisabilityResponse is 1, before allowing use of IndefiniteAndImpairsIndependence-->
-		<xs:assert test="if (hmis:IndefiniteAndImpairsIndependence) then boolean(hmis:DisabilityResponse/text()='1') else true()"/>
+		<!--Testing if DisabilityResponse is 1, before allowing use of IndefiniteAndImpairs-->
+		<xs:assert test="if (hmis:IndefiniteAndImpairs) then boolean(hmis:DisabilityResponse/text()='1') else true()"/>
 		
-		<!--Testing if DisabilityResponse is 1, then existence of IndefiniteAndImpairsIndependence is required-->
-		<xs:assert test="if (hmis:DisabilityResponse/text()='1') then boolean(hmis:IndefiniteAndImpairsIndependence) else true()"/>		
+		<!--Testing if DisabilityResponse is 1, then existence of IndefiniteAndImpairs is required-->
+		<xs:assert test="if (hmis:DisabilityResponse/text()='1') then boolean(hmis:IndefiniteAndImpairs) else true()"/>		
 		
 		<!--Testing if ViralLoadAvailable is 1, before allowing use of ViralLoad-->
 		<xs:assert test="if (hmis:ViralLoadAvailable/text()='1') then boolean(hmis:ViralLoad) else (if (not(hmis:ViralLoadAvailable/text()='1')) then (not(boolean(hmis:ViralLoad))) else false())"/>

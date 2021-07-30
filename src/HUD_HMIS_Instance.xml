@@ -116,7 +116,7 @@
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:DisabilityType>8</hmis:DisabilityType>
                 <hmis:DisabilityResponse xsi:type="hmis:disabilityResponseNoYesDoesntKnowRefused">1</hmis:DisabilityResponse>
-                <hmis:IndefiniteAndImpairsIndependence>9</hmis:IndefiniteAndImpairsIndependence>
+                <hmis:IndefiniteAndImpairs>9</hmis:IndefiniteAndImpairs>
                 <hmis:TCellCountAvailable>1</hmis:TCellCountAvailable>
                 <hmis:TCellCount>1401</hmis:TCellCount>
                 <hmis:TCellSource>3</hmis:TCellSource>
