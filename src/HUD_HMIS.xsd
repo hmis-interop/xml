@@ -502,7 +502,7 @@
 					<xs:documentation xml:lang="en">In the instance document, the xsi:type of this element must be declared, and the type depends on the value within the sibling hmis:DisabilityType element.  See the example HUD_HMIS_Instance.xml file to see how this should appear.  Either xsi:type="hmis:disabilityResponse[insert type]" or xsi:type="hmis:disabilityResponseSubstanceUseDisorder"can be used.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IndefiniteAndImpairsIndependence"  type="hmis:indefiniteAndImpairsIndependenceResponseBase" minOccurs="0">
+			<xs:element name="IndefiniteAndImpairs"  type="hmis:indefiniteAndImpairsResponseBase" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2022 HMIS Data Dictionary v1.4, Section 4.05, 4.07, 4.09, and 4.10, Response A.</xs:documentation>
 				</xs:annotation>
@@ -562,11 +562,11 @@
 		<!--Testing if DisabilityType is 8, before allowing use of ViralLoadAvailable-->
 		<xs:assert test="if (hmis:ViralLoadAvailable) then boolean(hmis:DisabilityType/text()='8') else true()"/>
 		
-		<!--Testing if DisabilityResponse is 1, before allowing use of IndefiniteAndImpairsIndependence-->
-		<xs:assert test="if (hmis:IndefiniteAndImpairsIndependence) then boolean(hmis:DisabilityResponse/text()='1') else true()"/>
+		<!--Testing if DisabilityResponse is 1, before allowing use of IndefiniteAndImpairs-->
+		<xs:assert test="if (hmis:IndefiniteAndImpairs) then boolean(hmis:DisabilityResponse/text()='1') else true()"/>
 		
-		<!--Testing if DisabilityResponse is 1, then existence of IndefiniteAndImpairsIndependence is required-->
-		<xs:assert test="if (hmis:DisabilityResponse/text()='1') then boolean(hmis:IndefiniteAndImpairsIndependence) else true()"/>		
+		<!--Testing if DisabilityResponse is 1, then existence of IndefiniteAndImpairs is required-->
+		<xs:assert test="if (hmis:DisabilityResponse/text()='1') then boolean(hmis:IndefiniteAndImpairs) else true()"/>		
 		
 		<!--Testing if ViralLoadAvailable is 1, before allowing use of ViralLoad-->
 		<xs:assert test="if (hmis:ViralLoadAvailable/text()='1') then boolean(hmis:ViralLoad) else (if (not(hmis:ViralLoadAvailable/text()='1')) then (not(boolean(hmis:ViralLoad))) else false())"/>
@@ -2024,7 +2024,7 @@
 		
 	</xs:complexType>
 
-	<xs:complexType name="indefiniteAndImpairsIndependenceResponseBase">
+	<xs:complexType name="indefiniteAndImpairsResponseBase">
 		<xs:simpleContent>
 			<xs:extension base="xs:unsignedInt">
 				<xs:attribute ref="xsi:type" use="required"/>
@@ -2032,9 +2032,9 @@
 		</xs:simpleContent>
 	</xs:complexType>
 
-	<xs:complexType name="indefiniteAndImpairsIndependencePhysicalDisability" id="_4.05.A">
+	<xs:complexType name="indefiniteAndImpairsPhysicalDisability" id="_4.05.A">
 		<xs:simpleContent>
-			<xs:restriction base="hmis:indefiniteAndImpairsIndependenceResponseBase">
+			<xs:restriction base="hmis:indefiniteAndImpairsResponseBase">
 				<xs:simpleType>
 					<xs:annotation>
 						<xs:documentation>Expected to be of long–continued and indefinite duration and substantially impairs ability to live independently</xs:documentation>
@@ -2045,9 +2045,9 @@
 		</xs:simpleContent>
 	</xs:complexType>
 
-	<xs:complexType name="indefiniteAndImpairsIndependenceChronicHealthCondition" id="_4.07.A">
+	<xs:complexType name="indefiniteAndImpairsChronicHealthCondition" id="_4.07.A">
 		<xs:simpleContent>
-			<xs:restriction base="hmis:indefiniteAndImpairsIndependenceResponseBase">
+			<xs:restriction base="hmis:indefiniteAndImpairsResponseBase">
 				<xs:simpleType>
 					<xs:annotation>
 						<xs:documentation>Expected to be of long–continued and indefinite duration and substantially impairs ability to live independently</xs:documentation>
@@ -2058,9 +2058,9 @@
 		</xs:simpleContent>
 	</xs:complexType>
 	
-	<xs:complexType name="indefiniteAndImpairsIndependenceMentalHealthDisorder" id="_4.09.A">
+	<xs:complexType name="indefiniteAndImpairsMentalHealthDisorder" id="_4.09.A">
 		<xs:simpleContent>
-			<xs:restriction base="hmis:indefiniteAndImpairsIndependenceResponseBase">
+			<xs:restriction base="hmis:indefiniteAndImpairsResponseBase">
 				<xs:simpleType>
 					<xs:annotation>
 						<xs:documentation>Expected to be of long–continued and indefinite duration and substantially impairs ability to live independently</xs:documentation>
@@ -2071,9 +2071,9 @@
 		</xs:simpleContent>
 	</xs:complexType>
 
-	<xs:complexType name="indefiniteAndImpairsIndependenceSubstanceUseDisorder" id="_4.10.A">
+	<xs:complexType name="indefiniteAndImpairsSubstanceUseDisorder" id="_4.10.A">
 		<xs:simpleContent>
-			<xs:restriction base="hmis:indefiniteAndImpairsIndependenceResponseBase">
+			<xs:restriction base="hmis:indefiniteAndImpairsResponseBase">
 				<xs:simpleType>
 					<xs:annotation>
 						<xs:documentation>Expected to be of long–continued and indefinite duration and substantially impairs ability to live independently</xs:documentation>
