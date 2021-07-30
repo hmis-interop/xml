@@ -203,8 +203,9 @@
 					<xs:documentation xml:lang="en">First (text)</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
-				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
+				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1"/>
 				<xs:alternative test="@hmis:hashStatus='3'" type="hmis:nameHashingOption"/>
+				<xs:alternative test="@hmis:hashStatus='4'" type="hmis:nameHashingOptionSHA256"/>
 			</xs:element>
 			<xs:element name="MiddleName" type="hmis:nameHashingOption"  minOccurs="0">
 				<xs:annotation>
@@ -212,8 +213,9 @@
 					<xs:documentation xml:lang="en">Middle (text)</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
-				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
+				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1"/>
 				<xs:alternative test="@hmis:hashStatus='3'" type="hmis:nameHashingOption"/>
+				<xs:alternative test="@hmis:hashStatus='4'" type="hmis:nameHashingOptionSHA256"/>
 			</xs:element>
 			<xs:element name="LastName" type="hmis:nameHashingOption" minOccurs="0">
 				<xs:annotation>
@@ -221,8 +223,9 @@
 					<xs:documentation xml:lang="en">Last (text)</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
-				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
+				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1"/>
 				<xs:alternative test="@hmis:hashStatus='3'" type="hmis:nameHashingOption"/>
+				<xs:alternative test="@hmis:hashStatus='4'" type="hmis:nameHashingOptionSHA256"/>
 			</xs:element>
 			<xs:element name="NameSuffix" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
@@ -243,9 +246,9 @@
 					<xs:documentation xml:lang="en">Unknown SSN digits should be indicated with a lower case "x".</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:ssnHashingOptionPlain"/>
-				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:ssnHashingOptionSHA1RHY"/>
+				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:ssnHashingOptionSHA1"/>
 				<xs:alternative test="@hmis:hashStatus='3'" type="hmis:ssnHashingOption"/>
-				<xs:alternative test="@hmis:hashStatus" type="hmis:ssnHashingOptionPlain"/>
+				<xs:alternative test="@hmis:hashStatus='4'" type="hmis:nameHashingOptionSHA256"/>				
 			</xs:element>
 			<xs:element name="SSNDataQuality" type="hmis:ssnDataQuality">
 				<xs:annotation>
@@ -1990,10 +1993,19 @@
 		</xs:simpleContent>
 	</xs:complexType>
 	
-	<xs:complexType name="nameHashingOptionSHA1RHY">
+	<xs:complexType name="nameHashingOptionSHA1">
 		<xs:simpleContent>
 			<xs:restriction base="hmis:nameHashingOption">
 				<xs:length value="40"/>
+				<xs:pattern value="([a-zA-Z0-9])*"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="nameHashingOptionSHA256">
+		<xs:simpleContent>
+			<xs:restriction base="hmis:nameHashingOption">
+				<xs:length value="64"/>
 				<xs:pattern value="([a-zA-Z0-9])*"/>
 			</xs:restriction>
 		</xs:simpleContent>
@@ -3241,13 +3253,25 @@
 		</xs:simpleContent>
 	</xs:complexType>
 	
-	<xs:complexType name="ssnHashingOptionSHA1RHY">
+	<xs:complexType name="ssnHashingOptionSHA1">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">Concatenation of the unhashed last 4 digits of the SSN followed by SHA-1 hash of the full SSN.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="hmis:ssnHashingOption">
 				<xs:length value="44"/>
+				<xs:pattern value="([a-zA-Z0-9])*"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="ssnHashingOptionSHA256">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">concatenation of the unhashed last 4 digits of the SSN followed by SHA-256 hash of the full SSN. In the case of a partial SSN, use a lower-case letter x to replace any missing digits.  The resultant 9-character string will be hashed in the same manner as a complete SSN.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="hmis:ssnHashingOption">
+				<xs:length value="68"/>
 				<xs:pattern value="([a-zA-Z0-9])*"/>
 			</xs:restriction>
 		</xs:simpleContent>
@@ -3311,6 +3335,7 @@
 				1 = Unhashed 
 				2 = SHA-1 RHY
 				3 = Hashed - other
+				4 = SHA-256 (RHY)
 			</xs:documentation>
 		</xs:annotation>
 		<xs:simpleType>
@@ -3327,7 +3352,12 @@
 				</xs:enumeration>
 				<xs:enumeration value="3">
 					<xs:annotation>
-						<xs:documentation xml:lang="en">Hashed - other: The ‘Other’ HashStatus is used to identify exports in which data are hashed based on parameters mutually agreed upon by the sender and recipient of the CSV data.</xs:documentation>
+						<xs:documentation xml:lang="en">Hashed - other: The ‘Other’ HashStatus is used to identify exports in which data are hashed based on parameters mutually agreed upon by the sender and recipient of the XML data.</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="4">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">The SHA-256 algorithm produces a 64-character string of letters and numbers.</xs:documentation>
 					</xs:annotation>
 				</xs:enumeration>
 			</xs:restriction>
