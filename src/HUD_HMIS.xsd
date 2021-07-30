@@ -248,7 +248,7 @@
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:ssnHashingOptionPlain"/>
 				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:ssnHashingOptionSHA1"/>
 				<xs:alternative test="@hmis:hashStatus='3'" type="hmis:ssnHashingOption"/>
-				<xs:alternative test="@hmis:hashStatus='4'" type="hmis:nameHashingOptionSHA256"/>				
+				<xs:alternative test="@hmis:hashStatus='4'" type="hmis:ssnHashingOptionSHA256"/>				
 			</xs:element>
 			<xs:element name="SSNDataQuality" type="hmis:ssnDataQuality">
 				<xs:annotation>
