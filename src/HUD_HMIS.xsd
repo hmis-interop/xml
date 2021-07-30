@@ -4521,25 +4521,25 @@
 	</xs:simpleType>
 	
 	<xs:simpleType name="exportPeriodType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="updated">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="1">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Exported data sets with an ExportPeriodType of ‘updated’ will include all records with a dateCreated, dateUpdated, or a dateDeleted that falls between the Export.StartDate and the Export.EndDate.</xs:documentation>
+					<xs:documentation xml:lang="en">Updated</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="effective">
+			<xs:enumeration value="2">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Exported data sets with an ExportPeriod type of ‘effective’ will include all enrollment data, along with associated client and project descriptor data, where the informationDate (or other effective date such as Project.EntryDate, Project.ExitDate, etc.) falls between the Export.StartDate and the Export.EndDate.</xs:documentation>
+					<xs:documentation xml:lang="en">Effective</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="reportingPeriod">
+			<xs:enumeration value="3">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">‘reportingPeriod’ exports include all records needed for reporting on clients and enrollments active in the export period.  This will include all records in Enrollments (regardless of informationDate, dateCreated, dateUpdated, etc.), client files, and project descriptor files associated with a EnrollmentID where: EnrollmentDate is on or before the Export.EndDate; Project.ExitDate is null OR Project.ExitDate is on or after the Export.StartDate; ProjectID is associated with a project selected by a user for export OR the user did not choose to filter the export by Project; A CoCCode associated with the EnrollmentID matches a CoCCode selected by a user for export OR the user did not choose to filter the export by CoCCode.</xs:documentation>
+					<xs:documentation xml:lang="en">Reporting period</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="other">
+			<xs:enumeration value="4">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">The ‘other’ type of ExportPeriodType is used to identify exports in which records were selected based upon parameters mutually agreed upon by the sender and recipient of the XML data."</xs:documentation>
+					<xs:documentation xml:lang="en">Other"</xs:documentation>
 				</xs:annotation>       
 			</xs:enumeration>
 		</xs:restriction>
