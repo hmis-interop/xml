@@ -9,7 +9,7 @@
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	vc:minVersion = "1.1"
-	version="v1.0.5"
+	version="v1.0.6"
 	elementFormDefault="qualified"		
 	attributeFormDefault="qualified">
 		
@@ -1690,7 +1690,7 @@
 				</xs:element>
 				<xs:element name="ServiceFAReferral" type="hmis:serviceFAReferral">
 					<xs:annotation>
-						<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Sections P2, R13, W2, V2, V3</xs:documentation>
+						<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Sections 4.14, P1, P2, R14, W1, W2, V2, V3, and V8.1</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="User" type="hmis:user">
@@ -2723,13 +2723,13 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4,</xs:documentation>
 					<xs:documentation xml:lang="en">
-						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 12 (v5.1 Contact Location 4.12.2):
+						In ServiceFAReferral, use one of the following values for TypeProvided when its RecordType = 12 (v5.1 Contact Location 4.12.2):
 						1 = Place not meant for habitation
 						2 = Service setting, non-residential
 						3 = Service setting, residential
 						99 = Data Not Collected
 						
-						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 13 (v6.0 Contact Location 4.12.2):
+						In ServiceFAReferral, use one of the following values for TypeProvided when its RecordType = 13 (v6.0 Contact Location 4.12.2):
 						
 						Staying on Streets, ES, or SH
 						0 = No
@@ -2754,7 +2754,7 @@
 						14 = Clinical assessment
 						99 = Data Not Collected
 						
-						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 142 (RHY Services R14):
+						In ServiceFAReferral, use one of the following values for TypeProvided when its RecordType = 142 (RHY Services R14):
 						2 = Community service/service learning (CSL)
 						5 = Education
 						6 = Employment and/or training services
@@ -2772,7 +2772,7 @@
 						29 = Street-based Services
 						99 = Data Not Collected
 
-						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 143 (HOPWA Services W1):
+						In ServiceFAReferral, use one of the following values for TypeProvided when its RecordType = 143 (HOPWA Services W1):
 						1 = Adult day care and personal assistance
 						2 = Case management
 						3 = Child care
@@ -2789,7 +2789,7 @@
 						14 = Other HOPWA funded service
 						99 = Data Not Collected
 						
-						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 144 (SSVF Services V2):
+						In ServiceFAReferral, use one of the following values for TypeProvided when its RecordType = 144 (SSVF Services V2):
 						1 = Outreach services
 						2 = Case management services
 						3 = Assistance obtaining VA benefits
@@ -2801,7 +2801,7 @@
 						9 = Rapid Resolution
 						99 = Data Not Collected
 						
-						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 151 (Financial Assistance - HOPWA Services 4.15.A):
+						In ServiceFAReferral, use one of the following values for TypeProvided when its RecordType = 151 (Financial Assistance - HOPWA Services 4.15.A):
 						1 = Rental assistance [collect for PHP and STRMU]
 						2 = Security deposits [collect for PHP]
 						3 = Utility deposits [collect for PHP]
@@ -2809,7 +2809,7 @@
 						7 = Mortgage assistance [collect for STRMU]
 						99 = Data Not Collected
 						
-						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 152 (Financial Assistance – SSVF V3):
+						In ServiceFAReferral, use one of the following values for TypeProvided when its RecordType = 152 (Financial Assistance – SSVF V3):
 						1 = Rental assistance
 						4 = Utility fee payment assistance
 						2 = Security deposit
@@ -2824,7 +2824,7 @@
 						15 = Extended Shallow Subsidy – Rental Assistance
 						99 = Data Not Collected
 						
-						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 161 (Referrals Provided – PATH P2):
+						In ServiceFAReferral, use one of the following values for TypeProvided when its RecordType = 161 (Referrals Provided – PATH P2):
 						1 = Community Mental Health
 						2 = Substance Use Treatment
 						3 = Primary Health/ Dental Care
@@ -2838,11 +2838,11 @@
 						11 = Temporary Housing
 						99 = Data Not Collected
 						
-						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 200 (Services Provided - Bed-night Date 4.14E):
+						In ServiceFAReferral, use one of the following values for TypeProvided when its RecordType = 200 (Services Provided - Bed-night Date 4.14E):
 						200	= BedNight
 						99 = Data Not Collected
 						
-						In ServicesFAReferral, use one of the following values for TypeProvided when its RecordType = 210 (Services Provided - HUD-VASH OTH voucher tracking 4.50.1):
+						In ServiceFAReferral, use one of the following values for TypeProvided when its RecordType = 210 (Services Provided - HUD-VASH OTH voucher tracking 4.50.1):
 						4.50.1 VoucherTracking
 						Value Text
 						1 = Referral package forwarded to PHA
