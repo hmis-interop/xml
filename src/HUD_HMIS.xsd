@@ -1,15 +1,15 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <xs:schema
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/6_1_2/HUD_HMIS.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/6_1_2/HUD_HMIS.xsd"	
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/6_1_2/HUD_HMIS.xsd"
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/6_1_3/HUD_HMIS.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/6_1_3/HUD_HMIS.xsd"	
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/6_1_3/HUD_HMIS.xsd"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	vc:minVersion = "1.1"
-	version="6.1.2"
+	version="6.1.3"
 	elementFormDefault="qualified"		
 	attributeFormDefault="qualified">
 		
@@ -60,24 +60,27 @@
 					<xs:documentation xml:lang="en">See 2017 HMIS Data Dictionary v1.3, Section 3.1.1.</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
-				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
+				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1"/>
 				<xs:alternative test="@hmis:hashStatus='3'" type="hmis:nameHashingOption"/>
+				<xs:alternative test="@hmis:hashStatus='4'" type="hmis:nameHashingOptionSHA256"/>
 			</xs:element>
 			<xs:element name="MiddleName" type="hmis:nameHashingOption"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See 2017 HMIS Data Dictionary v1.3, Section 3.1.2.</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
-				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
+				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1"/>
 				<xs:alternative test="@hmis:hashStatus='3'" type="hmis:nameHashingOption"/>
+				<xs:alternative test="@hmis:hashStatus='4'" type="hmis:nameHashingOptionSHA256"/>
 			</xs:element>
 			<xs:element name="LastName" type="hmis:nameHashingOption" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See 2017 HMIS Data Dictionary v1.3, Section 3.1.3.</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
-				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1RHY"/>
+				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1"/>
 				<xs:alternative test="@hmis:hashStatus='3'" type="hmis:nameHashingOption"/>
+				<xs:alternative test="@hmis:hashStatus='4'" type="hmis:nameHashingOptionSHA256"/>
 			</xs:element>
 			<xs:element name="NameSuffix" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
@@ -95,9 +98,9 @@
 					<xs:documentation xml:lang="en">Unknown SSN digits should be indicated with a lower case "x".</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:ssnHashingOptionPlain"/>
-				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:ssnHashingOptionSHA1RHY"/>
+				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:ssnHashingOptionSHA1"/>
 				<xs:alternative test="@hmis:hashStatus='3'" type="hmis:ssnHashingOption"/>
-				<xs:alternative test="@hmis:hashStatus" type="hmis:ssnHashingOptionPlain"/>
+				<xs:alternative test="@hmis:hashStatus='4'" type="hmis:ssnHashingOptionSHA256"/>
 			</xs:element>
 			<xs:element name="SSNDataQuality" type="hmis:ssnDataQuality">
 				<xs:annotation>
@@ -1603,7 +1606,7 @@
 		</xs:simpleContent>
 	</xs:complexType>
 	
-	<xs:complexType name="nameHashingOptionSHA1RHY">
+	<xs:complexType name="nameHashingOptionSHA1">
 		<xs:simpleContent>
 			<xs:restriction base="hmis:nameHashingOption">
 				<xs:length value="40"/>
@@ -2785,7 +2788,7 @@
 		</xs:simpleContent>
 	</xs:complexType>
 	
-	<xs:complexType name="ssnHashingOptionSHA1RHY">
+	<xs:complexType name="ssnHashingOptionSHA1">
 		<xs:annotation>
 			<xs:documentation xml:lang="en">Concatenation of the unhashed last 4 digits of the SSN followed by SHA-1 hash of the full SSN.</xs:documentation>
 		</xs:annotation>
@@ -2823,8 +2826,9 @@
 			<xs:documentation xml:lang="en">
 				Hash Status 
 				1 = Unhashed 
-				2 = SHA-1 RHY
+				2 = SHA-1 (no longer used for federal purposes)
 				3 = Hashed - other
+				4 = SHA-256 (RHY)
 			</xs:documentation>
 		</xs:annotation>
 		<xs:simpleType>
@@ -2836,12 +2840,17 @@
 				</xs:enumeration>
 				<xs:enumeration value="2">
 					<xs:annotation>
-						<xs:documentation xml:lang="en">SHA-1 RHY: The SHA-1 algorithm produces a 40-character string of letters and numbers. Data sets with a HashStatus of ‘SHA-1 RHY’ (2) will be exported consistent with the specifications of this document with the exception that the following fields in Client.csv (and no others) will be hashed using the SHA-1 standard algorithm and data types for these four fields will differ as noted: - FirstName (S40)– SHA-1 hash of the SOUNDEX of the value for first name; - MiddleName (S40) – SHA-1 hash of the SOUNDEX of the value for middle name; -LastName (S40) – SHA-1 hash of the SOUNDEX of the value for last name; and - SSN (S44) – concatenation of the unhashed last 4 digits of the SSN followed by SHA-1 hash of the full SSN.</xs:documentation>
+						<xs:documentation xml:lang="en">SHA-1 RHY: The SHA-1 algorithm produces a 40-character string of letters and numbers. Data sets with a HashStatus of ‘SHA-1 RHY’ (2) will be exported consistent with the specifications of this document with the exception that the following fields (and no others) will be hashed using the SHA-1 standard algorithm and data types for these four fields will differ as noted: - FirstName (S40)– SHA-1 hash of the SOUNDEX of the value for first name; - MiddleName (S40) – SHA-1 hash of the SOUNDEX of the value for middle name; -LastName (S40) – SHA-1 hash of the SOUNDEX of the value for last name; and - SSN (S44) – concatenation of the unhashed last 4 digits of the SSN followed by SHA-1 hash of the full SSN.</xs:documentation>
 					</xs:annotation>
 				</xs:enumeration>
 				<xs:enumeration value="3">
 					<xs:annotation>
-						<xs:documentation xml:lang="en">Hashed - other: The ‘Other’ HashStatus is used to identify exports in which data are hashed based on parameters mutually agreed upon by the sender and recipient of the CSV data.</xs:documentation>
+						<xs:documentation xml:lang="en">Hashed - other: The ‘Other’ HashStatus is used to identify exports in which data are hashed based on parameters mutually agreed upon by the sender and recipient of the XML data.</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="4">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">The SHA-256 algorithm produces a 64-character string of letters and numbers.</xs:documentation>
 					</xs:annotation>
 				</xs:enumeration>
 			</xs:restriction>
