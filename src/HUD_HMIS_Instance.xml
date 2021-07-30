@@ -21,7 +21,7 @@
                 <hmis:StartDate>2015-01-04T23:14:59</hmis:StartDate>
                 <hmis:EndDate>2015-03-26T23:14:59Z</hmis:EndDate>
             </hmis:ExportPeriod>
-            <hmis:ExportPeriodType>effective</hmis:ExportPeriodType>
+            <hmis:ExportPeriodType>2</hmis:ExportPeriodType>
             <hmis:ExportDirective>other</hmis:ExportDirective>
             <hmis:Affiliation hmis:dateCreated="2019-04-11T23:14:59Z" hmis:dateUpdated="2019-05-30T23:14:59" hmis:userID="nf">
                 <hmis:AffiliationID>76yt</hmis:AffiliationID>
@@ -126,7 +126,7 @@
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:DisabilityType>8</hmis:DisabilityType>
                 <hmis:DisabilityResponse xsi:type="hmis:disabilityResponsePhysicalDisability">1</hmis:DisabilityResponse>
-                <hmis:IndefiniteAndImpairsIndependence xsi:type="hmis:indefiniteAndImpairsIndependencePhysicalDisability">9</hmis:IndefiniteAndImpairsIndependence>
+                <hmis:IndefiniteAndImpairs xsi:type="hmis:indefiniteAndImpairsPhysicalDisability">9</hmis:IndefiniteAndImpairs>
                 <hmis:TCellCountAvailable>1</hmis:TCellCountAvailable>
                 <hmis:TCellCount>1401</hmis:TCellCount>
                 <hmis:TCellSource>3</hmis:TCellSource>
@@ -241,7 +241,7 @@
                 <hmis:SexualOrientation>6</hmis:SexualOrientation>
                 <hmis:SexualOrientationOther>An other sexual orientation listed here.</hmis:SexualOrientationOther>
                 <hmis:UnemploymentFam>0</hmis:UnemploymentFam>
-                <hmis:MentalHealthIssuesFam>0</hmis:MentalHealthIssuesFam>
+                <hmis:MentalHealthDisorderFam>0</hmis:MentalHealthDisorderFam>
                 <hmis:PhysicalDisabilityFam>0</hmis:PhysicalDisabilityFam>
                 <hmis:AlcoholDrugUseDisorderFam>99</hmis:AlcoholDrugUseDisorderFam>
                 <hmis:InsufficientIncome>0</hmis:InsufficientIncome>
