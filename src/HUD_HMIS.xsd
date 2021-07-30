@@ -2335,7 +2335,7 @@
 					<xs:documentation xml:lang="en">Key reference to the Organization</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectName" id="_2.02.2" type="hmis:string50">
+			<xs:element name="ProjectName" id="_2.02.2" type="hmis:string100">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Project Name</xs:documentation>
 				</xs:annotation>
