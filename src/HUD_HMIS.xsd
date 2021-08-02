@@ -401,9 +401,9 @@
 					<xs:documentation xml:lang="en">Current Living Situation</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="VerifiedBy" id="_4.12.3" type="hmis:string50" minOccurs="0">
+			<xs:element name="VerifiedBy" id="_4.12.3" type="hmis:string100" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Living situation verified by [list of Continuum projects]</xs:documentation>
+					<xs:documentation xml:lang="en">Living situation verified by</xs:documentation>
 					<!--validation: <xs:documentation xml:lang="en">(Coordinated Entry Projects ONLY), Null unless hmis:ProjectType = "14"</xs:documentation>-->
 				</xs:annotation>
 			</xs:element>
