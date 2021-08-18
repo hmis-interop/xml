@@ -1971,17 +1971,17 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherSource" id="_4.02.17" type="hmis:noYesMissing">
+			<xs:element name="OtherIncomeSource" id="_4.02.17" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Other source</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherSourceAmount" id="_4.02.O" type="hmis:money" minOccurs="0">
+			<xs:element name="OtherIncomeAmount" id="_4.02.O" type="hmis:money" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherSourceIdentify" type="hmis:string50" minOccurs="0">
+			<xs:element name="OtherIncomeSourceIdentify" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Specify Source</xs:documentation>
 				</xs:annotation>
