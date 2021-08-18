@@ -2,7 +2,7 @@
 
 <xs:schema targetNamespace="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vc:minVersion="1.1" version="v1.0.0-rc.1" elementFormDefault="qualified" attributeFormDefault="qualified">
 	<xs:annotation>
-		<xs:documentation>All data elements referenced with an "id" attribute correspond to that same data element id within the  FY2022 HMIS Data Dictionary v1.4 (sans the "_" prefix).</xs:documentation>
+		<xs:documentation>All data elements referenced with an "id" attribute correspond to that same data element id within the FY2022 HMIS Data Dictionary v1.1 (sans the "_" prefix).</xs:documentation>
 	</xs:annotation>
 	
 	<xs:defaultOpenContent mode="interleave" appliesToEmpty="true"> 
@@ -498,13 +498,13 @@
 			</xs:element>
 			<xs:element name="DisabilityResponse" type="hmis:disabilityResponseBase">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See FY2022 HMIS Data Dictionary v1.4, Section 4.05-4.10, Response #2.  Permissable values vary depending on which disability type is declared.  The values are contained with "Field and Response(s) 2" within 4.5 through 4.10.</xs:documentation>
+					<xs:documentation xml:lang="en">See FY2022 HMIS Data Dictionary v1.1, Section 4.05-4.10, Response #2.  Permissable values vary depending on which disability type is declared.  The values are contained with "Field and Response(s) 2" within 4.5 through 4.10.</xs:documentation>
 					<xs:documentation xml:lang="en">In the instance document, the xsi:type of this element must be declared, and the type depends on the value within the sibling hmis:DisabilityType element.  See the example HUD_HMIS_Instance.xml file to see how this should appear.  Either xsi:type="hmis:disabilityResponse[insert type]" or xsi:type="hmis:disabilityResponseSubstanceUseDisorder"can be used.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IndefiniteAndImpairs"  type="hmis:indefiniteAndImpairsResponseBase" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See FY2022 HMIS Data Dictionary v1.4, Section 4.05, 4.07, 4.09, and 4.10, Response A.</xs:documentation>
+					<xs:documentation xml:lang="en">See FY2022 HMIS Data Dictionary v1.1, Section 4.05, 4.07, 4.09, and 4.10, Response A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TCellCountAvailable" id="_W4.2" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
@@ -1971,17 +1971,17 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherSource" id="_4.02.17" type="hmis:noYesMissing">
+			<xs:element name="OtherIncomeSource" id="_4.02.17" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Other source</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherSourceAmount" id="_4.02.O" type="hmis:money" minOccurs="0">
+			<xs:element name="OtherIncomeAmount" id="_4.02.O" type="hmis:money" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherSourceIdentify" type="hmis:string50" minOccurs="0">
+			<xs:element name="OtherIncomeSourceIdentify" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Specify Source</xs:documentation>
 				</xs:annotation>
@@ -2283,7 +2283,7 @@
 		<xs:sequence>
 			<xs:element name="OrganizationID" id="_2.01.1" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See FY2022 HMIS Data Dictionary v1.4, Section 2.01.1.</xs:documentation>
+					<xs:documentation xml:lang="en">See FY2022 HMIS Data Dictionary v1.1, Section 2.01.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrganizationName" id="_2.01.2" type="hmis:string50"/>
@@ -2342,7 +2342,7 @@
 			</xs:element>
 			<xs:element name="ProjectCommonName" type="hmis:string50" minOccurs="0">		
 				<xs:annotation>
-					<xs:documentation xml:lang="en">A local or commonly used name for a project.  This is not referenced in the FY2022 HMIS Data Dictionary v1.4, and is optional per the FY2022 v1.3 Data Standard.</xs:documentation>
+					<xs:documentation xml:lang="en">A local or commonly used name for a project.  This is not referenced in the FY2022 HMIS Data Dictionary v1.1, and is optional per the FY2022 v1.3 Data Standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OperatingStartDate" id="_2.02.3" type="xs:date">
@@ -2377,7 +2377,7 @@
 			</xs:element>
 			<xs:element name="PITCount" type="xs:nonNegativeInteger" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Not in the FY2022 HMIS Data Dictionary v1.4.  Used for the HIC; a count of active clients on the date of the PIT Count.</xs:documentation>
+					<xs:documentation xml:lang="en">Not in the FY2022 HMIS Data Dictionary v1.1.  Used for the HIC; a count of active clients on the date of the PIT Count.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HousingType" id="_2.02.D" type="hmis:housingType" minOccurs="0">		
@@ -2973,7 +2973,7 @@
 
 	<xs:complexType name="rhyAftercare">
 		<xs:sequence>
-			<xs:element name="RhyAfterCareID" type="hmis:string32">
+			<xs:element name="RHYAftercareID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Reference to the rhyAftercare's unique ID</xs:documentation>
 				</xs:annotation>
@@ -3016,16 +3016,16 @@
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 		
-		<!--Testing if AfterCareProvided is 1, before allowing use of EmailSocialMedia-->
+		<!--Testing if AftercareProvided is 1, before allowing use of EmailSocialMedia-->
 		<xs:assert test="if (hmis:AftercareProvided/text()='1') then boolean(hmis:EmailSocialMedia) else (if (not(hmis:AftercareProvided/text()='1')) then (not(boolean(hmis:EmailSocialMedia))) else false())"/>
 	
-		<!--Testing if AfterCareProvided is 1, before allowing use of Telephone-->
+		<!--Testing if AftercareProvided is 1, before allowing use of Telephone-->
 		<xs:assert test="if (hmis:AftercareProvided/text()='1') then boolean(hmis:Telephone) else (if (not(hmis:AftercareProvided/text()='1')) then (not(boolean(hmis:Telephone))) else false())"/>
 		
-		<!--Testing if AfterCareProvided is 1, before allowing use of InPersonIndividual-->
+		<!--Testing if AftercareProvided is 1, before allowing use of InPersonIndividual-->
 		<xs:assert test="if (hmis:AftercareProvided/text()='1') then boolean(hmis:InPersonIndividual) else (if (not(hmis:AftercareProvided/text()='1')) then (not(boolean(hmis:InPersonIndividual))) else false())"/>
 
-		<!--Testing if AfterCareProvided is 1, before allowing use of InPersonGroup-->
+		<!--Testing if AftercareProvided is 1, before allowing use of InPersonGroup-->
 		<xs:assert test="if (hmis:AftercareProvided/text()='1') then boolean(hmis:InPersonGroup) else (if (not(hmis:AftercareProvided/text()='1')) then (not(boolean(hmis:InPersonGroup))) else false())"/>
 		
 	</xs:complexType>
@@ -3096,7 +3096,7 @@
 			<xs:element name="TypeProvided" type="hmis:typeProvidedBase"/>
 			<xs:element name="OtherTypeProvided" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See FY2022 HMIS Data Dictionary v1.4, Sections 4.12, 4.14-4.16.2D.</xs:documentation>
+					<xs:documentation xml:lang="en">See FY2022 HMIS Data Dictionary v1.1, Sections 4.12, 4.14-4.16.2D.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MovingOnOtherType" id="_C2.A" type="hmis:string50" minOccurs="0">
@@ -3106,7 +3106,7 @@
 			</xs:element>
 			<xs:element name="SubTypeProvided" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See FY2022 HMIS Data Dictionary v1.4, Section 4.12 and 4.14-4.16.3A, 4B, 5C.</xs:documentation>
+					<xs:documentation xml:lang="en">See FY2022 HMIS Data Dictionary v1.1, Section 4.12 and 4.14-4.16.3A, 4B, 5C.</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:integer">
@@ -3116,7 +3116,7 @@
 			</xs:element>
 			<xs:element name="FAAmount" type="hmis:fAAmountBase" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See FY2022 HMIS Data Dictionary v1.4, Section W2 #3 and V3 #2, Financial Assistance Amount.</xs:documentation>
+					<xs:documentation xml:lang="en">See FY2022 HMIS Data Dictionary v1.1, Section W2 #3 and V3 #2, Financial Assistance Amount.</xs:documentation>
 					<xs:documentation xml:lang="en">In the instance document, the xsi:type of this element must be declared, and the type depends on the value within the sibling hmis:DisabilityType element.  See the example HUD_HMIS_Instance.xml file to see how this should appear.  Either xsi:type="hmis:disabilityResponse[insert type]" or xsi:type="hmis:disabilityResponseSubstanceUseDisorder"can be used.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -3500,7 +3500,7 @@
 		<xs:sequence>
 			<xs:element name="UserID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See FY2022 HMIS Data Dictionary v1.4, Section 5.07.1</xs:documentation>
+					<xs:documentation xml:lang="en">See FY2022 HMIS Data Dictionary v1.1, Section 5.07.1</xs:documentation>
 					<xs:documentation xml:lang="en">A unique ID used to associate data with the user who entered and/or edited it</xs:documentation>						
 				</xs:annotation>				
 			</xs:element>
@@ -3645,7 +3645,7 @@
 	
 	<xs:attributeGroup name="baseMetaData">
 		<xs:annotation>
-			<xs:documentation xml:lang="en">See FY2022 HMIS Data Dictionary v1.4, Section 5.</xs:documentation>
+			<xs:documentation xml:lang="en">See FY2022 HMIS Data Dictionary v1.1, Section 5.</xs:documentation>
 		</xs:annotation>
 		<xs:attribute name="dateCreated" id="_5.01.1" type="xs:dateTime" use="required">
 			<xs:annotation>
