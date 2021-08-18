@@ -103,7 +103,7 @@
 					<xs:documentation xml:lang="en">Assessment questions – Local determination - as defined by the community</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AssessmentAnswer" id="_4.19.A" type="hmis:string250">
+			<xs:element name="AssessmentAnswer" id="_4.19.A" type="hmis:string500">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Assessment answers - Local determination – responses to questions defined by community</xs:documentation>
 				</xs:annotation>
@@ -514,7 +514,7 @@
 			</xs:element>
 			<xs:element name="TCellCount" id="_W4.A" type="hmis:tCellCount" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">f a yes to “T-Cell (CD4) Count Available” then T-cell Count (integer between 0 – 1500)</xs:documentation>					
+					<xs:documentation xml:lang="en">If a yes to “T-Cell (CD4) Count Available” then T-cell Count (integer between 0 – 1500)</xs:documentation>					
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TCellSource" id="_W4.B" type="hmis:tCellOrViralLoadSource" minOccurs="0">
@@ -6577,6 +6577,12 @@
 	<xs:simpleType name="string250" id="string250">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="250"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="string500" id="string500">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="500"/>
 		</xs:restriction>
 	</xs:simpleType>
 
