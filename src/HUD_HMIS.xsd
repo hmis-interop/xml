@@ -2973,7 +2973,7 @@
 
 	<xs:complexType name="rhyAftercare">
 		<xs:sequence>
-			<xs:element name="RhyAfterCareID" type="hmis:string32">
+			<xs:element name="RHYAftercareID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Reference to the rhyAftercare's unique ID</xs:documentation>
 				</xs:annotation>
@@ -3016,16 +3016,16 @@
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 		
-		<!--Testing if AfterCareProvided is 1, before allowing use of EmailSocialMedia-->
+		<!--Testing if AftercareProvided is 1, before allowing use of EmailSocialMedia-->
 		<xs:assert test="if (hmis:AftercareProvided/text()='1') then boolean(hmis:EmailSocialMedia) else (if (not(hmis:AftercareProvided/text()='1')) then (not(boolean(hmis:EmailSocialMedia))) else false())"/>
 	
-		<!--Testing if AfterCareProvided is 1, before allowing use of Telephone-->
+		<!--Testing if AftercareProvided is 1, before allowing use of Telephone-->
 		<xs:assert test="if (hmis:AftercareProvided/text()='1') then boolean(hmis:Telephone) else (if (not(hmis:AftercareProvided/text()='1')) then (not(boolean(hmis:Telephone))) else false())"/>
 		
-		<!--Testing if AfterCareProvided is 1, before allowing use of InPersonIndividual-->
+		<!--Testing if AftercareProvided is 1, before allowing use of InPersonIndividual-->
 		<xs:assert test="if (hmis:AftercareProvided/text()='1') then boolean(hmis:InPersonIndividual) else (if (not(hmis:AftercareProvided/text()='1')) then (not(boolean(hmis:InPersonIndividual))) else false())"/>
 
-		<!--Testing if AfterCareProvided is 1, before allowing use of InPersonGroup-->
+		<!--Testing if AftercareProvided is 1, before allowing use of InPersonGroup-->
 		<xs:assert test="if (hmis:AftercareProvided/text()='1') then boolean(hmis:InPersonGroup) else (if (not(hmis:AftercareProvided/text()='1')) then (not(boolean(hmis:InPersonGroup))) else false())"/>
 		
 	</xs:complexType>
