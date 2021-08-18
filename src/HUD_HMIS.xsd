@@ -514,7 +514,7 @@
 			</xs:element>
 			<xs:element name="TCellCount" id="_W4.A" type="hmis:tCellCount" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">f a yes to “T-Cell (CD4) Count Available” then T-cell Count (integer between 0 – 1500)</xs:documentation>					
+					<xs:documentation xml:lang="en">If a yes to “T-Cell (CD4) Count Available” then T-cell Count (integer between 0 – 1500)</xs:documentation>					
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TCellSource" id="_W4.B" type="hmis:tCellOrViralLoadSource" minOccurs="0">
