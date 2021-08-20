@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd file:////home/eric/git/hmis-xml/src/HUD_HMIS.xsd"
+    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd file:////home/eric/git/hmis-xsd/src/HUD_HMIS.xsd"
  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
  xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd">
     <hmis:Source>
@@ -453,9 +453,9 @@
                 <hmis:ChildSupportAmount>562.40</hmis:ChildSupportAmount>
                 <hmis:Alimony>1</hmis:Alimony>
                 <hmis:AlimonyAmount>1121.76</hmis:AlimonyAmount>
-                <hmis:OtherSource>1</hmis:OtherSource>
-                <hmis:OtherSourceAmount>156.47</hmis:OtherSourceAmount>
-                <hmis:OtherSourceIdentify>some other source here</hmis:OtherSourceIdentify>
+                <hmis:OtherIncomeSource>1</hmis:OtherIncomeSource>
+                <hmis:OtherIncomeAmount>156.47</hmis:OtherIncomeAmount>
+                <hmis:OtherIncomeSourceIdentify>some other source here</hmis:OtherIncomeSourceIdentify>
             </hmis:IncomeAndSources>
             <hmis:Inventory hmis:dateCreated="2019-09-12T23:14:59Z" hmis:dateUpdated="2019-08-29T23:14:59Z" hmis:userID="billj">
                 <hmis:InventoryID>56563a</hmis:InventoryID>
@@ -565,7 +565,7 @@
                 <hmis:CoCCode>MA-500</hmis:CoCCode>
             </hmis:ProjectCoC>
             <hmis:RHYAftercare hmis:dateCreated="2019-04-25T23:14:59" hmis:dateUpdated="2019-04-25T23:14:59" hmis:userID="AUfZ2">
-                <hmis:RhyAfterCareID>34Rwwh</hmis:RhyAfterCareID>
+                <hmis:RHYAftercareID>34Rwwh</hmis:RHYAftercareID>
                 <hmis:ExitID>C2x</hmis:ExitID>
                 <hmis:AftercareDate>2015-04-25</hmis:AftercareDate>
                 <hmis:AftercareProvided>1</hmis:AftercareProvided>
