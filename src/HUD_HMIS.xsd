@@ -2173,19 +2173,19 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.16N.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherSource" type="hmis:noYes">
+			<xs:element name="OtherIncomeSource" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.17.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherSourceAmount" type="hmis:money" minOccurs="0">
+			<xs:element name="OtherIncomeAmount" type="hmis:money" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.17O.</xs:documentation>
+					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.O.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherSourceIdentify" type="hmis:string50" minOccurs="0">
+			<xs:element name="OtherIncomeSourceIdentify" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.17O.</xs:documentation>
+					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.P.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -2222,10 +2222,10 @@
 		<xs:assert test="if (hmis:ChildSupport/text()='1') then boolean(hmis:ChildSupportAmount) else (if (not(ChildSupport/text()='1')) then (not(boolean(hmis:ChildSupportAmount))) else false())"/>						
 		<!--Testing if Alimony is 1, before allowing use of AlimonyAmount-->
 		<xs:assert test="if (hmis:Alimony/text()='1') then boolean(hmis:AlimonyAmount) else (if (not(Alimony/text()='1')) then (not(boolean(hmis:AlimonyAmount))) else false())"/>						
-		<!--Testing if OtherSource is 1, before allowing use of OtherSourceAmount-->
-		<xs:assert test="if (hmis:OtherSource/text()='1') then boolean(hmis:OtherSourceAmount) else (if (not(OtherSource/text()='1')) then (not(boolean(hmis:OtherSourceAmount))) else false())"/>						
-		<!--Testing if OtherSource is 1, before allowing use of OtherSourceIdentify-->
-		<xs:assert test="if (hmis:OtherSource/text()='1') then boolean(hmis:OtherSourceIdentify) else (if (not(OtherSource/text()='1')) then (not(boolean(hmis:OtherSourceIdentify))) else false())"/>						
+		<!--Testing if OtherIncomeSource is 1, before allowing use of OtherIncomeAmount-->
+		<xs:assert test="if (hmis:OtherIncomeSource/text()='1') then boolean(hmis:OtherIncomeAmount) else (if (not(OtherIncomeSource/text()='1')) then (not(boolean(hmis:OtherIncomeAmount))) else false())"/>						
+		<!--Testing if OtherIncomeSource is 1, before allowing use of OtherIncomeSourceIdentify-->
+		<xs:assert test="if (hmis:OtherIncomeSource/text()='1') then boolean(hmis:OtherIncomeSourceIdentify) else (if (not(OtherIncomeSource/text()='1')) then (not(boolean(hmis:OtherIncomeSourceIdentify))) else false())"/>						
 		
 	</xs:complexType>
 
