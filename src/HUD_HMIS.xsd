@@ -9,7 +9,7 @@
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	vc:minVersion = "1.1"
-	version="v1.0.6"
+	version="v1.0.7"
 	elementFormDefault="qualified"		
 	attributeFormDefault="qualified">
 		
@@ -2601,7 +2601,7 @@
 	
 	<xs:complexType name="rhyAftercare">
 		<xs:sequence>
-			<xs:element name="RhyAfterCareID" type="hmis:string32">
+			<xs:element name="RHYAftercareID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Reference to the rhyAftercare's unique ID</xs:documentation>
 				</xs:annotation>
@@ -2611,13 +2611,13 @@
 					<xs:documentation xml:lang="en">Key reference to the Exit</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AfterCareDate" type="xs:date">
+			<xs:element name="AftercareDate" type="xs:date">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R20.1.  Renamed to match CSV's name for this element, which was made specific, since this section is merged into Exit.csv for normalization reasons.</xs:documentation>
 					<xs:documentation xml:lang="en">Must be between ExitDate and ExitDate +  180 days AND AftercareProvided is not null</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AfterCareProvided" type="hmis:noYesRefused">
+			<xs:element name="AftercareProvided" type="hmis:noYesRefused">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R20.2.</xs:documentation>
 				</xs:annotation>
@@ -2645,17 +2645,17 @@
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 		
-		<!--Testing if AfterCareProvided is 1, before allowing use of EmailSocialMedia-->
-		<xs:assert test="if (hmis:AfterCareProvided/text()='1') then boolean(hmis:EmailSocialMedia) else (if (not(hmis:AfterCareProvided/text()='1')) then (not(boolean(hmis:EmailSocialMedia))) else false())"/>
+		<!--Testing if AftercareProvided is 1, before allowing use of EmailSocialMedia-->
+		<xs:assert test="if (hmis:AftercareProvided/text()='1') then boolean(hmis:EmailSocialMedia) else (if (not(hmis:AftercareProvided/text()='1')) then (not(boolean(hmis:EmailSocialMedia))) else false())"/>
 	
-		<!--Testing if AfterCareProvided is 1, before allowing use of Telephone-->
-		<xs:assert test="if (hmis:AfterCareProvided/text()='1') then boolean(hmis:Telephone) else (if (not(hmis:AfterCareProvided/text()='1')) then (not(boolean(hmis:Telephone))) else false())"/>
+		<!--Testing if AftercareProvided is 1, before allowing use of Telephone-->
+		<xs:assert test="if (hmis:AftercareProvided/text()='1') then boolean(hmis:Telephone) else (if (not(hmis:AftercareProvided/text()='1')) then (not(boolean(hmis:Telephone))) else false())"/>
 		
-		<!--Testing if AfterCareProvided is 1, before allowing use of InPersonIndividual-->
-		<xs:assert test="if (hmis:AfterCareProvided/text()='1') then boolean(hmis:InPersonIndividual) else (if (not(hmis:AfterCareProvided/text()='1')) then (not(boolean(hmis:InPersonIndividual))) else false())"/>
+		<!--Testing if AftercareProvided is 1, before allowing use of InPersonIndividual-->
+		<xs:assert test="if (hmis:AftercareProvided/text()='1') then boolean(hmis:InPersonIndividual) else (if (not(hmis:AftercareProvided/text()='1')) then (not(boolean(hmis:InPersonIndividual))) else false())"/>
 
-		<!--Testing if AfterCareProvided is 1, before allowing use of InPersonGroup-->
-		<xs:assert test="if (hmis:AfterCareProvided/text()='1') then boolean(hmis:InPersonGroup) else (if (not(hmis:AfterCareProvided/text()='1')) then (not(boolean(hmis:InPersonGroup))) else false())"/>
+		<!--Testing if AftercareProvided is 1, before allowing use of InPersonGroup-->
+		<xs:assert test="if (hmis:AftercareProvided/text()='1') then boolean(hmis:InPersonGroup) else (if (not(hmis:AftercareProvided/text()='1')) then (not(boolean(hmis:InPersonGroup))) else false())"/>
 		
 	</xs:complexType>
 	
