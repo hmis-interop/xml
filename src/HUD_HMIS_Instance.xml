@@ -561,10 +561,10 @@
                 <hmis:CoCCode>MA-500</hmis:CoCCode>
             </hmis:ProjectCoC>
             <hmis:RHYAftercare hmis:dateCreated="2019-04-25T23:14:59" hmis:dateUpdated="2019-04-25T23:14:59" hmis:userID="AUfZ2">
-                <hmis:RhyAfterCareID>34Rwwh</hmis:RhyAfterCareID>
+                <hmis:RHYAftercareID>34Rwwh</hmis:RHYAftercareID>
                 <hmis:ExitID>C2x</hmis:ExitID>
-                <hmis:AfterCareDate>2015-04-25</hmis:AfterCareDate>
-                <hmis:AfterCareProvided>1</hmis:AfterCareProvided>
+                <hmis:AftercareDate>2015-04-25</hmis:AftercareDate>
+                <hmis:AftercareProvided>1</hmis:AftercareProvided>
                 <hmis:EmailSocialMedia>99</hmis:EmailSocialMedia>
                 <hmis:Telephone>0</hmis:Telephone>
                 <hmis:InPersonIndividual>1</hmis:InPersonIndividual>
