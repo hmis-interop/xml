@@ -1239,7 +1239,7 @@
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectCompletionStatus" id="R17.1" type="hmis:projectCompletionStatus">
+			<xs:element name="ProjectCompletionStatus" id="R17.1" type="hmis:projectCompletionStatus" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Project Completion Status</xs:documentation>
 				</xs:annotation>
@@ -1249,7 +1249,7 @@
 					<xs:documentation xml:lang="en">Select the major reason</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ExchangeForSex" id="R15.1" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="ExchangeForSex" id="R15.1" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Ever received anything in exchange for sex (e.g. money, food, drugs, shelter)</xs:documentation>
 				</xs:annotation>
