@@ -288,9 +288,9 @@
 		<!--Testing if all race values are are 0 or 99, before requiring use of RaceNone-->
 		<xs:assert test="
 			if (hmis:RaceNone) 
-				then ((hmis:AmIndAKNative/text()='0' or hmis:AmIndAKNative/text()='99') and (hmis:Asian/text()='0' or hmis:Asian/text()='99') and (hmis:BlackAfAmerican/text()='0' or hmis:BlackAfAmerican/text()='99') and (hmis:NativeHIOtherPacific/text()='0' or hmis:NativeHIOtherPacific/text()='99') and (hmis:White/text()='0' or hmis:White/text()='99')) 
+				then ((hmis:AmIndAKNative/text()='0' or hmis:AmIndAKNative/text()='99') and (hmis:Asian/text()='0' or hmis:Asian/text()='99') and (hmis:BlackAfAmerican/text()='0' or hmis:BlackAfAmerican/text()='99') and (hmis:NativeHIPacific/text()='0' or hmis:NativeHIPacific/text()='99') and (hmis:White/text()='0' or hmis:White/text()='99')) 
 			else 
-				if (hmis:AmIndAKNative/text()='1' or hmis:Asian/text()='1' or hmis:BlackAfAmerican/text()='1' or hmis:NativeHIOtherPacific/text()='1' or hmis:White/text()='1')
+				if (hmis:AmIndAKNative/text()='1' or hmis:Asian/text()='1' or hmis:BlackAfAmerican/text()='1' or hmis:NativeHIPacific/text()='1' or hmis:White/text()='1')
 					then true()
 				else false() "/>
 		

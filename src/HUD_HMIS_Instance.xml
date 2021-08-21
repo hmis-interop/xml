@@ -78,7 +78,7 @@
                 <hmis:NoSingleGender>99</hmis:NoSingleGender>
                 <hmis:Transgender>99</hmis:Transgender>
                 <hmis:Questioning>0</hmis:Questioning>
-                <hmis:GenderNone>8</hmis:GenderNone>
+                <hmis:NoSingleGender>8</hmis:NoSingleGender>
                 <hmis:VeteranStatus>9</hmis:VeteranStatus>
             </hmis:Client>
             <hmis:ClientVeteranInfo hmis:dateCreated="2019-12-17T23:14:59" hmis:dateUpdated="2019-03-10T23:14:59" hmis:userID="dZPlRM">
