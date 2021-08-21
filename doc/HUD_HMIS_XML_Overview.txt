@@ -1,5 +1,5 @@
 ﻿HMIS XML FY2022 Data Exchange Format Specifications v1.0.0
-aligns with HMIS Data Standards Version 2022 version 1.0, effective October 1, 2021
+aligns with HMIS Data Standards Version 2022 version 1.1, effective October 1, 2021
 
 
 
@@ -14,7 +14,7 @@ aligns with HMIS Data Standards Version 2022 version 1.0, effective October 1, 2
 ________________
 
 HUD HMIS XML Schema Documentation 
-5/24/2021, version: FY2022v1.0.0, succeeds FY2020v1.0.3
+8/21/2021, version: FY2022v1.0.0, succeeds FY2020-latest
 
 
 This document was developed for the US Department of Housing and Urban Development (HUD), Office of Special Needs Assistance Programs (SNAPS) in the Office of Community Planning and Development, under a contract with Abt Associates, Inc..
@@ -128,13 +128,14 @@ Hashing
 Hashing is possible for personal identifiers.  There are three possible values for the “hashStatus” attribute:
 
 
-      * “Unhashed” - Data are expected conform to data type and field length parameters defined in the schema. 
-      * “SHA-1 RHY” - The SHA-1 algorithm produces a 40-character string of letters and numbers. More specifically, for the following identifiers, a specific hashing method is required:
+      * “Unhashed” - Data are expected to conform to data type and field length parameters defined in the schema. 
+      * “SHA-1 RHY” - Note: For federal data exchange purposes, this is a legacy methodology. RHY requires use of SHA-256 (see below).  The SHA-1 algorithm produces a 40-character string of letters and numbers. More specifically, for the following identifiers, a specific hashing method is required:
       * FirstName – SHA-1 hash of the SOUNDEX of the value for first name; 
       * MiddleName (S40) – SHA-1 hash of the SOUNDEX of the value for middle name; 
       * LastName (S40) – SHA-1 hash of the SOUNDEX of the value for last name; and 
       * SSN (S44) – concatenation of the unhashed last 4 digits of the SSN followed by SHA-1 hash of the full SSN.
       * “Other” - Identifies exports in which data are hashed based on parameters mutually agreed upon by the sender and recipient of the XML data.
+      * “SHA-256” - The SHA-256 algorithm produces a 64-character string of letters and numbers. Data sets with a HashStatus of ‘SHA-256’ (4) will be exported consistent with the specifications of this document with the exception that the following fields in Client element (and no others) will be hashed using the SHA-256 standard algorithm and data types for these four fields will differ as noted: • FirstName (S64)– SHA-256 hash of the SOUNDEX of the value for first name; • MiddleName (S64) – SHA-256 hash of the SOUNDEX of the value for middle name; • LastName (S64) – SHA-256 hash of the SOUNDEX of the value for last name; and • SSN (S68) – concatenation of the unhashed last 4 digits of the SSN followed by SHA-256 hash of the full SSN. In the case of a partial SSN, use a lower-case letter x to replace any missing digits. The resultant 9-character string will be hashed in the same manner as a complete SSN.
 Keys
 The HMIS XML schema uses keys and references to those keys (aka “keyrefs”) to create the relationships defined in the Logical Model.   The keys are enforced, so that if an enrollment in the XML references a project ID which isn’t defined somewhere else in the XML, it will raise a validation error, which enforces complete, self-referential data sets.  Keys also enable the flattened structure of the schema.  An advantage of a flattened schema is that data elements are not repeated within deeply nested structures.  Keys also makes programming simpler, since there are not so many nested logic structures to handle.  The flattened structure is also more flexible, since not every related data element has to be mentioned within the same tree branch of the XML.
 Conditional Validation
@@ -168,11 +169,12 @@ Contact the HUD Exchange’s “Ask A Question” portal to request general assi
 Change List
 
 
-      * FY2022 HMIS XML Schema changes from FY2020 – all changes listed here:
-https://github.com/hmis-interop/xml/compare/FY2020-latest...FY2022-latest
+      1. FY2022 HMIS XML Schema changes from FY2020 – all changes listed here:
+https://github.com/hmis-interop/xml/compare/FY2020-latest...FY2022-latest (click the “Load diffs” link to expand).
 
+      2. All 2022 HMIS Data Dictionary element and picklist changes, matching the changes in the FY2022 HMIS CSV
 
-The only significant structural change is the addition of machine readable unique official HMIS Data Dictionary data element IDs, and verbatim machine readable Data Dictionary question text.  This could be useful for automatically generating system tables containing HMIS questions and IDs.
+      3. The only significant structural change is the addition of machine readable unique official HMIS Data Dictionary data element IDs, and verbatim machine readable Data Dictionary question text.  This could be useful for automatically generating system tables containing HMIS questions and IDs.
 
 
 For example in the 2022 XML Schema:
@@ -182,12 +184,14 @@ For example in the 2022 XML Schema:
 
 
 
-is verbatim from this Data Dictionary listing:
+the documentation (minus the bracketed format note) is copied verbatim from this Data Dictionary instruction listing:
   
 
 
 
 There is only one element with a given ID attribute in the HMIS XML Schema, so there will never be duplicate IDs in the XML schema.
+
+         4. Disabilities and Financial Assistance subtypes are reworked so each subtype has its own separate element definition in the schema with the picklists formally enumerated in the schema, so the picklist values are machine readable.  This also allows each subtype to have its proper machine readable FY2022 Data Dictionary numbering.
 
 
 ________________
