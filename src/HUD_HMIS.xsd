@@ -280,9 +280,9 @@
 		<!--Testing if all genders are 0 or 99, before requiring use of NoSingleGender-->
 		<xs:assert test="
 			if (hmis:NoSingleGender) 
-				then ((hmis:Female/text()='0' or hmis:Female/text()='99') and (hmis:Male/text()='0' or hmis:Male/text()='99') and (hmis:GenderOther/text()='0' or hmis:GenderOther/text()='99') and (hmis:Transgender/text()='0' or hmis:Transgender/text()='99') and (hmis:Questioning/text()='0' or hmis:Questioning/text()='99'))
+				then ((hmis:Female/text()='0' or hmis:Female/text()='99') and (hmis:Male/text()='0' or hmis:Male/text()='99') and (hmis:NoSingleGender/text()='0' or hmis:NoSingleGender/text()='99') and (hmis:Transgender/text()='0' or hmis:Transgender/text()='99') and (hmis:Questioning/text()='0' or hmis:Questioning/text()='99'))
 			else 
-				if (hmis:Female/text()='1' or hmis:Male/text()='1' or hmis:GenderOther/text()='1' or hmis:Transgender/text()='1' or hmis:Questioning/text()='1')
+				if (hmis:Female/text()='1' or hmis:Male/text()='1' or hmis:NoSingleGender/text()='1' or hmis:Transgender/text()='1' or hmis:Questioning/text()='1')
 					then true()
 				else false() "/>
 		<!--Testing if all race values are are 0 or 99, before requiring use of RaceNone-->

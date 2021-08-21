@@ -50,7 +50,7 @@
                 <hmis:NoSingleGender>0</hmis:NoSingleGender>
                 <hmis:Transgender>99</hmis:Transgender>
                 <hmis:Questioning>0</hmis:Questioning>
-                <hmis:GenderNone>99</hmis:GenderNone>
+                <hmis:NoSingleGender>99</hmis:NoSingleGender>
                 <hmis:VeteranStatus>9</hmis:VeteranStatus>
             </hmis:Client>
             <hmis:Enrollment hmis:dateCreated="2015-05-08T23:14:59" hmis:dateUpdated="2015-01-27T23:14:59Z" hmis:userID="Hc8CQeYVWWj0dA9cWkDLe">
