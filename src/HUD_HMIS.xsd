@@ -220,7 +220,7 @@
 					<xs:documentation xml:lang="en">Black, African American, or African</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NativeHIOtherPacific" id="_3.04.4" type="noYesMissing">
+			<xs:element name="NativeHIPacific" id="_3.04.4" type="noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Native Hawaiian or Pacific Islander</xs:documentation>
 				</xs:annotation>
@@ -250,7 +250,7 @@
 					<xs:documentation xml:lang="en">Male</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GenderOther" id="_3.06.1.3" type="hmis:noYesMissing">
+			<xs:element name="NoSingleGender" id="_3.06.1.3" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">A gender other than singularly female or male (e.g., non-binary, genderfluid, agender, culturally specific gender)</xs:documentation>
 				</xs:annotation>
@@ -1010,102 +1010,97 @@
 					<xs:documentation xml:lang="en">Is Homelessness Prevention targeting screener required?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="UrgentReferral" id="_V7.A" type="hmis:noYesMissing" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Referred by Coordinated Entry or a homeless assistance provider to prevent the household from entering an emergency shelter or transitional housing or from staying in a place not meant for human habitation.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="TimeToHousingLoss" id="_V7.B" type="hmis:timeToHousingLoss" minOccurs="0">
+			<xs:element name="TimeToHousingLoss" id="_V7.A" type="hmis:timeToHousingLoss" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Current housing loss expected within…</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AnnualPercentAMI" id="_V7.C" type="hmis:annualPercentAMI" minOccurs="0">
+			<xs:element name="AnnualPercentAMI" id="_V7.B" type="hmis:annualPercentAMI" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Current household income</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="LiteralHomelessHistory" id="_V7.D" type="hmis:literalHomelessHistory" minOccurs="0">
+			<xs:element name="LiteralHomelessHistory" id="_V7.C" type="hmis:literalHomelessHistory" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">History of literal homelessness (street/shelter/transitional housing)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ClientLeaseHolder" id="_V7.E" type="hmis:noYesMissing" minOccurs="0">
+			<xs:element name="ClientLeaseHolder" id="_V7.D" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Client is a current leaseholder.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="HoHLeasesHolder" id="_V7.F" type="hmis:noYesMissing" minOccurs="0">
+			<xs:element name="HoHLeasesHolder" id="_V7.E" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Has head of household (HoH) ever been a leaseholder?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SubsidyAtRisk" id="_V7.G" type="hmis:noYesMissing" minOccurs="0">
+			<xs:element name="SubsidyAtRisk" id="_V7.F" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Currently at risk of losing a tenant-based housing subsidy or housing in a subsidized building or unit (household)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="EvictionHistory" id="_V7.H" type="hmis:evictionHistory" minOccurs="0">
+			<xs:element name="EvictionHistory" id="_V7.G" type="hmis:evictionHistory" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Rental Evictions within the past 7 years</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CriminalRecord" id="_V7.I" type="hmis:noYesMissing" minOccurs="0">
+			<xs:element name="CriminalRecord" id="_V7.H" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Criminal record for arson, drug dealing or manufacture, or felony offense against persons or property (adults in household)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IncarceratedAdult" id="_V7.J" type="hmis:incarceratedAdult" minOccurs="0">
+			<xs:element name="IncarceratedAdult" id="_V7.I" type="hmis:incarceratedAdult" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Criminal record for arson, drug dealing or manufacture, or felony offense against persons or property (adults in household)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PrisonDischarge" id="_V7.K" type="hmis:noYesMissing" minOccurs="0">
+			<xs:element name="PrisonDischarge" id="_V7.J" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Discharged from jail or prison within last six months after incarceration of 90 days or more (adults)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SexOffender" id="_V7.L" type="hmis:noYesMissing" minOccurs="0">
+			<xs:element name="SexOffender" id="_V7.K" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Registered sex offender (all household members)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DisabledHoH" id="_V7.M" type="hmis:noYesMissing" minOccurs="0">
+			<xs:element name="DisabledHoH" id="_V7.L" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Head of household with disabling condition (physical health, mental health, substance use) that directly affects ability to secure/maintain housing</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CurrentPregnant" id="_V7.N" type="hmis:noYesMissing" minOccurs="0">
+			<xs:element name="CurrentPregnant" id="_V7.M" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Currently pregnant (any household member)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SingleParent" id="_V7.O" type="hmis:noYesMissing" minOccurs="0">
+			<xs:element name="SingleParent" id="_V7.N" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Single parent household with minor child(ren)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DependentUnder6" id="_V7.P" type="hmis:dependentUnder6" minOccurs="0">
+			<xs:element name="DependentUnder6" id="_V7.O" type="hmis:dependentUnder6" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Household includes one or more young children (age six or under), or a child who requires significant care</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="HH5Plus" id="_V7.Q" type="hmis:noYesMissing" minOccurs="0">
+			<xs:element name="HH5Plus" id="_V7.P" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Household size of 5 or more requiring at least 3 bedrooms (due to age/gender mix)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CoCPrioritized" id="_V7.R" type="hmis:noYesMissing" minOccurs="0">
+			<xs:element name="CoCPrioritized" id="_V7.Q" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Current/recent resident in area prioritized by the CoC</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="HPScreeningScore" id="_V7.S" type="hmis:hpScreeningScore" minOccurs="0">
+			<xs:element name="HPScreeningScore" id="_V7.R" type="hmis:hpScreeningScore" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">HP applicant total points (integer)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ThresholdScore"  id="_V7.T" type="xs:positiveInteger" minOccurs="0">
+			<xs:element name="ThresholdScore"  id="_V7.S" type="xs:positiveInteger" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Grantee targeting threshold score (integer)</xs:documentation>
 				</xs:annotation>
