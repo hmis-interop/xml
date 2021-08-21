@@ -3522,6 +3522,18 @@
 					<xs:documentation xml:lang="en">The phone number of the user if available. Limited to 10 digits / no punctuation.  [2-9][0-9]{2}[2-9][0-9]{2}[0-9]{4}</xs:documentation>						
 				</xs:annotation>				
 			</xs:element>
+			<xs:element name="UserExtension" type="hmis:string5" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Not in HMIS Data Dictionary</xs:documentation>
+					<xs:documentation xml:lang="en">The phone extension of the user, if available. Limited to 5 digits / no punctuation. 	[0-9]{1,5}</xs:documentation>						
+				</xs:annotation>				
+			</xs:element>
+			<xs:element name="UserEmail" type="hmis:string320" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Not in HMIS Data Dictionary</xs:documentation>
+					<xs:documentation xml:lang="en">The email address of the user, if available.  Valid email addresses only</xs:documentation>						
+				</xs:annotation>				
+			</xs:element>
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
@@ -6559,6 +6571,18 @@
 	<xs:simpleType name="string32" id="string32">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="32"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="string320" id="string320">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="320"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="string5" id="string5">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="5"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
