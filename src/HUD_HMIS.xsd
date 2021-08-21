@@ -1346,7 +1346,7 @@
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectCompletionStatus" type="hmis:projectCompletionStatus">
+			<xs:element name="ProjectCompletionStatus" type="hmis:projectCompletionStatus"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R17.1.</xs:documentation>
 				</xs:annotation>
@@ -1356,7 +1356,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section  R17.A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ExchangeForSex" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="ExchangeForSex" type="hmis:noYesDoesntKnowRefused"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R15.1.</xs:documentation>
 				</xs:annotation>
