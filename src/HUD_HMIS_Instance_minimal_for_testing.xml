@@ -42,12 +42,12 @@
                 <hmis:AmIndAKNative>1</hmis:AmIndAKNative>
                 <hmis:Asian>0</hmis:Asian>
                 <hmis:BlackAfAmerican>1</hmis:BlackAfAmerican>
-                <hmis:NativeHIOtherPacific>1</hmis:NativeHIOtherPacific>
+                <hmis:NativeHIPacific>1</hmis:NativeHIPacific>
                 <hmis:White>0</hmis:White>
                 <hmis:Ethnicity>0</hmis:Ethnicity>                
                 <hmis:Female>0</hmis:Female>
                 <hmis:Male>0</hmis:Male>
-                <hmis:GenderOther>0</hmis:GenderOther>
+                <hmis:NoSingleGender>0</hmis:NoSingleGender>
                 <hmis:Transgender>99</hmis:Transgender>
                 <hmis:Questioning>0</hmis:Questioning>
                 <hmis:GenderNone>99</hmis:GenderNone>

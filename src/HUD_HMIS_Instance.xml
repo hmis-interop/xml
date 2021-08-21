@@ -69,13 +69,13 @@
                 <hmis:AmIndAKNative>0</hmis:AmIndAKNative>
                 <hmis:Asian>99</hmis:Asian>
                 <hmis:BlackAfAmerican>0</hmis:BlackAfAmerican>
-                <hmis:NativeHIOtherPacific>99</hmis:NativeHIOtherPacific>
+                <hmis:NativeHIPacific>99</hmis:NativeHIPacific>
                 <hmis:White>99</hmis:White>
                 <hmis:RaceNone>9</hmis:RaceNone>
                 <hmis:Ethnicity>0</hmis:Ethnicity>
                 <hmis:Female>0</hmis:Female>
                 <hmis:Male>0</hmis:Male>
-                <hmis:GenderOther>99</hmis:GenderOther>
+                <hmis:NoSingleGender>99</hmis:NoSingleGender>
                 <hmis:Transgender>99</hmis:Transgender>
                 <hmis:Questioning>0</hmis:Questioning>
                 <hmis:GenderNone>8</hmis:GenderNone>
@@ -262,7 +262,6 @@
                 <hmis:LastPermanentState>AR</hmis:LastPermanentState>
                 <hmis:LastPermanentZIP>57601</hmis:LastPermanentZIP>
                 <hmis:AddressDataQuality>2</hmis:AddressDataQuality>
-                <hmis:UrgentReferral>0</hmis:UrgentReferral>
                 <hmis:TimeToHousingLoss>99</hmis:TimeToHousingLoss>
                 <hmis:AnnualPercentAMI>2</hmis:AnnualPercentAMI>
                 <hmis:ClientLeaseHolder>99</hmis:ClientLeaseHolder>
