@@ -1234,118 +1234,117 @@
 					<xs:documentation xml:lang="en">Key reference to the Enrollment</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectCompletionStatus" id="R17.1" type="hmis:projectCompletionStatus" minOccurs="0">
+			<xs:element name="ProjectCompletionStatus" id="_R17.1" type="hmis:projectCompletionStatus" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Project Completion Status</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="EarlyExitReason" id="R17.A" type="hmis:earlyExitReason" minOccurs="0">
+			<xs:element name="EarlyExitReason" id="_R17.A" type="hmis:earlyExitReason" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Select the major reason</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ExchangeForSex" id="R15.1" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="ExchangeForSex" id="_R15.1" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Ever received anything in exchange for sex (e.g. money, food, drugs, shelter)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ExchangeForSexPastThreeMonths" id="R15.A" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="ExchangeForSexPastThreeMonths" id="_R15.A" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">In the last three months</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CountOfExchangeForSex" id="R15.B" type="hmis:countOfExchangeForSex" minOccurs="0">
+			<xs:element name="CountOfExchangeForSex" id="_R15.B" type="hmis:countOfExchangeForSex" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">How many times</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AskedOrForcedToExchangeForSex" id="R15.C" type="hmis:askedOrForcedToExchangeForSex" minOccurs="0">
+			<xs:element name="AskedOrForcedToExchangeForSex" id="_R15.C" type="hmis:askedOrForcedToExchangeForSex" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Ever made/persuaded/forced to have sex in exchange for something</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AskedOrForcedToExchangeForSexPastThreeMonths" id="R15.D" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="AskedOrForcedToExchangeForSexPastThreeMonths" id="_R15.D" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">In the last three months?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WorkPlaceViolenceThreats" id="R16.1" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="WorkPlaceViolenceThreats" id="_R16.1" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Ever afraid to quit/leave work due to threats of violence to yourself, family, or friends</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WorkplacePromiseDifference" id="R16.2" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="WorkplacePromiseDifference" id="_R16.2" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Ever promised work where work or payment was different than you expected</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CoercedToContinueWork" id="R16.A" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="CoercedToContinueWork" id="_R16.A" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Felt forced, coerced, pressured, or tricked into continuing the job
-					</xs:documentation>
+					<xs:documentation xml:lang="en">Felt forced, coerced, pressured, or tricked into continuing the job</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="LaborExploitPastThreeMonths" id="R16.B" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="LaborExploitPastThreeMonths" id="_R16.B" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">In the last 3 months</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CounselingReceived" id="R18.1" type="hmis:noYesMissing">
+			<xs:element name="CounselingReceived" id="_R18.1" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Counseling received by client</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IndividualCounseling" id="R18.A.1" type="hmis:noYesMissing" minOccurs="0">
+			<xs:element name="IndividualCounseling" id="_R18.A.1" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Individual</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FamilyCounseling" id="R18.A.2" type="hmis:noYesMissing" minOccurs="0">
+			<xs:element name="FamilyCounseling" id="_R18.A.2" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Family</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GroupCounseling" id="R18.A.3" type="hmis:noYesMissing" minOccurs="0">
+			<xs:element name="GroupCounseling" id="_R18.A.3" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Group – including peer counseling</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SessionCountAtExit" id="R18.B" type="xs:positiveInteger" minOccurs="0">
+			<xs:element name="SessionCountAtExit" id="_R18.B" type="xs:positiveInteger" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Identify the number of sessions received by exit</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SessionsInPlan" id="R18.2" type="xs:positiveInteger">
+			<xs:element name="SessionsInPlan" id="_R18.2" type="xs:positiveInteger" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Total number of sessions planned in youth’s treatment or service plan</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PostExitCounselingPlan" id="R18.3" type="hmis:noYesMissing">
+			<xs:element name="PostExitCounselingPlan" id="_R18.3" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">A plan is in place to start or continue counseling after exit</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DestinationSafeClient" id="R19.1" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="DestinationSafeClient" id="_R19.1" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Exit destination safe – as determined by the client</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DestinationSafeWorker" id="R19.2" type="hmis:noYesWorkerDoesntKnow">
+			<xs:element name="DestinationSafeWorker" id="_R19.2" type="hmis:noYesWorkerDoesntKnow" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Exit destination safe – as determined by the project/caseworker</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PosAdultConnections" id="R19.3" type="hmis:noYesWorkerDoesntKnow">
+			<xs:element name="PosAdultConnections" id="_R19.3" type="hmis:noYesWorkerDoesntKnow" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client has permanent positive adult connections outside of project</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PosPeerConnections" id="R19.4" type="hmis:noYesWorkerDoesntKnow">
+			<xs:element name="PosPeerConnections" id="_R19.4" type="hmis:noYesWorkerDoesntKnow" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client has permanent positive peer connections outside of project</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PosCommunityConnections" id="R19.5" type="hmis:noYesWorkerDoesntKnow">
+			<xs:element name="PosCommunityConnections" id="_R19.5" type="hmis:noYesWorkerDoesntKnow" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client has permanent positive community connections outside of project</xs:documentation>
 				</xs:annotation>
