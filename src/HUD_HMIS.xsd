@@ -1567,7 +1567,6 @@
 			<xs:element name="OtherFunder" id="_2.06.A" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">If other specify</xs:documentation>
-					<xs:documentation xml:lang="en">Dependent to Field 1 Response 46</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GrantID" id="_2.06.2" type="hmis:string32">
@@ -1609,7 +1608,7 @@
 					<xs:documentation xml:lang="en">MEDICAID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NoMedicaidReason" id="_4.04.3A" type="reasonNotInsuredOrAssisted" minOccurs="0">
+			<xs:element name="NoMedicaidReason" id="_4.04.3A" type="hmis:reasonNotInsuredOrAssisted" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">No Medicaid Reason</xs:documentation>
 				</xs:annotation>
