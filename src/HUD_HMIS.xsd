@@ -1772,40 +1772,6 @@
 		
 	</xs:complexType>	
 	
-	<xs:complexType name="nameHashingOption">
-		<xs:simpleContent>
-			<xs:extension base="xs:string">
-				<xs:attribute ref="hashStatus" use="required"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	
-	<xs:complexType name="nameHashingOptionPlain">
-		<xs:simpleContent>
-			<xs:restriction base="hmis:nameHashingOption">
-				<xs:maxLength value="50"/>
-			</xs:restriction>
-		</xs:simpleContent>
-	</xs:complexType>
-	
-	<xs:complexType name="nameHashingOptionSHA1">
-		<xs:simpleContent>
-			<xs:restriction base="hmis:nameHashingOption">
-				<xs:length value="40"/>
-				<xs:pattern value="([a-zA-Z0-9])*"/>
-			</xs:restriction>
-		</xs:simpleContent>
-	</xs:complexType>
-	
-	<xs:complexType name="nameHashingOptionSHA256">
-		<xs:simpleContent>
-			<xs:restriction base="hmis:nameHashingOption">
-				<xs:length value="64"/>
-				<xs:pattern value="([a-zA-Z0-9])*"/>
-			</xs:restriction>
-		</xs:simpleContent>
-	</xs:complexType>
-	
 	<xs:complexType name="incomeAndSources">
 		<xs:sequence>
 			<xs:element name="IncomeAndSourcesID" type="hmis:string32">
@@ -2164,7 +2130,43 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
+	</xs:complexType>	
+	
+	<xs:complexType name="nameHashingOption">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute ref="hashStatus" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
 	</xs:complexType>
+	
+	<xs:complexType name="nameHashingOptionPlain">
+		<xs:simpleContent>
+			<xs:restriction base="hmis:nameHashingOption">
+				<xs:maxLength value="50"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="nameHashingOptionSHA1">
+		<xs:simpleContent>
+			<xs:restriction base="hmis:nameHashingOption">
+				<xs:length value="40"/>
+				<xs:pattern value="([a-zA-Z0-9])*"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="nameHashingOptionSHA256">
+		<xs:simpleContent>
+			<xs:restriction base="hmis:nameHashingOption">
+				<xs:length value="64"/>
+				<xs:pattern value="([a-zA-Z0-9])*"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+
 
 	<xs:complexType name="medicalAssistance">
 		<xs:sequence>
