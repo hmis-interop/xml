@@ -2050,7 +2050,7 @@
 					<xs:documentation xml:lang="en">Reference to the Inventory's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectID" type="hmis:projectID"/>			
+			<xs:element name="ProjectCoCID" type="hmis:string32"/>			
 			<xs:element name="InventoryStartDate" id="_2.07.1" type="xs:date">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Inventory start date</xs:documentation>
@@ -2059,11 +2059,6 @@
 			<xs:element name="InventoryEndDate" id="_2.07.2" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Inventory end date</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CoCCode" type="hmis:cocCode">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">CoC Code</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HouseholdType" id="_2.07.4" type="hmis:householdType">
@@ -2338,7 +2333,7 @@
 			</xs:element>
 			<xs:element name="ProjectCommonName" type="hmis:string50" minOccurs="0">		
 				<xs:annotation>
-					<xs:documentation xml:lang="en">A local or commonly used name for a project.  This is not referenced in the FY2022 HMIS Data Dictionary v1.1, and is optional per the FY2022 v1.3 Data Standard.</xs:documentation>
+					<xs:documentation xml:lang="en">A local or commonly used name for a project.  This is not referenced in the FY2022 HMIS Data Dictionary, and is optional per the FY2022 Data Standard.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OperatingStartDate" id="_2.02.3" type="xs:date">
@@ -3137,6 +3132,7 @@
 
 	<xs:complexType name="projectCoC">
 		<xs:sequence>
+			<xs:element name="ProjectCoCID" type="hmis:string32"/>
 			<xs:element name="ProjectID" type="hmis:projectID"/>			
 			<xs:element name="CoCCode" id="_2.03.1" type="hmis:cocCode">
 					<xs:annotation>
