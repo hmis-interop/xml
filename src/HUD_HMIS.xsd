@@ -839,7 +839,6 @@
 				</xs:annotation>
 			</xs:element>				
 			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>
-			<xs:element name="HouseholdID" type="householdID"/>			
 			<xs:element name="CoCCode" type="hmis:cocCode">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">HUD assigned CoC code for the client’s location</xs:documentation>
