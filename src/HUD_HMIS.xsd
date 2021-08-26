@@ -2274,6 +2274,7 @@
 		<!--Testing if OtherBenefitsSource is 1, before allowing use of OtherBenefitsSourceIdentify -->
 		<xs:assert test="if (hmis:OtherBenefitsSource/text()='1') then boolean(hmis:OtherBenefitsSourceIdentify) else (if (not(hmis:OtherBenefitsSource/text()='1')) then (not(boolean(hmis:OtherBenefitsSourceIdentify))) else false())"/>	
 	</xs:complexType>
+	
 	<xs:complexType name="organization">
 		<xs:sequence>
 			<xs:element name="OrganizationID" id="_2.01.1" type="hmis:string32">
