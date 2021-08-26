@@ -3262,8 +3262,7 @@
 				</xs:key>
 				<xs:key name="projectCoCKey">
 					<xs:selector xpath="hmis:ProjectCoC"/>
-					<xs:field xpath="hmis:ProjectID"/>
-					<xs:field xpath="hmis:CoCCode"/>	
+					<xs:field xpath="hmis:ProjectCoCID"/>
 				</xs:key>
 				<xs:keyref name="affiliationProjectKeyRef" refer="projectKey">
 					<xs:selector xpath="hmis:Affiliation"/>
@@ -3375,8 +3374,7 @@
 				</xs:keyref>
 				<xs:keyref name="inventoryProjectCoCKeyRef" refer="projectCoCKey">
 					<xs:selector xpath="hmis:Inventory"/>
-					<xs:field xpath="hmis:ProjectID"/>
-					<xs:field xpath="hmis:CoCCode"/>
+					<xs:field xpath="hmis:ProjectCoCID"/>
 				</xs:keyref>
 				<xs:keyref name="medicalAssistanceEnrollmentKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:MedicalAssistance"/>
