@@ -2975,7 +2975,7 @@
 			</xs:element>
 			<xs:element name="AftercareDate" id="_R20.1" type="xs:date">
 				<xs:annotation>
-					<xs:documentation xml:lang="en"></xs:documentation>
+					<xs:documentation xml:lang="en">Information Date (date information was collected)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AftercareProvided" id="_R20.2" type="hmis:noYesRefused">
