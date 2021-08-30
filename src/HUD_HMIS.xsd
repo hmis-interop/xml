@@ -126,12 +126,12 @@
 			</xs:element>
 			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>			
 			<xs:element name="PersonalID" type="hmis:personalID"/>
-			<xs:element name="AssessmentResultType" id="_4.19.6" type="hmis:string250" minOccurs="0">
+			<xs:element name="AssessmentResultType" id="_4.19.6" type="hmis:string250">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Assessment Result Type – Local determination - as defined by the community</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AssessmentResult" id="_4.19B" type="hmis:string250">
+			<xs:element name="AssessmentResult" id="_4.19B" type="hmis:string250" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Assessment Result</xs:documentation>
 				</xs:annotation>
