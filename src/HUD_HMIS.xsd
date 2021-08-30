@@ -173,12 +173,12 @@
 					<xs:documentation xml:lang="en">Key reference to the Client's ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AssessmentResultType" type="hmis:string250" minOccurs="0">
+			<xs:element name="AssessmentResultType" type="hmis:string250">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Locally determined</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AssessmentResult" type="hmis:string250">
+			<xs:element name="AssessmentResult" type="hmis:string250"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.19.B.</xs:documentation>
 					<xs:documentation xml:lang="en">Locally determined</xs:documentation>
