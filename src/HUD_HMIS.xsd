@@ -5253,11 +5253,6 @@
 					<xs:documentation xml:lang="en">Coast Guard</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="7">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Other</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="8">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
