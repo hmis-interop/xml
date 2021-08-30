@@ -3509,7 +3509,7 @@
 			<xs:element name="UserExtension" type="hmis:string5" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Not in HMIS Data Dictionary</xs:documentation>
-					<xs:documentation xml:lang="en">The phone extension of the user, if available. Limited to 5 digits / no punctuation. 	[0-9]{1,5}</xs:documentation>						
+					<xs:documentation xml:lang="en">The phone extension of the user, if available. Limited to 5 digits / no punctuation.  [0-9]{1,5}</xs:documentation>						
 				</xs:annotation>				
 			</xs:element>
 			<xs:element name="UserEmail" type="hmis:string320" minOccurs="0">
