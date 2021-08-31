@@ -265,7 +265,7 @@
 					<xs:documentation xml:lang="en">Questioning</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NoSingleGender" id="_3.06.1.6" type="hmis:raceGenderNone" minOccurs="0">
+			<xs:element name="GenderNone" id="_3.06.1.6" type="hmis:raceGenderNone" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Gender None</xs:documentation>
 				</xs:annotation>
