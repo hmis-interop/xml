@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="UTF-8"?>
+4.19.<?xml version="1.1" encoding="UTF-8"?>
 
 <xs:schema targetNamespace="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vc:minVersion="1.1" version="v1.0.0-rc.6" elementFormDefault="qualified" attributeFormDefault="qualified">
 	<xs:annotation>
@@ -131,7 +131,7 @@
 					<xs:documentation xml:lang="en">Assessment Result Type – Local determination - as defined by the community</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AssessmentResult" id="_4.19B" type="hmis:string250" minOccurs="0">
+			<xs:element name="AssessmentResult" id="_4.19B" type="hmis:string250">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Assessment Result</xs:documentation>
 				</xs:annotation>
@@ -1464,8 +1464,8 @@
 		</xs:sequence>
 		
 		<!--Cardinality Checking-->
-		<xs:assert test="every $id in hmis:Assessment/hmis:AssessmentID  satisfies (fn:count(hmis:AssessmentQuestions[hmis:AssessmentID = $id]) ge 1)"/>
-		<xs:assert test="every $id in hmis:Assessment/hmis:AssessmentID  satisfies (fn:count(hmis:AssessmentResults[hmis:AssessmentID = $id]) ge 1)"/>				
+		<xs:assert test="every $id in hmis:Assessment/hmis:AssessmentID  satisfies (fn:count(hmis:AssessmentQuestions[hmis:AssessmentID = $id]) ge 0)"/>
+		<xs:assert test="every $id in hmis:Assessment/hmis:AssessmentID  satisfies (fn:count(hmis:AssessmentResults[hmis:AssessmentID = $id]) ge 0)"/>				
 		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:ClientVeteranInfo[hmis:PersonalID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:Enrollment[hmis:PersonalID = $id]) ge 1)"/>		
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:Assessment[hmis:EnrollmentID = $id]) ge 0)"/>
