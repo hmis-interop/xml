@@ -4191,12 +4191,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="9"  id="_4.09">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Mental Health Problem</xs:documentation>
+					<xs:documentation xml:lang="en">Mental health disorder</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="10"  id="_4.10">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Substance Abuse</xs:documentation>
+					<xs:documentation xml:lang="en">Substance use disorder</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
