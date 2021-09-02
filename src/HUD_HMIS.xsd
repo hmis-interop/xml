@@ -7,8 +7,7 @@
 	
 	<xs:defaultOpenContent mode="interleave" appliesToEmpty="true"> 
 		<xs:annotation>
-			<xs:documentation>Allows the schema to be extended with a different namespace.  See "Open Content" in http://www.w3.org/TR/xmlschema11-1/#cvc-wildcard
-				http://www.w3.org/TR/xmlschema11-1/#cvc-wildcard</xs:documentation>
+			<xs:documentation>Allows the schema to be extended with a different namespace.  See "Open Content" in http://www.w3.org/TR/xmlschema11-1/#cvc-wildcard</xs:documentation>
 		</xs:annotation>
 		<xs:any notNamespace="##targetNamespace"/> 
 	</xs:defaultOpenContent> 	
