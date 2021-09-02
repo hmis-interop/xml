@@ -4538,7 +4538,7 @@
 	</xs:simpleType>
 		
 	<xs:simpleType name="exportDirective" id="exportDirective">
-		<xs:restriction base="xs:integer">
+		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Delta refresh</xs:documentation>
