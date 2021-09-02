@@ -4543,7 +4543,7 @@
 	</xs:simpleType>
 		
 	<xs:simpleType name="exportDirective" id="exportDirective">
-		<xs:restriction base="xs:string">
+		<xs:restriction base="xs:integer">
 			<xs:enumeration value="deltaRefresh">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">The data contained in this file is meant to be synchronized with an existing data set.</xs:documentation>
