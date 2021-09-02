@@ -204,27 +204,27 @@
 					<xs:documentation xml:lang="en">DOB Data Quality</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AmIndAKNative" id="_3.04.1" type="noYesMissing">
+			<xs:element name="AmIndAKNative" id="_3.04.1" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">American Indian, Alaska Native, or Indigenous</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Asian" id="_3.04.2" type="noYesMissing">
+			<xs:element name="Asian" id="_3.04.2" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Asian or Asian American</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="BlackAfAmerican" id="_3.04.3" type="noYesMissing">
+			<xs:element name="BlackAfAmerican" id="_3.04.3" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Black, African American, or African</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NativeHIPacific" id="_3.04.4" type="noYesMissing">
+			<xs:element name="NativeHIPacific" id="_3.04.4" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Native Hawaiian or Pacific Islander</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="White" id="_3.04.5" type="noYesMissing">
+			<xs:element name="White" id="_3.04.5" type="hmis:noYesMissing">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">White</xs:documentation>
 				</xs:annotation>
@@ -313,42 +313,42 @@
 					<xs:documentation xml:lang="en">Year Separated from Military Service (year)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WorldWarII" id="_V1.3" type="noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="WorldWarII" id="_V1.3" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Theatre of Operations: World War II</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="KoreanWar" id="_V1.4" type="noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="KoreanWar" id="_V1.4" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Theatre of Operations: Korean War</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="VietnamWar" id="_V1.5" type="noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="VietnamWar" id="_V1.5" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Theatre of Operations: Vietnam War</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DesertStorm" id="_V1.6" type="noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="DesertStorm" id="_V1.6" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Theatre of Operations: Persian Gulf War (Operation Desert Storm)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AfghanistanOEF" id="_V1.7" type="noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="AfghanistanOEF" id="_V1.7" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Theatre of Operations: Afghanistan (Operation Enduring Freedom)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IraqOIF" id="_V1.8" type="noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="IraqOIF" id="_V1.8" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Theatre of Operations: Iraq (Operation Iraqi Freedom)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IraqOND" id="_V1.9" type="noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="IraqOND" id="_V1.9" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Theatre of Operations: Iraq (Operation New Dawn)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherTheater" id="_V1.10" type="noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="OtherTheater" id="_V1.10" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Theatre of Operations: Other Peace-keeping Operations or Military Interventions (such as Lebanon, Panama, Somalia, Bosnia, Kosovo)</xs:documentation>
 				</xs:annotation>
@@ -536,7 +536,7 @@
 					<xs:documentation xml:lang="en">How was the information obtained?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AntiRetroviral" id="_W6.2" type="noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="AntiRetroviral" id="_W6.2" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Has the participant been prescribed anti-retroviral drugs?</xs:documentation>
 				</xs:annotation>
