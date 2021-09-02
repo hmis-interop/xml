@@ -6471,7 +6471,7 @@
 
 	<xs:simpleType name="state" id="state">
 		<xs:annotation>
-			<xs:documentation xml:lang="en">https://pe.usps.com/text/pub28/28apb.htm</xs:documentation>
+			<xs:documentation xml:lang="en">see https://pe.usps.com/text/pub28/28apb.htm for an updated list of codes</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<!-- US States -->
