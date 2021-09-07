@@ -1381,7 +1381,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R15.D.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WorkPlaceViolenceThreats" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="WorkPlaceViolenceThreats" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R16.1.</xs:documentation>
 				</xs:annotation>
@@ -1401,7 +1401,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R16.B.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CounselingReceived" type="hmis:noYes">
+			<xs:element name="CounselingReceived" type="hmis:noYes"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R18.1.</xs:documentation>
 				</xs:annotation>
@@ -1426,37 +1426,37 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R18.B.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SessionsInPlan" type="xs:positiveInteger">
+			<xs:element name="SessionsInPlan" type="xs:positiveInteger"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R18.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PostExitCounselingPlan" type="hmis:noYes">
+			<xs:element name="PostExitCounselingPlan" type="hmis:noYes"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R18.3.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DestinationSafeClient" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="DestinationSafeClient" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R19.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DestinationSafeWorker" type="hmis:noYesWorkerDoesntKnow">
+			<xs:element name="DestinationSafeWorker" type="hmis:noYesWorkerDoesntKnow" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R19.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PosAdultConnections" type="hmis:noYesWorkerDoesntKnow">
+			<xs:element name="PosAdultConnections" type="hmis:noYesWorkerDoesntKnow" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R19.3.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PosPeerConnections" type="hmis:noYesWorkerDoesntKnow" >
+			<xs:element name="PosPeerConnections" type="hmis:noYesWorkerDoesntKnow" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R19.4.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PosCommunityConnections" type="hmis:noYesWorkerDoesntKnow">
+			<xs:element name="PosCommunityConnections" type="hmis:noYesWorkerDoesntKnow" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R19.5.</xs:documentation>
 				</xs:annotation>
