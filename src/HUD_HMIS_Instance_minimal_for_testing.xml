@@ -110,6 +110,7 @@
                 <hmis:TargetPopulation>4</hmis:TargetPopulation>
             </hmis:Project>
             <hmis:ProjectCoC hmis:dateCreated="2016-02-17T23:14:59" hmis:dateUpdated="2015-03-14T23:14:59Z" hmis:userID="j2ZsRLAPv" hmis:informationDate="2015-04-04Z">
+                <hmis:ProjectCoCID>2</hmis:ProjectCoCID>
                 <hmis:ProjectID>222D</hmis:ProjectID>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
             </hmis:ProjectCoC>
