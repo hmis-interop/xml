@@ -1779,17 +1779,17 @@
 				</xs:annotation>
 			</xs:element>				
 			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>
-			<xs:element name="IncomeFromAnySource" id="_4.02.2" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="IncomeFromAnySource" id="_4.02.2" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Income from Any Source</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TotalMonthlyIncome" id="_4.02.18" type="hmis:money">
+			<xs:element name="TotalMonthlyIncome" id="_4.02.18" type="hmis:money" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Total Monthly Income</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Earned" id="_4.02.3" type="hmis:noYesMissing">
+			<xs:element name="Earned" id="_4.02.3" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Earned income</xs:documentation>
 				</xs:annotation>
@@ -1799,7 +1799,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Unemployment" id="_4.02.4" type="hmis:noYesMissing">
+			<xs:element name="Unemployment" id="_4.02.4" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Unemployment Insurance</xs:documentation>
 				</xs:annotation>
@@ -1809,7 +1809,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SSI" id="_4.02.5" type="hmis:noYesMissing">
+			<xs:element name="SSI" id="_4.02.5" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Supplemental Security Income (SSI)</xs:documentation>
 				</xs:annotation>
@@ -1819,7 +1819,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SSDI" id="_4.02.6" type="hmis:noYesMissing">
+			<xs:element name="SSDI" id="_4.02.6" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Social Security Disability Insurance (SSDI)</xs:documentation>
 				</xs:annotation>
@@ -1829,7 +1829,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="VADisabilityService" id="_4.02.7" type="hmis:noYesMissing">
+			<xs:element name="VADisabilityService" id="_4.02.7" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">VA Service-Connected Disability Compensation</xs:documentation>
 				</xs:annotation>
@@ -1839,7 +1839,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="VADisabilityNonService" id="_4.02.8" type="hmis:noYesMissing">
+			<xs:element name="VADisabilityNonService" id="_4.02.8" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">VA Non-Service-Connected Disability Pension</xs:documentation>
 				</xs:annotation>
@@ -1849,7 +1849,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PrivateDisability" id="_4.02.9" type="hmis:noYesMissing">
+			<xs:element name="PrivateDisability" id="_4.02.9" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Private disability insurance</xs:documentation>
 				</xs:annotation>
@@ -1859,7 +1859,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WorkersComp" id="_4.02.10" type="hmis:noYesMissing">
+			<xs:element name="WorkersComp" id="_4.02.10" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Worker’s Compensation</xs:documentation>
 				</xs:annotation>
@@ -1869,7 +1869,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TANF" id="_4.02.11" type="hmis:noYesMissing">
+			<xs:element name="TANF" id="_4.02.11" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Temporary Assistance for Needy Families (TANF)</xs:documentation>
 				</xs:annotation>
@@ -1879,7 +1879,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GA" id="_4.02.12" type="hmis:noYesMissing">
+			<xs:element name="GA" id="_4.02.12" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">General Assistance (GA)</xs:documentation>
 				</xs:annotation>
@@ -1889,7 +1889,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SocSecRetirement" id="_4.02.13" type="hmis:noYesMissing">
+			<xs:element name="SocSecRetirement" id="_4.02.13" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Retirement Income from Social Security</xs:documentation>
 				</xs:annotation>
@@ -1899,7 +1899,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Pension" id="_4.02.14" type="hmis:noYesMissing">
+			<xs:element name="Pension" id="_4.02.14" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Pension or retirement income from a former job</xs:documentation>
 				</xs:annotation>
@@ -1909,7 +1909,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ChildSupport" id="_4.02.15" type="hmis:noYesMissing">
+			<xs:element name="ChildSupport" id="_4.02.15" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Child support</xs:documentation>
 				</xs:annotation>
@@ -1919,7 +1919,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Alimony" id="_4.02.16" type="hmis:noYesMissing">
+			<xs:element name="Alimony" id="_4.02.16" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Alimony and other spousal support</xs:documentation>
 				</xs:annotation>
@@ -1929,7 +1929,7 @@
 					<xs:documentation xml:lang="en">Monthly Amount</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherIncomeSource" id="_4.02.17" type="hmis:noYesMissing">
+			<xs:element name="OtherIncomeSource" id="_4.02.17" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Other source</xs:documentation>
 				</xs:annotation>
