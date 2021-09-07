@@ -1497,7 +1497,7 @@
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Funder[hmis:ProjectID = $id]) ge 1)"/>
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:ProjectCoC[hmis:ProjectID = $id]) ge 1)"/>
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:RHYAftercare[hmis:ExitID = $id]) le 1)"/>
-		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:VASHExitReason[hmis:ExitID = $id]) ge 1)"/>		
+		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:VASHExitReason[hmis:ExitID = $id]) le 1)"/>		
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:YouthEducationStatus[hmis:EnrollmentID = $id]) le 2)"/>
 		
 		<!-- Checking that that the Project Type = ‘Emergency shelter’ for certain 2.07 data elements to exist -->

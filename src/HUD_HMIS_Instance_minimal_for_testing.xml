@@ -22,7 +22,7 @@
                 <hmis:EndDate>2015-03-26T23:14:59Z</hmis:EndDate>
             </hmis:ExportPeriod>
             <hmis:ExportPeriodType>2</hmis:ExportPeriodType>
-            <hmis:ExportDirective>other</hmis:ExportDirective>
+            <hmis:ExportDirective>1</hmis:ExportDirective>
             <hmis:Affiliation hmis:dateCreated="2016-04-11T23:14:59Z" hmis:dateUpdated="2015-05-30T23:14:59" hmis:userID="nf">
                 <hmis:AffiliationID>76yt</hmis:AffiliationID>
                 <hmis:ProjectID>222D</hmis:ProjectID>
@@ -50,7 +50,7 @@
                 <hmis:NoSingleGender>0</hmis:NoSingleGender>
                 <hmis:Transgender>99</hmis:Transgender>
                 <hmis:Questioning>0</hmis:Questioning>
-                <hmis:NoSingleGender>99</hmis:NoSingleGender>
+                <hmis:GenderNone>99</hmis:GenderNone>
                 <hmis:VeteranStatus>9</hmis:VeteranStatus>
             </hmis:Client>
             <hmis:Enrollment hmis:dateCreated="2015-05-08T23:14:59" hmis:dateUpdated="2015-01-27T23:14:59Z" hmis:userID="Hc8CQeYVWWj0dA9cWkDLe">
@@ -70,7 +70,6 @@
                  hmis:dateUpdated="2016-02-19T23:14:59" hmis:userID="DU5m">
                 <hmis:EnrollmentCoCID>56332</hmis:EnrollmentCoCID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
-                <hmis:HouseholdID>a34563w</hmis:HouseholdID>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
             </hmis:EnrollmentCoC>
             <hmis:Funder hmis:dateCreated="2015-09-19T23:14:59" hmis:dateUpdated="2016-01-29T23:14:59Z" hmis:userID="m2Pym5-77tSVuI-IjerY">
@@ -83,10 +82,9 @@
             </hmis:Funder>
             <hmis:Inventory hmis:dateCreated="2015-09-12T23:14:59Z" hmis:dateUpdated="2015-08-29T23:14:59Z" hmis:userID="billj">
                 <hmis:InventoryID>56563a</hmis:InventoryID>
-                <hmis:ProjectID>222D</hmis:ProjectID>
+                <hmis:ProjectCoCID>2</hmis:ProjectCoCID>
                 <hmis:InventoryStartDate>2014-10-31</hmis:InventoryStartDate>
                 <hmis:InventoryEndDate>2015-05-12Z</hmis:InventoryEndDate>
-                <hmis:CoCCode>BZ-123</hmis:CoCCode>
                 <hmis:HouseholdType>1</hmis:HouseholdType>
                 <hmis:VetBedInventory>14</hmis:VetBedInventory>
                 <hmis:YouthBedInventory>16</hmis:YouthBedInventory>
