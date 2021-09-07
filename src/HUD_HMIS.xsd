@@ -5845,11 +5845,6 @@
 					<xs:documentation xml:lang="en">Worker Doesn’t Know</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	
