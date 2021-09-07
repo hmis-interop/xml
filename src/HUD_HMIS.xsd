@@ -884,7 +884,7 @@
 					<xs:documentation xml:lang="en">Number of times approached by outreach prior to entering the project</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SexualOrientation" id="_R3.1" type="hmis:sexualOrientation">
+			<xs:element name="SexualOrientation" id="_R3.1" type="hmis:sexualOrientation" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Sexual Orientation</xs:documentation>
 				</xs:annotation>
@@ -894,37 +894,37 @@
 					<xs:documentation xml:lang="en">If other, please describe</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="UnemploymentFam" id="_R13.9" type="hmis:noYesMissing">
+			<xs:element name="UnemploymentFam" id="_R13.9" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Unemployment - Family member</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MentalHealthDisorderFam" id="_R13.11" type="hmis:noYesMissing">
+			<xs:element name="MentalHealthDisorderFam" id="_R13.11" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Mental Health Disorder - Family member</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PhysicalDisabilityFam" id="_R13.15" type="hmis:noYesMissing">
+			<xs:element name="PhysicalDisabilityFam" id="_R13.15" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Physical Disability – Family member</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AlcoholDrugUseDisorderFam" id="_R13.21" type="hmis:noYesMissing">
+			<xs:element name="AlcoholDrugUseDisorderFam" id="_R13.21" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Alcohol or Substance Use Disorder - Family member</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="InsufficientIncome" id="_R13.22" type="hmis:noYesMissing">
+			<xs:element name="InsufficientIncome" id="_R13.22" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Insufficient Income to support youth - Family member</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IncarceratedParent" id="_R13.24" type="hmis:noYesMissing">
+			<xs:element name="IncarceratedParent" id="_R13.24" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Incarcerated Parent of Youth</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FormerWardJuvenileJustice" id="_R12.1" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="FormerWardJuvenileJustice" id="_R12.1" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Formerly a Ward of Juvenile Justice System</xs:documentation>
 				</xs:annotation>
@@ -939,7 +939,7 @@
 					<xs:documentation xml:lang="en">Number of Months</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FormerWardChildWelfare" id="_R11.1" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="FormerWardChildWelfare" id="_R11.1" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Formerly a Ward of Child Welfare or Foster Care Agency</xs:documentation>
 				</xs:annotation>
