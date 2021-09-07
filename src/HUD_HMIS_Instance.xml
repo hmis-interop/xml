@@ -21,8 +21,8 @@
                 <hmis:StartDate>2015-01-04T23:14:59</hmis:StartDate>
                 <hmis:EndDate>2015-03-26T23:14:59Z</hmis:EndDate>
             </hmis:ExportPeriod>
-            <hmis:ExportPeriodType>effective</hmis:ExportPeriodType>
-            <hmis:ExportDirective>other</hmis:ExportDirective>
+            <hmis:ExportPeriodType>1</hmis:ExportPeriodType>
+            <hmis:ExportDirective>1</hmis:ExportDirective>
             <hmis:Affiliation hmis:dateCreated="2019-04-11T23:14:59Z" hmis:dateUpdated="2019-05-30T23:14:59" hmis:userID="nf">
                 <hmis:AffiliationID>76yt</hmis:AffiliationID>
                 <hmis:ProjectID>222E</hmis:ProjectID>
@@ -53,6 +53,7 @@
                 <hmis:AssessmentID>abc7777</hmis:AssessmentID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:PersonalID>34fty2</hmis:PersonalID>
+                <hmis:AssessmentResultType>Placement</hmis:AssessmentResultType>
                 <hmis:AssessmentResult>"81":"Recommended Placement"</hmis:AssessmentResult>
             </hmis:AssessmentResults>
             <hmis:Client hmis:dateCreated="2019-04-11T23:14:59Z" hmis:dateUpdated="2019-05-30T23:14:59" hmis:userID="ned100">
@@ -451,9 +452,9 @@
                 <hmis:ChildSupportAmount>562.40</hmis:ChildSupportAmount>
                 <hmis:Alimony>1</hmis:Alimony>
                 <hmis:AlimonyAmount>1121.76</hmis:AlimonyAmount>
-                <hmis:OtherSource>1</hmis:OtherSource>
-                <hmis:OtherSourceAmount>156.47</hmis:OtherSourceAmount>
-                <hmis:OtherSourceIdentify>some other source here</hmis:OtherSourceIdentify>
+                <hmis:OtherIncomeSource>1</hmis:OtherIncomeSource>
+                <hmis:OtherIncomeAmount>156.47</hmis:OtherIncomeAmount>
+                <hmis:OtherIncomeSourceIdentify>some other source here</hmis:OtherIncomeSourceIdentify>
             </hmis:IncomeAndSources>
             <hmis:Inventory hmis:dateCreated="2019-09-12T23:14:59Z" hmis:dateUpdated="2019-08-29T23:14:59Z" hmis:userID="billj">
                 <hmis:InventoryID>56563a</hmis:InventoryID>
