@@ -2023,17 +2023,17 @@
 					<xs:documentation xml:lang="en">Key reference to the Enrollment.  See FY2020 HMIS Data Dictionary v1.4, Section 5.06.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IncomeFromAnySource" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="IncomeFromAnySource" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TotalMonthlyIncome" type="hmis:money">
+			<xs:element name="TotalMonthlyIncome" type="hmis:money" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.18.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Earned" type="hmis:noYes">
+			<xs:element name="Earned" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.3.</xs:documentation>
 				</xs:annotation>
@@ -2043,7 +2043,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.3A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Unemployment" type="hmis:noYes">
+			<xs:element name="Unemployment" type="hmis:noYes"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.4.</xs:documentation>
 				</xs:annotation>
@@ -2053,7 +2053,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.4B.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SSI" type="hmis:noYes">
+			<xs:element name="SSI" type="hmis:noYes"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.5.</xs:documentation>
 				</xs:annotation>
@@ -2063,7 +2063,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.5C.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SSDI" type="hmis:noYes">
+			<xs:element name="SSDI" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.6.</xs:documentation>
 				</xs:annotation>
@@ -2073,7 +2073,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.6D.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="VADisabilityService" type="hmis:noYes">
+			<xs:element name="VADisabilityService" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.7.</xs:documentation>
 				</xs:annotation>
@@ -2083,7 +2083,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.7E.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="VADisabilityNonService" type="hmis:noYes">
+			<xs:element name="VADisabilityNonService" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.8.</xs:documentation>
 				</xs:annotation>
@@ -2093,7 +2093,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.8F.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PrivateDisability" type="hmis:noYes">
+			<xs:element name="PrivateDisability" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.9.</xs:documentation>
 				</xs:annotation>
@@ -2103,7 +2103,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.9G.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WorkersComp" type="hmis:noYes">
+			<xs:element name="WorkersComp" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.10.</xs:documentation>
 				</xs:annotation>
@@ -2113,7 +2113,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.10H.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TANF" type="hmis:noYes">
+			<xs:element name="TANF" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.11.</xs:documentation>
 				</xs:annotation>
@@ -2123,7 +2123,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.11I.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GA" type="hmis:noYes">
+			<xs:element name="GA" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.12.</xs:documentation>
 				</xs:annotation>
@@ -2133,7 +2133,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.12J.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SocSecRetirement" type="hmis:noYes">
+			<xs:element name="SocSecRetirement" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.13.</xs:documentation>
 				</xs:annotation>
@@ -2143,7 +2143,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.13K.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Pension" type="hmis:noYes">
+			<xs:element name="Pension" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.14.</xs:documentation>
 				</xs:annotation>
@@ -2153,7 +2153,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.14L.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ChildSupport" type="hmis:noYes">
+			<xs:element name="ChildSupport" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.15.</xs:documentation>
 				</xs:annotation>
@@ -2163,7 +2163,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.15M.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Alimony" type="hmis:noYes">
+			<xs:element name="Alimony" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.16.</xs:documentation>
 				</xs:annotation>
@@ -2173,7 +2173,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.16N.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherIncomeSource" type="hmis:noYes">
+			<xs:element name="OtherIncomeSource" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.17.</xs:documentation>
 				</xs:annotation>
