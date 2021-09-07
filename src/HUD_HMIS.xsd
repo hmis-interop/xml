@@ -962,7 +962,7 @@
 					<xs:documentation xml:lang="en">Key reference to the Enrollment.  See FY2020 HMIS Data Dictionary v1.4, Section 5.06.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SexualOrientation" type="hmis:sexualOrientation">
+			<xs:element name="SexualOrientation" type="hmis:sexualOrientation" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R3.1.</xs:documentation>
 					<xs:documentation xml:lang="en">Sexual Orientation</xs:documentation>
@@ -974,37 +974,37 @@
 					<xs:documentation xml:lang="en">Sexual Orientation Other</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="UnemploymentFam" type="hmis:noYes">
+			<xs:element name="UnemploymentFam" type="hmis:noYes"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R13.9.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MentalHealthIssuesFam" type="hmis:noYes">
+			<xs:element name="MentalHealthIssuesFam" type="hmis:noYes"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R13.11.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PhysicalDisabilityFam" type="hmis:noYes">
+			<xs:element name="PhysicalDisabilityFam" type="hmis:noYes"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R13.15.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AlcoholDrugAbuseFam" type="hmis:noYes">
+			<xs:element name="AlcoholDrugAbuseFam" type="hmis:noYes"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R13.21.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="InsufficientIncome" type="hmis:noYes">
+			<xs:element name="InsufficientIncome" type="hmis:noYes"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R13.22.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IncarceratedParent" type="hmis:noYes">
+			<xs:element name="IncarceratedParent" type="hmis:noYes"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R13.24.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FormerWardJuvenileJustice" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="FormerWardJuvenileJustice" type="hmis:noYesDoesntKnowRefused"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R12.1.</xs:documentation>
 				</xs:annotation>
@@ -1019,7 +1019,7 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R12.1AB.  Values 1-11 permissible.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FormerWardChildWelfare" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="FormerWardChildWelfare" type="hmis:noYesDoesntKnowRefused"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section R11.1.</xs:documentation>
 				</xs:annotation>
