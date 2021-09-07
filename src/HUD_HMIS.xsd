@@ -1093,7 +1093,7 @@
 					<xs:documentation xml:lang="en">Current/recent resident in area prioritized by the CoC</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="HPScreeningScore" id="_V7.R" type="hmis:hpScreeningScore" minOccurs="0">
+			<xs:element name="HPScreeningScore" id="_V7.R" type="xs:unsignedInt" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">HP applicant total points (integer)</xs:documentation>
 				</xs:annotation>
@@ -5113,12 +5113,6 @@
 					<xs:documentation xml:lang="en">Tenant-based - scattered site</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="hpScreeningScore" id="hpScreeningScore">
-		<xs:restriction base="xs:string">
-			<xs:pattern value="[0-9]{2}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
