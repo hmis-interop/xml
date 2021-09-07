@@ -5525,7 +5525,7 @@
 	
 	<xs:simpleType name="noYesWorkerDoesntKnow">
 		<xs:annotation>
-			<xs:documentation xml:lang="en">0 = No, 1 = Yes, 2 = Worker Doesn’t Know, 99 = Data Not Collected</xs:documentation>
+			<xs:documentation xml:lang="en">0 = No, 1 = Yes, 2 = Worker Doesn’t Know</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
@@ -5541,11 +5541,6 @@
 			<xs:enumeration value="2">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Worker Doesn’t Know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -5681,18 +5676,18 @@
 		<xs:annotation>
 			<xs:documentation xml:lang="en">	
 				Project Type
-				1 = Emergency Shelter 
-				2 = Transitional Housing 
-				3 = PH - Permanent Supportive Housing (disability required for entry) 
-				4 = Street Outreach 
-				6 = Services Only 
-				7 = Other 
-				8 = Safe Haven 
-				9 = PH – Housing Only 
-				10 = PH – Housing with Services (no disability required for entry) 
-				11 = Day Shelter 
-				12 = Homelessness Prevention 
-				13 = PH - Rapid Re-Housing 
+				1 = Emergency Shelter
+				2 = Transitional Housing
+				3 = PH - Permanent Supportive Housing (disability required for entry)
+				4 = Street Outreach
+				6 = Services Only
+				7 = Other
+				8 = Safe Haven
+				9 = PH – Housing Only
+				10 = PH – Housing with Services (no disability required for entry)
+				11 = Day Shelter
+				12 = Homelessness Prevention
+				13 = PH - Rapid Re-Housing
 				14 = Coordinated Entry
 			</xs:documentation>
 		</xs:annotation>
