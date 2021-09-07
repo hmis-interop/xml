@@ -4069,7 +4069,6 @@
 				4 = Reached maximum time allowed by project
 				5 = Project terminated
 				6 = Unknown/disappeared
-				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -4101,11 +4100,6 @@
 			<xs:enumeration value="6">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Unknown/disappeared</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
