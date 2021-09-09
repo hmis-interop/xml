@@ -2391,32 +2391,32 @@
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.03.2.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SNAP" type="hmis:noYes">
+			<xs:element name="SNAP" type="hmis:noYes"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.03.3.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WIC" type="hmis:noYes">
+			<xs:element name="WIC" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.03.4.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TANFChildCare" type="hmis:noYes">
+			<xs:element name="TANFChildCare" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.03.5.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TANFTransportation" type="hmis:noYes">
+			<xs:element name="TANFTransportation" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.03.6.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherTANF" type="hmis:noYes">
+			<xs:element name="OtherTANF" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.03.7.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherBenefitsSource" type="hmis:noYes">
+			<xs:element name="OtherBenefitsSource" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.03.8.</xs:documentation>
 				</xs:annotation>
