@@ -3171,7 +3171,6 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
-		<xs:attribute ref="hmis:informationDate" use="required"/>
 	</xs:complexType>
 	
 	<xs:complexType name="source">
