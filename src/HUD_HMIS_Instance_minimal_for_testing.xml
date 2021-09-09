@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/FY2020-v1.0.0/src/HUD_HMIS.xsd"
+    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/FY2020-latest/src/HUD_HMIS.xsd"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
     xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2020/HUD_HMIS.xsd">
     <hmis:Source>
@@ -21,8 +21,8 @@
                 <hmis:StartDate>2015-01-04T23:14:59</hmis:StartDate>
                 <hmis:EndDate>2015-03-26T23:14:59Z</hmis:EndDate>
             </hmis:ExportPeriod>
-            <hmis:ExportPeriodType>effective</hmis:ExportPeriodType>
-            <hmis:ExportDirective>other</hmis:ExportDirective>
+            <hmis:ExportPeriodType>1</hmis:ExportPeriodType>
+            <hmis:ExportDirective>1</hmis:ExportDirective>
             <hmis:Affiliation hmis:dateCreated="2016-04-11T23:14:59Z" hmis:dateUpdated="2015-05-30T23:14:59" hmis:userID="nf">
                 <hmis:AffiliationID>76yt</hmis:AffiliationID>
                 <hmis:ProjectID>222D</hmis:ProjectID>
