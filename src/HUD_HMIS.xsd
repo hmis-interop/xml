@@ -1779,7 +1779,7 @@
 				</xs:annotation>
 			</xs:element>				
 			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>
-			<xs:element name="IncomeFromAnySource" id="_4.02.2" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="IncomeFromAnySource" id="_4.02.2" type="hmis:noYesDoesntKnowRefused">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Income from Any Source</xs:documentation>
 				</xs:annotation>
