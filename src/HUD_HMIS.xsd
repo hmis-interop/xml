@@ -5825,7 +5825,6 @@
 				1 = Client was found ineligible for PATH
 				2 = Client was not enrolled for other reason(s)
 				3 = Unable to locate client
-				99 = Data not collected
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -5842,11 +5841,6 @@
 			<xs:enumeration value="3">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Unable to locate client</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
