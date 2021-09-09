@@ -4907,8 +4907,8 @@
 	</xs:simpleType>
 	
 	<xs:simpleType name="geocode" id="geocode">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:pattern value="[0-9]{6}"/>    
+		<xs:restriction base="xs:token">
+			<xs:pattern value="^[0-9]{6}$"/>    
 		</xs:restriction>
 	</xs:simpleType>
 	
