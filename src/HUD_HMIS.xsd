@@ -2226,32 +2226,32 @@
 					<xs:documentation xml:lang="en">Non-Cash Benefits from Any Source</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SNAP" id="_4.03.3" type="hmis:noYesMissing">
+			<xs:element name="SNAP" id="_4.03.3" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Supplemental Nutrition Assistance Program (SNAP) (Previously known as Food Stamps)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WIC" id="_4.03.4" type="hmis:noYesMissing">
+			<xs:element name="WIC" id="_4.03.4" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TANFChildCare" id="_4.03.5" type="hmis:noYesMissing">
+			<xs:element name="TANFChildCare" id="_4.03.5" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">TANF Child Care services</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TANFTransportation" id="_4.03.6" type="hmis:noYesMissing">
+			<xs:element name="TANFTransportation" id="_4.03.6" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">TANF transportation services</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherTANF" id="_4.03.7" type="hmis:noYesMissing">
+			<xs:element name="OtherTANF" id="_4.03.7" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Other TANF-funded services</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherBenefitsSource" id="_4.03.8" type="hmis:noYesMissing">
+			<xs:element name="OtherBenefitsSource" id="_4.03.8" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Other source</xs:documentation>
 				</xs:annotation>
