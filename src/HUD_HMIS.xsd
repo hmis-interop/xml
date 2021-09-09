@@ -2291,7 +2291,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>
-			<xs:element name="DateOfStatus" id="_P3.1" type="xs:date">
+			<xs:element name="DateOfPATHStatus" id="_P3.1" type="xs:date">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Date of Status Determination</xs:documentation>
 				</xs:annotation>
