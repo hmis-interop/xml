@@ -3133,7 +3133,7 @@
 						<xs:documentation xml:lang="en">Continuum Code - HUD-assigned CoC codes for the project location</xs:documentation>
 					</xs:annotation>
 			</xs:element>
-			<xs:element name="Geocode" id="_2.03.2" type="hmis:geocode" minOccurs="0">
+			<xs:element name="Geocode" id="_2.03.2" type="hmis:geocode">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Geocode</xs:documentation>
 				</xs:annotation>
