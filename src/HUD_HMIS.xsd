@@ -9,7 +9,7 @@
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	vc:minVersion = "1.1"
-	version="v1.0.12"
+	version="v1.0.13"
 	elementFormDefault="qualified"		
 	attributeFormDefault="qualified">
 		
@@ -2926,7 +2926,7 @@
 						<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 2.03.1.</xs:documentation>
 					</xs:annotation>
 			</xs:element>
-			<xs:element name="Geocode" type="hmis:geocode" minOccurs="0">
+			<xs:element name="Geocode" type="hmis:geocode">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 2.03.2</xs:documentation>
 				</xs:annotation>
@@ -2970,7 +2970,6 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
-		<xs:attribute ref="hmis:informationDate" use="required"/>
 	</xs:complexType>
 	
 	<xs:complexType name="source">
@@ -4795,7 +4794,7 @@
 	</xs:simpleType>
 	
 	<xs:simpleType name="geocode">
-		<xs:restriction base="xs:unsignedInt">
+		<xs:restriction base="xs:token">
 			<xs:pattern value="[0-9]{6}"></xs:pattern>    
 		</xs:restriction>
 	</xs:simpleType>
