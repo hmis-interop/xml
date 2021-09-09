@@ -2023,7 +2023,7 @@
 					<xs:documentation xml:lang="en">Key reference to the Enrollment.  See FY2020 HMIS Data Dictionary v1.4, Section 5.06.1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IncomeFromAnySource" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="IncomeFromAnySource" type="hmis:noYesDoesntKnowRefused">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.02.2.</xs:documentation>
 				</xs:annotation>
