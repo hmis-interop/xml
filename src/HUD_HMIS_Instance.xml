@@ -550,19 +550,19 @@
                 <hmis:HMISParticipatingProject>1</hmis:HMISParticipatingProject>
                 <hmis:TargetPopulation>4</hmis:TargetPopulation>
             </hmis:Project>
-            <hmis:ProjectCoC  hmis:dateCreated="2019-11-22T23:14:59" hmis:dateUpdated="2019-10-11T23:14:59Z" hmis:informationDate="2019-11-21" hmis:userID="bmerriweather">
+            <hmis:ProjectCoC  hmis:dateCreated="2019-11-22T23:14:59" hmis:dateUpdated="2019-10-11T23:14:59Z" hmis:userID="bmerriweather">
                 <hmis:ProjectCoCID>2</hmis:ProjectCoCID>
                 <hmis:ProjectID>222D</hmis:ProjectID>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
                 <hmis:Geocode>123456</hmis:Geocode>
             </hmis:ProjectCoC>
-            <hmis:ProjectCoC  hmis:dateCreated="2019-11-22T23:14:59" hmis:dateUpdated="2019-10-11T23:14:59Z" hmis:informationDate="2019-11-21" hmis:userID="bmerriweather">
+            <hmis:ProjectCoC  hmis:dateCreated="2019-11-22T23:14:59" hmis:dateUpdated="2019-10-11T23:14:59Z" hmis:userID="bmerriweather">
                 <hmis:ProjectCoCID>3</hmis:ProjectCoCID>
                 <hmis:ProjectID>222E</hmis:ProjectID>                
                 <hmis:CoCCode>MA-500</hmis:CoCCode>
                 <hmis:Geocode>123456</hmis:Geocode>
             </hmis:ProjectCoC>
-            <hmis:ProjectCoC  hmis:dateCreated="2019-11-22T23:14:59" hmis:dateUpdated="2019-10-11T23:14:59Z" hmis:informationDate="2019-11-21" hmis:userID="bmerriweather">
+            <hmis:ProjectCoC  hmis:dateCreated="2019-11-22T23:14:59" hmis:dateUpdated="2019-10-11T23:14:59Z" hmis:userID="bmerriweather">
                 <hmis:ProjectCoCID>4</hmis:ProjectCoCID>                
                 <hmis:ProjectID>222F</hmis:ProjectID>
                 <hmis:CoCCode>MA-500</hmis:CoCCode>
