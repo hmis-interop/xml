@@ -6588,7 +6588,7 @@
 	</xs:simpleType>
 	
 	<xs:simpleType name="subTypeProvided">
-		<xs:restriction base="xs:integer">
+		<xs:restriction base="xs:token">
 			<xs:pattern value="[0-9]{1,2}"/>
 		</xs:restriction>
 	</xs:simpleType>
