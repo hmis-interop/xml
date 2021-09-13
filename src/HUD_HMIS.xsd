@@ -3758,7 +3758,6 @@
 				11 = Veteran is incarcerated
 				12 = Veteran is deceased
 				13 = Other
-				99 = Data not collected 			
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:unsignedInt">
@@ -3825,11 +3824,6 @@
 			<xs:enumeration value="13">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Other</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>	
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
