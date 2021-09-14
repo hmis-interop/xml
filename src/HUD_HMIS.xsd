@@ -1710,8 +1710,8 @@
 		</xs:sequence>
 		
 		<!--Cardinality Checking-->
-		<xs:assert test="every $id in hmis:Assessment/hmis:AssessmentID  satisfies (fn:count(hmis:AssessmentQuestions[hmis:AssessmentID = $id]) ge 1)"/>
-		<xs:assert test="every $id in hmis:Assessment/hmis:AssessmentID  satisfies (fn:count(hmis:AssessmentResults[hmis:AssessmentID = $id]) ge 1)"/>				
+		<xs:assert test="every $id in hmis:Assessment/hmis:AssessmentID  satisfies (fn:count(hmis:AssessmentQuestions[hmis:AssessmentID = $id]) ge 0)"/>
+		<xs:assert test="every $id in hmis:Assessment/hmis:AssessmentID  satisfies (fn:count(hmis:AssessmentResults[hmis:AssessmentID = $id]) ge 0)"/>				
 		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:ClientVeteranInfo[hmis:PersonalID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Client/hmis:PersonalID satisfies (fn:count(hmis:Enrollment[hmis:PersonalID = $id]) ge 1)"/>		
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:Assessment[hmis:EnrollmentID = $id]) ge 0)"/>
