@@ -1416,11 +1416,7 @@
 			<xs:choice maxOccurs="unbounded">
 				<xs:element name="Affiliation" type="hmis:affiliation"/>
 				<xs:element name="Assessment" type="hmis:assessment"/>
-				<xs:element name="AssessmentQuestions" type="hmis:assessmentQuestions">
-					<xs:annotation>
-						<xs:documentation>Assessment questions – Local determination - as defined by the community</xs:documentation>
-					</xs:annotation>	
-				</xs:element>
+				<xs:element name="AssessmentQuestions" type="hmis:assessmentQuestions"/>				
 				<xs:element name="AssessmentResults" type="hmis:assessmentResults"/>
 				<xs:element name="Client" type="hmis:client"/>
 				<xs:element name="ClientVeteranInfo" type="hmis:clientVeteranInfo"/>
