@@ -9,7 +9,7 @@
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	vc:minVersion = "1.1"
-	version="v1.0.14"
+	version="v1.0.15"
 	elementFormDefault="qualified"		
 	attributeFormDefault="qualified">
 		
