@@ -617,7 +617,7 @@
             <hmis:VASHExitReason hmis:dateCreated="2019-08-13T23:14:59" hmis:dateUpdated="2019-08-13T23:14:59" hmis:userID="452sd">
                 <hmis:VashExitReasonID>1sshhdw1121</hmis:VashExitReasonID>
                 <hmis:ExitID>C2x</hmis:ExitID>
-                <hmis:CMExitReason>99</hmis:CMExitReason>
+                <hmis:CMExitReason>13</hmis:CMExitReason>
             </hmis:VASHExitReason>
             <hmis:YouthEducationStatus hmis:dataCollectionStage="1" hmis:informationDate="2019-11-21" hmis:dateCreated="2019-08-13T23:14:59" hmis:dateUpdated="2019-08-13T23:14:59" hmis:userID="452sd">
                 <hmis:YouthEducationStatusID>1</hmis:YouthEducationStatusID>
