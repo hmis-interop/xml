@@ -513,8 +513,8 @@
 			<xs:documentation xml:lang="en">A date range, both start and end dates are required.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="StartDate" type="xs:dateTime"/>
-			<xs:element name="EndDate" type="xs:dateTime"/>
+			<xs:element name="StartDate" type="xs:date"/>
+			<xs:element name="EndDate" type="xs:date"/>
 		</xs:sequence>
 	</xs:complexType>
 
