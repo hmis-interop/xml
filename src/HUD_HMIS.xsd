@@ -572,6 +572,10 @@
 		
 		<!--Testing if  ViralLoad is not null, before allowing use of  ViralLoadSource-->
 		<xs:assert test="if (hmis:ViralLoad) then boolean(hmis:ViralLoadSource) else (if (not(hmis:ViralLoad)) then (not(boolean(hmis:ViralLoadSource))) else false())"/>
+		
+		<!--Testing if DisabilityType is 8, before allowing use of AntiRetroviral-->
+		<xs:assert test="if (hmis:AntiRetroviral) then boolean(hmis:DisabilityType/text()='8') else true()"/>
+		
 	</xs:complexType>
 	
 	<xs:complexType name="disabilityResponseBase">
