@@ -1271,7 +1271,7 @@
 					<xs:documentation xml:lang="en">In the last three months?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WorkPlaceViolenceThreats" id="_R16.1" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="WorkplaceViolenceThreats" id="_R16.1" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Ever afraid to quit/leave work due to threats of violence to yourself, family, or friends</xs:documentation>
 				</xs:annotation>
@@ -1358,11 +1358,11 @@
 		<!--Testing if  ProjectCompletionStatus is 3, before allowing use of EarlyExitReason-->
 		<xs:assert test="if (hmis:ProjectCompletionStatus/text()='3') then boolean(hmis:EarlyExitReason) else (if (not(hmis:ProjectCompletionStatus/text()='3')) then (not(boolean(hmis:EarlyExitReason))) else false())"/>
 		
-		<!--Testing if WorkPlaceViolenceThreats or WorkplacePromiseDifference is 1, before allowing use of CoercedToContinueWork-->
-		<xs:assert test="if (hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1') then boolean(hmis:CoercedToContinueWork) else (if (not(hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1')) then (not(boolean(hmis:CoercedToContinueWork))) else false())"/>
+		<!--Testing if WorkplaceViolenceThreats or WorkplacePromiseDifference is 1, before allowing use of CoercedToContinueWork-->
+		<xs:assert test="if (hmis:WorkplaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1') then boolean(hmis:CoercedToContinueWork) else (if (not(hmis:WorkplaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1')) then (not(boolean(hmis:CoercedToContinueWork))) else false())"/>
 		
-		<!--Testing if WorkPlaceViolenceThreats or WorkplacePromiseDifference is 1, before allowing use of LaborExploitPastThreeMonths-->
-		<xs:assert test="if (hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1') then boolean(hmis:LaborExploitPastThreeMonths) else (if (not(hmis:WorkPlaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1')) then (not(boolean(hmis:LaborExploitPastThreeMonths))) else false())"/>
+		<!--Testing if WorkplaceViolenceThreats or WorkplacePromiseDifference is 1, before allowing use of LaborExploitPastThreeMonths-->
+		<xs:assert test="if (hmis:WorkplaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1') then boolean(hmis:LaborExploitPastThreeMonths) else (if (not(hmis:WorkplaceViolenceThreats/text()='1' or hmis:WorkplacePromiseDifference/text()='1')) then (not(boolean(hmis:LaborExploitPastThreeMonths))) else false())"/>
 		
 		<!--Testing if ExchangeForSex is 1, before allowing use of ExchangeForSexPastThreeMonths-->
 		<xs:assert test="if (hmis:ExchangeForSex/text()='1') then boolean(hmis:ExchangeForSexPastThreeMonths) else (if (not(hmis:ExchangeForSex/text()='1')) then (not(boolean(hmis:ExchangeForSexPastThreeMonths))) else false())"/>
