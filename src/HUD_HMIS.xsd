@@ -102,7 +102,7 @@
 					<xs:documentation xml:lang="en">Assessment questions – Local determination - as defined by the community</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AssessmentAnswer" id="_4.19.A" type="hmis:string500">
+			<xs:element name="AssessmentAnswer" id="_4.19.A" type="hmis:string500"  minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Assessment answers - Local determination – responses to questions defined by community</xs:documentation>
 				</xs:annotation>
@@ -130,7 +130,7 @@
 					<xs:documentation xml:lang="en">Assessment Result Type – Local determination - as defined by the community</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AssessmentResult" id="_4.19B" type="hmis:string250">
+			<xs:element name="AssessmentResult" id="_4.19B" type="hmis:string250" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Assessment Result</xs:documentation>
 				</xs:annotation>
