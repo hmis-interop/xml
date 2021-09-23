@@ -18,8 +18,8 @@
             <hmis:ExportID>37</hmis:ExportID>
             <hmis:ExportDate>2015-02-27T23:14:59</hmis:ExportDate>
             <hmis:ExportPeriod>
-                <hmis:StartDate>2015-01-04T23:14:59</hmis:StartDate>
-                <hmis:EndDate>2015-03-26T23:14:59Z</hmis:EndDate>
+                <hmis:StartDate>2015-01-04</hmis:StartDate>
+                <hmis:EndDate>2015-03-26</hmis:EndDate>
             </hmis:ExportPeriod>
             <hmis:ExportPeriodType>2</hmis:ExportPeriodType>
             <hmis:ExportDirective>1</hmis:ExportDirective>
@@ -263,7 +263,7 @@
                 <hmis:AddressDataQuality>2</hmis:AddressDataQuality>
                 <hmis:TimeToHousingLoss>99</hmis:TimeToHousingLoss>
                 <hmis:AnnualPercentAMI>2</hmis:AnnualPercentAMI>
-                <hmis:ClientLeaseHolder>99</hmis:ClientLeaseHolder>
+                <hmis:ClientLeaseholder>99</hmis:ClientLeaseholder>
                 <hmis:CriminalRecord>1</hmis:CriminalRecord>
                 <hmis:CurrentPregnant>99</hmis:CurrentPregnant>
                 <hmis:DependentUnder6>1</hmis:DependentUnder6>
@@ -311,7 +311,7 @@
                 <hmis:CountOfExchangeForSex>3</hmis:CountOfExchangeForSex>
                 <hmis:AskedOrForcedToExchangeForSex>1</hmis:AskedOrForcedToExchangeForSex>
                 <hmis:AskedOrForcedToExchangeForSexPastThreeMonths>8</hmis:AskedOrForcedToExchangeForSexPastThreeMonths>
-                <hmis:WorkPlaceViolenceThreats>0</hmis:WorkPlaceViolenceThreats>
+                <hmis:WorkplaceViolenceThreats>0</hmis:WorkplaceViolenceThreats>
                 <hmis:WorkplacePromiseDifference>1</hmis:WorkplacePromiseDifference>
                 <hmis:CoercedToContinueWork>0</hmis:CoercedToContinueWork>
                 <hmis:LaborExploitPastThreeMonths>8</hmis:LaborExploitPastThreeMonths>
