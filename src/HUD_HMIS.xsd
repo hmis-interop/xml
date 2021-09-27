@@ -133,13 +133,13 @@
 					<xs:documentation xml:lang="en">Locally determined</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AssessmentQuestion" type="hmis:string250">
+			<xs:element name="AssessmentQuestion" type="hmis:string250" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.19.5.</xs:documentation>
 					<xs:documentation xml:lang="en">Locally determined</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AssessmentAnswer" type="hmis:string250">
+			<xs:element name="AssessmentAnswer" type="hmis:string250" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.19.A.</xs:documentation>
 					<xs:documentation xml:lang="en">Assessment answers - Local determination – responses to questions defined by community</xs:documentation>
@@ -178,7 +178,7 @@
 					<xs:documentation xml:lang="en">Locally determined</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AssessmentResult" type="hmis:string250">
+			<xs:element name="AssessmentResult" type="hmis:string250" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">See FY2020 HMIS Data Dictionary v1.4, Section 4.19.B.</xs:documentation>
 					<xs:documentation xml:lang="en">Locally determined</xs:documentation>
