@@ -503,7 +503,7 @@
                 <hmis:VictimServicesProvider>99</hmis:VictimServicesProvider>
             </hmis:Organization>
             <hmis:PATHStatus hmis:dateCreated="2019-08-31T23:14:59" hmis:dateUpdated="2019-01-06T23:14:59" hmis:userID="bmerriweather">
-                <hmis:PathStatusID>453332</hmis:PathStatusID>
+                <hmis:PATHStatusID>453332</hmis:PATHStatusID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:DateOfPATHStatus>2016-04-23</hmis:DateOfPATHStatus>
                 <hmis:ClientEnrolledInPATH>0</hmis:ClientEnrolledInPATH>
