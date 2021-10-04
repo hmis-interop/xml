@@ -18,8 +18,8 @@
             <hmis:ExportID>37</hmis:ExportID>
             <hmis:ExportDate>2015-02-27T23:14:59</hmis:ExportDate>
             <hmis:ExportPeriod>
-                <hmis:StartDate>2015-01-04T23:14:59</hmis:StartDate>
-                <hmis:EndDate>2015-03-26T23:14:59Z</hmis:EndDate>
+                <hmis:StartDate>2015-01-04</hmis:StartDate>
+                <hmis:EndDate>2015-03-26</hmis:EndDate>
             </hmis:ExportPeriod>
             <hmis:ExportPeriodType>1</hmis:ExportPeriodType>
             <hmis:ExportDirective>1</hmis:ExportDirective>
