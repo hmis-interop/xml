@@ -2461,7 +2461,7 @@
 	
 	<xs:complexType name="pathStatus">
 		<xs:sequence>
-			<xs:element name="PathStatusID" type="hmis:string32">
+			<xs:element name="PATHStatusID" type="hmis:string32">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Reference to the PathStatus' unique ID</xs:documentation>
 				</xs:annotation>
