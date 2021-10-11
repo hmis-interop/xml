@@ -4571,11 +4571,11 @@
 			<xs:enumeration value="4">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Other"</xs:documentation>
-				</xs:annotation>       
+				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-		
+
 	<xs:simpleType name="exportDirective" id="exportDirective">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -4595,13 +4595,13 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="extension" id="extension">
 		<xs:restriction base="xs:string">
 			<xs:pattern value="[0-9]{1,5}"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="federalPartnerProgramsAndComponents" id="federalPartnerProgramsAndComponents">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -4763,7 +4763,7 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">HUD: Public and Indian Housing (PIH) Programs</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="37">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">VA: Grant Per Diem – Bridge Housing</xs:documentation>
@@ -4793,7 +4793,7 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">VA: Grant Per Diem – Transition in Place</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="43">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">HUD: CoC – Youth Homeless Demonstration Program (YHDP)</xs:documentation>
@@ -4846,7 +4846,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="noYesDoesntKnowRefused" id="noYesDoesntKnowRefused">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
@@ -4858,12 +4858,12 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Yes</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="8">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>				
+			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client refused</xs:documentation>
@@ -4873,10 +4873,10 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="rhyReasonNoServices" id="rhyReasonNoServices">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -4906,7 +4906,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="feelingFrequency" id="feelingFrequency">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
@@ -4951,13 +4951,13 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="geocode" id="geocode">
 		<xs:restriction base="xs:token">
 			<xs:pattern value="[0-9]{6}"/>    
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="geographyType" id="geographyType">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -4982,7 +4982,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="healthStatusType" id="healthStatusType">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -5027,7 +5027,7 @@
 			</xs:enumeration>			
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="hopwaMedAssistedLivingFac" id="hopwaMedAssistedLivingFac">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
@@ -5047,7 +5047,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="householdID" id="_5.09.1">
 		<xs:annotation>
 			<xs:documentation>
@@ -5056,7 +5056,7 @@
 		</xs:annotation>
 		<xs:restriction base="hmis:string32"/>			
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="householdType" id="householdType">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -5136,6 +5136,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
+
 	<xs:simpleType name="housingType" id="housingType">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -5155,7 +5156,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="incarceratedAdult" id="incarceratedAdult">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
@@ -5180,7 +5181,7 @@
 			</xs:enumeration>			
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="issuesYears" id="issuesYears">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -5192,14 +5193,14 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">1 to 2 years</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>	
+			</xs:enumeration>
 			<xs:enumeration value="3">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">3 to 5 or more years</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>		
+			</xs:enumeration>
 		</xs:restriction>
-	</xs:simpleType>	
+	</xs:simpleType>
 
 	<xs:simpleType name="lastGradeCompletedSimple" id="lastGradeCompletedSimple">
 		<xs:restriction base="xs:unsignedInt">
@@ -5267,7 +5268,7 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client refused</xs:documentation>
@@ -5280,7 +5281,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="literalHomelessHistory" id="literalHomelessHistory">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
