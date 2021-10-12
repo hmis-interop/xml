@@ -5805,7 +5805,7 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client did not apply</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="4">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Insurance type N/A for this client</xs:documentation>
@@ -5828,7 +5828,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="noYesMissing" id="noYesMissing">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
@@ -5848,7 +5848,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="noYesRefused" id="noYesRefused">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
@@ -5868,7 +5868,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="noYesWorkerDoesntKnow" id="noYesWorkerDoesntKnow">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
@@ -5888,7 +5888,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="personalID" id="_5.08.1">
 		<xs:annotation>
 			<xs:documentation>
@@ -5928,7 +5928,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="percentAMISimple" id="percentAMISimple">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -5988,16 +5988,16 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="projectID" id="_5.05.1">
 		<xs:annotation>
 			<xs:documentation>
 				<xs:documentation xml:lang="en">Project Identifier (2.02) of the project that entered or edited the data</xs:documentation>
 			</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="hmis:string32"/>			
+		<xs:restriction base="hmis:string32"/>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="projectType" id="projectType">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -6087,7 +6087,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="reasonNotEnrolled" id="reasonNotEnrolled">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -6127,7 +6127,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="referralResult" id="referralResult">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -6227,7 +6227,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="relationshipToHoH" id="relationshipToHoH">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -6262,7 +6262,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="schoolStatus" id="schoolStatus">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -6372,8 +6372,8 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
-	<xs:simpleType name="sexualOrientation" id="sexualOrientation">		
+
+	<xs:simpleType name="sexualOrientation" id="sexualOrientation">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
@@ -6422,7 +6422,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="sourceType" id="sourceType">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -6447,7 +6447,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="ssnDataQuality" id="ssnDataQuality">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -6551,43 +6551,43 @@
 			<xs:enumeration value="AP"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="string32" id="string32">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="32"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="string320" id="string320">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="320"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="string5" id="string5">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="5"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="string50" id="string50">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="50"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="string100" id="string100">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="100"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="string250" id="string250">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="250"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="string500" id="string500">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="500"/>
@@ -6628,13 +6628,13 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="subTypeProvided">
 		<xs:restriction base="xs:token">
 			<xs:pattern value="[0-9]{1,2}"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="timeToHousingLoss" id="timeToHousingLoss">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
@@ -6661,10 +6661,10 @@
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="timesHomelessPastThreeYears" id="timesHomelessPastThreeYears">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -6731,7 +6731,7 @@
 			<xs:maxInclusive value="1500"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="tCellOrViralLoadSource" id="tCellOrViralLoadSource">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -6751,7 +6751,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="trackingMethod" id="trackingMethod">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
@@ -6766,7 +6766,6 @@
 			</xs:enumeration>			
 		</xs:restriction>
 	</xs:simpleType>
-	
 	<xs:simpleType name="vamcStation" id="vamcStation">
 		<xs:restriction base="xs:string">
 			<xs:pattern value="[A-Za-z0-9]{1,8}"/>
@@ -7622,11 +7621,11 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:simpleType name="zipCode" id="zipCode">
 		<xs:restriction base="xs:string">
 			<xs:pattern value="[0-9]{5}"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 </xs:schema>
