@@ -587,6 +587,9 @@
 	</xs:complexType>
 
 	<xs:complexType name="disabilityResponsePhysicalDisability" id="_4.05.2">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Physical Disability</xs:documentation>
+		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="hmis:disabilityResponseBase">
 				<xs:simpleType>
@@ -597,6 +600,9 @@
 	</xs:complexType>
 
 	<xs:complexType name="disabilityResponseDevelopmentalDisability" id="_4.06.2">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Developmental Disability</xs:documentation>
+		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="hmis:disabilityResponseBase">
 				<xs:simpleType>
@@ -607,6 +613,9 @@
 	</xs:complexType>
 
 	<xs:complexType name="disabilityResponseChronicHealthCondition" id="_4.07.2">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Chronic Health Condition</xs:documentation>
+		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="hmis:disabilityResponseBase">
 				<xs:simpleType>
@@ -617,6 +626,9 @@
 	</xs:complexType>
 
 	<xs:complexType name="disabilityResponseHIVAIDS" id="_4.08.2">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">HIV/AIDS</xs:documentation>
+		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="hmis:disabilityResponseBase">
 				<xs:simpleType>
@@ -627,6 +639,9 @@
 	</xs:complexType>
 
 	<xs:complexType name="disabilityResponseMentalHealthDisorder" id="_4.09.2">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Mental Health Disorder</xs:documentation>
+		</xs:annotation>
 		<xs:simpleContent>
 			<xs:restriction base="hmis:disabilityResponseBase">
 				<xs:simpleType>
