@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
-<xs:schema targetNamespace="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vc:minVersion="1.1" version="v1.0.1" elementFormDefault="qualified" attributeFormDefault="qualified">
+<xs:schema targetNamespace="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vc:minVersion="1.1" version="v1.0.2" elementFormDefault="qualified" attributeFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>All data elements referenced with an "id" attribute correspond to that same data element id within the FY2022 HMIS Data Dictionary (sans the "_" prefix).</xs:documentation>
 	</xs:annotation>
