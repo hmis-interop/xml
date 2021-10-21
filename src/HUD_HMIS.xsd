@@ -353,12 +353,12 @@
 					<xs:documentation xml:lang="en">Theatre of Operations: Other Peace-keeping Operations or Military Interventions (such as Lebanon, Panama, Somalia, Bosnia, Kosovo)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MilitaryBranch" id="_V1.11" type="militaryBranch" minOccurs="0">
+			<xs:element name="MilitaryBranch" id="_V1.11" type="hmis:militaryBranch" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Branch of the Military</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DischargeStatus" id="_V1.12" type="dischargeStatus" minOccurs="0">
+			<xs:element name="DischargeStatus" id="_V1.12" type="hmis:dischargeStatus" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Discharge Status</xs:documentation>
 				</xs:annotation>
