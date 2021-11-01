@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd file:////home/eric/git/hmis-xsd/src/HUD_HMIS.xsd"
+    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd"
  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
  xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd">
     <hmis:Source>
@@ -18,11 +18,11 @@
             <hmis:ExportID>37</hmis:ExportID>
             <hmis:ExportDate>2015-02-27T23:14:59</hmis:ExportDate>
             <hmis:ExportPeriod>
-                <hmis:StartDate>2015-01-04T23:14:59</hmis:StartDate>
-                <hmis:EndDate>2015-03-26T23:14:59Z</hmis:EndDate>
+                <hmis:StartDate>2015-01-04</hmis:StartDate>
+                <hmis:EndDate>2015-03-26</hmis:EndDate>
             </hmis:ExportPeriod>
             <hmis:ExportPeriodType>2</hmis:ExportPeriodType>
-            <hmis:ExportDirective>other</hmis:ExportDirective>
+            <hmis:ExportDirective>1</hmis:ExportDirective>
             <hmis:Affiliation hmis:dateCreated="2019-04-11T23:14:59Z" hmis:dateUpdated="2019-05-30T23:14:59" hmis:userID="nf">
                 <hmis:AffiliationID>76yt</hmis:AffiliationID>
                 <hmis:ProjectID>222E</hmis:ProjectID>
@@ -53,6 +53,7 @@
                 <hmis:AssessmentID>abc7777</hmis:AssessmentID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
                 <hmis:PersonalID>34fty2</hmis:PersonalID>
+                <hmis:AssessmentResultType>Placement</hmis:AssessmentResultType>
                 <hmis:AssessmentResult>"81":"Recommended Placement"</hmis:AssessmentResult>
             </hmis:AssessmentResults>
             <hmis:Client hmis:dateCreated="2019-04-11T23:14:59Z" hmis:dateUpdated="2019-05-30T23:14:59" hmis:userID="ned100">
@@ -78,7 +79,7 @@
                 <hmis:NoSingleGender>99</hmis:NoSingleGender>
                 <hmis:Transgender>99</hmis:Transgender>
                 <hmis:Questioning>0</hmis:Questioning>
-                <hmis:NoSingleGender>8</hmis:NoSingleGender>
+                <hmis:GenderNone>8</hmis:GenderNone>
                 <hmis:VeteranStatus>9</hmis:VeteranStatus>
             </hmis:Client>
             <hmis:ClientVeteranInfo hmis:dateCreated="2019-12-17T23:14:59" hmis:dateUpdated="2019-03-10T23:14:59" hmis:userID="dZPlRM">
@@ -225,14 +226,12 @@
                  hmis:dateUpdated="2019-02-19T23:14:59" hmis:userID="DU5m">
                 <hmis:EnrollmentCoCID>56332</hmis:EnrollmentCoCID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
-                <hmis:HouseholdID>a34563w</hmis:HouseholdID>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
             </hmis:EnrollmentCoC>
             <hmis:EnrollmentCoC hmis:dataCollectionStage="1" hmis:informationDate="2019-06-24" hmis:dateCreated="2019-02-13T23:14:59Z"
                 hmis:dateUpdated="2019-02-19T23:14:59" hmis:userID="DU5m">
                 <hmis:EnrollmentCoCID>56332</hmis:EnrollmentCoCID>
                 <hmis:EnrollmentID>w5642</hmis:EnrollmentID>
-                <hmis:HouseholdID>a34563w</hmis:HouseholdID>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
             </hmis:EnrollmentCoC>
             <hmis:EntryRHY hmis:dateCreated="2019-05-08T23:14:59" hmis:dateUpdated="2019-05-06T23:14:59Z" hmis:userID="DG4IfIQuAFF6I.yl7">
@@ -264,7 +263,7 @@
                 <hmis:AddressDataQuality>2</hmis:AddressDataQuality>
                 <hmis:TimeToHousingLoss>99</hmis:TimeToHousingLoss>
                 <hmis:AnnualPercentAMI>2</hmis:AnnualPercentAMI>
-                <hmis:ClientLeaseHolder>99</hmis:ClientLeaseHolder>
+                <hmis:ClientLeaseholder>99</hmis:ClientLeaseholder>
                 <hmis:CriminalRecord>1</hmis:CriminalRecord>
                 <hmis:CurrentPregnant>99</hmis:CurrentPregnant>
                 <hmis:DependentUnder6>1</hmis:DependentUnder6>
@@ -312,7 +311,7 @@
                 <hmis:CountOfExchangeForSex>3</hmis:CountOfExchangeForSex>
                 <hmis:AskedOrForcedToExchangeForSex>1</hmis:AskedOrForcedToExchangeForSex>
                 <hmis:AskedOrForcedToExchangeForSexPastThreeMonths>8</hmis:AskedOrForcedToExchangeForSexPastThreeMonths>
-                <hmis:WorkPlaceViolenceThreats>0</hmis:WorkPlaceViolenceThreats>
+                <hmis:WorkplaceViolenceThreats>0</hmis:WorkplaceViolenceThreats>
                 <hmis:WorkplacePromiseDifference>1</hmis:WorkplacePromiseDifference>
                 <hmis:CoercedToContinueWork>0</hmis:CoercedToContinueWork>
                 <hmis:LaborExploitPastThreeMonths>8</hmis:LaborExploitPastThreeMonths>
@@ -354,7 +353,8 @@
                 <hmis:StartDate>2016-06-11Z</hmis:StartDate>
                 <hmis:EndDate>2016-04-08</hmis:EndDate>
             </hmis:Funder>
-            <hmis:ProjectCoC hmis:dateCreated="2019-09-03T23:14:59" hmis:dateUpdated="2019-02-25T23:14:59Z" hmis:userID="ck" hmis:informationDate="2019-02-25">
+            <hmis:ProjectCoC hmis:dateCreated="2019-09-03T23:14:59" hmis:dateUpdated="2019-02-25T23:14:59Z" hmis:userID="ck">
+                <hmis:ProjectCoCID>1</hmis:ProjectCoCID>
                 <hmis:ProjectID>222E</hmis:ProjectID>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
                 <hmis:Geocode>177988</hmis:Geocode>
@@ -458,10 +458,9 @@
             </hmis:IncomeAndSources>
             <hmis:Inventory hmis:dateCreated="2019-09-12T23:14:59Z" hmis:dateUpdated="2019-08-29T23:14:59Z" hmis:userID="billj">
                 <hmis:InventoryID>56563a</hmis:InventoryID>
-                <hmis:ProjectID>222D</hmis:ProjectID>
+                <hmis:ProjectCoCID>1</hmis:ProjectCoCID>
                 <hmis:InventoryStartDate>2014-10-31</hmis:InventoryStartDate>
                 <hmis:InventoryEndDate>2015-05-12Z</hmis:InventoryEndDate>
-                <hmis:CoCCode>BZ-123</hmis:CoCCode>
                 <hmis:HouseholdType>1</hmis:HouseholdType>
                 <hmis:ESBedType>2</hmis:ESBedType>
                 <hmis:Availability>3</hmis:Availability>
@@ -507,7 +506,7 @@
             <hmis:PATHStatus hmis:dateCreated="2019-08-31T23:14:59" hmis:dateUpdated="2019-01-06T23:14:59" hmis:userID="bmerriweather">
                 <hmis:PATHStatusID>453332</hmis:PATHStatusID>
                 <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
-                <hmis:DateOfStatus>2016-04-23</hmis:DateOfStatus>
+                <hmis:DateOfPATHStatus>2016-04-23</hmis:DateOfPATHStatus>
                 <hmis:ClientEnrolledInPATH>0</hmis:ClientEnrolledInPATH>
                 <hmis:ReasonNotEnrolled>2</hmis:ReasonNotEnrolled>
             </hmis:PATHStatus>
@@ -551,17 +550,23 @@
                 <hmis:HMISParticipatingProject>1</hmis:HMISParticipatingProject>
                 <hmis:TargetPopulation>4</hmis:TargetPopulation>
             </hmis:Project>
-            <hmis:ProjectCoC  hmis:dateCreated="2019-11-22T23:14:59" hmis:dateUpdated="2019-10-11T23:14:59Z" hmis:informationDate="2019-11-21" hmis:userID="bmerriweather">
+            <hmis:ProjectCoC  hmis:dateCreated="2019-11-22T23:14:59" hmis:dateUpdated="2019-10-11T23:14:59Z" hmis:userID="bmerriweather">
+                <hmis:ProjectCoCID>2</hmis:ProjectCoCID>
                 <hmis:ProjectID>222D</hmis:ProjectID>
                 <hmis:CoCCode>BZ-123</hmis:CoCCode>
+                <hmis:Geocode>123456</hmis:Geocode>
             </hmis:ProjectCoC>
-            <hmis:ProjectCoC  hmis:dateCreated="2019-11-22T23:14:59" hmis:dateUpdated="2019-10-11T23:14:59Z" hmis:informationDate="2019-11-21" hmis:userID="bmerriweather">
-                <hmis:ProjectID>222E</hmis:ProjectID>
+            <hmis:ProjectCoC  hmis:dateCreated="2019-11-22T23:14:59" hmis:dateUpdated="2019-10-11T23:14:59Z" hmis:userID="bmerriweather">
+                <hmis:ProjectCoCID>3</hmis:ProjectCoCID>
+                <hmis:ProjectID>222E</hmis:ProjectID>                
                 <hmis:CoCCode>MA-500</hmis:CoCCode>
+                <hmis:Geocode>123456</hmis:Geocode>
             </hmis:ProjectCoC>
-            <hmis:ProjectCoC  hmis:dateCreated="2019-11-22T23:14:59" hmis:dateUpdated="2019-10-11T23:14:59Z" hmis:informationDate="2019-11-21" hmis:userID="bmerriweather">
+            <hmis:ProjectCoC  hmis:dateCreated="2019-11-22T23:14:59" hmis:dateUpdated="2019-10-11T23:14:59Z" hmis:userID="bmerriweather">
+                <hmis:ProjectCoCID>4</hmis:ProjectCoCID>                
                 <hmis:ProjectID>222F</hmis:ProjectID>
                 <hmis:CoCCode>MA-500</hmis:CoCCode>
+                <hmis:Geocode>123456</hmis:Geocode>
             </hmis:ProjectCoC>
             <hmis:RHYAftercare hmis:dateCreated="2019-04-25T23:14:59" hmis:dateUpdated="2019-04-25T23:14:59" hmis:userID="AUfZ2">
                 <hmis:RHYAftercareID>34Rwwh</hmis:RHYAftercareID>
@@ -612,7 +617,7 @@
             <hmis:VASHExitReason hmis:dateCreated="2019-08-13T23:14:59" hmis:dateUpdated="2019-08-13T23:14:59" hmis:userID="452sd">
                 <hmis:VashExitReasonID>1sshhdw1121</hmis:VashExitReasonID>
                 <hmis:ExitID>C2x</hmis:ExitID>
-                <hmis:CMExitReason>99</hmis:CMExitReason>
+                <hmis:CMExitReason>13</hmis:CMExitReason>
             </hmis:VASHExitReason>
             <hmis:YouthEducationStatus hmis:dataCollectionStage="1" hmis:informationDate="2019-11-21" hmis:dateCreated="2019-08-13T23:14:59" hmis:dateUpdated="2019-08-13T23:14:59" hmis:userID="452sd">
                 <hmis:YouthEducationStatusID>1</hmis:YouthEducationStatusID>
