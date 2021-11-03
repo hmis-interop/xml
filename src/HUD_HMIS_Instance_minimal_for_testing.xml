@@ -44,9 +44,9 @@
                 <hmis:BlackAfAmerican>1</hmis:BlackAfAmerican>
                 <hmis:NativeHIPacific>1</hmis:NativeHIPacific>
                 <hmis:White>0</hmis:White>
-                <hmis:Ethnicity>0</hmis:Ethnicity>                
+                <hmis:Ethnicity>0</hmis:Ethnicity>
                 <hmis:Female>0</hmis:Female>
-                <hmis:Male>0</hmis:Male>
+                <hmis:Male>1</hmis:Male>
                 <hmis:NoSingleGender>0</hmis:NoSingleGender>
                 <hmis:Transgender>99</hmis:Transgender>
                 <hmis:Questioning>0</hmis:Questioning>
