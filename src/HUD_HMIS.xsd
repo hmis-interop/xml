@@ -3462,10 +3462,6 @@
 					<xs:selector xpath="hmis:Project"/>
 					<xs:field xpath="hmis:OrganizationID"/>
 				</xs:keyref>	
-				<xs:keyref name="referralSourceEnrollmentRKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:ReferralSource"/>
-					<xs:field xpath="hmis:EnrollmentID"/>
-				</xs:keyref>
 				<xs:keyref name="rHYAftercareExitKeyRef" refer="exitKey">
 					<xs:selector xpath="hmis:RHYAftercare"/>
 					<xs:field xpath="hmis:ExitID"/>
@@ -3476,10 +3472,6 @@
 				</xs:keyref>
 				<xs:keyref name="serviceFAReferralEnrollmentKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:ServiceFAReferral"/>
-					<xs:field xpath="hmis:EnrollmentID"/>
-				</xs:keyref>
-				<xs:keyref name="sexualOrientationEnrollmentKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:SexualOrientation"/>
 					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="wellbeingEnrollmentKeyRef" refer="enrollmentKey">
