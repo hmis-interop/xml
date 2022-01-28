@@ -1,37 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<hmis:Sources
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS_Example_Extension.xsd"
-    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd"
-    xmlns:ext="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS_Example_Extension.xsd">
-    
-    <hmis:Source>
-        <hmis:SourceType>2</hmis:SourceType>
-        <hmis:SourceName>Fictitious County HMIS</hmis:SourceName>
-        <hmis:SoftwareName>HMISSoft Inc.</hmis:SoftwareName>
-        <hmis:SoftwareVersion>3</hmis:SoftwareVersion>
-        <hmis:SourceContactEmail>bill@gsnail.com</hmis:SourceContactEmail>
-        <hmis:SourceContactExtension>775</hmis:SourceContactExtension>
-        <hmis:SourceContactFirst>Patricia</hmis:SourceContactFirst>
-        <hmis:SourceContactLast>Duke</hmis:SourceContactLast>
-        <hmis:SourceContactPhone>5939698367</hmis:SourceContactPhone>
-        <ext:Export>
-            <hmis:ExportID>12345</hmis:ExportID>
-            <hmis:ExportDate>2015-02-27T23:14:59</hmis:ExportDate>
-            <hmis:ExportPeriod>
-                <hmis:StartDate>2015-01-04T23:14:59</hmis:StartDate>
-                <hmis:EndDate>2015-03-26T23:14:59Z</hmis:EndDate>
-            </hmis:ExportPeriod>
-            <hmis:ExportPeriodType>effective</hmis:ExportPeriodType>
-            <hmis:ExportDirective>other</hmis:ExportDirective>
-            <hmis:Organization hmis:dateCreated="2015-02-17T23:14:59" hmis:dateUpdated="2016-02-29T23:14:59" hmis:userID="ptravis">
-                <hmis:OrganizationID>34</hmis:OrganizationID>
-                <hmis:OrganizationName>Helping People, Inc.</hmis:OrganizationName>
-                <hmis:OrganizationCommonName>Helping</hmis:OrganizationCommonName>
-                <hmis:VictimServiceProvider>99</hmis:VictimServiceProvider>
-            </hmis:Organization>
-            <MyFavoriteColor>blue</MyFavoriteColor>
-        </ext:Export>
-    </hmis:Source>
+<hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS_Example_Extension.xsd https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS_Example_Extension.xsd"
+ xmlns:ext="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS_Example_Extension.xsd"
+ xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd">
+
+	<hmis:Source>
+		<hmis:SourceType>2</hmis:SourceType>
+		<hmis:SourceName>Fictitious County HMIS</hmis:SourceName>
+		<hmis:SoftwareName>HMISSoft Inc.</hmis:SoftwareName>
+		<hmis:SoftwareVersion>3</hmis:SoftwareVersion>
+		<hmis:SourceContactEmail>bill@gsnail.com</hmis:SourceContactEmail>
+		<hmis:SourceContactExtension>775</hmis:SourceContactExtension>
+		<hmis:SourceContactFirst>Patricia</hmis:SourceContactFirst>
+		<hmis:SourceContactLast>Duke</hmis:SourceContactLast>
+		<hmis:SourceContactPhone>5939698367</hmis:SourceContactPhone>
+		<ext:Export>
+			<hmis:ExportID>12345</hmis:ExportID>
+			<hmis:ExportDate>2015-02-27T23:14:59</hmis:ExportDate>
+			<hmis:ExportPeriod>
+				<hmis:StartDate>2015-01-04</hmis:StartDate>
+				<hmis:EndDate>2015-03-26</hmis:EndDate>
+			</hmis:ExportPeriod>
+			<hmis:ExportPeriodType>1</hmis:ExportPeriodType>
+			<hmis:ExportDirective>1</hmis:ExportDirective>
+			<hmis:Organization hmis:dateCreated="2015-02-17T23:14:59" hmis:dateUpdated="2016-02-29T23:14:59" hmis:userID="ptravis">
+				<hmis:OrganizationID>34</hmis:OrganizationID>
+				<hmis:OrganizationName>Helping People, Inc.</hmis:OrganizationName>
+				<hmis:OrganizationCommonName>Helping</hmis:OrganizationCommonName>
+				<hmis:VictimServiceProvider>99</hmis:VictimServiceProvider>
+			</hmis:Organization>
+			<MyFavoriteColor>blue</MyFavoriteColor>
+		</ext:Export>
+	</hmis:Source>
 </hmis:Sources>
