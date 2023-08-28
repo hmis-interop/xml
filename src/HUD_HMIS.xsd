@@ -139,12 +139,67 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
 
+	<xs:complexType name="cEParticipation">
+		<xs:sequence>
+			<xs:element name="CEParticipationID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the CE Participation's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProjectID" type="hmis:projectID">
+				<xs:annotation>
+					<xs:documentation>Must match an hmis:project.ProjectID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AccessPoint" id="_2.09.1" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Project is a Coordinated Entry Access Point</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PreventionAssessment" id="_2.09.A.1" type="hmis:noYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Homelessness Prevention Assessment, Screening, and/or Referral. Provided by CE Project</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CrisisAssessment" id="_2.09.A.2" type="hmis:noYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Shelter Assessment, Screening, and/or Referral. Provided by CE Project</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HousingAssessment" id="_2.09.A.3" type="hmis:noYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Housing Assessment, Screening, and/or Referral. Provided by CE Project</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DirectServices" id="_2.09.A.4" type="hmis:noYes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Direct Services (search and/or placement support). Provided by CE Project</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ReceivesReferrals" id="_2.09.2" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Project Receives CE Referrals. Provided by CE Project</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CEParticipationStatusStartDate" id="_2.09.3" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">CE Participation Status Start Date ([date field])</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CEParticipationStatusEndDate" id="_2.09.4" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">CE Participation Status End Date ([date field])</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="hmis:baseMetaData"/>
+	</xs:complexType>
 	<xs:complexType name="client">
 		<xs:sequence>
 			<xs:element name="PersonalID" type="hmis:personalID"/>
 			<xs:element name="FirstName" id="_3.01.1" type="hmis:nameHashingOption" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">First</xs:documentation>
+					<xs:documentation xml:lang="en">First ([text])</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
 				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1"/>
@@ -153,7 +208,7 @@
 			</xs:element>
 			<xs:element name="MiddleName"  id="_3.01.2" type="hmis:nameHashingOption" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Middle</xs:documentation>
+					<xs:documentation xml:lang="en">Middle ([text])</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
 				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1"/>
@@ -162,7 +217,7 @@
 			</xs:element>
 			<xs:element name="LastName" id="_3.01.3" type="hmis:nameHashingOption" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Last</xs:documentation>
+					<xs:documentation xml:lang="en">Last (text)</xs:documentation>
 				</xs:annotation>
 				<xs:alternative test="@hmis:hashStatus='1'" type="hmis:nameHashingOptionPlain"/>
 				<xs:alternative test="@hmis:hashStatus='2'" type="hmis:nameHashingOptionSHA1"/>
@@ -171,7 +226,7 @@
 			</xs:element>
 			<xs:element name="NameSuffix"  id="_3.01.4" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Suffix</xs:documentation>
+					<xs:documentation xml:lang="en">Suffix ([text])</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NameDataQuality"  id="_3.01.5" type="hmis:nameDataQuality">
@@ -204,70 +259,90 @@
 					<xs:documentation xml:lang="en">DOB Data Quality</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AmIndAKNative" id="_3.04.1" type="hmis:noYesMissing">
+			<xs:element name="AmIndAKNative" id="_3.04.1.1" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">American Indian, Alaska Native, or Indigenous</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Asian" id="_3.04.2" type="hmis:noYesMissing">
+			<xs:element name="Asian" id="_3.04.1.2" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Asian or Asian American</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="BlackAfAmerican" id="_3.04.3" type="hmis:noYesMissing">
+			<xs:element name="BlackAfAmerican" id="_3.04.1.3" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Black, African American, or African</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NativeHIPacific" id="_3.04.4" type="hmis:noYesMissing">
+			<xs:element name="HispanicLatinaeo" id="_3.04.1.4" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Hispanic/Latina/e/o</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MidEastNAfrican" id="_3.04.1.5" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Middle Eastern or North African</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NativeHIPacific" id="_3.04.1.6" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Native Hawaiian or Pacific Islander</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="White" id="_3.04.5" type="hmis:noYesMissing">
+			<xs:element name="White" id="_3.04.1.7" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">White</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="RaceNone" id="_3.04.6" type="hmis:raceGenderNone" minOccurs="0">
+			<xs:element name="RaceNone" id="_3.04.1.8" type="hmis:raceGenderNone" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Race None</xs:documentation>
+					<xs:documentation xml:lang="en">Race None. Non-null only if all other race fields = 0 or 99</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Ethnicity" id="_3.05.1" type="hmis:ethnicity">
+			<xs:element name="AdditionalRaceEthnicity" id="_3.04.2" type="hmis:string100" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Ethnicity</xs:documentation>
+					<xs:documentation xml:lang="en">Additional Race and Ethnicity Detail ([Text])</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Female" id="_3.06.1.1" type="hmis:noYesMissing">
+			<xs:element name="Woman" id="_3.06.1.1" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Female</xs:documentation>
+					<xs:documentation xml:lang="en">Woman (Girl, if child)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Male" id="_3.06.1.2" type="hmis:noYesMissing">
+			<xs:element name="Man" id="_3.06.1.2" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Male</xs:documentation>
+					<xs:documentation xml:lang="en">Man (Boy, if child)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NoSingleGender" id="_3.06.1.3" type="hmis:noYesMissing">
+			<xs:element name="NonBinary" id="_3.06.1.3" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">A gender other than singularly female or male (e.g., non-binary, genderfluid, agender, culturally specific gender)</xs:documentation>
+					<xs:documentation xml:lang="en">Non-Binary</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Transgender" id="_3.06.1.4" type="hmis:noYesMissing">
+			<xs:element name="CulturallySpecific" id="_3.06.1.4" type="hmis:noYes">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Culturally Specific Identity (e.g., TwoSpirit)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Transgender" id="_3.06.1.5" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Transgender</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Questioning" id="_3.06.1.5" type="hmis:noYesMissing">
+			<xs:element name="Questioning" id="_3.06.1.6" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Questioning</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GenderNone" id="_3.06.1.6" type="hmis:raceGenderNone" minOccurs="0">
+			<xs:element name="DifferentIdentity" id="_3.06.1.7" type="hmis:noYes">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Gender None</xs:documentation>
+					<xs:documentation xml:lang="en">Different Identity</xs:documentation>
 				</xs:annotation>
+			</xs:element>
+			<xs:element name="GenderNone" id="_3.06.1.8" type="hmis:raceGenderNone" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Gender None. Non-null only if all other gender fields = 0 or 99.</xs:documentation>
+				</xs:annotation>DifferentIdentity
 			</xs:element>
 			<xs:element name="VeteranStatus" id="_3.07.1" type="hmis:noYesDoesntKnowRefused">
 				<xs:annotation>
@@ -1440,6 +1515,7 @@
 				<xs:element name="Assessment" type="hmis:assessment"/>
 				<xs:element name="AssessmentQuestions" type="hmis:assessmentQuestions"/>				
 				<xs:element name="AssessmentResults" type="hmis:assessmentResults"/>
+				<xs:element name="CEParticipation" type="hmis:cEParticipation"/>
 				<xs:element name="Client" type="hmis:client"/>
 				<xs:element name="ClientVeteranInfo" type="hmis:clientVeteranInfo"/>
 				<xs:element name="ConnectionWithSOAR" type="hmis:connectionWithSOAR"/>
@@ -3353,6 +3429,10 @@
 					<xs:selector xpath="hmis:AssessmentResults"/>
 					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
+				<xs:keyref name="cEParticipationProjectKeyRef" refer="projectKey">
+					<xs:selector xpath="hmis:CEParticipation"/>
+					<xs:field xpath="hmis:ProjectID"/>
+				</xs:keyref>
 				<xs:key name="clientKey">
 					<xs:selector xpath="hmis:Client"/>
 					<xs:field xpath="hmis:PersonalID"/>
@@ -4884,6 +4964,20 @@
 		</xs:restriction>
 	</xs:simpleType>
 
+	<xs:simpleType name="noYes" id="noYes">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">No</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Yes</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="noYesDoesntKnowRefused" id="noYesDoesntKnowRefused">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
@@ -6133,7 +6227,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
