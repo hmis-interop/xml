@@ -342,9 +342,14 @@
 			<xs:element name="GenderNone" id="_3.06.1.8" type="hmis:raceGenderNone" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Gender None. Non-null only if all other gender fields = 0 or 99.</xs:documentation>
-				</xs:annotation>DifferentIdentity
+				</xs:annotation>
 			</xs:element>
-			<xs:element name="VeteranStatus" id="_3.07.1" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="DifferentIdentityText" id="_3.06.A" type="hmis:string100" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">If Different Identity, Please Specify ([Text]). Non-null if DifferentIdentity=1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VeteranStatus" id="_3.07.1" type="hmis:noYesReasonsForMissingData">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Veteran Status</xs:documentation>
 				</xs:annotation>
@@ -370,9 +375,7 @@
 				if (hmis:AmIndAKNative/text()='1' or hmis:Asian/text()='1' or hmis:BlackAfAmerican/text()='1' or hmis:NativeHIPacific/text()='1' or hmis:White/text()='1')
 					then true()
 			else false()"/>
-
 	</xs:complexType>
-
 	<xs:complexType name="clientVeteranInfo">
 		<xs:sequence>
 			<xs:element name="ClientVeteranInfoID" type="hmis:string32">
@@ -391,42 +394,42 @@
 					<xs:documentation xml:lang="en">Year Separated from Military Service (year)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WorldWarII" id="_V1.3" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="WorldWarII" id="_V1.3" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Theatre of Operations: World War II</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="KoreanWar" id="_V1.4" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="KoreanWar" id="_V1.4" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Theatre of Operations: Korean War</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="VietnamWar" id="_V1.5" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="VietnamWar" id="_V1.5" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Theatre of Operations: Vietnam War</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DesertStorm" id="_V1.6" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="DesertStorm" id="_V1.6" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Theatre of Operations: Persian Gulf War (Operation Desert Storm)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AfghanistanOEF" id="_V1.7" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="AfghanistanOEF" id="_V1.7" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Theatre of Operations: Afghanistan (Operation Enduring Freedom)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IraqOIF" id="_V1.8" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="IraqOIF" id="_V1.8" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Theatre of Operations: Iraq (Operation Iraqi Freedom)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="IraqOND" id="_V1.9" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="IraqOND" id="_V1.9" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Theatre of Operations: Iraq (Operation New Dawn)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherTheater" id="_V1.10" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="OtherTheater" id="_V1.10" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Theatre of Operations: Other Peace-keeping Operations or Military Interventions (such as Lebanon, Panama, Somalia, Bosnia, Kosovo)</xs:documentation>
 				</xs:annotation>
@@ -453,7 +456,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>
-			<xs:element name="ConnectionWithSOAR" id="_P4.1" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="ConnectionWithSOAR" id="_P4.1" type="hmis:noYesReasonsForMissingData">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Connection with SOAR</xs:documentation>
 				</xs:annotation>
@@ -475,36 +478,41 @@
 			<xs:element name="PersonalID" type="hmis:personalID"/>
 			<xs:element name="CurrentLivingSituation" id="_4.12.2" type="hmis:livingSituation">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Current Living Situation</xs:documentation>
+					<xs:documentation xml:lang="en">Current Living Situation [See Appendix A – Living Situation Information]</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CLSSubsidyType" id="_4.12.A" type="hmis:rentalSubsidyTypes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Rental Subsidy Type [See Appendix A]. Null unless CurrentLivingSItuation = 435.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VerifiedBy" id="_4.12.3" type="hmis:string100" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Living situation verified by</xs:documentation>
+					<xs:documentation xml:lang="en">Living situation verified by [list of Continuum projects]. Null unless ProjectType = 14.</xs:documentation>
 					<!--validation: <xs:documentation xml:lang="en">(Coordinated Entry Projects ONLY), Null unless hmis:ProjectType = "14"</xs:documentation>-->
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="LeaveSituation14Days" id="_4.12.A" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="LeaveSituation14Days" id="_4.12.B" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Is client going to have to leave their current living situation within 14 days?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SubsequentResidence" id="_4.12.B" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="SubsequentResidence" id="_4.12.C" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Has a subsequent residence been identified?</xs:documentation>
+					<xs:documentation xml:lang="en">Has a subsequent residence been identified? Null unless LeaveSituation14Days = 1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ResourcesToObtain" id="_4.12.C" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="ResourcesToObtain" id="_4.12.D" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Does individual or family have resources or support networks to obtain other permanent housing?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="LeaseOwn60Day" id="_4.12.D" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="LeaseOwn60Day" id="_4.12.E" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Has the client had a lease or ownership interest in a permanent housing unit in the last 60 days?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MovedTwoOrMore" id="_4.12.E" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="MovedTwoOrMore" id="_4.12.F" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Has the client moved 2 or more times in the last 60 days?</xs:documentation>
 				</xs:annotation>
@@ -517,7 +525,7 @@
 		</xs:sequence>
 		<xs:attribute ref="hmis:informationDate" use="required">
 			<xs:annotation>
-				<xs:documentation xml:lang="en">date of contact</xs:documentation>
+				<xs:documentation xml:lang="en">Information Date (date of contact) ([date field])</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
@@ -584,7 +592,7 @@
 					<xs:documentation xml:lang="en">See FY2024 HMIS Data Dictionary, Section 4.05, 4.07, 4.09, and 4.10, Response A.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TCellCountAvailable" id="_W4.2" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="TCellCountAvailable" id="_W4.2" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">T-Cell (CD4) Count Available</xs:documentation>					
 				</xs:annotation>
@@ -614,7 +622,7 @@
 					<xs:documentation xml:lang="en">How was the information obtained?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AntiRetroviral" id="_W6.2" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="AntiRetroviral" id="_W6.2" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Has the participant been prescribed anti-retroviral drugs?</xs:documentation>
 				</xs:annotation>
@@ -671,7 +679,7 @@
 		<xs:simpleContent>
 			<xs:restriction base="hmis:disabilityResponseBase">
 				<xs:simpleType>
-					<xs:restriction base="noYesDoesntKnowRefused"/>
+					<xs:restriction base="noYesReasonsForMissingData"/>
 				</xs:simpleType>	
 			</xs:restriction>
 		</xs:simpleContent>
@@ -684,7 +692,7 @@
 		<xs:simpleContent>
 			<xs:restriction base="hmis:disabilityResponseBase">
 				<xs:simpleType>
-					<xs:restriction base="noYesDoesntKnowRefused"/>
+					<xs:restriction base="noYesReasonsForMissingData"/>
 				</xs:simpleType>	
 			</xs:restriction>
 		</xs:simpleContent>
@@ -697,7 +705,7 @@
 		<xs:simpleContent>
 			<xs:restriction base="hmis:disabilityResponseBase">
 				<xs:simpleType>
-					<xs:restriction base="noYesDoesntKnowRefused"/>
+					<xs:restriction base="noYesReasonsForMissingData"/>
 				</xs:simpleType>	
 			</xs:restriction>
 		</xs:simpleContent>
@@ -710,7 +718,7 @@
 		<xs:simpleContent>
 			<xs:restriction base="hmis:disabilityResponseBase">
 				<xs:simpleType>
-					<xs:restriction base="noYesDoesntKnowRefused"/>
+					<xs:restriction base="noYesReasonsForMissingData"/>
 				</xs:simpleType>	
 			</xs:restriction>
 		</xs:simpleContent>
@@ -723,7 +731,7 @@
 		<xs:simpleContent>
 			<xs:restriction base="hmis:disabilityResponseBase">
 				<xs:simpleType>
-					<xs:restriction base="noYesDoesntKnowRefused"/>
+					<xs:restriction base="noYesReasonsForMissingData"/>
 				</xs:simpleType>	
 			</xs:restriction>
 		</xs:simpleContent>
@@ -776,26 +784,25 @@
 
 	<xs:complexType name="domesticViolence">
 		<xs:sequence>
-			<xs:element name="DomesticViolenceID" type="hmis:string32">
+			<xs:element name="HealthAndDVID" type="hmis:string32">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the DomesticViolence's unique ID</xs:documentation>
+					<xs:documentation xml:lang="en">Reference to the Health And DomesticViolence's unique ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>
-			<xs:element name="DomesticViolenceVictim" id="_4.11.2" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="DomesticViolenceSurvivor" id="_4.11.2" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Domestic Violence Victim/Survivor</xs:documentation>
+					<xs:documentation xml:lang="en">Survivor of Domestic Violence</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WhenOccurred" id="_4.11.A" type="hmis:whenOccurred" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">When experience occurred</xs:documentation>
-					<!--If Yes for “Domestic Violence Victim/Survivor”-->
+					<xs:documentation xml:lang="en">If Yes for “Survivor of Domestic Violence” When experience occurred. Null unless 4.11.2 = 1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CurrentlyFleeing" id="_4.11.B" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="CurrentlyFleeing" id="_4.11.B" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Are you currently fleeing?</xs:documentation>
+					<xs:documentation xml:lang="en">If Yes for “Survivor of Domestic Violence Victim/Survivor”. Are you currently fleeing? Null unless 4.11.2 = 1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -804,10 +811,10 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 
 		<!--Testing if DomesticViolenceVictim is 1, before allowing use of WhenOccurred-->
-		<xs:assert test="if (hmis:WhenOccurred) then boolean(hmis:DomesticViolenceVictim/text()='1') else true()"/>
+		<xs:assert test="if (hmis:WhenOccurred) then boolean(hmis:DomesticViolenceSurvivor/text()='1') else true()"/>
 
 		<!--Testing if DomesticViolenceVictim is 1, before allowing use of CurrentlyFleeing-->
-		<xs:assert test="if (hmis:CurrentlyFleeing) then boolean(hmis:DomesticViolenceVictim/text()='1') else true()"/>
+		<xs:assert test="if (hmis:CurrentlyFleeing) then boolean(hmis:DomesticViolenceSurvivor/text()='1') else true()"/>
 
 	</xs:complexType>
 
@@ -843,7 +850,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>
-			<xs:element name="Employed" id="_R6.2" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="Employed" id="_R6.2" type="hmis:noYesReasonsForMissingData">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Employed</xs:documentation>
 				</xs:annotation>
@@ -880,9 +887,19 @@
 					<xs:documentation xml:lang="en">Relationship to Head of Household</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="EnrollmentCoC" id="_3.16.1" type="hmis:string6">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">HUD assigned CoC code for the client’s location at project start. Must match a record in hmis:ProjectCoC with the same hmis:ProjectID ^[A-Za-z]{2}-(0-9){3}$</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="LivingSituation" id="_3.917.1" type="hmis:livingSituation" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Type of Residence</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RentalSubsidyType" id="_3.917.A" type="hmis:rentalSubsidyTypes" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Rental Subsidy Type [See Appendix A]. Null unless 3.917.1 = 435</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LengthOfStay" id="_3.917.2" type="hmis:lengthOfStay" minOccurs="0">
@@ -902,12 +919,12 @@
 			</xs:element>
 			<xs:element name="DateToStreetESSH" id="_3.917.3" type="xs:date" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Approximate date homelessness started:</xs:documentation>
+					<xs:documentation xml:lang="en">Approximate date this episode of homelessness started: ([date field])</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TimesHomelessPastThreeYears" id="_3.917.4" type="hmis:timesHomelessPastThreeYears" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Number of times the client has been on the streets, in ES, or SH in the past three years including today</xs:documentation>
+					<xs:documentation xml:lang="en">Regardless of where they stayed last night, number of times the client has been on the streets, in ES, or SH in the past three years including today</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MonthsHomelessPastThreeYears" id="_3.917.5" type="hmis:monthsHomelessPastThreeYears" minOccurs="0">
@@ -915,9 +932,24 @@
 					<xs:documentation xml:lang="en">Total number of months homeless on the street, in ES, or SH in the past three year</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DisablingCondition" id="_3.08.1" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="DisablingCondition" id="_3.08.1" type="hmis:noYesReasonsForMissingData">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Disabling Condition</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TranslationNeeded" id="_C4.1" type="hmis:noYesReasonsForMissingData" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Translation Assistance Needed</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PreferredLanguage" id="_C4.A" type="xs:positiveInteger" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Preferred Language</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PreferredLanguageDifferent" id="_C4.B" type="hmis:string100" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">If Different Preferred Language, please specify ([Text]). Null unless C4.A = 21.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -943,23 +975,6 @@
 		</xs:sequence>
 		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
 		<xs:attribute ref="hmis:informationDate" use="required"/>
-		<xs:attributeGroup ref="hmis:baseMetaData"/>
-	</xs:complexType>
-
-	<xs:complexType name="entryRHSP">
-		<xs:sequence>
-			<xs:element name="EntryRHSPID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the EntryRHSP's unique ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>				
-			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>
-			<xs:element name="WorstHousingSituation" id="_U1.1" type="hmis:noYesDoesntKnowRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Worst Housing Situation</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
 	
@@ -1021,7 +1036,7 @@
 					<xs:documentation xml:lang="en">Incarcerated Parent of Youth</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FormerWardJuvenileJustice" id="_R12.1" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="FormerWardJuvenileJustice" id="_R12.1" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Formerly a Ward of Juvenile Justice System</xs:documentation>
 				</xs:annotation>
@@ -1036,7 +1051,7 @@
 					<xs:documentation xml:lang="en">Number of Months</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="FormerWardChildWelfare" id="_R11.1" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="FormerWardChildWelfare" id="_R11.1" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Formerly a Ward of Child Welfare or Foster Care Agency</xs:documentation>
 				</xs:annotation>
@@ -1117,17 +1132,17 @@
 			</xs:element>
 			<xs:element name="LiteralHomelessHistory" id="_V7.C" type="hmis:literalHomelessHistory" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">History of literal homelessness (street/shelter/transitional housing)</xs:documentation>
+					<xs:documentation xml:lang="en">Past experience of Homelessness (street/shelter/transitional housing) (any adult)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ClientLeaseholder" id="_V7.D" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Client is a current leaseholder.</xs:documentation>
+					<xs:documentation>Head of Household is not a current leaseholder/renter of unit</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HOHLeaseholder" id="_V7.E" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Has head of household (HoH) ever been a leaseholder?</xs:documentation>
+					<xs:documentation>Head of Household has never been a leaseholder/renter of unit</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SubsidyAtRisk" id="_V7.F" type="hmis:noYesMissing" minOccurs="0">
@@ -1137,17 +1152,17 @@
 			</xs:element>
 			<xs:element name="EvictionHistory" id="_V7.G" type="hmis:evictionHistory" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Rental Evictions within the past 7 years</xs:documentation>
+					<xs:documentation xml:lang="en">Rental Evictions within the past 7 years (any adult)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CriminalRecord" id="_V7.H" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Criminal record for arson, drug dealing or manufacture, or felony offense against persons or property (adults in household)</xs:documentation>
+					<xs:documentation xml:lang="en">Criminal record for arson, drug dealing or manufacture, or felony offense against persons or property (any adult)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IncarceratedAdult" id="_V7.I" type="hmis:incarceratedAdult" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Criminal record for arson, drug dealing or manufacture, or felony offense against persons or property (adults in household)</xs:documentation>
+					<xs:documentation xml:lang="en">Incarcerated as adult (any adult in household)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PrisonDischarge" id="_V7.J" type="hmis:noYesMissing" minOccurs="0">
@@ -1157,12 +1172,12 @@
 			</xs:element>
 			<xs:element name="SexOffender" id="_V7.K" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Registered sex offender (all household members)</xs:documentation>
+					<xs:documentation xml:lang="en">Registered sex offender (any household members)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DisabledHoH" id="_V7.L" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Head of household with disabling condition (physical health, mental health, substance use) that directly affects ability to secure/maintain housing</xs:documentation>
+					<xs:documentation xml:lang="en">Head of Household with disabling condition (physical health, mental health, substance use) that directly affects ability to secure/maintain housing</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CurrentPregnant" id="_V7.M" type="hmis:noYesMissing" minOccurs="0">
@@ -1172,7 +1187,7 @@
 			</xs:element>
 			<xs:element name="SingleParent" id="_V7.N" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Single parent household with minor child(ren)</xs:documentation>
+					<xs:documentation xml:lang="en">Single parent/guardian household with minor child(ren)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DependentUnder6" id="_V7.O" type="hmis:dependentUnder6" minOccurs="0">
@@ -1280,9 +1295,14 @@
 					<xs:documentation xml:lang="en">Destination</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OtherDestination" id="_3.12.A" type="hmis:string50" minOccurs="0">
+			<xs:element name="DestinationSubsidyType" id="_3.12.A" type="hmis:rentalSubsidyTypes" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">If Other for “Type of Residence”, Specify Where</xs:documentation>
+					<xs:documentation>Rental Subsidy Type – See Appendix A. Null unless Destination = 435.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OtherDestination" id="_3.12.B" type="hmis:string50" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">If Other for “Type of Residence” – text box for “Specify Where”. Null unless Destination = 17.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -1339,12 +1359,12 @@
 					<xs:documentation xml:lang="en">Select the major reason</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ExchangeForSex" id="_R15.1" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="ExchangeForSex" id="_R15.1" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Ever received anything in exchange for sex (e.g. money, food, drugs, shelter)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ExchangeForSexPastThreeMonths" id="_R15.A" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="ExchangeForSexPastThreeMonths" id="_R15.A" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">In the last three months</xs:documentation>
 				</xs:annotation>
@@ -1359,34 +1379,34 @@
 					<xs:documentation xml:lang="en">Ever made/persuaded/forced to have sex in exchange for something</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AskedOrForcedToExchangeForSexPastThreeMonths" id="_R15.D" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="AskedOrForcedToExchangeForSexPastThreeMonths" id="_R15.D" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">In the last three months?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WorkplaceViolenceThreats" id="_R16.1" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="WorkplaceViolenceThreats" id="_R16.1" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Ever afraid to quit/leave work due to threats of violence to yourself, family, or friends</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="WorkplacePromiseDifference" id="_R16.2" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="WorkplacePromiseDifference" id="_R16.2" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Ever promised work where work or payment was different than you expected</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CoercedToContinueWork" id="_R16.A" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="CoercedToContinueWork" id="_R16.A" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Felt forced, coerced, pressured, or tricked into continuing the job</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="LaborExploitPastThreeMonths" id="_R16.B" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="LaborExploitPastThreeMonths" id="_R16.B" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">In the last 3 months</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CounselingReceived" id="_R18.1" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Counseling received by client</xs:documentation>
+					<xs:documentation xml:lang="en">Client received counseling</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IndividualCounseling" id="_R18.A.1" type="hmis:noYesMissing" minOccurs="0">
@@ -1419,7 +1439,7 @@
 					<xs:documentation xml:lang="en">A plan is in place to start or continue counseling after exit</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DestinationSafeClient" id="_R19.1" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="DestinationSafeClient" id="_R19.1" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Exit destination safe – as determined by the client</xs:documentation>
 				</xs:annotation>
@@ -1527,7 +1547,6 @@
 				<xs:element name="Employment" type="hmis:employment"/>
 				<xs:element name="Enrollment" type="hmis:enrollment"/>
 				<xs:element name="EnrollmentCoC" type="hmis:enrollmentCoC"/>
-				<xs:element name="EntryRHSP" type="hmis:entryRHSP"/>
 				<xs:element name="EntryRHY" type="hmis:entryRHY"/>
 				<xs:element name="EntrySSVF" type="hmis:entrySSVF"/>
 				<xs:element name="Event" type="hmis:event"/>
@@ -1552,7 +1571,6 @@
 				<xs:element name="ServiceFAReferral" type="hmis:serviceFAReferral"/>
 				<xs:element name="User" type="hmis:user"/>
 				<xs:element name="VASHExitReason" type="hmis:vashExitReason"/>
-				<xs:element name="Wellbeing" type="hmis:wellbeing"/>
 				<xs:element name="YouthEducationStatus" type="hmis:youthEducationStatus"/>
 			</xs:choice>
 		</xs:sequence>
@@ -1613,7 +1631,7 @@
 		<!-- Checking that that the Project Type = ‘Coordinated Entry/14’ for data element 4.12.3 to exist.  NOTE: this does not work yet-->
 		<!--<xs:assert test="every $currentLivingSituation in hmis:CurrentLivingSituation satisfies (if (boolean($currentLivingSituation/hmis:VerifiedBy)) then (if (every $enrollID in $currentLivingSituation/hmis:EnrollmentID satisfies (every $projectID in hmis:Enrollment[hmis:EnrollmentID = $enrollID]/ProjectID satisfies hmis:Project[hmis:ProjectID=$projectID]/hmis:ProjectType/text()='14')) then (true()) else false()) else (true()))"/>-->		
 		<!-- Checking that there is only one Head of Household per Household enrolled -->
-		<xs:assert test="every $id in hmis:Enrollment/hmis:HouseholdID satisfies (fn:count(hmis:Enrollment/hmis:RelationshipToHoH[text()= '1'][../hmis:HouseholdID = $id] ) eq 1)"/>						
+		<xs:assert test="every $id in hmis:Enrollment/hmis:HouseholdID satisfies (fn:count(hmis:Enrollment/hmis:RelationshipToHoH[text()= '1'][../hmis:HouseholdID = $id] ) eq 1)"/>
 	</xs:complexType>
 
 	<xs:complexType name="fAAmountBase">
@@ -1689,7 +1707,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>
-			<xs:element name="InsuranceFromAnySource" id="_4.04.2" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="InsuranceFromAnySource" id="_4.04.2" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Covered by Health Insurance</xs:documentation>
 				</xs:annotation>
@@ -1724,14 +1742,14 @@
 					<xs:documentation xml:lang="en">No SCHIP Reason</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="VAMedicalServices" id="_4.04.6" type="hmis:noYesMissing" minOccurs="0">
+			<xs:element name="VHAServices" id="_4.04.6" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Veteran’s Administration (VA) Medical Services</xs:documentation>
+					<xs:documentation xml:lang="en">Veteran’s Health Administration (VHA)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NoVAMedReason" id="_4.04.6A" type="hmis:reasonNotInsuredOrAssisted" minOccurs="0">
+			<xs:element name="NoVHAReason" id="_4.04.6A" type="hmis:reasonNotInsuredOrAssisted" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">No VA Medical Reason</xs:documentation>
+					<xs:documentation xml:lang="en">If “No” for each of the health insurance sources, Reason. Null unless 4.04.6 = 0.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EmployerProvided" id="_4.04.7" type="hmis:noYesMissing" minOccurs="0">
@@ -1843,7 +1861,7 @@
 					<xs:documentation xml:lang="en">Mental Health Status</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PregnancyStatus" id="_R10.1" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="PregnancyStatus" id="_R10.1" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Pregnancy Status</xs:documentation>
 				</xs:annotation>
@@ -1871,7 +1889,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>
-			<xs:element name="IncomeFromAnySource" id="_4.02.2" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="IncomeFromAnySource" id="_4.02.2" type="hmis:noYesReasonsForMissingData">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Income from Any Source</xs:documentation>
 				</xs:annotation>
@@ -2089,7 +2107,7 @@
 					<xs:annotation>
 						<xs:documentation>Expected to be of long–continued and indefinite duration and substantially impairs ability to live independently</xs:documentation>
 					</xs:annotation>
-					<xs:restriction base="hmis:noYesDoesntKnowRefused"/>
+					<xs:restriction base="hmis:noYesReasonsForMissingData"/>
 				</xs:simpleType>	
 			</xs:restriction>
 		</xs:simpleContent>
@@ -2102,7 +2120,7 @@
 					<xs:annotation>
 						<xs:documentation>Expected to be of long–continued and indefinite duration and substantially impairs ability to live independently</xs:documentation>
 					</xs:annotation>
-					<xs:restriction base="hmis:noYesDoesntKnowRefused"/>
+					<xs:restriction base="hmis:noYesReasonsForMissingData"/>
 				</xs:simpleType>	
 			</xs:restriction>
 		</xs:simpleContent>
@@ -2115,7 +2133,7 @@
 					<xs:annotation>
 						<xs:documentation>Expected to be of long–continued and indefinite duration and substantially impairs ability to live independently</xs:documentation>
 					</xs:annotation>
-					<xs:restriction base="hmis:noYesDoesntKnowRefused"/>
+					<xs:restriction base="hmis:noYesReasonsForMissingData"/>
 				</xs:simpleType>
 			</xs:restriction>
 		</xs:simpleContent>
@@ -2128,7 +2146,7 @@
 					<xs:annotation>
 						<xs:documentation>Expected to be of long–continued and indefinite duration and substantially impairs ability to live independently</xs:documentation>
 					</xs:annotation>
-					<xs:restriction base="hmis:noYesDoesntKnowRefused"/>
+					<xs:restriction base="hmis:noYesReasonsForMissingData"/>
 				</xs:simpleType>
 			</xs:restriction>
 		</xs:simpleContent>
@@ -2260,34 +2278,24 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>
-			<xs:element name="HIVAIDSAssistance" id="_W3.2" type="hmis:noYesDoesntKnowRefused">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Receiving Public HIV/AIDS Medical Assistance</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="NoHIVAIDSAssistanceReason" id="_W3.A" type="hmis:reasonNotInsuredOrAssisted" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reason</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ADAP" id="_W3.3" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="ADAP" id="_W3.3" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Receiving AIDS Drug Assistance Program (ADAP)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NoADAPReason" id="_W3.B" type="hmis:reasonNotInsuredOrAssisted" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Reason</xs:documentation>
+					<xs:documentation xml:lang="en">If No for “Receiving AIDS Drug Assistance Program (ADAP)” Reason. Null unless W3.3 = 0.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="RyanWhiteMedDent" id="_W3.4" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="RyanWhiteMedDent" id="_W3.4" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Receiving Ryan White-funded Medical or Dental Assistance</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NoRyanWhiteReason" id="_W3.C" type="hmis:reasonNotInsuredOrAssisted" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Receiving Ryan White-funded Medical or Dental Assistance</xs:documentation>
+					<xs:documentation xml:lang="en">If No for “Receiving Ryan White-funded Medical or Dental Assistance” Reason. Null unless W3.4 = 0.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -2311,7 +2319,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>
-			<xs:element name="BenefitsFromAnySource" id="_4.03.2" type="hmis:noYesDoesntKnowRefused">
+			<xs:element name="BenefitsFromAnySource" id="_4.03.2" type="hmis:noYesReasonsForMissingData">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Non-Cash Benefits from Any Source</xs:documentation>
 				</xs:annotation>
@@ -2328,12 +2336,12 @@
 			</xs:element>
 			<xs:element name="TANFChildCare" id="_4.03.5" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">TANF Child Care services</xs:documentation>
+					<xs:documentation xml:lang="en">TANF Child Care services [or use local name]</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TANFTransportation" id="_4.03.6" type="hmis:noYesMissing" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">TANF transportation services</xs:documentation>
+					<xs:documentation xml:lang="en">TANF transportation services [or use local name]</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OtherTANF" id="_4.03.7" type="hmis:noYesMissing" minOccurs="0">
@@ -2348,7 +2356,7 @@
 			</xs:element>
 			<xs:element name="OtherBenefitsSourceIdentify" id="_4.03.A" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Specify Source</xs:documentation>
+					<xs:documentation xml:lang="en">[If Yes for “Other Source”] Text box for Specify Source. Null unless 4.03.8 = 1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -3211,7 +3219,7 @@
 					<xs:documentation xml:lang="en">Reason why services are not funded by BCP grant</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="RunawayYouth" id="_R2.B" type="hmis:noYesDoesntKnowRefused" minOccurs="0">
+			<xs:element name="RunawayYouth" id="_R2.B" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Runaway youth</xs:documentation>
 				</xs:annotation>
@@ -3269,13 +3277,23 @@
 			</xs:element>
 			<xs:element name="FAAmount" type="hmis:fAAmountBase" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See FY2024 HMIS Data Dictionary, Section W2 #3 and V3 #2, Financial Assistance Amount.</xs:documentation>
+					<xs:documentation xml:lang="en">See FY2024 HMIS Data Dictionary, Section W2 #3 and V3 #2, Financial Assistance Amount. Null unless RecordType = 151 or 152.</xs:documentation>
 					<xs:documentation xml:lang="en">In the instance document, the xsi:type of this element must be declared, and the type depends on the value within the sibling hmis:DisabilityType element.  See the example HUD_HMIS_Instance.xml file to see how this should appear.  Either xsi:type="hmis:disabilityResponse[insert type]" or xsi:type="hmis:disabilityResponseSubstanceUseDisorder"can be used.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FAStartDate"  id="_V3.1" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Start Date of Financial Assistance ([date field])</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FAEndDate"  id="_V3.4" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">End Date of Financial Assistance ([date field])</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ReferralOutcome" id="_P2.A" type="hmis:referralOutcome" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Select Outcome for each</xs:documentation>
+					<xs:documentation xml:lang="en">SelecFinancial Assistance Amount ([currency/decimal])t Outcome for each</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -3710,40 +3728,6 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
 
-	<xs:complexType name="wellbeing">
-		<xs:sequence>
-			<xs:element name="WellbeingID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the Wellbeing's unique ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>
-			<xs:element name="LifeValue" id="_C1.2" type="hmis:wellbeingAgreement" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client perceives their life has value and worth.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="SupportFromOthers" id="_C1.3" type="hmis:wellbeingAgreement" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client perceives they have support from others who will listen to problems.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="BounceBack" id="_C1.4" type="hmis:wellbeingAgreement" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client perceives they have a tendency to bounce back after hard times.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="FeelingFrequency" id="_C1.5" type="hmis:feelingFrequency" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client’s frequency of feeling nervous, tense, worried, frustrated, or afraid.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
-		<xs:attribute ref="hmis:informationDate" use="required"/>
-		<xs:attributeGroup ref="hmis:baseMetaData"/>
-	</xs:complexType>
-
 	<xs:complexType name="youthEducationStatus">
 		<xs:sequence>
 			<xs:element name="YouthEducationStatusID" type="hmis:string32">
@@ -3802,7 +3786,7 @@
 
 	<xs:attribute name="informationDate" id="_5.04.1" type="xs:date">
 		<xs:annotation>
-			<xs:documentation xml:lang="en">Information Date</xs:documentation>
+			<xs:documentation xml:lang="en">Information Date (date information was collected) ([date field])</xs:documentation>
 		</xs:annotation>
 	</xs:attribute>
 
@@ -4978,7 +4962,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="noYesDoesntKnowRefused" id="noYesDoesntKnowRefused">
+	<xs:simpleType name="noYesReasonsForMissingData" id="noYesReasonsForMissingData">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
@@ -4997,7 +4981,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -5007,7 +4991,66 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-
+	
+	<xs:simpleType name="rentalSubsidyTypes" id="rentalSubsidyTypes">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="419">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">VASH housing subsidy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="420">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Rental by client, with other ongoing housing subsidy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="428">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">GPD TIP housing subsidy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="431">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">RRH or equivalent subsidy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="433">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">HCV voucher (tenant or project based) (not dedicated)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="434">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Public housing unit</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="436">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Emergency Housing Voucher</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="437">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Family Unification Program Voucher (FUP)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="438">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Foster Youth to Independence Initiative (FYI)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="439">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Permanent Supportive Housing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="440">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Other permanent housing dedicated for formerly homeless persons</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="rhyReasonNoServices" id="rhyReasonNoServices">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -5436,22 +5479,17 @@
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">4 or more times or total of at least 12 months in past three years</xs:documentation>
+					<xs:documentation xml:lang="en">Most recent episode occurred in the last year</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="1">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">2-3 times in past three years</xs:documentation>
+					<xs:documentation xml:lang="en">Most recent episode occurred more than one year ago</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">1 time in past three years</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">None (0 points)</xs:documentation>
+					<xs:documentation xml:lang="en">None</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -5958,7 +5996,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Insurance type N/A for this client</xs:documentation>
+					<xs:documentation xml:lang="en">Insurance type not applicable for this client</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8">
@@ -5968,7 +6006,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -6083,17 +6121,17 @@
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Less than 30%</xs:documentation>
+					<xs:documentation xml:lang="en">30% or less</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">30% to 50%</xs:documentation>
+					<xs:documentation xml:lang="en">31% to 50%</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Greater than 50%</xs:documentation>
+					<xs:documentation xml:lang="en">51% to 80%</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -6715,6 +6753,18 @@
 			<xs:enumeration value="AP"/>
 		</xs:restriction>
 	</xs:simpleType>
+	
+	<xs:simpleType name="string100" id="string100">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="string250" id="string250">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="250"/>
+		</xs:restriction>
+	</xs:simpleType>
 
 	<xs:simpleType name="string32" id="string32">
 		<xs:restriction base="xs:string">
@@ -6733,22 +6783,10 @@
 			<xs:maxLength value="5"/>
 		</xs:restriction>
 	</xs:simpleType>
-
+	
 	<xs:simpleType name="string50" id="string50">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="50"/>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="string100" id="string100">
-		<xs:restriction base="xs:string">
-			<xs:maxLength value="100"/>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="string250" id="string250">
-		<xs:restriction base="xs:string">
-			<xs:maxLength value="250"/>
 		</xs:restriction>
 	</xs:simpleType>
 
@@ -6758,6 +6796,12 @@
 		</xs:restriction>
 	</xs:simpleType>
 
+	<xs:simpleType name="string6" id="string6">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
 	<xs:simpleType name="subsidyInformation" id="subsidyInformation">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
@@ -7667,51 +7711,6 @@
 			<xs:enumeration value="2">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Undetectable</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="wellbeingAgreement" id="wellbeingAgreement">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Strongly disagree</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Somewhat disagree</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Neither agree nor disagree</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Somewhat agree</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Strongly agree</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8">
