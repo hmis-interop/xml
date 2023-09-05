@@ -386,12 +386,12 @@
 			<xs:element name="PersonalID" type="hmis:personalID"/>
 			<xs:element name="YearEnteredService" id="_V1.1" type="xs:gYear" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Year Entered Military Service (year)</xs:documentation>
+					<xs:documentation xml:lang="en">Year Entered Military Service (year). Values between 1920 and the current year. ^(19[2-8][0-9]|199[0-9]|20[01][0-9]|202[01])$</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="YearSeparated" id="_V1.2"  type="xs:gYear" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Year Separated from Military Service (year)</xs:documentation>
+					<xs:documentation xml:lang="en">Year Separated from Military Service (year). ^(19[2-8][0-9]|199[0-9]|20[01][0-9]|202[01])$$</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WorldWarII" id="_V1.3" type="hmis:noYesReasonsForMissingData" minOccurs="0">
@@ -2376,7 +2376,7 @@
 			</xs:element>
 			<xs:element name="OrganizationName" id="_2.01.2" type="hmis:string50"/>
 			<xs:element name="OrganizationCommonName" type="hmis:string50" minOccurs="0"/>
-			<xs:element name="VictimServiceProvider" id="_2.01.3" type="hmis:noYesMissing"/>
+			<xs:element name="VictimServiceProvider" id="_2.01.3" type="hmis:noYes"/>
 		</xs:sequence>
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
@@ -2473,7 +2473,7 @@
 					<xs:documentation xml:lang="en">Operating End Date</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ContinuumProject" id="_2.02.5" type="hmis:noYesMissing">
+			<xs:element name="ContinuumProject" id="_2.02.5" type="hmis:noYes">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Continuum Project</xs:documentation>
 				</xs:annotation>
@@ -2488,7 +2488,7 @@
 					<xs:documentation xml:lang="en">[If PH – Rapid Re-Housing] Identify RRH subtype</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ResidentialAffiliation" id="_2.02.B" type="hmis:noYesMissing" minOccurs="0">
+			<xs:element name="ResidentialAffiliation" id="_2.02.B" type="hmis:noYes" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">[If Services Only for “Project Type” or RRH: Services Only subtype] Affiliated with a residential project.  Non-null if ProjectType = 6 or (ProjectType = 13 and RRHSubType = 1)</xs:documentation>
 				</xs:annotation>
@@ -3293,7 +3293,7 @@
 			</xs:element>
 			<xs:element name="ReferralOutcome" id="_P2.A" type="hmis:referralOutcome" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">SelecFinancial Assistance Amount ([currency/decimal])t Outcome for each</xs:documentation>
+					<xs:documentation xml:lang="en">If any “Type of Referral” made, select Outcome for each. Null unless RecordType = 161.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -6569,7 +6569,7 @@
 			</xs:enumeration>
 			<xs:enumeration id="_C2" value="300">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Moving On Assistance Provided</xs:documentation>
+					<xs:documentation xml:lang="en">Moving On assistance provided</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -6629,22 +6629,22 @@
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">continuum-operated HMIS</xs:documentation>
+					<xs:documentation xml:lang="en">CoC HMIS</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">agency-specific database</xs:documentation>
+					<xs:documentation xml:lang="en">Standalone/agency-specific application</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">data warehouse</xs:documentation>
+					<xs:documentation xml:lang="en">Data warehouse</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">other</xs:documentation>
+					<xs:documentation xml:lang="en">Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
