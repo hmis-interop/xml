@@ -7406,15 +7406,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	
-	<xs:simpleType name="version" id="version">
-		<xs:restriction base="xs:decimal">
-			<xs:totalDigits value="5"/>
-			<xs:fractionDigits value="3"/>
-			<xs:minInclusive value="0.001"/>
-		</xs:restriction>
-	</xs:simpleType>
-	
+
 	<xs:simpleType name="viralLoad" id="viralLoad">
 		<xs:restriction base="xs:integer">
 			<xs:minInclusive value="0"/>
