@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
-<xs:schema targetNamespace="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd" xmlns="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd" xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vc:minVersion="1.1" version="v0.0.1" elementFormDefault="qualified" attributeFormDefault="qualified">
+<xs:schema targetNamespace="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd" xmlns="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd" xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vc:minVersion="1.1" version="v1.0.0-rc.1" elementFormDefault="qualified" attributeFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>All data elements referenced with an "id" attribute correspond to that same data element id within the FY2024 HMIS Data Dictionary (sans the "_" prefix).</xs:documentation>
 	</xs:annotation>
@@ -770,7 +770,7 @@
 				</xs:enumeration>
 				<xs:enumeration value="9">
 					<xs:annotation>
-						<xs:documentation xml:lang="en">Client refused</xs:documentation>
+						<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 					</xs:annotation>
 				</xs:enumeration>
 				<xs:enumeration value="99">
@@ -1085,31 +1085,6 @@
 					<xs:documentation xml:lang="en">Household Income as a Percentage of AMI</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="LastPermanentStreet" id="_V5.1" type="hmis:string100" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Street Address</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="LastPermanentCity" id="_V5.2" type="hmis:string50" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">City</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="LastPermanentState" id="_V5.3" type="hmis:state" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">State</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="LastPermanentZIP" id="_V5.4" type="hmis:zipCode" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Zip Code</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AddressDataQuality" id="_V5.5" type="hmis:addressDataQuality" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Address Data Quality</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="VAMCStation" id="_V6.1" type="hmis:vamcStation" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">VAMC Station Number</xs:documentation>
@@ -1366,22 +1341,22 @@
 			</xs:element>
 			<xs:element name="ExchangeForSexPastThreeMonths" id="_R15.A" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">In the last three months</xs:documentation>
+					<xs:documentation xml:lang="en">If Yes for “Ever received anything in exchange for sex”. In the last three months. Null unless R15.1 = 1</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CountOfExchangeForSex" id="_R15.B" type="hmis:countOfExchangeForSex" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">How many times</xs:documentation>
+					<xs:documentation xml:lang="en">If Yes for “Ever received anything in exchange for sex”. How many times. Null unless R15.1 = 1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AskedOrForcedToExchangeForSex" id="_R15.C" type="hmis:askedOrForcedToExchangeForSex" minOccurs="0">
+			<xs:element name="AskedOrForcedToExchangeForSex" id="_R15.C" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Ever made/persuaded/forced to have sex in exchange for something</xs:documentation>
+					<xs:documentation xml:lang="en">If Yes for “Ever received anything in exchange for sex”. Ever made/persuaded/forced to have sex in exchange for something. Null unless R15.1 = 1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AskedOrForcedToExchangeForSexPastThreeMonths" id="_R15.D" type="hmis:noYesReasonsForMissingData" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">In the last three months?</xs:documentation>
+					<xs:documentation xml:lang="en">If Yes for “Ever made/persuaded/forced to have sex in exchange for something?”. In the last three months? Null unless R15.C = 1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WorkplaceViolenceThreats" id="_R16.1" type="hmis:noYesReasonsForMissingData" minOccurs="0">
@@ -2453,12 +2428,12 @@
 					<xs:documentation xml:lang="en">Key reference to the Organization</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectName" id="_2.02.2" type="hmis:string100">
+			<xs:element name="ProjectName" id="_2.02.2" type="hmis:string200">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Project Name</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ProjectCommonName" type="hmis:string50" minOccurs="0">
+			<xs:element name="ProjectCommonName" type="hmis:string200" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">A local or commonly used name for a project.  This is not referenced in the FY2024 HMIS Data Dictionary, and is optional per the FY2024 Data Standard.</xs:documentation>
 				</xs:annotation>
@@ -3154,7 +3129,7 @@
 					<xs:documentation xml:lang="en">Information Date (date information was collected)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AftercareProvided" id="_R20.2" type="hmis:noYesRefused">
+			<xs:element name="AftercareProvided" id="_R20.2" type="hmis:aftercareProvided">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Aftercare was provided</xs:documentation>
 				</xs:annotation>
@@ -3846,33 +3821,23 @@
 		</xs:simpleType>
 	</xs:attribute>
 
-	<xs:simpleType name="addressDataQuality" id="addressDataQuality">
+	<xs:simpleType name="aftercareProvided" id="aftercareProvided">
 		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">No</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="1">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Full address reported</xs:documentation>
+					<xs:documentation xml:lang="en">Yes</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Incomplete or estimated address reported</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>			
-			<xs:enumeration value="8">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>				
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>			
 		</xs:restriction>
 	</xs:simpleType>
 
@@ -3896,36 +3861,6 @@
 			<xs:enumeration value="3">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">More than 30% of AMI for household size</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="askedOrForcedToExchangeForSex" id="askedOrForcedToExchangeForSex">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">No</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Yes</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -4196,7 +4131,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -4241,7 +4176,7 @@
 			</xs:enumeration>				
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -4276,7 +4211,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -4386,7 +4321,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -4416,7 +4351,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -4500,36 +4435,6 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="hmis:string32"/>
-	</xs:simpleType>
-
-	<xs:simpleType name="ethnicity" id="ethnicity">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Non-Hispanic/Non-Latin(a)(o)(x)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Hispanic/Latin(a)(o)(x)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="eventType" id="eventType">
@@ -5081,51 +4986,6 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="feelingFrequency" id="feelingFrequency">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Not at all</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Once a month</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Several times a month</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Several times a week</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">At least every day</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="99">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
 	<xs:simpleType name="geocode" id="geocode">
 		<xs:restriction base="xs:token">
 			<xs:pattern value="[0-9]{6}"/>    
@@ -5191,14 +5051,14 @@
 			</xs:enumeration>				
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 
@@ -5304,12 +5164,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="7">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client went to jail/prison</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="10">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client died</xs:documentation>
+					<xs:documentation xml:lang="en">Jail/prison</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8">
@@ -5319,7 +5174,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="10">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Deceased</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -5464,7 +5324,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -5529,7 +5389,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="10">
@@ -5552,41 +5412,6 @@
 
 	<xs:simpleType name="livingSituation" id="livingSituation">
 		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Emergency shelter, including hotel or motel paid for with emergency shelter voucher, or RHY-funded Host Home shelter</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Transitional housing for homeless persons (including homeless youth)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Permanent housing (other than RRH) for formerly homeless persons</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Psychiatric hospital or other psychiatric facility</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="5">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Substance abuse treatment facility or detox center</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="6">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Hospital or other residential non-psychiatric medical facility</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="7">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Jail, prison or juvenile detention facility</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="8">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
@@ -5594,42 +5419,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="10">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Rental by client, no ongoing housing subsidy</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="11">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Owned by client, no ongoing housing subsidy</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="12">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Staying or living in a family member’s room, apartment or house</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="13">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Staying or living with friends, temporary tenure (e.g. room apartment or house)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="14">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Hotel or motel paid for without emergency shelter voucher</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="15">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Foster care home or foster care group home</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>			
-			<xs:enumeration value="16">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Place not meant for habitation (e.g., a vehicle, an abandoned building, bus/train/subway station/airport or anywhere outside)</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="17">
@@ -5637,64 +5427,9 @@
 					<xs:documentation xml:lang="en">Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="18">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Safe Haven</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="19">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Rental by client, with VASH subsidy</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="20">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Rental by client, with other housing subsidy (including RRH)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="21">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Owned by client, with ongoing housing subsidy</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="22">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Staying or living with family, permanent tenure</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="23">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Staying or living with friends, permanent tenure</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="24">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Deceased</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="25">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Long-term care facility or nursing home</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="26">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Moved from one HOPWA funded project to HOPWA PH</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="27">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Moved from one HOPWA funded project to HOPWA TH</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="28">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Rental by client, with GPD TIP housing subsidy</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="29">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Residential project or halfway house with no homeless criteria</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="30">
@@ -5702,44 +5437,139 @@
 					<xs:documentation xml:lang="en">No exit interview completed</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="31">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Rental by client, with RRH or equivalent subsidy</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Host Home (non-crisis)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>			
-			<xs:enumeration value="33">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Rental by client, with HCV voucher (tenant or project based)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="34">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Rental by client in a public housing unit</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="35">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Staying or living in a family member’s room, apartment or house</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="36">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Staying or living in a friend’s room, apartment or house</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="37">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Worker unable to determine</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="99">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="101">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Emergency, including hotel or motel paid for with emergency shelter voucher, Host Home shelter</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="116">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Place not meant for habitation (e.g., a vehicle, an abandoned building, bus/train/subway station/airport or anywhere outside)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="118">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Safe Haven</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="204">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Psychiatric hospital or other psychiatric facility</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="205">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Substance abuse treatment facility or detox center</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="206">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Hospital or other residential non-psychiatric medical facility</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="207">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Jail, prison, or juvenile detention facility</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="215">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Foster care home or foster care group home</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="225">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Long-term care facility or nursing home</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="302">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Transitional housing for homeless persons (including homeless youth)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="312">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Staying or living with family, temporary tenure (e.g. room, apartment, or house)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="313">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Staying or living with friends, temporary tenure (e.g. room, apartment, or house)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="314">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Hotel or motel paid for without emergency shelter voucher</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="327">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Moved from one HOPWA funded project to HOPWA TH</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="329">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Residential project or halfway house with no homeless criteria</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="332">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Host Home (non-crisis)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="335">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Staying or living in a family member’s room, apartment or house</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="336">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Staying or living in a friend’s room, apartment, or house</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="410">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Rental by client, no ongoing housing subsidy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="411">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Owned by client, no ongoing housing subsidy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="421">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Owned by client, with ongoing housing subsidy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="422">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Staying or living with family, permanent tenure</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="423">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Staying or living with friends, permanent tenure</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="426">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Moved from one HOPWA funded project to HOPWA PH</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="435">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Rental by client, with ongoing housing subsidy</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -5772,6 +5602,11 @@
 					<xs:documentation xml:lang="en">Coast Guard</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="7">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Space Force</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="8">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
@@ -5779,7 +5614,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>			
 			<xs:enumeration value="99">
@@ -5792,71 +5627,6 @@
 
 	<xs:simpleType name="monthsHomelessPastThreeYears" id="monthsHomelessPastThreeYears">
 		<xs:restriction base="xs:positiveInteger">
-			<xs:enumeration value="101">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">1 month</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="102">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">2 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="103">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">3 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="104">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">4 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="105">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">5 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="106">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">6 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="107">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">7 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="108">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">8 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="109">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">9 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="110">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">10 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="111">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">11 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="112">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">12 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="113">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">More than 12 months</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="8">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
@@ -5864,12 +5634,77 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="101">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">1</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="102">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">2</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="103">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">3</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="104">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">4</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="105">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">5</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="106">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">6</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="107">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">7</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="108">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">8</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="109">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">9</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="110">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">10</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="111">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">11</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="112">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">12</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="113">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">More than 12 months</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -5936,7 +5771,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -5966,7 +5801,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -6037,27 +5872,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="noYesRefused" id="noYesRefused">
-		<xs:restriction base="xs:unsignedInt">
-			<xs:enumeration value="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">No</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Yes</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="noYesWorkerDoesntKnow" id="noYesWorkerDoesntKnow">
+		<xs:simpleType name="noYesWorkerDoesntKnow" id="noYesWorkerDoesntKnow">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
 				<xs:annotation>
@@ -6353,6 +6168,16 @@
 					<xs:documentation xml:lang="en">Outreach Project</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Client Prefers Not to Answer</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="11">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Temporary Shelter</xs:documentation>
@@ -6396,16 +6221,6 @@
 			<xs:enumeration value="39">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Other Organization</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client doesn’t know</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -6509,7 +6324,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -6599,7 +6414,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="5">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Questioning / Unsure</xs:documentation>
+					<xs:documentation xml:lang="en">Questioning / unsure</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="6">
@@ -6614,7 +6429,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -6669,7 +6484,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>			
 			<xs:enumeration value="99">
@@ -6757,6 +6572,12 @@
 	<xs:simpleType name="string100" id="string100">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="string200" id="string200">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="200"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
@@ -6902,7 +6723,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>			
 			<xs:enumeration value="99">
@@ -7720,7 +7541,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
@@ -7750,7 +7571,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">One year ago or more</xs:documentation>
+					<xs:documentation xml:lang="en">One year or more</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8">
@@ -7760,7 +7581,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Client refused</xs:documentation>
+					<xs:documentation xml:lang="en">Client prefers not to answer</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="99">
