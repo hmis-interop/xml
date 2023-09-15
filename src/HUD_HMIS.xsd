@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
-<xs:schema targetNamespace="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd" xmlns="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd" xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vc:minVersion="1.1" version="v1.0.0-rc.1" elementFormDefault="qualified" attributeFormDefault="qualified">
+<xs:schema targetNamespace="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd" xmlns="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd" xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vc:minVersion="1.1" version="v1.0.0-rc.2" elementFormDefault="qualified" attributeFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>All data elements referenced with an "id" attribute correspond to that same data element id within the FY2024 HMIS Data Dictionary (sans the "_" prefix).</xs:documentation>
 	</xs:annotation>
@@ -1386,7 +1386,7 @@
 					<xs:documentation xml:lang="en">Select one of the ExportDirective choices to instruct the target as to how the data being transmitted should be handled.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ImplementationID" type="hmis:string200">
+			<xs:element name="ImplementationID" id="_5.10" type="hmis:string200">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Implementation ID [Vendor Generated]. The purpose of Implementation ID is to indicate the scope of uniqueness of the primary keys within an export. Each implementation of HMIS is unique and the Implementation ID is to identify that exported data is affiliated with a given HMIS implementation. For example, an HMIS vendor providing HMIS software to two distinct CoCs with two distinct HMIS implementations would have different Implementation IDs for those different implementations. Alternatively, an HMIS vendor providing HMIS software to two distinct CoCs sharing an HMIS implementation would have the same Implementation ID. A unique Implementation ID must be created per HMIS instance, but there is no required format.</xs:documentation>
 				</xs:annotation>
