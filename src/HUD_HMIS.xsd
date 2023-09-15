@@ -297,7 +297,7 @@
 			</xs:element>
 			<xs:element name="RaceNone" id="_3.04.1.8" type="hmis:raceGenderNone" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Race None. Non-null only if all other race fields = 0 or 99</xs:documentation>
+					<xs:documentation xml:lang="en">Race None. Non-null only if all other race fields = 0.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AdditionalRaceEthnicity" id="_3.04.2" type="hmis:string100" minOccurs="0">
