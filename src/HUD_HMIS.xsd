@@ -2023,6 +2023,7 @@
 	<xs:complexType name="nameHashingOptionPlain">
 		<xs:simpleContent>
 			<xs:restriction base="hmis:nameHashingOption">
+				<xs:minLength value="1"/>
 				<xs:maxLength value="50"/>
 			</xs:restriction>
 		</xs:simpleContent>
@@ -6288,54 +6289,63 @@
 
 	<xs:simpleType name="string5" id="string5">
 		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
 			<xs:maxLength value="5"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="string6" id="string6">
 		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
 			<xs:maxLength value="6"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="string32" id="string32">
 		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
 			<xs:maxLength value="32"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="string50" id="string50">
 		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
 			<xs:maxLength value="50"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="string100" id="string100">
 		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
 			<xs:maxLength value="100"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
 	<xs:simpleType name="string200" id="string200">
 		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
 			<xs:maxLength value="200"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
 	<xs:simpleType name="string250" id="string250">
 		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
 			<xs:maxLength value="250"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="string320" id="string320">
 		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
 			<xs:maxLength value="320"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="string500" id="string500">
 		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
 			<xs:maxLength value="500"/>
 		</xs:restriction>
 	</xs:simpleType>
