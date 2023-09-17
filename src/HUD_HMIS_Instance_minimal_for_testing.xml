@@ -1,138 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hmis:Sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd https://raw.githubusercontent.com/HUD-Data-Lab/xml/FY2024-latest/src/HUD_HMIS.xsd"
-    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-    xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd">
-    <hmis:Source>
-        <hmis:SourceID>12345</hmis:SourceID>
-        <hmis:SourceType>1</hmis:SourceType>
-        <hmis:SourceName>Fictitious County HMIS</hmis:SourceName>
-        <hmis:SoftwareName>HMISSoft Inc.</hmis:SoftwareName>
-        <hmis:SoftwareVersion>3</hmis:SoftwareVersion>
-        <hmis:SourceContactEmail>bill@gsnail.com</hmis:SourceContactEmail>
-        <hmis:SourceContactExtension>775</hmis:SourceContactExtension>
-        <hmis:SourceContactFirst>Patricia</hmis:SourceContactFirst>
-        <hmis:SourceContactLast>Duke</hmis:SourceContactLast>
-        <hmis:SourceContactPhone>5939698367</hmis:SourceContactPhone>
-        <hmis:Export>
-            <hmis:ExportID>37</hmis:ExportID>
-            <hmis:ExportDate>2015-02-27T23:14:59</hmis:ExportDate>
-            <hmis:ExportPeriod>
-                <hmis:StartDate>2015-01-04</hmis:StartDate>
-                <hmis:EndDate>2015-03-26</hmis:EndDate>
-            </hmis:ExportPeriod>
-            <hmis:ExportPeriodType>2</hmis:ExportPeriodType>
-            <hmis:ExportDirective>1</hmis:ExportDirective>
-            <hmis:ImplementationID>deee2</hmis:ImplementationID>
-            <hmis:Affiliation hmis:dateCreated="2016-04-11T23:14:59Z"
-                hmis:dateUpdated="2015-05-30T23:14:59" hmis:userID="nf">
-                <hmis:AffiliationID>76yt</hmis:AffiliationID>
-                <hmis:ProjectID>222D</hmis:ProjectID>
-                <hmis:ResProjectID>222D</hmis:ResProjectID>
-            </hmis:Affiliation>
-            <hmis:Client hmis:dateCreated="2016-04-11T23:14:59Z"
-                hmis:dateUpdated="2015-05-30T23:14:59" hmis:userID="ned100">
-                <hmis:PersonalID>A1a1</hmis:PersonalID>
-                <hmis:FirstName hmis:hashStatus="2">123456789012345678901234567890ABCDEF12d4</hmis:FirstName>
-                <hmis:MiddleName hmis:hashStatus="1">Barnaby</hmis:MiddleName>
-                <hmis:LastName hmis:hashStatus="3">Jones</hmis:LastName>
-                <hmis:NameSuffix>Sr.</hmis:NameSuffix>
-                <hmis:NameDataQuality>9</hmis:NameDataQuality>
-                <hmis:SSN hmis:hashStatus="1">79xx9xx8x</hmis:SSN>
-                <hmis:SSNDataQuality>2</hmis:SSNDataQuality>
-                <hmis:DOB>2014-11-18</hmis:DOB>
-                <hmis:DOBDataQuality>1</hmis:DOBDataQuality>
-                <hmis:AmIndAKNative>1</hmis:AmIndAKNative>
-                <hmis:Asian>0</hmis:Asian>
-                <hmis:BlackAfAmerican>1</hmis:BlackAfAmerican>
-                <hmis:HispanicLatinaeo>0</hmis:HispanicLatinaeo>
-                <hmis:MidEastNAfrican>1</hmis:MidEastNAfrican>
-                <hmis:NativeHIPacific>0</hmis:NativeHIPacific>
-                <hmis:White>0</hmis:White>
-                <hmis:Woman>0</hmis:Woman>
-                <hmis:Man>1</hmis:Man>
-                <hmis:NonBinary>0</hmis:NonBinary>
-                <hmis:CulturallySpecific>1</hmis:CulturallySpecific>
-                <hmis:Transgender>0</hmis:Transgender>
-                <hmis:Questioning>0</hmis:Questioning>
-                <hmis:DifferentIdentity>0</hmis:DifferentIdentity>
-                <hmis:VeteranStatus>9</hmis:VeteranStatus>
-            </hmis:Client>
-            <hmis:Enrollment hmis:dateCreated="2015-05-08T23:14:59"
-                hmis:dateUpdated="2015-01-27T23:14:59Z" hmis:userID="Hc8CQeYVWWj0dA9cWkDLe">
-                <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
-                <hmis:PersonalID>A1a1</hmis:PersonalID>
-                <hmis:ProjectID>222D</hmis:ProjectID>
-                <hmis:EntryDate>2016-04-12Z</hmis:EntryDate>
-                <hmis:HouseholdID>a34563w</hmis:HouseholdID>
-                <hmis:RelationshipToHoH>1</hmis:RelationshipToHoH>
-                <hmis:EnrollmentCoC>676746</hmis:EnrollmentCoC>
-                <hmis:PreviousStreetESSH>1</hmis:PreviousStreetESSH>
-                <hmis:DateToStreetESSH>2015-04-01</hmis:DateToStreetESSH>
-                <hmis:TimesHomelessPastThreeYears>2</hmis:TimesHomelessPastThreeYears>
-                <hmis:MonthsHomelessPastThreeYears>103</hmis:MonthsHomelessPastThreeYears>
-                <hmis:DisablingCondition>9</hmis:DisablingCondition>
-            </hmis:Enrollment>
-            <hmis:EnrollmentCoC hmis:dataCollectionStage="1" hmis:informationDate="2015-06-24"
-                hmis:dateCreated="2016-02-13T23:14:59Z" hmis:dateUpdated="2016-02-19T23:14:59"
-                hmis:userID="DU5m">
-                <hmis:EnrollmentCoCID>56332</hmis:EnrollmentCoCID>
-                <hmis:EnrollmentID>w5641</hmis:EnrollmentID>
-                <hmis:CoCCode>BZ-123</hmis:CoCCode>
-            </hmis:EnrollmentCoC>
-            <hmis:Funder hmis:dateCreated="2015-09-19T23:14:59"
-                hmis:dateUpdated="2016-01-29T23:14:59Z" hmis:userID="m2Pym5-77tSVuI-IjerY">
-                <hmis:FunderID>76g</hmis:FunderID>
-                <hmis:ProjectID>222D</hmis:ProjectID>
-                <hmis:Funder>16</hmis:Funder>
-                <hmis:GrantID>S_w9P0npP</hmis:GrantID>
-                <hmis:StartDate>2016-06-11Z</hmis:StartDate>
-                <hmis:EndDate>2016-04-08</hmis:EndDate>
-            </hmis:Funder>
-            <hmis:Inventory hmis:dateCreated="2015-09-12T23:14:59Z"
-                hmis:dateUpdated="2015-08-29T23:14:59Z" hmis:userID="billj">
-                <hmis:InventoryID>56563a</hmis:InventoryID>
-                <hmis:ProjectCoCID>2</hmis:ProjectCoCID>
-                <hmis:InventoryStartDate>2014-10-31</hmis:InventoryStartDate>
-                <hmis:InventoryEndDate>2015-05-12Z</hmis:InventoryEndDate>
-                <hmis:HouseholdType>1</hmis:HouseholdType>
-                <hmis:VetBedInventory>14</hmis:VetBedInventory>
-                <hmis:YouthBedInventory>16</hmis:YouthBedInventory>
-                <hmis:CHBedInventory>17</hmis:CHBedInventory>
-                <hmis:BedInventory>130</hmis:BedInventory>
-                <hmis:UnitInventory>1595973432</hmis:UnitInventory>
-            </hmis:Inventory>
-            <hmis:Organization hmis:dateCreated="2015-02-17T23:14:59"
-                hmis:dateUpdated="2016-02-29T23:14:59" hmis:userID="ptravis">
-                <hmis:OrganizationID>34</hmis:OrganizationID>
-                <hmis:OrganizationName>Helping People, Inc.</hmis:OrganizationName>
-                <hmis:OrganizationCommonName>Helping</hmis:OrganizationCommonName>
-                <hmis:VictimServiceProvider>1</hmis:VictimServiceProvider>
-            </hmis:Organization>
-            <hmis:Participation hmis:dateCreated="2023-02-17T23:14:59" hmis:dateUpdated="2023-02-17T23:14:59" hmis:userID="2">
-                <hmis:HMISParticipationID>565643</hmis:HMISParticipationID>
-                <hmis:ProjectID>222D</hmis:ProjectID>
-                <hmis:HMISParticipationType>1</hmis:HMISParticipationType>
-                <hmis:HMISParticipationStatusStartDate>2023-02-17</hmis:HMISParticipationStatusStartDate>
-            </hmis:Participation>
-            <hmis:Project hmis:dateCreated="2016-02-17T23:14:59"
-                hmis:dateUpdated="2015-03-14T23:14:59Z" hmis:userID="j2ZsRLAPv">
-                <hmis:ProjectID>222D</hmis:ProjectID>
-                <hmis:OrganizationID>34</hmis:OrganizationID>
-                <hmis:ProjectName>Residence Enablers</hmis:ProjectName>
-                <hmis:ProjectCommonName>Residence Enablers</hmis:ProjectCommonName>
-                <hmis:OperatingStartDate>2017-01-01</hmis:OperatingStartDate>
-                <hmis:ContinuumProject>0</hmis:ContinuumProject>
-                <hmis:ProjectType>3</hmis:ProjectType>
-                <hmis:TargetPopulation>4</hmis:TargetPopulation>
-            </hmis:Project>
-            <hmis:ProjectCoC hmis:dateCreated="2016-02-17T23:14:59"
-                hmis:dateUpdated="2015-03-14T23:14:59Z" hmis:userID="j2ZsRLAPv">
-                <hmis:ProjectCoCID>2</hmis:ProjectCoCID>
-                <hmis:ProjectID>222D</hmis:ProjectID>
-                <hmis:CoCCode>BZ-123</hmis:CoCCode>
-                <hmis:Geocode>123456</hmis:Geocode>
-            </hmis:ProjectCoC>
-        </hmis:Export>
-    </hmis:Source>
+	xsi:schemaLocation="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd https://raw.githubusercontent.com/HUD-Data-Lab/xml/FY2024-latest/src/HUD_HMIS.xsd"
+	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd">
+	<hmis:Source>
+		<hmis:SourceID>12345</hmis:SourceID>
+		<hmis:SourceType>1</hmis:SourceType>
+		<hmis:SourceName>Fictitious County HMIS</hmis:SourceName>
+		<hmis:SoftwareName>HMISSoft Inc.</hmis:SoftwareName>
+		<hmis:SoftwareVersion>3</hmis:SoftwareVersion>
+		<hmis:SourceContactEmail>bill@gsnail.com</hmis:SourceContactEmail>
+		<hmis:SourceContactExtension>775</hmis:SourceContactExtension>
+		<hmis:SourceContactFirst>Patricia</hmis:SourceContactFirst>
+		<hmis:SourceContactLast>Duke</hmis:SourceContactLast>
+		<hmis:SourceContactPhone>5939698367</hmis:SourceContactPhone>
+		<hmis:Export>
+			<hmis:ExportID>37</hmis:ExportID>
+			<hmis:ExportDate>2015-02-27T23:14:59</hmis:ExportDate>
+			<hmis:ExportPeriod>
+				<hmis:StartDate>2015-01-04</hmis:StartDate>
+				<hmis:EndDate>2015-03-26</hmis:EndDate>
+			</hmis:ExportPeriod>
+			<hmis:ExportPeriodType>2</hmis:ExportPeriodType>
+			<hmis:ExportDirective>1</hmis:ExportDirective>
+			<hmis:ImplementationID>deee2</hmis:ImplementationID>
+			<hmis:Affiliation hmis:dateCreated="2016-04-11T23:14:59Z"
+				hmis:dateUpdated="2015-05-30T23:14:59" hmis:userID="nf">
+				<hmis:AffiliationID>76yt</hmis:AffiliationID>
+				<hmis:ProjectID>222D</hmis:ProjectID>
+				<hmis:ResProjectID>222D</hmis:ResProjectID>
+			</hmis:Affiliation>
+			<hmis:CEParticipation hmis:dateCreated="2023-05-30T23:14:59"
+				hmis:dateUpdated="2023-05-30T23:14:59" hmis:userID="67">
+				<hmis:CEParticipationID>jbj</hmis:CEParticipationID>
+				<hmis:ProjectID>222D</hmis:ProjectID>
+				<hmis:AccessPoint>1</hmis:AccessPoint>
+				<hmis:ReceivesReferrals>0</hmis:ReceivesReferrals>
+				<hmis:CEParticipationStatusStartDate>2023-05-30</hmis:CEParticipationStatusStartDate>
+			</hmis:CEParticipation>
+			<hmis:Client hmis:dateCreated="2016-04-11T23:14:59Z"
+				hmis:dateUpdated="2015-05-30T23:14:59" hmis:userID="ned100">
+				<hmis:PersonalID>A1a1</hmis:PersonalID>
+				<hmis:FirstName hmis:hashStatus="2">123456789012345678901234567890ABCDEF12d4</hmis:FirstName>
+				<hmis:MiddleName hmis:hashStatus="1">Barnaby</hmis:MiddleName>
+				<hmis:LastName hmis:hashStatus="3">Jones</hmis:LastName>
+				<hmis:NameSuffix>Sr.</hmis:NameSuffix>
+				<hmis:NameDataQuality>9</hmis:NameDataQuality>
+				<hmis:SSN hmis:hashStatus="1">79xx9xx8x</hmis:SSN>
+				<hmis:SSNDataQuality>2</hmis:SSNDataQuality>
+				<hmis:DOB>2014-11-18</hmis:DOB>
+				<hmis:DOBDataQuality>1</hmis:DOBDataQuality>
+				<hmis:AmIndAKNative>1</hmis:AmIndAKNative>
+				<hmis:Asian>0</hmis:Asian>
+				<hmis:BlackAfAmerican>1</hmis:BlackAfAmerican>
+				<hmis:HispanicLatinaeo>0</hmis:HispanicLatinaeo>
+				<hmis:MidEastNAfrican>1</hmis:MidEastNAfrican>
+				<hmis:NativeHIPacific>0</hmis:NativeHIPacific>
+				<hmis:White>0</hmis:White>
+				<hmis:Woman>0</hmis:Woman>
+				<hmis:Man>1</hmis:Man>
+				<hmis:NonBinary>0</hmis:NonBinary>
+				<hmis:CulturallySpecific>1</hmis:CulturallySpecific>
+				<hmis:Transgender>0</hmis:Transgender>
+				<hmis:Questioning>0</hmis:Questioning>
+				<hmis:DifferentIdentity>0</hmis:DifferentIdentity>
+				<hmis:VeteranStatus>9</hmis:VeteranStatus>
+			</hmis:Client>
+			<hmis:Enrollment hmis:dateCreated="2015-05-08T23:14:59"
+				hmis:dateUpdated="2015-01-27T23:14:59Z"
+				hmis:userID="Hc8CQeYVWWj0dA9cWkDLe">
+				<hmis:EnrollmentID>w5641</hmis:EnrollmentID>
+				<hmis:PersonalID>A1a1</hmis:PersonalID>
+				<hmis:ProjectID>222D</hmis:ProjectID>
+				<hmis:EntryDate>2016-04-12Z</hmis:EntryDate>
+				<hmis:HouseholdID>a34563w</hmis:HouseholdID>
+				<hmis:RelationshipToHoH>1</hmis:RelationshipToHoH>
+				<hmis:EnrollmentCoC>676746</hmis:EnrollmentCoC>
+				<hmis:PreviousStreetESSH>1</hmis:PreviousStreetESSH>
+				<hmis:DateToStreetESSH>2015-04-01</hmis:DateToStreetESSH>
+				<hmis:TimesHomelessPastThreeYears>2</hmis:TimesHomelessPastThreeYears>
+				<hmis:MonthsHomelessPastThreeYears>103</hmis:MonthsHomelessPastThreeYears>
+				<hmis:DisablingCondition>9</hmis:DisablingCondition>
+			</hmis:Enrollment>
+			<hmis:EnrollmentCoC hmis:dataCollectionStage="1"
+				hmis:informationDate="2015-06-24"
+				hmis:dateCreated="2016-02-13T23:14:59Z"
+				hmis:dateUpdated="2016-02-19T23:14:59"
+				hmis:userID="DU5m">
+				<hmis:EnrollmentCoCID>56332</hmis:EnrollmentCoCID>
+				<hmis:EnrollmentID>w5641</hmis:EnrollmentID>
+				<hmis:CoCCode>BZ-123</hmis:CoCCode>
+			</hmis:EnrollmentCoC>
+			<hmis:Funder hmis:dateCreated="2015-09-19T23:14:59"
+				hmis:dateUpdated="2016-01-29T23:14:59Z"
+				hmis:userID="m2Pym5-77tSVuI-IjerY">
+				<hmis:FunderID>76g</hmis:FunderID>
+				<hmis:ProjectID>222D</hmis:ProjectID>
+				<hmis:Funder>16</hmis:Funder>
+				<hmis:GrantID>S_w9P0npP</hmis:GrantID>
+				<hmis:StartDate>2016-06-11Z</hmis:StartDate>
+				<hmis:EndDate>2016-04-08</hmis:EndDate>
+			</hmis:Funder>
+			<hmis:Inventory hmis:dateCreated="2015-09-12T23:14:59Z"
+				hmis:dateUpdated="2015-08-29T23:14:59Z" hmis:userID="billj">
+				<hmis:InventoryID>56563a</hmis:InventoryID>
+				<hmis:ProjectCoCID>2</hmis:ProjectCoCID>
+				<hmis:InventoryStartDate>2014-10-31</hmis:InventoryStartDate>
+				<hmis:InventoryEndDate>2015-05-12Z</hmis:InventoryEndDate>
+				<hmis:HouseholdType>1</hmis:HouseholdType>
+				<hmis:VetBedInventory>14</hmis:VetBedInventory>
+				<hmis:YouthBedInventory>16</hmis:YouthBedInventory>
+				<hmis:CHBedInventory>17</hmis:CHBedInventory>
+				<hmis:BedInventory>130</hmis:BedInventory>
+				<hmis:UnitInventory>1595973432</hmis:UnitInventory>
+			</hmis:Inventory>
+			<hmis:Organization hmis:dateCreated="2015-02-17T23:14:59"
+				hmis:dateUpdated="2016-02-29T23:14:59" hmis:userID="ptravis">
+				<hmis:OrganizationID>34</hmis:OrganizationID>
+				<hmis:OrganizationName>Helping People, Inc.</hmis:OrganizationName>
+				<hmis:OrganizationCommonName>Helping</hmis:OrganizationCommonName>
+				<hmis:VictimServiceProvider>1</hmis:VictimServiceProvider>
+			</hmis:Organization>
+			<hmis:Participation hmis:dateCreated="2023-02-17T23:14:59"
+				hmis:dateUpdated="2023-02-17T23:14:59" hmis:userID="2">
+				<hmis:HMISParticipationID>565643</hmis:HMISParticipationID>
+				<hmis:ProjectID>222D</hmis:ProjectID>
+				<hmis:HMISParticipationType>1</hmis:HMISParticipationType>
+				<hmis:HMISParticipationStatusStartDate>2023-02-17</hmis:HMISParticipationStatusStartDate>
+			</hmis:Participation>
+			<hmis:Project hmis:dateCreated="2016-02-17T23:14:59"
+				hmis:dateUpdated="2015-03-14T23:14:59Z" hmis:userID="j2ZsRLAPv">
+				<hmis:ProjectID>222D</hmis:ProjectID>
+				<hmis:OrganizationID>34</hmis:OrganizationID>
+				<hmis:ProjectName>Residence Enablers</hmis:ProjectName>
+				<hmis:ProjectCommonName>Residence Enablers</hmis:ProjectCommonName>
+				<hmis:OperatingStartDate>2017-01-01</hmis:OperatingStartDate>
+				<hmis:ContinuumProject>0</hmis:ContinuumProject>
+				<hmis:ProjectType>3</hmis:ProjectType>
+				<hmis:TargetPopulation>4</hmis:TargetPopulation>
+			</hmis:Project>
+			<hmis:ProjectCoC hmis:dateCreated="2016-02-17T23:14:59"
+				hmis:dateUpdated="2015-03-14T23:14:59Z" hmis:userID="j2ZsRLAPv">
+				<hmis:ProjectCoCID>2</hmis:ProjectCoCID>
+				<hmis:ProjectID>222D</hmis:ProjectID>
+				<hmis:CoCCode>BZ-123</hmis:CoCCode>
+				<hmis:Geocode>123456</hmis:Geocode>
+			</hmis:ProjectCoC>
+		</hmis:Export>
+	</hmis:Source>
 </hmis:Sources>
