@@ -342,7 +342,7 @@
 			</xs:element>
 			<xs:element name="GenderNone" id="_3.06.1.8" type="hmis:raceGenderNone" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Gender None. Non-null only if all other gender fields = 0 or 99.</xs:documentation>
+					<xs:documentation xml:lang="en">Gender None. Non-null only if all other gender fields = 0.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DifferentIdentityText" id="_3.06.A" type="hmis:string100" minOccurs="0">
@@ -3059,12 +3059,12 @@
 			</xs:element>
 			<xs:element name="FAStartDate"  id="_V3.1" type="xs:date" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Start Date of Financial Assistance ([date field])</xs:documentation>
+					<xs:documentation xml:lang="en">Start Date of Financial Assistance ([date field]). Null unless RecordType = 151 or 152.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FAEndDate"  id="_V3.4" type="xs:date" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">End Date of Financial Assistance ([date field])</xs:documentation>
+					<xs:documentation xml:lang="en">End Date of Financial Assistance ([date field]). Null unless RecordType = 151 or 152.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ReferralOutcome" id="_P2.A" type="hmis:referralOutcome" minOccurs="0">
