@@ -3,7 +3,6 @@
 <xs:schema 
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS_Example_Extension.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS_Example_Extension.xsd"
 	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
     xmlns:ext="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS_Example_Extension.xsd"
