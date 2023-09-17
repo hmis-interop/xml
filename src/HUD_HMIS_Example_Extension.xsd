@@ -2,13 +2,13 @@
 
 <xs:schema 
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS_Example_Extension.xsd"
-	xmlns="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS_Example_Extension.xsd"
-	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd"
+	targetNamespace="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS_Example_Extension.xsd"
+	xmlns="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS_Example_Extension.xsd"
+	xmlns:hmis="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-    xmlns:ext="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS_Example_Extension.xsd"
+    xmlns:ext="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS_Example_Extension.xsd"
     vc:minVersion="1.1">
-	<xs:import namespace="http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd" schemaLocation="https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd"/>
+	<xs:import namespace="http://www.hudhdx.info/Resources/Vendors/FY2024/HUD_HMIS.xsd" schemaLocation="https://raw.githubusercontent.com/HUD-Data-Lab/xml/FY2024-latest/src/HUD_HMIS.xsd"/>
 	<xs:element name="Export" type="ext:extendedExport"/>
 	
 	<xs:complexType name="extendedExport">
