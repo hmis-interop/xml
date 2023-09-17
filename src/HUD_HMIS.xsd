@@ -1466,15 +1466,14 @@
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:MedicalAssistance[hmis:EnrollmentID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:NonCashBenefits[hmis:EnrollmentID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:PATHStatus[hmis:EnrollmentID = $id]) le 1)"/>	
-		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:EntryRHSP[hmis:EnrollmentID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:MoveInDate[hmis:EnrollmentID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:RHYBCPStatus[hmis:EnrollmentID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:ServiceFAReferral[hmis:EnrollmentID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:Wellbeing[hmis:EnrollmentID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitHousingAssessment[hmis:ExitID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Exit/hmis:ExitID satisfies (fn:count(hmis:ExitRHY[hmis:ExitID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Organization/hmis:OrganizationID satisfies (fn:count(hmis:Project[hmis:OrganizationID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Affiliation[hmis:ProjectID = $id]) ge 0)"/>
+		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:CEParticipation[hmis:ProjectID = $id]) ge 1)"/>
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Funder[hmis:ProjectID = $id]) ge 1)"/>
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:Participation[hmis:ProjectID = $id]) ge 1)"/>
 		<xs:assert test="every $id in hmis:Project/hmis:ProjectID satisfies (fn:count(hmis:ProjectCoC[hmis:ProjectID = $id]) ge 1)"/>
@@ -3233,6 +3232,10 @@
 					<xs:selector xpath="hmis:ClientVeteranInfo"/>
 					<xs:field xpath="hmis:PersonalID"/>
 				</xs:keyref>
+				<xs:keyref name="connectionWithSOAREnrollmentKeyRef" refer="enrollmentKey">
+					<xs:selector xpath="hmis:CurrentLivingSituation"/>
+					<xs:field xpath="hmis:EnrollmentID"/>
+				</xs:keyref>
 				<xs:keyref name="currentLivingSituationEnrollmentKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:CurrentLivingSituation"/>
 					<xs:field xpath="hmis:EnrollmentID"/>
@@ -3268,10 +3271,6 @@
 				<xs:keyref name="enrollmentProjectKeyRef" refer="projectKey">
 					<xs:selector xpath="hmis:Enrollment"/>
 					<xs:field xpath="hmis:ProjectID"/>
-				</xs:keyref>
-				<xs:keyref name="entryRHSPEnrollmentKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:EntryRHSP"/>
-					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="entryRHYEnrollmentKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:EntryRHY"/>
@@ -3371,10 +3370,6 @@
 				</xs:keyref>
 				<xs:keyref name="serviceFAReferralEnrollmentKeyRef" refer="enrollmentKey">
 					<xs:selector xpath="hmis:ServiceFAReferral"/>
-					<xs:field xpath="hmis:EnrollmentID"/>
-				</xs:keyref>
-				<xs:keyref name="wellbeingEnrollmentKeyRef" refer="enrollmentKey">
-					<xs:selector xpath="hmis:Wellbeing"/>
 					<xs:field xpath="hmis:EnrollmentID"/>
 				</xs:keyref>
 				<xs:keyref name="youthEducationStatusKeyRef" refer="enrollmentKey">
