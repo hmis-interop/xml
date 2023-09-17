@@ -20,7 +20,7 @@ public class xml1_1_validator {
 
 		Source instanceDocument = new StAXSource(reader);
 		StreamSource schemaDocument = new StreamSource("file:///home/user/git/hmis-xml/src/HUD_HMIS.xsd");
-//		StreamSource schemaDocument = new StreamSource("https://raw.githubusercontent.com/hmis-interop/xml/FY2020-v1.0.0/src/HUD_HMIS.xsd");
+//		StreamSource schemaDocument = new StreamSource("https://raw.githubusercontent.com/HUD-Data-Lab/xml/FY2024-latest/src/HUD_HMIS.xsd");
 		SchemaFactory sf = SchemaFactory.newInstance("http://www.w3.org/XML/XMLSchema/v1.1");
 		Schema s = sf.newSchema(schemaDocument);
 		Validator v = s.newValidator();
