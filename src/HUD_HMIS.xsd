@@ -58,7 +58,7 @@
 			</xs:element>
 			<xs:element name="AssessmentLocation" id="_4.19.2" type="hmis:string250">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Assessment location</xs:documentation>
+					<xs:documentation xml:lang="en">Assessment location [drop down]</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AssessmentType" id="_4.19.3" type="hmis:assessmentType">
