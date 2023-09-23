@@ -7,7 +7,7 @@
 	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	vc:minVersion="1.1" version="v1.0.0-rc.2" elementFormDefault="qualified" attributeFormDefault="qualified">
+	vc:minVersion="1.1" version="v1.0.0-rc.3" elementFormDefault="qualified" attributeFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>All data elements referenced with an "id" attribute correspond to that same data element id within the FY2024 HMIS Data Dictionary (sans the "_" prefix).</xs:documentation>
 	</xs:annotation>
@@ -896,25 +896,6 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
 
-	<xs:complexType name="enrollmentCoC">
-		<xs:sequence>
-			<xs:element name="EnrollmentCoCID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the EnrollmentCoC's unique ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>				
-			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>
-			<xs:element name="CoCCode" type="hmis:cocCode">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">HUD assigned CoC code for the client’s location</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attribute ref="hmis:dataCollectionStage" use="required"/>
-		<xs:attribute ref="hmis:informationDate" use="required"/>
-		<xs:attributeGroup ref="hmis:baseMetaData"/>
-	</xs:complexType>
-
 	<xs:complexType name="entryRHY">
 		<xs:sequence>
 			<xs:element name="EntryRHYID" type="hmis:string32">
@@ -1414,7 +1395,6 @@
 				<xs:element name="Education" type="hmis:education"/>
 				<xs:element name="Employment" type="hmis:employment"/>
 				<xs:element name="Enrollment" type="hmis:enrollment"/>
-				<xs:element name="EnrollmentCoC" type="hmis:enrollmentCoC"/>
 				<xs:element name="EntryRHY" type="hmis:entryRHY"/>
 				<xs:element name="EntrySSVF" type="hmis:entrySSVF"/>
 				<xs:element name="Event" type="hmis:event"/>
@@ -1455,7 +1435,6 @@
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:Disabilities[hmis:EnrollmentID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:DomesticViolence[hmis:EnrollmentID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:Employment[hmis:EnrollmentID = $id]) ge 0)"/>
-		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:EnrollmentCoC[hmis:EnrollmentID = $id]) ge 0)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:EntryRHY[hmis:EnrollmentID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:EntrySSVF[hmis:EnrollmentID = $id]) le 1)"/>
 		<xs:assert test="every $id in hmis:Enrollment/hmis:EnrollmentID satisfies (fn:count(hmis:Event[hmis:EnrollmentID = $id]) ge 0)"/>
@@ -1501,7 +1480,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProjectID" type="hmis:projectID"/>
-			<xs:element name="Funder" id="_2.06" type="hmis:federalPartnerProgramsAndComponents">
+			<xs:element name="Funder" id="_2.06.1" type="hmis:federalPartnerProgramsAndComponents">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Funding Sources</xs:documentation>
 				</xs:annotation>
@@ -2087,6 +2066,23 @@
 
 	</xs:complexType>
 
+	<xs:complexType name="moveInDate">
+		<xs:sequence>
+			<xs:element name="MoveInDateID" type="hmis:string32">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Reference to the MoveInDate's unique ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>
+			<xs:element name="MoveInDate" id="_3.20.1" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Housing Move-in Date</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="hmis:baseMetaData"/>
+	</xs:complexType>
+
 	<xs:complexType name="nonCashBenefits">
 		<xs:sequence>
 			<xs:element name="NonCashBenefitsID" type="hmis:string32">
@@ -2292,21 +2288,182 @@
 		<xs:attributeGroup ref="hmis:baseMetaData"/>
 	</xs:complexType>
 
-	<xs:complexType name="moveInDate">
-		<xs:sequence>
-			<xs:element name="MoveInDateID" type="hmis:string32">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Reference to the MoveInDate's unique ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="EnrollmentID" type="hmis:enrollmentID"/>
-			<xs:element name="MoveInDate" id="_3.20.1" type="xs:date" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">Housing Move-in Date</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attributeGroup ref="hmis:baseMetaData"/>
+	<xs:complexType name="subTypeProvidedBase">
+		<xs:simpleContent>
+			<xs:extension base="xs:unsignedInt">
+				<xs:attribute ref="xsi:type" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="subTypeProvidedSSVFSubType3" id="_V.2.A">
+		<xs:annotation>
+			<xs:documentation>Used when RecordType = 144 (SSVF service) and TypeProvided = 3 (Assistance obtaining VA benefits).</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="hmis:subTypeProvidedBase">
+				<xs:enumeration value="1">
+					<xs:annotation>
+						<xs:documentation>VA vocational and rehabilitation counseling</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="2">
+					<xs:annotation>
+						<xs:documentation>Employment and training services</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="3">
+					<xs:annotation>
+						<xs:documentation>Educational assistance</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="4">
+					<xs:annotation>
+						<xs:documentation>Health care services</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="subTypeProvidedSSVFSubType4" id="_V.2.B">
+		<xs:annotation>
+			<xs:documentation>Used when RecordType = 144 (SSVF service) and TypeProvided = 4 (Assistance obtaining/coordinating other public benefits).</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="hmis:subTypeProvidedBase">
+				<xs:enumeration value="1">
+					<xs:annotation>
+						<xs:documentation>Health care services</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="2">
+					<xs:annotation>
+						<xs:documentation>Daily living services</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="3">
+					<xs:annotation>
+						<xs:documentation>Personal financial planning services</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="4">
+					<xs:annotation>
+						<xs:documentation>Transportation services</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="5">
+					<xs:annotation>
+						<xs:documentation>Income support services</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="6">
+					<xs:annotation>
+						<xs:documentation>Fiduciary and representative payee services</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="7">
+					<xs:annotation>
+						<xs:documentation>Legal services - child support</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="8">
+					<xs:annotation>
+						<xs:documentation>Legal services - eviction prevention</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="9">
+					<xs:annotation>
+						<xs:documentation>Legal services - outstanding fines and penalties</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="10">
+					<xs:annotation>
+						<xs:documentation>Legal services - restore / acquire driver’s license</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="11">
+					<xs:annotation>
+						<xs:documentation>Legal services – other</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="12">
+					<xs:annotation>
+						<xs:documentation>Child care</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="13">
+					<xs:annotation>
+						<xs:documentation>Housing counseling</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="subTypeProvidedSSVFSubType5" id="_V.2.C">
+		<xs:annotation>
+			<xs:documentation>Used when RecordType = 144 (SSVF service) and TypeProvided = 5.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:restriction base="hmis:subTypeProvidedBase">
+				<xs:enumeration value="1">
+					<xs:annotation>
+						<xs:documentation>Personal financial planning services</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="2">
+					<xs:annotation>
+						<xs:documentation>Transportation services</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="3">
+					<xs:annotation>
+						<xs:documentation>Income support services</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="4">
+					<xs:annotation>
+						<xs:documentation>Fiduciary and representative payee services</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="5">
+					<xs:annotation>
+						<xs:documentation>Legal services - child support</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="6">
+					<xs:annotation>
+						<xs:documentation>Legal services - eviction prevention</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="7">
+					<xs:annotation>
+						<xs:documentation>Legal services - outstanding fines and penalties</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="8">
+					<xs:annotation>
+						<xs:documentation>Legal services - restore / acquire driver’s license</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="9">
+					<xs:annotation>
+						<xs:documentation>Legal services – other</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="10">
+					<xs:annotation>
+						<xs:documentation>Child care</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="11">
+					<xs:annotation>
+						<xs:documentation>Housing counseling</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+			</xs:restriction>
+		</xs:simpleContent>
 	</xs:complexType>
 
 	<xs:complexType name="typeProvidedBase">
@@ -2480,7 +2637,7 @@
 				</xs:enumeration>
 				<xs:enumeration value="12">
 					<xs:annotation>
-						<xs:documentation xml:lang="en">Post-natal care for mother</xs:documentation>
+						<xs:documentation xml:lang="en">Post-natal care for client (person who gave birth)</xs:documentation>
 					</xs:annotation>
 				</xs:enumeration>
 				<xs:enumeration value="13">
@@ -2635,7 +2792,7 @@
 				</xs:enumeration>
 				<xs:enumeration value="7">
 					<xs:annotation>
-						<xs:documentation xml:lang="en">Extended Shallow Subsidy</xs:documentation>
+						<xs:documentation xml:lang="en">Shallow Subsidy</xs:documentation>
 					</xs:annotation>
 				</xs:enumeration>
 				<xs:enumeration value="8">
@@ -2710,12 +2867,22 @@
 				</xs:enumeration>
 				<xs:enumeration value="15">
 					<xs:annotation>
-						<xs:documentation xml:lang="en">Extended Shallow Subsidy – Rental Assistance</xs:documentation>
+						<xs:documentation xml:lang="en">Shallow Subsidy – Financial Assistance</xs:documentation>
 					</xs:annotation>
 				</xs:enumeration>
 				<xs:enumeration value="16">
 					<xs:annotation>
 						<xs:documentation xml:lang="en">Food assistance</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="17">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Landlord Incentive</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="18">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Tenant Incentive</xs:documentation>
 					</xs:annotation>
 				</xs:enumeration>
 			</xs:restriction>
@@ -2855,7 +3022,7 @@
 				</xs:enumeration>
 				<xs:enumeration value="12">
 					<xs:annotation>
-						<xs:documentation xml:lang="en">Substance use disorder services/treatment</xs:documentation>
+						<xs:documentation xml:lang="en">Substance use services/treatment</xs:documentation>
 					</xs:annotation>
 				</xs:enumeration>
 				<xs:enumeration value="13">
@@ -3045,7 +3212,7 @@
 			<xs:element name="TypeProvided" type="hmis:typeProvidedBase"/>
 			<xs:element name="OtherTypeProvided" type="hmis:string50" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See FY2024 HMIS Data Dictionary, Sections 4.12, 4.14-4.16.2D.</xs:documentation>
+					<xs:documentation xml:lang="en">See FY2024 HMIS Data Dictionary, Sections V2.D and V8.A. Null unless RecordType = 144 and TypeProvided = 6, or RecordType = 210 and TypeProvided = 12. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MovingOnOtherType" id="_C2.A" type="hmis:string50" minOccurs="0">
@@ -3053,9 +3220,9 @@
 					<xs:documentation xml:lang="en">Other (please specify)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SubTypeProvided" type="hmis:subTypeProvided" minOccurs="0">
+			<xs:element name="SubTypeProvided" type="hmis:subTypeProvidedBase" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">See FY2024 HMIS Data Dictionary, Section 4.12 and 4.14-4.16.3A, 4B, 5C.</xs:documentation>
+					<xs:documentation xml:lang="en">See FY2024 HMIS Data Dictionary, Sections V2.A, V2.B, and V2.C. Null unless RecordType = 144 and TypeProvided = 3, 4, or 5. For TypeProvided: 3 – list V2.A, TypeProvided: 4 – list V2.B, TypeProvided: 5 – list V2.C</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FAAmount" type="hmis:fAAmountBase" minOccurs="0">
@@ -4375,11 +4542,6 @@
 					<xs:documentation xml:lang="en">HUD: ESG – Street Outreach</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="12">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">HUD: Rural Housing Stability Assistance Program</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="13">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">HUD: HOPWA – Hotel/Motel Vouchers</xs:documentation>
@@ -4540,11 +4702,6 @@
 					<xs:documentation xml:lang="en">HUD: HOPWA – CV</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="49">
-				<xs:annotation>
-					<xs:documentation xml:lang="en">HUD: CoC – Joint Component RRH/PSH</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="50">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">HUD: HOME</xs:documentation>
@@ -4558,6 +4715,21 @@
 			<xs:enumeration value="52">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">HUD: PIH (Emergency Housing Voucher)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="53">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">HUD: ESG – RUSH</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="54">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">HUD: Unsheltered Special NOFO</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="55">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">HUD: Rural Special NOFO</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -5661,6 +5833,11 @@
 					<xs:documentation xml:lang="en">51% to 80%</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">81% or greater</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="99">
 				<xs:annotation>
 					<xs:documentation xml:lang="en">Data not collected</xs:documentation>
@@ -5693,12 +5870,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="2">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Youth voluntarily left early</xs:documentation>
+					<xs:documentation xml:lang="en">Client voluntarily left early</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Youth was expelled or otherwise involuntarily discharged from project</xs:documentation>
+					<xs:documentation xml:lang="en">Client was expelled or otherwise involuntarily discharged from project</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -5715,9 +5892,14 @@
 
 	<xs:simpleType name="projectType" id="projectType">
 		<xs:restriction base="xs:unsignedInt">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">Emergency Shelter – Entry Exit</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="1">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">Emergency Shelter</xs:documentation>
+					<xs:documentation xml:lang="en">Emergency Shelter – Night-by-Night</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2">
@@ -6380,12 +6562,6 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="subTypeProvided">
-		<xs:restriction base="xs:token">
-			<xs:pattern value="[0-9]{1,2}"/>
-		</xs:restriction>
-	</xs:simpleType>
-
 	<xs:simpleType name="timeToHousingLoss" id="timeToHousingLoss">
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="0">
@@ -6460,17 +6636,17 @@
 		<xs:restriction base="xs:unsignedInt">
 			<xs:enumeration value="1">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">DV Domestic Violence victims</xs:documentation>
+					<xs:documentation xml:lang="en">DV: Survivor of Domestic Violence</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">HIV Persons with HIV/AIDS</xs:documentation>
+					<xs:documentation xml:lang="en">HIV: Persons with HIV/AIDS</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4">
 				<xs:annotation>
-					<xs:documentation xml:lang="en">NA Not Applicable</xs:documentation>
+					<xs:documentation xml:lang="en">NA: Not applicable</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
