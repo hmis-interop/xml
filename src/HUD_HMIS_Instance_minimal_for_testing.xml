@@ -82,15 +82,6 @@
 				<hmis:MonthsHomelessPastThreeYears>103</hmis:MonthsHomelessPastThreeYears>
 				<hmis:DisablingCondition>9</hmis:DisablingCondition>
 			</hmis:Enrollment>
-			<hmis:EnrollmentCoC hmis:dataCollectionStage="1"
-				hmis:informationDate="2015-06-24"
-				hmis:dateCreated="2016-02-13T23:14:59Z"
-				hmis:dateUpdated="2016-02-19T23:14:59"
-				hmis:userID="DU5m">
-				<hmis:EnrollmentCoCID>56332</hmis:EnrollmentCoCID>
-				<hmis:EnrollmentID>w5641</hmis:EnrollmentID>
-				<hmis:CoCCode>BZ-123</hmis:CoCCode>
-			</hmis:EnrollmentCoC>
 			<hmis:Funder hmis:dateCreated="2015-09-19T23:14:59"
 				hmis:dateUpdated="2016-01-29T23:14:59Z"
 				hmis:userID="m2Pym5-77tSVuI-IjerY">
